@@ -1,0 +1,6 @@
+framework module Pods_OvercomingMS {
+  umbrella header "Pods-OvercomingMS-umbrella.h"
+
+  export *
+  module * { export * }
+}
