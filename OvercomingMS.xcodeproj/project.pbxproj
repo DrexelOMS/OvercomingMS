@@ -124,7 +124,6 @@
 			children = (
 				618235EC21E44474001ED4DB /* View Controllers */,
 				618235EB21E4446B001ED4DB /* Data Models */,
-				6129747C21DF020300B9846C /* Classes */,
 				6129747D21DF020E00B9846C /* UI Views */,
 				6129745521DF017F00B9846C /* Assets.xcassets */,
 				6129745A21DF017F00B9846C /* Info.plist */,
@@ -148,13 +147,6 @@
 				6129747021DF017F00B9846C /* Info.plist */,
 			);
 			path = OvercomingMSUITests;
-			sourceTree = "<group>";
-		};
-		6129747C21DF020300B9846C /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		6129747D21DF020E00B9846C /* UI Views */ = {
