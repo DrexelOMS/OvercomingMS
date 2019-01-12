@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		498CD026CF1E6A65EE7801F1 /* Pods_OvercomingMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63CE623B403E650583E5CAD /* Pods_OvercomingMS.framework */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
 		6129745121DF017E00B9846C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129745021DF017E00B9846C /* HomeViewController.swift */; };
 		6129745421DF017E00B9846C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745221DF017E00B9846C /* Main.storyboard */; };
@@ -19,8 +18,6 @@
 		618235EF21E44577001ED4DB /* core.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 618235ED21E44577001ED4DB /* core.xcdatamodeld */; };
 		618235F121E4495F001ED4DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618235F021E4495F001ED4DB /* LoginViewController.swift */; };
 		618235F321E449CA001ED4DB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618235F221E449CA001ED4DB /* RegisterViewController.swift */; };
-		B300F567CF5AA378C6E30245 /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C70E15319E9197649BF7D03 /* Pods_OvercomingMSTests.framework */; };
-		BC8DA82FB0319509CDD07B1D /* Pods_OvercomingMSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1767A64E92ABF75C4D60FCA7 /* Pods_OvercomingMSUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1767A64E92ABF75C4D60FCA7 /* Pods_OvercomingMSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6129744E21DF017E00B9846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6129745021DF017E00B9846C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -60,12 +56,10 @@
 		618235F021E4495F001ED4DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		618235F221E449CA001ED4DB /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		64624BC75971C455C566E626 /* Pods-OvercomingMSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.release.xcconfig"; sourceTree = "<group>"; };
-		6C70E15319E9197649BF7D03 /* Pods_OvercomingMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		724CCA850B24CDC7CCFAF25E /* Pods-OvercomingMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.debug.xcconfig"; sourceTree = "<group>"; };
 		89CF61DE31F50EFE76BD85FE /* Pods-OvercomingMSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0433A9C40E2CDD4C4FE48DD /* Pods-OvercomingMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.release.xcconfig"; sourceTree = "<group>"; };
 		A16E3BBC1D5B0C0744651350 /* Pods-OvercomingMSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B63CE623B403E650583E5CAD /* Pods_OvercomingMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C278635D38E9B87EB94008 /* Pods-OvercomingMSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				498CD026CF1E6A65EE7801F1 /* Pods_OvercomingMS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B300F567CF5AA378C6E30245 /* Pods_OvercomingMSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC8DA82FB0319509CDD07B1D /* Pods_OvercomingMSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,9 +172,6 @@
 		DD7121317404FDF12D44D4AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B63CE623B403E650583E5CAD /* Pods_OvercomingMS.framework */,
-				6C70E15319E9197649BF7D03 /* Pods_OvercomingMSTests.framework */,
-				1767A64E92ABF75C4D60FCA7 /* Pods_OvercomingMSUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
