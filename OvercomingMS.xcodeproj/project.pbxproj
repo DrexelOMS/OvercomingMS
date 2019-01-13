@@ -15,6 +15,7 @@
 		6129746421DF017F00B9846C /* OvercomingMSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746321DF017F00B9846C /* OvercomingMSTests.swift */; };
 		6129746F21DF017F00B9846C /* OvercomingMSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746E21DF017F00B9846C /* OvercomingMSUITests.swift */; };
 		6130938621E815AF00249B24 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130938521E815AF00249B24 /* DietViewController.swift */; };
+		6130938821EAB55000249B24 /* FoodItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130938721EAB55000249B24 /* FoodItemsCell.swift */; };
 		618235EF21E44577001ED4DB /* core.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 618235ED21E44577001ED4DB /* core.xcdatamodeld */; };
 		618235F121E4495F001ED4DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618235F021E4495F001ED4DB /* LoginViewController.swift */; };
 		618235F321E449CA001ED4DB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618235F221E449CA001ED4DB /* RegisterViewController.swift */; };
@@ -52,6 +53,7 @@
 		6129746E21DF017F00B9846C /* OvercomingMSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvercomingMSUITests.swift; sourceTree = "<group>"; };
 		6129747021DF017F00B9846C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6130938521E815AF00249B24 /* DietViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
+		6130938721EAB55000249B24 /* FoodItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemsCell.swift; sourceTree = "<group>"; };
 		618235EE21E44577001ED4DB /* DailyTracking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyTracking.xcdatamodel; sourceTree = "<group>"; };
 		618235F021E4495F001ED4DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		618235F221E449CA001ED4DB /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				618235ED21E44577001ED4DB /* core.xcdatamodeld */,
+				6130938721EAB55000249B24 /* FoodItemsCell.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				618235EF21E44577001ED4DB /* core.xcdatamodeld in Sources */,
 				6129745121DF017E00B9846C /* HomeViewController.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
+				6130938821EAB55000249B24 /* FoodItemsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -376,31 +376,58 @@
                                     <constraint firstItem="9XY-8q-cRd" firstAttribute="centerX" secondItem="G5r-eu-4IV" secondAttribute="centerX" id="xBD-qP-Lhn"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FWM-UN-hfc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QQO-fa-xY4">
                                 <rect key="frame" x="10" y="80" width="394" height="596"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodItemsCell" id="QVX-FL-fEy" userLabel="FoodItemsCell" customClass="FoodItemsCell" customModule="OvercomingMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QVX-FL-fEy" id="5ia-BJ-dgn">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJs-W7-0Sf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="50.333333333333336"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="9Wh-jm-bd2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="tJs-W7-0Sf" secondAttribute="trailing" id="EAR-dh-58c"/>
+                                                <constraint firstAttribute="bottom" secondItem="tJs-W7-0Sf" secondAttribute="bottom" id="R6C-E3-nYP"/>
+                                                <constraint firstItem="tJs-W7-0Sf" firstAttribute="leading" secondItem="5ia-BJ-dgn" secondAttribute="leading" id="fGI-pt-56f"/>
+                                                <constraint firstItem="tJs-W7-0Sf" firstAttribute="top" secondItem="5ia-BJ-dgn" secondAttribute="top" id="ucZ-5E-huM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="FoodItemNameLabel" destination="tJs-W7-0Sf" id="A96-1p-77y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wlR-56-cF8" firstAttribute="trailing" secondItem="G5r-eu-4IV" secondAttribute="trailing" id="Dv7-3q-x7v"/>
                             <constraint firstItem="RVF-EL-qS4" firstAttribute="leading" secondItem="wlR-56-cF8" secondAttribute="leading" id="FvM-MZ-sSM"/>
                             <constraint firstItem="G5r-eu-4IV" firstAttribute="top" secondItem="wlR-56-cF8" secondAttribute="top" id="GPY-Xd-ucp"/>
+                            <constraint firstItem="wlR-56-cF8" firstAttribute="trailing" secondItem="QQO-fa-xY4" secondAttribute="trailing" constant="10" id="J1w-Wz-hTh"/>
                             <constraint firstItem="wlR-56-cF8" firstAttribute="bottom" secondItem="RVF-EL-qS4" secondAttribute="bottom" id="QNe-b9-pwP"/>
-                            <constraint firstItem="RVF-EL-qS4" firstAttribute="top" secondItem="FWM-UN-hfc" secondAttribute="bottom" constant="10" id="aMc-oL-8rP"/>
+                            <constraint firstItem="RVF-EL-qS4" firstAttribute="top" secondItem="QQO-fa-xY4" secondAttribute="bottom" constant="10" id="X2k-at-8NI"/>
                             <constraint firstItem="G5r-eu-4IV" firstAttribute="leading" secondItem="Z7r-e6-Rqp" secondAttribute="leading" id="aV3-mh-sg9"/>
-                            <constraint firstItem="FWM-UN-hfc" firstAttribute="leading" secondItem="wlR-56-cF8" secondAttribute="leading" constant="10" id="g3e-m3-lFP"/>
+                            <constraint firstItem="QQO-fa-xY4" firstAttribute="top" secondItem="G5r-eu-4IV" secondAttribute="bottom" constant="10" id="fS3-Zk-7Df"/>
                             <constraint firstItem="RVF-EL-qS4" firstAttribute="trailing" secondItem="wlR-56-cF8" secondAttribute="trailing" id="heB-J5-fSO"/>
-                            <constraint firstItem="wlR-56-cF8" firstAttribute="trailing" secondItem="FWM-UN-hfc" secondAttribute="trailing" constant="10" id="p1T-4F-52A"/>
-                            <constraint firstItem="FWM-UN-hfc" firstAttribute="top" secondItem="G5r-eu-4IV" secondAttribute="bottom" constant="10" id="tLY-nk-h8P"/>
+                            <constraint firstItem="QQO-fa-xY4" firstAttribute="leading" secondItem="wlR-56-cF8" secondAttribute="leading" constant="10" id="v2E-bY-AQI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wlR-56-cF8"/>
                     </view>
                     <connections>
-                        <outlet property="foodListTextView" destination="FWM-UN-hfc" id="Yht-sh-Gxg"/>
+                        <outlet property="foodItemTableView" destination="QQO-fa-xY4" id="EUX-0D-fPc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Avp-1l-4AE" sceneMemberID="firstResponder"/>
