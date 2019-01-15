@@ -55,10 +55,10 @@
                                 <rect key="frame" x="0.0" y="70" width="414" height="566"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTT-3k-6jt" userLabel="TrackingLog">
-                                        <rect key="frame" x="19.666666666666657" y="0.0" width="375" height="72.333333333333329"/>
+                                        <rect key="frame" x="19.666666666666657" y="0.0" width="375" height="86"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epj-u8-2Mb">
-                                                <rect key="frame" x="173" y="26" width="28.666666666666657" height="20.333333333333329"/>
+                                                <rect key="frame" x="173" y="33" width="28.666666666666657" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -70,22 +70,11 @@
                                             <constraint firstItem="epj-u8-2Mb" firstAttribute="centerX" secondItem="ZTT-3k-6jt" secondAttribute="centerX" id="HHV-UB-Udg"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3i-8d-fgU">
-                                        <rect key="frame" x="10" y="82.333333333333343" width="394" height="72.333333333333343"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Sat Fat">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="0pQ-HU-K0G" kind="show" id="64H-CR-klP"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRK-KU-JXt">
-                                        <rect key="frame" x="10" y="164.66666666666666" width="394" height="72.333333333333343"/>
+                                        <rect key="frame" x="10" y="96" width="394" height="86"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Omeg-3">
+                                        <state key="normal" title="Food">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -93,7 +82,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJf-Nq-FDy">
-                                        <rect key="frame" x="10" y="247" width="394" height="72"/>
+                                        <rect key="frame" x="10" y="192" width="394" height="86"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Vitamin D">
@@ -104,7 +93,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhr-sq-Z2A">
-                                        <rect key="frame" x="10" y="329" width="394" height="72.333333333333314"/>
+                                        <rect key="frame" x="10" y="288" width="394" height="86"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Exercise">
@@ -115,7 +104,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeD-jA-jOi">
-                                        <rect key="frame" x="10" y="411.33333333333331" width="394" height="72.333333333333314"/>
+                                        <rect key="frame" x="10" y="384" width="394" height="86"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Meditation">
@@ -126,7 +115,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leY-pY-Nrs">
-                                        <rect key="frame" x="10" y="493.66666666666657" width="394" height="72.333333333333314"/>
+                                        <rect key="frame" x="10" y="480" width="394" height="86"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Medication">
@@ -143,24 +132,19 @@
                                     <constraint firstAttribute="trailing" secondItem="leY-pY-Nrs" secondAttribute="trailing" constant="10" id="GGh-Mx-F7N"/>
                                     <constraint firstItem="XRK-KU-JXt" firstAttribute="leading" secondItem="FWQ-AA-dOm" secondAttribute="leading" constant="10" id="Ga8-w6-li0"/>
                                     <constraint firstAttribute="trailing" secondItem="bhr-sq-Z2A" secondAttribute="trailing" constant="10" id="LFq-kf-tC0"/>
-                                    <constraint firstAttribute="trailing" secondItem="n3i-8d-fgU" secondAttribute="trailing" constant="10" id="M9L-PS-qbQ"/>
                                     <constraint firstItem="bhr-sq-Z2A" firstAttribute="centerX" secondItem="FWQ-AA-dOm" secondAttribute="centerX" id="MFx-Ny-Svg"/>
                                     <constraint firstAttribute="trailing" secondItem="XRK-KU-JXt" secondAttribute="trailing" constant="10" id="NcY-I7-Yw6"/>
                                     <constraint firstItem="bhr-sq-Z2A" firstAttribute="leading" secondItem="FWQ-AA-dOm" secondAttribute="leading" constant="10" id="QSj-Mt-mmw"/>
-                                    <constraint firstItem="n3i-8d-fgU" firstAttribute="top" secondItem="ZTT-3k-6jt" secondAttribute="bottom" constant="10" id="Rj1-Tm-81F"/>
                                     <constraint firstItem="CeD-jA-jOi" firstAttribute="top" secondItem="bhr-sq-Z2A" secondAttribute="bottom" constant="10" id="TqE-tI-BYc"/>
                                     <constraint firstItem="leY-pY-Nrs" firstAttribute="top" secondItem="CeD-jA-jOi" secondAttribute="bottom" constant="10" id="Uu8-YE-Bq4"/>
                                     <constraint firstAttribute="trailing" secondItem="CeD-jA-jOi" secondAttribute="trailing" constant="10" id="VSQ-oN-HOe"/>
                                     <constraint firstItem="oJf-Nq-FDy" firstAttribute="top" secondItem="XRK-KU-JXt" secondAttribute="bottom" constant="10" id="XbS-V4-iUj"/>
                                     <constraint firstItem="oJf-Nq-FDy" firstAttribute="centerX" secondItem="FWQ-AA-dOm" secondAttribute="centerX" id="XmM-Pg-krD"/>
-                                    <constraint firstItem="n3i-8d-fgU" firstAttribute="centerX" secondItem="FWQ-AA-dOm" secondAttribute="centerX" id="Ycq-F6-Onf"/>
                                     <constraint firstItem="leY-pY-Nrs" firstAttribute="centerX" secondItem="FWQ-AA-dOm" secondAttribute="centerX" id="YkI-Xa-Jkw"/>
                                     <constraint firstItem="CeD-jA-jOi" firstAttribute="leading" secondItem="FWQ-AA-dOm" secondAttribute="leading" constant="10" id="Zaa-YH-ANQ"/>
                                     <constraint firstItem="bhr-sq-Z2A" firstAttribute="top" secondItem="oJf-Nq-FDy" secondAttribute="bottom" constant="10" id="aHS-tW-IW7"/>
-                                    <constraint firstItem="XRK-KU-JXt" firstAttribute="top" secondItem="n3i-8d-fgU" secondAttribute="bottom" constant="10" id="aKD-xI-6MK"/>
                                     <constraint firstItem="XRK-KU-JXt" firstAttribute="centerX" secondItem="FWQ-AA-dOm" secondAttribute="centerX" id="f5s-rl-gEv"/>
                                     <constraint firstItem="leY-pY-Nrs" firstAttribute="leading" secondItem="FWQ-AA-dOm" secondAttribute="leading" constant="10" id="k40-8r-LUy"/>
-                                    <constraint firstItem="n3i-8d-fgU" firstAttribute="leading" secondItem="FWQ-AA-dOm" secondAttribute="leading" constant="10" id="lOL-dS-lds"/>
                                     <constraint firstItem="ZTT-3k-6jt" firstAttribute="centerX" secondItem="FWQ-AA-dOm" secondAttribute="centerX" id="udK-Xo-B7o"/>
                                     <constraint firstItem="oJf-Nq-FDy" firstAttribute="leading" secondItem="FWQ-AA-dOm" secondAttribute="leading" constant="10" id="ztq-Og-Skm"/>
                                 </constraints>
