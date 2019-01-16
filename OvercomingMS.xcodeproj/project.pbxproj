@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
 		6129745121DF017E00B9846C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129745021DF017E00B9846C /* HomeViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinnStoryboard.storyboard; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6129744E21DF017E00B9846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6129745021DF017E00B9846C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A4DF4AC21EEEB5900EA991E /* FinnUITesting */ = {
+			isa = PBXGroup;
+			children = (
+				0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */,
+			);
+			path = FinnUITesting;
+			sourceTree = "<group>";
+		};
 		6129744221DF017E00B9846C = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +164,7 @@
 		6129747D21DF020E00B9846C /* UI Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A4DF4AC21EEEB5900EA991E /* FinnUITesting */,
 				6129745221DF017E00B9846C /* Main.storyboard */,
 				6129745721DF017F00B9846C /* LaunchScreen.storyboard */,
 			);
@@ -312,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */,
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
