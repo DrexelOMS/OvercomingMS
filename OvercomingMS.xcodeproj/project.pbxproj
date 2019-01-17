@@ -107,6 +107,15 @@
 			path = FinnUITesting;
 			sourceTree = "<group>";
 		};
+		0A7FC87721F0FAB600492E93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6129745721DF017F00B9846C /* LaunchScreen.storyboard */,
+				6129745521DF017F00B9846C /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		6129744221DF017E00B9846C = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +145,7 @@
 				618235EC21E44474001ED4DB /* View Controllers */,
 				618235EB21E4446B001ED4DB /* Data Models */,
 				6129747D21DF020E00B9846C /* UI Views */,
-				6129745521DF017F00B9846C /* Assets.xcassets */,
+				0A7FC87721F0FAB600492E93 /* Supporting Files */,
 				6129745A21DF017F00B9846C /* Info.plist */,
 			);
 			path = OvercomingMS;
@@ -165,7 +174,6 @@
 			children = (
 				0A4DF4AC21EEEB5900EA991E /* FinnUITesting */,
 				6129745221DF017E00B9846C /* Main.storyboard */,
-				6129745721DF017F00B9846C /* LaunchScreen.storyboard */,
 			);
 			path = "UI Views";
 			sourceTree = "<group>";
