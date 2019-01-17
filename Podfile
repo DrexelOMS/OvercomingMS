@@ -8,6 +8,7 @@ target 'OvercomingMS' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'SVProgressHUD'
+  pod 'RealmSwift'
 
   target 'OvercomingMSTests' do
     inherit! :search_paths
