@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */; };
+		0A7FC91021F51CE300492E93 /* TestTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* TestTrackingViewController.swift */; };
+		0A7FC91221F51D0800492E93 /* TestUpdateTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC91121F51D0800492E93 /* TestUpdateTrackingViewController.swift */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
-		6129745121DF017E00B9846C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129745021DF017E00B9846C /* HomeViewController.swift */; };
+		6129745121DF017E00B9846C /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129745021DF017E00B9846C /* TrackingViewController.swift */; };
 		6129745421DF017E00B9846C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745221DF017E00B9846C /* Main.storyboard */; };
 		6129745621DF017F00B9846C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6129745521DF017F00B9846C /* Assets.xcassets */; };
 		6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745721DF017F00B9846C /* LaunchScreen.storyboard */; };
@@ -44,9 +46,11 @@
 /* Begin PBXFileReference section */
 		06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinnStoryboard.storyboard; sourceTree = "<group>"; };
+		0A7FC90F21F51CE300492E93 /* TestTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTrackingViewController.swift; sourceTree = "<group>"; };
+		0A7FC91121F51D0800492E93 /* TestUpdateTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUpdateTrackingViewController.swift; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6129744E21DF017E00B9846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6129745021DF017E00B9846C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6129745021DF017E00B9846C /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
 		6129745321DF017E00B9846C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6129745521DF017F00B9846C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6129745821DF017F00B9846C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */,
+				0A7FC90F21F51CE300492E93 /* TestTrackingViewController.swift */,
+				0A7FC91121F51D0800492E93 /* TestUpdateTrackingViewController.swift */,
 			);
 			path = FinnUITesting;
 			sourceTree = "<group>";
@@ -189,7 +195,7 @@
 		618235EC21E44474001ED4DB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6129745021DF017E00B9846C /* HomeViewController.swift */,
+				6129745021DF017E00B9846C /* TrackingViewController.swift */,
 				618235F021E4495F001ED4DB /* LoginViewController.swift */,
 				618235F221E449CA001ED4DB /* RegisterViewController.swift */,
 				6130938521E815AF00249B24 /* DietViewController.swift */,
@@ -458,8 +464,10 @@
 				618235F121E4495F001ED4DB /* LoginViewController.swift in Sources */,
 				618235F321E449CA001ED4DB /* RegisterViewController.swift in Sources */,
 				6130938621E815AF00249B24 /* DietViewController.swift in Sources */,
-				6129745121DF017E00B9846C /* HomeViewController.swift in Sources */,
+				0A7FC91021F51CE300492E93 /* TestTrackingViewController.swift in Sources */,
+				6129745121DF017E00B9846C /* TrackingViewController.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
+				0A7FC91221F51D0800492E93 /* TestUpdateTrackingViewController.swift in Sources */,
 				6130938821EAB55000249B24 /* FoodItemsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
