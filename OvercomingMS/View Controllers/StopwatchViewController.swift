@@ -39,7 +39,6 @@ class StopwatchViewController: UIViewController {
         seconds = 0
         StopwatchTime.text = timeString(time:TimeInterval(seconds))
         isTimerRunning = false
-        
     }
     
     
