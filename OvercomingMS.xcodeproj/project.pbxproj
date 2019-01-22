@@ -22,6 +22,7 @@
 		618235F321E449CA001ED4DB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618235F221E449CA001ED4DB /* RegisterViewController.swift */; };
 		8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */; };
 		8387975421EEB8D3009EA5EF /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8387975321EEB8D3009EA5EF /* TimerViewController.swift */; };
+		8387975621F7A809009EA5EF /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8387975521F7A809009EA5EF /* StopwatchViewController.swift */; };
 		DD500F23445D0A98AC159E98 /* Pods_OvercomingMSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613999C2BAE695AFE369D7B7 /* Pods_OvercomingMSUITests.framework */; };
 		E52344C266EF89DAB14C6AA3 /* Pods_OvercomingMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFED95C83375718D7DCA1211 /* Pods_OvercomingMS.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		724CCA850B24CDC7CCFAF25E /* Pods-OvercomingMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.debug.xcconfig"; sourceTree = "<group>"; };
 		8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimerStoryBoard.storyboard; sourceTree = "<group>"; };
 		8387975321EEB8D3009EA5EF /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		8387975521F7A809009EA5EF /* StopwatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
 		89CF61DE31F50EFE76BD85FE /* Pods-OvercomingMSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0433A9C40E2CDD4C4FE48DD /* Pods-OvercomingMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.release.xcconfig"; sourceTree = "<group>"; };
 		A16E3BBC1D5B0C0744651350 /* Pods-OvercomingMSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,7 +177,6 @@
 		6129747D21DF020E00B9846C /* UI Views */ = {
 			isa = PBXGroup;
 			children = (
-				8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */,
 				8387974C21EEB6DA009EA5EF /* ChrisUITesting */,
 				0A4DF4AC21EEEB5900EA991E /* FinnUITesting */,
 				6129745221DF017E00B9846C /* Main.storyboard */,
@@ -200,6 +201,7 @@
 				618235F221E449CA001ED4DB /* RegisterViewController.swift */,
 				6130938521E815AF00249B24 /* DietViewController.swift */,
 				8387975321EEB8D3009EA5EF /* TimerViewController.swift */,
+				8387975521F7A809009EA5EF /* StopwatchViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -207,6 +209,7 @@
 		8387974C21EEB6DA009EA5EF /* ChrisUITesting */ = {
 			isa = PBXGroup;
 			children = (
+				8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */,
 			);
 			path = ChrisUITesting;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				618235F321E449CA001ED4DB /* RegisterViewController.swift in Sources */,
 				6130938621E815AF00249B24 /* DietViewController.swift in Sources */,
 				8387975421EEB8D3009EA5EF /* TimerViewController.swift in Sources */,
+				8387975621F7A809009EA5EF /* StopwatchViewController.swift in Sources */,
 				6129745121DF017E00B9846C /* HomeViewController.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				6130938821EAB55000249B24 /* FoodItemsCell.swift in Sources */,
