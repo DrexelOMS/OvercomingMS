@@ -14,8 +14,28 @@ class TestTrackingViewController: UIViewController {
     //MARK: Class properties
     
     let defaults = UserDefaults.standard
-    var todaysDate : Date = Date() // this is to temporarily change the real world date
-    var currentDate : Date = Date() // this is for going to previus dates
+    var todaysDate : Date { // this is to temporarily change the real world date
+        get {
+            if let today = defaults.object(forKey: "today") as? Date {
+                return today
+            }
+            else {
+                defaults.set(Date(), forKey: "today")
+                return Date()
+            }
+        }
+        set {
+            defaults.set(newValue, forKey: "today")
+            currentDate = todaysDate
+            initializeTodaysData()
+            loadTodaysUI()
+        }
+    }
+    var currentDate : Date = Date() {// this is for going to previus dates
+        didSet {
+            loadTodaysUI()
+        }
+    }
 
     @IBOutlet weak var currentDateLabel: UILabel!
     
@@ -34,23 +54,24 @@ class TestTrackingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //reset user defaults and realm
+//        let defaults = UserDefaults.standard
+//        let dictionary = defaults.dictionaryRepresentation()
+//        dictionary.keys.forEach { key in
+//            defaults.removeObject(forKey: key)
+//        }
+//        try! realm.write {
+//            realm.deleteAll()
+//        }
+        
+        
         // Do any additional setup after loading the view
-        initializeToday() //TODO: this needs to update much more often then this
+        initializeTodaysData() //TODO: this needs to update much more often then this
         loadTodaysUI()
     }
-
     
-    func initializeToday() {
-        
-        //TestCode to manually change the current date
-        if let today = defaults.object(forKey: "today") as? Date {
-            todaysDate = today
-        }
-        else {
-            todaysDate = Date()
-            defaults.set(todaysDate, forKey: "today")
-        }
+    func initializeTodaysData() {
         
         if shouldInitializeToday() {
             do {
@@ -96,16 +117,22 @@ class TestTrackingViewController: UIViewController {
         if  let currentTrackingDay = getCurrentTrackingDay() {
             
             currentDateLabel.text = currentTrackingDay.DateCreated
-            foodLabel.text = "Food: \(currentTrackingDay.FoodPercentageComplete)%"
-            omega3Label.text = "Food: \(currentTrackingDay.Omega3PercentageComplete)%"
-            vitaminDLabel.text = "Food: \(currentTrackingDay.VitaminDPercentageComplete )%"
-            exerciseLabel.text = "Food: \(currentTrackingDay.ExercisePercentageComplete)%"
-            meditationLabel.text = "Food: \(currentTrackingDay.MeditationPercentageComplete)%"
-            medicationLabel.text = "Food: \(currentTrackingDay.MedicationPercentageComplete)%"
+            foodLabel.text = "Food: \(currentTrackingDay.FoodPercentageComplete * 100)%"
+            omega3Label.text = "Omega 3: \(currentTrackingDay.Omega3PercentageComplete * 100)%"
+            vitaminDLabel.text = "Vitmin D: \(currentTrackingDay.VitaminDPercentageComplete * 100)%"
+            exerciseLabel.text = "Exercise: \(currentTrackingDay.ExercisePercentageComplete * 100)%"
+            meditationLabel.text = "Meditation: \(currentTrackingDay.MeditationPercentageComplete * 100)%"
+            medicationLabel.text = "Medication: \(currentTrackingDay.MedicationPercentageComplete * 100)%"
         }
         else{
             print("Do something for days that were not tracked")
             currentDateLabel.text = getFormatedDate(date: currentDate)
+            foodLabel.text = "Food: Untracked"
+            omega3Label.text = "Omega 3: Untracked"
+            vitaminDLabel.text = "Vitamin D: Untracked"
+            exerciseLabel.text = "Exercise: Untracked"
+            meditationLabel.text = "Meditation: Untracked"
+            medicationLabel.text = "Medication: Untracked"
         }
         
         
@@ -119,12 +146,13 @@ class TestTrackingViewController: UIViewController {
 
     @IBAction func previousDate(_ sender: UIButton) {
         currentDate = currentDate.addingTimeInterval(-60*60*24)
-        loadTodaysUI()
     }
     
     @IBAction func nextDate(_ sender: UIButton) {
+        if getFormatedDate(date: currentDate) == getFormatedDate(date: todaysDate) {
+            return
+        }
         currentDate = currentDate.addingTimeInterval(60*60*24)
-        loadTodaysUI()
     }
     
     @IBAction func addClicked(_ sender: UIButton) {
@@ -132,6 +160,25 @@ class TestTrackingViewController: UIViewController {
     }
     
     @IBAction func checkClicked(_ sender: UIButton) {
-        print("Clicked Check: \(sender.tag)")
+        do {
+            try realm.write() {
+                if let day = getCurrentTrackingDay() {
+                    if day.FoodPercentageComplete == 0 {
+                        day.FoodPercentageComplete = 1
+                    }
+                    else {
+                        day.FoodPercentageComplete = 0
+                    }
+                }
+            }
+        } catch {
+            print("Error updating todays data : \(error)" )
+        }
+        
+        loadTodaysUI()
+    }
+    
+    @IBAction func ProgressDayPressed(_ sender: UIButton) {
+        todaysDate = todaysDate.addingTimeInterval(60*60*24)
     }
 }

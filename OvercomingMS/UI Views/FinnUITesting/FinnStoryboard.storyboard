@@ -178,6 +178,14 @@
                                     <action selector="checkClicked:" destination="2yu-zt-fJk" eventType="touchUpInside" id="fZc-H1-29z"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k36-6R-5CB">
+                                <rect key="frame" x="141" y="553" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Progress Day"/>
+                                <connections>
+                                    <action selector="ProgressDayPressed:" destination="2yu-zt-fJk" eventType="touchUpInside" id="Gf4-SL-vb1"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9j-5q-lDy">
                                 <rect key="frame" x="60" y="228" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
