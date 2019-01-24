@@ -10,7 +10,8 @@ import Foundation
 import RealmSwift
 
 class TrackingDay: Object {
-    @objc dynamic var DateCreated: Date = Date()
+    let primaryKey = "Primary-Key"
+    @objc dynamic var DateCreated: String = ""
     @objc dynamic var FollowProgramStreak: Int = 0
     
     //We save both percentage complete and their total so if we ever change the requirement
@@ -37,4 +38,8 @@ class TrackingDay: Object {
     //MedicationRoutines
     //Note that Routines are different from a standard list saved on the phone
     //which they can save and add custom routine names
+    
+    override static func primaryKey() -> String? {
+        return "DateCreated"
+    }
 }

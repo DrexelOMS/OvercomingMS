@@ -14,8 +14,8 @@ class TestTrackingViewController: UIViewController {
     //MARK: Class properties
     
     let defaults = UserDefaults.standard
-    var todaysDate : Date = Date()
-    var currentDate : Date = Date()
+    var todaysDate : Date = Date() // this is to temporarily change the real world date
+    var currentDate : Date = Date() // this is for going to previus dates
 
     @IBOutlet weak var currentDateLabel: UILabel!
     
@@ -56,7 +56,7 @@ class TestTrackingViewController: UIViewController {
             do {
                 try realm.write(){
                     let todaysTrackingData = TrackingDay()
-                    todaysTrackingData.DateCreated = todaysDate
+                    todaysTrackingData.DateCreated = getFormatedDate(date: todaysDate)
                     realm.add(todaysTrackingData)
                 }
             } catch {
@@ -72,7 +72,7 @@ class TestTrackingViewController: UIViewController {
             return true
         }
         if getFormatedDate(date: todaysDate) ==
-            getFormatedDate(date: trackingDays[trackingDays.count - 1].DateCreated) {
+            trackingDays[trackingDays.count - 1].DateCreated {
             return false
         }
         else {
@@ -82,7 +82,7 @@ class TestTrackingViewController: UIViewController {
     
     func getFormatedDate(date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = "MM/dd/yyyy"
         return formatter.string(from: date)
     }
     
@@ -91,29 +91,40 @@ class TestTrackingViewController: UIViewController {
         if(trackingDays.count <= 0){
             print ("TrackingDays was not initialized")
         }
+
         
-        if true { //check if trackingDays contains the currentDate
-            let todaysTrackingStats = trackingDays[trackingDays.count - 1]
-            currentDateLabel.text = getFormatedDate(date: todaysTrackingStats.DateCreated)
-            foodLabel.text = "Food: \(todaysTrackingStats.FoodPercentageComplete)%"
-            omega3Label.text = "Food: \(todaysTrackingStats.Omega3PercentageComplete)%"
-            vitaminDLabel.text = "Food: \(todaysTrackingStats.VitaminDPercentageComplete )%"
-            exerciseLabel.text = "Food: \(todaysTrackingStats.ExercisePercentageComplete)%"
-            meditationLabel.text = "Food: \(todaysTrackingStats.MeditationPercentageComplete)%"
-            medicationLabel.text = "Food: \(todaysTrackingStats.MedicationPercentageComplete)%"
+        if  let currentTrackingDay = getCurrentTrackingDay() {
+            
+            currentDateLabel.text = currentTrackingDay.DateCreated
+            foodLabel.text = "Food: \(currentTrackingDay.FoodPercentageComplete)%"
+            omega3Label.text = "Food: \(currentTrackingDay.Omega3PercentageComplete)%"
+            vitaminDLabel.text = "Food: \(currentTrackingDay.VitaminDPercentageComplete )%"
+            exerciseLabel.text = "Food: \(currentTrackingDay.ExercisePercentageComplete)%"
+            meditationLabel.text = "Food: \(currentTrackingDay.MeditationPercentageComplete)%"
+            medicationLabel.text = "Food: \(currentTrackingDay.MedicationPercentageComplete)%"
+        }
+        else{
+            print("Do something for days that were not tracked")
+            currentDateLabel.text = getFormatedDate(date: currentDate)
         }
         
         
     }
     
+    func getCurrentTrackingDay() -> TrackingDay? {
+        return realm.object(ofType: TrackingDay.self, forPrimaryKey: getFormatedDate(date: currentDate))
+    }
+    
     //MARK: IBActions
 
     @IBAction func previousDate(_ sender: UIButton) {
-        print("see previous days data")
+        currentDate = currentDate.addingTimeInterval(-60*60*24)
+        loadTodaysUI()
     }
     
     @IBAction func nextDate(_ sender: UIButton) {
-        print("go to tomorrow")
+        currentDate = currentDate.addingTimeInterval(60*60*24)
+        loadTodaysUI()
     }
     
     @IBAction func addClicked(_ sender: UIButton) {
