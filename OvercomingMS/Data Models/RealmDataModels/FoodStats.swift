@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class FoodStats: Object {
-    @objc dynamic var foodName : String = ""
-    @objc dynamic var foodOmega3Count : Int = 0
-    var parentDay = LinkingObjects(fromType: TrackingDay.self, property: "dietStats")
+//    @objc dynamic var foodName : String = ""
+//    @objc dynamic var foodOmega3Count : Int = 0
+//    var parentDay = LinkingObjects(fromType: TrackingDay.self, property: "dietStats")
 }

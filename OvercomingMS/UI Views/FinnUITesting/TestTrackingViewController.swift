@@ -14,14 +14,15 @@ class TestTrackingViewController: UIViewController {
     //MARK: Class properties
     
     let defaults = UserDefaults.standard
-    var currentDay : Date = Date()
+    var todaysDate : Date = Date()
+    var currentDate : Date = Date()
 
     @IBOutlet weak var currentDateLabel: UILabel!
     
     @IBOutlet weak var foodLabel: UILabel!
     @IBOutlet weak var omega3Label: UILabel!
     @IBOutlet weak var vitaminDLabel: UILabel!
-    @IBOutlet weak var excerciseLabel: UILabel!
+    @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var meditationLabel: UILabel!
     @IBOutlet weak var medicationLabel: UILabel!
     
@@ -44,20 +45,18 @@ class TestTrackingViewController: UIViewController {
         
         //TestCode to manually change the current date
         if let today = defaults.object(forKey: "today") as? Date {
-            currentDay = today
+            todaysDate = today
         }
         else {
-            currentDay = Date()
-            defaults.set(currentDay, forKey: "today")
+            todaysDate = Date()
+            defaults.set(todaysDate, forKey: "today")
         }
-
         
-        //TODO: check if the currentDay is not inside the last item inside
-        if trackingDays.count == 0 || shouldInitializeToday() {
+        if shouldInitializeToday() {
             do {
                 try realm.write(){
                     let todaysTrackingData = TrackingDay()
-                    todaysTrackingData.DateCreated = currentDay
+                    todaysTrackingData.DateCreated = todaysDate
                     realm.add(todaysTrackingData)
                 }
             } catch {
@@ -67,18 +66,43 @@ class TestTrackingViewController: UIViewController {
         
     }
     
+    //check if the currentDay is not the last trackingDay
     func shouldInitializeToday() -> Bool {
-        return false
+        if trackingDays.count == 0 {
+            return true
+        }
+        if getFormatedDate(date: todaysDate) ==
+            getFormatedDate(date: trackingDays[trackingDays.count - 1].DateCreated) {
+            return false
+        }
+        else {
+            return true
+        }
+    }
+    
+    func getFormatedDate(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        return formatter.string(from: date)
     }
     
     func loadTodaysUI() {
         //update UI
-        if trackingDays.count > 0 {
-            let day = trackingDays[0]
-            let formatter = DateFormatter()
-            formatter.dateFormat = "dd-MMM-yyyy"
-            currentDateLabel.text = formatter.string(from: day.DateCreated)
+        if(trackingDays.count <= 0){
+            print ("TrackingDays was not initialized")
         }
+        
+        if true { //check if trackingDays contains the currentDate
+            let todaysTrackingStats = trackingDays[trackingDays.count - 1]
+            currentDateLabel.text = getFormatedDate(date: todaysTrackingStats.DateCreated)
+            foodLabel.text = "Food: \(todaysTrackingStats.FoodPercentageComplete)%"
+            omega3Label.text = "Food: \(todaysTrackingStats.Omega3PercentageComplete)%"
+            vitaminDLabel.text = "Food: \(todaysTrackingStats.VitaminDPercentageComplete )%"
+            exerciseLabel.text = "Food: \(todaysTrackingStats.ExercisePercentageComplete)%"
+            meditationLabel.text = "Food: \(todaysTrackingStats.MeditationPercentageComplete)%"
+            medicationLabel.text = "Food: \(todaysTrackingStats.MedicationPercentageComplete)%"
+        }
+        
         
     }
     
@@ -93,10 +117,10 @@ class TestTrackingViewController: UIViewController {
     }
     
     @IBAction func addClicked(_ sender: UIButton) {
-        print("Clicked : \(sender.tag)")
+        print("Clicked Add: \(sender.tag)")
     }
     
     @IBAction func checkClicked(_ sender: UIButton) {
-        print("Clicked : \(sender.tag)")
+        print("Clicked Check: \(sender.tag)")
     }
 }

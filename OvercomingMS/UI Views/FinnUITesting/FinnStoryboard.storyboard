@@ -102,51 +102,81 @@
                                 <rect key="frame" x="1" y="266" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addClicked:" destination="2yu-zt-fJk" eventType="touchUpInside" id="q8d-VT-kBo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hua-Rj-XPZ">
                                 <rect key="frame" x="60" y="266" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="checkClicked:" destination="2yu-zt-fJk" eventType="touchUpInside" id="5N3-di-dWh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3c-t7-42I">
                                 <rect key="frame" x="1" y="318" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addClicked:" destination="2yu-zt-fJk" eventType="touchUpInside" id="JvT-RN-17D"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9K-An-UFb">
                                 <rect key="frame" x="60" y="318" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="checkClicked:" destination="2yu-zt-fJk" eventType="touchUpInside" id="pPy-Kk-BHu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygf-ua-9hk">
                                 <rect key="frame" x="1" y="373" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addClicked:" destination="2yu-zt-fJk" eventType="touchUpInside" id="zqQ-fq-IDh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qt8-RR-J6p">
                                 <rect key="frame" x="60" y="373" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="checkClicked:" destination="2yu-zt-fJk" eventType="touchUpInside" id="LNA-rT-bZw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axa-eE-rUD">
                                 <rect key="frame" x="1" y="411" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addClicked:" destination="2yu-zt-fJk" eventType="touchUpInside" id="E1J-0g-UDZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j16-FF-xWb">
                                 <rect key="frame" x="60" y="411" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="checkClicked:" destination="2yu-zt-fJk" eventType="touchUpInside" id="CyJ-7c-LQa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mj2-tD-AKH">
                                 <rect key="frame" x="1" y="476" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addClicked:" destination="2yu-zt-fJk" eventType="touchUpInside" id="0nL-Mb-R5T"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uB-cx-egP">
                                 <rect key="frame" x="60" y="476" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="checkClicked:" destination="2yu-zt-fJk" eventType="touchUpInside" id="fZc-H1-29z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9j-5q-lDy">
                                 <rect key="frame" x="60" y="228" width="67" height="30"/>
@@ -162,7 +192,7 @@
                     </view>
                     <connections>
                         <outlet property="currentDateLabel" destination="KEX-2c-PoB" id="fsg-Ao-gze"/>
-                        <outlet property="excerciseLabel" destination="lwY-n8-oFB" id="0Vs-cz-SMZ"/>
+                        <outlet property="exerciseLabel" destination="lwY-n8-oFB" id="0Vs-cz-SMZ"/>
                         <outlet property="foodLabel" destination="jum-yq-jWT" id="mli-nD-RrM"/>
                         <outlet property="medicationLabel" destination="T5I-vo-42X" id="UUg-tq-JLA"/>
                         <outlet property="meditationLabel" destination="GTQ-c2-g43" id="Kvw-by-6KW"/>
