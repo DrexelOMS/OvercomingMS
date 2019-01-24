@@ -67,6 +67,7 @@ class TestTrackingViewController: UIViewController {
         
         
         // Do any additional setup after loading the view
+        currentDate = todaysDate
         initializeTodaysData() //TODO: this needs to update much more often then this
         loadTodaysUI()
     }
@@ -156,18 +157,40 @@ class TestTrackingViewController: UIViewController {
     }
     
     @IBAction func addClicked(_ sender: UIButton) {
-        print("Clicked Add: \(sender.tag)")
-    }
-    
-    @IBAction func checkClicked(_ sender: UIButton) {
+        if getFormatedDate(date: currentDate) != getFormatedDate(date: todaysDate) {
+            return
+        }
+        
         do {
             try realm.write() {
                 if let day = getCurrentTrackingDay() {
-                    if day.FoodPercentageComplete == 0 {
+                    day.FoodEatenRating += 1
+                    if day.FoodEatenRating > 5 {
+                        day.FoodEatenRating = 5
+                    }
+                    day.FoodPercentageComplete = Float(day.FoodEatenRating) / 5
+                }
+            }
+        } catch {
+            print("Error updating todays data : \(error)" )
+        }
+        
+        loadTodaysUI()
+    }
+    
+    @IBAction func checkClicked(_ sender: UIButton) {
+        if getFormatedDate(date: currentDate) != getFormatedDate(date: todaysDate) {
+            return
+        }
+        
+        do {
+            try realm.write() {
+                if let day = getCurrentTrackingDay() {
+                    if day.FoodPercentageComplete != 1 {
                         day.FoodPercentageComplete = 1
                     }
                     else {
-                        day.FoodPercentageComplete = 0
+                        day.FoodPercentageComplete = Float(day.FoodEatenRating) / 5
                     }
                 }
             }
