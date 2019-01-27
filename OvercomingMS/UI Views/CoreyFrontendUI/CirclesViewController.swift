@@ -1,21 +1,26 @@
 //
-//  ViewControllerExercise.swift
+//  CirclesViewController.swift
 //  OvercomingMS
 //
-//  Created by Corey Hensley on 1/26/19.
+//  Created by Corey Hensley on 1/27/19.
 //  Copyright © 2019 DrexelOMS. All rights reserved.
 //
 
 import UIKit
 
-class ViewControllerExercise: UIViewController {
+class CirclesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        //TEST TEST FOR VINCE TO SEE
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        self.view.addGestureRecognizer(swipeLeft)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated
     }
     
 
