@@ -51,22 +51,22 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ec2-d6-maM">
                                 <rect key="frame" x="10" y="80" width="394" height="546"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nB-n2-uJt" userLabel="TrackingLog">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nB-n2-uJt" userLabel="TrackingLog" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="69.333333333333329"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaE-qV-ZKf">
-                                                <rect key="frame" x="10" y="10.000000000000004" width="374" height="49.333333333333343"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaE-qV-ZKf">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="69.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="UaE-qV-ZKf" secondAttribute="bottom" constant="10" id="DyB-CV-6nI"/>
-                                            <constraint firstItem="UaE-qV-ZKf" firstAttribute="leading" secondItem="9nB-n2-uJt" secondAttribute="leading" constant="10" id="GTz-w3-Qpk"/>
-                                            <constraint firstItem="UaE-qV-ZKf" firstAttribute="top" secondItem="9nB-n2-uJt" secondAttribute="top" constant="10" id="Y9t-VU-aIv"/>
-                                            <constraint firstAttribute="trailing" secondItem="UaE-qV-ZKf" secondAttribute="trailing" constant="10" id="uvt-1t-meC"/>
+                                            <constraint firstAttribute="bottom" secondItem="UaE-qV-ZKf" secondAttribute="bottom" id="DyB-CV-6nI"/>
+                                            <constraint firstItem="UaE-qV-ZKf" firstAttribute="leading" secondItem="9nB-n2-uJt" secondAttribute="leading" id="GTz-w3-Qpk"/>
+                                            <constraint firstItem="UaE-qV-ZKf" firstAttribute="top" secondItem="9nB-n2-uJt" secondAttribute="top" id="Y9t-VU-aIv"/>
+                                            <constraint firstAttribute="trailing" secondItem="UaE-qV-ZKf" secondAttribute="trailing" id="uvt-1t-meC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaX-xy-2cn" userLabel="Food" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">

@@ -29,7 +29,7 @@ class TrackingProgressBar: UIView {
     @IBOutlet private weak var rightLabel: UILabel!
     @IBOutlet private weak var linearProgressBar: LinearProgressBar!
     
-    private override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
@@ -45,8 +45,6 @@ class TrackingProgressBar: UIView {
         view.frame = self.bounds
         
         //Custom View Modifications
-        mainView.layer.cornerRadius = DesignConstants.CORNER_RADIUS;
-        mainView.layer.masksToBounds = true;
         
         leftContainerView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(leftContainerPressed(tapGestureRecognizer: )))
@@ -71,7 +69,7 @@ class TrackingProgressBar: UIView {
      Sets the Progress Bar to the given value *(0-100)
      */
     func incremementProgressValue(value : Float){
-        linearProgressBar.progressValue = CGFloat(value);
+        linearProgressBar.progressValue += CGFloat(value);
     }
     
     func setProgressValue(value : Float){
