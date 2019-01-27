@@ -69,7 +69,7 @@
                                             <constraint firstAttribute="trailing" secondItem="UaE-qV-ZKf" secondAttribute="trailing" id="uvt-1t-meC"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaX-xy-2cn" userLabel="Food" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaX-xy-2cn" userLabel="Food" customClass="TrackingFoodBar" customModule="OvercomingMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="79.333333333333343" width="394" height="69.666666666666657"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbU-br-jOp" userLabel="Omega3" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
@@ -113,6 +113,7 @@
                         <viewLayoutGuide key="safeArea" id="P2p-ZY-7qC"/>
                     </view>
                     <connections>
+                        <outlet property="trackingFoodBar" destination="Apa-bQ-LB9" id="TaB-fl-oFR"/>
                         <outlet property="trackingProgressBar" destination="IaX-xy-2cn" id="LJH-Bp-Kib"/>
                     </connections>
                 </viewController>

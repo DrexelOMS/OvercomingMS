@@ -18,16 +18,15 @@ protocol TrackingProgressBarDelegate : class {
 @IBDesignable
 class TrackingProgressBar: UIView {
     
-    private let nibName = "TrackingProgressBar"
+    public var nibName: String { return "TrackingProgressBar" }
     private var contentView: UIView?
     
     weak var delegate : TrackingProgressBarDelegate?
     
-    @IBOutlet private var mainView: UIView!
-    @IBOutlet private weak var leftContainerView: UIView!
-    @IBOutlet private weak var leftLabel: UILabel!
-    @IBOutlet private weak var rightLabel: UILabel!
-    @IBOutlet private weak var linearProgressBar: LinearProgressBar!
+    @IBOutlet internal weak var leftContainerView: UIView!
+    @IBOutlet internal weak var leftLabel: UILabel!
+    @IBOutlet internal weak var rightLabel: UILabel!
+    @IBOutlet internal weak var linearProgressBar: LinearProgressBar!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

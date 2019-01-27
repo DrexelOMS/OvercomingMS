@@ -27,12 +27,15 @@ class TestProgressBarViewController: UIViewController, TrackingProgressBarDelega
     
     @IBOutlet weak var trackingProgressBar: TrackingProgressBar!
     
+    @IBOutlet weak var trackingFoodBar: TrackingFoodBar!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         trackingProgressBar.delegate = self;
-        
+        trackingFoodBar.delegate = self;
     }
 
     
