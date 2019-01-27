@@ -48,14 +48,14 @@
                                     <constraint firstItem="Z5d-2r-PNa" firstAttribute="top" secondItem="2OB-LL-Ix7" secondAttribute="top" constant="10" id="uXa-gq-V62"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zu4-RN-i5Q" userLabel="TrackingBars">
-                                <rect key="frame" x="0.0" y="70" width="414" height="566"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ec2-d6-maM">
+                                <rect key="frame" x="10" y="70" width="394" height="566"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iX-vd-kZD" userLabel="TrackingLog">
-                                        <rect key="frame" x="19.666666666666657" y="0.0" width="375" height="72.333333333333329"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nB-n2-uJt" userLabel="TrackingLog">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="81"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGm-Mz-Pc9">
-                                                <rect key="frame" x="173" y="26" width="28.666666666666657" height="20.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaE-qV-ZKf">
+                                                <rect key="frame" x="182.66666666666666" y="30.333333333333329" width="28.666666666666657" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -63,50 +63,35 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="JGm-Mz-Pc9" firstAttribute="centerX" secondItem="3iX-vd-kZD" secondAttribute="centerX" id="GrM-Pi-dvB"/>
-                                            <constraint firstItem="JGm-Mz-Pc9" firstAttribute="centerY" secondItem="3iX-vd-kZD" secondAttribute="centerY" id="sTi-Ug-boF"/>
+                                            <constraint firstItem="UaE-qV-ZKf" firstAttribute="centerY" secondItem="9nB-n2-uJt" secondAttribute="centerY" id="FYS-Dy-nUf"/>
+                                            <constraint firstItem="UaE-qV-ZKf" firstAttribute="centerX" secondItem="9nB-n2-uJt" secondAttribute="centerX" id="Xc5-0n-I8B"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGH-wW-JTM" userLabel="Food" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="82.333333333333343" width="414" height="72.333333333333343"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaX-xy-2cn" userLabel="Food" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="81" width="394" height="80.666666666666686"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1W-qt-pLt" userLabel="Omega3" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="164.66666666666666" width="414" height="72.333333333333343"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbU-br-jOp" userLabel="Omega3" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="161.66666666666666" width="394" height="81"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5x-aa-2s1" userLabel="VitaminD" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="247" width="414" height="72"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dk-OP-gkx" userLabel="VitaminD" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="242.66666666666666" width="394" height="80.666666666666657"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2G-od-qTe" userLabel="Exercise" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="329" width="414" height="72.333333333333314"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5d-5p-kZf" userLabel="Exercise" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="323.33333333333331" width="394" height="81"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLA-lJ-pc0" userLabel="Meditation" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="411.33333333333331" width="414" height="72.333333333333314"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zd8-1d-09f" userLabel="Medication" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="404.33333333333331" width="394" height="80.666666666666686"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQx-R4-Mp8" userLabel="Medication" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="493.66666666666657" width="414" height="72.333333333333314"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4P-vl-fM2" userLabel="Meditation" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="485" width="394" height="81"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="J5x-aa-2s1" secondAttribute="trailing" id="4qQ-ca-kwd"/>
-                                    <constraint firstAttribute="trailing" secondItem="fGH-wW-JTM" secondAttribute="trailing" id="6Mb-Bs-H4k"/>
-                                    <constraint firstItem="VQx-R4-Mp8" firstAttribute="leading" secondItem="Zu4-RN-i5Q" secondAttribute="leading" id="Bwt-AA-nrR"/>
-                                    <constraint firstAttribute="trailing" secondItem="l2G-od-qTe" secondAttribute="trailing" id="F3X-Nl-MWU"/>
-                                    <constraint firstItem="b1W-qt-pLt" firstAttribute="leading" secondItem="Zu4-RN-i5Q" secondAttribute="leading" id="Ho9-4C-7s9"/>
-                                    <constraint firstItem="J5x-aa-2s1" firstAttribute="leading" secondItem="Zu4-RN-i5Q" secondAttribute="leading" id="Jpl-NT-SdC"/>
-                                    <constraint firstItem="l2G-od-qTe" firstAttribute="leading" secondItem="Zu4-RN-i5Q" secondAttribute="leading" id="Jyz-eC-IQg"/>
-                                    <constraint firstAttribute="trailing" secondItem="VQx-R4-Mp8" secondAttribute="trailing" id="d9v-Jp-fZw"/>
-                                    <constraint firstAttribute="trailing" secondItem="b1W-qt-pLt" secondAttribute="trailing" id="dCy-Lw-av1"/>
-                                    <constraint firstItem="fGH-wW-JTM" firstAttribute="leading" secondItem="Zu4-RN-i5Q" secondAttribute="leading" id="hkZ-h0-48H"/>
-                                    <constraint firstItem="3iX-vd-kZD" firstAttribute="centerX" secondItem="Zu4-RN-i5Q" secondAttribute="centerX" id="qMt-s3-L9L"/>
-                                    <constraint firstAttribute="trailing" secondItem="SLA-lJ-pc0" secondAttribute="trailing" id="rv8-gs-mT6"/>
-                                    <constraint firstItem="SLA-lJ-pc0" firstAttribute="leading" secondItem="Zu4-RN-i5Q" secondAttribute="leading" id="tux-sQ-cxG"/>
-                                </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Apa-bQ-LB9" userLabel="BotView">
                                 <rect key="frame" x="0.0" y="636" width="414" height="100"/>
@@ -118,21 +103,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="P2p-ZY-7qC" firstAttribute="trailing" secondItem="Zu4-RN-i5Q" secondAttribute="trailing" id="76r-AW-ITC"/>
-                            <constraint firstItem="Zu4-RN-i5Q" firstAttribute="top" secondItem="2OB-LL-Ix7" secondAttribute="bottom" id="APq-Zg-TbA"/>
                             <constraint firstItem="Apa-bQ-LB9" firstAttribute="leading" secondItem="P2p-ZY-7qC" secondAttribute="leading" id="Biq-3B-dYs"/>
-                            <constraint firstItem="Zu4-RN-i5Q" firstAttribute="leading" secondItem="P2p-ZY-7qC" secondAttribute="leading" id="EkD-64-0CL"/>
                             <constraint firstItem="2OB-LL-Ix7" firstAttribute="top" secondItem="P2p-ZY-7qC" secondAttribute="top" id="Inj-Qb-qIG"/>
                             <constraint firstItem="2OB-LL-Ix7" firstAttribute="trailing" secondItem="P2p-ZY-7qC" secondAttribute="trailing" id="Uzm-Mx-MvF"/>
                             <constraint firstItem="P2p-ZY-7qC" firstAttribute="trailing" secondItem="Apa-bQ-LB9" secondAttribute="trailing" id="bqm-R6-lW7"/>
+                            <constraint firstItem="ec2-d6-maM" firstAttribute="top" secondItem="2OB-LL-Ix7" secondAttribute="bottom" id="ggh-5I-8Sj"/>
+                            <constraint firstItem="ec2-d6-maM" firstAttribute="leading" secondItem="P2p-ZY-7qC" secondAttribute="leading" constant="10" id="gxq-Oi-EwQ"/>
                             <constraint firstItem="2OB-LL-Ix7" firstAttribute="leading" secondItem="P2p-ZY-7qC" secondAttribute="leading" id="hGK-rf-EXv"/>
-                            <constraint firstItem="Apa-bQ-LB9" firstAttribute="top" secondItem="Zu4-RN-i5Q" secondAttribute="bottom" id="pNj-gy-ZsC"/>
+                            <constraint firstItem="P2p-ZY-7qC" firstAttribute="trailing" secondItem="ec2-d6-maM" secondAttribute="trailing" constant="10" id="u4e-Bb-SIw"/>
                             <constraint firstItem="Apa-bQ-LB9" firstAttribute="bottom" secondItem="P2p-ZY-7qC" secondAttribute="bottom" id="ysK-4R-qpq"/>
+                            <constraint firstItem="Apa-bQ-LB9" firstAttribute="top" secondItem="ec2-d6-maM" secondAttribute="bottom" id="zl5-gf-x7v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P2p-ZY-7qC"/>
                     </view>
                     <connections>
-                        <outlet property="trackingProgressBar" destination="fGH-wW-JTM" id="YVc-9R-Yh9"/>
+                        <outlet property="trackingProgressBar" destination="IaX-xy-2cn" id="LJH-Bp-Kib"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeG-Og-beE" sceneMemberID="firstResponder"/>
