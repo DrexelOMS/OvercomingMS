@@ -12,15 +12,15 @@ class TestProgressBarViewController: UIViewController, TrackingProgressBarDelega
     
     func didPressLeftContainer(_ sender: TrackingProgressBar) {
         print("pressed left area")
-        trackingProgressBar.linearProgressBar.progressValue += 10
+        trackingProgressBar.incremementProgressValue(value: 10)
     }
     
     
     func didPressCheckButton(_ sender: TrackingProgressBar) {
-        if(trackingProgressBar.linearProgressBar.progressValue == 0){
-            trackingProgressBar.linearProgressBar.progressValue = 100
+        if(trackingProgressBar.getProgressValue() == 0){
+            trackingProgressBar.setProgressValue(value: 100)
         } else{
-          trackingProgressBar.linearProgressBar.progressValue = 0 
+            trackingProgressBar.setProgressValue(value: 0)
         }
     }
     

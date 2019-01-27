@@ -116,9 +116,9 @@
 		0A4DF4AC21EEEB5900EA991E /* FinnUITesting */ = {
 			isa = PBXGroup;
 			children = (
+				0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */,
 				0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */,
 				0AD07F6321FCE49B00C55831 /* ProgressBarStoryboard.storyboard */,
-				0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */,
 				0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */,
 				0AD07F6521FCE64700C55831 /* TestProgressBarViewController.swift */,
 			);
