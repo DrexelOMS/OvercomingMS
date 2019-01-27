@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */; };
+		0CC1E3E821FCD55400F8B32E /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1E3E721FCD55400F8B32E /* CoreyFrontendUI.storyboard */; };
+		0CC4343221FE0BD0000B8B22 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC4343121FE0BD0000B8B22 /* TrackingViewController.swift */; };
+		0CC4343421FE0CD0000B8B22 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC4343321FE0CD0000B8B22 /* AnalysisViewController.swift */; };
+		0CC4343621FE0F68000B8B22 /* CirclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC4343521FE0F68000B8B22 /* CirclesViewController.swift */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
 		6129745121DF017E00B9846C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129745021DF017E00B9846C /* HomeViewController.swift */; };
@@ -47,6 +51,10 @@
 /* Begin PBXFileReference section */
 		06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinnStoryboard.storyboard; sourceTree = "<group>"; };
+		0CC1E3E721FCD55400F8B32E /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
+		0CC4343121FE0BD0000B8B22 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
+		0CC4343321FE0CD0000B8B22 /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
+		0CC4343521FE0F68000B8B22 /* CirclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesViewController.swift; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6129744E21DF017E00B9846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6129745021DF017E00B9846C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +129,17 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0CC1E3E921FCD59300F8B32E /* CoreyFrontendUI */ = {
+			isa = PBXGroup;
+			children = (
+				0CC1E3E721FCD55400F8B32E /* CoreyFrontendUI.storyboard */,
+				0CC4343121FE0BD0000B8B22 /* TrackingViewController.swift */,
+				0CC4343321FE0CD0000B8B22 /* AnalysisViewController.swift */,
+				0CC4343521FE0F68000B8B22 /* CirclesViewController.swift */,
+			);
+			path = CoreyFrontendUI;
+			sourceTree = "<group>";
+		};
 		6129744221DF017E00B9846C = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +196,7 @@
 		6129747D21DF020E00B9846C /* UI Views */ = {
 			isa = PBXGroup;
 			children = (
+				0CC1E3E921FCD59300F8B32E /* CoreyFrontendUI */,
 				8387974C21EEB6DA009EA5EF /* ChrisUITesting */,
 				0A4DF4AC21EEEB5900EA991E /* FinnUITesting */,
 				6129745221DF017E00B9846C /* Main.storyboard */,
@@ -346,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */,
+				0CC1E3E821FCD55400F8B32E /* CoreyFrontendUI.storyboard in Resources */,
 				8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */,
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
@@ -473,11 +494,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC4343621FE0F68000B8B22 /* CirclesViewController.swift in Sources */,
 				618235F121E4495F001ED4DB /* LoginViewController.swift in Sources */,
 				618235F321E449CA001ED4DB /* RegisterViewController.swift in Sources */,
 				6130938621E815AF00249B24 /* DietViewController.swift in Sources */,
+				0CC4343421FE0CD0000B8B22 /* AnalysisViewController.swift in Sources */,
 				8387975421EEB8D3009EA5EF /* TimerViewController.swift in Sources */,
 				8387975621F7A809009EA5EF /* StopwatchViewController.swift in Sources */,
+				0CC4343221FE0BD0000B8B22 /* TrackingViewController.swift in Sources */,
 				6129745121DF017E00B9846C /* HomeViewController.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				6130938821EAB55000249B24 /* FoodItemsCell.swift in Sources */,
