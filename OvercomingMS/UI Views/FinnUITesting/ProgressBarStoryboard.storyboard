@@ -48,48 +48,44 @@
                                     <constraint firstItem="Z5d-2r-PNa" firstAttribute="top" secondItem="2OB-LL-Ix7" secondAttribute="top" constant="10" id="uXa-gq-V62"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ec2-d6-maM">
-                                <rect key="frame" x="10" y="70" width="394" height="566"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ec2-d6-maM">
+                                <rect key="frame" x="10" y="80" width="394" height="546"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nB-n2-uJt" userLabel="TrackingLog">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="81"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="69.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaE-qV-ZKf">
-                                                <rect key="frame" x="182.66666666666666" y="30.333333333333329" width="28.666666666666657" height="20.333333333333329"/>
+                                                <rect key="frame" x="10" y="10.000000000000004" width="374" height="49.333333333333343"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="UaE-qV-ZKf" firstAttribute="centerY" secondItem="9nB-n2-uJt" secondAttribute="centerY" id="FYS-Dy-nUf"/>
-                                            <constraint firstItem="UaE-qV-ZKf" firstAttribute="centerX" secondItem="9nB-n2-uJt" secondAttribute="centerX" id="Xc5-0n-I8B"/>
+                                            <constraint firstAttribute="bottom" secondItem="UaE-qV-ZKf" secondAttribute="bottom" constant="10" id="DyB-CV-6nI"/>
+                                            <constraint firstItem="UaE-qV-ZKf" firstAttribute="leading" secondItem="9nB-n2-uJt" secondAttribute="leading" constant="10" id="GTz-w3-Qpk"/>
+                                            <constraint firstItem="UaE-qV-ZKf" firstAttribute="top" secondItem="9nB-n2-uJt" secondAttribute="top" constant="10" id="Y9t-VU-aIv"/>
+                                            <constraint firstAttribute="trailing" secondItem="UaE-qV-ZKf" secondAttribute="trailing" constant="10" id="uvt-1t-meC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaX-xy-2cn" userLabel="Food" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="81" width="394" height="80.666666666666686"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="79.333333333333343" width="394" height="69.666666666666657"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbU-br-jOp" userLabel="Omega3" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="161.66666666666666" width="394" height="81"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="159" width="394" height="69.333333333333314"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dk-OP-gkx" userLabel="VitaminD" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="242.66666666666666" width="394" height="80.666666666666657"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="238.33333333333334" width="394" height="69.333333333333343"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5d-5p-kZf" userLabel="Exercise" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="323.33333333333331" width="394" height="81"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="317.66666666666669" width="394" height="69.333333333333314"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zd8-1d-09f" userLabel="Medication" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="404.33333333333331" width="394" height="80.666666666666686"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="397" width="394" height="69.666666666666686"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4P-vl-fM2" userLabel="Meditation" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="485" width="394" height="81"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="476.66666666666663" width="394" height="69.333333333333371"/>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -101,18 +97,18 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Apa-bQ-LB9" firstAttribute="leading" secondItem="P2p-ZY-7qC" secondAttribute="leading" id="Biq-3B-dYs"/>
                             <constraint firstItem="2OB-LL-Ix7" firstAttribute="top" secondItem="P2p-ZY-7qC" secondAttribute="top" id="Inj-Qb-qIG"/>
                             <constraint firstItem="2OB-LL-Ix7" firstAttribute="trailing" secondItem="P2p-ZY-7qC" secondAttribute="trailing" id="Uzm-Mx-MvF"/>
                             <constraint firstItem="P2p-ZY-7qC" firstAttribute="trailing" secondItem="Apa-bQ-LB9" secondAttribute="trailing" id="bqm-R6-lW7"/>
-                            <constraint firstItem="ec2-d6-maM" firstAttribute="top" secondItem="2OB-LL-Ix7" secondAttribute="bottom" id="ggh-5I-8Sj"/>
+                            <constraint firstItem="ec2-d6-maM" firstAttribute="top" secondItem="2OB-LL-Ix7" secondAttribute="bottom" constant="10" id="ggh-5I-8Sj"/>
                             <constraint firstItem="ec2-d6-maM" firstAttribute="leading" secondItem="P2p-ZY-7qC" secondAttribute="leading" constant="10" id="gxq-Oi-EwQ"/>
                             <constraint firstItem="2OB-LL-Ix7" firstAttribute="leading" secondItem="P2p-ZY-7qC" secondAttribute="leading" id="hGK-rf-EXv"/>
                             <constraint firstItem="P2p-ZY-7qC" firstAttribute="trailing" secondItem="ec2-d6-maM" secondAttribute="trailing" constant="10" id="u4e-Bb-SIw"/>
                             <constraint firstItem="Apa-bQ-LB9" firstAttribute="bottom" secondItem="P2p-ZY-7qC" secondAttribute="bottom" id="ysK-4R-qpq"/>
-                            <constraint firstItem="Apa-bQ-LB9" firstAttribute="top" secondItem="ec2-d6-maM" secondAttribute="bottom" id="zl5-gf-x7v"/>
+                            <constraint firstItem="Apa-bQ-LB9" firstAttribute="top" secondItem="ec2-d6-maM" secondAttribute="bottom" constant="10" id="zl5-gf-x7v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P2p-ZY-7qC"/>
                     </view>

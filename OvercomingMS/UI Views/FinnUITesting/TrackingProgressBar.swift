@@ -29,8 +29,6 @@ class TrackingProgressBar: UIView {
     @IBOutlet private weak var rightLabel: UILabel!
     @IBOutlet private weak var linearProgressBar: LinearProgressBar!
     
-    private var cornerRadius : CGFloat = 25
-    
     private override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -47,7 +45,7 @@ class TrackingProgressBar: UIView {
         view.frame = self.bounds
         
         //Custom View Modifications
-        mainView.layer.cornerRadius = cornerRadius;
+        mainView.layer.cornerRadius = DesignConstants.CORNER_RADIUS;
         mainView.layer.masksToBounds = true;
         
         leftContainerView.isUserInteractionEnabled = true
