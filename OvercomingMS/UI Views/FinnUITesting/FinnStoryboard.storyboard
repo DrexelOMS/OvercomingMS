@@ -199,7 +199,6 @@
                         <viewLayoutGuide key="safeArea" id="gJe-rm-EPL"/>
                     </view>
                     <connections>
-                        <outlet property="currentDateLabel" destination="KEX-2c-PoB" id="fsg-Ao-gze"/>
                         <outlet property="exerciseLabel" destination="lwY-n8-oFB" id="0Vs-cz-SMZ"/>
                         <outlet property="foodLabel" destination="jum-yq-jWT" id="mli-nD-RrM"/>
                         <outlet property="medicationLabel" destination="T5I-vo-42X" id="UUg-tq-JLA"/>

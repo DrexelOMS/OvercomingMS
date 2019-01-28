@@ -13,8 +13,8 @@ class TestTrackingViewController: UIViewController {
     
     //MARK: Class properties
     
-    let defaults = UserDefaults.standard
-    var todaysDate : Date { // this is to temporarily change the real world date
+    private let defaults = UserDefaults.standard
+    private var todaysDate : Date { // this is to temporarily change the real world date
         get {
             if let today = defaults.object(forKey: "today") as? Date {
                 return today
@@ -31,29 +31,30 @@ class TestTrackingViewController: UIViewController {
             loadTodaysUI()
         }
     }
-    var currentDate : Date = Date() {// this is for going to previus dates
+    private var currentDate : Date = Date() {// this is for going to previus dates
         didSet {
             loadTodaysUI()
         }
     }
-
-    @IBOutlet weak var currentDateLabel: UILabel!
     
-    @IBOutlet weak var foodLabel: UILabel!
-    @IBOutlet weak var omega3Label: UILabel!
-    @IBOutlet weak var vitaminDLabel: UILabel!
-    @IBOutlet weak var exerciseLabel: UILabel!
-    @IBOutlet weak var meditationLabel: UILabel!
-    @IBOutlet weak var medicationLabel: UILabel!
+    @IBOutlet private weak var foodLabel: UILabel!
+    @IBOutlet private weak var omega3Label: UILabel!
+    @IBOutlet private weak var vitaminDLabel: UILabel!
+    @IBOutlet private weak var exerciseLabel: UILabel!
+    @IBOutlet private weak var meditationLabel: UILabel!
+    @IBOutlet private weak var medicationLabel: UILabel!
     
-    let realm = try! Realm()
-    lazy var trackingDays: Results<TrackingDay> = { self.realm.objects(TrackingDay.self) }()
+    private let realm = try! Realm()
+    private lazy var trackingDays: Results<TrackingDay> = { self.realm.objects(TrackingDay.self) }()
     
     
     //MARK: View Transition Initializers
     
+    //TODO: Consider changing to view will appear, and initialize TodaysData should be handled everytime the app enters the foreground
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Do any additional setup after loading the view
         
         //reset user defaults and realm
 //        let defaults = UserDefaults.standard
@@ -64,15 +65,13 @@ class TestTrackingViewController: UIViewController {
 //        try! realm.write {
 //            realm.deleteAll()
 //        }
-        
-        
-        // Do any additional setup after loading the view
+    
         currentDate = todaysDate
-        initializeTodaysData() //TODO: this needs to update much more often then this
+        initializeTodaysData() //TODO: this should occur when app enters foreground
         loadTodaysUI()
     }
     
-    func initializeTodaysData() {
+    private func initializeTodaysData() {
         
         if shouldInitializeToday() {
             do {
@@ -89,35 +88,35 @@ class TestTrackingViewController: UIViewController {
     }
     
     //check if the currentDay is not the last trackingDay
-    func shouldInitializeToday() -> Bool {
-        if trackingDays.count == 0 {
+    private func shouldInitializeToday() -> Bool {
+//        if trackingDays.count == 0 {
+//            return true
+//        }
+//        if getFormatedDate(date: todaysDate) ==
+//            trackingDays[trackingDays.count - 1].DateCreated {
+//            return false
+//        }
+//        else {
+//            return true
+//        }
+        
+        if getTrackingDay(date: todaysDate) != nil {
             return true
-        }
-        if getFormatedDate(date: todaysDate) ==
-            trackingDays[trackingDays.count - 1].DateCreated {
-            return false
         }
         else {
-            return true
+            return false
         }
+        
     }
     
-    func getFormatedDate(date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MM/dd/yyyy"
-        return formatter.string(from: date)
-    }
-    
-    func loadTodaysUI() {
+    private func loadTodaysUI() {
         //update UI
         if(trackingDays.count <= 0){
-            print ("TrackingDays was not initialized")
+            fatalError("TrackingDays was not initialized")
         }
-
         
         if  let currentTrackingDay = getCurrentTrackingDay() {
-            
-            currentDateLabel.text = currentTrackingDay.DateCreated
+            print(currentTrackingDay.DateCreated)
             foodLabel.text = "Food: \(currentTrackingDay.FoodPercentageComplete * 100)%"
             omega3Label.text = "Omega 3: \(currentTrackingDay.Omega3PercentageComplete * 100)%"
             vitaminDLabel.text = "Vitmin D: \(currentTrackingDay.VitaminDPercentageComplete * 100)%"
@@ -127,7 +126,7 @@ class TestTrackingViewController: UIViewController {
         }
         else{
             print("Do something for days that were not tracked")
-            currentDateLabel.text = getFormatedDate(date: currentDate)
+            print(getFormatedDate(date: currentDate))
             foodLabel.text = "Food: Untracked"
             omega3Label.text = "Omega 3: Untracked"
             vitaminDLabel.text = "Vitamin D: Untracked"
@@ -136,28 +135,38 @@ class TestTrackingViewController: UIViewController {
             medicationLabel.text = "Medication: Untracked"
         }
         
-        
     }
     
-    func getCurrentTrackingDay() -> TrackingDay? {
+    private func getCurrentTrackingDay() -> TrackingDay? {
         return realm.object(ofType: TrackingDay.self, forPrimaryKey: getFormatedDate(date: currentDate))
+    }
+    
+    private func getTrackingDay(date: Date) -> TrackingDay? {
+        return realm.object(ofType: TrackingDay.self, forPrimaryKey: getFormatedDate(date: date))
+    }
+    
+    private func getFormatedDate(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        return formatter.string(from: date)
     }
     
     //MARK: IBActions
 
-    @IBAction func previousDate(_ sender: UIButton) {
+    @IBAction private func previousDate(_ sender: UIButton) {
         currentDate = currentDate.addingTimeInterval(-60*60*24)
     }
     
-    @IBAction func nextDate(_ sender: UIButton) {
+    @IBAction private func nextDate(_ sender: UIButton) {
         if getFormatedDate(date: currentDate) == getFormatedDate(date: todaysDate) {
             return
         }
         currentDate = currentDate.addingTimeInterval(60*60*24)
     }
     
-    @IBAction func addClicked(_ sender: UIButton) {
+    @IBAction private func addClicked(_ sender: UIButton) {
         if getFormatedDate(date: currentDate) != getFormatedDate(date: todaysDate) {
+            //Don't allow modification of data if currentDate is not today
             return
         }
         
@@ -178,7 +187,7 @@ class TestTrackingViewController: UIViewController {
         loadTodaysUI()
     }
     
-    @IBAction func checkClicked(_ sender: UIButton) {
+    @IBAction private func checkClicked(_ sender: UIButton) {
         if getFormatedDate(date: currentDate) != getFormatedDate(date: todaysDate) {
             return
         }
@@ -201,7 +210,7 @@ class TestTrackingViewController: UIViewController {
         loadTodaysUI()
     }
     
-    @IBAction func ProgressDayPressed(_ sender: UIButton) {
+    @IBAction private func ProgressDayPressed(_ sender: UIButton) {
         todaysDate = todaysDate.addingTimeInterval(60*60*24)
     }
 }
