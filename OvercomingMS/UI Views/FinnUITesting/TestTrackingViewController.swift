@@ -116,10 +116,11 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
             fatalError("TrackingDays was not initialized")
         }
         
-        if  let currentTrackingDay = getCurrentTrackingDay() {
+        if let currentTrackingDay = getCurrentTrackingDay() {
             dateLog.text = currentTrackingDay.DateCreated
             //TODO make a way to get the proper description for each
-            foodBar.setDescription(description: "\(currentTrackingDay.FoodPercentageComplete * 100)%")
+            //FoodEatenRating is 1 - 5
+            foodBar.setDescription(description: ProgressBarConfig.foodDescriptions[currentTrackingDay.FoodEatenRating - 1])
             omega3Bar.setProgressValue(value: currentTrackingDay.Omega3PercentageComplete * 100)
             omega3Bar.setDescription(description: "")
             vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDPercentageComplete * 100)
