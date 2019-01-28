@@ -8,19 +8,27 @@
 
 import UIKit
 
-class TestProgressBarViewController: UIViewController, TrackingProgressBarDelegate {
+class TestProgressBarViewController: UIViewController, TrackingProgressBarDelegate, TrackingFoodBarDelegate {
+    
+    func didPressCheckButton(_ sender: TrackingFoodBar) {
+        sender.rightLabel.text = "TestRight"
+    }
+    
+    func didPressLeftContainer(_ sender: TrackingFoodBar) {
+        sender.leftLabel.text = "TestLeft"
+    }
     
     func didPressLeftContainer(_ sender: TrackingProgressBar) {
-        trackingProgressBar.incremementProgressValue(value: 10)
+        sender.incremementProgressValue(value: 10)
     }
     
     
     func didPressCheckButton(_ sender: TrackingProgressBar) {
 
-        if(trackingProgressBar.getProgressValue() == 0){
-            trackingProgressBar.setProgressValue(value: 100)
+        if(sender.getProgressValue() == 0){
+            sender.setProgressValue(value: 100)
         } else{
-            trackingProgressBar.setProgressValue(value: 0)
+            sender.setProgressValue(value: 0)
         }
     }
     

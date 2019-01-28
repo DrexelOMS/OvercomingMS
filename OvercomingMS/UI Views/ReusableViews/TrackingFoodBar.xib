@@ -37,10 +37,10 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgL-ID-qXc" userLabel="TopView">
                                                     <rect key="frame" x="0.0" y="0.0" width="280" height="60"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cqn-02-D7b">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cqn-02-D7b">
                                                             <rect key="frame" x="0.0" y="0.0" width="280" height="60"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-vj-Qt3">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-vj-Qt3">
                                                                     <rect key="frame" x="0.0" y="0.0" width="140" height="60"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -80,6 +80,9 @@
                                             <rect key="frame" x="10" y="0.0" width="55" height="60"/>
                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="CHECK"/>
+                                            <connections>
+                                                <action selector="checkButtonPressed:" destination="-1" eventType="touchUpInside" id="hG4-xc-cQa"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>

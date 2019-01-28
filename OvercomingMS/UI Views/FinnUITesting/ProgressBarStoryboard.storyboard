@@ -113,8 +113,8 @@
                         <viewLayoutGuide key="safeArea" id="P2p-ZY-7qC"/>
                     </view>
                     <connections>
-                        <outlet property="trackingFoodBar" destination="Apa-bQ-LB9" id="TaB-fl-oFR"/>
-                        <outlet property="trackingProgressBar" destination="IaX-xy-2cn" id="LJH-Bp-Kib"/>
+                        <outlet property="trackingFoodBar" destination="IaX-xy-2cn" id="tzI-cW-vni"/>
+                        <outlet property="trackingProgressBar" destination="BbU-br-jOp" id="Wr4-L9-8o0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeG-Og-beE" sceneMemberID="firstResponder"/>

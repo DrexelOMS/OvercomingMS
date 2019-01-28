@@ -16,47 +16,21 @@ protocol TrackingProgressBarDelegate : class {
 }
 
 @IBDesignable
-class TrackingProgressBar: UIView {
+class TrackingProgressBar: CustomView {
     
-    public var nibName: String { return "TrackingProgressBar" }
-    private var contentView: UIView?
+    override var nibName: String { return "TrackingProgressBar" }
     
     weak var delegate : TrackingProgressBarDelegate?
     
-    @IBOutlet internal weak var leftContainerView: UIView!
-    @IBOutlet internal weak var leftLabel: UILabel!
-    @IBOutlet internal weak var rightLabel: UILabel!
-    @IBOutlet internal weak var linearProgressBar: LinearProgressBar!
+    @IBOutlet weak var leftContainerView: UIView!
+    @IBOutlet weak var leftLabel: UILabel!
+    @IBOutlet weak var rightLabel: UILabel!
+    @IBOutlet weak var linearProgressBar: LinearProgressBar!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
-    private func setup(){
-        guard let view = loadViewFromNib() else { return }
-        
-        view.frame = self.bounds
-        
-        //Custom View Modifications
-        
+    override func customSetup() {
         leftContainerView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(leftContainerPressed(tapGestureRecognizer: )))
         leftContainerView.addGestureRecognizer(tapGesture)
-        
-        self.addSubview(view)
-        contentView = view
-    }
-    
-    private func loadViewFromNib() -> UIView? {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: nibName, bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     
     @objc private func leftContainerPressed(tapGestureRecognizer: UITapGestureRecognizer){
