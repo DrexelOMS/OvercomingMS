@@ -16,70 +16,52 @@ protocol TrackingProgressBarDelegate : class {
 }
 
 @IBDesignable
-class TrackingProgressBar: UIView {
+class TrackingProgressBar: CustomView {
     
-    private let nibName = "TrackingProgressBar"
-    private var contentView: UIView?
+    override var nibName: String { return "TrackingProgressBar" }
     
     weak var delegate : TrackingProgressBarDelegate?
     
-    @IBOutlet private var mainView: UIView!
+    @IBInspectable private var Title: String = "Title" {
+        didSet {
+            leftLabel.text = Title
+        }
+    }
+    
     @IBOutlet private weak var leftContainerView: UIView!
     @IBOutlet private weak var leftLabel: UILabel!
     @IBOutlet private weak var rightLabel: UILabel!
     @IBOutlet private weak var linearProgressBar: LinearProgressBar!
     
-    private override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
-    private func setup(){
-        guard let view = loadViewFromNib() else { return }
-        
-        view.frame = self.bounds
-        
-        //Custom View Modifications
-        mainView.layer.cornerRadius = DesignConstants.CORNER_RADIUS;
-        mainView.layer.masksToBounds = true;
+    override func customSetup() {
         
         leftContainerView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(leftContainerPressed(tapGestureRecognizer: )))
         leftContainerView.addGestureRecognizer(tapGesture)
         
-        self.addSubview(view)
-        contentView = view
     }
-    
-    private func loadViewFromNib() -> UIView? {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: nibName, bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as? UIView
-    }
-    
-    @objc private func leftContainerPressed(tapGestureRecognizer: UITapGestureRecognizer){
-        delegate?.didPressLeftContainer(self)
-    }
-    
     
     /**
      Sets the Progress Bar to the given value *(0-100)
      */
     func incremementProgressValue(value : Float){
-        linearProgressBar.progressValue = CGFloat(value);
+        linearProgressBar.progressValue += CGFloat(value);
     }
     
-    func setProgressValue(value : Float){
+    func setProgressValue(value : Int){
         linearProgressBar.progressValue = CGFloat(value);
     }
     
     func getProgressValue() -> Float{
         return Float(linearProgressBar.progressValue)
+    }
+    
+    func setDescription(description: String){
+        rightLabel.text = description
+    }
+    
+    @objc private func leftContainerPressed(tapGestureRecognizer: UITapGestureRecognizer){
+        delegate?.didPressLeftContainer(self)
     }
     
     @IBAction private func checkButtonPressed(_ sender: UIButton) {
