@@ -141,7 +141,6 @@
 		0A4DF4AC21EEEB5900EA991E /* FinnUITesting */ = {
 			isa = PBXGroup;
 			children = (
-				0AD07F8721FE637600C55831 /* RoundCornersUIView.swift */,
 				0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */,
 				0A7FC90F21F51CE300492E93 /* TestTrackingViewController.swift */,
 				0A7FC91121F51D0800492E93 /* TestUpdateTrackingViewController.swift */,
@@ -189,6 +188,14 @@
 				0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */,
 			);
 			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		0AD07F9121FE84E000C55831 /* SharedUIViewSupers */ = {
+			isa = PBXGroup;
+			children = (
+				0AD07F8721FE637600C55831 /* RoundCornersUIView.swift */,
+			);
+			path = SharedUIViewSupers;
 			sourceTree = "<group>";
 		};
 		6129744221DF017E00B9846C = {
@@ -247,6 +254,7 @@
 		6129747D21DF020E00B9846C /* UI Views */ = {
 			isa = PBXGroup;
 			children = (
+				0AD07F9121FE84E000C55831 /* SharedUIViewSupers */,
 				0AD07F8621FE596F00C55831 /* ReusableViews */,
 				0AD07F7721FE3EA200C55831 /* CoreyFrontendUI */,
 				8387974C21EEB6DA009EA5EF /* ChrisUITesting */,
