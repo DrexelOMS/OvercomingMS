@@ -22,21 +22,23 @@ class TrackingProgressBar: CustomView {
     
     weak var delegate : TrackingProgressBarDelegate?
     
+    @IBInspectable var Title: String = "Title" {
+        didSet {
+            leftLabel.text = Title
+        }
+    }
+    
     @IBOutlet weak var leftContainerView: UIView!
     @IBOutlet weak var leftLabel: UILabel!
     @IBOutlet weak var rightLabel: UILabel!
     @IBOutlet weak var linearProgressBar: LinearProgressBar!
     
     override func customSetup() {
+        
         leftContainerView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(leftContainerPressed(tapGestureRecognizer: )))
         leftContainerView.addGestureRecognizer(tapGesture)
     }
-    
-    @objc private func leftContainerPressed(tapGestureRecognizer: UITapGestureRecognizer){
-        delegate?.didPressLeftContainer(self)
-    }
-    
     
     /**
      Sets the Progress Bar to the given value *(0-100)
@@ -51,6 +53,14 @@ class TrackingProgressBar: CustomView {
     
     func getProgressValue() -> Float{
         return Float(linearProgressBar.progressValue)
+    }
+    
+    func setDescription(description: String){
+        rightLabel.text = description
+    }
+    
+    @objc private func leftContainerPressed(tapGestureRecognizer: UITapGestureRecognizer){
+        delegate?.didPressLeftContainer(self)
     }
     
     @IBAction private func checkButtonPressed(_ sender: UIButton) {

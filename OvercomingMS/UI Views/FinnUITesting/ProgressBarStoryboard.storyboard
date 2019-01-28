@@ -74,18 +74,33 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbU-br-jOp" userLabel="Omega3" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="159" width="394" height="69.333333333333314"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Omega 3"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dk-OP-gkx" userLabel="VitaminD" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="238.33333333333334" width="394" height="69.333333333333343"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Vitamin D"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5d-5p-kZf" userLabel="Exercise" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="317.66666666666669" width="394" height="69.333333333333314"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Exercise"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zd8-1d-09f" userLabel="Medication" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="397" width="394" height="69.666666666666686"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Meditation"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4P-vl-fM2" userLabel="Meditation" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="476.66666666666663" width="394" height="69.333333333333371"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Medication"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                             </stackView>

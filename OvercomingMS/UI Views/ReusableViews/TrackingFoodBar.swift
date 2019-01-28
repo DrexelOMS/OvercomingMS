@@ -29,6 +29,10 @@ class TrackingFoodBar: CustomView {
         leftContainerView.addGestureRecognizer(tapGesture)
     }
     
+    func setDescription(description: String){
+        rightLabel.text = description
+    }
+    
     @objc private func leftContainerPressed(tapGestureRecognizer: UITapGestureRecognizer){
         delegate?.didPressLeftContainer(self)
     }

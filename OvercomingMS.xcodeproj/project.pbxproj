@@ -184,8 +184,8 @@
 			children = (
 				0AD07F8D21FE79C300C55831 /* CustomView.swift */,
 				0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */,
-				0AD07F8B21FE703D00C55831 /* TrackingFoodBar.xib */,
 				0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */,
+				0AD07F8B21FE703D00C55831 /* TrackingFoodBar.xib */,
 				0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */,
 			);
 			path = ReusableViews;
