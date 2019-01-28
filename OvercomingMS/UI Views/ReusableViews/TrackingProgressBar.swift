@@ -22,16 +22,16 @@ class TrackingProgressBar: CustomView {
     
     weak var delegate : TrackingProgressBarDelegate?
     
-    @IBInspectable var Title: String = "Title" {
+    @IBInspectable private var Title: String = "Title" {
         didSet {
             leftLabel.text = Title
         }
     }
     
-    @IBOutlet weak var leftContainerView: UIView!
-    @IBOutlet weak var leftLabel: UILabel!
-    @IBOutlet weak var rightLabel: UILabel!
-    @IBOutlet weak var linearProgressBar: LinearProgressBar!
+    @IBOutlet private weak var leftContainerView: UIView!
+    @IBOutlet private weak var leftLabel: UILabel!
+    @IBOutlet private weak var rightLabel: UILabel!
+    @IBOutlet private weak var linearProgressBar: LinearProgressBar!
     
     override func customSetup() {
         

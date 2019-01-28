@@ -15,13 +15,13 @@ protocol TrackingFoodBarDelegate : class {
 
 class TrackingFoodBar: CustomView {
 
-    override public var nibName: String { return "TrackingFoodBar" }
+    override var nibName: String { return "TrackingFoodBar" }
     
     weak var delegate : TrackingFoodBarDelegate?
     
-    @IBOutlet weak var leftContainerView: UIView!
-    @IBOutlet weak var leftLabel: UILabel!
-    @IBOutlet weak var rightLabel: UILabel!
+    @IBOutlet private weak var leftContainerView: UIView!
+    @IBOutlet private weak var leftLabel: UILabel!
+    @IBOutlet private weak var rightLabel: UILabel!
     
     override func customSetup() {
         leftContainerView.isUserInteractionEnabled = true

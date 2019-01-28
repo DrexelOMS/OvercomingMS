@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class TestTrackingViewController: UIViewController {
+class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate, TrackingFoodBarDelegate {
     
     //MARK: Class properties
     
@@ -37,12 +37,13 @@ class TestTrackingViewController: UIViewController {
         }
     }
     
-    @IBOutlet private weak var foodLabel: UILabel!
-    @IBOutlet private weak var omega3Label: UILabel!
-    @IBOutlet private weak var vitaminDLabel: UILabel!
-    @IBOutlet private weak var exerciseLabel: UILabel!
-    @IBOutlet private weak var meditationLabel: UILabel!
-    @IBOutlet private weak var medicationLabel: UILabel!
+    @IBOutlet weak var dateLog: UILabel!
+    @IBOutlet weak var foodBar: TrackingFoodBar!
+    @IBOutlet weak var omega3Bar: TrackingProgressBar!
+    @IBOutlet weak var vitaminDBar: TrackingProgressBar!
+    @IBOutlet weak var exerciseBar: TrackingProgressBar!
+    @IBOutlet weak var meditationBar: TrackingProgressBar!
+    @IBOutlet weak var medicationBar: TrackingProgressBar!
     
     private let realm = try! Realm()
     private lazy var trackingDays: Results<TrackingDay> = { self.realm.objects(TrackingDay.self) }()
@@ -100,7 +101,7 @@ class TestTrackingViewController: UIViewController {
 //            return true
 //        }
         
-        if getTrackingDay(date: todaysDate) != nil {
+        if getTrackingDay(date: todaysDate) == nil {
             return true
         }
         else {
@@ -116,23 +117,34 @@ class TestTrackingViewController: UIViewController {
         }
         
         if  let currentTrackingDay = getCurrentTrackingDay() {
-            print(currentTrackingDay.DateCreated)
-            foodLabel.text = "Food: \(currentTrackingDay.FoodPercentageComplete * 100)%"
-            omega3Label.text = "Omega 3: \(currentTrackingDay.Omega3PercentageComplete * 100)%"
-            vitaminDLabel.text = "Vitmin D: \(currentTrackingDay.VitaminDPercentageComplete * 100)%"
-            exerciseLabel.text = "Exercise: \(currentTrackingDay.ExercisePercentageComplete * 100)%"
-            meditationLabel.text = "Meditation: \(currentTrackingDay.MeditationPercentageComplete * 100)%"
-            medicationLabel.text = "Medication: \(currentTrackingDay.MedicationPercentageComplete * 100)%"
+            dateLog.text = currentTrackingDay.DateCreated
+            //TODO make a way to get the proper description for each
+            foodBar.setDescription(description: "\(currentTrackingDay.FoodPercentageComplete * 100)%")
+            omega3Bar.setProgressValue(value: currentTrackingDay.Omega3PercentageComplete * 100)
+            omega3Bar.setDescription(description: "")
+            vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDPercentageComplete * 100)
+            vitaminDBar.setDescription(description: "")
+            exerciseBar.setProgressValue(value: currentTrackingDay.ExercisePercentageComplete * 100)
+            exerciseBar.setDescription(description: "")
+            meditationBar.setProgressValue(value: currentTrackingDay.MeditationPercentageComplete * 100)
+            meditationBar.setDescription(description: "")
+            medicationBar.setProgressValue(value: currentTrackingDay.MedicationPercentageComplete * 100)
+            medicationBar.setDescription(description: "")
         }
         else{
             print("Do something for days that were not tracked")
-            print(getFormatedDate(date: currentDate))
-            foodLabel.text = "Food: Untracked"
-            omega3Label.text = "Omega 3: Untracked"
-            vitaminDLabel.text = "Vitamin D: Untracked"
-            exerciseLabel.text = "Exercise: Untracked"
-            meditationLabel.text = "Meditation: Untracked"
-            medicationLabel.text = "Medication: Untracked"
+            dateLog.text = getFormatedDate(date: currentDate)
+            foodBar.setDescription(description: "Untracked")
+            omega3Bar.setProgressValue(value: 0)
+            omega3Bar.setDescription(description: "Untracked")
+            vitaminDBar.setProgressValue(value: 0)
+            vitaminDBar.setDescription(description: "Untracked")
+            exerciseBar.setProgressValue(value: 0)
+            exerciseBar.setDescription(description: "Untracked")
+            meditationBar.setProgressValue(value: 0)
+            meditationBar.setDescription(description: "Untracked")
+            medicationBar.setProgressValue(value: 0)
+            medicationBar.setDescription(description: "Untracked")
         }
         
     }
@@ -149,6 +161,24 @@ class TestTrackingViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
         return formatter.string(from: date)
+    }
+    
+    //MARK: Delegates
+    
+    func didPressCheckButton(_ sender: TrackingFoodBar) {
+        print(sender.tag)
+    }
+    
+    func didPressLeftContainer(_ sender: TrackingFoodBar) {
+        print(sender.tag)
+    }
+    
+    func didPressCheckButton(_ sender: TrackingProgressBar) {
+        print(sender.tag)
+    }
+    
+    func didPressLeftContainer(_ sender: TrackingProgressBar) {
+        print(sender.tag)
     }
     
     //MARK: IBActions

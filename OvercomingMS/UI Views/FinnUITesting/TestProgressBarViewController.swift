@@ -11,11 +11,11 @@ import UIKit
 class TestProgressBarViewController: UIViewController, TrackingProgressBarDelegate, TrackingFoodBarDelegate {
     
     func didPressCheckButton(_ sender: TrackingFoodBar) {
-        sender.rightLabel.text = "TestRight"
+        //sender.rightLabel.text = "TestRight"
     }
     
     func didPressLeftContainer(_ sender: TrackingFoodBar) {
-        sender.leftLabel.text = "TestLeft"
+        //sender.leftLabel.text = "TestLeft"
     }
     
     func didPressLeftContainer(_ sender: TrackingProgressBar) {
