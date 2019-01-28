@@ -38,6 +38,7 @@ class TrackingProgressBar: CustomView {
         leftContainerView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(leftContainerPressed(tapGestureRecognizer: )))
         leftContainerView.addGestureRecognizer(tapGesture)
+        
     }
     
     /**
@@ -47,7 +48,7 @@ class TrackingProgressBar: CustomView {
         linearProgressBar.progressValue += CGFloat(value);
     }
     
-    func setProgressValue(value : Float){
+    func setProgressValue(value : Int){
         linearProgressBar.progressValue = CGFloat(value);
     }
     

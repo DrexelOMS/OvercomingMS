@@ -12,6 +12,15 @@ enum TrackingMode { case food, omega3, vitaminD, exercise, meditation, medicatio
 
 class ProgressBarConfig {
     static var foodDescriptions : [String] = ["Aweful", "Not great", "Alright", "Pretty good", "Perfect!"]
+    static func getfoodDescription(rating: Int) -> String {
+        if(rating - 1 < 0){
+            return foodDescriptions[0]
+        }
+        else if(rating - 1 >= foodDescriptions.count){
+            return foodDescriptions[foodDescriptions.count - 1]
+        }
+        return foodDescriptions[rating - 1]
+    }
     
     static let omega3Goal : Int = 100
     static let omega3UOM = "grams"

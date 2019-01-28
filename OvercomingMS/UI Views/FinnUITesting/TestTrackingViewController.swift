@@ -26,14 +26,14 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
         }
         set {
             defaults.set(newValue, forKey: "today")
-            currentDate = todaysDate
             initializeTodaysData()
-            loadTodaysUI()
+            currentDate = todaysDate
+            loadCurrentDayUI()
         }
     }
     private var currentDate : Date = Date() {// this is for going to previus dates
         didSet {
-            loadTodaysUI()
+            loadCurrentDayUI()
         }
     }
     
@@ -66,10 +66,17 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
 //        try! realm.write {
 //            realm.deleteAll()
 //        }
-    
-        currentDate = todaysDate
+        
+        foodBar.delegate = self
+        omega3Bar.delegate = self
+        vitaminDBar.delegate = self
+        exerciseBar.delegate = self
+        meditationBar.delegate = self
+        medicationBar.delegate = self
+        
         initializeTodaysData() //TODO: this should occur when app enters foreground
-        loadTodaysUI()
+        currentDate = todaysDate
+        loadCurrentDayUI()
     }
     
     private func initializeTodaysData() {
@@ -78,7 +85,7 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
             do {
                 try realm.write(){
                     let todaysTrackingData = TrackingDay()
-                    todaysTrackingData.DateCreated = getFormatedDate(date: todaysDate)
+                    todaysTrackingData.DateCreated = OMSDateFormatter.getFormatedDate(date: todaysDate)
                     realm.add(todaysTrackingData)
                 }
             } catch {
@@ -101,7 +108,7 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
 //            return true
 //        }
         
-        if getTrackingDay(date: todaysDate) == nil {
+        if WriteTrackingDataParent().getTrackingDay(date: todaysDate) == nil {
             return true
         }
         else {
@@ -110,31 +117,31 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
         
     }
     
-    private func loadTodaysUI() {
+    private func loadCurrentDayUI() {
         //update UI
         if(trackingDays.count <= 0){
             fatalError("TrackingDays was not initialized")
         }
         
-        if let currentTrackingDay = getCurrentTrackingDay() {
+        if let currentTrackingDay = WriteTrackingDataParent().getTrackingDay(date: currentDate) {
             dateLog.text = currentTrackingDay.DateCreated
             //TODO make a way to get the proper description for each
             //FoodEatenRating is 1 - 5
-            foodBar.setDescription(description: ProgressBarConfig.foodDescriptions[currentTrackingDay.FoodEatenRating - 1])
-            omega3Bar.setProgressValue(value: currentTrackingDay.Omega3PercentageComplete * 100)
-            omega3Bar.setDescription(description: "")
-            vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDPercentageComplete * 100)
-            vitaminDBar.setDescription(description: "")
-            exerciseBar.setProgressValue(value: currentTrackingDay.ExercisePercentageComplete * 100)
-            exerciseBar.setDescription(description: "")
-            meditationBar.setProgressValue(value: currentTrackingDay.MeditationPercentageComplete * 100)
-            meditationBar.setDescription(description: "")
-            medicationBar.setProgressValue(value: currentTrackingDay.MedicationPercentageComplete * 100)
-            medicationBar.setDescription(description: "")
+            foodBar.setDescription(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
+            omega3Bar.setProgressValue(value: currentTrackingDay.Omega3PercentageComplete)
+            omega3Bar.setDescription(description: String(currentTrackingDay.Omega3Total))
+            vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDPercentageComplete)
+            vitaminDBar.setDescription(description: String(currentTrackingDay.VitaminDTotal))
+            exerciseBar.setProgressValue(value: currentTrackingDay.ExercisePercentageComplete)
+            exerciseBar.setDescription(description: String(currentTrackingDay.ExerciseTimeTotal))
+            meditationBar.setProgressValue(value: currentTrackingDay.MeditationPercentageComplete)
+            meditationBar.setDescription(description: String(currentTrackingDay.MeditationTimeTotal))
+            medicationBar.setProgressValue(value: currentTrackingDay.MedicationPercentageComplete)
+            medicationBar.setDescription(description: String(currentTrackingDay.MedicationTotal))
         }
         else{
             print("Do something for days that were not tracked")
-            dateLog.text = getFormatedDate(date: currentDate)
+            dateLog.text = OMSDateFormatter.getFormatedDate(date: currentDate)
             foodBar.setDescription(description: "Untracked")
             omega3Bar.setProgressValue(value: 0)
             omega3Bar.setDescription(description: "Untracked")
@@ -150,36 +157,94 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
         
     }
     
-    private func getCurrentTrackingDay() -> TrackingDay? {
-        return realm.object(ofType: TrackingDay.self, forPrimaryKey: getFormatedDate(date: currentDate))
-    }
-    
-    private func getTrackingDay(date: Date) -> TrackingDay? {
-        return realm.object(ofType: TrackingDay.self, forPrimaryKey: getFormatedDate(date: date))
-    }
-    
-    private func getFormatedDate(date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MM/dd/yyyy"
-        return formatter.string(from: date)
-    }
-    
     //MARK: Delegates
     
     func didPressCheckButton(_ sender: TrackingFoodBar) {
-        print(sender.tag)
+
+        if OMSDateFormatter.getFormatedDate(date: currentDate) != OMSDateFormatter.getFormatedDate(date: todaysDate) {
+            return
+        }
+        
+        WriteFoodTrackingData().toggleFilledData(date: todaysDate)
+        
+        loadCurrentDayUI()
+        
     }
     
     func didPressLeftContainer(_ sender: TrackingFoodBar) {
-        print(sender.tag)
+        
+        if OMSDateFormatter.getFormatedDate(date: currentDate) != OMSDateFormatter.getFormatedDate(date: todaysDate) {
+        //Don't allow modification of data if currentDate is not today
+        return
+        }
+        
+        WriteFoodTrackingData().addData(amount: 1, date: todaysDate)
+        
+        loadCurrentDayUI()
+        
     }
     
     func didPressCheckButton(_ sender: TrackingProgressBar) {
-        print(sender.tag)
+
+        if OMSDateFormatter.getFormatedDate(date: currentDate) != OMSDateFormatter.getFormatedDate(date: todaysDate) {
+            return
+        }
+        
+        switch(sender.tag){
+        case 0:
+            WriteOmega3TrackingData().toggleFilledData(date: todaysDate)
+            break
+        case 1:
+            WriteVitaminDTrackingData().toggleFilledData(date: todaysDate)
+            break
+        case 2:
+            WriteExerciseTrackingData().toggleFilledData(date: todaysDate)
+            break
+        case 3:
+            WriteMeditationTrackingData().toggleFilledData(date: todaysDate)
+            break
+        case 4:
+            WriteMedicationTrackingData().toggleFilledData(date: todaysDate)
+            break
+        default:
+            fatalError("Case Not Handled")
+            break;
+        }
+        
+        loadCurrentDayUI()
+        
     }
     
     func didPressLeftContainer(_ sender: TrackingProgressBar) {
-        print(sender.tag)
+
+        if OMSDateFormatter.getFormatedDate(date: currentDate) != OMSDateFormatter.getFormatedDate(date: todaysDate) {
+            //Don't allow modification of data if currentDate is not today
+            return
+        }
+        
+        switch(sender.tag){
+        case 0:
+            WriteOmega3TrackingData().addData(amount: 5, date: todaysDate)
+            break
+        case 1:
+            WriteVitaminDTrackingData().addData(amount: 5, date: todaysDate)
+            break
+        case 2:
+            WriteExerciseTrackingData().addData(amount: 5, date: todaysDate)
+            break
+        case 3:
+            WriteMeditationTrackingData().addData(amount: 5, date: todaysDate)
+            break
+        case 4:
+            WriteMedicationTrackingData().addData(amount: 1, date: todaysDate)
+            break
+        default:
+            fatalError("Case Not Handled")
+            break;
+        }
+        
+        loadCurrentDayUI()
+        
     }
     
     //MARK: IBActions
@@ -189,56 +254,10 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
     }
     
     @IBAction private func nextDate(_ sender: UIButton) {
-        if getFormatedDate(date: currentDate) == getFormatedDate(date: todaysDate) {
+        if OMSDateFormatter.getFormatedDate(date: currentDate) == OMSDateFormatter.getFormatedDate(date: todaysDate) {
             return
         }
         currentDate = currentDate.addingTimeInterval(60*60*24)
-    }
-    
-    @IBAction private func addClicked(_ sender: UIButton) {
-        if getFormatedDate(date: currentDate) != getFormatedDate(date: todaysDate) {
-            //Don't allow modification of data if currentDate is not today
-            return
-        }
-        
-        do {
-            try realm.write() {
-                if let day = getCurrentTrackingDay() {
-                    day.FoodEatenRating += 1
-                    if day.FoodEatenRating > 5 {
-                        day.FoodEatenRating = 5
-                    }
-                    day.FoodPercentageComplete = Float(day.FoodEatenRating) / 5
-                }
-            }
-        } catch {
-            print("Error updating todays data : \(error)" )
-        }
-        
-        loadTodaysUI()
-    }
-    
-    @IBAction private func checkClicked(_ sender: UIButton) {
-        if getFormatedDate(date: currentDate) != getFormatedDate(date: todaysDate) {
-            return
-        }
-        
-        do {
-            try realm.write() {
-                if let day = getCurrentTrackingDay() {
-                    if day.FoodPercentageComplete != 1 {
-                        day.FoodPercentageComplete = 1
-                    }
-                    else {
-                        day.FoodPercentageComplete = Float(day.FoodEatenRating) / 5
-                    }
-                }
-            }
-        } catch {
-            print("Error updating todays data : \(error)" )
-        }
-        
-        loadTodaysUI()
     }
     
     @IBAction private func ProgressDayPressed(_ sender: UIButton) {

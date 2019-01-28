@@ -26,6 +26,8 @@
 		0AD07F8C21FE703D00C55831 /* TrackingFoodBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD07F8B21FE703D00C55831 /* TrackingFoodBar.xib */; };
 		0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8D21FE79C300C55831 /* CustomView.swift */; };
 		0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */; };
+		0AD07F9521FEA51200C55831 /* WriteTrackingDataStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9421FEA51200C55831 /* WriteTrackingDataStrategy.swift */; };
+		0AD07F9C21FEAB5700C55831 /* OMSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9B21FEAB5700C55831 /* OMSDateFormatter.swift */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
 		6129745421DF017E00B9846C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745221DF017E00B9846C /* Main.storyboard */; };
@@ -82,6 +84,8 @@
 		0AD07F8B21FE703D00C55831 /* TrackingFoodBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackingFoodBar.xib; sourceTree = "<group>"; };
 		0AD07F8D21FE79C300C55831 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarConfig.swift; sourceTree = "<group>"; };
+		0AD07F9421FEA51200C55831 /* WriteTrackingDataStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteTrackingDataStrategy.swift; sourceTree = "<group>"; };
+		0AD07F9B21FEAB5700C55831 /* OMSDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMSDateFormatter.swift; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6129744E21DF017E00B9846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6129745021DF017E00B9846C /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +204,15 @@
 			path = SharedUIViewSupers;
 			sourceTree = "<group>";
 		};
+		0AD07F9621FEA52400C55831 /* TrackingDataStrategies */ = {
+			isa = PBXGroup;
+			children = (
+				0AD07F9421FEA51200C55831 /* WriteTrackingDataStrategy.swift */,
+			);
+			name = TrackingDataStrategies;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		6129744221DF017E00B9846C = {
 			isa = PBXGroup;
 			children = (
@@ -270,10 +283,12 @@
 		618235EB21E4446B001ED4DB /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
+				0AD07F9621FEA52400C55831 /* TrackingDataStrategies */,
 				0A7FC91321F5226700492E93 /* RealmDataModels */,
 				6130938721EAB55000249B24 /* FoodItemsCell.swift */,
 				0AD07F8421FE53B900C55831 /* DesignConstants.swift */,
 				0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */,
+				0AD07F9B21FEAB5700C55831 /* OMSDateFormatter.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -577,10 +592,12 @@
 				8387975421EEB8D3009EA5EF /* TimerViewController.swift in Sources */,
 				8387975621F7A809009EA5EF /* StopwatchViewController.swift in Sources */,
 				0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */,
+				0AD07F9C21FEAB5700C55831 /* OMSDateFormatter.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				0AD07F7E21FE3EA200C55831 /* TrackingViewController.swift in Sources */,
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
 				0A7FC91221F51D0800492E93 /* TestUpdateTrackingViewController.swift in Sources */,
+				0AD07F9521FEA51200C55831 /* WriteTrackingDataStrategy.swift in Sources */,
 				6130938821EAB55000249B24 /* FoodItemsCell.swift in Sources */,
 				0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
