@@ -37,8 +37,6 @@
 		6129746F21DF017F00B9846C /* OvercomingMSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746E21DF017F00B9846C /* OvercomingMSUITests.swift */; };
 		6130938621E815AF00249B24 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130938521E815AF00249B24 /* DietViewController.swift */; };
 		6130938821EAB55000249B24 /* FoodItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130938721EAB55000249B24 /* FoodItemsCell.swift */; };
-		618235F121E4495F001ED4DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618235F021E4495F001ED4DB /* LoginViewController.swift */; };
-		618235F321E449CA001ED4DB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618235F221E449CA001ED4DB /* RegisterViewController.swift */; };
 		8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */; };
 		8387975421EEB8D3009EA5EF /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8387975321EEB8D3009EA5EF /* TimerViewController.swift */; };
 		8387975621F7A809009EA5EF /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8387975521F7A809009EA5EF /* StopwatchViewController.swift */; };
@@ -101,8 +99,6 @@
 		6130938521E815AF00249B24 /* DietViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
 		6130938721EAB55000249B24 /* FoodItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemsCell.swift; sourceTree = "<group>"; };
 		613999C2BAE695AFE369D7B7 /* Pods_OvercomingMSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		618235F021E4495F001ED4DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		618235F221E449CA001ED4DB /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		64624BC75971C455C566E626 /* Pods-OvercomingMSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.release.xcconfig"; sourceTree = "<group>"; };
 		724CCA850B24CDC7CCFAF25E /* Pods-OvercomingMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.debug.xcconfig"; sourceTree = "<group>"; };
 		8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimerStoryBoard.storyboard; sourceTree = "<group>"; };
@@ -180,6 +176,17 @@
 			path = TeamMembers;
 			sourceTree = "<group>";
 		};
+		0AA5284A2202188500CCFEE7 /* TrckingProgressBars */ = {
+			isa = PBXGroup;
+			children = (
+				0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */,
+				0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */,
+				0AD07F8B21FE703D00C55831 /* TrackingFoodBar.xib */,
+				0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */,
+			);
+			path = TrckingProgressBars;
+			sourceTree = "<group>";
+		};
 		0AD07F7721FE3EA200C55831 /* CoreyFrontendUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,11 +201,8 @@
 		0AD07F8621FE596F00C55831 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				0AA5284A2202188500CCFEE7 /* TrckingProgressBars */,
 				0AD07F8D21FE79C300C55831 /* CustomView.swift */,
-				0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */,
-				0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */,
-				0AD07F8B21FE703D00C55831 /* TrackingFoodBar.xib */,
-				0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -311,8 +315,6 @@
 			isa = PBXGroup;
 			children = (
 				0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */,
-				618235F021E4495F001ED4DB /* LoginViewController.swift */,
-				618235F221E449CA001ED4DB /* RegisterViewController.swift */,
 				6130938521E815AF00249B24 /* DietViewController.swift */,
 				8387975321EEB8D3009EA5EF /* TimerViewController.swift */,
 				8387975521F7A809009EA5EF /* StopwatchViewController.swift */,
@@ -594,12 +596,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA5284922020BF500CCFEE7 /* ExerciseRoutinesDT.swift in Sources */,
-				618235F121E4495F001ED4DB /* LoginViewController.swift in Sources */,
 				0AD07F7221FCFF8100C55831 /* TrackingProgressBar.swift in Sources */,
 				0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */,
 				0AD07F8821FE637600C55831 /* RoundCornersUIView.swift in Sources */,
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
-				618235F321E449CA001ED4DB /* RegisterViewController.swift in Sources */,
 				6130938621E815AF00249B24 /* DietViewController.swift in Sources */,
 				0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */,
 				0A7FC91521F5229A00492E93 /* TrackingDayDT.swift in Sources */,
