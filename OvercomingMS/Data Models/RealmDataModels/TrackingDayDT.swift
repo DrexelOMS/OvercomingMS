@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class TrackingDay: Object {
+class TrackingDayDT: Object {
     let primaryKey = "Primary-Key"
     @objc dynamic var DateCreated: String = ""
     @objc dynamic var FollowProgramStreak: Int = 0

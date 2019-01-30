@@ -12,10 +12,10 @@ import RealmSwift
 class WriteTrackingDataParent{
     
     let realm = try! Realm()
-    lazy var trackingDays: Results<TrackingDay> = { self.realm.objects(TrackingDay.self) }()
+    lazy var trackingDays: Results<TrackingDayDT> = { self.realm.objects(TrackingDayDT.self) }()
     
-    func getTrackingDay(date: String) -> TrackingDay? {
-        return realm.object(ofType: TrackingDay.self, forPrimaryKey: date)
+    func getTrackingDay(date: String) -> TrackingDayDT? {
+        return realm.object(ofType: TrackingDayDT.self, forPrimaryKey: date)
     }
     
     func toggleFilledData(date : String = globalCurrentDate){

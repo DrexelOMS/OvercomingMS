@@ -34,7 +34,7 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
     @IBOutlet weak var medicationBar: TrackingProgressBar!
     
     private let realm = try! Realm()
-    private lazy var trackingDays: Results<TrackingDay> = { self.realm.objects(TrackingDay.self) }()
+    private lazy var trackingDays: Results<TrackingDayDT> = { self.realm.objects(TrackingDayDT.self) }()
     
     private let omsDateFormatter = OMSDateAccessor()
     
@@ -69,10 +69,6 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
     
     
     private func loadCurrentDayUI() {
-        //update UI
-        if(trackingDays.count <= 0){
-            fatalError("TrackingDays was not initialized")
-        }
         
         if let currentTrackingDay = WriteTrackingDataParent().getTrackingDay(date: currentDate) {
             dateLog.text = currentTrackingDay.DateCreated
