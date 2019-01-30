@@ -64,19 +64,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQ2-ra-ozk" userLabel="Buttons">
                     <rect key="frame" x="0.0" y="316" width="378" height="125"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="eyX-rE-Fma">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eyX-rE-Fma">
                             <rect key="frame" x="0.0" y="0.0" width="378" height="125"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGO-Ww-cOF">
-                                    <rect key="frame" x="0.0" y="0.0" width="69.5" height="125"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="125"/>
                                     <state key="normal" title="Button"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mB8-be-C7U">
-                                    <rect key="frame" x="154.5" y="0.0" width="69" height="125"/>
+                                    <rect key="frame" x="132.5" y="0.0" width="113" height="125"/>
                                     <state key="normal" title="Button"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEX-0C-cph">
-                                    <rect key="frame" x="308.5" y="0.0" width="69.5" height="125"/>
+                                    <rect key="frame" x="265.5" y="0.0" width="112.5" height="125"/>
                                     <state key="normal" title="Button"/>
                                 </button>
                             </subviews>
