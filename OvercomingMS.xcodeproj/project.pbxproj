@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */; };
-		0A7FC91021F51CE300492E93 /* TestTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* TestTrackingViewController.swift */; };
+		0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */; };
 		0A7FC91521F5229A00492E93 /* TrackingDayDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC91421F5229A00492E93 /* TrackingDayDT.swift */; };
 		0A7FC91921F534D700492E93 /* FoodStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC91821F534D700492E93 /* FoodStats.swift */; };
 		0AA5284922020BF500CCFEE7 /* ExerciseRoutinesDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284822020BF500CCFEE7 /* ExerciseRoutinesDT.swift */; };
@@ -66,7 +66,7 @@
 /* Begin PBXFileReference section */
 		06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinnStoryboard.storyboard; sourceTree = "<group>"; };
-		0A7FC90F21F51CE300492E93 /* TestTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTrackingViewController.swift; sourceTree = "<group>"; };
+		0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingViewController.swift; sourceTree = "<group>"; };
 		0A7FC91421F5229A00492E93 /* TrackingDayDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDayDT.swift; sourceTree = "<group>"; };
 		0A7FC91821F534D700492E93 /* FoodStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodStats.swift; sourceTree = "<group>"; };
 		0AA5284822020BF500CCFEE7 /* ExerciseRoutinesDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRoutinesDT.swift; sourceTree = "<group>"; };
@@ -88,7 +88,6 @@
 		505DB14621FF6C710045C703 /* CassStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CassStoryboard.storyboard; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6129744E21DF017E00B9846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6129745021DF017E00B9846C /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
 		6129745321DF017E00B9846C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6129745521DF017F00B9846C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6129745821DF017F00B9846C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -148,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */,
-				0A7FC90F21F51CE300492E93 /* TestTrackingViewController.swift */,
 			);
 			path = FinnUITesting;
 			sourceTree = "<group>";
@@ -312,7 +310,7 @@
 		618235EC21E44474001ED4DB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6129745021DF017E00B9846C /* TrackingViewController.swift */,
+				0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */,
 				618235F021E4495F001ED4DB /* LoginViewController.swift */,
 				618235F221E449CA001ED4DB /* RegisterViewController.swift */,
 				6130938521E815AF00249B24 /* DietViewController.swift */,
@@ -603,7 +601,7 @@
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
 				618235F321E449CA001ED4DB /* RegisterViewController.swift in Sources */,
 				6130938621E815AF00249B24 /* DietViewController.swift in Sources */,
-				0A7FC91021F51CE300492E93 /* TestTrackingViewController.swift in Sources */,
+				0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */,
 				0A7FC91521F5229A00492E93 /* TrackingDayDT.swift in Sources */,
 				501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */,
 				8387975421EEB8D3009EA5EF /* TimerViewController.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate, TrackingFoodBarDelegate {
+class MainTrackingViewController: UIViewController, TrackingProgressBarDelegate, TrackingFoodBarDelegate {
     
     //MARK: Class properties
     
