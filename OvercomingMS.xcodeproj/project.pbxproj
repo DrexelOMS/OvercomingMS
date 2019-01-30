@@ -191,7 +191,7 @@
 			path = TeamMembers;
 			sourceTree = "<group>";
 		};
-		0AA5284A2202188500CCFEE7 /* TrckingProgressBars */ = {
+		0AA5284A2202188500CCFEE7 /* TrackingProgressBars */ = {
 			isa = PBXGroup;
 			children = (
 				0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */,
@@ -199,7 +199,7 @@
 				0AD07F8B21FE703D00C55831 /* TrackingFoodBar.xib */,
 				0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */,
 			);
-			path = TrckingProgressBars;
+			path = TrackingProgressBars;
 			sourceTree = "<group>";
 		};
 		0AD07F7721FE3EA200C55831 /* CoreyFrontendUI */ = {
@@ -216,7 +216,7 @@
 		0AD07F8621FE596F00C55831 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
-				0AA5284A2202188500CCFEE7 /* TrckingProgressBars */,
+				0AA5284A2202188500CCFEE7 /* TrackingProgressBars */,
 				0AD07F8D21FE79C300C55831 /* CustomView.swift */,
 			);
 			path = ReusableViews;
