@@ -24,7 +24,7 @@
 		0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8D21FE79C300C55831 /* CustomView.swift */; };
 		0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */; };
 		0AD07F9521FEA51200C55831 /* WriteTrackingDataStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9421FEA51200C55831 /* WriteTrackingDataStrategy.swift */; };
-		0AD07F9C21FEAB5700C55831 /* OMSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9B21FEAB5700C55831 /* OMSDateFormatter.swift */; };
+		0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
 		505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505DB14621FF6C710045C703 /* CassStoryboard.storyboard */; };
@@ -81,7 +81,7 @@
 		0AD07F8D21FE79C300C55831 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarConfig.swift; sourceTree = "<group>"; };
 		0AD07F9421FEA51200C55831 /* WriteTrackingDataStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteTrackingDataStrategy.swift; sourceTree = "<group>"; };
-		0AD07F9B21FEAB5700C55831 /* OMSDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMSDateFormatter.swift; sourceTree = "<group>"; };
+		0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMSDateAccessor.swift; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		505DB14621FF6C710045C703 /* CassStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CassStoryboard.storyboard; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,7 +301,7 @@
 				6130938721EAB55000249B24 /* FoodItemsCell.swift */,
 				0AD07F8421FE53B900C55831 /* DesignConstants.swift */,
 				0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */,
-				0AD07F9B21FEAB5700C55831 /* OMSDateFormatter.swift */,
+				0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -605,7 +605,7 @@
 				8387975421EEB8D3009EA5EF /* TimerViewController.swift in Sources */,
 				8387975621F7A809009EA5EF /* StopwatchViewController.swift in Sources */,
 				0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */,
-				0AD07F9C21FEAB5700C55831 /* OMSDateFormatter.swift in Sources */,
+				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				0AD07F7E21FE3EA200C55831 /* TrackingViewController.swift in Sources */,
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
