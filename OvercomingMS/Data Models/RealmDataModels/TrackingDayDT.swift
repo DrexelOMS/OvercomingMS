@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class TrackingDay: Object {
+class TrackingDayDT: Object {
     let primaryKey = "Primary-Key"
     @objc dynamic var DateCreated: String = ""
     @objc dynamic var FollowProgramStreak: Int = 0
@@ -22,8 +22,11 @@ class TrackingDay: Object {
     @objc dynamic var Omega3Total: Int = 0
     @objc dynamic var VitaminDPercentageComplete: Int = 0
     @objc dynamic var VitaminDTotal: Int = 0
+    
     @objc dynamic var ExercisePercentageComplete: Int = 0
     @objc dynamic var ExerciseTimeTotal: Int = 0
+    let exerciseRoutinesDT = List<ExerciseRoutinesDT>()
+    
     @objc dynamic var MeditationPercentageComplete: Int = 0
     @objc dynamic var MeditationTimeTotal: Int = 0
     @objc dynamic var MedicationPercentageComplete: Int = 0

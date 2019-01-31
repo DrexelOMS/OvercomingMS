@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.1)
+  - Cartography (3.1.0)
   - LinearProgressBar (1.0.1)
   - Realm (3.13.1):
     - Realm/Headers (= 3.13.1)
@@ -11,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Cartography
   - LinearProgressBar (~> 1.0.1)
   - RealmSwift
   - SVProgressHUD
@@ -19,6 +21,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Cartography
     - LinearProgressBar
     - Realm
     - RealmSwift
@@ -27,12 +30,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Cartography: 1988b7578871a56c036e7af17195cb2190edf18c
   LinearProgressBar: f6a74dbabed229dbb1a7978089e2e4317a3a0ee0
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: c5eaf2ee6a106269524c3b73affe68a55b00f655
+PODFILE CHECKSUM: e43d9391229830ac2ad7f2d4cb35e01d47b20819
 
 COCOAPODS: 1.5.3

@@ -28,6 +28,12 @@ class TrackingProgressBar: CustomView {
         }
     }
     
+    @IBInspectable var barColor: UIColor = UIColor.green {
+        didSet {
+            linearProgressBar.barColor = barColor
+        }
+    }
+    
     @IBOutlet private weak var leftContainerView: UIView!
     @IBOutlet private weak var leftLabel: UILabel!
     @IBOutlet private weak var rightLabel: UILabel!

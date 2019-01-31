@@ -10,6 +10,7 @@ target 'OvercomingMS' do
   pod 'SVProgressHUD'
   pod 'RealmSwift'
   pod 'LinearProgressBar', '~> 1.0.1'
+  pod 'Cartography'
 
   target 'OvercomingMSTests' do
     inherit! :search_paths

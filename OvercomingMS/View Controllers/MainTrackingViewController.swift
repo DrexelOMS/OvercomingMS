@@ -9,31 +9,19 @@
 import UIKit
 import RealmSwift
 
-class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate, TrackingFoodBarDelegate {
+class MainTrackingViewController: UIViewController, TrackingProgressBarDelegate, TrackingFoodBarDelegate {
     
     //MARK: Class properties
     
-    private let defaults = UserDefaults.standard
-    private var todaysDate : Date { // this is to temporarily change the real world date
+    private var currentDate : String {// this is for going to previus dates
         get {
-            if let today = defaults.object(forKey: "today") as? Date {
-                return today
-            }
-            else {
-                defaults.set(Date(), forKey: "today")
-                return Date()
-            }
-        }
-        set {
-            defaults.set(newValue, forKey: "today")
-            initializeTodaysData()
-            currentDate = todaysDate
-            loadCurrentDayUI()
+            return omsDateFormatter.getFormatedDate(date: globalCurrentFullDate)
         }
     }
-    private var currentDate : Date = Date() {// this is for going to previus dates
-        didSet {
-            loadCurrentDayUI()
+    
+    private var todaysDate : String {
+        get {
+            return omsDateFormatter.todaysDate
         }
     }
     
@@ -46,7 +34,9 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
     @IBOutlet weak var medicationBar: TrackingProgressBar!
     
     private let realm = try! Realm()
-    private lazy var trackingDays: Results<TrackingDay> = { self.realm.objects(TrackingDay.self) }()
+    private lazy var trackingDays: Results<TrackingDayDT> = { self.realm.objects(TrackingDayDT.self) }()
+    
+    private let omsDateFormatter = OMSDateAccessor()
     
     
     //MARK: View Transition Initializers
@@ -74,54 +64,11 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
         meditationBar.delegate = self
         medicationBar.delegate = self
         
-        initializeTodaysData() //TODO: this should occur when app enters foreground
-        currentDate = todaysDate
         loadCurrentDayUI()
     }
     
-    private func initializeTodaysData() {
-        
-        if shouldInitializeToday() {
-            do {
-                try realm.write(){
-                    let todaysTrackingData = TrackingDay()
-                    todaysTrackingData.DateCreated = OMSDateFormatter.getFormatedDate(date: todaysDate)
-                    realm.add(todaysTrackingData)
-                }
-            } catch {
-                print("Error saving TrackingDay: \(error)")
-            }
-        }
-        
-    }
-    
-    //check if the currentDay is not the last trackingDay
-    private func shouldInitializeToday() -> Bool {
-//        if trackingDays.count == 0 {
-//            return true
-//        }
-//        if getFormatedDate(date: todaysDate) ==
-//            trackingDays[trackingDays.count - 1].DateCreated {
-//            return false
-//        }
-//        else {
-//            return true
-//        }
-        
-        if WriteTrackingDataParent().getTrackingDay(date: todaysDate) == nil {
-            return true
-        }
-        else {
-            return false
-        }
-        
-    }
     
     private func loadCurrentDayUI() {
-        //update UI
-        if(trackingDays.count <= 0){
-            fatalError("TrackingDays was not initialized")
-        }
         
         if let currentTrackingDay = WriteTrackingDataParent().getTrackingDay(date: currentDate) {
             dateLog.text = currentTrackingDay.DateCreated
@@ -141,7 +88,7 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
         }
         else{
             print("Do something for days that were not tracked")
-            dateLog.text = OMSDateFormatter.getFormatedDate(date: currentDate)
+            dateLog.text = currentDate
             foodBar.setDescription(description: "Untracked")
             omega3Bar.setProgressValue(value: 0)
             omega3Bar.setDescription(description: "Untracked")
@@ -160,12 +107,8 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
     //MARK: Delegates
     
     func didPressCheckButton(_ sender: TrackingFoodBar) {
-
-        if OMSDateFormatter.getFormatedDate(date: currentDate) != OMSDateFormatter.getFormatedDate(date: todaysDate) {
-            return
-        }
         
-        WriteFoodTrackingData().toggleFilledData(date: todaysDate)
+        WriteFoodTrackingData().toggleFilledData()
         
         loadCurrentDayUI()
         
@@ -173,38 +116,29 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
     
     func didPressLeftContainer(_ sender: TrackingFoodBar) {
         
-        if OMSDateFormatter.getFormatedDate(date: currentDate) != OMSDateFormatter.getFormatedDate(date: todaysDate) {
-        //Don't allow modification of data if currentDate is not today
-        return
-        }
-        
-        WriteFoodTrackingData().addData(amount: 1, date: todaysDate)
+        WriteFoodTrackingData().addData(amount: 1)
         
         loadCurrentDayUI()
         
     }
     
     func didPressCheckButton(_ sender: TrackingProgressBar) {
-
-        if OMSDateFormatter.getFormatedDate(date: currentDate) != OMSDateFormatter.getFormatedDate(date: todaysDate) {
-            return
-        }
         
         switch(sender.tag){
         case 0:
-            WriteOmega3TrackingData().toggleFilledData(date: todaysDate)
+            WriteOmega3TrackingData().toggleFilledData()
             break
         case 1:
-            WriteVitaminDTrackingData().toggleFilledData(date: todaysDate)
+            WriteVitaminDTrackingData().toggleFilledData()
             break
         case 2:
-            WriteExerciseTrackingData().toggleFilledData(date: todaysDate)
+            WriteExerciseTrackingData().toggleFilledData()
             break
         case 3:
-            WriteMeditationTrackingData().toggleFilledData(date: todaysDate)
+            WriteMeditationTrackingData().toggleFilledData()
             break
         case 4:
-            WriteMedicationTrackingData().toggleFilledData(date: todaysDate)
+            WriteMedicationTrackingData().toggleFilledData()
             break
         default:
             fatalError("Case Not Handled")
@@ -216,27 +150,22 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
     }
     
     func didPressLeftContainer(_ sender: TrackingProgressBar) {
-
-        if OMSDateFormatter.getFormatedDate(date: currentDate) != OMSDateFormatter.getFormatedDate(date: todaysDate) {
-            //Don't allow modification of data if currentDate is not today
-            return
-        }
         
         switch(sender.tag){
         case 0:
-            WriteOmega3TrackingData().addData(amount: 5, date: todaysDate)
+            WriteOmega3TrackingData().addData(amount: 5)
             break
         case 1:
-            WriteVitaminDTrackingData().addData(amount: 5, date: todaysDate)
+            WriteVitaminDTrackingData().addData(amount: 5)
             break
         case 2:
-            WriteExerciseTrackingData().addData(amount: 5, date: todaysDate)
+            WriteExerciseTrackingData().addData(amount: 5)
             break
         case 3:
-            WriteMeditationTrackingData().addData(amount: 5, date: todaysDate)
+            WriteMeditationTrackingData().addData(amount: 5)
             break
         case 4:
-            WriteMedicationTrackingData().addData(amount: 1, date: todaysDate)
+            WriteMedicationTrackingData().addData(amount: 1)
             break
         default:
             fatalError("Case Not Handled")
@@ -250,17 +179,27 @@ class TestTrackingViewController: UIViewController, TrackingProgressBarDelegate,
     //MARK: IBActions
 
     @IBAction private func previousDate(_ sender: UIButton) {
-        currentDate = currentDate.addingTimeInterval(-60*60*24)
+        
+        globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(-60*60*24)
+        
+        loadCurrentDayUI()
     }
     
     @IBAction private func nextDate(_ sender: UIButton) {
-        if OMSDateFormatter.getFormatedDate(date: currentDate) == OMSDateFormatter.getFormatedDate(date: todaysDate) {
+        if currentDate == todaysDate {
             return
         }
-        currentDate = currentDate.addingTimeInterval(60*60*24)
+        
+        globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(60*60*24)
+        
+        loadCurrentDayUI()
     }
     
+    //TODO: this is a test button, normally the day would progress, and the ui is not automatically updated unless we check in the loadCurrentDayUI to check if todays date has changed
+    //basically nothing can ever write using current day, they write using todays date
     @IBAction private func ProgressDayPressed(_ sender: UIButton) {
-        todaysDate = todaysDate.addingTimeInterval(60*60*24)
+        omsDateFormatter.progressDay()
+        
+        loadCurrentDayUI()
     }
 }

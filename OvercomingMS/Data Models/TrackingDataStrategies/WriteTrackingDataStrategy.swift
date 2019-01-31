@@ -12,17 +12,25 @@ import RealmSwift
 class WriteTrackingDataParent{
     
     let realm = try! Realm()
-    lazy var trackingDays: Results<TrackingDay> = { self.realm.objects(TrackingDay.self) }()
+    lazy var trackingDays: Results<TrackingDayDT> = { self.realm.objects(TrackingDayDT.self) }()
     
-    func getTrackingDay(date: Date) -> TrackingDay? {
-        return realm.object(ofType: TrackingDay.self, forPrimaryKey: OMSDateFormatter.getFormatedDate(date: date))
+    func getTrackingDay(date: String) -> TrackingDayDT? {
+        return realm.object(ofType: TrackingDayDT.self, forPrimaryKey: date)
+    }
+    
+    func toggleFilledData(date : String = globalCurrentDate){
+        fatalError("Abstract Method")
+    }
+    
+    func addData(amount: Int, date: String = globalCurrentDate){
+        fatalError("Abstract Method")
     }
     
 }
 
 class WriteFoodTrackingData : WriteTrackingDataParent {
     
-    func toggleFilledData(date : Date) {
+    override func toggleFilledData(date : String = globalCurrentDate) {
         
         do {
             try realm.write() {
@@ -38,7 +46,7 @@ class WriteFoodTrackingData : WriteTrackingDataParent {
         
     }
     
-    func addData(amount: Int, date: Date) {
+   override func addData(amount: Int, date: String = globalCurrentDate) {
         
         do {
             try realm.write() {
@@ -58,7 +66,7 @@ class WriteFoodTrackingData : WriteTrackingDataParent {
 
 class WriteOmega3TrackingData : WriteTrackingDataParent {
     
-    func toggleFilledData(date : Date) {
+    override func toggleFilledData(date : String = globalCurrentDate) {
         
         do {
             try realm.write() {
@@ -81,7 +89,7 @@ class WriteOmega3TrackingData : WriteTrackingDataParent {
         
     }
     
-    func addData(amount: Int, date: Date) {
+    override func addData(amount: Int, date: String = globalCurrentDate) {
         
         do {
             try realm.write() {
@@ -103,7 +111,7 @@ class WriteOmega3TrackingData : WriteTrackingDataParent {
 
 class WriteVitaminDTrackingData : WriteTrackingDataParent {
     
-    func toggleFilledData(date : Date) {
+    override func toggleFilledData(date : String = globalCurrentDate) {
         
         do {
             try realm.write() {
@@ -126,7 +134,7 @@ class WriteVitaminDTrackingData : WriteTrackingDataParent {
         
     }
     
-    func addData(amount: Int, date: Date) {
+    override func addData(amount: Int, date: String = globalCurrentDate) {
         
         do {
             try realm.write() {
@@ -148,7 +156,7 @@ class WriteVitaminDTrackingData : WriteTrackingDataParent {
 
 class WriteExerciseTrackingData : WriteTrackingDataParent {
     
-    func toggleFilledData(date : Date) {
+    override func toggleFilledData(date : String = globalCurrentDate) {
         
         do {
             try realm.write() {
@@ -171,7 +179,7 @@ class WriteExerciseTrackingData : WriteTrackingDataParent {
         
     }
     
-    func addData(amount: Int, date: Date) {
+    override func addData(amount: Int, date: String = globalCurrentDate) {
         
         do {
             try realm.write() {
@@ -193,7 +201,7 @@ class WriteExerciseTrackingData : WriteTrackingDataParent {
 
 class WriteMeditationTrackingData : WriteTrackingDataParent {
     
-    func toggleFilledData(date : Date) {
+    override func toggleFilledData(date : String = globalCurrentDate) {
         
         do {
             try realm.write() {
@@ -216,7 +224,7 @@ class WriteMeditationTrackingData : WriteTrackingDataParent {
         
     }
     
-    func addData(amount: Int, date: Date) {
+    override func addData(amount: Int, date: String = globalCurrentDate) {
         
         do {
             try realm.write() {
@@ -238,7 +246,7 @@ class WriteMeditationTrackingData : WriteTrackingDataParent {
 
 class WriteMedicationTrackingData : WriteTrackingDataParent {
     
-    func toggleFilledData(date : Date) {
+    override func toggleFilledData(date : String = globalCurrentDate) {
         
         do {
             try realm.write() {
@@ -261,7 +269,7 @@ class WriteMedicationTrackingData : WriteTrackingDataParent {
         
     }
     
-    func addData(amount: Int, date: Date) {
+    override func addData(amount: Int, date: String = globalCurrentDate) {
         
         do {
             try realm.write() {
