@@ -159,17 +159,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2BA61822029259004074F3 /* TrackingModules */ = {
+			isa = PBXGroup;
+			children = (
+				0A2BA61B220292BB004074F3 /* ConcreteMainSVCs */,
+				0A2BA61A220292A2004074F3 /* ConcreteViewControllers */,
+				0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */,
+				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
+			);
+			path = TrackingModules;
+			sourceTree = "<group>";
+		};
+		0A2BA61922029262004074F3 /* ConfirmationSVCs */ = {
+			isa = PBXGroup;
+			children = (
+				0AA5286622027FF300CCFEE7 /* ConfirmationSVC.xib */,
+				0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */,
+			);
+			path = ConfirmationSVCs;
+			sourceTree = "<group>";
+		};
+		0A2BA61A220292A2004074F3 /* ConcreteViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */,
+			);
+			path = ConcreteViewControllers;
+			sourceTree = "<group>";
+		};
+		0A2BA61B220292BB004074F3 /* ConcreteMainSVCs */ = {
+			isa = PBXGroup;
+			children = (
+				0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */,
+				0AA528532202314600CCFEE7 /* ExerciseMainSVC.xib */,
+			);
+			path = ConcreteMainSVCs;
+			sourceTree = "<group>";
+		};
 		0A4DF4AC21EEEB5900EA991E /* FinnUITesting */ = {
 			isa = PBXGroup;
 			children = (
 				0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */,
-				0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */,
-				0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */,
-				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
-				0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */,
-				0AA528532202314600CCFEE7 /* ExerciseMainSVC.xib */,
-				0AA5286622027FF300CCFEE7 /* ConfirmationSVC.xib */,
-				0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */,
 			);
 			path = FinnUITesting;
 			sourceTree = "<group>";
@@ -237,6 +267,8 @@
 		0AD07F8621FE596F00C55831 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				0A2BA61922029262004074F3 /* ConfirmationSVCs */,
+				0A2BA61822029259004074F3 /* TrackingModules */,
 				0AA5286C2202825100CCFEE7 /* ButtonViews */,
 				0AA5284A2202188500CCFEE7 /* TrackingProgressBars */,
 				0AD07F8D21FE79C300C55831 /* CustomView.swift */,
