@@ -18,6 +18,10 @@
 		0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */; };
 		0AA528542202314600CCFEE7 /* ExerciseMainSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA528532202314600CCFEE7 /* ExerciseMainSVC.xib */; };
 		0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5285A2202623B00CCFEE7 /* RoundButton.swift */; };
+		0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA5286622027FF300CCFEE7 /* ConfirmationSVC.xib */; };
+		0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */; };
+		0AA5286E2202827000CCFEE7 /* BlueButtonUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5286D2202827000CCFEE7 /* BlueButtonUIView.swift */; };
+		0AA528702202828300CCFEE7 /* BlueButtonUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA5286F2202828300CCFEE7 /* BlueButtonUIView.xib */; };
 		0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */; };
 		0AD07F7221FCFF8100C55831 /* TrackingProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */; };
 		0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F7821FE3EA200C55831 /* CirclesViewController.swift */; };
@@ -80,6 +84,10 @@
 		0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseMainSVC.swift; sourceTree = "<group>"; };
 		0AA528532202314600CCFEE7 /* ExerciseMainSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseMainSVC.xib; sourceTree = "<group>"; };
 		0AA5285A2202623B00CCFEE7 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		0AA5286622027FF300CCFEE7 /* ConfirmationSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationSVC.xib; sourceTree = "<group>"; };
+		0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationSVC.swift; sourceTree = "<group>"; };
+		0AA5286D2202827000CCFEE7 /* BlueButtonUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonUIView.swift; sourceTree = "<group>"; };
+		0AA5286F2202828300CCFEE7 /* BlueButtonUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlueButtonUIView.xib; sourceTree = "<group>"; };
 		0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingProgressBar.xib; sourceTree = "<group>"; };
 		0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingProgressBar.swift; sourceTree = "<group>"; };
 		0AD07F7821FE3EA200C55831 /* CirclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +168,8 @@
 				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
 				0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */,
 				0AA528532202314600CCFEE7 /* ExerciseMainSVC.xib */,
+				0AA5286622027FF300CCFEE7 /* ConfirmationSVC.xib */,
+				0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */,
 			);
 			path = FinnUITesting;
 			sourceTree = "<group>";
@@ -204,6 +214,15 @@
 			path = TrackingProgressBars;
 			sourceTree = "<group>";
 		};
+		0AA5286C2202825100CCFEE7 /* ButtonViews */ = {
+			isa = PBXGroup;
+			children = (
+				0AA5286D2202827000CCFEE7 /* BlueButtonUIView.swift */,
+				0AA5286F2202828300CCFEE7 /* BlueButtonUIView.xib */,
+			);
+			path = ButtonViews;
+			sourceTree = "<group>";
+		};
 		0AD07F7721FE3EA200C55831 /* CoreyFrontendUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +237,7 @@
 		0AD07F8621FE596F00C55831 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				0AA5286C2202825100CCFEE7 /* ButtonViews */,
 				0AA5284A2202188500CCFEE7 /* TrackingProgressBars */,
 				0AD07F8D21FE79C300C55831 /* CustomView.swift */,
 			);
@@ -484,6 +504,8 @@
 				0AD07F8C21FE703D00C55831 /* TrackingFoodBar.xib in Resources */,
 				505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */,
 				8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */,
+				0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */,
+				0AA528702202828300CCFEE7 /* BlueButtonUIView.xib in Resources */,
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
@@ -619,6 +641,7 @@
 				0AA5284922020BF500CCFEE7 /* ExerciseRoutinesDT.swift in Sources */,
 				0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */,
 				0AD07F7221FCFF8100C55831 /* TrackingProgressBar.swift in Sources */,
+				0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */,
 				0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */,
 				0AD07F8821FE637600C55831 /* RoundCornersUIView.swift in Sources */,
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
@@ -637,6 +660,7 @@
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
 				0AD07F9521FEA51200C55831 /* WriteTrackingDataStrategy.swift in Sources */,
 				6130938821EAB55000249B24 /* FoodItemsCell.swift in Sources */,
+				0AA5286E2202827000CCFEE7 /* BlueButtonUIView.swift in Sources */,
 				0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
