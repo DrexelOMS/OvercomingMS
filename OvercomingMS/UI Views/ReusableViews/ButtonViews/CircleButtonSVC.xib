@@ -22,14 +22,14 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uJd-PL-ujI" userLabel="Stack Button Label View">
                     <rect key="frame" x="20" y="19.5" width="40" height="61.5"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJt-ul-1yn" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJt-ul-1yn" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                             <color key="backgroundColor" red="0.15686274509803921" green="0.28627450980392155" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="5CL-Da-vPA"/>
                                 <constraint firstAttribute="height" constant="40" id="5LW-ol-6v0"/>
                             </constraints>
-                            <state key="normal" title="B">
+                            <state key="normal">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
