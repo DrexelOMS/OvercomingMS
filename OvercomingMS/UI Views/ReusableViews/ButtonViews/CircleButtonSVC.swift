@@ -8,14 +8,27 @@
 
 import UIKit
 
-class CircleButtonSVC: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+@IBDesignable
+class CircleButtonSVC: UIButton {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
     }
-    */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        setup()
+    }
+    
+    private func setup(){
+        layer.cornerRadius = layer.bounds.size.width / 2
+        layer.masksToBounds = true;
+        layoutSubviews()
+    }
+    
 }
