@@ -19,7 +19,7 @@ class SwipeDownCloseViewController: UIViewController, UIGestureRecognizerDelegat
     
     private var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
     private var initialFrameWidth : Float = 0.0
-    private var initialFrameHeight : Float = 0.0
+    private var initialFrameHeight : Float = 0.0 
     
     override func viewDidLoad() {
         super.viewDidLoad()

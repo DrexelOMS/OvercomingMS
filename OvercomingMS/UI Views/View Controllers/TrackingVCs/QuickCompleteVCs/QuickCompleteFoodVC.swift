@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuickCompleteFoodVCViewController: SwipeDownCloseViewController {
+class QuickCompleteFoodVC: SwipeDownCloseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
