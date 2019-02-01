@@ -17,7 +17,9 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     
     @IBOutlet var mainView : UIView!
     
-    var defaultView : UIView = UIView()
+    var currentView : SlidingAbstractSVC!
+    
+    var viewStack : [SlidingAbstractSVC] = [SlidingAbstractSVC]()
     
     //var dataIO: IDataIO
     
@@ -25,6 +27,10 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+    }
+    
+    func setCurrentView() {
+        
     }
     
     func slideViewIn(viewToShow: UIView, viewToRemove: UIView){

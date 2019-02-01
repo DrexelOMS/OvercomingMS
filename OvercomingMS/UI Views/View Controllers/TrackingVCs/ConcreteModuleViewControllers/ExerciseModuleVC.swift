@@ -16,15 +16,15 @@ class ExerciseModuleVC: TrackingModuleAbstractVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let view = ExerciseMainSVC();
-        view.parentVC = self
-        mainView.addSubview(view)
+        currentView = ExerciseMainSVC();
+        currentView.parentVC = self
+        mainView.addSubview(currentView)
 
-        constrain(view, mainView) { view, mainView in
-            view.top == mainView.top
-            view.left == mainView.left
-            view.right == mainView.right
-            view.bottom == mainView.bottom
+        constrain(currentView, mainView) { currentView, mainView in
+            currentView.top == mainView.top
+            currentView.left == mainView.left
+            currentView.right == mainView.right
+            currentView.bottom == mainView.bottom
         }
     }
 

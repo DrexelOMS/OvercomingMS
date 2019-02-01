@@ -8,18 +8,7 @@
 
 import UIKit
 
-class MainAbstractSVC: CustomView {
-
-    var parentVC: TrackingModuleAbstractVC!{
-        didSet {
-            colorTheme = parentVC.theme
-        }
-    }
-    var colorTheme : UIColor = UIColor.blue {
-        didSet {
-            updateColors()
-        }
-    }
+class MainAbstractSVC: SlidingAbstractSVC {
     
     @IBOutlet var mainLabel : UILabel!
     @IBOutlet var internetPopUpButton : UIButton!
@@ -34,7 +23,7 @@ class MainAbstractSVC: CustomView {
 
     }
     
-    func updateColors(){
+    override func updateColors(){
         addButton.backgroundColor = colorTheme
         mainLabel.backgroundColor = colorTheme
     }
