@@ -10,6 +10,14 @@
 		0A2BAA662202A24E004074F3 /* WriteTrackingDataStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA652202A24E004074F3 /* WriteTrackingDataStrategy.swift */; };
 		0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */; };
 		0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */; };
+		0A2BAA742204AFC3004074F3 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA6C2204AFC3004074F3 /* SIL Open Font License.txt */; };
+		0A2BAA752204AFC3004074F3 /* Quicksand-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA6D2204AFC3004074F3 /* Quicksand-BoldItalic.otf */; };
+		0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA6E2204AFC3004074F3 /* Quicksand-Bold.otf */; };
+		0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA6F2204AFC3004074F3 /* Quicksand-LightItalic.otf */; };
+		0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA702204AFC3004074F3 /* Quicksand-Italic.otf */; };
+		0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA712204AFC3004074F3 /* Quicksand-Light.otf */; };
+		0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA722204AFC3004074F3 /* Quicksand-Regular.otf */; };
+		0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA732204AFC3004074F3 /* Quicksand_Dash.otf */; };
 		0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */; };
 		0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */; };
 		0A7FC91521F5229A00492E93 /* TrackingDayDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC91421F5229A00492E93 /* TrackingDayDT.swift */; };
@@ -78,6 +86,14 @@
 		0A2BAA652202A24E004074F3 /* WriteTrackingDataStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WriteTrackingDataStrategy.swift; path = "OvercomingMS/Data Models/TrackingDataStrategies/WriteTrackingDataStrategy.swift"; sourceTree = "<group>"; };
 		0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleButtonSVC.xib; sourceTree = "<group>"; };
 		0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonSVC.swift; sourceTree = "<group>"; };
+		0A2BAA6C2204AFC3004074F3 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		0A2BAA6D2204AFC3004074F3 /* Quicksand-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-BoldItalic.otf"; sourceTree = "<group>"; };
+		0A2BAA6E2204AFC3004074F3 /* Quicksand-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.otf"; sourceTree = "<group>"; };
+		0A2BAA6F2204AFC3004074F3 /* Quicksand-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-LightItalic.otf"; sourceTree = "<group>"; };
+		0A2BAA702204AFC3004074F3 /* Quicksand-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Italic.otf"; sourceTree = "<group>"; };
+		0A2BAA712204AFC3004074F3 /* Quicksand-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.otf"; sourceTree = "<group>"; };
+		0A2BAA722204AFC3004074F3 /* Quicksand-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.otf"; sourceTree = "<group>"; };
+		0A2BAA732204AFC3004074F3 /* Quicksand_Dash.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Quicksand_Dash.otf; sourceTree = "<group>"; };
 		0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinnStoryboard.storyboard; sourceTree = "<group>"; };
 		0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingViewController.swift; sourceTree = "<group>"; };
 		0A7FC91421F5229A00492E93 /* TrackingDayDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDayDT.swift; sourceTree = "<group>"; };
@@ -200,6 +216,21 @@
 			path = ConcreteMainSVCs;
 			sourceTree = "<group>";
 		};
+		0A2BAA6B2204AFC3004074F3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0A2BAA6C2204AFC3004074F3 /* SIL Open Font License.txt */,
+				0A2BAA6D2204AFC3004074F3 /* Quicksand-BoldItalic.otf */,
+				0A2BAA6E2204AFC3004074F3 /* Quicksand-Bold.otf */,
+				0A2BAA6F2204AFC3004074F3 /* Quicksand-LightItalic.otf */,
+				0A2BAA702204AFC3004074F3 /* Quicksand-Italic.otf */,
+				0A2BAA712204AFC3004074F3 /* Quicksand-Light.otf */,
+				0A2BAA722204AFC3004074F3 /* Quicksand-Regular.otf */,
+				0A2BAA732204AFC3004074F3 /* Quicksand_Dash.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		0A4DF4AC21EEEB5900EA991E /* FinnUITesting */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +242,7 @@
 		0A7FC87721F0FAB600492E93 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0A2BAA6B2204AFC3004074F3 /* Fonts */,
 				6129745521DF017F00B9846C /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
@@ -537,19 +569,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
 				0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */,
 				0AD07F7F21FE3EA200C55831 /* CoreyFrontendUI.storyboard in Resources */,
 				0AD07F8C21FE703D00C55831 /* TrackingFoodBar.xib in Resources */,
+				0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */,
 				505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */,
 				8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */,
+				0A2BAA752204AFC3004074F3 /* Quicksand-BoldItalic.otf in Resources */,
 				0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */,
 				0AA528702202828300CCFEE7 /* BlueButtonSVC.xib in Resources */,
+				0A2BAA742204AFC3004074F3 /* SIL Open Font License.txt in Resources */,
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
+				0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */,
+				0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
+				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
 				0AA528542202314600CCFEE7 /* ExerciseMainSVC.xib in Resources */,
+				0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
