@@ -185,12 +185,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A1FEC502204E6F1006CED70 /* TrackingVCs */ = {
+			isa = PBXGroup;
+			children = (
+				0A2BA61A220292A2004074F3 /* ConcreteModuleViewControllers */,
+				0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */,
+			);
+			path = TrackingVCs;
+			sourceTree = "<group>";
+		};
 		0A2BA61822029259004074F3 /* TrackingModules */ = {
 			isa = PBXGroup;
 			children = (
 				0A2BA61B220292BB004074F3 /* ConcreteMainSVCs */,
-				0A2BA61A220292A2004074F3 /* ConcreteModuleViewControllers */,
-				0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */,
 				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
 			);
 			path = TrackingModules;
@@ -430,6 +437,7 @@
 		618235EC21E44474001ED4DB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A1FEC502204E6F1006CED70 /* TrackingVCs */,
 				0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */,
 				6130938521E815AF00249B24 /* DietViewController.swift */,
 				8387975321EEB8D3009EA5EF /* TimerViewController.swift */,
