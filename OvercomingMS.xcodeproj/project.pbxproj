@@ -189,7 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				0A2BA61B220292BB004074F3 /* ConcreteMainSVCs */,
-				0A2BA61A220292A2004074F3 /* ConcreteViewControllers */,
+				0A2BA61A220292A2004074F3 /* ConcreteModuleViewControllers */,
 				0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */,
 				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
 			);
@@ -205,13 +205,13 @@
 			path = ConfirmationSVCs;
 			sourceTree = "<group>";
 		};
-		0A2BA61A220292A2004074F3 /* ConcreteViewControllers */ = {
+		0A2BA61A220292A2004074F3 /* ConcreteModuleViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */,
 				0A1FEC4E2204E01C006CED70 /* ExerciseStoryboard.storyboard */,
 			);
-			path = ConcreteViewControllers;
+			path = ConcreteModuleViewControllers;
 			sourceTree = "<group>";
 		};
 		0A2BA61B220292BB004074F3 /* ConcreteMainSVCs */ = {
