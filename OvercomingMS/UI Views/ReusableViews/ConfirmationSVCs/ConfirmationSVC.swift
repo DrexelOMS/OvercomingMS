@@ -24,4 +24,8 @@ class ConfirmationSVC: SlidingAbstractSVC {
         
     }
     
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        parentVC.resetToDefaultView()
+    }
+    
 }

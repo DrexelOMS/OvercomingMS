@@ -15,5 +15,14 @@ class ExerciseMainSVC: MainAbstractSVC {
             return "ExerciseMainSVC"
         }
     }
+    
+    @IBAction func addButtonPressed() {
+        parentVC.pushSubView(newSubView: ConfirmationSVC())
+    }
+    
+    @IBAction func timerButtonPressed() {
+        
+    }
+
 
 }

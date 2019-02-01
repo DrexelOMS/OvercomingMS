@@ -16,7 +16,7 @@ class ExerciseModuleVC: TrackingModuleAbstractVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        resetViewStack(subView: ConfirmationSVC())
+        initializeStackView(defaultView: ExerciseMainSVC())
     }
 
 }

@@ -18,9 +18,13 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     
     @IBOutlet var mainView : UIView!
     
+    var defaultView : SlidingAbstractSVC!
+    
     var currentView : SlidingAbstractSVC!
     
-    var viewStack : [SlidingAbstractSVC] = [SlidingAbstractSVC]()
+    var viewStack : [SlidingAbstractSVC]!
+    
+    
     
     //var dataIO: IDataIO
     
@@ -30,35 +34,39 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         // Do any additional setup after loading the view.
     }
     
-    func resetViewStack(subView: SlidingAbstractSVC){
-        if viewStack.count <= 0 {
-            //Set Stack and First View Instantly
-            viewStack.append(subView)
-            setInstantMainView()
-        }
-        else {
-            //otherwise make sure to animate the currentView first
-            viewStack = [SlidingAbstractSVC]()
-            viewStack.append(subView)
-        }
-    }
-    
-    private func setInstantMainView(){
-        currentView = viewStack[0]
-        currentView.parentVC = self
-        mainView.addSubview(currentView)
+    func initializeStackView(defaultView: SlidingAbstractSVC) {
+        self.defaultView = defaultView
         
-        constrain(currentView, mainView) { currentView, mainView in
-            currentView.top == mainView.top
-            currentView.left == mainView.left
-            currentView.right == mainView.right
-            currentView.bottom == mainView.bottom
-        }
+        viewStack = [SlidingAbstractSVC]()
+        viewStack.append(self.defaultView)
+        currentView = viewStack[0]
+        setMainView()
     }
     
     func pushSubView(newSubView: SlidingAbstractSVC) {
         currentView = newSubView;
+        viewStack.append(currentView)
+        setMainView()
+    }
+    
+    func popSubView() {
+        viewStack.remove(at: viewStack.count - 1)
+        currentView = viewStack[viewStack.count - 1];
+        setMainView()
+    }
+    
+    func resetToDefaultView(){
+        //otherwise make sure to animate the currentView first
+        viewStack = [SlidingAbstractSVC]()
+        viewStack.append(defaultView)
+        currentView = viewStack[0]
+        setMainView()
+    }
+    
+    private func setMainView(){
         currentView.parentVC = self
+        
+        mainView.subviews.forEach({ $0.removeFromSuperview() })
         mainView.addSubview(currentView)
         
         constrain(currentView, mainView) { currentView, mainView in
