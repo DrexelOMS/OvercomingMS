@@ -10,6 +10,8 @@
 		0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */; };
 		0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */; };
 		0A1FEC4F2204E01C006CED70 /* ExerciseStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1FEC4E2204E01C006CED70 /* ExerciseStoryboard.storyboard */; };
+		0A1FEC532204E79D006CED70 /* QuickCompleteFood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1FEC522204E79D006CED70 /* QuickCompleteFood.storyboard */; };
+		0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC542204E7F8006CED70 /* QuickCompleteFoodVCViewController.swift */; };
 		0A2BAA662202A24E004074F3 /* WriteTrackingDataStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA652202A24E004074F3 /* WriteTrackingDataStrategy.swift */; };
 		0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */; };
 		0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */; };
@@ -89,6 +91,8 @@
 		0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnTestingViewController.swift; sourceTree = "<group>"; };
 		0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDownCloseViewController.swift; sourceTree = "<group>"; };
 		0A1FEC4E2204E01C006CED70 /* ExerciseStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExerciseStoryboard.storyboard; sourceTree = "<group>"; };
+		0A1FEC522204E79D006CED70 /* QuickCompleteFood.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuickCompleteFood.storyboard; sourceTree = "<group>"; };
+		0A1FEC542204E7F8006CED70 /* QuickCompleteFoodVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCompleteFoodVCViewController.swift; sourceTree = "<group>"; };
 		0A2BAA652202A24E004074F3 /* WriteTrackingDataStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WriteTrackingDataStrategy.swift; path = "OvercomingMS/Data Models/TrackingDataStrategies/WriteTrackingDataStrategy.swift"; sourceTree = "<group>"; };
 		0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleButtonSVC.xib; sourceTree = "<group>"; };
 		0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonSVC.swift; sourceTree = "<group>"; };
@@ -188,10 +192,20 @@
 		0A1FEC502204E6F1006CED70 /* TrackingVCs */ = {
 			isa = PBXGroup;
 			children = (
+				0A1FEC512204E733006CED70 /* QuickCompleteVCs */,
 				0A2BA61A220292A2004074F3 /* ConcreteModuleViewControllers */,
 				0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */,
 			);
 			path = TrackingVCs;
+			sourceTree = "<group>";
+		};
+		0A1FEC512204E733006CED70 /* QuickCompleteVCs */ = {
+			isa = PBXGroup;
+			children = (
+				0A1FEC522204E79D006CED70 /* QuickCompleteFood.storyboard */,
+				0A1FEC542204E7F8006CED70 /* QuickCompleteFoodVCViewController.swift */,
+			);
+			path = QuickCompleteVCs;
 			sourceTree = "<group>";
 		};
 		0A2BA61822029259004074F3 /* TrackingModules */ = {
@@ -606,6 +620,7 @@
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
+				0A1FEC532204E79D006CED70 /* QuickCompleteFood.storyboard in Resources */,
 				0AA528542202314600CCFEE7 /* ExerciseMainSVC.xib in Resources */,
 				0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */,
 			);
@@ -759,6 +774,7 @@
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
 				6130938821EAB55000249B24 /* FoodItemsCell.swift in Sources */,
 				0AA5286E2202827000CCFEE7 /* BlueButtonSVC.swift in Sources */,
+				0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVCViewController.swift in Sources */,
 				0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
