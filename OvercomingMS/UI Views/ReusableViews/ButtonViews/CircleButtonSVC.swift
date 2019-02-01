@@ -8,27 +8,15 @@
 
 import UIKit
 
-@IBDesignable
-class CircleButtonSVC: UIButton {
+class CircleButtonSVC: CustomView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
+    override var nibName: String {
+        get {
+            return "CircleButtonSVC"
+        }
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
+    override func customSetup() {
+        
     }
-    
-    override func prepareForInterfaceBuilder() {
-        setup()
-    }
-    
-    private func setup(){
-        layer.cornerRadius = layer.bounds.size.width / 2
-        layer.masksToBounds = true;
-        layoutSubviews()
-    }
-    
 }
