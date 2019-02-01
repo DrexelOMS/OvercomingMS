@@ -9,7 +9,13 @@
 import UIKit
 import RealmSwift
 
-class MainTrackingViewController: UIViewController, TrackingProgressBarDelegate, TrackingFoodBarDelegate {
+class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingProgressBarDelegate, TrackingFoodBarDelegate {
+    
+    func finishedShowing(viewController: UIViewController) {
+        print("ReloadedData")
+        loadCurrentDayUI()
+    }
+    
     
     //MARK: Class properties
     
@@ -67,7 +73,6 @@ class MainTrackingViewController: UIViewController, TrackingProgressBarDelegate,
         loadCurrentDayUI()
     }
     
-    
     private func loadCurrentDayUI() {
         
         if let currentTrackingDay = WriteTrackingDataParent().getTrackingDay(date: currentDate) {
@@ -108,10 +113,16 @@ class MainTrackingViewController: UIViewController, TrackingProgressBarDelegate,
     
     func didPressCheckButton(_ sender: TrackingFoodBar) {
         
-        WriteFoodTrackingData().toggleFilledData()
+        //WriteFoodTrackingData().toggleFilledData()
         
-        loadCurrentDayUI()
+        let storyboard = UIStoryboard(name: "QuickCompleteFood", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "QuickCompleteFoodVC") as! QuickCompleteFoodVC
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.dismissalDelegate = self
         
+        self.present(vc, animated: true, completion: nil)
+        
+        //loadCurrentDayUI()  
     }
     
     func didPressLeftContainer(_ sender: TrackingFoodBar) {
@@ -159,7 +170,13 @@ class MainTrackingViewController: UIViewController, TrackingProgressBarDelegate,
             WriteVitaminDTrackingData().addData(amount: 5)
             break
         case 2:
-            WriteExerciseTrackingData().addData(amount: 5)
+            //WriteExerciseTrackingData().addData(amount: 5)
+            let storyboard = UIStoryboard(name: "ExerciseStoryboard", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ExerciseModuleVC") as! ExerciseModuleVC
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.dismissalDelegate = self
+            
+            self.present(vc, animated: true, completion: nil)
             break
         case 3:
             WriteMeditationTrackingData().addData(amount: 5)

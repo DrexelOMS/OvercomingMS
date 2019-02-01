@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class TrackingModuleAbstractVC: UIViewController {
+class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     
     @IBInspectable var theme : UIColor = UIColor.blue
     
