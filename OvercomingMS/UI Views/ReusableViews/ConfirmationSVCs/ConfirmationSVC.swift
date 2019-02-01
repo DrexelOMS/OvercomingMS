@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConfirmationSVC: CustomView {
+class ConfirmationSVC: SlidingAbstractSVC {
     
     override var nibName: String {
         get {
@@ -17,6 +17,10 @@ class ConfirmationSVC: CustomView {
     }
     
     override func customSetup() {
+        
+    }
+    
+    override func updateColors() {
         
     }
     

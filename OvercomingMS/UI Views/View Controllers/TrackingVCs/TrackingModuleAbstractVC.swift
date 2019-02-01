@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 @IBDesignable
 class TrackingModuleAbstractVC: SwipeDownCloseViewController {
@@ -29,8 +30,43 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         // Do any additional setup after loading the view.
     }
     
-    func setCurrentView() {
+    func resetViewStack(subView: SlidingAbstractSVC){
+        if viewStack.count <= 0 {
+            //Set Stack and First View Instantly
+            viewStack.append(subView)
+            setInstantMainView()
+        }
+        else {
+            //otherwise make sure to animate the currentView first
+            viewStack = [SlidingAbstractSVC]()
+            viewStack.append(subView)
+        }
+    }
+    
+    private func setInstantMainView(){
+        currentView = viewStack[0]
+        currentView.parentVC = self
+        mainView.addSubview(currentView)
         
+        constrain(currentView, mainView) { currentView, mainView in
+            currentView.top == mainView.top
+            currentView.left == mainView.left
+            currentView.right == mainView.right
+            currentView.bottom == mainView.bottom
+        }
+    }
+    
+    func pushSubView(newSubView: SlidingAbstractSVC) {
+        currentView = newSubView;
+        currentView.parentVC = self
+        mainView.addSubview(currentView)
+        
+        constrain(currentView, mainView) { currentView, mainView in
+            currentView.top == mainView.top
+            currentView.left == mainView.left
+            currentView.right == mainView.right
+            currentView.bottom == mainView.bottom
+        }
     }
     
     func slideViewIn(viewToShow: UIView, viewToRemove: UIView){

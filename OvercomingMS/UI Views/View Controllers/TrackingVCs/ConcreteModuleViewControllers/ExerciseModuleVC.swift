@@ -16,16 +16,7 @@ class ExerciseModuleVC: TrackingModuleAbstractVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        currentView = ExerciseMainSVC();
-        currentView.parentVC = self
-        mainView.addSubview(currentView)
-
-        constrain(currentView, mainView) { currentView, mainView in
-            currentView.top == mainView.top
-            currentView.left == mainView.left
-            currentView.right == mainView.right
-            currentView.bottom == mainView.bottom
-        }
+        resetViewStack(subView: ConfirmationSVC())
     }
 
 }
