@@ -18,7 +18,8 @@ class FinnTestingViewController: UIViewController {
     
 
     @IBAction func Open(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ExerciseModuleVC") as! SwipeDownCloseViewController
+        let storyboard = UIStoryboard(name: "ExerciseStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ExerciseModuleVC") as! ExerciseModuleVC
         self.present(vc, animated: true, completion: nil)
     }
 

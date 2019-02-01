@@ -18,6 +18,8 @@ class SwipeDownCloseViewController: UIViewController, UIGestureRecognizerDelegat
     private var restoreToFullAnimationTime = 0.3
     
     private var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
+    private var initialFrameWidth : Float = 0.0
+    private var initialFrameHeight : Float = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,19 +27,22 @@ class SwipeDownCloseViewController: UIViewController, UIGestureRecognizerDelegat
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.draggedView(_:)))
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(panGesture)
+        
+        initialFrameWidth = Float(view.bounds.width)
+        initialFrameHeight = Float(view.bounds.height)
+        
     }
     
+    //TODO: repair to take the changing safe area
     @objc func draggedView(_ sender: UIPanGestureRecognizer) {
-        //Note will be buggy on iphone 10
         
         let touchPoint = sender.location(in: self.view?.window)
-        print(touchPoint)
         if sender.state == UIGestureRecognizer.State.began {
             initialTouchPoint = touchPoint
         }
         else if sender.state == UIGestureRecognizer.State.changed {
             if touchPoint.y - initialTouchPoint.y > 0 {
-                self.view.frame = CGRect(x: 0, y: touchPoint.y - initialTouchPoint.y, width: self.view.frame.size.width, height: self.view.frame.size.height)
+                self.view.frame = CGRect(x: 0, y: touchPoint.y - initialTouchPoint.y, width: CGFloat(initialFrameWidth), height: CGFloat(initialFrameHeight))
             }
         }
         else if sender.state == UIGestureRecognizer.State.ended {
@@ -46,7 +51,7 @@ class SwipeDownCloseViewController: UIViewController, UIGestureRecognizerDelegat
             }
             else {
                 UIView.animate(withDuration: restoreToFullAnimationTime) {
-                    self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+                    self.view.frame = CGRect(x: 0, y: 0, width: CGFloat(self.initialFrameWidth), height: CGFloat(self.initialFrameHeight))
                 }
             }
         }

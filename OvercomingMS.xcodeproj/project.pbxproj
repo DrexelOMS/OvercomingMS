@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */; };
 		0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */; };
+		0A1FEC4F2204E01C006CED70 /* ExerciseStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1FEC4E2204E01C006CED70 /* ExerciseStoryboard.storyboard */; };
 		0A2BAA662202A24E004074F3 /* WriteTrackingDataStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA652202A24E004074F3 /* WriteTrackingDataStrategy.swift */; };
 		0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */; };
 		0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */; };
@@ -87,6 +88,7 @@
 		06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnTestingViewController.swift; sourceTree = "<group>"; };
 		0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDownCloseViewController.swift; sourceTree = "<group>"; };
+		0A1FEC4E2204E01C006CED70 /* ExerciseStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExerciseStoryboard.storyboard; sourceTree = "<group>"; };
 		0A2BAA652202A24E004074F3 /* WriteTrackingDataStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WriteTrackingDataStrategy.swift; path = "OvercomingMS/Data Models/TrackingDataStrategies/WriteTrackingDataStrategy.swift"; sourceTree = "<group>"; };
 		0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleButtonSVC.xib; sourceTree = "<group>"; };
 		0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonSVC.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */,
+				0A1FEC4E2204E01C006CED70 /* ExerciseStoryboard.storyboard */,
 			);
 			path = ConcreteViewControllers;
 			sourceTree = "<group>";
@@ -240,7 +243,6 @@
 			children = (
 				0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */,
 				0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */,
-				0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */,
 			);
 			path = FinnUITesting;
 			sourceTree = "<group>";
@@ -432,6 +434,7 @@
 				6130938521E815AF00249B24 /* DietViewController.swift */,
 				8387975321EEB8D3009EA5EF /* TimerViewController.swift */,
 				8387975521F7A809009EA5EF /* StopwatchViewController.swift */,
+				0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				0A2BAA752204AFC3004074F3 /* Quicksand-BoldItalic.otf in Resources */,
 				0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */,
 				0AA528702202828300CCFEE7 /* BlueButtonSVC.xib in Resources */,
+				0A1FEC4F2204E01C006CED70 /* ExerciseStoryboard.storyboard in Resources */,
 				0A2BAA742204AFC3004074F3 /* SIL Open Font License.txt in Resources */,
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
 				0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */,
