@@ -76,6 +76,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDc-4H-K0z" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24d-cd-fkI" customClass="ConfirmationSVC" customModule="OvercomingMS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="167" width="375" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,7 +90,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="SDc-4H-K0z" firstAttribute="top" secondItem="p59-88-aGe" secondAttribute="top" id="7bq-z8-NzH"/>
+                            <constraint firstItem="24d-cd-fkI" firstAttribute="top" secondItem="SDc-4H-K0z" secondAttribute="bottom" id="P6c-HM-VZa"/>
                             <constraint firstItem="Xq7-LT-ddg" firstAttribute="bottom" secondItem="24d-cd-fkI" secondAttribute="bottom" id="QeK-eq-KAU"/>
+                            <constraint firstItem="SDc-4H-K0z" firstAttribute="leading" secondItem="Xq7-LT-ddg" secondAttribute="leading" id="evv-gy-gge"/>
+                            <constraint firstItem="Xq7-LT-ddg" firstAttribute="trailing" secondItem="SDc-4H-K0z" secondAttribute="trailing" id="lO6-gD-jnt"/>
                             <constraint firstItem="Xq7-LT-ddg" firstAttribute="trailing" secondItem="24d-cd-fkI" secondAttribute="trailing" id="neI-lG-KEr"/>
                             <constraint firstItem="24d-cd-fkI" firstAttribute="leading" secondItem="Xq7-LT-ddg" secondAttribute="leading" id="yeA-oE-rRl"/>
                         </constraints>

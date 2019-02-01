@@ -23,8 +23,17 @@ class RoundCornersUIView: UIView {
     
     private func setup(){
         layer.cornerRadius = DesignConstants.CORNER_RADIUS
-        layer.masksToBounds = true;
         layoutSubviews()
+        
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        layer.shadowRadius = 1.0
+        layer.shadowOpacity = 0.3
+        
+        layer.borderColor = UIColor.gray.cgColor.copy(alpha: 0.5)
+        layer.borderWidth = 1
+        
     }
 
 }
