@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */; };
+		0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */; };
 		0A2BAA662202A24E004074F3 /* WriteTrackingDataStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA652202A24E004074F3 /* WriteTrackingDataStrategy.swift */; };
 		0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */; };
 		0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */; };
@@ -83,6 +85,8 @@
 
 /* Begin PBXFileReference section */
 		06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnTestingViewController.swift; sourceTree = "<group>"; };
+		0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDownCloseViewController.swift; sourceTree = "<group>"; };
 		0A2BAA652202A24E004074F3 /* WriteTrackingDataStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WriteTrackingDataStrategy.swift; path = "OvercomingMS/Data Models/TrackingDataStrategies/WriteTrackingDataStrategy.swift"; sourceTree = "<group>"; };
 		0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleButtonSVC.xib; sourceTree = "<group>"; };
 		0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonSVC.swift; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */,
+				0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */,
+				0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */,
 			);
 			path = FinnUITesting;
 			sourceTree = "<group>";
@@ -723,6 +729,7 @@
 				0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */,
 				0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */,
 				0AD07F8821FE637600C55831 /* RoundCornersUIView.swift in Sources */,
+				0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */,
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
 				0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */,
 				0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */,
@@ -746,6 +753,7 @@
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
 				0A7FC91921F534D700492E93 /* FoodStats.swift in Sources */,
+				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
