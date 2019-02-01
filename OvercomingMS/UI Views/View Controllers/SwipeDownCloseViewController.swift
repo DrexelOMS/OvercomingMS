@@ -10,7 +10,7 @@ import UIKit
 
 //NOTE: you must add a Pan Gesture Recognizer to the view controller, and ctrl drag from it to the view controller icon (white square in yellow square) and make it the delegate, and then connect to this IBAction, unless I can add the gesture recognizer in code
 
-class SwipeDownCloseViewController: UIViewController, UIGestureRecognizerDelegate {
+class SwipeDownCloseViewController: UIViewController, UIGestureRecognizerDelegate, Dismissable {
     
     private var panGesture = UIPanGestureRecognizer()
     
@@ -19,7 +19,9 @@ class SwipeDownCloseViewController: UIViewController, UIGestureRecognizerDelegat
     
     private var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
     private var initialFrameWidth : Float = 0.0
-    private var initialFrameHeight : Float = 0.0 
+    private var initialFrameHeight : Float = 0.0
+    
+    var dismissalDelegate: DismissalDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +49,10 @@ class SwipeDownCloseViewController: UIViewController, UIGestureRecognizerDelegat
         }
         else if sender.state == UIGestureRecognizer.State.ended {
             if touchPoint.y - initialTouchPoint.y > CGFloat(swipeDownYThreshold) {
-                self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true) {
+                    self.dismissalDelegate?.finishedShowing(viewController: self)
+                }
+
             }
             else {
                 UIView.animate(withDuration: restoreToFullAnimationTime) {

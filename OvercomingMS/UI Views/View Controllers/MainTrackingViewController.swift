@@ -9,7 +9,13 @@
 import UIKit
 import RealmSwift
 
-class MainTrackingViewController: UIViewController, TrackingProgressBarDelegate, TrackingFoodBarDelegate {
+class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingProgressBarDelegate, TrackingFoodBarDelegate {
+    
+    func finishedShowing(viewController: UIViewController) {
+        print("ReloadedData")
+        loadCurrentDayUI()
+    }
+    
     
     //MARK: Class properties
     
@@ -67,7 +73,6 @@ class MainTrackingViewController: UIViewController, TrackingProgressBarDelegate,
         loadCurrentDayUI()
     }
     
-    
     private func loadCurrentDayUI() {
         
         if let currentTrackingDay = WriteTrackingDataParent().getTrackingDay(date: currentDate) {
@@ -113,6 +118,7 @@ class MainTrackingViewController: UIViewController, TrackingProgressBarDelegate,
         let storyboard = UIStoryboard(name: "QuickCompleteFood", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "QuickCompleteFoodVC") as! QuickCompleteFoodVC
         vc.modalPresentationStyle = .overCurrentContext
+        vc.dismissalDelegate = self
         
         self.present(vc, animated: true, completion: nil)
         
@@ -168,6 +174,7 @@ class MainTrackingViewController: UIViewController, TrackingProgressBarDelegate,
             let storyboard = UIStoryboard(name: "ExerciseStoryboard", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ExerciseModuleVC") as! ExerciseModuleVC
             vc.modalPresentationStyle = .overCurrentContext
+            vc.dismissalDelegate = self
             
             self.present(vc, animated: true, completion: nil)
             break

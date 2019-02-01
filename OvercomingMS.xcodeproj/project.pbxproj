@@ -12,6 +12,7 @@
 		0A1FEC4F2204E01C006CED70 /* ExerciseStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1FEC4E2204E01C006CED70 /* ExerciseStoryboard.storyboard */; };
 		0A1FEC532204E79D006CED70 /* QuickCompleteFood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1FEC522204E79D006CED70 /* QuickCompleteFood.storyboard */; };
 		0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC542204E7F8006CED70 /* QuickCompleteFoodVC.swift */; };
+		0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC572204ECBF006CED70 /* Dismissable.swift */; };
 		0A2BAA662202A24E004074F3 /* WriteTrackingDataStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA652202A24E004074F3 /* WriteTrackingDataStrategy.swift */; };
 		0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */; };
 		0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */; };
@@ -93,6 +94,7 @@
 		0A1FEC4E2204E01C006CED70 /* ExerciseStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExerciseStoryboard.storyboard; sourceTree = "<group>"; };
 		0A1FEC522204E79D006CED70 /* QuickCompleteFood.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuickCompleteFood.storyboard; sourceTree = "<group>"; };
 		0A1FEC542204E7F8006CED70 /* QuickCompleteFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCompleteFoodVC.swift; sourceTree = "<group>"; };
+		0A1FEC572204ECBF006CED70 /* Dismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissable.swift; sourceTree = "<group>"; };
 		0A2BAA652202A24E004074F3 /* WriteTrackingDataStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WriteTrackingDataStrategy.swift; path = "OvercomingMS/Data Models/TrackingDataStrategies/WriteTrackingDataStrategy.swift"; sourceTree = "<group>"; };
 		0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleButtonSVC.xib; sourceTree = "<group>"; };
 		0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonSVC.swift; sourceTree = "<group>"; };
@@ -206,6 +208,14 @@
 				0A1FEC542204E7F8006CED70 /* QuickCompleteFoodVC.swift */,
 			);
 			path = QuickCompleteVCs;
+			sourceTree = "<group>";
+		};
+		0A1FEC562204EC93006CED70 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				0A1FEC572204ECBF006CED70 /* Dismissable.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		0A2BA61822029259004074F3 /* TrackingModules */ = {
@@ -438,6 +448,7 @@
 		618235EB21E4446B001ED4DB /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
+				0A1FEC562204EC93006CED70 /* Delegates */,
 				0AD07F9621FEA52400C55831 /* TrackingDataStrategies */,
 				0A7FC91321F5226700492E93 /* RealmDataModels */,
 				6130938721EAB55000249B24 /* FoodItemsCell.swift */,
@@ -780,6 +791,7 @@
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
+				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0A7FC91921F534D700492E93 /* FoodStats.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
 			);
