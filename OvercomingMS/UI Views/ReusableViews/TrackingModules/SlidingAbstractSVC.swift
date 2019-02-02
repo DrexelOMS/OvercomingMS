@@ -15,6 +15,7 @@ class SlidingAbstractSVC : CustomView {
         self.parentVC = parentVC
     }
     
+    //SHOULD BE OVERRIDEN TO IMPLEMENT ANY RELOAD DATA METHODS
     func reload(){
         
     }
