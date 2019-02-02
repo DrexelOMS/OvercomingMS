@@ -48,6 +48,7 @@ class ExerciseRoutinesDBS: TrackingModulesDBS {
         } catch {
             print("Error updating Exercise data : \(error)" )
         }
+        
     }
 
 }
