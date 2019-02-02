@@ -19,10 +19,12 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     @IBOutlet var mainView : UIView!
     
     var defaultView : SlidingAbstractSVC!
-    
     var currentView : SlidingAbstractSVC!
-    
+    var previousView : SlidingAbstractSVC!
     var viewStack : [SlidingAbstractSVC]!
+    
+    private enum SlideMode { case Instant, RightToLeft, LeftToRight }
+    
     
     
     
@@ -40,53 +42,102 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         viewStack = [SlidingAbstractSVC]()
         viewStack.append(self.defaultView)
         currentView = viewStack[0]
-        setMainView()
+        
+        setMainView(slideMode: .Instant)
     }
     
     func pushSubView(newSubView: SlidingAbstractSVC) {
+        previousView = currentView
         currentView = newSubView;
         viewStack.append(currentView)
-        setMainView()
+        
+        setMainView(slideMode: .RightToLeft)
+
     }
     
     func popSubView() {
+        previousView = currentView
         viewStack.remove(at: viewStack.count - 1)
         currentView = viewStack[viewStack.count - 1];
-        setMainView()
+        
+        setMainView(slideMode: .LeftToRight)
     }
     
     func resetToDefaultView(){
         //otherwise make sure to animate the currentView first
+        previousView = currentView
         viewStack = [SlidingAbstractSVC]()
         viewStack.append(defaultView)
         currentView = viewStack[0]
-        setMainView()
+        
+        setMainView(slideMode: .LeftToRight)
     }
     
-    private func setMainView(){
+    private func setMainView(slideMode: SlideMode){
         currentView.parentVC = self
         
-        mainView.subviews.forEach({ $0.removeFromSuperview() })
+        currentView.frame = mainView.bounds
+        currentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
         mainView.addSubview(currentView)
         
-        constrain(currentView, mainView) { currentView, mainView in
-            currentView.top == mainView.top
-            currentView.left == mainView.left
-            currentView.right == mainView.right
-            currentView.bottom == mainView.bottom
+        switch(slideMode){
+            
+        case .RightToLeft:
+            slideRightToLeft()
+            break
+            
+        case .LeftToRight:
+            slideLeftToRight()
+            break
+            
+        default:
+            break;
+            
         }
-    }
-    
-    func slideViewIn(viewToShow: UIView, viewToRemove: UIView){
-    
-    }
+        
+//                constrain(self.currentView, self.mainView) { currentView, mainView in
+//                    currentView.top == mainView.top
+//                    currentView.left == mainView.left
+//                    currentView.right == mainView.right
+//                    currentView.bottom == mainView.bottom
+//                }
 
-    func slideViewOut(viewToShow: UIView, viewToRemove: UIView){
         
     }
     
-    func slideOutToDefault(viewToRemove: UIView){
+    private func slideRightToLeft() {
         
+        currentView.frame.origin.x += mainView.frame.width
+        
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
+            
+            self.previousView.frame.origin.x -= self.mainView.frame.width
+            self.currentView.frame.origin.x -= self.mainView.frame.width
+            
+        }, completion: { finished in
+            print("Napkins opened!")
+            self.previousView.removeFromSuperview()
+            self.currentView.frame = self.mainView.bounds
+            self.currentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        })
+    }
+    
+    private func slideLeftToRight() {
+        
+        currentView.frame.origin.x -= mainView.frame.width
+        
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
+            
+            self.previousView.frame.origin.x += self.mainView.frame.width
+            self.currentView.frame.origin.x += self.mainView.frame.width
+            
+        }, completion: { finished in
+            print("Napkins opened!")
+            self.previousView.removeFromSuperview()
+            self.currentView.frame = self.mainView.bounds
+            self.currentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        })
     }
     
     func updateProgressBar(mainValue: Int, subValue: Int){
