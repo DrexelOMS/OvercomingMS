@@ -68,7 +68,7 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     }
     
     private func setMainView(slideMode: SlideMode){
-        topView.parentVC = self
+        topView.initialization(parentVC: self)
         
         topView.frame = mainView.bounds
         topView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

@@ -40,7 +40,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHZ-Fv-UcE" userLabel="TextLabel">
                                             <rect key="frame" x="189" y="0.0" width="189" height="100"/>
-                                            <string key="text">Minutes
+                                            <string key="text">Units
 Today</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                             <nil key="textColor"/>

@@ -10,6 +10,11 @@ import UIKit
 
 class SlidingAbstractSVC : CustomView {
     
+    //MUST BE CALLED BY THE VC THAT USES THIS OBJECT
+    func initialization(parentVC: TrackingModuleAbstractVC){
+        self.parentVC = parentVC
+    }
+    
     var parentVC: TrackingModuleAbstractVC!{
         didSet {
             colorTheme = parentVC.theme
@@ -24,6 +29,7 @@ class SlidingAbstractSVC : CustomView {
     func updateColors() {
         fatalError("Astract Method")
     }
+
 }
 
 extension SlidingAbstractSVC {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
 
@@ -19,7 +20,10 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     let button1 = AddCircleButton()
     let button2 = TimerCircleButton()
     
-    override func customSetup() {
+    //must be called by 
+    override func initialization(parentVC: TrackingModuleAbstractVC) {
+        super.initialization(parentVC: parentVC)
+        
         button1.buttonAction = addButtonPressed
         button2.buttonAction = timerButtonPressed
         
@@ -30,6 +34,9 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: defaultCellName, bundle: nil), forCellReuseIdentifier: defaultCellName)
+        
+        totalsCountLabel.text = String(exerciseVC.getTotalMinutes())
+        totalsTextLabel.text = "Minutes\nToday"
     }
     
     func addButtonPressed() {
@@ -48,15 +55,16 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return exerciseVC.getExerciseItems()?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! Routine3PartCell
         
-        cell.labelLeft.text = "Test1"
-        cell.labelCenter.text = "Test2"
-        cell.labelRight.text = "Test3"
+        cell.labelLeft.text = exerciseVC.getExerciseItems()![indexPath.row].RoutineType
+        let startTime = exerciseVC.getExerciseItems()![indexPath.row].StartTime
+        cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
+        cell.labelRight.text =  "\(exerciseVC.getExerciseItems()![indexPath.row].minutes) min."
         
         return cell
     }

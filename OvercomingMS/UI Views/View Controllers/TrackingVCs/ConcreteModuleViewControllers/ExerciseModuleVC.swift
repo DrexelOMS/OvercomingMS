@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ExerciseModuleVC: TrackingModuleAbstractVC {
     
-    let exerciseRoutines = ExerciseRoutinesDBS()
+    private let exerciseRoutines = ExerciseRoutinesDBS()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,4 +25,15 @@ class ExerciseModuleVC: TrackingModuleAbstractVC {
         updateProgressBarMain(mainPercentage: exerciseRoutines.getTrackingDay()?.ExerciseComputedPercentageComplete ?? 0)
     }
 
+    func getExerciseItems() -> List<ExerciseRoutinesDBT>? {
+        return exerciseRoutines.getExerciseItems()
+    }
+    
+    func getTotalMinutes() -> Int {
+        return exerciseRoutines.getTrackingDay()?.ExerciseTimeTotal ?? 0
+    }
+    
+    func getPercentageComplete() -> Int {
+        return exerciseRoutines.getTrackingDay()?.ExerciseComputedPercentageComplete ?? 0
+    }
 }

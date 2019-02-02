@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class ExerciseRoutinesDBS: TrackingModulesDBS {
         
@@ -49,6 +50,10 @@ class ExerciseRoutinesDBS: TrackingModulesDBS {
             print("Error updating Exercise data : \(error)" )
         }
         
+    }
+    
+    func getExerciseItems() -> List<ExerciseRoutinesDBT>? {
+        return getTrackingDay()?.exerciseRoutinesDT
     }
 
 }
