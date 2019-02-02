@@ -16,7 +16,16 @@ class CircleButtonSVC: CustomView {
         }
     }
     
+    var delegate : ButtonPressedDelegate?
+    
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var label: UILabel!
+    
     override func customSetup() {
         
+    }
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        delegate?.OnButtonPress(sender: sender)
     }
 }
