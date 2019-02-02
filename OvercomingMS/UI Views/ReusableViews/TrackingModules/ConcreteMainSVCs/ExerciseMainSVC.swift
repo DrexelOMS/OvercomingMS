@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import RealmSwift
 
-class ExerciseMainSVC: MainAbstractSVC {
+class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
 
     override var nibName: String {
         get {
@@ -19,14 +20,28 @@ class ExerciseMainSVC: MainAbstractSVC {
     let button1 = AddCircleButton()
     let button2 = TimerCircleButton()
     
-    override func customSetup() {
+    //must be called by 
+    override func initialize(parentVC: TrackingModuleAbstractVC) {
+        super.initialize(parentVC: parentVC)
+        
         button1.buttonAction = addButtonPressed
         button2.buttonAction = timerButtonPressed
         
         buttonStackView.addArrangedSubview(button1)
         buttonStackView.addArrangedSubview(button2)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
-        //var button3
+
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: defaultCellName, bundle: nil), forCellReuseIdentifier: defaultCellName)
+        
+        reload()
+    }
+    
+    override func reload(){
+        tableView.reloadData()
+        totalsCountLabel.text = String(exerciseVC.getTotalMinutes())
+        totalsTextLabel.text = "Minutes\nToday"
     }
     
     func addButtonPressed() {
@@ -42,6 +57,21 @@ class ExerciseMainSVC: MainAbstractSVC {
     override func updateColors() {
         button1.colorTheme = parentVC.theme
         button2.colorTheme = parentVC.theme
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return exerciseVC.getExerciseItems()?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! Routine3PartCell
+        
+        cell.labelLeft.text = exerciseVC.getExerciseItems()![indexPath.row].RoutineType
+        let startTime = exerciseVC.getExerciseItems()![indexPath.row].StartTime
+        cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
+        cell.labelRight.text =  "\(exerciseVC.getExerciseItems()![indexPath.row].minutes) min."
+        
+        return cell
     }
 
 }

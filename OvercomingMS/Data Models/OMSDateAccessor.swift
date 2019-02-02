@@ -13,7 +13,7 @@ var globalCurrentFullDate : Date = OMSDateAccessor().todaysFullDate
 
 var globalCurrentDate : String {// this is for going to previus dates
     get {
-        return OMSDateAccessor().getFormatedDate(date: globalCurrentFullDate)
+        return OMSDateAccessor.getFormatedDate(date: globalCurrentFullDate)
     }
 }
 
@@ -25,13 +25,20 @@ class OMSDateAccessor {
     private let realm = try! Realm()
     private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
     
-    func getFormatedDate(date: Date) -> String {
+    static func getFormatedDate(date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
         return formatter.string(from: date)
     }
     
-    func getFullDate(date : String) -> Date {
+    static func getDateTime(date : Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm"
+        return formatter.string(from: date)
+    }
+    
+    static func getFullDate(date : String) -> Date {
+        let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
         return formatter.date(from: date)!
         //TODO: what if we change the date format, maybe it should go through a history of options
@@ -44,8 +51,8 @@ class OMSDateAccessor {
                 return today
             }
             else {
-                defaults.set(getFormatedDate(date: Date()), forKey: "today")
-                let date = getFormatedDate(date: Date())
+                defaults.set(OMSDateAccessor.getFormatedDate(date: Date()), forKey: "today")
+                let date = OMSDateAccessor.getFormatedDate(date: Date())
                 initializeTodaysData(date: date)
                 return date
             }
@@ -57,13 +64,13 @@ class OMSDateAccessor {
     
     var todaysFullDate : Date {
         get {
-            return getFullDate(date: todaysDate)
+            return OMSDateAccessor.getFullDate(date: todaysDate)
         }
     }
     
     func progressDay() {
         let tomorrow = todaysFullDate.addingTimeInterval(60*60*24)
-        todaysDate = getFormatedDate(date: tomorrow)
+        todaysDate = OMSDateAccessor.getFormatedDate(date: tomorrow)
 
     }
     
