@@ -11,10 +11,6 @@ import RealmSwift
 
 class TrackingDataParent: TrackingModulesDBS {
     
-    func toggleFilledData(date : String = globalCurrentDate){
-        fatalError("Abstract Method")
-    }
-    
     func addData(amount: Int, date: String = globalCurrentDate){
         fatalError("Abstract Method")
     }

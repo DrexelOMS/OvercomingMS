@@ -235,12 +235,12 @@
 			path = SharedUIVIewControllerSupers;
 			sourceTree = "<group>";
 		};
-		0A1FEC6222052D58006CED70 /* ConcreteTrackingDataStrategies */ = {
+		0A1FEC6222052D58006CED70 /* DatabaseServices */ = {
 			isa = PBXGroup;
 			children = (
 				0A1FEC5E220529A9006CED70 /* ExerciseRoutinesDBS.swift */,
 			);
-			path = ConcreteTrackingDataStrategies;
+			path = DatabaseServices;
 			sourceTree = "<group>";
 		};
 		0A2BA61822029259004074F3 /* TrackingModules */ = {
@@ -391,7 +391,7 @@
 		0AD07F9621FEA52400C55831 /* DatebaseServices */ = {
 			isa = PBXGroup;
 			children = (
-				0A1FEC6222052D58006CED70 /* ConcreteTrackingDataStrategies */,
+				0A1FEC6222052D58006CED70 /* DatabaseServices */,
 				0A2BAA652202A24E004074F3 /* TrackingDataStrategies.swift */,
 				0A1FEC60220529D7006CED70 /* TrackingModulesDBS.swift */,
 			);

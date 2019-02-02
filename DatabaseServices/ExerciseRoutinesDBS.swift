@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ExerciseRoutinesDBS: TrackingDataParent {
+class ExerciseRoutinesDBS: TrackingModulesDBS {
         
     override func toggleFilledData(date : String = globalCurrentDate) {
         
