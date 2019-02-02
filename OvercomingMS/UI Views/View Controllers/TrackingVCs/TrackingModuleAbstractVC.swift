@@ -109,7 +109,7 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     
     private func slideLeftToRight() {
         
-        secondTopView.reload()
+        secondTopView.reload() 
         
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
             
