@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Cartography
 
 @IBDesignable
 class TrackingModuleAbstractVC: SwipeDownCloseViewController {
@@ -92,14 +91,6 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         default:
             break;
         }
-        
-//                constrain(self.currentView, self.mainView) { currentView, mainView in
-//                    currentView.top == mainView.top
-//                    currentView.left == mainView.left
-//                    currentView.right == mainView.right
-//                    currentView.bottom == mainView.bottom
-//                }
-
         
     }
     
