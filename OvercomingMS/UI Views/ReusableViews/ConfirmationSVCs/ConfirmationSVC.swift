@@ -24,6 +24,7 @@ class ConfirmationSVC: SlidingAbstractSVC {
         
     }
     
+    //TODO use a stored function passed by the one using
     @IBAction func backButtonPressed(_ sender: UIButton) {
         parentVC.resetToDefaultView()
     }

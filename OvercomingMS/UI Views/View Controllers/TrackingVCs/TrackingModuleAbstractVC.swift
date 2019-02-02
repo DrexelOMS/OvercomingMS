@@ -19,8 +19,16 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     @IBOutlet var mainView : UIView!
     
     var defaultView : SlidingAbstractSVC!
-    var currentView : SlidingAbstractSVC!
-    var previousView : SlidingAbstractSVC!
+    var topView : SlidingAbstractSVC {
+        get {
+            return viewStack[viewStack.count - 1]
+        }
+    }
+    var secondTopView : SlidingAbstractSVC {
+        get {
+            return viewStack[viewStack.count - 2]
+        }
+    }
     var viewStack : [SlidingAbstractSVC]!
     
     private enum SlideMode { case Instant, RightToLeft, LeftToRight }
@@ -41,45 +49,35 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         
         viewStack = [SlidingAbstractSVC]()
         viewStack.append(self.defaultView)
-        currentView = viewStack[0]
         
         setMainView(slideMode: .Instant)
     }
     
     func pushSubView(newSubView: SlidingAbstractSVC) {
-        previousView = currentView
-        currentView = newSubView;
-        viewStack.append(currentView)
+        viewStack.append(newSubView)
         
         setMainView(slideMode: .RightToLeft)
 
     }
     
     func popSubView() {
-        previousView = currentView
-        viewStack.remove(at: viewStack.count - 1)
-        currentView = viewStack[viewStack.count - 1];
-        
         setMainView(slideMode: .LeftToRight)
     }
     
     func resetToDefaultView(){
         //otherwise make sure to animate the currentView first
-        previousView = currentView
-        viewStack = [SlidingAbstractSVC]()
-        viewStack.append(defaultView)
-        currentView = viewStack[0]
-        
+    
+        viewStack = [viewStack[0], topView]
         setMainView(slideMode: .LeftToRight)
     }
     
     private func setMainView(slideMode: SlideMode){
-        currentView.parentVC = self
+        topView.parentVC = self
         
-        currentView.frame = mainView.bounds
-        currentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        topView.frame = mainView.bounds
+        topView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        mainView.addSubview(currentView)
+        mainView.addSubview(topView)
         
         switch(slideMode){
             
@@ -93,7 +91,6 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
             
         default:
             break;
-            
         }
         
 //                constrain(self.currentView, self.mainView) { currentView, mainView in
@@ -108,35 +105,34 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     
     private func slideRightToLeft() {
         
-        currentView.frame.origin.x += mainView.frame.width
+        topView.frame.origin.x += mainView.frame.width
         
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
             
-            self.previousView.frame.origin.x -= self.mainView.frame.width
-            self.currentView.frame.origin.x -= self.mainView.frame.width
+            self.topView.frame.origin.x -= self.mainView.frame.width
+            self.secondTopView.frame.origin.x -= self.mainView.frame.width
             
         }, completion: { finished in
-            print("Napkins opened!")
-            self.previousView.removeFromSuperview()
-            self.currentView.frame = self.mainView.bounds
-            self.currentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            print(self.viewStack.count)
+            //self.secondTopView.removeFromSuperview()
+            self.topView.frame = self.mainView.bounds
+            self.topView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         })
     }
     
     private func slideLeftToRight() {
         
-        currentView.frame.origin.x -= mainView.frame.width
-        
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
             
-            self.previousView.frame.origin.x += self.mainView.frame.width
-            self.currentView.frame.origin.x += self.mainView.frame.width
+            self.topView.frame.origin.x += self.mainView.frame.width
+            self.secondTopView.frame.origin.x += self.mainView.frame.width
             
         }, completion: { finished in
-            print("Napkins opened!")
-            self.previousView.removeFromSuperview()
-            self.currentView.frame = self.mainView.bounds
-            self.currentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            print(self.viewStack.count)
+            self.secondTopView.frame = self.mainView.bounds
+            self.secondTopView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            self.topView.removeFromSuperview()
+            self.viewStack.remove(at: self.viewStack.count - 1)
         })
     }
     
