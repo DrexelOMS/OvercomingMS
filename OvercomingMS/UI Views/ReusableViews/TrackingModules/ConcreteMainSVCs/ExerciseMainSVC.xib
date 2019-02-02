@@ -70,14 +70,23 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGO-Ww-cOF">
                                     <rect key="frame" x="0.0" y="0.0" width="112.5" height="125"/>
                                     <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="addButtonPressed" destination="-1" eventType="touchUpInside" id="PWq-n8-rkD"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mB8-be-C7U">
                                     <rect key="frame" x="132.5" y="0.0" width="113" height="125"/>
                                     <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="timerButtonPressed" destination="-1" eventType="touchUpInside" id="TPH-uJ-L8p"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEX-0C-cph">
                                     <rect key="frame" x="265.5" y="0.0" width="112.5" height="125"/>
                                     <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="backButtonPressed" destination="-1" eventType="touchUpInside" id="H0m-gz-dTe"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

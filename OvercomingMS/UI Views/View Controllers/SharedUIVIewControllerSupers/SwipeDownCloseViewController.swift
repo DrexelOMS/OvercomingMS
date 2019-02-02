@@ -12,51 +12,64 @@ import UIKit
 
 class SwipeDownCloseViewController: DismissableVC, UIGestureRecognizerDelegate {
     
-    private var panGesture = UIPanGestureRecognizer()
-    
-    private var swipeDownYThreshold = 100
-    private var restoreToFullAnimationTime = 0.3
-    
-    private var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
-    private var initialFrameWidth : Float = 0.0
-    private var initialFrameHeight : Float = 0.0
+//    private var panGesture = UIPanGestureRecognizer()
+//
+//    private var swipeDownYThreshold = 100
+//    private var restoreToFullAnimationTime = 0.3
+//
+//    private var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
+//    private var initialFrameWidth : Float = 0.0
+//    private var initialFrameHeight : Float = 0.0
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.draggedView(_:)))
+//        view.isUserInteractionEnabled = true
+//        view.addGestureRecognizer(panGesture)
+//
+//        initialFrameWidth = Float(view.bounds.width)
+//        initialFrameHeight = Float(view.bounds.height)
+//
+//    }
+//
+//    //TODO: repair to take the changing safe area
+//    @objc func draggedView(_ sender: UIPanGestureRecognizer) {
+//
+//        let touchPoint = sender.location(in: self.view?.window)
+//        if sender.state == UIGestureRecognizer.State.began {
+//            initialTouchPoint = touchPoint
+//        }
+//        else if sender.state == UIGestureRecognizer.State.changed {
+//            if touchPoint.y - initialTouchPoint.y > 0 {
+//                self.view.frame = CGRect(x: 0, y: touchPoint.y - initialTouchPoint.y, width: CGFloat(initialFrameWidth), height: CGFloat(initialFrameHeight))
+//            }
+//        }
+//        else if sender.state == UIGestureRecognizer.State.ended {
+//            if touchPoint.y - initialTouchPoint.y > CGFloat(swipeDownYThreshold) {
+//                dismiss()
+//            }
+//            else {
+//                UIView.animate(withDuration: restoreToFullAnimationTime) {
+//                    self.view.frame = CGRect(x: 0, y: 0, width: CGFloat(self.initialFrameWidth), height: CGFloat(self.initialFrameHeight))
+//                }
+//            }
+//        }
+//    }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.draggedView(_:)))
-        view.isUserInteractionEnabled = true
-        view.addGestureRecognizer(panGesture)
-        
-        initialFrameWidth = Float(view.bounds.width)
-        initialFrameHeight = Float(view.bounds.height)
-        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(gesture:)))
+        swipeDown.direction = UISwipeGestureRecognizer.Direction.down
+        view.addGestureRecognizer(swipeDown)
     }
     
-    //TODO: repair to take the changing safe area
-    @objc func draggedView(_ sender: UIPanGestureRecognizer) {
-        
-        let touchPoint = sender.location(in: self.view?.window)
-        if sender.state == UIGestureRecognizer.State.began {
-            initialTouchPoint = touchPoint
-        }
-        else if sender.state == UIGestureRecognizer.State.changed {
-            if touchPoint.y - initialTouchPoint.y > 0 {
-                self.view.frame = CGRect(x: 0, y: touchPoint.y - initialTouchPoint.y, width: CGFloat(initialFrameWidth), height: CGFloat(initialFrameHeight))
-            }
-        }
-        else if sender.state == UIGestureRecognizer.State.ended {
-            if touchPoint.y - initialTouchPoint.y > CGFloat(swipeDownYThreshold) {
+    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            if swipeGesture.direction == UISwipeGestureRecognizer.Direction.down {
                 dismiss()
             }
-            else {
-                UIView.animate(withDuration: restoreToFullAnimationTime) {
-                    self.view.frame = CGRect(x: 0, y: 0, width: CGFloat(self.initialFrameWidth), height: CGFloat(self.initialFrameHeight))
-                }
-            }
         }
     }
-    
 }
 
 

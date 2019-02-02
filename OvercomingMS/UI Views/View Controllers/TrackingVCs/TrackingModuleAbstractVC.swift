@@ -17,7 +17,23 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     
     @IBOutlet var mainView : UIView!
     
-    var defaultView : UIView = UIView()
+    var defaultView : SlidingAbstractSVC!
+    var topView : SlidingAbstractSVC {
+        get {
+            return viewStack[viewStack.count - 1]
+        }
+    }
+    var secondTopView : SlidingAbstractSVC {
+        get {
+            return viewStack[viewStack.count - 2]
+        }
+    }
+    var viewStack : [SlidingAbstractSVC]!
+    
+    private enum SlideMode { case Instant, RightToLeft, LeftToRight }
+    
+    
+    
     
     //var dataIO: IDataIO
     
@@ -27,16 +43,85 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         // Do any additional setup after loading the view.
     }
     
-    func slideViewIn(viewToShow: UIView, viewToRemove: UIView){
-    
+    func initializeStackView(defaultView: SlidingAbstractSVC) {
+        self.defaultView = defaultView
+        
+        viewStack = [SlidingAbstractSVC]()
+        viewStack.append(self.defaultView)
+        
+        setMainView(slideMode: .Instant)
     }
+    
+    func pushSubView(newSubView: SlidingAbstractSVC) {
+        viewStack.append(newSubView)
+        
+        setMainView(slideMode: .RightToLeft)
 
-    func slideViewOut(viewToShow: UIView, viewToRemove: UIView){
+    }
+    
+    func popSubView() {
+        setMainView(slideMode: .LeftToRight)
+    }
+    
+    func resetToDefaultView(){
+        //otherwise make sure to animate the currentView first
+    
+        viewStack = [viewStack[0], topView]
+        setMainView(slideMode: .LeftToRight)
+    }
+    
+    private func setMainView(slideMode: SlideMode){
+        topView.parentVC = self
+        
+        topView.frame = mainView.bounds
+        topView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        mainView.addSubview(topView)
+        
+        switch(slideMode){
+            
+        case .RightToLeft:
+            slideRightToLeft()
+            break
+            
+        case .LeftToRight:
+            slideLeftToRight()
+            break
+            
+        default:
+            break;
+        }
         
     }
     
-    func slideOutToDefault(viewToRemove: UIView){
+    private func slideRightToLeft() {
         
+        topView.frame.origin.x += mainView.frame.width
+        
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
+            
+            self.topView.frame.origin.x -= self.mainView.frame.width
+            self.secondTopView.frame.origin.x -= self.mainView.frame.width
+            
+        }, completion: { finished in
+            self.topView.frame = self.mainView.bounds
+            self.topView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        })
+    }
+    
+    private func slideLeftToRight() {
+        
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
+            
+            self.topView.frame.origin.x += self.mainView.frame.width
+            self.secondTopView.frame.origin.x += self.mainView.frame.width
+            
+        }, completion: { finished in
+            self.secondTopView.frame = self.mainView.bounds
+            self.secondTopView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            self.topView.removeFromSuperview()
+            self.viewStack.remove(at: self.viewStack.count - 1)
+        })
     }
     
     func updateProgressBar(mainValue: Int, subValue: Int){

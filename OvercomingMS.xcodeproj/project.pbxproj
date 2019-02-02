@@ -14,6 +14,7 @@
 		0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC542204E7F8006CED70 /* QuickCompleteFoodVC.swift */; };
 		0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC572204ECBF006CED70 /* Dismissable.swift */; };
 		0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC5A2204F265006CED70 /* DismissableVC.swift */; };
+		0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC5C2204F830006CED70 /* SlidingAbstractSVC.swift */; };
 		0A2BAA662202A24E004074F3 /* WriteTrackingDataStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA652202A24E004074F3 /* WriteTrackingDataStrategy.swift */; };
 		0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */; };
 		0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */; };
@@ -97,6 +98,7 @@
 		0A1FEC542204E7F8006CED70 /* QuickCompleteFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCompleteFoodVC.swift; sourceTree = "<group>"; };
 		0A1FEC572204ECBF006CED70 /* Dismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissable.swift; sourceTree = "<group>"; };
 		0A1FEC5A2204F265006CED70 /* DismissableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableVC.swift; sourceTree = "<group>"; };
+		0A1FEC5C2204F830006CED70 /* SlidingAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingAbstractSVC.swift; sourceTree = "<group>"; };
 		0A2BAA652202A24E004074F3 /* WriteTrackingDataStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WriteTrackingDataStrategy.swift; path = "OvercomingMS/Data Models/TrackingDataStrategies/WriteTrackingDataStrategy.swift"; sourceTree = "<group>"; };
 		0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleButtonSVC.xib; sourceTree = "<group>"; };
 		0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonSVC.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			children = (
 				0A2BA61B220292BB004074F3 /* ConcreteMainSVCs */,
 				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
+				0A1FEC5C2204F830006CED70 /* SlidingAbstractSVC.swift */,
 			);
 			path = TrackingModules;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0A7FC91921F534D700492E93 /* FoodStats.swift in Sources */,
+				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
 				0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */,
 			);

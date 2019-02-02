@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Cartography
 
 class ExerciseModuleVC: TrackingModuleAbstractVC {
     
@@ -16,16 +15,7 @@ class ExerciseModuleVC: TrackingModuleAbstractVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let view = ExerciseMainSVC();
-        view.parentVC = self
-        mainView.addSubview(view)
-
-        constrain(view, mainView) { view, mainView in
-            view.top == mainView.top
-            view.left == mainView.left
-            view.right == mainView.right
-            view.bottom == mainView.bottom
-        }
+        initializeStackView(defaultView: ExerciseMainSVC())
     }
 
 }

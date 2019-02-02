@@ -22,7 +22,7 @@ class RoundCornersUIView: UIView {
     }
     
     private func setup(){
-        layer.cornerRadius = DesignConstants.CORNER_RADIUS
+        layer.cornerRadius = bounds.height / 4
         layoutSubviews()
         
         layer.masksToBounds = false
