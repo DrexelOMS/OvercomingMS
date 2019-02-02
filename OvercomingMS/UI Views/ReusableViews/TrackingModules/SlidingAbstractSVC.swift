@@ -25,3 +25,13 @@ class SlidingAbstractSVC : CustomView {
         fatalError("Astract Method")
     }
 }
+
+extension SlidingAbstractSVC {
+    
+    var exerciseVC : ExerciseModuleVC! {
+        get {
+            return parentVC as? ExerciseModuleVC
+        }
+    }
+    
+}

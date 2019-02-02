@@ -56,7 +56,6 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         viewStack.append(newSubView)
         
         setMainView(slideMode: .RightToLeft)
-
     }
     
     func popSubView() {
@@ -64,8 +63,6 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     }
     
     func resetToDefaultView(){
-        //otherwise make sure to animate the currentView first
-    
         viewStack = [viewStack[0], topView]
         setMainView(slideMode: .LeftToRight)
     }
@@ -124,8 +121,12 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         })
     }
     
-    func updateProgressBar(mainValue: Int, subValue: Int){
-        
+    func updateProgressBarMain(mainPercentage: Int){
+        print("Main percentage is now: \(mainPercentage)")
+    }
+    
+    func updateProgressBarSub(subPercentage: Int) {
+        print("Sub percentage is now: \(subPercentage)")
     }
     
 }

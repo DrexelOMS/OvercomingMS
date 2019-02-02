@@ -19,12 +19,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     //MARK: Class properties
     
-    private var currentDate : String {// this is for going to previus dates
-        get {
-            return omsDateFormatter.getFormatedDate(date: globalCurrentFullDate)
-        }
-    }
-    
     private var todaysDate : String {
         get {
             return omsDateFormatter.todaysDate
@@ -75,7 +69,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     private func loadCurrentDayUI() {
         
-        if let currentTrackingDay = TrackingDataParent().getTrackingDay(date: currentDate) {
+        if let currentTrackingDay = TrackingDataParent().getTrackingDay(date: globalCurrentDate) {
             dateLog.text = currentTrackingDay.DateCreated
             //TODO make a way to get the proper description for each
             //FoodEatenRating is 1 - 5
@@ -93,7 +87,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         }
         else{
             print("Do something for days that were not tracked")
-            dateLog.text = currentDate
+            dateLog.text = globalCurrentDate
             foodBar.setDescription(description: "Untracked")
             omega3Bar.setProgressValue(value: 0)
             omega3Bar.setDescription(description: "Untracked")
@@ -203,7 +197,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     }
     
     @IBAction private func nextDate(_ sender: UIButton) {
-        if currentDate == todaysDate {
+        if globalCurrentDate == todaysDate {
             return
         }
         

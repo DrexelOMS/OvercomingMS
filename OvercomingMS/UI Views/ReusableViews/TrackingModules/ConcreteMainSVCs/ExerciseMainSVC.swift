@@ -19,7 +19,7 @@ class ExerciseMainSVC: MainAbstractSVC {
     @IBAction func addButtonPressed() {
         //parentVC.pushSubView(newSubView: ExerciseMainSVC())
         print("Adding 5 Minute Test Routine")
-        ExerciseRoutinesDBS().addExerciseItem(routineType: "Test", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
+        exerciseVC?.addDataItem()
     }
     
     @IBAction func timerButtonPressed() {
