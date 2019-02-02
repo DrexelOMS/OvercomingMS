@@ -9,18 +9,7 @@
 import Foundation
 import RealmSwift
 
-class WriteTrackingDataParent{
-    
-    let realm = try! Realm()
-    lazy var trackingDays: Results<TrackingDayDT> = { self.realm.objects(TrackingDayDT.self) }()
-    
-    func getTrackingDay(date: String) -> TrackingDayDT? {
-        return realm.object(ofType: TrackingDayDT.self, forPrimaryKey: date)
-    }
-    
-    func toggleFilledData(date : String = globalCurrentDate){
-        fatalError("Abstract Method")
-    }
+class TrackingDataParent: TrackingModulesDBS {
     
     func addData(amount: Int, date: String = globalCurrentDate){
         fatalError("Abstract Method")
@@ -28,7 +17,7 @@ class WriteTrackingDataParent{
     
 }
 
-class WriteFoodTrackingData : WriteTrackingDataParent {
+class WriteFoodTrackingData : TrackingDataParent {
     
     override func toggleFilledData(date : String = globalCurrentDate) {
         
@@ -61,10 +50,9 @@ class WriteFoodTrackingData : WriteTrackingDataParent {
             print("Error updating todays data : \(error)" )
         }
     }
-    
 }
 
-class WriteOmega3TrackingData : WriteTrackingDataParent {
+class WriteOmega3TrackingData : TrackingDataParent {
     
     override func toggleFilledData(date : String = globalCurrentDate) {
         
@@ -109,7 +97,7 @@ class WriteOmega3TrackingData : WriteTrackingDataParent {
     
 }
 
-class WriteVitaminDTrackingData : WriteTrackingDataParent {
+class WriteVitaminDTrackingData : TrackingDataParent {
     
     override func toggleFilledData(date : String = globalCurrentDate) {
         
@@ -154,52 +142,7 @@ class WriteVitaminDTrackingData : WriteTrackingDataParent {
     
 }
 
-class WriteExerciseTrackingData : WriteTrackingDataParent {
-    
-    override func toggleFilledData(date : String = globalCurrentDate) {
-        
-        do {
-            try realm.write() {
-                if let day = getTrackingDay(date: date) {
-                    if day.ExercisePercentageComplete != 100 {
-                        day.ExercisePercentageComplete = 100
-                    }
-                    else {
-                        var percentage = Float(day.ExerciseTimeTotal) / Float(ProgressBarConfig.exerciseGoal) * 100
-                        if percentage > 100 {
-                            percentage = 100
-                        }
-                        day.ExercisePercentageComplete = Int(percentage)
-                    }
-                }
-            }
-        } catch {
-            print("Error updating todays data : \(error)" )
-        }
-        
-    }
-    
-    override func addData(amount: Int, date: String = globalCurrentDate) {
-        
-        do {
-            try realm.write() {
-                if let day = getTrackingDay(date: date) {
-                    day.ExerciseTimeTotal += amount
-                    var percentage = Float(day.ExerciseTimeTotal) / Float(ProgressBarConfig.exerciseGoal) * 100
-                    if percentage > 100 {
-                        percentage = 100
-                    }
-                    day.ExercisePercentageComplete = Int(percentage)
-                }
-            }
-        } catch {
-            print("Error updating todays data : \(error)" )
-        }
-    }
-    
-}
-
-class WriteMeditationTrackingData : WriteTrackingDataParent {
+class WriteMeditationTrackingData : TrackingDataParent {
     
     override func toggleFilledData(date : String = globalCurrentDate) {
         
@@ -244,7 +187,7 @@ class WriteMeditationTrackingData : WriteTrackingDataParent {
     
 }
 
-class WriteMedicationTrackingData : WriteTrackingDataParent {
+class WriteMedicationTrackingData : TrackingDataParent {
     
     override func toggleFilledData(date : String = globalCurrentDate) {
         

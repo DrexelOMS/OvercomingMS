@@ -23,7 +23,7 @@ class OMSDateAccessor {
     private let defaults = UserDefaults.standard
     
     private let realm = try! Realm()
-    private lazy var trackingDays: Results<TrackingDayDT> = { self.realm.objects(TrackingDayDT.self) }()
+    private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
     
     func getFormatedDate(date: Date) -> String {
         let formatter = DateFormatter()
@@ -68,10 +68,10 @@ class OMSDateAccessor {
     }
     
     private func initializeTodaysData(date : String) {
-        if WriteTrackingDataParent().getTrackingDay(date: date) == nil {
+        if TrackingDataParent().getTrackingDay(date: date) == nil {
             do {
                 try realm.write(){
-                    let todaysTrackingData = TrackingDayDT()
+                    let todaysTrackingData = TrackingDayDBT()
                     todaysTrackingData.DateCreated = date
                     realm.add(todaysTrackingData)
                 }
@@ -81,4 +81,10 @@ class OMSDateAccessor {
         }
     }
     
+}
+
+extension Date {
+    func minutes(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.minute], from: date, to: self).minute ?? 0
+    }
 }
