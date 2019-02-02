@@ -17,6 +17,8 @@
 		0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC5C2204F830006CED70 /* SlidingAbstractSVC.swift */; };
 		0A1FEC5F220529A9006CED70 /* ExerciseRoutinesDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC5E220529A9006CED70 /* ExerciseRoutinesDBS.swift */; };
 		0A1FEC61220529D7006CED70 /* TrackingModulesDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC60220529D7006CED70 /* TrackingModulesDBS.swift */; };
+		0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC642206203F006CED70 /* AddCircleButton.swift */; };
+		0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC662206204E006CED70 /* TimerCircleButton.swift */; };
 		0A2BAA662202A24E004074F3 /* TrackingDataStrategies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA652202A24E004074F3 /* TrackingDataStrategies.swift */; };
 		0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */; };
 		0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */; };
@@ -103,6 +105,8 @@
 		0A1FEC5C2204F830006CED70 /* SlidingAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingAbstractSVC.swift; sourceTree = "<group>"; };
 		0A1FEC5E220529A9006CED70 /* ExerciseRoutinesDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRoutinesDBS.swift; sourceTree = "<group>"; };
 		0A1FEC60220529D7006CED70 /* TrackingModulesDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModulesDBS.swift; sourceTree = "<group>"; };
+		0A1FEC642206203F006CED70 /* AddCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCircleButton.swift; sourceTree = "<group>"; };
+		0A1FEC662206204E006CED70 /* TimerCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCircleButton.swift; sourceTree = "<group>"; };
 		0A2BAA652202A24E004074F3 /* TrackingDataStrategies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackingDataStrategies.swift; path = "OvercomingMS/Data Models/TrackingDataStrategies/TrackingDataStrategies.swift"; sourceTree = "<group>"; };
 		0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleButtonSVC.xib; sourceTree = "<group>"; };
 		0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonSVC.swift; sourceTree = "<group>"; };
@@ -243,6 +247,15 @@
 			path = DatabaseServices;
 			sourceTree = "<group>";
 		};
+		0A1FEC6322061DF8006CED70 /* CircleButtonSVCs */ = {
+			isa = PBXGroup;
+			children = (
+				0A1FEC642206203F006CED70 /* AddCircleButton.swift */,
+				0A1FEC662206204E006CED70 /* TimerCircleButton.swift */,
+			);
+			path = CircleButtonSVCs;
+			sourceTree = "<group>";
+		};
 		0A2BA61822029259004074F3 /* TrackingModules */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +361,7 @@
 		0AA5286C2202825100CCFEE7 /* ButtonViews */ = {
 			isa = PBXGroup;
 			children = (
+				0A1FEC6322061DF8006CED70 /* CircleButtonSVCs */,
 				0AA5286D2202827000CCFEE7 /* BlueButtonSVC.swift */,
 				0AA5286F2202828300CCFEE7 /* BlueButtonSVC.xib */,
 				0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */,
@@ -805,6 +819,7 @@
 				0A7FC91521F5229A00492E93 /* TrackingDayDBT.swift in Sources */,
 				501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */,
 				0A1FEC5F220529A9006CED70 /* ExerciseRoutinesDBS.swift in Sources */,
+				0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */,
 				8387975421EEB8D3009EA5EF /* TimerViewController.swift in Sources */,
 				8387975621F7A809009EA5EF /* StopwatchViewController.swift in Sources */,
 				0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */,
@@ -818,6 +833,7 @@
 				0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */,
 				0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
+				0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */,
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,

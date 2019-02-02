@@ -16,19 +16,32 @@ class ExerciseMainSVC: MainAbstractSVC {
         }
     }
     
-    @IBAction func addButtonPressed() {
+    let button1 = AddCircleButton()
+    let button2 = TimerCircleButton()
+    
+    override func customSetup() {
+        button1.buttonAction = addButtonPressed
+        button2.buttonAction = timerButtonPressed
+        
+        buttonStackView.addArrangedSubview(button1)
+        buttonStackView.addArrangedSubview(button2)
+        buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        //var button3
+    }
+    
+    func addButtonPressed() {
         //parentVC.pushSubView(newSubView: ExerciseMainSVC())
         print("Adding 5 Minute Test Routine")
         exerciseVC?.addDataItem()
     }
     
-    @IBAction func timerButtonPressed() {
+    func timerButtonPressed() {
         parentVC.pushSubView(newSubView: ConfirmationSVC())
     }
     
-    @IBAction func backButtonPressed() {
-        parentVC.popSubView()
+    override func updateColors() {
+        button1.colorTheme = parentVC.theme
+        button2.colorTheme = parentVC.theme
     }
-
 
 }
