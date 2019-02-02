@@ -11,8 +11,12 @@ import UIKit
 class SlidingAbstractSVC : CustomView {
     
     //MUST BE CALLED BY THE VC THAT USES THIS OBJECT
-    func initialization(parentVC: TrackingModuleAbstractVC){
+    func initialize(parentVC: TrackingModuleAbstractVC){
         self.parentVC = parentVC
+    }
+    
+    func reload(){
+        
     }
     
     var parentVC: TrackingModuleAbstractVC!{

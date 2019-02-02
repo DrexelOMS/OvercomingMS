@@ -21,8 +21,8 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     let button2 = TimerCircleButton()
     
     //must be called by 
-    override func initialization(parentVC: TrackingModuleAbstractVC) {
-        super.initialization(parentVC: parentVC)
+    override func initialize(parentVC: TrackingModuleAbstractVC) {
+        super.initialize(parentVC: parentVC)
         
         button1.buttonAction = addButtonPressed
         button2.buttonAction = timerButtonPressed
@@ -35,6 +35,11 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         tableView.register(UINib(nibName: defaultCellName, bundle: nil), forCellReuseIdentifier: defaultCellName)
         
+        reload()
+    }
+    
+    override func reload(){
+        tableView.reloadData()
         totalsCountLabel.text = String(exerciseVC.getTotalMinutes())
         totalsTextLabel.text = "Minutes\nToday"
     }
