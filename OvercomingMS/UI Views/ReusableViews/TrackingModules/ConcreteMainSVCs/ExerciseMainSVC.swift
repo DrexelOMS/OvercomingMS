@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExerciseMainSVC: MainAbstractSVC {
+class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
 
     override var nibName: String {
         get {
@@ -26,7 +26,10 @@ class ExerciseMainSVC: MainAbstractSVC {
         buttonStackView.addArrangedSubview(button1)
         buttonStackView.addArrangedSubview(button2)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
-        //var button3
+
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: defaultCellName, bundle: nil), forCellReuseIdentifier: defaultCellName)
     }
     
     func addButtonPressed() {
@@ -42,6 +45,20 @@ class ExerciseMainSVC: MainAbstractSVC {
     override func updateColors() {
         button1.colorTheme = parentVC.theme
         button2.colorTheme = parentVC.theme
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! Routine3PartCell
+        
+        cell.labelLeft.text = "Test1"
+        cell.labelCenter.text = "Test2"
+        cell.labelRight.text = "Test3"
+        
+        return cell
     }
 
 }

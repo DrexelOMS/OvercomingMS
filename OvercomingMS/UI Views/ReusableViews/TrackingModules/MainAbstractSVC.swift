@@ -10,17 +10,16 @@ import UIKit
 
 class MainAbstractSVC: SlidingAbstractSVC {
     
-    @IBOutlet var mainLabel : UILabel!
-    @IBOutlet var internetPopUpButton : UIButton!
-    @IBOutlet var tableView : UITableView!
+    var defaultCellName : String = "Routine3PartCell"
     
-//    @IBOutlet var addSVC : ModifyAbstractSVC!
-//    @IBOutlet var editSVC : ModifyAbstractSVC!
-//    @IBOutlet var mainLabel : ModifyAbstracSVC!
-    @IBOutlet var buttonStackView : UIStackView!
+    @IBOutlet weak var totalsCountLabel : UILabel!
+    @IBOutlet weak var totalsTextLabel: UILabel!
+    //@IBOutlet var internetPopUpButton : UIButton!
+    @IBOutlet weak var tableView : UITableView!
+    @IBOutlet weak var buttonStackView : UIStackView!
     
     override func customSetup() {
-        
+
     }
 
 }
