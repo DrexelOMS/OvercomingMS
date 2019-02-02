@@ -42,7 +42,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAz-6H-cPV">
-                            <rect key="frame" x="1" y="45" width="38" height="16.5"/>
+                            <rect key="frame" x="3" y="45" width="34.5" height="16.5"/>
                             <attributedString key="attributedText">
                                 <fragment content="Label">
                                     <attributes>
