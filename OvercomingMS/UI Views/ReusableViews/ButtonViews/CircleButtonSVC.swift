@@ -16,12 +16,10 @@ class CircleButtonSVC: CustomView {
         }
     }
     
-    var delegate : ButtonPressedDelegate?
-    
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var label: UILabel!
     
-    var buttonAction: (() -> ())?
+    var buttonAction : (() -> ())?
     
     var colorTheme : UIColor = UIColor.black {
         didSet {
@@ -35,6 +33,9 @@ class CircleButtonSVC: CustomView {
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        delegate?.OnButtonPress(sender: sender)
+        guard let buttonAction = buttonAction else {
+            fatalError("ButtonAction not set")
+        }
+        buttonAction()
     }
 }
