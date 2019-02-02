@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class TrackingDayDT: Object {
+class TrackingDayDBT: Object {
     let primaryKey = "Primary-Key"
     @objc dynamic var DateCreated: String = ""
     @objc dynamic var FollowProgramStreak: Int = 0
@@ -23,9 +23,33 @@ class TrackingDayDT: Object {
     @objc dynamic var VitaminDPercentageComplete: Int = 0
     @objc dynamic var VitaminDTotal: Int = 0
     
-    @objc dynamic var ExercisePercentageComplete: Int = 0
-    @objc dynamic var ExerciseTimeTotal: Int = 0
-    let exerciseRoutinesDT = List<ExerciseRoutinesDT>()
+    @objc dynamic var ExercisePercentageComplete: Int = 0 //This should be read only
+    var ExerciseComputedPercentageComplete : Int {
+        get {
+            if ExercisePercentageComplete >= 100 {
+                return 100
+            }
+            else {
+                let percentage = Int(Float(ExerciseTimeTotal) / Float(ProgressBarConfig.exerciseGoal) * 100)
+                if percentage > 100 {
+                    return 100
+                }
+                else {
+                    return percentage
+                }
+            }
+        }
+    }
+    var ExerciseTimeTotal: Int {
+        get {
+            var totalMinutes = 0
+            for row in exerciseRoutinesDT {
+                totalMinutes += row.minutes
+            }
+            return totalMinutes
+        }
+    }
+    let exerciseRoutinesDT = List<ExerciseRoutinesDBT>()
     
     @objc dynamic var MeditationPercentageComplete: Int = 0
     @objc dynamic var MeditationTimeTotal: Int = 0

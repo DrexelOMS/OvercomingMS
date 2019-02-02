@@ -40,7 +40,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     @IBOutlet weak var medicationBar: TrackingProgressBar!
     
     private let realm = try! Realm()
-    private lazy var trackingDays: Results<TrackingDayDT> = { self.realm.objects(TrackingDayDT.self) }()
+    private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
     
     private let omsDateFormatter = OMSDateAccessor()
     
@@ -75,7 +75,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     private func loadCurrentDayUI() {
         
-        if let currentTrackingDay = WriteTrackingDataParent().getTrackingDay(date: currentDate) {
+        if let currentTrackingDay = TrackingDataParent().getTrackingDay(date: currentDate) {
             dateLog.text = currentTrackingDay.DateCreated
             //TODO make a way to get the proper description for each
             //FoodEatenRating is 1 - 5
@@ -84,7 +84,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             omega3Bar.setDescription(description: String(currentTrackingDay.Omega3Total))
             vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDPercentageComplete)
             vitaminDBar.setDescription(description: String(currentTrackingDay.VitaminDTotal))
-            exerciseBar.setProgressValue(value: currentTrackingDay.ExercisePercentageComplete)
+            exerciseBar.setProgressValue(value: currentTrackingDay.ExerciseComputedPercentageComplete)
             exerciseBar.setDescription(description: String(currentTrackingDay.ExerciseTimeTotal))
             meditationBar.setProgressValue(value: currentTrackingDay.MeditationPercentageComplete)
             meditationBar.setDescription(description: String(currentTrackingDay.MeditationTimeTotal))
@@ -143,7 +143,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             WriteVitaminDTrackingData().toggleFilledData()
             break
         case 2:
-            WriteExerciseTrackingData().toggleFilledData()
+            ExerciseRoutinesDBS().toggleFilledData()
             break
         case 3:
             WriteMeditationTrackingData().toggleFilledData()
