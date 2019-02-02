@@ -104,8 +104,6 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
             self.secondTopView.frame.origin.x -= self.mainView.frame.width
             
         }, completion: { finished in
-            print(self.viewStack.count)
-            //self.secondTopView.removeFromSuperview()
             self.topView.frame = self.mainView.bounds
             self.topView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         })
@@ -119,7 +117,6 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
             self.secondTopView.frame.origin.x += self.mainView.frame.width
             
         }, completion: { finished in
-            print(self.viewStack.count)
             self.secondTopView.frame = self.mainView.bounds
             self.secondTopView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             self.topView.removeFromSuperview()
