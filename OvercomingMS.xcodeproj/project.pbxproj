@@ -104,7 +104,7 @@
 		0A1FEC5A2204F265006CED70 /* DismissableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableVC.swift; sourceTree = "<group>"; };
 		0A1FEC5C2204F830006CED70 /* SlidingAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingAbstractSVC.swift; sourceTree = "<group>"; };
 		0A1FEC5E220529A9006CED70 /* ExerciseRoutinesDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRoutinesDBS.swift; sourceTree = "<group>"; };
-		0A1FEC60220529D7006CED70 /* TrackingModulesDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModulesDBS.swift; sourceTree = "<group>"; };
+		0A1FEC60220529D7006CED70 /* TrackingModulesDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackingModulesDBS.swift; path = "OvercomingMS/Data Models/TrackingDataStrategies/TrackingModulesDBS.swift"; sourceTree = "<group>"; };
 		0A1FEC642206203F006CED70 /* AddCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCircleButton.swift; sourceTree = "<group>"; };
 		0A1FEC662206204E006CED70 /* TimerCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCircleButton.swift; sourceTree = "<group>"; };
 		0A2BAA652202A24E004074F3 /* TrackingDataStrategies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackingDataStrategies.swift; path = "OvercomingMS/Data Models/TrackingDataStrategies/TrackingDataStrategies.swift"; sourceTree = "<group>"; };
@@ -244,7 +244,8 @@
 			children = (
 				0A1FEC5E220529A9006CED70 /* ExerciseRoutinesDBS.swift */,
 			);
-			path = DatabaseServices;
+			name = DatabaseServices;
+			path = "OvercomingMS/Data Models/TrackingDataStrategies/DatabaseServices";
 			sourceTree = "<group>";
 		};
 		0A1FEC6322061DF8006CED70 /* CircleButtonSVCs */ = {
@@ -254,6 +255,13 @@
 				0A1FEC662206204E006CED70 /* TimerCircleButton.swift */,
 			);
 			path = CircleButtonSVCs;
+			sourceTree = "<group>";
+		};
+		0A1FEC6A2206371C006CED70 /* ReusableCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableCells;
 			sourceTree = "<group>";
 		};
 		0A2BA61822029259004074F3 /* TrackingModules */ = {
@@ -479,6 +487,7 @@
 			children = (
 				0A976CF921FEB9CB00748EDA /* TeamMembers */,
 				0AD07F9121FE84E000C55831 /* SharedUIViewSupers */,
+				0A1FEC6A2206371C006CED70 /* ReusableCells */,
 				0AD07F8621FE596F00C55831 /* ReusableViews */,
 				618235EC21E44474001ED4DB /* View Controllers */,
 				6129745221DF017E00B9846C /* Main.storyboard */,
