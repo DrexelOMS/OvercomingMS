@@ -56,7 +56,6 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         viewStack.append(newSubView)
         
         setMainView(slideMode: .RightToLeft)
-
     }
     
     func popSubView() {
@@ -64,23 +63,20 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     }
     
     func resetToDefaultView(){
-        //otherwise make sure to animate the currentView first
-    
         viewStack = [viewStack[0], topView]
         setMainView(slideMode: .LeftToRight)
     }
     
     private func setMainView(slideMode: SlideMode){
-        topView.parentVC = self
+        topView.initialize(parentVC: self)
         
         topView.frame = mainView.bounds
         topView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        mainView.addSubview(topView)
-        
         switch(slideMode){
             
         case .RightToLeft:
+            mainView.addSubview(topView)
             slideRightToLeft()
             break
             
@@ -89,6 +85,7 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
             break
             
         default:
+            mainView.addSubview(topView)
             break;
         }
         
@@ -97,6 +94,7 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     private func slideRightToLeft() {
         
         topView.frame.origin.x += mainView.frame.width
+        topView.reload()
         
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
             
@@ -111,6 +109,8 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     
     private func slideLeftToRight() {
         
+        secondTopView.reload() 
+        
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
             
             self.topView.frame.origin.x += self.mainView.frame.width
@@ -124,8 +124,12 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         })
     }
     
-    func updateProgressBar(mainValue: Int, subValue: Int){
-        
+    func updateProgressBarMain(mainPercentage: Int){
+        print("Main percentage is now: \(mainPercentage)")
+    }
+    
+    func updateProgressBarSub(subPercentage: Int) {
+        print("Sub percentage is now: \(subPercentage)")
     }
     
 }

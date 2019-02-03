@@ -16,7 +16,26 @@ class CircleButtonSVC: CustomView {
         }
     }
     
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var label: UILabel!
+    
+    var buttonAction : (() -> ())?
+    
+    var colorTheme : UIColor = UIColor.black {
+        didSet {
+            label.textColor = colorTheme
+            button.setTitleColor(colorTheme, for: .normal)
+        }
+    }
+    
     override func customSetup() {
         
+    }
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        guard let buttonAction = buttonAction else {
+            fatalError("ButtonAction not set")
+        }
+        buttonAction()
     }
 }

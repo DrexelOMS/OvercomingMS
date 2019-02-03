@@ -14,7 +14,7 @@ class TrackingModulesDBS{
     let realm = try! Realm()
     lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
     
-    func getTrackingDay(date: String) -> TrackingDayDBT? {
+    func getTrackingDay(date: String = globalCurrentDate) -> TrackingDayDBT? {
         return realm.object(ofType: TrackingDayDBT.self, forPrimaryKey: date)
     }
     
