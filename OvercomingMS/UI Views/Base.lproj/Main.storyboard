@@ -307,7 +307,7 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Omega-3"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-va-Kq1" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-va-Kq1" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="172.33333333333331" width="374" height="74.333333333333314"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -317,7 +317,7 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Vitamin D"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYS-8V-zpv" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYS-8V-zpv" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="258.66666666666669" width="374" height="74"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -327,7 +327,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQQ-l4-VC0" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQQ-l4-VC0" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="344.66666666666669" width="374" height="74.333333333333314"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -337,7 +337,7 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Meditation"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-CW-Z5M" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-CW-Z5M" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="431" width="374" height="74"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <userDefinedRuntimeAttributes>
