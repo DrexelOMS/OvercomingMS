@@ -272,7 +272,6 @@
                         <viewLayoutGuide key="safeArea" id="nYn-iV-UCs"/>
                     </view>
                     <connections>
-                        <outlet property="Symptons" destination="I7l-9x-lzu" id="sKx-Aj-c9w"/>
                         <segue destination="LIq-GD-UID" kind="show" identifier="goLeft" id="XfD-m2-Kym"/>
                         <segue destination="vP0-hZ-3Dr" kind="show" identifier="goRight" id="gDM-gm-INS"/>
                     </connections>
