@@ -55,5 +55,13 @@ class ExerciseRoutinesDBS: TrackingModulesDBS {
     func getExerciseItems() -> List<ExerciseRoutinesDBT>? {
         return getTrackingDay()?.exerciseRoutinesDT
     }
+    
+    func getTotalMinutes() -> Int {
+        return getTrackingDay()?.ExerciseTimeTotal ?? 0
+    }
+    
+    func getPercentageComplete() -> Int {
+        return getTrackingDay()?.ExerciseComputedPercentageComplete ?? 0
+    }
 
 }

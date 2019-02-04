@@ -17,9 +17,5 @@ class MainAbstractSVC: SlidingAbstractSVC {
     //@IBOutlet var internetPopUpButton : UIButton!
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var buttonStackView : UIStackView!
-    
-    override func customSetup() {
-
-    }
 
 }

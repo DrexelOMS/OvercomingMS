@@ -20,6 +20,12 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     let button1 = AddCircleButton()
     let button2 = TimerCircleButton()
     
+    let exerciseRoutines : ExerciseRoutinesDBS = ExerciseRoutinesDBS()
+    
+    override func customSetup() {
+        
+    }
+    
     //must be called by 
     override func initialize(parentVC: TrackingModuleAbstractVC) {
         super.initialize(parentVC: parentVC)
@@ -40,14 +46,15 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     
     override func reload(){
         tableView.reloadData()
-        totalsCountLabel.text = String(exerciseVC.getTotalMinutes())
+        totalsCountLabel.text = String(exerciseRoutines.getTotalMinutes())
         totalsTextLabel.text = "Minutes\nToday"
     }
     
     func addButtonPressed() {
         //parentVC.pushSubView(newSubView: ExerciseMainSVC())
         print("Adding 5 Minute Test Routine")
-        exerciseVC?.addDataItem()
+        exerciseRoutines.addExerciseItem(routineType: "Test", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
+        parentVC.updateProgressBarMain(mainPercentage: exerciseRoutines.getTrackingDay()?.ExerciseComputedPercentageComplete ?? 0)
     }
     
     func timerButtonPressed() {
@@ -60,16 +67,16 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exerciseVC.getExerciseItems()?.count ?? 0
+        return exerciseRoutines.getExerciseItems()?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! Routine3PartCell
         
-        cell.labelLeft.text = exerciseVC.getExerciseItems()![indexPath.row].RoutineType
-        let startTime = exerciseVC.getExerciseItems()![indexPath.row].StartTime
+        cell.labelLeft.text = exerciseRoutines.getExerciseItems()![indexPath.row].RoutineType
+        let startTime = exerciseRoutines.getExerciseItems()![indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-        cell.labelRight.text =  "\(exerciseVC.getExerciseItems()![indexPath.row].minutes) min."
+        cell.labelRight.text =  "\(exerciseRoutines.getExerciseItems()![indexPath.row].minutes) min."
         
         return cell
     }

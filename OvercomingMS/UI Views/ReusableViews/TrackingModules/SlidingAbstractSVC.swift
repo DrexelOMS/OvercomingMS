@@ -36,13 +36,3 @@ class SlidingAbstractSVC : CustomView {
     }
 
 }
-
-extension SlidingAbstractSVC {
-    
-    var exerciseVC : ExerciseModuleVC! {
-        get {
-            return parentVC as? ExerciseModuleVC
-        }
-    }
-    
-}
