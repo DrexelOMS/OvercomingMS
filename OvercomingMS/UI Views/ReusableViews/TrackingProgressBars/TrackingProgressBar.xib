@@ -12,7 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
+                <outlet property="leftContainerView" destination="LMb-nR-B7u" id="VJN-dI-Gj8"/>
                 <outlet property="leftLabel" destination="ZgR-vj-Qt3" id="VAI-Mp-g7Q"/>
+                <outlet property="linearProgressBar" destination="Q1G-Wh-S9S" id="ePP-Sl-1to"/>
                 <outlet property="rightLabel" destination="cy3-n8-ccr" id="siq-FB-PSD"/>
             </connections>
         </placeholder>
@@ -30,9 +32,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DD8-0L-vXd" userLabel="rightContainerView">
                             <rect key="frame" x="220" y="0.0" width="40" height="46"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rJ-fM-xng">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rJ-fM-xng" userLabel="Check">
                                     <rect key="frame" x="0.0" y="3" width="40" height="40"/>
-                                    <color key="backgroundColor" white="0.95019085334383557" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="40" id="Aw9-Pw-D3R"/>
                                         <constraint firstAttribute="height" constant="40" id="tdd-CZ-z24"/>
@@ -43,7 +44,6 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="2rJ-fM-xng" secondAttribute="trailing" id="4DB-2h-9Hu"/>
                                 <constraint firstAttribute="bottom" secondItem="2rJ-fM-xng" secondAttribute="bottom" constant="3" id="O6J-Bp-UmH"/>
@@ -55,13 +55,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="220" height="46"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-tc-HaU">
-                                    <rect key="frame" x="7" y="3" width="198" height="40"/>
+                                    <rect key="frame" x="10" y="3" width="200" height="40"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-Bv-8c1">
-                                            <rect key="frame" x="0.0" y="0.0" width="198" height="20"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="20"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-vj-Qt3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="20"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="164" height="20"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Label">
                                                             <attributes>
@@ -72,7 +72,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-n8-ccr">
-                                                    <rect key="frame" x="162" y="0.0" width="36" height="20"/>
+                                                    <rect key="frame" x="164" y="0.0" width="36" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="36" id="zbY-lf-ZFy"/>
                                                     </constraints>
@@ -91,7 +91,7 @@
                                             </constraints>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1G-Wh-S9S" userLabel="BottomProgressBar" customClass="LinearProgressBar" customModule="LinearProgressBar">
-                                            <rect key="frame" x="0.0" y="20" width="198" height="20"/>
+                                            <rect key="frame" x="0.0" y="20" width="200" height="20"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="barColor">
@@ -111,11 +111,10 @@
                                     </constraints>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="mdA-tc-HaU" firstAttribute="centerY" secondItem="LMb-nR-B7u" secondAttribute="centerY" id="Ng8-75-IpB"/>
-                                <constraint firstAttribute="trailing" secondItem="mdA-tc-HaU" secondAttribute="trailing" constant="15" id="Vjp-KI-BvV"/>
-                                <constraint firstItem="mdA-tc-HaU" firstAttribute="leading" secondItem="LMb-nR-B7u" secondAttribute="leading" constant="7" id="elZ-vg-7ib"/>
+                                <constraint firstAttribute="trailing" secondItem="mdA-tc-HaU" secondAttribute="trailing" constant="10" id="Vjp-KI-BvV"/>
+                                <constraint firstItem="mdA-tc-HaU" firstAttribute="leading" secondItem="LMb-nR-B7u" secondAttribute="leading" constant="10" id="elZ-vg-7ib"/>
                             </constraints>
                         </view>
                     </subviews>
