@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
-                <outlet property="leftContainerView" destination="LMb-nR-B7u" id="VJN-dI-Gj8"/>
+                <outlet property="leftContainerView" destination="LMb-nR-B7u" id="mkM-yu-6qq"/>
                 <outlet property="leftLabel" destination="ZgR-vj-Qt3" id="VAI-Mp-g7Q"/>
                 <outlet property="linearProgressBar" destination="Q1G-Wh-S9S" id="ePP-Sl-1to"/>
                 <outlet property="rightLabel" destination="cy3-n8-ccr" id="siq-FB-PSD"/>
@@ -109,7 +109,7 @@
                                             </constraints>
                                             <state key="normal" image="checkmark"/>
                                             <connections>
-                                                <action selector="checkButtonPressed:" destination="-1" eventType="touchUpInside" id="pYR-ax-2Ns"/>
+                                                <action selector="checkButtonPressed:" destination="-1" eventType="touchUpInside" id="Dom-3e-iD9"/>
                                             </connections>
                                         </button>
                                     </subviews>
