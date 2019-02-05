@@ -78,7 +78,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     private func loadCurrentDayUI() {
         
-        if let currentTrackingDay = TrackingDataParent().getTrackingDay(date: globalCurrentDate) {
+        if let currentTrackingDay = TrackingModulesDBS().getTrackingDay(date: globalCurrentDate) {
             dateLog.text = currentTrackingDay.DateCreated
             //TODO make a way to get the proper description for each
             //FoodEatenRating is 1 - 5

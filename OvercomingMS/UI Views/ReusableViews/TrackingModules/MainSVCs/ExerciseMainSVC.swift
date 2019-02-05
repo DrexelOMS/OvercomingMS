@@ -64,16 +64,16 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exerciseRoutines.getExerciseItems()?.count ?? 0
+        return exerciseRoutines.getTodaysExerciseItems()?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! Routine3PartCell
         
-        cell.labelLeft.text = exerciseRoutines.getExerciseItems()![indexPath.row].RoutineType
-        let startTime = exerciseRoutines.getExerciseItems()![indexPath.row].StartTime
+        cell.labelLeft.text = exerciseRoutines.getTodaysExerciseItems()![indexPath.row].RoutineType
+        let startTime = exerciseRoutines.getTodaysExerciseItems()![indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-        cell.labelRight.text =  "\(exerciseRoutines.getExerciseItems()![indexPath.row].minutes) min."
+        cell.labelRight.text =  "\(exerciseRoutines.getTodaysExerciseItems()![indexPath.row].minutes) min."
         
         return cell
     }

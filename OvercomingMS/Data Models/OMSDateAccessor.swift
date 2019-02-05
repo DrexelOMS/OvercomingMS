@@ -75,7 +75,7 @@ class OMSDateAccessor {
     }
     
     private func initializeTodaysData(date : String) {
-        if TrackingDataParent().getTrackingDay(date: date) == nil {
+        if TrackingModulesDBS().getTrackingDay(date: date) == nil {
             do {
                 try realm.write(){
                     let todaysTrackingData = TrackingDayDBT()

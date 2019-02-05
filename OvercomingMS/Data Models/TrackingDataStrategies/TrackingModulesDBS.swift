@@ -18,8 +18,4 @@ class TrackingModulesDBS{
         return realm.object(ofType: TrackingDayDBT.self, forPrimaryKey: date)
     }
     
-    func toggleFilledData(date : String = globalCurrentDate){
-        fatalError("Abstract Method")
-    }
-    
 }

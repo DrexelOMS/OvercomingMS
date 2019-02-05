@@ -9,21 +9,13 @@
 import Foundation
 import RealmSwift
 
-class TrackingDataParent: TrackingModulesDBS {
+class WriteFoodTrackingData : TrackingModulesDBS {
     
-    func addData(amount: Int, date: String = globalCurrentDate){
-        fatalError("Abstract Method")
-    }
-    
-}
-
-class WriteFoodTrackingData : TrackingDataParent {
-    
-    override func toggleFilledData(date : String = globalCurrentDate) {
+    func toggleFilledData() {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
+                if let day = getTrackingDay(date: globalCurrentDate) {
                     if day.FoodEatenRating != 5 {
                         day.FoodEatenRating = 5
                     }
@@ -35,11 +27,11 @@ class WriteFoodTrackingData : TrackingDataParent {
         
     }
     
-   override func addData(amount: Int, date: String = globalCurrentDate) {
+   func addData(amount: Int) {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
+                if let day = getTrackingDay(date: globalCurrentDate) {
                     day.FoodEatenRating += amount
                     if day.FoodEatenRating > 5 {
                         day.FoodEatenRating = 5
@@ -52,13 +44,12 @@ class WriteFoodTrackingData : TrackingDataParent {
     }
 }
 
-class WriteOmega3TrackingData : TrackingDataParent {
+class WriteOmega3TrackingData : TrackingModulesDBS {
     
-    override func toggleFilledData(date : String = globalCurrentDate) {
-        
+    func toggleFilledData() {
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
+                if let day = getTrackingDay(date: globalCurrentDate) {
                     if day.Omega3PercentageComplete != 100 {
                         day.Omega3PercentageComplete = 100
                     }
@@ -77,11 +68,11 @@ class WriteOmega3TrackingData : TrackingDataParent {
         
     }
     
-    override func addData(amount: Int, date: String = globalCurrentDate) {
+    func addData(amount: Int) {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
+                if let day = getTrackingDay(date: globalCurrentDate) {
                     day.Omega3Total += amount
                     var percentage = Float(day.Omega3Total) / Float(ProgressBarConfig.omega3Goal) * 100
                     if percentage > 100 {
@@ -97,13 +88,13 @@ class WriteOmega3TrackingData : TrackingDataParent {
     
 }
 
-class WriteVitaminDTrackingData : TrackingDataParent {
+class WriteVitaminDTrackingData : TrackingModulesDBS {
     
-    override func toggleFilledData(date : String = globalCurrentDate) {
+    func toggleFilledData() {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
+                if let day = getTrackingDay(date: globalCurrentDate) {
                     if day.VitaminDPercentageComplete != 100 {
                         day.VitaminDPercentageComplete = 100
                     }
@@ -122,11 +113,11 @@ class WriteVitaminDTrackingData : TrackingDataParent {
         
     }
     
-    override func addData(amount: Int, date: String = globalCurrentDate) {
+    func addData(amount: Int) {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
+                if let day = getTrackingDay(date: globalCurrentDate) {
                     day.VitaminDTotal += amount
                     var percentage = Float(day.VitaminDTotal) / Float(ProgressBarConfig.vitaminDGoal) * 100
                     if percentage > 100 {
@@ -142,13 +133,13 @@ class WriteVitaminDTrackingData : TrackingDataParent {
     
 }
 
-class WriteMeditationTrackingData : TrackingDataParent {
+class WriteMeditationTrackingData : TrackingModulesDBS {
     
-    override func toggleFilledData(date : String = globalCurrentDate) {
+    func toggleFilledData() {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
+                if let day = getTrackingDay(date: globalCurrentDate) {
                     if day.MeditationPercentageComplete != 100 {
                         day.MeditationPercentageComplete = 100
                     }
@@ -167,11 +158,11 @@ class WriteMeditationTrackingData : TrackingDataParent {
         
     }
     
-    override func addData(amount: Int, date: String = globalCurrentDate) {
+    func addData(amount: Int) {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
+                if let day = getTrackingDay(date: globalCurrentDate) {
                     day.MeditationTimeTotal += amount
                     var percentage = Float(day.MeditationTimeTotal) / Float(ProgressBarConfig.meditationGoal) * 100
                     if percentage > 100 {
@@ -187,13 +178,13 @@ class WriteMeditationTrackingData : TrackingDataParent {
     
 }
 
-class WriteMedicationTrackingData : TrackingDataParent {
+class WriteMedicationTrackingData : TrackingModulesDBS {
     
-    override func toggleFilledData(date : String = globalCurrentDate) {
+    func toggleFilledData() {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
+                if let day = getTrackingDay(date: globalCurrentDate) {
                     if day.MedicationPercentageComplete != 100 {
                         day.MedicationPercentageComplete = 100
                     }
@@ -212,11 +203,11 @@ class WriteMedicationTrackingData : TrackingDataParent {
         
     }
     
-    override func addData(amount: Int, date: String = globalCurrentDate) {
+    func addData(amount: Int) {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
+                if let day = getTrackingDay(date: globalCurrentDate) {
                     day.MedicationTotal += amount
                     var percentage = Float(day.MedicationTotal) / Float(ProgressBarConfig.medicationGoal) * 100
                     if percentage > 100 {

@@ -11,8 +11,8 @@ import RealmSwift
 
 class ExerciseRoutinesDBS: TrackingModulesDBS {
         
-    override func toggleFilledData(date : String = globalCurrentDate) {
-        
+    func toggleFilledData() {
+        let date = globalCurrentDate
         do {
             try realm.write() {
                 if let day = getTrackingDay(date: date) {
@@ -52,7 +52,7 @@ class ExerciseRoutinesDBS: TrackingModulesDBS {
         
     }
     
-    func getExerciseItems() -> List<ExerciseRoutinesDBT>? {
+    func getTodaysExerciseItems() -> List<ExerciseRoutinesDBT>? {
         return getTrackingDay()?.exerciseRoutinesDT
     }
     
