@@ -72,11 +72,11 @@
                                     <rect key="frame" x="0.0" y="238" width="280" height="109"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lw6-DQ-GjF">
-                                            <rect key="frame" x="26" y="40.5" width="228.5" height="28"/>
+                                            <rect key="frame" x="36.5" y="40.5" width="207" height="28"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Get Ready to Start.">
                                                     <attributes>
-                                                        <font key="NSFont" size="24" name="Quicksand-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="24"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
