@@ -16,6 +16,17 @@ class CircleButtonSVC: CustomView {
         }
     }
     
+    @IBInspectable var buttonImage: UIImage? {
+        didSet {
+            button.setImage(buttonImage, for: .normal)
+        }
+    }
+    @IBInspectable var labelName: String = "Label" {
+        didSet {
+            label.text = labelName
+        }
+    }
+    
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var label: UILabel!
     

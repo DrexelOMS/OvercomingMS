@@ -33,6 +33,11 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     @IBOutlet weak var meditationBar: TrackingProgressBar!
     @IBOutlet weak var medicationBar: TrackingProgressBar!
     
+    @IBOutlet weak var previousButton: CircleButtonSVC!
+    @IBOutlet weak var progressDayButton: CircleButtonSVC!
+    @IBOutlet weak var nextDay: CircleButtonSVC!
+    
+    
     private let realm = try! Realm()
     private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
     
@@ -63,6 +68,10 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         exerciseBar.delegate = self
         meditationBar.delegate = self
         medicationBar.delegate = self
+        
+        previousButton.buttonAction = previousDate;
+        progressDayButton.buttonAction = ProgressDayPressed;
+        nextDay.buttonAction = nextDate
         
         loadCurrentDayUI()
     }
@@ -189,14 +198,14 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     //MARK: IBActions
 
-    @IBAction private func previousDate(_ sender: UIButton) {
+    private func previousDate() {
         
         globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(-60*60*24)
         
         loadCurrentDayUI()
     }
     
-    @IBAction private func nextDate(_ sender: UIButton) {
+    private func nextDate() {
         if globalCurrentDate == todaysDate {
             return
         }
@@ -208,7 +217,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     //TODO: this is a test button, normally the day would progress, and the ui is not automatically updated unless we check in the loadCurrentDayUI to check if todays date has changed
     //basically nothing can ever write using current day, they write using todays date
-    @IBAction private func ProgressDayPressed(_ sender: UIButton) {
+    private func ProgressDayPressed() {
         omsDateFormatter.progressDay()
         
         loadCurrentDayUI()
