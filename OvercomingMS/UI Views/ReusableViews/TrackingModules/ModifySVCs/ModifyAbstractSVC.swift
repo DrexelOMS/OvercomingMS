@@ -10,7 +10,7 @@ import UIKit
 
 class ModifyAbstractSVC : SlidingAbstractSVC {
     
-    
+    let exerciseRoutines = ExerciseRoutinesDBS()
     
     override var nibName: String {
         get {
@@ -22,16 +22,19 @@ class ModifyAbstractSVC : SlidingAbstractSVC {
         
     }
     
+    override func updateColors() {
+        print("remember to update colors")
+    }
+    
     @IBAction func BackPressed(_ sender: Any) {
         parentVC.popSubView()
     }
     
     @IBAction func ConfirmPressed(_ sender: Any) {
-        //parentVC.pushSubView(newSubView: ExerciseMainSVC())
-        //        print("Adding 5 Minute Test Routine")
-        //        exerciseRoutines.addExerciseItem(routineType: "Test", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
-        //        parentVC.updateProgressBar();
-        
+        print("Adding 5 Minute Test Routine")
+        exerciseRoutines.addExerciseItem(routineType: "Custom", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
+        parentVC.updateProgressBar();
+
         parentVC.popSubView()
     }
     
