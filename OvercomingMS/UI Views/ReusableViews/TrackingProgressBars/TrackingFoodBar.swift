@@ -20,7 +20,6 @@ class TrackingFoodBar: CustomView {
     weak var delegate : TrackingFoodBarDelegate?
     
     @IBOutlet private weak var leftContainerView: UIView!
-    @IBOutlet private weak var leftLabel: UILabel!
     @IBOutlet private weak var rightLabel: UILabel!
     
     override func customSetup() {
