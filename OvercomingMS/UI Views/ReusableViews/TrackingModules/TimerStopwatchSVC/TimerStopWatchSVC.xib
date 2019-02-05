@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimerStopWatchAbstractSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
+                <outlet property="buttonsStackView" destination="fLH-yF-hf2" id="Laz-FM-jqg"/>
                 <outlet property="descriptionLabel" destination="lw6-DQ-GjF" id="dwj-kq-qKd"/>
                 <outlet property="middleView" destination="gBh-8c-uPQ" id="qv6-z6-JTT"/>
                 <outlet property="timerLabel" destination="O0h-WK-pSJ" id="UeO-Tz-fJc"/>
@@ -51,7 +52,6 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="O0h-WK-pSJ" firstAttribute="centerX" secondItem="2pv-Te-EWn" secondAttribute="centerX" id="6e1-dY-g4s"/>
                                         <constraint firstItem="O0h-WK-pSJ" firstAttribute="centerY" secondItem="2pv-Te-EWn" secondAttribute="centerY" id="xKJ-lb-uRu"/>
@@ -68,7 +68,6 @@
                                             </constraints>
                                         </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Rr9-lX-5Zv" firstAttribute="centerX" secondItem="gBh-8c-uPQ" secondAttribute="centerX" id="cVp-JP-9LE"/>
                                         <constraint firstItem="Rr9-lX-5Zv" firstAttribute="centerY" secondItem="gBh-8c-uPQ" secondAttribute="centerY" id="lgL-A7-AZe"/>
@@ -90,7 +89,6 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="lw6-DQ-GjF" secondAttribute="trailing" constant="20" id="d6f-Fu-qro"/>
                                         <constraint firstItem="lw6-DQ-GjF" firstAttribute="leading" secondItem="Ajf-Mb-hfK" secondAttribute="leading" constant="20" id="r6m-FJ-Ljx"/>
@@ -101,7 +99,6 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="8oi-af-nge" secondAttribute="trailing" constant="15" id="0M4-HC-2EL"/>
                         <constraint firstItem="8oi-af-nge" firstAttribute="top" secondItem="VTo-Uc-iDi" secondAttribute="top" id="1a7-Q2-zgj"/>
@@ -117,23 +114,8 @@
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fLH-yF-hf2">
                             <rect key="frame" x="0.0" y="0.0" width="310" height="100"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8N8-Ny-r7l" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGk-QB-toc" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                    <rect key="frame" x="105" y="0.0" width="100" height="100"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnU-ve-fTT" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                    <rect key="frame" x="210" y="0.0" width="100" height="100"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
-                            </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="fLH-yF-hf2" secondAttribute="trailing" id="7Qj-2Z-qRl"/>
                         <constraint firstItem="fLH-yF-hf2" firstAttribute="leading" secondItem="CgG-ku-PaD" secondAttribute="leading" id="Ddy-kh-akr"/>
@@ -143,7 +125,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="VTo-Uc-iDi" firstAttribute="top" secondItem="1c1-Rn-7qz" secondAttribute="top" id="5f7-aX-Bft"/>
                 <constraint firstItem="CgG-ku-PaD" firstAttribute="leading" secondItem="1c1-Rn-7qz" secondAttribute="leading" constant="5" id="ARr-aP-OOx"/>
