@@ -64,13 +64,13 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
             startTime = Date()
         }
         if isTimerRunning {
-            startPauseButton.labelName = "Resume"
+            startPauseButton.setResumeMode()
             descriptionLabel.text = "Taking a break"
             //StartTimer
             timer.invalidate()
         }
         else {
-            startPauseButton.labelName = "Pause"
+            startPauseButton.setPauseMode()
             descriptionLabel.text = "Workout has begun"
             //StopTimer
             runTimer()

@@ -11,7 +11,7 @@ import UIKit
 class FinishCircleButton : CircleButtonSVC {
     
     override func customSetup() {
-        button.setTitle("F", for: .normal)
+        buttonImage = UIImage(named: "Finish")
         label.text = "Finish"
     }
 }
