@@ -15,6 +15,8 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     
     //var progressBar : TrackingModuleProgressBar
     
+    @IBOutlet weak var progressBar: TrackingProgressBar!
+    
     @IBOutlet var mainView : UIView!
     
     var defaultView : SlidingAbstractSVC!
@@ -41,6 +43,7 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        updateProgressBar()
     }
     
     func initializeStackView(defaultView: SlidingAbstractSVC) {
@@ -124,12 +127,8 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         })
     }
     
-    func updateProgressBarMain(mainPercentage: Int){
-        print("Main percentage is now: \(mainPercentage)")
-    }
-    
-    func updateProgressBarSub(subPercentage: Int) {
-        print("Sub percentage is now: \(subPercentage)")
+    func updateProgressBar(){
+        
     }
     
 }

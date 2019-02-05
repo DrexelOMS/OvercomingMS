@@ -27,7 +27,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAO-sZ-Qwe" userLabel="TopView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsw-3Q-HeZ" userLabel="ProgressBar" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsw-3Q-HeZ" userLabel="ProgressBar" customClass="TrackingModuleProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="20" width="335" height="89.5"/>
                                                     </view>
                                                 </subviews>
@@ -72,6 +72,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="mainView" destination="W2C-GT-TTF" id="irA-CX-MMJ"/>
+                        <outlet property="progressBar" destination="Vsw-3Q-HeZ" id="f1H-3Z-DXb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRU-M2-2IL" userLabel="First Responder" sceneMemberID="firstResponder"/>

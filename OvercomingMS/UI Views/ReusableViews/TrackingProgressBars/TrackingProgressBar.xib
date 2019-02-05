@@ -15,6 +15,7 @@
                 <outlet property="leftContainerView" destination="LMb-nR-B7u" id="mkM-yu-6qq"/>
                 <outlet property="leftLabel" destination="ZgR-vj-Qt3" id="VAI-Mp-g7Q"/>
                 <outlet property="linearProgressBar" destination="Q1G-Wh-S9S" id="ePP-Sl-1to"/>
+                <outlet property="rightContainerView" destination="DD8-0L-vXd" id="qQW-Jh-Ih9"/>
                 <outlet property="rightLabel" destination="cy3-n8-ccr" id="siq-FB-PSD"/>
             </connections>
         </placeholder>
@@ -42,21 +43,23 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="233" height="34"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-vj-Qt3">
-                                                            <rect key="frame" x="0.0" y="0.0" width="133" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="125" id="MfJ-bw-ckI"/>
+                                                            </constraints>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Label">
                                                                     <attributes>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                         <font key="NSFont" size="20" name="Quicksand-Bold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-n8-ccr">
-                                                            <rect key="frame" x="133" y="0.0" width="100" height="34"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="100" id="jHE-B4-juS"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="125" y="0.0" width="108" height="34"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>

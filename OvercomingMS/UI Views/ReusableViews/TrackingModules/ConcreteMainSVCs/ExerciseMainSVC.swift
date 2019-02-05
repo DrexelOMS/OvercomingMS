@@ -54,7 +54,7 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         //parentVC.pushSubView(newSubView: ExerciseMainSVC())
         print("Adding 5 Minute Test Routine")
         exerciseRoutines.addExerciseItem(routineType: "Test", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
-        parentVC.updateProgressBarMain(mainPercentage: exerciseRoutines.getTrackingDay()?.ExerciseComputedPercentageComplete ?? 0)
+        parentVC.updateProgressBar();
     }
     
     func timerButtonPressed() {

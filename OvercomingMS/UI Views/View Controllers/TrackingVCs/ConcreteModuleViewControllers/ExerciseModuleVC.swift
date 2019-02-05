@@ -17,7 +17,22 @@ class ExerciseModuleVC: TrackingModuleAbstractVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        progressBar.setTitle(title: "Exercise")
+        
         initializeStackView(defaultView: ExerciseMainSVC())
+    }
+    
+    override func updateProgressBar() {
+        progressBar.setProgressValue(value: exerciseRoutines.getPercentageComplete())
+        let amountRemaining = ProgressBarConfig.exerciseGoal - exerciseRoutines.getTotalMinutes()
+        var description = ""
+        if(amountRemaining <= 0){
+            description = "Daily goal reached!"
+        }
+        else {
+            description = "\(amountRemaining) minutes left"
+        }
+        progressBar.setDescription(description: description)
     }
 
 }

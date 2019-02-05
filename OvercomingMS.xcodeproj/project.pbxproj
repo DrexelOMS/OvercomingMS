@@ -60,6 +60,7 @@
 		0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */; };
 		0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
+		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
@@ -151,6 +152,7 @@
 		0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarConfig.swift; sourceTree = "<group>"; };
 		0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMSDateAccessor.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
+		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		505DB14621FF6C710045C703 /* CassStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CassStoryboard.storyboard; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 				0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */,
 				0AD07F8B21FE703D00C55831 /* TrackingFoodBar.xib */,
 				0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */,
+				0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */,
 			);
 			path = TrackingProgressBars;
 			sourceTree = "<group>";
@@ -839,6 +842,7 @@
 				0AD07F8821FE637600C55831 /* RoundCornersUIView.swift in Sources */,
 				0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */,
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
+				0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */,
 				0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */,
 				0A1FEC6C22063898006CED70 /* Routine3PartCell.swift in Sources */,
 				0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */,

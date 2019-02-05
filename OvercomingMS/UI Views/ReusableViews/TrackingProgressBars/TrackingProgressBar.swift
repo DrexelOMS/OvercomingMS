@@ -34,6 +34,7 @@ class TrackingProgressBar: CustomView {
         }
     }
     
+    @IBOutlet weak var rightContainerView: UIView!
     @IBOutlet private weak var leftContainerView: UIView!
     @IBOutlet private weak var leftLabel: UILabel!
     @IBOutlet private weak var rightLabel: UILabel!
@@ -60,6 +61,10 @@ class TrackingProgressBar: CustomView {
     
     func getProgressValue() -> Float{
         return Float(linearProgressBar.progressValue)
+    }
+    
+    func setTitle(title: String) {
+        Title = title
     }
     
     func setDescription(description: String){
