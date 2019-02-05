@@ -11,7 +11,8 @@ import UIKit
 class AddCircleButton : CircleButtonSVC {
     
     override func customSetup() {
-        button.setTitle("+", for: .normal)
+        //button.setTitle("+", for: .normal)
+        buttonImage = UIImage(named: "Add")
         label.text = "Add"
     }
 }

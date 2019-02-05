@@ -11,7 +11,21 @@ import UIKit
 class StartPauseCircleButton : CircleButtonSVC {
     
     override func customSetup() {
-        button.setTitle("S", for: .normal)
+        setStartMode()
+    }
+    
+    func setStartMode() {
+        buttonImage = UIImage(named: "Play-Resume")
         label.text = "Start"
+    }
+    
+    func setPauseMode() {
+        buttonImage = UIImage(named: "Pause")
+        label.text = "Pause"
+    }
+    
+    func setResumeMode() {
+        buttonImage = UIImage(named: "Play-Resume")
+        label.text = "Resume"
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 class CancelCircleButton : CircleButtonSVC {
     
     override func customSetup() {
-        button.setTitle("C", for: .normal)
+        buttonImage = UIImage(named: "Cancel")
         label.text = "Cancel"
     }
 }

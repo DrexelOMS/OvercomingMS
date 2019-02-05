@@ -11,7 +11,7 @@ import UIKit
 class TimerCircleButton : CircleButtonSVC {
     
     override func customSetup() {
-        button.setTitle("T", for: .normal)
+        buttonImage = UIImage(named: "Timer")
         label.text = "Timer"
     }
 }

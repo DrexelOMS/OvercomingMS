@@ -347,6 +347,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Previous"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Goals"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqb-Vo-Ctx" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
@@ -354,6 +355,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Progress Day"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Timer"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USw-ho-yen" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
@@ -361,6 +363,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Next"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Settings"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -406,4 +409,9 @@
             <point key="canvasLocation" x="-1106" y="55"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Goals" width="689.33331298828125" height="689.33331298828125"/>
+        <image name="Settings" width="689.33331298828125" height="689.33331298828125"/>
+        <image name="Timer" width="689.33331298828125" height="689.33331298828125"/>
+    </resources>
 </document>
