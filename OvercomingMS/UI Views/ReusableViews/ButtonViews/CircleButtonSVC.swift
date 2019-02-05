@@ -19,6 +19,7 @@ class CircleButtonSVC: CustomView {
     @IBInspectable var buttonImage: UIImage? {
         didSet {
             button.setImage(buttonImage, for: .normal)
+            button.imageEdgeInsets = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
         }
     }
     @IBInspectable var labelName: String = "Label" {
