@@ -293,7 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				0AF8E0C622090C0700E1EC33 /* TimerStopwatchSVC */,
-				0A2BA61B220292BB004074F3 /* ConcreteMainSVCs */,
+				0A2BA61B220292BB004074F3 /* MainSVCs */,
 				0A1FEC5C2204F830006CED70 /* SlidingAbstractSVC.swift */,
 			);
 			path = TrackingModules;
@@ -317,14 +317,14 @@
 			path = ConcreteModuleViewControllers;
 			sourceTree = "<group>";
 		};
-		0A2BA61B220292BB004074F3 /* ConcreteMainSVCs */ = {
+		0A2BA61B220292BB004074F3 /* MainSVCs */ = {
 			isa = PBXGroup;
 			children = (
 				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
 				0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */,
 				0AA528532202314600CCFEE7 /* ExerciseMainSVC.xib */,
 			);
-			path = ConcreteMainSVCs;
+			path = MainSVCs;
 			sourceTree = "<group>";
 		};
 		0A2BAA6B2204AFC3004074F3 /* Fonts */ = {
