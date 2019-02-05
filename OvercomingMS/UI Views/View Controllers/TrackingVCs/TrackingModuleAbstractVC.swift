@@ -60,15 +60,18 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         viewStack.append(newSubView)
         
         setMainView(slideMode: .RightToLeft)
+        updateProgressBar()
     }
     
     func popSubView() {
         setMainView(slideMode: .LeftToRight)
+        updateProgressBar()
     }
     
     func resetToDefaultView(){
         viewStack = [viewStack[0], topView]
         setMainView(slideMode: .LeftToRight)
+        updateProgressBar()
     }
     
     private func setMainView(slideMode: SlideMode){

@@ -26,9 +26,12 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     let finishButton = FinishCircleButton()
     
     private var seconds = 0
+    private var startTime = Date()
+    private var firstStart = true
     private var timer = Timer()
     private var isTimerRunning = false
-    private var resumeTapped = false
+    
+    let exerciseRoutines : ExerciseRoutinesDBS = ExerciseRoutinesDBS()
     
     override func customSetup() {
         timerLabel.text = "00:00:00"
@@ -55,8 +58,13 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     }
     
     func startPauseButtonPressed() {
+        if firstStart
+        {
+            firstStart = false
+            startTime = Date()
+        }
         if isTimerRunning {
-            startPauseButton.labelName = "Start"
+            startPauseButton.labelName = "Resume"
             //StartTimer
             timer.invalidate()
         }
@@ -69,7 +77,9 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     }
     
     func finishButtonPressed() {
-        
+        exerciseRoutines.addExerciseItem(routineType: "Workout", startTime: startTime, endTime: startTime.addingTimeInterval(TimeInterval(seconds * 60)))
+       
+        parentVC.popSubView()
     }
     
 //    private func ResetButtonTapped(){
