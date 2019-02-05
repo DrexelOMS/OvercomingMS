@@ -8,9 +8,15 @@
 
 import UIKit
 
-class ModifyAbstractSVC : SlidingAbstractSVC {
+class ModifyAbstractSVC : SlidingAbstractSVC, UITextFieldDelegate {
     
     let exerciseRoutines = ExerciseRoutinesDBS()
+    
+    //TODO: replace with pickers
+    @IBOutlet weak var typeTextField: UITextField!
+    @IBOutlet weak var timeTextField: UITextField!
+    @IBOutlet weak var minutesTextField: UITextField!
+    
     
     override var nibName: String {
         get {
@@ -19,11 +25,20 @@ class ModifyAbstractSVC : SlidingAbstractSVC {
     }
     
     override func customSetup() {
+        timeTextField.text = OMSDateAccessor.getDateTime(date: Date())
         
+        typeTextField.delegate = self
+        timeTextField.delegate = self
+        minutesTextField.delegate = self
     }
     
     override func updateColors() {
         print("remember to update colors")
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        parentVC.view.endEditing(true)
+        return false
     }
     
     @IBAction func BackPressed(_ sender: Any) {
@@ -31,11 +46,16 @@ class ModifyAbstractSVC : SlidingAbstractSVC {
     }
     
     @IBAction func ConfirmPressed(_ sender: Any) {
-        print("Adding 5 Minute Test Routine")
-        exerciseRoutines.addExerciseItem(routineType: "Custom", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
-        parentVC.updateProgressBar();
 
-        parentVC.popSubView()
+        if let type = typeTextField.text, let minutes = minutesTextField.text {
+            let startTime = Date()
+            let iMinutes = Int(minutes) ?? 5
+            let endTime = startTime.addingTimeInterval(TimeInterval(iMinutes * 60))
+            exerciseRoutines.addExerciseItem(routineType: type, startTime: startTime, endTime: endTime)
+            parentVC.updateProgressBar();
+            
+            parentVC.popSubView()
+        }
     }
     
 }
