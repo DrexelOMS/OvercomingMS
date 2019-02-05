@@ -52,7 +52,6 @@
 		0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F7821FE3EA200C55831 /* CirclesViewController.swift */; };
 		0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F7921FE3EA200C55831 /* AnalysisViewController.swift */; };
 		0AD07F7E21FE3EA200C55831 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F7A21FE3EA200C55831 /* TrackingViewController.swift */; };
-		0AD07F7F21FE3EA200C55831 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD07F7B21FE3EA200C55831 /* CoreyFrontendUI.storyboard */; };
 		0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8421FE53B900C55831 /* DesignConstants.swift */; };
 		0AD07F8821FE637600C55831 /* RoundCornersUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8721FE637600C55831 /* RoundCornersUIView.swift */; };
 		0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */; };
@@ -143,7 +142,6 @@
 		0AD07F7821FE3EA200C55831 /* CirclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesViewController.swift; sourceTree = "<group>"; };
 		0AD07F7921FE3EA200C55831 /* AnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 		0AD07F7A21FE3EA200C55831 /* TrackingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
-		0AD07F7B21FE3EA200C55831 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AD07F8421FE53B900C55831 /* DesignConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignConstants.swift; sourceTree = "<group>"; };
 		0AD07F8721FE637600C55831 /* RoundCornersUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornersUIView.swift; sourceTree = "<group>"; };
 		0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingFoodBar.swift; sourceTree = "<group>"; };
@@ -393,7 +391,6 @@
 				0AD07F7821FE3EA200C55831 /* CirclesViewController.swift */,
 				0AD07F7921FE3EA200C55831 /* AnalysisViewController.swift */,
 				0AD07F7A21FE3EA200C55831 /* TrackingViewController.swift */,
-				0AD07F7B21FE3EA200C55831 /* CoreyFrontendUI.storyboard */,
 			);
 			path = CoreyFrontendUI;
 			sourceTree = "<group>";
@@ -681,7 +678,6 @@
 			files = (
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
 				0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */,
-				0AD07F7F21FE3EA200C55831 /* CoreyFrontendUI.storyboard in Resources */,
 				0AD07F8C21FE703D00C55831 /* TrackingFoodBar.xib in Resources */,
 				0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */,
 				505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */,
