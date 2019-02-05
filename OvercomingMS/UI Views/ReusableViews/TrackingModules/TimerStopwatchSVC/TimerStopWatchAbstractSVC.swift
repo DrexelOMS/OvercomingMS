@@ -25,6 +25,8 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     let startPauseButton = StartPauseCircleButton()
     let finishButton = FinishCircleButton()
     
+    private var timerStarted = false
+    
     override func customSetup() {
         timerLabel.text = "00:00:00"
         
@@ -40,7 +42,9 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     }
     
     override func updateColors() {
-        print("update button colors")
+        cancelButton.colorTheme = parentVC.theme
+        startPauseButton.colorTheme = parentVC.theme
+        finishButton.colorTheme = parentVC.theme
     }
     
     func cancelButtonPressed() {
@@ -48,12 +52,15 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     }
     
     func startPauseButtonPressed() {
-        if startPauseButton.labelName == "Start" {
-            startPauseButton.labelName = "Pause"
+        if timerStarted {
+            startPauseButton.labelName = "Start"
+            //StartTimer
         }
         else {
-            startPauseButton.labelName = "Start"
+            startPauseButton.labelName = "Pause"
+            //StopTimer
         }
+        timerStarted = !timerStarted
     }
     
     func finishButtonPressed() {

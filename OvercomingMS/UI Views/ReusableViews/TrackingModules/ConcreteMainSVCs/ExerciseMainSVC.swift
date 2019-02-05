@@ -56,11 +56,11 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
 //        exerciseRoutines.addExerciseItem(routineType: "Test", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
 //        parentVC.updateProgressBar();
         
-        parentVC.pushSubView(newSubView: ExerciseStopwatchSVC())
+        //parentVC.pushSubView(newSubView: ExerciseStopwatchSVC())
     }
     
     func timerButtonPressed() {
-        parentVC.pushSubView(newSubView: ConfirmationSVC())
+        parentVC.pushSubView(newSubView: ExerciseStopwatchSVC())
     }
     
     override func updateColors() {
