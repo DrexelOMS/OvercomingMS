@@ -28,9 +28,18 @@ class TrackingProgressBar: CustomView {
         }
     }
     
-    @IBInspectable var barColor: UIColor = UIColor.green {
+    @IBInspectable var barColor: UIColor = UIColor.red {
         didSet {
             linearProgressBar.barColor = barColor
+        }
+    }
+    
+    var colorTheme : UIColor {
+        get {
+            return barColor
+        }
+        set {
+            barColor = newValue
         }
     }
     

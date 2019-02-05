@@ -52,13 +52,15 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     
     func addButtonPressed() {
         //parentVC.pushSubView(newSubView: ExerciseMainSVC())
-        print("Adding 5 Minute Test Routine")
-        exerciseRoutines.addExerciseItem(routineType: "Test", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
-        parentVC.updateProgressBar();
+//        print("Adding 5 Minute Test Routine")
+//        exerciseRoutines.addExerciseItem(routineType: "Test", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
+//        parentVC.updateProgressBar();
+        
+        //parentVC.pushSubView(newSubView: ExerciseStopwatchSVC())
     }
     
     func timerButtonPressed() {
-        parentVC.pushSubView(newSubView: ConfirmationSVC())
+        parentVC.pushSubView(newSubView: ExerciseStopwatchSVC())
     }
     
     override func updateColors() {

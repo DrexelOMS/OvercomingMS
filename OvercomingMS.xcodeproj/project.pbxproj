@@ -61,6 +61,12 @@
 		0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
+		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
+		0AF8E0DB2209248700E1EC33 /* StopwatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */; };
+		0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */; };
+		0AF8E0DF22092A5E00E1EC33 /* CancelCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0DE22092A5E00E1EC33 /* CancelCircleButton.swift */; };
+		0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */; };
+		0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
@@ -153,6 +159,12 @@
 		0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMSDateAccessor.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
+		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
+		0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchAbstractSVC.swift; sourceTree = "<group>"; };
+		0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStopwatchSVC.swift; sourceTree = "<group>"; };
+		0AF8E0DE22092A5E00E1EC33 /* CancelCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelCircleButton.swift; sourceTree = "<group>"; };
+		0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPauseCircleButton.swift; sourceTree = "<group>"; };
+		0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishCircleButton.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		505DB14621FF6C710045C703 /* CassStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CassStoryboard.storyboard; sourceTree = "<group>"; };
@@ -261,6 +273,9 @@
 			children = (
 				0A1FEC642206203F006CED70 /* AddCircleButton.swift */,
 				0A1FEC662206204E006CED70 /* TimerCircleButton.swift */,
+				0AF8E0DE22092A5E00E1EC33 /* CancelCircleButton.swift */,
+				0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */,
+				0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */,
 			);
 			path = CircleButtonSVCs;
 			sourceTree = "<group>";
@@ -279,7 +294,6 @@
 			children = (
 				0AF8E0C622090C0700E1EC33 /* TimerStopwatchSVC */,
 				0A2BA61B220292BB004074F3 /* ConcreteMainSVCs */,
-				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
 				0A1FEC5C2204F830006CED70 /* SlidingAbstractSVC.swift */,
 			);
 			path = TrackingModules;
@@ -306,6 +320,7 @@
 		0A2BA61B220292BB004074F3 /* ConcreteMainSVCs */ = {
 			isa = PBXGroup;
 			children = (
+				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
 				0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */,
 				0AA528532202314600CCFEE7 /* ExerciseMainSVC.xib */,
 			);
@@ -437,6 +452,9 @@
 			isa = PBXGroup;
 			children = (
 				0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */,
+				0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */,
+				0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */,
+				0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */,
 			);
 			path = TimerStopwatchSVC;
 			sourceTree = "<group>";
@@ -845,9 +863,11 @@
 				0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */,
 				0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */,
 				0A1FEC6C22063898006CED70 /* Routine3PartCell.swift in Sources */,
+				0AF8E0DB2209248700E1EC33 /* StopwatchAbstractSVC.swift in Sources */,
 				0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */,
 				6130938621E815AF00249B24 /* DietViewController.swift in Sources */,
 				0A1FEC61220529D7006CED70 /* TrackingModulesDBS.swift in Sources */,
+				0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */,
 				0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */,
 				0A7FC91521F5229A00492E93 /* TrackingDayDBT.swift in Sources */,
 				501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */,
@@ -861,6 +881,7 @@
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				0AD07F7E21FE3EA200C55831 /* TrackingViewController.swift in Sources */,
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
+				0AF8E0DF22092A5E00E1EC33 /* CancelCircleButton.swift in Sources */,
 				6130938821EAB55000249B24 /* FoodItemsCell.swift in Sources */,
 				0AA5286E2202827000CCFEE7 /* BlueButtonSVC.swift in Sources */,
 				0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */,
@@ -869,11 +890,14 @@
 				0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */,
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
+				0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0A7FC91921F534D700492E93 /* FoodStats.swift in Sources */,
+				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
+				0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */,
 				0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
