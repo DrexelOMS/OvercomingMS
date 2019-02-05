@@ -25,7 +25,10 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     let startPauseButton = StartPauseCircleButton()
     let finishButton = FinishCircleButton()
     
-    private var timerStarted = false
+    private var seconds = 0
+    private var timer = Timer()
+    private var isTimerRunning = false
+    private var resumeTapped = false
     
     override func customSetup() {
         timerLabel.text = "00:00:00"
@@ -52,18 +55,48 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     }
     
     func startPauseButtonPressed() {
-        if timerStarted {
+        if isTimerRunning {
             startPauseButton.labelName = "Start"
             //StartTimer
+            timer.invalidate()
         }
         else {
             startPauseButton.labelName = "Pause"
             //StopTimer
+            runTimer()
         }
-        timerStarted = !timerStarted
+        isTimerRunning = !isTimerRunning
     }
     
     func finishButtonPressed() {
+        
+    }
+    
+//    private func ResetButtonTapped(){
+//        timer.invalidate()
+//        seconds = 60
+//        CountDownLabel.text = timeString(time:TimeInterval(seconds))
+//        isTimerRunning = false
+//    }
+    
+    
+    //MARK: Run timer
+    
+    func runTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer(){
+        seconds += 1
+        timerLabel.text = timeString(time:TimeInterval(seconds))
+    }
+    
+    func timeString(time:TimeInterval) -> String {
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
         
     }
     

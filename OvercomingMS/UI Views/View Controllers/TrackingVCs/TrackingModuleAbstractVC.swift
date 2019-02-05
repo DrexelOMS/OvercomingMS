@@ -44,6 +44,7 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         
         // Do any additional setup after loading the view.
         updateProgressBar()
+        progressBar.colorTheme = theme
     }
     
     func initializeStackView(defaultView: SlidingAbstractSVC) {

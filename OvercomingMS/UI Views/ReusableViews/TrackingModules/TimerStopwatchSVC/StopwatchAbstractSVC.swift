@@ -12,6 +12,7 @@ class StopwatchAbstractSVC : TimerStopWatchAbstractSVC {
     
     let IMAGEVIEW_WIDTH_CONTRAINT = 65
     let IMAGEVIEW_HEIGHT_CONTRAINT = 65
+    
     override func customSetup() {
         super.customSetup()
         
