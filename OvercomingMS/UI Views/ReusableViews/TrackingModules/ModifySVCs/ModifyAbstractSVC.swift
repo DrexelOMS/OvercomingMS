@@ -27,7 +27,11 @@ class ModifyAbstractSVC : SlidingAbstractSVC {
     }
     
     @IBAction func ConfirmPressed(_ sender: Any) {
-        //AddItem
+        //parentVC.pushSubView(newSubView: ExerciseMainSVC())
+        //        print("Adding 5 Minute Test Routine")
+        //        exerciseRoutines.addExerciseItem(routineType: "Test", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
+        //        parentVC.updateProgressBar();
+        
         parentVC.popSubView()
     }
     

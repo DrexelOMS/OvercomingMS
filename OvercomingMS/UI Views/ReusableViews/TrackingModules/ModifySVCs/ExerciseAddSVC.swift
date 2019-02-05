@@ -6,4 +6,8 @@
 //  Copyright © 2019 DrexelOMS. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ExerciseAddSVC : ModifyAbstractSVC {
+    
+}
