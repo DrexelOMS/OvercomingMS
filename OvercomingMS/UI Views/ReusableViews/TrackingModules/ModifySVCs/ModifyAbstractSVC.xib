@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModifyAbstractSVC" customModule="OvercomingMS" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="464"/>
@@ -48,6 +48,9 @@
                                     <state key="normal" title="Back">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="BackPressed:" destination="-1" eventType="touchUpInside" id="Uma-8L-7hh"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwo-N7-y3q">
                                     <rect key="frame" x="185.5" y="0.0" width="183.5" height="69"/>
@@ -55,6 +58,9 @@
                                     <state key="normal" title="Confirm">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="ConfirmPressed:" destination="-1" eventType="touchUpInside" id="ico-xj-0RN"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -68,6 +74,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="W8i-7f-xAc" firstAttribute="top" secondItem="pwm-Jx-CmD" secondAttribute="bottom" id="3Ua-kO-W0D"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="W8i-7f-xAc" secondAttribute="bottom" id="5Nk-lc-Ybg"/>
