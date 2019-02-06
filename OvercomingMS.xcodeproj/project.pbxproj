@@ -62,6 +62,9 @@
 		0AD94DAF2209BC0100B5C2BA /* ModifyAbstractSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DAE2209BC0100B5C2BA /* ModifyAbstractSVC.xib */; };
 		0AD94DB12209BC2400B5C2BA /* ModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DB02209BC2400B5C2BA /* ModifyAbstractSVC.swift */; };
 		0AD94DB32209BC3C00B5C2BA /* ExerciseAddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DB22209BC3C00B5C2BA /* ExerciseAddSVC.swift */; };
+		0AD94DBC220A5B9500B5C2BA /* TwoSquareButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* TwoSquareButtonSVC.swift */; };
+		0AD94DBE220A5BF700B5C2BA /* TwoSquareButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */; };
+		0AD94DC0220A5F1000B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBF220A5F1000B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -163,6 +166,9 @@
 		0AD94DAE2209BC0100B5C2BA /* ModifyAbstractSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyAbstractSVC.xib; sourceTree = "<group>"; };
 		0AD94DB02209BC2400B5C2BA /* ModifyAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyAbstractSVC.swift; sourceTree = "<group>"; };
 		0AD94DB22209BC3C00B5C2BA /* ExerciseAddSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAddSVC.swift; sourceTree = "<group>"; };
+		0AD94DBB220A5B9500B5C2BA /* TwoSquareButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSquareButtonSVC.swift; sourceTree = "<group>"; };
+		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
+		0AD94DBF220A5F1000B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -403,11 +409,14 @@
 		0AA5286C2202825100CCFEE7 /* ButtonViews */ = {
 			isa = PBXGroup;
 			children = (
+				0AD94DBA220A5B6900B5C2BA /* TwoSquareButtonSVCs */,
 				0A1FEC6322061DF8006CED70 /* CircleButtonSVCs */,
 				0AA5286D2202827000CCFEE7 /* BlueButtonSVC.swift */,
 				0AA5286F2202828300CCFEE7 /* BlueButtonSVC.xib */,
 				0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */,
 				0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */,
+				0AD94DBB220A5B9500B5C2BA /* TwoSquareButtonSVC.swift */,
+				0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */,
 			);
 			path = ButtonViews;
 			sourceTree = "<group>";
@@ -463,6 +472,14 @@
 				0AD94DB22209BC3C00B5C2BA /* ExerciseAddSVC.swift */,
 			);
 			path = ModifySVCs;
+			sourceTree = "<group>";
+		};
+		0AD94DBA220A5B6900B5C2BA /* TwoSquareButtonSVCs */ = {
+			isa = PBXGroup;
+			children = (
+				0AD94DBF220A5F1000B5C2BA /* BackConfirmButtonSVC.swift */,
+			);
+			path = TwoSquareButtonSVCs;
 			sourceTree = "<group>";
 		};
 		0AF8E0C622090C0700E1EC33 /* TimerStopwatchSVC */ = {
@@ -735,6 +752,7 @@
 				0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */,
 				0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
+				0AD94DBE220A5BF700B5C2BA /* TwoSquareButtonSVC.xib in Resources */,
 				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
 				0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */,
@@ -872,6 +890,7 @@
 			files = (
 				0AA5284922020BF500CCFEE7 /* ExerciseRoutinesDBT.swift in Sources */,
 				0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */,
+				0AD94DBC220A5B9500B5C2BA /* TwoSquareButtonSVC.swift in Sources */,
 				0AD07F7221FCFF8100C55831 /* TrackingProgressBar.swift in Sources */,
 				0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */,
 				0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */,
@@ -909,6 +928,7 @@
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
 				0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */,
+				0AD94DC0220A5F1000B5C2BA /* BackConfirmButtonSVC.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
 				0AD94DB32209BC3C00B5C2BA /* ExerciseAddSVC.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
