@@ -79,9 +79,13 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     }
     
     func finishButtonPressed() {
+        let confirmationPage = ConfirmationSVC()
+        confirmationPage.methodToRunOnConfirm = saveTimerData
+        parentVC.pushSubView(newSubView: confirmationPage)
+    }
+    
+    func saveTimerData() {
         exerciseRoutines.addExerciseItem(routineType: "Workout", startTime: startTime, endTime: startTime.addingTimeInterval(TimeInterval(seconds * 60)))
-       
-        parentVC.popSubView()
     }
     
 //    private func ResetButtonTapped(){

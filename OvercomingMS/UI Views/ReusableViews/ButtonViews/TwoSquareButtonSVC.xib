@@ -50,7 +50,6 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="75e-og-aiN" firstAttribute="top" secondItem="Gxh-TN-ERZ" secondAttribute="top" id="Nvo-Of-n6e"/>
                         <constraint firstItem="75e-og-aiN" firstAttribute="leading" secondItem="Gxh-TN-ERZ" secondAttribute="leading" id="Qh5-5L-MSL"/>
@@ -60,7 +59,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gxh-TN-ERZ" secondAttribute="trailing" id="9iP-xI-k2p"/>
                 <constraint firstAttribute="bottom" secondItem="Gxh-TN-ERZ" secondAttribute="bottom" id="FP4-oc-Sp9"/>
