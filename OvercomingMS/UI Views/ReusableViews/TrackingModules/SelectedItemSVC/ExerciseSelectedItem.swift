@@ -12,10 +12,14 @@ import RealmSwift
 class ExerciseSelectedItemSVC : SelectedItemSVC {
     
     var exerciseItem : ExerciseHistoryDBT!
+    {
+        didSet {
+            print(exerciseItem)
+        }
+    }
     
     override func customSetup() {
         super.customSetup()
-        print(exerciseItem)
     }
     
     override func updateColors() {
