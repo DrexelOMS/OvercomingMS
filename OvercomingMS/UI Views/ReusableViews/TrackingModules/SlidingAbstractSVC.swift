@@ -10,16 +10,6 @@ import UIKit
 
 class SlidingAbstractSVC : CustomView {
     
-    //MUST BE CALLED BY THE VC THAT USES THIS OBJECT
-    func initialize(parentVC: TrackingModuleAbstractVC){
-        self.parentVC = parentVC
-    }
-    
-    //SHOULD BE OVERRIDEN TO IMPLEMENT ANY RELOAD DATA METHODS
-    func reload(){
-        
-    }
-    
     var parentVC: TrackingModuleAbstractVC!{
         didSet {
             colorTheme = parentVC.theme
@@ -29,6 +19,16 @@ class SlidingAbstractSVC : CustomView {
         didSet {
             updateColors()
         }
+    }
+    
+    //MUST BE CALLED BY THE VC THAT USES THIS OBJECT
+    func initialize(parentVC: TrackingModuleAbstractVC){
+        self.parentVC = parentVC
+    }
+    
+    //SHOULD BE OVERRIDEN TO IMPLEMENT ANY RELOAD DATA METHODS
+    func reload(){
+        
     }
     
     func updateColors() {

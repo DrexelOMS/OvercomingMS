@@ -65,6 +65,7 @@
 		0AD94DBC220A5B9500B5C2BA /* TwoSquareButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* TwoSquareButtonSVC.swift */; };
 		0AD94DBE220A5BF700B5C2BA /* TwoSquareButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */; };
 		0AD94DC0220A5F1000B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBF220A5F1000B5C2BA /* BackConfirmButtonSVC.swift */; };
+		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -169,6 +170,7 @@
 		0AD94DBB220A5B9500B5C2BA /* TwoSquareButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSquareButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DBF220A5F1000B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
+		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 		0A2BA61822029259004074F3 /* TrackingModules */ = {
 			isa = PBXGroup;
 			children = (
+				0A2BA61922029262004074F3 /* ConfirmationSVCs */,
 				0AD94DAD2209BBD600B5C2BA /* ModifySVCs */,
 				0AF8E0C622090C0700E1EC33 /* TimerStopwatchSVC */,
 				0A2BA61B220292BB004074F3 /* MainSVCs */,
@@ -317,6 +320,7 @@
 			children = (
 				0AA5286622027FF300CCFEE7 /* ConfirmationSVC.xib */,
 				0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */,
+				0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */,
 			);
 			path = ConfirmationSVCs;
 			sourceTree = "<group>";
@@ -435,7 +439,6 @@
 		0AD07F8621FE596F00C55831 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
-				0A2BA61922029262004074F3 /* ConfirmationSVCs */,
 				0A2BA61822029259004074F3 /* TrackingModules */,
 				0AA5286C2202825100CCFEE7 /* ButtonViews */,
 				0AA5284A2202188500CCFEE7 /* TrackingProgressBars */,
@@ -917,6 +920,7 @@
 				0A2BAA662202A24E004074F3 /* TrackingDataStrategies.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				0AD07F7E21FE3EA200C55831 /* TrackingViewController.swift in Sources */,
+				0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */,
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
 				0AF8E0DF22092A5E00E1EC33 /* CancelCircleButton.swift in Sources */,
 				6130938821EAB55000249B24 /* FoodItemsCell.swift in Sources */,

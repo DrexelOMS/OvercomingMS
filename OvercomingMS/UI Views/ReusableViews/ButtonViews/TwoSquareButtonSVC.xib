@@ -22,13 +22,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gxh-TN-ERZ">
-                    <rect key="frame" x="0.0" y="15" width="404" height="75"/>
+                    <rect key="frame" x="0.0" y="0.0" width="404" height="90"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="75e-og-aiN">
-                            <rect key="frame" x="0.0" y="0.0" width="404" height="75"/>
+                            <rect key="frame" x="0.0" y="0.0" width="404" height="90"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rn9-F1-NQi">
-                                    <rect key="frame" x="0.0" y="0.0" width="199.5" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="199.5" height="90"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Left">
                                         <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -38,8 +38,8 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6V-c2-aDa">
-                                    <rect key="frame" x="204.5" y="0.0" width="199.5" height="75"/>
-                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <rect key="frame" x="204.5" y="0.0" width="199.5" height="90"/>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Right">
                                         <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
@@ -50,21 +50,19 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="75e-og-aiN" firstAttribute="top" secondItem="Gxh-TN-ERZ" secondAttribute="top" id="Nvo-Of-n6e"/>
                         <constraint firstItem="75e-og-aiN" firstAttribute="leading" secondItem="Gxh-TN-ERZ" secondAttribute="leading" id="Qh5-5L-MSL"/>
                         <constraint firstAttribute="trailing" secondItem="75e-og-aiN" secondAttribute="trailing" id="TDS-oj-heW"/>
-                        <constraint firstAttribute="height" constant="75" id="meg-L9-vPb"/>
                         <constraint firstAttribute="bottom" secondItem="75e-og-aiN" secondAttribute="bottom" id="xcq-8u-qvb"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gxh-TN-ERZ" secondAttribute="trailing" id="9iP-xI-k2p"/>
-                <constraint firstAttribute="bottom" secondItem="Gxh-TN-ERZ" secondAttribute="bottom" id="FP4-oc-Sp9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Gxh-TN-ERZ" secondAttribute="bottom" id="FP4-oc-Sp9"/>
                 <constraint firstItem="Gxh-TN-ERZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Hr2-fZ-3gL"/>
+                <constraint firstItem="Gxh-TN-ERZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="lGZ-pV-Y9X"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

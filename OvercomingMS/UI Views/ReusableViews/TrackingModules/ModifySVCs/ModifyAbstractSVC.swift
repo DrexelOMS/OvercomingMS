@@ -16,6 +16,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, UITextFieldDelegate {
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var minutesTextField: UITextField!
+    @IBOutlet weak var backConfirmButtons: BackConfirmButtonSVC!
     
     
     override var nibName: String {
@@ -30,6 +31,9 @@ class ModifyAbstractSVC : SlidingAbstractSVC, UITextFieldDelegate {
         typeTextField.delegate = self
         timeTextField.delegate = self
         minutesTextField.delegate = self
+        
+        backConfirmButtons.leftButtonAction = BackPressed
+        backConfirmButtons.rightButtonAction = ConfirmPressed
     }
     
     override func updateColors() {
@@ -41,11 +45,11 @@ class ModifyAbstractSVC : SlidingAbstractSVC, UITextFieldDelegate {
         return false
     }
     
-    @IBAction func BackPressed(_ sender: Any) {
+    func BackPressed() {
         parentVC.popSubView()
     }
     
-    @IBAction func ConfirmPressed(_ sender: Any) {
+    func ConfirmPressed() {
 
         if let type = typeTextField.text, let minutes = minutesTextField.text {
             let startTime = Date()

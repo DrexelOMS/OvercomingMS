@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 class TwoSquareButtonSVC : CustomView {
     
@@ -23,7 +24,7 @@ class TwoSquareButtonSVC : CustomView {
     }
     
     override func customSetup() {
-
+        
     }
     
     @IBAction func leftButtonPressed(_ sender: Any) {
