@@ -304,6 +304,7 @@
 		0A2BA61822029259004074F3 /* TrackingModules */ = {
 			isa = PBXGroup;
 			children = (
+				0A2BA61922029262004074F3 /* ConfirmationSVCs */,
 				0AD94DAD2209BBD600B5C2BA /* ModifySVCs */,
 				0AF8E0C622090C0700E1EC33 /* TimerStopwatchSVC */,
 				0A2BA61B220292BB004074F3 /* MainSVCs */,
@@ -435,7 +436,6 @@
 		0AD07F8621FE596F00C55831 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
-				0A2BA61922029262004074F3 /* ConfirmationSVCs */,
 				0A2BA61822029259004074F3 /* TrackingModules */,
 				0AA5286C2202825100CCFEE7 /* ButtonViews */,
 				0AA5284A2202188500CCFEE7 /* TrackingProgressBars */,
