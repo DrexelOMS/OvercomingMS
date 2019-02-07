@@ -11,7 +11,7 @@ import RealmSwift
 
 class ExerciseModuleVC: TrackingModuleAbstractVC {
     
-    private let exerciseRoutines = ExerciseRoutinesDBS()
+    private let exerciseRoutines = ExerciseHistoryDBS()
     
     override func viewDidLoad() {
         super.viewDidLoad()

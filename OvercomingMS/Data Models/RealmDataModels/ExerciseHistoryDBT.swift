@@ -10,12 +10,12 @@ import Foundation
 
 import RealmSwift
 
-class ExerciseRoutinesDBT: Object {
+class ExerciseHistoryDBT: Object {
     @objc dynamic var RoutineType : String = ""
     @objc dynamic var StartTime : Date = Date()
     @objc dynamic var EndTime : Date = Date()
     var minutes : Int {
         return EndTime.minutes(from: StartTime)
     }
-    var parentDay = LinkingObjects(fromType: TrackingDayDBT.self, property: "exerciseRoutinesDT")
+    var parentDay = LinkingObjects(fromType: TrackingDayDBT.self, property: "exerciseHistoryDT")
 }

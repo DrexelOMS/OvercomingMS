@@ -10,7 +10,7 @@ import UIKit
 
 class ModifyAbstractSVC : SlidingAbstractSVC, UITextFieldDelegate {
     
-    let exerciseRoutines = ExerciseRoutinesDBS()
+    let exerciseRoutines = ExerciseHistoryDBS()
     
     //TODO: replace with pickers
     @IBOutlet weak var typeTextField: UITextField!

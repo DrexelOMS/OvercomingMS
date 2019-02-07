@@ -133,50 +133,7 @@ class WriteVitaminDTrackingData : TrackingModulesDBS {
     
 }
 
-class WriteMeditationTrackingData : TrackingModulesDBS {
-    
-    func toggleFilledData() {
-        
-        do {
-            try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    if day.MeditationPercentageComplete != 100 {
-                        day.MeditationPercentageComplete = 100
-                    }
-                    else {
-                        var percentage = Float(day.MeditationTimeTotal) / Float(ProgressBarConfig.meditationGoal) * 100
-                        if percentage > 100 {
-                            percentage = 100
-                        }
-                        day.MeditationPercentageComplete = Int(percentage)
-                    }
-                }
-            }
-        } catch {
-            print("Error updating todays data : \(error)" )
-        }
-        
-    }
-    
-    func addData(amount: Int) {
-        
-        do {
-            try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    day.MeditationTimeTotal += amount
-                    var percentage = Float(day.MeditationTimeTotal) / Float(ProgressBarConfig.meditationGoal) * 100
-                    if percentage > 100 {
-                        percentage = 100
-                    }
-                    day.MeditationPercentageComplete = Int(percentage)
-                }
-            }
-        } catch {
-            print("Error updating todays data : \(error)" )
-        }
-    }
-    
-}
+
 
 class WriteMedicationTrackingData : TrackingModulesDBS {
     

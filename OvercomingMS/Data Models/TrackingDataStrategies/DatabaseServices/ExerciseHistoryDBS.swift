@@ -9,23 +9,14 @@
 import Foundation
 import RealmSwift
 
-class ExerciseRoutinesDBS: TrackingModulesDBS {
+class ExerciseHistoryDBS: TrackingModulesDBS {
         
     func toggleFilledData() {
         let date = globalCurrentDate
         do {
             try realm.write() {
                 if let day = getTrackingDay(date: date) {
-                    if day.ExercisePercentageComplete != 100 {
-                        day.ExercisePercentageComplete = 100
-                    }
-                    else {
-                        var percentage = Float(day.ExerciseTimeTotal) / Float(ProgressBarConfig.exerciseGoal) * 100
-                        if percentage > 100 {
-                            percentage = 100
-                        }
-                        day.ExercisePercentageComplete = Int(percentage)
-                    }
+                    day.IsExerciseComplete = !day.IsExerciseComplete
                 }
             }
         } catch {
@@ -39,11 +30,11 @@ class ExerciseRoutinesDBS: TrackingModulesDBS {
         do {
             try realm.write() {
                 if let day = getTrackingDay(date: globalCurrentDate) {
-                    let item = ExerciseRoutinesDBT()
+                    let item = ExerciseHistoryDBT()
                     item.RoutineType = routineType
                     item.StartTime = startTime
                     item.EndTime = endTime
-                    day.exerciseRoutinesDT.append(item)
+                    day.exerciseHistoryDT.append(item)
                 }
             }
         } catch {
@@ -52,8 +43,8 @@ class ExerciseRoutinesDBS: TrackingModulesDBS {
         
     }
     
-    func getTodaysExerciseItems() -> List<ExerciseRoutinesDBT>? {
-        return getTrackingDay()?.exerciseRoutinesDT
+    func getTodaysExerciseItems() -> List<ExerciseHistoryDBT>? {
+        return getTrackingDay()?.exerciseHistoryDT
     }
     
     func getTotalMinutes() -> Int {

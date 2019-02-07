@@ -15,7 +15,7 @@
 		0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC572204ECBF006CED70 /* Dismissable.swift */; };
 		0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC5A2204F265006CED70 /* DismissableVC.swift */; };
 		0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC5C2204F830006CED70 /* SlidingAbstractSVC.swift */; };
-		0A1FEC5F220529A9006CED70 /* ExerciseRoutinesDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC5E220529A9006CED70 /* ExerciseRoutinesDBS.swift */; };
+		0A1FEC5F220529A9006CED70 /* ExerciseHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC5E220529A9006CED70 /* ExerciseHistoryDBS.swift */; };
 		0A1FEC61220529D7006CED70 /* TrackingModulesDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC60220529D7006CED70 /* TrackingModulesDBS.swift */; };
 		0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC642206203F006CED70 /* AddCircleButton.swift */; };
 		0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC662206204E006CED70 /* TimerCircleButton.swift */; };
@@ -36,7 +36,7 @@
 		0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */; };
 		0A7FC91521F5229A00492E93 /* TrackingDayDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC91421F5229A00492E93 /* TrackingDayDBT.swift */; };
 		0A7FC91921F534D700492E93 /* FoodStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC91821F534D700492E93 /* FoodStats.swift */; };
-		0AA5284922020BF500CCFEE7 /* ExerciseRoutinesDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284822020BF500CCFEE7 /* ExerciseRoutinesDBT.swift */; };
+		0AA5284922020BF500CCFEE7 /* ExerciseHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284822020BF500CCFEE7 /* ExerciseHistoryDBT.swift */; };
 		0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */; };
 		0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */; };
 		0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */; };
@@ -75,6 +75,8 @@
 		0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
+		500F74DB220CCFCC00752C98 /* MeditationHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DA220CCFCC00752C98 /* MeditationHistoryDBT.swift */; };
+		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
 		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
 		505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505DB14621FF6C710045C703 /* CassStoryboard.storyboard */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
@@ -119,7 +121,7 @@
 		0A1FEC572204ECBF006CED70 /* Dismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissable.swift; sourceTree = "<group>"; };
 		0A1FEC5A2204F265006CED70 /* DismissableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableVC.swift; sourceTree = "<group>"; };
 		0A1FEC5C2204F830006CED70 /* SlidingAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingAbstractSVC.swift; sourceTree = "<group>"; };
-		0A1FEC5E220529A9006CED70 /* ExerciseRoutinesDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRoutinesDBS.swift; sourceTree = "<group>"; };
+		0A1FEC5E220529A9006CED70 /* ExerciseHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryDBS.swift; sourceTree = "<group>"; };
 		0A1FEC60220529D7006CED70 /* TrackingModulesDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackingModulesDBS.swift; path = "OvercomingMS/Data Models/TrackingDataStrategies/TrackingModulesDBS.swift"; sourceTree = "<group>"; };
 		0A1FEC642206203F006CED70 /* AddCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCircleButton.swift; sourceTree = "<group>"; };
 		0A1FEC662206204E006CED70 /* TimerCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCircleButton.swift; sourceTree = "<group>"; };
@@ -140,7 +142,7 @@
 		0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingViewController.swift; sourceTree = "<group>"; };
 		0A7FC91421F5229A00492E93 /* TrackingDayDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDayDBT.swift; sourceTree = "<group>"; };
 		0A7FC91821F534D700492E93 /* FoodStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodStats.swift; sourceTree = "<group>"; };
-		0AA5284822020BF500CCFEE7 /* ExerciseRoutinesDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRoutinesDBT.swift; sourceTree = "<group>"; };
+		0AA5284822020BF500CCFEE7 /* ExerciseHistoryDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryDBT.swift; sourceTree = "<group>"; };
 		0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleAbstractVC.swift; sourceTree = "<group>"; };
 		0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleVC.swift; sourceTree = "<group>"; };
 		0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAbstractSVC.swift; sourceTree = "<group>"; };
@@ -178,6 +180,8 @@
 		0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPauseCircleButton.swift; sourceTree = "<group>"; };
 		0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishCircleButton.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
+		500F74DA220CCFCC00752C98 /* MeditationHistoryDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBT.swift; sourceTree = "<group>"; };
+		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		505DB14621FF6C710045C703 /* CassStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CassStoryboard.storyboard; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,7 +278,8 @@
 		0A1FEC6222052D58006CED70 /* DatabaseServices */ = {
 			isa = PBXGroup;
 			children = (
-				0A1FEC5E220529A9006CED70 /* ExerciseRoutinesDBS.swift */,
+				0A1FEC5E220529A9006CED70 /* ExerciseHistoryDBS.swift */,
+				500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */,
 			);
 			name = DatabaseServices;
 			path = "OvercomingMS/Data Models/TrackingDataStrategies/DatabaseServices";
@@ -378,7 +383,8 @@
 			children = (
 				0A7FC91421F5229A00492E93 /* TrackingDayDBT.swift */,
 				0A7FC91821F534D700492E93 /* FoodStats.swift */,
-				0AA5284822020BF500CCFEE7 /* ExerciseRoutinesDBT.swift */,
+				0AA5284822020BF500CCFEE7 /* ExerciseHistoryDBT.swift */,
+				500F74DA220CCFCC00752C98 /* MeditationHistoryDBT.swift */,
 			);
 			path = RealmDataModels;
 			sourceTree = "<group>";
@@ -888,13 +894,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AA5284922020BF500CCFEE7 /* ExerciseRoutinesDBT.swift in Sources */,
+				0AA5284922020BF500CCFEE7 /* ExerciseHistoryDBT.swift in Sources */,
 				0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */,
 				0AD94DBC220A5B9500B5C2BA /* TwoSquareButtonSVC.swift in Sources */,
 				0AD07F7221FCFF8100C55831 /* TrackingProgressBar.swift in Sources */,
 				0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */,
 				0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */,
 				0AD07F8821FE637600C55831 /* RoundCornersUIView.swift in Sources */,
+				500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */,
 				0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */,
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
 				0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */,
@@ -908,7 +915,7 @@
 				0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */,
 				0A7FC91521F5229A00492E93 /* TrackingDayDBT.swift in Sources */,
 				501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */,
-				0A1FEC5F220529A9006CED70 /* ExerciseRoutinesDBS.swift in Sources */,
+				0A1FEC5F220529A9006CED70 /* ExerciseHistoryDBS.swift in Sources */,
 				0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */,
 				8387975421EEB8D3009EA5EF /* TimerViewController.swift in Sources */,
 				8387975621F7A809009EA5EF /* StopwatchViewController.swift in Sources */,
@@ -939,6 +946,7 @@
 				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
 				0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */,
 				0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */,
+				500F74DB220CCFCC00752C98 /* MeditationHistoryDBT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
