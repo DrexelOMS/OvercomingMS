@@ -77,5 +77,12 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let exerciseItemSVC = ExerciseSelectedItemSVC()
+        exerciseItemSVC.exerciseItem = exerciseRoutines.getTodaysExerciseItems()![indexPath.row]
+        exerciseItemSVC.parentVC = parentVC
+        parentVC.pushSubView(newSubView: exerciseItemSVC)
+    }
 
 }
