@@ -29,9 +29,6 @@ class ConfirmationSVC: SlidingAbstractSVC {
         bottomButtonView.addSubview(backConfirm)
         backConfirm.anchorToView(superView: bottomButtonView)
         
-        topDescription.text = "test1"
-        bottomDescription.text = "test2"
-        
         backConfirm.leftButtonAction = backButtonPressed
         backConfirm.rightButtonAction = confirmButtonPressed
         
