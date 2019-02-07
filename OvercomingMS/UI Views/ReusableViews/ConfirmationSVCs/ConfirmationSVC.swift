@@ -22,6 +22,8 @@ class ConfirmationSVC: SlidingAbstractSVC {
     
     var methodToRunOnConfirm : (() -> ())?
     
+    var resetToDefault: Bool = false
+    
     override func customSetup() {
         let backConfirm = BackConfirmButtonSVC()
         bottomButtonView.addSubview(backConfirm)
@@ -47,8 +49,15 @@ class ConfirmationSVC: SlidingAbstractSVC {
         guard let methodToRun = methodToRunOnConfirm else {
             fatalError("ButtonAction not set")
         }
+        
         methodToRun()
-        parentVC.resetToDefaultView()
+        
+        if(resetToDefault)  {
+            parentVC.resetToDefaultView()
+        }
+        else {
+            parentVC.popSubView()
+        }
     }
     
 }
