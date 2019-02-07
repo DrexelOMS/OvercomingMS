@@ -78,6 +78,8 @@
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		500F74DB220CCFCC00752C98 /* MeditationHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DA220CCFCC00752C98 /* MeditationHistoryDBT.swift */; };
 		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
+		500F74E3220CF06600752C98 /* MedicationHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74E2220CF06600752C98 /* MedicationHistoryDBT.swift */; };
+		500F74E5220CF08500752C98 /* MedicationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74E4220CF08500752C98 /* MedicationHistoryDBS.swift */; };
 		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
 		505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505DB14621FF6C710045C703 /* CassStoryboard.storyboard */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
@@ -183,6 +185,8 @@
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
 		500F74DA220CCFCC00752C98 /* MeditationHistoryDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBT.swift; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
+		500F74E2220CF06600752C98 /* MedicationHistoryDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationHistoryDBT.swift; sourceTree = "<group>"; };
+		500F74E4220CF08500752C98 /* MedicationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationHistoryDBS.swift; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		505DB14621FF6C710045C703 /* CassStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CassStoryboard.storyboard; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,6 +284,7 @@
 			children = (
 				0A1FEC5E220529A9006CED70 /* ExerciseHistoryDBS.swift */,
 				500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */,
+				500F74E4220CF08500752C98 /* MedicationHistoryDBS.swift */,
 			);
 			name = DatabaseServices;
 			path = "OvercomingMS/Data Models/TrackingDataStrategies/DatabaseServices";
@@ -387,6 +392,7 @@
 				0A7FC91421F5229A00492E93 /* TrackingDayDBT.swift */,
 				0AA5284822020BF500CCFEE7 /* ExerciseHistoryDBT.swift */,
 				500F74DA220CCFCC00752C98 /* MeditationHistoryDBT.swift */,
+				500F74E2220CF06600752C98 /* MedicationHistoryDBT.swift */,
 			);
 			path = RealmDataModels;
 			sourceTree = "<group>";
@@ -914,6 +920,7 @@
 				0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */,
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
 				0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */,
+				500F74E5220CF08500752C98 /* MedicationHistoryDBS.swift in Sources */,
 				0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */,
 				0A1FEC6C22063898006CED70 /* Routine3PartCell.swift in Sources */,
 				0AF8E0DB2209248700E1EC33 /* StopwatchAbstractSVC.swift in Sources */,
@@ -928,6 +935,7 @@
 				0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */,
 				8387975421EEB8D3009EA5EF /* TimerViewController.swift in Sources */,
 				8387975621F7A809009EA5EF /* StopwatchViewController.swift in Sources */,
+				500F74E3220CF06600752C98 /* MedicationHistoryDBT.swift in Sources */,
 				0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */,
 				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,
 				0A2BAA662202A24E004074F3 /* TrackingDataStrategies.swift in Sources */,
