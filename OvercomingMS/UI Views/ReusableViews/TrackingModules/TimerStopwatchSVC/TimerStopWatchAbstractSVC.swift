@@ -31,7 +31,7 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     private var timer = Timer()
     private var isTimerRunning = false
     
-    let exerciseRoutines : ExerciseRoutinesDBS = ExerciseRoutinesDBS()
+    let exerciseRoutines : ExerciseHistoryDBS = ExerciseHistoryDBS()
     
     override func customSetup() {
         timerLabel.text = "00:00:00"

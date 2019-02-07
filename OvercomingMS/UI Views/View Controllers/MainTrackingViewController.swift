@@ -89,7 +89,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             vitaminDBar.setDescription(description: String(currentTrackingDay.VitaminDTotal))
             exerciseBar.setProgressValue(value: currentTrackingDay.ExerciseComputedPercentageComplete)
             exerciseBar.setDescription(description: String(currentTrackingDay.ExerciseTimeTotal))
-            meditationBar.setProgressValue(value: currentTrackingDay.MeditationPercentageComplete)
+            meditationBar.setProgressValue(value: currentTrackingDay.MeditationComputedPercentageComplete)
             meditationBar.setDescription(description: String(currentTrackingDay.MeditationTimeTotal))
             medicationBar.setProgressValue(value: currentTrackingDay.MedicationPercentageComplete)
             medicationBar.setDescription(description: String(currentTrackingDay.MedicationTotal))
@@ -146,10 +146,10 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             WriteVitaminDTrackingData().toggleFilledData()
             break
         case 2:
-            ExerciseRoutinesDBS().toggleFilledData()
+            ExerciseHistoryDBS().toggleFilledData()
             break
         case 3:
-            WriteMeditationTrackingData().toggleFilledData()
+            MeditationHistoryDBS().toggleFilledData()
             break
         case 4:
             WriteMedicationTrackingData().toggleFilledData()
@@ -182,7 +182,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             self.present(vc, animated: true, completion: nil)
             break
         case 3:
-            WriteMeditationTrackingData().addData(amount: 5)
+            MeditationHistoryDBS().addMeditationItem(routineType: "Guided", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
             break
         case 4:
             WriteMedicationTrackingData().addData(amount: 1)

@@ -23,10 +23,11 @@ class TrackingDayDBT: Object {
     @objc dynamic var VitaminDPercentageComplete: Int = 0
     @objc dynamic var VitaminDTotal: Int = 0
     
-    @objc dynamic var ExercisePercentageComplete: Int = 0 //This should be read only
+    // ------------------------------ EXERCISE ------------------------------
+    @objc dynamic var IsExerciseComplete: Bool = false //This should be read only
     var ExerciseComputedPercentageComplete : Int {
         get {
-            if ExercisePercentageComplete >= 100 {
+            if IsExerciseComplete {
                 return 100
             }
             else {
@@ -43,16 +44,50 @@ class TrackingDayDBT: Object {
     var ExerciseTimeTotal: Int {
         get {
             var totalMinutes = 0
-            for row in exerciseRoutinesDT {
+            for row in exerciseHistoryDT {
                 totalMinutes += row.minutes
             }
             return totalMinutes
         }
     }
-    let exerciseRoutinesDT = List<ExerciseRoutinesDBT>()
+    let exerciseHistoryDT = List<ExerciseHistoryDBT>()
     
-    @objc dynamic var MeditationPercentageComplete: Int = 0
-    @objc dynamic var MeditationTimeTotal: Int = 0
+    // --------------------- MEDITATION ------------------------------
+
+    @objc dynamic var IsMeditationComplete: Bool = false
+    var MeditationComputedPercentageComplete : Int {
+        get {
+            if IsMeditationComplete {
+                return 100
+            }
+            else {
+                let percentage = Int(Float(MeditationTimeTotal) / Float(ProgressBarConfig.meditationGoal) * 100)
+                if percentage > 100 {
+                    return 100
+                }
+                else {
+                    return percentage
+                }
+            }
+        }
+    }
+    
+    
+    var MeditationTimeTotal: Int {
+        get {
+            var totalMinutes = 0
+            for row in meditationHistoryDT {
+                totalMinutes += row.minutes
+            }
+            return totalMinutes
+        }
+    }
+    
+    let meditationHistoryDT = List<MeditationHistoryDBT>()
+    
+    
+    // ---------------------- MEDICATION ------------------------------
+
     @objc dynamic var MedicationPercentageComplete: Int = 0
     @objc dynamic var MedicationTotal: Int = 0 //currently guess they would add a number of medications
     //you can only take a medication or not, but you could take 2 / 3 for some reason

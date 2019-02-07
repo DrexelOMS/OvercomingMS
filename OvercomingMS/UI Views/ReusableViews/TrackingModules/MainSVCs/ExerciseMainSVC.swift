@@ -20,7 +20,7 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     let button1 = AddCircleButton()
     let button2 = TimerCircleButton()
     
-    let exerciseRoutines : ExerciseRoutinesDBS = ExerciseRoutinesDBS()
+    let exerciseRoutines : ExerciseHistoryDBS = ExerciseHistoryDBS()
     
     override func customSetup() {
         
