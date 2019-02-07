@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 //--Usage
 //just inherit this class and override nibName and customSetup
@@ -47,6 +48,15 @@ class CustomView: UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
+    }
+    
+    func anchorToView(superView: UIView){
+        constrain(self, superView) { view, superView in
+            view.top == superView.top
+            view.right == superView.right
+            view.bottom == superView.bottom
+            view.left == superView.left
+        }
     }
     
 }

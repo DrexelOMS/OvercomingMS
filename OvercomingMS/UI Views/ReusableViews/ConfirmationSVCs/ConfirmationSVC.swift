@@ -25,9 +25,7 @@ class ConfirmationSVC: SlidingAbstractSVC {
     override func customSetup() {
         let backConfirm = BackConfirmButtonSVC()
         bottomButtonView.addSubview(backConfirm)
-        
-        //TODO: this code sucks constrian me
-        backConfirm.frame = bottomButtonView.bounds
+        backConfirm.anchorToView(superView: bottomButtonView)
         
         topDescription.text = "test1"
         bottomDescription.text = "test2"
