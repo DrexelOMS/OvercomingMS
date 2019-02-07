@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.otf">
+            <string>Quicksand-Bold</string>
+        </array>
+        <array key="Quicksand-Regular.otf">
+            <string>Quicksand-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmationSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
@@ -26,15 +34,15 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="365"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKI-nG-0ce" userLabel="TextTop">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="182.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="121.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6t-Bo-Lbw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="182.5"/>
+                                    <rect key="frame" x="20" y="0.0" width="335" height="121.5"/>
                                     <string key="text">Label
 Label
 Label
 Label</string>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -42,30 +50,33 @@ Label</string>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="Y6t-Bo-Lbw" secondAttribute="bottom" id="Bvj-Qg-WMx"/>
                                 <constraint firstItem="Y6t-Bo-Lbw" firstAttribute="top" secondItem="DKI-nG-0ce" secondAttribute="top" id="G7r-1d-9fy"/>
-                                <constraint firstItem="Y6t-Bo-Lbw" firstAttribute="leading" secondItem="DKI-nG-0ce" secondAttribute="leading" id="KO9-Vr-vvp"/>
-                                <constraint firstAttribute="trailing" secondItem="Y6t-Bo-Lbw" secondAttribute="trailing" id="YxT-ZQ-Pvm"/>
+                                <constraint firstItem="Y6t-Bo-Lbw" firstAttribute="leading" secondItem="DKI-nG-0ce" secondAttribute="leading" constant="20" id="KO9-Vr-vvp"/>
+                                <constraint firstAttribute="trailing" secondItem="Y6t-Bo-Lbw" secondAttribute="trailing" constant="20" id="YxT-ZQ-Pvm"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbU-zD-YKq" userLabel="TextBot">
-                            <rect key="frame" x="0.0" y="182.5" width="375" height="182.5"/>
+                            <rect key="frame" x="0.0" y="121.5" width="375" height="122"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd1-LJ-ffb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="182.5"/>
+                                    <rect key="frame" x="20" y="0.0" width="335" height="122"/>
                                     <string key="text">Label
 Label
 Label
 Label</string>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="fd1-LJ-ffb" firstAttribute="top" secondItem="nbU-zD-YKq" secondAttribute="top" id="JXU-Cv-JUk"/>
-                                <constraint firstAttribute="trailing" secondItem="fd1-LJ-ffb" secondAttribute="trailing" id="cTC-2X-R56"/>
+                                <constraint firstAttribute="trailing" secondItem="fd1-LJ-ffb" secondAttribute="trailing" constant="20" id="cTC-2X-R56"/>
                                 <constraint firstAttribute="bottom" secondItem="fd1-LJ-ffb" secondAttribute="bottom" id="pEE-dU-fAO"/>
-                                <constraint firstItem="fd1-LJ-ffb" firstAttribute="leading" secondItem="nbU-zD-YKq" secondAttribute="leading" id="uLq-qM-0dG"/>
+                                <constraint firstItem="fd1-LJ-ffb" firstAttribute="leading" secondItem="nbU-zD-YKq" secondAttribute="leading" constant="20" id="uLq-qM-0dG"/>
                             </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Te0-jX-Q9R" userLabel="SpacingView">
+                            <rect key="frame" x="0.0" y="243.5" width="375" height="121.5"/>
                         </view>
                     </subviews>
                 </stackView>

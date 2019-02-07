@@ -11,8 +11,8 @@ import UIKit
 class CancelConfirmationSVC : ConfirmationSVC {
     
     override func customSetup() {
-        topDescription.text = "Cancel"
-        bottomDescription.text = "Are You Sure"
+        topDescription.text = "Are you sure you want to cancel"
+        bottomDescription.text = "All progress made during this session will be lost"
         super.customSetup()
     }
 }
