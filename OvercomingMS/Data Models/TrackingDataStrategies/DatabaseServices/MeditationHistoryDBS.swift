@@ -38,7 +38,7 @@ class MeditationHistoryDBS: TrackingModulesDBS {
                 }
             }
         } catch {
-            print("Error updating Exercise data : \(error)" )
+            print("Error updating Meditation data : \(error)" )
         }
         
     }
@@ -53,6 +53,28 @@ class MeditationHistoryDBS: TrackingModulesDBS {
     
     func getPercentageComplete() -> Int {
         return getTrackingDay()?.MeditationComputedPercentageComplete ?? 0
+    }
+    
+    func deleteMeditationItem(item: MeditationHistoryDBT) {
+        do {
+            try realm.write() {
+                realm.delete(item)
+            }
+        } catch {
+            print("Error update Meditation data: \(error)")
+        }
+    }
+    
+    func updateExerciseItem(oldItem: MeditationHistoryDBT, newItem: MeditationHistoryDBT) {
+        do {
+            try realm.write() {
+                oldItem.MeditationType = newItem.MeditationType
+                oldItem.StartTime = newItem.StartTime
+                oldItem.EndTime = newItem.EndTime
+            }
+        } catch {
+            print("Error update Meditation data: \(error)")
+        }
     }
     
 }
