@@ -68,7 +68,7 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
     func updateExerciseItem(oldItem: ExerciseHistoryDBT, newItem: ExerciseHistoryDBT) {
         do {
             try realm.write() {
-                oldItem.RoutineType = "UpdatedRoutine"
+                oldItem.RoutineType = newItem.RoutineType
                 oldItem.StartTime = newItem.StartTime
                 oldItem.EndTime = newItem.EndTime
             }

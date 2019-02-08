@@ -31,8 +31,9 @@ class SlidingAbstractSVC : CustomView {
         
     }
     
+    //SHOLD BE OVERRIDEN TO IMPLEMENT ANY COLOR THEME UPDATES
     func updateColors() {
-        fatalError("Astract Method")
+
     }
 
 }

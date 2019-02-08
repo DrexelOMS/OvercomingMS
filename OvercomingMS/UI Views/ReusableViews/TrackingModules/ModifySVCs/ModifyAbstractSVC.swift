@@ -40,7 +40,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, UITextFieldDelegate {
         print("remember to update colors")
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         parentVC.view.endEditing(true)
         return false
     }
@@ -50,16 +50,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, UITextFieldDelegate {
     }
     
     func ConfirmPressed() {
-
-        if let type = typeTextField.text, let minutes = minutesTextField.text {
-            let startTime = Date()
-            let iMinutes = Int(minutes) ?? 5
-            let endTime = startTime.addingTimeInterval(TimeInterval(iMinutes * 60))
-            exerciseRoutines.addExerciseItem(routineType: type, startTime: startTime, endTime: endTime)
-            parentVC.updateProgressBar();
-            
-            parentVC.popSubView()
-        }
+        fatalError("Override Confirm Pressed")
     }
     
 }

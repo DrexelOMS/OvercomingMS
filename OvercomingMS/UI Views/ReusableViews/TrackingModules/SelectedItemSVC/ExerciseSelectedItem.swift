@@ -15,11 +15,7 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
         
     {
         didSet {
-            topMainLabel.text = exerciseItem.RoutineType
-            middleMainLabel.text = OMSDateAccessor.getDateTime(date: exerciseItem.StartTime)
-            bottomMainLabel.text = "\(exerciseItem.minutes) min."
-            //ExerciseHistoryDBS().deleteExerciseItem(item: exerciseItem)
-            //ExerciseHistoryDBS().updateExerciseItem(oldItem: exerciseItem, newItem: exerciseItem)
+            reload()
         }
     }
     
@@ -35,8 +31,17 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
         //Update color themes
     }
     
+    override func reload() {
+        print(exerciseItem)
+        topMainLabel.text = exerciseItem.RoutineType
+        middleMainLabel.text = OMSDateAccessor.getDateTime(date: exerciseItem.StartTime)
+        bottomMainLabel.text = "\(exerciseItem.minutes) min."
+    }
+    
     override func editButtonPressed() {
-        print("Open Edit page")
+        let editPage = ExerciseEditSVC()
+        editPage.editingExerciseItem = exerciseItem
+        parentVC.pushSubView(newSubView: editPage)
     }
     
     override func repeatButtonPressed() {
