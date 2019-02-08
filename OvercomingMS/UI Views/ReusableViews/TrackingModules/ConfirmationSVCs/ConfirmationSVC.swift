@@ -38,11 +38,11 @@ class ConfirmationSVC: SlidingAbstractSVC {
         
     }
     
-    func backButtonPressed() {
+    private func backButtonPressed() {
         parentVC.popSubView()
     }
     
-    func confirmButtonPressed() {
+    private func confirmButtonPressed() {
         guard let methodToRun = methodToRunOnConfirm else {
             fatalError("ButtonAction not set")
         }

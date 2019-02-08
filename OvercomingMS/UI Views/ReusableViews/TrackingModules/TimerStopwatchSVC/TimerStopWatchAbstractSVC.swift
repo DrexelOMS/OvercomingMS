@@ -86,6 +86,10 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     }
     
     func finishButtonPressed() {
+        if(seconds <= 0) {
+            return
+        }
+        
         saveTimerData()
         parentVC.resetToDefaultView()
     }
