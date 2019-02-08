@@ -173,7 +173,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             WriteVitaminDTrackingData().addData(amount: 5)
             break
         case 2:
-            //WriteExerciseTrackingData().addData(amount: 5)
             let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ExerciseModuleVC") as! ExerciseModuleVC
             vc.modalPresentationStyle = .overCurrentContext
@@ -182,7 +181,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             self.present(vc, animated: true, completion: nil)
             break
         case 3:
-            //MeditationHistoryDBS().addMeditationItem(routineType: "Guided", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
             let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "MeditationModuleVC") as! MeditationModuleVC
             vc.modalPresentationStyle = .overCurrentContext

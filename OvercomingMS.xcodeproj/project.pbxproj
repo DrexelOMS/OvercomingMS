@@ -40,7 +40,7 @@
 		0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */; };
 		0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */; };
 		0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */; };
-		0AA528542202314600CCFEE7 /* ExerciseMainSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA528532202314600CCFEE7 /* ExerciseMainSVC.xib */; };
+		0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA528532202314600CCFEE7 /* MainAbstractSVC.xib */; };
 		0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5285A2202623B00CCFEE7 /* RoundButton.swift */; };
 		0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA5286622027FF300CCFEE7 /* ConfirmationSVC.xib */; };
 		0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */; };
@@ -75,6 +75,8 @@
 		0AD94DD7220DEEB300B5C2BA /* DeleteCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DD6220DEEB300B5C2BA /* DeleteCircleButton.swift */; };
 		0AD94DD9220DF8D000B5C2BA /* ExerciseEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DD8220DF8D000B5C2BA /* ExerciseEditSVC.swift */; };
 		0AD94DDB220E0D7600B5C2BA /* MeditationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DDA220E0D7600B5C2BA /* MeditationModuleVC.swift */; };
+		0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DE0220E178E00B5C2BA /* MeditationMainSVC.swift */; };
+		0AD94DE3220E17BD00B5C2BA /* GuidedCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DE2220E17BD00B5C2BA /* GuidedCircleButton.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -153,7 +155,7 @@
 		0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleVC.swift; sourceTree = "<group>"; };
 		0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAbstractSVC.swift; sourceTree = "<group>"; };
 		0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseMainSVC.swift; sourceTree = "<group>"; };
-		0AA528532202314600CCFEE7 /* ExerciseMainSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseMainSVC.xib; sourceTree = "<group>"; };
+		0AA528532202314600CCFEE7 /* MainAbstractSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainAbstractSVC.xib; sourceTree = "<group>"; };
 		0AA5285A2202623B00CCFEE7 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		0AA5286622027FF300CCFEE7 /* ConfirmationSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationSVC.xib; sourceTree = "<group>"; };
 		0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -188,6 +190,8 @@
 		0AD94DD6220DEEB300B5C2BA /* DeleteCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCircleButton.swift; sourceTree = "<group>"; };
 		0AD94DD8220DF8D000B5C2BA /* ExerciseEditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseEditSVC.swift; sourceTree = "<group>"; };
 		0AD94DDA220E0D7600B5C2BA /* MeditationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationModuleVC.swift; sourceTree = "<group>"; };
+		0AD94DE0220E178E00B5C2BA /* MeditationMainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationMainSVC.swift; sourceTree = "<group>"; };
+		0AD94DE2220E17BD00B5C2BA /* GuidedCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidedCircleButton.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				0A1FEC642206203F006CED70 /* AddCircleButton.swift */,
+				0AD94DE2220E17BD00B5C2BA /* GuidedCircleButton.swift */,
 				0A1FEC662206204E006CED70 /* TimerCircleButton.swift */,
 				0AF8E0DE22092A5E00E1EC33 /* CancelCircleButton.swift */,
 				0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */,
@@ -361,7 +366,8 @@
 			children = (
 				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
 				0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */,
-				0AA528532202314600CCFEE7 /* ExerciseMainSVC.xib */,
+				0AD94DE0220E178E00B5C2BA /* MeditationMainSVC.swift */,
+				0AA528532202314600CCFEE7 /* MainAbstractSVC.xib */,
 			);
 			path = MainSVCs;
 			sourceTree = "<group>";
@@ -803,7 +809,7 @@
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
 				0A1FEC532204E79D006CED70 /* QuickCompleteFood.storyboard in Resources */,
-				0AA528542202314600CCFEE7 /* ExerciseMainSVC.xib in Resources */,
+				0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */,
 				0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -969,6 +975,8 @@
 				0AD94DDB220E0D7600B5C2BA /* MeditationModuleVC.swift in Sources */,
 				0AD94DD3220DEE8000B5C2BA /* EditCircleButton.swift in Sources */,
 				0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */,
+				0AD94DE3220E17BD00B5C2BA /* GuidedCircleButton.swift in Sources */,
+				0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */,
 				0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */,
 				0AD94DD1220DE7F200B5C2BA /* DeleteConfirmationSVC.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,

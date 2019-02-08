@@ -19,7 +19,7 @@ class MeditationModuleVC: TrackingModuleAbstractVC {
         // Do any additional setup after loading the view.
         progressBar.setTitle(title: "Meditation")
         
-        //initializeStackView(defaultView: ExerciseMainSVC())
+        initializeStackView(defaultView: MeditationMainSVC())
     }
     
     override func updateProgressBar() {
