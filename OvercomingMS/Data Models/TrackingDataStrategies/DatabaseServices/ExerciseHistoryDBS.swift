@@ -54,5 +54,27 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
     func getPercentageComplete() -> Int {
         return getTrackingDay()?.ExerciseComputedPercentageComplete ?? 0
     }
+    
+    func deleteExerciseItem(item: ExerciseHistoryDBT) {
+        do {
+            try realm.write() {
+                realm.delete(item)
+            }
+        } catch {
+            print("Error update Exercise data: \(error)")
+        }
+    }
+    
+    func updateExerciseItem(oldItem: ExerciseHistoryDBT, newItem: ExerciseHistoryDBT) {
+        do {
+            try realm.write() {
+                oldItem.RoutineType = "UpdatedRoutine"
+                oldItem.StartTime = newItem.StartTime
+                oldItem.EndTime = newItem.EndTime
+            }
+        } catch {
+            print("Error update Exercise data: \(error)")
+        }
+    }
 
 }
