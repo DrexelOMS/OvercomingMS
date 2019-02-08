@@ -174,8 +174,8 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             break
         case 2:
             //WriteExerciseTrackingData().addData(amount: 5)
-            let storyboard = UIStoryboard(name: "ExerciseStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "ExerciseModuleVC") as! ExerciseModuleVC
+            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "TrackingModuleVC") as! ExerciseModuleVC
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
