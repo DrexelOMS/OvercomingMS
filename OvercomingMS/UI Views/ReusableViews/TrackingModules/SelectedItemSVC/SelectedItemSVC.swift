@@ -25,11 +25,39 @@ class SelectedItemSVC : SlidingAbstractSVC {
     
     @IBOutlet weak var buttonStackView: UIStackView!
     
+    var editButton : CircleButtonSVC!
+    var repeatButton : CircleButtonSVC!
+    var deleteButton : CircleButtonSVC!
+    
     override func customSetup() {
-        //TODO: add the edit, repeat, and delete buttons
+        editButton = EditCircleButton()
+        editButton.buttonAction = editButtonPressed
+        buttonStackView.addArrangedSubview(editButton)
+        
+        repeatButton = RepeatCircleButton()
+        repeatButton.buttonAction = repeatButtonPressed
+        buttonStackView.addArrangedSubview(repeatButton)
+        
+        deleteButton = DeleteCircleButton()
+        deleteButton.buttonAction = deleteButtonPressed
+        buttonStackView.addArrangedSubview(deleteButton)
+        
+        buttonStackView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
         parentVC.popSubView()
+    }
+    
+    func editButtonPressed(){
+        fatalError("Override Edit Button Pressed")
+    }
+    
+    func repeatButtonPressed(){
+        fatalError("Override Repeat Button Pressed")
+    }
+    
+    func deleteButtonPressed(){
+        fatalError("Override Delete Button Pressed")
     }
 }

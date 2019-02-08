@@ -112,7 +112,7 @@
                                 </view>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3w-FE-AYF">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f3w-FE-AYF">
                             <rect key="frame" x="0.0" y="336" width="375" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="cab-Ad-t2M"/>

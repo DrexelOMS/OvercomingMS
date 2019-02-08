@@ -70,6 +70,9 @@
 		0AD94DCC220CEE9800B5C2BA /* ExerciseSelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DCB220CEE9800B5C2BA /* ExerciseSelectedItem.swift */; };
 		0AD94DCF220DE7CB00B5C2BA /* RepeatConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DCE220DE7CB00B5C2BA /* RepeatConfirmationSVC.swift */; };
 		0AD94DD1220DE7F200B5C2BA /* DeleteConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DD0220DE7F200B5C2BA /* DeleteConfirmationSVC.swift */; };
+		0AD94DD3220DEE8000B5C2BA /* EditCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DD2220DEE8000B5C2BA /* EditCircleButton.swift */; };
+		0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DD4220DEEA100B5C2BA /* RepeatCircleButton.swift */; };
+		0AD94DD7220DEEB300B5C2BA /* DeleteCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DD6220DEEB300B5C2BA /* DeleteCircleButton.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -180,6 +183,9 @@
 		0AD94DCB220CEE9800B5C2BA /* ExerciseSelectedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSelectedItem.swift; sourceTree = "<group>"; };
 		0AD94DCE220DE7CB00B5C2BA /* RepeatConfirmationSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatConfirmationSVC.swift; sourceTree = "<group>"; };
 		0AD94DD0220DE7F200B5C2BA /* DeleteConfirmationSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteConfirmationSVC.swift; sourceTree = "<group>"; };
+		0AD94DD2220DEE8000B5C2BA /* EditCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCircleButton.swift; sourceTree = "<group>"; };
+		0AD94DD4220DEEA100B5C2BA /* RepeatCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatCircleButton.swift; sourceTree = "<group>"; };
+		0AD94DD6220DEEB300B5C2BA /* DeleteCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCircleButton.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -301,6 +307,9 @@
 				0AF8E0DE22092A5E00E1EC33 /* CancelCircleButton.swift */,
 				0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */,
 				0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */,
+				0AD94DD2220DEE8000B5C2BA /* EditCircleButton.swift */,
+				0AD94DD4220DEEA100B5C2BA /* RepeatCircleButton.swift */,
+				0AD94DD6220DEEB300B5C2BA /* DeleteCircleButton.swift */,
 			);
 			path = CircleButtonSVCs;
 			sourceTree = "<group>";
@@ -959,10 +968,12 @@
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
 				0AF8E0DF22092A5E00E1EC33 /* CancelCircleButton.swift in Sources */,
 				0AA5286E2202827000CCFEE7 /* BlueButtonSVC.swift in Sources */,
+				0AD94DD3220DEE8000B5C2BA /* EditCircleButton.swift in Sources */,
 				0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */,
 				0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */,
 				0AD94DD1220DE7F200B5C2BA /* DeleteConfirmationSVC.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
+				0AD94DD7220DEEB300B5C2BA /* DeleteCircleButton.swift in Sources */,
 				0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */,
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
@@ -974,6 +985,7 @@
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AD94DB12209BC2400B5C2BA /* ModifyAbstractSVC.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
+				0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */,
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
 				0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */,
