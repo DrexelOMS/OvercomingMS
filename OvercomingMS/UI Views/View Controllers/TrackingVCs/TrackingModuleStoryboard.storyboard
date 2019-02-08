@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +12,7 @@
         <!--Exercise ModuleVC-->
         <scene sceneID="53e-kx-uTx">
             <objects>
-                <viewController storyboardIdentifier="TrackingModuleVC" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yPj-rM-WR3" customClass="ExerciseModuleVC" customModule="OvercomingMS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExerciseModuleVC" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yPj-rM-WR3" customClass="ExerciseModuleVC" customModule="OvercomingMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LQt-kt-X1f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,6 +77,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRU-M2-2IL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-109.59999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Meditation ModuleVC-->
+        <scene sceneID="0gy-4C-CJ3">
+            <objects>
+                <viewController storyboardIdentifier="MeditationModuleVC" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4xa-gV-d81" customClass="MeditationModuleVC" customModule="OvercomingMS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XCt-05-kcR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWX-y3-3FI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2lS-Dq-yGG">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lz9-a8-VFC" userLabel="TopView">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rso-UY-9f6" userLabel="ProgressBar" customClass="TrackingModuleProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="20" width="335" height="89.5"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="rso-UY-9f6" firstAttribute="leading" secondItem="Lz9-a8-VFC" secondAttribute="leading" constant="20" id="QJg-iR-77b"/>
+                                                    <constraint firstItem="rso-UY-9f6" firstAttribute="top" secondItem="Lz9-a8-VFC" secondAttribute="top" constant="20" id="Rg1-3F-hji"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rso-UY-9f6" secondAttribute="trailing" constant="20" id="ltI-1l-gCb"/>
+                                                    <constraint firstAttribute="bottom" secondItem="rso-UY-9f6" secondAttribute="bottom" constant="20" id="wm4-Es-Tk5"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLZ-Ia-5V0" userLabel="MainView">
+                                                <rect key="frame" x="0.0" y="129.5" width="375" height="517.5"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="jLZ-Ia-5V0" firstAttribute="height" secondItem="Lz9-a8-VFC" secondAttribute="height" multiplier="4:1" id="6sB-LT-85a"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2lS-Dq-yGG" firstAttribute="leading" secondItem="rWX-y3-3FI" secondAttribute="leading" id="DUG-TN-SZV"/>
+                                    <constraint firstAttribute="bottom" secondItem="2lS-Dq-yGG" secondAttribute="bottom" id="Sm6-n5-Ni7"/>
+                                    <constraint firstAttribute="trailing" secondItem="2lS-Dq-yGG" secondAttribute="trailing" id="fZ3-4v-Med"/>
+                                    <constraint firstItem="2lS-Dq-yGG" firstAttribute="top" secondItem="rWX-y3-3FI" secondAttribute="top" id="hfr-CR-eeI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rWX-y3-3FI" firstAttribute="top" secondItem="fqD-oy-VLY" secondAttribute="top" id="GTZ-cj-ybu"/>
+                            <constraint firstItem="rWX-y3-3FI" firstAttribute="trailing" secondItem="fqD-oy-VLY" secondAttribute="trailing" id="M8w-hx-c1C"/>
+                            <constraint firstItem="rWX-y3-3FI" firstAttribute="bottom" secondItem="fqD-oy-VLY" secondAttribute="bottom" id="MqA-Vf-eTl"/>
+                            <constraint firstItem="rWX-y3-3FI" firstAttribute="leading" secondItem="fqD-oy-VLY" secondAttribute="leading" id="w35-bM-LUy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fqD-oy-VLY"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="theme">
+                            <color key="value" red="0.40000000000000002" green="0.59607843137254901" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="mainView" destination="jLZ-Ia-5V0" id="DXm-Bt-ObF"/>
+                        <outlet property="progressBar" destination="rso-UY-9f6" id="r71-bK-7d6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vo-zO-bw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="134"/>
         </scene>
     </scenes>
 </document>
