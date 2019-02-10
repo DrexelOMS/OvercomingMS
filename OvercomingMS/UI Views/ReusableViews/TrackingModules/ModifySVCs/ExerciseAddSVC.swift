@@ -8,22 +8,22 @@
 
 import UIKit
 
-class ExerciseAddSVC : ModifyAbstractSVC {
+class ExerciseAddSVC : ExerciseModifyAbstractSVC {
     
     override func ConfirmPressed() {
-        if let type = typeTextField.text, let minutes = Int(minutesTextField.text ?? "") {
+        
+        if let type = selectedType, let startTime = selectedStartTime, let minutes = selectedLength {
             if minutes <= 0 {
                 return;
             }
             
-            let startTime = Date()
-            let iMinutes = minutes
-            let endTime = startTime.addingTimeInterval(TimeInterval(iMinutes * 60))
+            let endTime = startTime.addingTimeInterval(TimeInterval(minutes * 60))
             exerciseRoutines.addExerciseItem(routineType: type, startTime: startTime, endTime: endTime)
             parentVC.updateProgressBar();
             
             parentVC.popSubView()
         }
+        
     }
     
 }
