@@ -130,7 +130,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     func didPressLeftContainer(_ sender: TrackingFoodBar) {
         
-        //WriteFoodTrackingData().addData(amount: 1)
         let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "FoodModuleVC") as! FoodModuleVC
         vc.modalPresentationStyle = .overCurrentContext
