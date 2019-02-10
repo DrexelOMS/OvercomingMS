@@ -18,7 +18,9 @@ class CircleButtonSVC: CustomView {
     
     @IBInspectable var buttonImage: UIImage? {
         didSet {
-            button.setImage(buttonImage, for: .normal)
+            let tintedImage = buttonImage?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+            button.setImage(tintedImage, for: .normal)
+            button.tintColor = colorTheme
             button.imageEdgeInsets = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
         }
     }
@@ -35,8 +37,9 @@ class CircleButtonSVC: CustomView {
     
     var colorTheme : UIColor = UIColor.black {
         didSet {
-            label.textColor = colorTheme
+            //label.textColor = colorTheme
             button.setTitleColor(colorTheme, for: .normal)
+            button.tintColor = colorTheme
         }
     }
     
