@@ -9,6 +9,7 @@ PODS:
     - Realm (= 3.13.1)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.2.0)
+  - SwiftyPickerPopover (6.6.5)
 
 DEPENDENCIES:
   - Alamofire
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - RealmSwift
   - SVProgressHUD
   - SwiftyJSON
+  - SwiftyPickerPopover
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -27,6 +29,7 @@ SPEC REPOS:
     - RealmSwift
     - SVProgressHUD
     - SwiftyJSON
+    - SwiftyPickerPopover
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -36,7 +39,8 @@ SPEC CHECKSUMS:
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  SwiftyPickerPopover: f2975fd0233d04c0a8f8d52d09b6f24b882de6fb
 
-PODFILE CHECKSUM: e43d9391229830ac2ad7f2d4cb35e01d47b20819
+PODFILE CHECKSUM: e350651e44d897d41b4577ed0aa02729c7f85c2f
 
 COCOAPODS: 1.5.3
