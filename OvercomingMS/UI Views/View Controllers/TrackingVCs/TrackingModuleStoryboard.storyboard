@@ -286,5 +286,74 @@
             </objects>
             <point key="canvasLocation" x="1438" y="134"/>
         </scene>
+        <!--Food ModuleVC-->
+        <scene sceneID="DL0-cI-lcA">
+            <objects>
+                <viewController storyboardIdentifier="FoodModuleVC" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ofT-ll-zUN" customClass="FoodModuleVC" customModule="OvercomingMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V2n-Lh-8mU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="382-HP-fCp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Kl-Tr-4G4">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWy-Vv-RKa" userLabel="TopView">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLf-7F-6bg" userLabel="ProgressBar" customClass="TrackingModuleProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="20" width="335" height="89.5"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="jLf-7F-6bg" secondAttribute="bottom" constant="20" id="34p-zA-onW"/>
+                                                    <constraint firstItem="jLf-7F-6bg" firstAttribute="top" secondItem="wWy-Vv-RKa" secondAttribute="top" constant="20" id="VF4-MD-p7y"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jLf-7F-6bg" secondAttribute="trailing" constant="20" id="fBA-7U-gOU"/>
+                                                    <constraint firstItem="jLf-7F-6bg" firstAttribute="leading" secondItem="wWy-Vv-RKa" secondAttribute="leading" constant="20" id="lRa-w3-GMq"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SpA-PQ-zx0" userLabel="MainView">
+                                                <rect key="frame" x="0.0" y="129.5" width="375" height="517.5"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="SpA-PQ-zx0" firstAttribute="height" secondItem="wWy-Vv-RKa" secondAttribute="height" multiplier="4:1" id="KIl-6a-URp"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3Kl-Tr-4G4" secondAttribute="trailing" id="9VE-zF-ESJ"/>
+                                    <constraint firstItem="3Kl-Tr-4G4" firstAttribute="top" secondItem="382-HP-fCp" secondAttribute="top" id="fpc-JT-uAq"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Kl-Tr-4G4" secondAttribute="bottom" id="krn-LB-mNu"/>
+                                    <constraint firstItem="3Kl-Tr-4G4" firstAttribute="leading" secondItem="382-HP-fCp" secondAttribute="leading" id="vpn-Ja-N6t"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="382-HP-fCp" firstAttribute="bottom" secondItem="S7Q-3q-d04" secondAttribute="bottom" id="8SP-Ch-Zxo"/>
+                            <constraint firstItem="382-HP-fCp" firstAttribute="trailing" secondItem="S7Q-3q-d04" secondAttribute="trailing" id="T2d-9v-WtE"/>
+                            <constraint firstItem="382-HP-fCp" firstAttribute="leading" secondItem="S7Q-3q-d04" secondAttribute="leading" id="TVS-PT-7eB"/>
+                            <constraint firstItem="382-HP-fCp" firstAttribute="top" secondItem="S7Q-3q-d04" secondAttribute="top" id="hY4-Ck-151"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S7Q-3q-d04"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="theme">
+                            <color key="value" red="0.0078431372549019607" green="0.63529411764705879" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="mainView" destination="SpA-PQ-zx0" id="4Ju-cS-Pdi"/>
+                        <outlet property="progressBar" destination="jLf-7F-6bg" id="fn3-UE-msu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sSN-Me-iMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1630" y="134"/>
+        </scene>
     </scenes>
 </document>
