@@ -35,10 +35,6 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     private enum SlideMode { case Instant, RightToLeft, LeftToRight }
     
     
-    
-    
-    //var dataIO: IDataIO
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

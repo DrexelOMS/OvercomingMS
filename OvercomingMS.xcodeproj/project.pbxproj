@@ -35,6 +35,9 @@
 		0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */; };
 		0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */; };
 		0A7FC91521F5229A00492E93 /* TrackingDayDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC91421F5229A00492E93 /* TrackingDayDBT.swift */; };
+		0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */; };
+		0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */; };
+		0A93EA3F2210D1FC0063A892 /* FoodModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3E2210D1FC0063A892 /* FoodModuleVC.swift */; };
 		0AA5284922020BF500CCFEE7 /* ExerciseHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284822020BF500CCFEE7 /* ExerciseHistoryDBT.swift */; };
 		0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */; };
 		0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */; };
@@ -150,6 +153,9 @@
 		0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinnStoryboard.storyboard; sourceTree = "<group>"; };
 		0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingViewController.swift; sourceTree = "<group>"; };
 		0A7FC91421F5229A00492E93 /* TrackingDayDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDayDBT.swift; sourceTree = "<group>"; };
+		0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationModuleVC.swift; sourceTree = "<group>"; };
+		0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDModuleVC.swift; sourceTree = "<group>"; };
+		0A93EA3E2210D1FC0063A892 /* FoodModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodModuleVC.swift; sourceTree = "<group>"; };
 		0AA5284822020BF500CCFEE7 /* ExerciseHistoryDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryDBT.swift; sourceTree = "<group>"; };
 		0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleAbstractVC.swift; sourceTree = "<group>"; };
 		0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleVC.swift; sourceTree = "<group>"; };
@@ -355,8 +361,11 @@
 		0A2BA61A220292A2004074F3 /* ConcreteModuleViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A93EA3E2210D1FC0063A892 /* FoodModuleVC.swift */,
+				0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */,
 				0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */,
 				0AD94DDA220E0D7600B5C2BA /* MeditationModuleVC.swift */,
+				0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */,
 			);
 			path = ConcreteModuleViewControllers;
 			sourceTree = "<group>";
@@ -949,6 +958,7 @@
 				0AD07F8821FE637600C55831 /* RoundCornersUIView.swift in Sources */,
 				500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */,
 				0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */,
+				0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */,
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
 				0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */,
 				0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */,
@@ -991,12 +1001,14 @@
 				0AD94DCF220DE7CB00B5C2BA /* RepeatConfirmationSVC.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
 				0AD94DB32209BC3C00B5C2BA /* ExerciseAddSVC.swift in Sources */,
+				0A93EA3F2210D1FC0063A892 /* FoodModuleVC.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AD94DB12209BC2400B5C2BA /* ModifyAbstractSVC.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
 				0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */,
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
+				0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */,
 				0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */,
 				0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */,
 				0AD94DD9220DF8D000B5C2BA /* ExerciseEditSVC.swift in Sources */,

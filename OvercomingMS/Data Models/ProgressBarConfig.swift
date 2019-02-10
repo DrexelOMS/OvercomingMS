@@ -11,7 +11,7 @@ import Foundation
 enum TrackingMode { case food, omega3, vitaminD, exercise, meditation, medication }
 
 class ProgressBarConfig {
-    static var foodDescriptions : [String] = ["Aweful", "Not great", "Alright", "Pretty good", "Perfect!"]
+    static var foodDescriptions : [String] = ["Aweful.", "Not great.", "Alright.", "Pretty good.", "Perfect!"]
     static func getfoodDescription(rating: Int) -> String {
         if(rating - 1 < 0){
             return foodDescriptions[0]
