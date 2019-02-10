@@ -170,7 +170,13 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             WriteOmega3TrackingData().addData(amount: 5)
             break
         case 1:
-            WriteVitaminDTrackingData().addData(amount: 5)
+            //WriteVitaminDTrackingData().addData(amount: 5)
+            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "VitaminDModuleVC") as! VitaminDModuleVC
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.dismissalDelegate = self
+            
+            self.present(vc, animated: true, completion: nil)
             break
         case 2:
             let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
@@ -187,10 +193,15 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             vc.dismissalDelegate = self
             
             self.present(vc, animated: true, completion: nil)
-            
             break
         case 4:
-            WriteMedicationTrackingData().addData(amount: 1)
+            //WriteMedicationTrackingData().addData(amount: 1)
+            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MedicationModuleVC") as! MedicationModuleVC
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.dismissalDelegate = self
+            
+            self.present(vc, animated: true, completion: nil)
             break
         default:
             fatalError("Case Not Handled")
