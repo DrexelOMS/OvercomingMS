@@ -9,11 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Quicksand-Bold.otf">
-            <string>Quicksand-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="3By-hI-cdQ">
@@ -25,7 +20,7 @@
                         <userGuides>
                             <userLayoutGuide location="50" affinity="minY"/>
                             <userLayoutGuide location="468" affinity="minY"/>
-                            <userLayoutGuide location="40" affinity="minX"/>
+                            <userLayoutGuide location="38" affinity="minX"/>
                             <userLayoutGuide location="280" affinity="minX"/>
                         </userGuides>
                         <subviews>
@@ -63,59 +58,20 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qz2-ev-wKG">
                                                         <rect key="frame" x="0.0" y="0.0" width="310" height="418"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tE-Y1-4q4" userLabel="Padding">
-                                                                <rect key="frame" x="0.0" y="0.0" width="310" height="20"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="9dc-0w-PHF"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMR-5J-fnE" userLabel="LabelView">
-                                                                <rect key="frame" x="0.0" y="20" width="310" height="60"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover the OMS Diet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgY-h9-zdn">
-                                                                        <rect key="frame" x="34" y="17" width="242.5" height="26"/>
-                                                                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="22"/>
-                                                                        <color key="textColor" red="0.27913129329681396" green="0.66077667474746704" blue="0.77258497476577759" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="rgY-h9-zdn" firstAttribute="centerY" secondItem="AMR-5J-fnE" secondAttribute="centerY" id="0kR-3J-t3S"/>
-                                                                    <constraint firstItem="rgY-h9-zdn" firstAttribute="centerX" secondItem="AMR-5J-fnE" secondAttribute="centerX" id="BO2-4F-yFy"/>
-                                                                    <constraint firstAttribute="height" constant="60" id="ese-7V-wtW"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GuM-lQ-v0q" userLabel="ImageView">
-                                                                <rect key="frame" x="0.0" y="80" width="310" height="318"/>
-                                                                <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discover" translatesAutoresizingMaskIntoConstraints="NO" id="ePE-Rs-S7y">
-                                                                        <rect key="frame" x="35" y="39" width="240" height="240"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="ePE-Rs-S7y" secondAttribute="height" multiplier="1:1" id="vdJ-Xt-kkt"/>
-                                                                        </constraints>
-                                                                    </imageView>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="ePE-Rs-S7y" firstAttribute="leading" secondItem="GuM-lQ-v0q" secondAttribute="leading" constant="35" id="ZA9-fr-ZGf"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="ePE-Rs-S7y" secondAttribute="trailing" constant="35" id="d2v-ye-ePe"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="ePE-Rs-S7y" secondAttribute="bottom" constant="39" id="si3-LQ-bzc"/>
-                                                                    <constraint firstItem="ePE-Rs-S7y" firstAttribute="top" secondItem="GuM-lQ-v0q" secondAttribute="top" constant="39" id="waN-vj-us0"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-cx-QT6" userLabel="Padding">
-                                                                <rect key="frame" x="0.0" y="398" width="310" height="20"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="CYh-2s-kGM"/>
-                                                                </constraints>
-                                                            </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rgY-h9-zdn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="310" height="418"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Discover the OMS Diet">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.27913129329681396" green="0.66077667474746704" blue="0.77258497476577759" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <font key="NSFont" size="22" name="Quicksand-Bold"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="Sbd-cx-QT6" secondAttribute="bottom" id="J6o-P0-pXS"/>
-                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -145,7 +101,6 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rL-Pd-MqS" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="100"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Search"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Search"/>
@@ -153,7 +108,6 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ay-xA-yNG" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                 <rect key="frame" x="79" y="0.0" width="73.5" height="100"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Recipes"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Recipes"/>
@@ -161,7 +115,6 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivx-eD-Qa4" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                 <rect key="frame" x="157.5" y="0.0" width="74" height="100"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Saved"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Saved"/>
@@ -169,7 +122,6 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cs5-cQ-iqq" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                 <rect key="frame" x="236.5" y="0.0" width="73.5" height="100"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Scan"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Scan"/>
@@ -178,7 +130,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="w2t-Ot-dyb" secondAttribute="bottom" id="3H8-Fy-O2w"/>
                                     <constraint firstItem="w2t-Ot-dyb" firstAttribute="top" secondItem="eFD-FW-47H" secondAttribute="top" id="4Ua-BD-6UW"/>
@@ -207,7 +159,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Discover" width="689" height="689"/>
         <image name="Pulldown" width="689" height="302.5"/>
         <image name="Recipes" width="689" height="689"/>
         <image name="Saved" width="689" height="689"/>
