@@ -108,6 +108,38 @@ class ModifyAbstractSVC : SlidingAbstractSVC, UITextFieldDelegate {
         fatalError("Override Confirm Pressed")
     }
     
+    //MARK: Alternative picker method
+    
+//    let datePicker = UIDatePicker()
+//
+//    func showDatePicker(){
+//        //Formate Date
+//        datePicker.datePickerMode = .dateAndTime
+//
+//        //ToolBar
+//        let toolbar = UIToolbar();
+//        toolbar.sizeToFit()
+//        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
+//        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+//        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
+//
+//        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+//
+//        timeTextField.inputAccessoryView = toolbar
+//        timeTextField.inputView = datePicker
+//
+//    }
+//
+//    @objc func donedatePicker(){
+//        timeTextField.text = OMSDateAccessor.getDateTime(date: datePicker.date)
+//        parentVC.view.endEditing(true)
+//    }
+//
+//    @objc func cancelDatePicker(){
+//        parentVC.view.endEditing(true)
+//    }
+    
+    
 }
 
 class ExerciseModifyAbstractSVC : ModifyAbstractSVC {
