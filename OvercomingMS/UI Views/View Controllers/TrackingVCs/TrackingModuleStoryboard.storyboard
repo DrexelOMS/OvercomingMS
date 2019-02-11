@@ -27,19 +27,32 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ek-pB-8h0" userLabel="PulldownView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gd-a4-7jv">
-                                                        <rect key="frame" x="174.5" y="10" width="26" height="10"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Az0-Gn-5pB" customClass="TopRoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gd-a4-7jv">
+                                                                <rect key="frame" x="174.5" y="10" width="26" height="10"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="10" id="Bjm-cW-L5I"/>
+                                                                    <constraint firstAttribute="width" constant="26" id="JR5-Zh-ac7"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Pulldown"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="10" id="Bjm-cW-L5I"/>
-                                                            <constraint firstAttribute="width" constant="26" id="JR5-Zh-ac7"/>
+                                                            <constraint firstItem="9Gd-a4-7jv" firstAttribute="centerY" secondItem="Az0-Gn-5pB" secondAttribute="centerY" id="hbD-vb-yQE"/>
+                                                            <constraint firstItem="9Gd-a4-7jv" firstAttribute="centerX" secondItem="Az0-Gn-5pB" secondAttribute="centerX" id="o5Z-P7-uxs"/>
                                                         </constraints>
-                                                        <state key="normal" image="Pulldown"/>
-                                                    </button>
+                                                    </view>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="9Gd-a4-7jv" firstAttribute="centerX" secondItem="0ek-pB-8h0" secondAttribute="centerX" id="J9t-DN-Hcc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Az0-Gn-5pB" secondAttribute="trailing" id="84D-h0-QSn"/>
                                                     <constraint firstAttribute="height" constant="30" id="bhU-p7-1Ll"/>
-                                                    <constraint firstItem="9Gd-a4-7jv" firstAttribute="centerY" secondItem="0ek-pB-8h0" secondAttribute="centerY" id="oa9-cc-uaY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Az0-Gn-5pB" secondAttribute="bottom" id="bvh-zW-mcx"/>
+                                                    <constraint firstItem="Az0-Gn-5pB" firstAttribute="leading" secondItem="0ek-pB-8h0" secondAttribute="leading" id="g8N-9U-hdc"/>
+                                                    <constraint firstItem="Az0-Gn-5pB" firstAttribute="top" secondItem="0ek-pB-8h0" secondAttribute="top" id="sPD-eF-ECC"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAO-sZ-Qwe" userLabel="TopView">
@@ -91,6 +104,7 @@
                     <connections>
                         <outlet property="mainView" destination="W2C-GT-TTF" id="irA-CX-MMJ"/>
                         <outlet property="progressBar" destination="Vsw-3Q-HeZ" id="f1H-3Z-DXb"/>
+                        <outlet property="pullBarBackground" destination="0ek-pB-8h0" id="jLF-86-lTr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRU-M2-2IL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,22 +125,35 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2lS-Dq-yGG">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkx-0M-cwF" userLabel="PulldownView">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXm-QU-fCa" userLabel="PulldownView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2H-vb-lsg">
-                                                        <rect key="frame" x="174.5" y="10" width="26" height="10"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3S-B3-f1T" customClass="TopRoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6S-hN-Oiu">
+                                                                <rect key="frame" x="174.5" y="10" width="26" height="10"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="10" id="85H-u0-dEL"/>
+                                                                    <constraint firstAttribute="width" constant="26" id="IQK-bk-KL2"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Pulldown"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="26" id="2jY-M8-1D2"/>
-                                                            <constraint firstAttribute="height" constant="10" id="BZ7-8v-hIO"/>
+                                                            <constraint firstItem="W6S-hN-Oiu" firstAttribute="centerY" secondItem="s3S-B3-f1T" secondAttribute="centerY" id="HT4-re-DgS"/>
+                                                            <constraint firstItem="W6S-hN-Oiu" firstAttribute="centerX" secondItem="s3S-B3-f1T" secondAttribute="centerX" id="Jxq-Gd-mgA"/>
                                                         </constraints>
-                                                        <state key="normal" image="Pulldown"/>
-                                                    </button>
+                                                    </view>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="y2H-vb-lsg" firstAttribute="centerY" secondItem="nkx-0M-cwF" secondAttribute="centerY" id="6Ob-d3-amp"/>
-                                                    <constraint firstAttribute="height" constant="30" id="SpS-3z-DLX"/>
-                                                    <constraint firstItem="y2H-vb-lsg" firstAttribute="centerX" secondItem="nkx-0M-cwF" secondAttribute="centerX" id="hai-9t-9YI"/>
+                                                    <constraint firstItem="s3S-B3-f1T" firstAttribute="leading" secondItem="wXm-QU-fCa" secondAttribute="leading" id="HDh-ri-o0q"/>
+                                                    <constraint firstAttribute="height" constant="30" id="VmR-Rw-2h2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="s3S-B3-f1T" secondAttribute="trailing" id="YSn-PU-JVN"/>
+                                                    <constraint firstItem="s3S-B3-f1T" firstAttribute="top" secondItem="wXm-QU-fCa" secondAttribute="top" id="g0J-hN-sa5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="s3S-B3-f1T" secondAttribute="bottom" id="k8L-a1-dxS"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lz9-a8-VFC" userLabel="TopView">
@@ -178,6 +205,7 @@
                     <connections>
                         <outlet property="mainView" destination="jLZ-Ia-5V0" id="DXm-Bt-ObF"/>
                         <outlet property="progressBar" destination="rso-UY-9f6" id="r71-bK-7d6"/>
+                        <outlet property="pullBarBackground" destination="wXm-QU-fCa" id="2lW-rB-yfw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1vo-zO-bw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,22 +226,35 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ccq-JN-ngu">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2F-ce-kby" userLabel="PulldownView">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06X-Wj-NTs" userLabel="PulldownView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Et1-cW-VGb">
-                                                        <rect key="frame" x="174.5" y="10" width="26" height="10"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-zg-Utf" customClass="TopRoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zr-Cb-pam">
+                                                                <rect key="frame" x="174.5" y="10" width="26" height="10"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="10" id="9DK-KE-b5e"/>
+                                                                    <constraint firstAttribute="width" constant="26" id="IlS-Bm-HUF"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Pulldown"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="10" id="Ckt-Z6-lAd"/>
-                                                            <constraint firstAttribute="width" constant="26" id="yu7-a0-YgF"/>
+                                                            <constraint firstItem="6zr-Cb-pam" firstAttribute="centerX" secondItem="bg5-zg-Utf" secondAttribute="centerX" id="6Qo-k0-QfB"/>
+                                                            <constraint firstItem="6zr-Cb-pam" firstAttribute="centerY" secondItem="bg5-zg-Utf" secondAttribute="centerY" id="V30-xm-Me9"/>
                                                         </constraints>
-                                                        <state key="normal" image="Pulldown"/>
-                                                    </button>
+                                                    </view>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="Et1-cW-VGb" firstAttribute="centerY" secondItem="V2F-ce-kby" secondAttribute="centerY" id="EI7-hg-yCA"/>
-                                                    <constraint firstItem="Et1-cW-VGb" firstAttribute="centerX" secondItem="V2F-ce-kby" secondAttribute="centerX" id="RnV-lM-z6P"/>
-                                                    <constraint firstAttribute="height" constant="30" id="g9e-zl-j38"/>
+                                                    <constraint firstAttribute="height" constant="30" id="CF2-7f-Wcd"/>
+                                                    <constraint firstItem="bg5-zg-Utf" firstAttribute="top" secondItem="06X-Wj-NTs" secondAttribute="top" id="QXn-Yf-VdZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bg5-zg-Utf" secondAttribute="trailing" id="Ws1-ME-REM"/>
+                                                    <constraint firstItem="bg5-zg-Utf" firstAttribute="leading" secondItem="06X-Wj-NTs" secondAttribute="leading" id="Zin-xu-vzM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="bg5-zg-Utf" secondAttribute="bottom" id="cdP-Lm-x7E"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfx-lo-1xM" userLabel="TopView">
@@ -265,6 +306,7 @@
                     <connections>
                         <outlet property="mainView" destination="Zsi-6q-fO2" id="0b5-QR-Kh1"/>
                         <outlet property="progressBar" destination="Hyr-Ns-bfF" id="vnh-fe-VXc"/>
+                        <outlet property="pullBarBackground" destination="06X-Wj-NTs" id="9cQ-2D-UFI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="417-fE-pp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -285,22 +327,35 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GbR-EU-m73">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWH-nN-ZWT" userLabel="PulldownView">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-FS-eju" userLabel="PulldownView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLp-pO-l86">
-                                                        <rect key="frame" x="174.5" y="10" width="26" height="10"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOP-yo-nAC" customClass="TopRoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACw-lZ-lvc">
+                                                                <rect key="frame" x="174.5" y="10" width="26" height="10"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="10" id="bhq-5N-xCS"/>
+                                                                    <constraint firstAttribute="width" constant="26" id="gsz-gp-rc4"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Pulldown"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="10" id="irl-zB-rvo"/>
-                                                            <constraint firstAttribute="width" constant="26" id="mW8-1Y-taG"/>
+                                                            <constraint firstItem="ACw-lZ-lvc" firstAttribute="centerY" secondItem="kOP-yo-nAC" secondAttribute="centerY" id="2M4-r9-q4L"/>
+                                                            <constraint firstItem="ACw-lZ-lvc" firstAttribute="centerX" secondItem="kOP-yo-nAC" secondAttribute="centerX" id="IwC-dP-QOI"/>
                                                         </constraints>
-                                                        <state key="normal" image="Pulldown"/>
-                                                    </button>
+                                                    </view>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Zg2-mt-aLr"/>
-                                                    <constraint firstItem="NLp-pO-l86" firstAttribute="centerY" secondItem="bWH-nN-ZWT" secondAttribute="centerY" id="c5f-EE-FqL"/>
-                                                    <constraint firstItem="NLp-pO-l86" firstAttribute="centerX" secondItem="bWH-nN-ZWT" secondAttribute="centerX" id="fJq-uI-gYS"/>
+                                                    <constraint firstAttribute="bottom" secondItem="kOP-yo-nAC" secondAttribute="bottom" id="SOr-Rg-c2o"/>
+                                                    <constraint firstAttribute="trailing" secondItem="kOP-yo-nAC" secondAttribute="trailing" id="bia-Av-j7b"/>
+                                                    <constraint firstItem="kOP-yo-nAC" firstAttribute="leading" secondItem="Mdl-FS-eju" secondAttribute="leading" id="f3C-Dm-IaZ"/>
+                                                    <constraint firstItem="kOP-yo-nAC" firstAttribute="top" secondItem="Mdl-FS-eju" secondAttribute="top" id="feo-pK-iz0"/>
+                                                    <constraint firstAttribute="height" constant="30" id="uUQ-cn-YJr"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hc9-F2-SAx" userLabel="TopView">
@@ -352,6 +407,7 @@
                     <connections>
                         <outlet property="mainView" destination="z1E-Vo-6ug" id="pZZ-9f-bGV"/>
                         <outlet property="progressBar" destination="Rih-oc-Zmd" id="ZvL-0I-9Vn"/>
+                        <outlet property="pullBarBackground" destination="Mdl-FS-eju" id="MLS-81-UIJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAb-fb-RMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -372,22 +428,35 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Kl-Tr-4G4">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOQ-ls-Kdf" userLabel="PulldownView">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtH-DL-6D0" userLabel="PulldownView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27O-JO-EeL">
-                                                        <rect key="frame" x="174.5" y="10" width="26" height="10"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b71-b7-fFE" customClass="TopRoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzP-UM-fnk">
+                                                                <rect key="frame" x="174.5" y="10" width="26" height="10"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="26" id="Jy2-el-gyl"/>
+                                                                    <constraint firstAttribute="height" constant="10" id="Lgp-So-Ls8"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Pulldown"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="26" id="3cM-tY-hsG"/>
-                                                            <constraint firstAttribute="height" constant="10" id="5bT-zp-0AE"/>
+                                                            <constraint firstItem="gzP-UM-fnk" firstAttribute="centerX" secondItem="b71-b7-fFE" secondAttribute="centerX" id="N6r-98-fQO"/>
+                                                            <constraint firstItem="gzP-UM-fnk" firstAttribute="centerY" secondItem="b71-b7-fFE" secondAttribute="centerY" id="XHY-b4-tHJ"/>
                                                         </constraints>
-                                                        <state key="normal" image="Pulldown"/>
-                                                    </button>
+                                                    </view>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Gci-MK-xbb"/>
-                                                    <constraint firstItem="27O-JO-EeL" firstAttribute="centerY" secondItem="ZOQ-ls-Kdf" secondAttribute="centerY" id="e6A-RX-fnc"/>
-                                                    <constraint firstItem="27O-JO-EeL" firstAttribute="centerX" secondItem="ZOQ-ls-Kdf" secondAttribute="centerX" id="tJj-Zr-p03"/>
+                                                    <constraint firstAttribute="bottom" secondItem="b71-b7-fFE" secondAttribute="bottom" id="FBm-ld-Yoc"/>
+                                                    <constraint firstItem="b71-b7-fFE" firstAttribute="leading" secondItem="xtH-DL-6D0" secondAttribute="leading" id="FVG-8v-8xm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="b71-b7-fFE" secondAttribute="trailing" id="VCI-yu-w8e"/>
+                                                    <constraint firstAttribute="height" constant="30" id="Vfs-3b-1j2"/>
+                                                    <constraint firstItem="b71-b7-fFE" firstAttribute="top" secondItem="xtH-DL-6D0" secondAttribute="top" id="zFl-Sl-dOZ"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWy-Vv-RKa" userLabel="TopView">
@@ -439,6 +508,7 @@
                     <connections>
                         <outlet property="mainView" destination="SpA-PQ-zx0" id="4Ju-cS-Pdi"/>
                         <outlet property="progressBar" destination="jLf-7F-6bg" id="fn3-UE-msu"/>
+                        <outlet property="pullBarBackground" destination="xtH-DL-6D0" id="a4j-No-Dz9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sSN-Me-iMi" userLabel="First Responder" sceneMemberID="firstResponder"/>

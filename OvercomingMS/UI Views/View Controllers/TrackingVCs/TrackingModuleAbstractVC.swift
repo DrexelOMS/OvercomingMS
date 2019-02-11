@@ -15,6 +15,7 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     
     //var progressBar : TrackingModuleProgressBar
     
+    @IBOutlet weak var pullBarBackground: UIView!
     @IBOutlet weak var progressBar: TrackingProgressBar!
     
     @IBOutlet var mainView : UIView!
@@ -41,6 +42,8 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         // Do any additional setup after loading the view.
         updateProgressBar()
         progressBar.colorTheme = theme
+        pullBarBackground.backgroundColor = theme
+        view.backgroundColor = theme
     }
     
     func initializeStackView(defaultView: SlidingAbstractSVC) {
