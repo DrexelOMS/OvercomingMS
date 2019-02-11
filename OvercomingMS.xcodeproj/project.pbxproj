@@ -89,6 +89,7 @@
 		0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */; };
 		0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
+		0C8181292211D472008B5A2D /* FoodScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181282211D472008B5A2D /* FoodScreens.storyboard */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		500F74DB220CCFCC00752C98 /* MeditationHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DA220CCFCC00752C98 /* MeditationHistoryDBT.swift */; };
 		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
@@ -207,6 +208,7 @@
 		0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPauseCircleButton.swift; sourceTree = "<group>"; };
 		0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishCircleButton.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
+		0C8181282211D472008B5A2D /* FoodScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodScreens.storyboard; sourceTree = "<group>"; };
 		500F74DA220CCFCC00752C98 /* MeditationHistoryDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBT.swift; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 				0AD07F7921FE3EA200C55831 /* AnalysisViewController.swift */,
 				0AD07F7A21FE3EA200C55831 /* TrackingViewController.swift */,
 				0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */,
+				0C8181282211D472008B5A2D /* FoodScreens.storyboard */,
 			);
 			path = CoreyFrontendUI;
 			sourceTree = "<group>";
@@ -819,6 +822,7 @@
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
 				0A1FEC532204E79D006CED70 /* QuickCompleteFood.storyboard in Resources */,
 				0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */,
+				0C8181292211D472008B5A2D /* FoodScreens.storyboard in Resources */,
 				0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
