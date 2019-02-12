@@ -58,6 +58,8 @@ class SwipeDownCloseViewController: DismissableVC, UIGestureRecognizerDelegate {
 //    }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(gesture:)))
         swipeDown.direction = UISwipeGestureRecognizer.Direction.down
         view.addGestureRecognizer(swipeDown)
