@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PullBarSVC" customModule="OvercomingMS" customModuleProvider="target">
+            <connections>
+                <outlet property="pullDownView" destination="iLF-Z4-fYF" id="xtD-qL-Ly2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sVJ-tA-gXw" userLabel="WhiteBackground">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLF-Z4-fYF" userLabel="PulldownView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8CZ-pI-Dz1" customClass="TopRoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7q-oG-k05">
+                                            <rect key="frame" x="174.5" y="10" width="26" height="10"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="26" id="LYB-Nf-NG4"/>
+                                                <constraint firstAttribute="height" constant="10" id="zit-Rt-WVY"/>
+                                            </constraints>
+                                            <state key="normal" image="Pulldown"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="k7q-oG-k05" firstAttribute="centerX" secondItem="8CZ-pI-Dz1" secondAttribute="centerX" id="VQu-6B-kvf"/>
+                                        <constraint firstItem="k7q-oG-k05" firstAttribute="centerY" secondItem="8CZ-pI-Dz1" secondAttribute="centerY" id="ig7-5S-R5c"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="8CZ-pI-Dz1" secondAttribute="trailing" id="06s-bW-g4D"/>
+                                <constraint firstItem="8CZ-pI-Dz1" firstAttribute="leading" secondItem="iLF-Z4-fYF" secondAttribute="leading" id="HLE-bH-GGd"/>
+                                <constraint firstItem="8CZ-pI-Dz1" firstAttribute="top" secondItem="iLF-Z4-fYF" secondAttribute="top" id="Lds-z1-bfy"/>
+                                <constraint firstAttribute="bottom" secondItem="8CZ-pI-Dz1" secondAttribute="bottom" id="hg9-61-baT"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="AVs-lb-4zY"/>
+                        <constraint firstAttribute="trailing" secondItem="iLF-Z4-fYF" secondAttribute="trailing" id="Rrw-t9-7Di"/>
+                        <constraint firstItem="iLF-Z4-fYF" firstAttribute="top" secondItem="sVJ-tA-gXw" secondAttribute="top" id="ZjD-rU-53e"/>
+                        <constraint firstItem="iLF-Z4-fYF" firstAttribute="leading" secondItem="sVJ-tA-gXw" secondAttribute="leading" id="qCt-fL-q6l"/>
+                        <constraint firstAttribute="bottom" secondItem="iLF-Z4-fYF" secondAttribute="bottom" id="tJK-eR-374"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sVJ-tA-gXw" secondAttribute="trailing" id="7Zi-qr-nEK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="sVJ-tA-gXw" secondAttribute="bottom" id="Ay0-Hi-fPO"/>
+                <constraint firstItem="sVJ-tA-gXw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GKY-Dk-x3z"/>
+                <constraint firstItem="sVJ-tA-gXw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hyT-vb-UCE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Pulldown" width="689" height="302.5"/>
+    </resources>
+</document>
