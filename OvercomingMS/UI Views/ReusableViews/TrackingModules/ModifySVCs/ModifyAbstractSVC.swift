@@ -55,10 +55,14 @@ class ModifyAbstractSVC : SlidingAbstractSVC, UITextFieldDelegate {
             typeTextFieldPressed()
         }
         else if textField == timeTextField {
-            timeTextFieldPressed()
+            //timeTextFieldPressed()
+            showDatePicker()
+            return true
         }
         else if textField == minutesTextField {
-            minutesTextFieldPressed()
+            //minutesTextFieldPressed()
+            showLengthPicker()
+            return true
         }
         return false
     }
@@ -109,35 +113,73 @@ class ModifyAbstractSVC : SlidingAbstractSVC, UITextFieldDelegate {
     }
     
     //MARK: Alternative picker method
+   
+    let typePicker = UIPickerView()
+    let datePicker = UIDatePicker()
+    let lengthPicker = UIDatePicker()
+
+    func showDatePicker(){
+        //Formate Date
+        datePicker.datePickerMode = .time
+        datePicker.date = selectedStartTime ?? Date()
+
+        //ToolBar
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneDatePicker));
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPicker));
+
+        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+
+        timeTextField.inputAccessoryView = toolbar
+        timeTextField.inputView = datePicker
+
+    }
     
-//    let datePicker = UIDatePicker()
-//
-//    func showDatePicker(){
-//        //Formate Date
-//        datePicker.datePickerMode = .dateAndTime
-//
-//        //ToolBar
-//        let toolbar = UIToolbar();
-//        toolbar.sizeToFit()
-//        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
-//        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-//        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
-//
-//        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
-//
-//        timeTextField.inputAccessoryView = toolbar
-//        timeTextField.inputView = datePicker
-//
-//    }
-//
-//    @objc func donedatePicker(){
-//        timeTextField.text = OMSDateAccessor.getDateTime(date: datePicker.date)
-//        parentVC.view.endEditing(true)
-//    }
-//
-//    @objc func cancelDatePicker(){
-//        parentVC.view.endEditing(true)
-//    }
+    func showLengthPicker(){
+        //Formate Date
+        lengthPicker.datePickerMode = .countDownTimer
+        lengthPicker.countDownDuration = getTimeInterval(fromMinutes: selectedLength ?? 0)
+        
+        //ToolBar
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneLengthPicker));
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPicker));
+        
+        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+        
+        minutesTextField.inputAccessoryView = toolbar
+        minutesTextField.inputView = lengthPicker
+        
+    }
+
+    @objc func doneDatePicker(){
+        self.selectedStartTime = datePicker.date
+        timeTextField.text = OMSDateAccessor.getDateTime(date: datePicker.date)
+        parentVC.view.endEditing(true)
+    }
+
+    @objc func doneLengthPicker(){
+        self.selectedLength = getMinutes(fromInterval: lengthPicker.countDownDuration)
+        print(getMinutes(fromInterval: lengthPicker.countDownDuration))
+        minutesTextField.text = "\(getMinutes(fromInterval: lengthPicker.countDownDuration)) .min"
+        parentVC.view.endEditing(true)
+    }
+    
+    func getMinutes(fromInterval: TimeInterval) -> Int {
+        return Int(fromInterval / 60)
+    }
+    
+    func getTimeInterval(fromMinutes: Int) -> TimeInterval {
+        return TimeInterval(fromMinutes * 60)
+    }
+    
+    @objc func cancelPicker(){
+        parentVC.view.endEditing(true)
+    }
     
     
 }
