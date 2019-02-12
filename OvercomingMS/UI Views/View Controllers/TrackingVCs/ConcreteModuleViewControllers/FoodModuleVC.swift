@@ -17,7 +17,6 @@ class FoodModuleVC: TrackingModuleAbstractVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        progressBar.setTitle(title: "Food")
         
         //initializeStackView(defaultView: VitaminDMainSVC())
     }
