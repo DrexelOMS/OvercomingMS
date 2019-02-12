@@ -89,6 +89,18 @@
 		0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */; };
 		0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
+		0C8181382212F910008B5A2D /* Avenir-BlackOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C81812C2212F90F008B5A2D /* Avenir-BlackOblique.ttf */; };
+		0C8181392212F910008B5A2D /* Avenir-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C81812D2212F90F008B5A2D /* Avenir-Light.ttf */; };
+		0C81813A2212F910008B5A2D /* Avenir-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C81812E2212F90F008B5A2D /* Avenir-Medium.ttf */; };
+		0C81813B2212F910008B5A2D /* Avenir-MediumOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C81812F2212F90F008B5A2D /* Avenir-MediumOblique.ttf */; };
+		0C81813C2212F910008B5A2D /* Avenir-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181302212F90F008B5A2D /* Avenir-Black.ttf */; };
+		0C81813D2212F910008B5A2D /* Avenir-BookOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181312212F910008B5A2D /* Avenir-BookOblique.ttf */; };
+		0C81813E2212F910008B5A2D /* Avenir-HeavyOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181322212F910008B5A2D /* Avenir-HeavyOblique.ttf */; };
+		0C81813F2212F910008B5A2D /* Avenir-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181332212F910008B5A2D /* Avenir-Roman.ttf */; };
+		0C8181402212F910008B5A2D /* Avenir-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181342212F910008B5A2D /* Avenir-Book.ttf */; };
+		0C8181412212F910008B5A2D /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181352212F910008B5A2D /* Avenir-Heavy.ttf */; };
+		0C8181422212F910008B5A2D /* Avenir-LightOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181362212F910008B5A2D /* Avenir-LightOblique.ttf */; };
+		0C8181432212F910008B5A2D /* Avenir-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181372212F910008B5A2D /* Avenir-Oblique.ttf */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		500F74DB220CCFCC00752C98 /* MeditationHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DA220CCFCC00752C98 /* MeditationHistoryDBT.swift */; };
 		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
@@ -207,6 +219,18 @@
 		0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPauseCircleButton.swift; sourceTree = "<group>"; };
 		0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishCircleButton.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
+		0C81812C2212F90F008B5A2D /* Avenir-BlackOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir-BlackOblique.ttf"; path = "../../../../../OMS Assets/1. FONTS/Avenir Font/Avenir-BlackOblique.ttf"; sourceTree = "<group>"; };
+		0C81812D2212F90F008B5A2D /* Avenir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir-Light.ttf"; path = "../../../../../OMS Assets/1. FONTS/Avenir Font/Avenir-Light.ttf"; sourceTree = "<group>"; };
+		0C81812E2212F90F008B5A2D /* Avenir-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir-Medium.ttf"; path = "../../../../../OMS Assets/1. FONTS/Avenir Font/Avenir-Medium.ttf"; sourceTree = "<group>"; };
+		0C81812F2212F90F008B5A2D /* Avenir-MediumOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir-MediumOblique.ttf"; path = "../../../../../OMS Assets/1. FONTS/Avenir Font/Avenir-MediumOblique.ttf"; sourceTree = "<group>"; };
+		0C8181302212F90F008B5A2D /* Avenir-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir-Black.ttf"; path = "../../../../../OMS Assets/1. FONTS/Avenir Font/Avenir-Black.ttf"; sourceTree = "<group>"; };
+		0C8181312212F910008B5A2D /* Avenir-BookOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir-BookOblique.ttf"; path = "../../../../../OMS Assets/1. FONTS/Avenir Font/Avenir-BookOblique.ttf"; sourceTree = "<group>"; };
+		0C8181322212F910008B5A2D /* Avenir-HeavyOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir-HeavyOblique.ttf"; path = "../../../../../OMS Assets/1. FONTS/Avenir Font/Avenir-HeavyOblique.ttf"; sourceTree = "<group>"; };
+		0C8181332212F910008B5A2D /* Avenir-Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir-Roman.ttf"; path = "../../../../../OMS Assets/1. FONTS/Avenir Font/Avenir-Roman.ttf"; sourceTree = "<group>"; };
+		0C8181342212F910008B5A2D /* Avenir-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir-Book.ttf"; path = "../../../../../OMS Assets/1. FONTS/Avenir Font/Avenir-Book.ttf"; sourceTree = "<group>"; };
+		0C8181352212F910008B5A2D /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir-Heavy.ttf"; path = "../../../../../OMS Assets/1. FONTS/Avenir Font/Avenir-Heavy.ttf"; sourceTree = "<group>"; };
+		0C8181362212F910008B5A2D /* Avenir-LightOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir-LightOblique.ttf"; path = "../../../../../OMS Assets/1. FONTS/Avenir Font/Avenir-LightOblique.ttf"; sourceTree = "<group>"; };
+		0C8181372212F910008B5A2D /* Avenir-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir-Oblique.ttf"; path = "../../../../../OMS Assets/1. FONTS/Avenir Font/Avenir-Oblique.ttf"; sourceTree = "<group>"; };
 		500F74DA220CCFCC00752C98 /* MeditationHistoryDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBT.swift; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
@@ -386,6 +410,18 @@
 			children = (
 				0A2BAA6C2204AFC3004074F3 /* SIL Open Font License.txt */,
 				0A2BAA6D2204AFC3004074F3 /* Quicksand-BoldItalic.otf */,
+				0C8181302212F90F008B5A2D /* Avenir-Black.ttf */,
+				0C81812C2212F90F008B5A2D /* Avenir-BlackOblique.ttf */,
+				0C8181342212F910008B5A2D /* Avenir-Book.ttf */,
+				0C8181312212F910008B5A2D /* Avenir-BookOblique.ttf */,
+				0C8181352212F910008B5A2D /* Avenir-Heavy.ttf */,
+				0C8181322212F910008B5A2D /* Avenir-HeavyOblique.ttf */,
+				0C81812D2212F90F008B5A2D /* Avenir-Light.ttf */,
+				0C8181362212F910008B5A2D /* Avenir-LightOblique.ttf */,
+				0C81812E2212F90F008B5A2D /* Avenir-Medium.ttf */,
+				0C81812F2212F90F008B5A2D /* Avenir-MediumOblique.ttf */,
+				0C8181372212F910008B5A2D /* Avenir-Oblique.ttf */,
+				0C8181332212F910008B5A2D /* Avenir-Roman.ttf */,
 				0A2BAA6E2204AFC3004074F3 /* Quicksand-Bold.otf */,
 				0A2BAA6F2204AFC3004074F3 /* Quicksand-LightItalic.otf */,
 				0A2BAA702204AFC3004074F3 /* Quicksand-Italic.otf */,
@@ -796,30 +832,42 @@
 				0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */,
 				0AD07F8C21FE703D00C55831 /* TrackingFoodBar.xib in Resources */,
 				0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */,
+				0C81813C2212F910008B5A2D /* Avenir-Black.ttf in Resources */,
 				505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */,
 				8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */,
 				0A2BAA752204AFC3004074F3 /* Quicksand-BoldItalic.otf in Resources */,
 				0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */,
+				0C8181402212F910008B5A2D /* Avenir-Book.ttf in Resources */,
+				0C8181392212F910008B5A2D /* Avenir-Light.ttf in Resources */,
 				0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */,
 				0AD94DAF2209BC0100B5C2BA /* ModifyAbstractSVC.xib in Resources */,
 				0AA528702202828300CCFEE7 /* BlueButtonSVC.xib in Resources */,
 				0A1FEC4F2204E01C006CED70 /* TrackingModuleStoryboard.storyboard in Resources */,
 				0A2BAA742204AFC3004074F3 /* SIL Open Font License.txt in Resources */,
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
+				0C8181432212F910008B5A2D /* Avenir-Oblique.ttf in Resources */,
 				0A1FEC6E220638A7006CED70 /* Routine3PartCell.xib in Resources */,
 				0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */,
+				0C8181412212F910008B5A2D /* Avenir-Heavy.ttf in Resources */,
+				0C81813D2212F910008B5A2D /* Avenir-BookOblique.ttf in Resources */,
 				0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */,
+				0C8181422212F910008B5A2D /* Avenir-LightOblique.ttf in Resources */,
+				0C81813A2212F910008B5A2D /* Avenir-Medium.ttf in Resources */,
 				0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
 				0AD94DBE220A5BF700B5C2BA /* TwoSquareButtonSVC.xib in Resources */,
+				0C81813E2212F910008B5A2D /* Avenir-HeavyOblique.ttf in Resources */,
 				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
+				0C81813F2212F910008B5A2D /* Avenir-Roman.ttf in Resources */,
+				0C81813B2212F910008B5A2D /* Avenir-MediumOblique.ttf in Resources */,
 				0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */,
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
 				0A1FEC532204E79D006CED70 /* QuickCompleteFood.storyboard in Resources */,
 				0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */,
 				0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */,
+				0C8181382212F910008B5A2D /* Avenir-BlackOblique.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
