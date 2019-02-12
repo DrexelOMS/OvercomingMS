@@ -38,10 +38,14 @@
 		0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */; };
 		0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */; };
 		0A93EA3F2210D1FC0063A892 /* FoodModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3E2210D1FC0063A892 /* FoodModuleVC.swift */; };
-		0A93EA4122122D840063A892 /* TopRoundCornersUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA4022122D840063A892 /* TopRoundCornersUIView.swift */; };
-		0A93EA45221316490063A892 /* PullBarSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93EA44221316490063A892 /* PullBarSVC.xib */; };
-		0A93EA472213165D0063A892 /* PullBarSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA462213165D0063A892 /* PullBarSVC.swift */; };
-		0A93EA4922131C2D0063A892 /* Omega3ModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA4822131C2D0063A892 /* Omega3ModuleVC.swift */; };
+		0A93EA4122122D840063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0A93EA45221316490063A892 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		0A93EA472213165D0063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0A93EA4922131C2D0063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5622132BCF0063A892 /* PullBarSVC.swift */; };
+		0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93EA5722132BCF0063A892 /* PullBarSVC.xib */; };
+		0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5A22132BF90063A892 /* Omega3ModuleVC.swift */; };
+		0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */; };
 		0AA5284922020BF500CCFEE7 /* ExerciseHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284822020BF500CCFEE7 /* ExerciseHistoryDBT.swift */; };
 		0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */; };
 		0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */; };
@@ -162,10 +166,22 @@
 		0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationModuleVC.swift; sourceTree = "<group>"; };
 		0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDModuleVC.swift; sourceTree = "<group>"; };
 		0A93EA3E2210D1FC0063A892 /* FoodModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodModuleVC.swift; sourceTree = "<group>"; };
-		0A93EA4022122D840063A892 /* TopRoundCornersUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRoundCornersUIView.swift; sourceTree = "<group>"; };
-		0A93EA44221316490063A892 /* PullBarSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PullBarSVC.xib; sourceTree = "<group>"; };
-		0A93EA462213165D0063A892 /* PullBarSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullBarSVC.swift; sourceTree = "<group>"; };
-		0A93EA4822131C2D0063A892 /* Omega3ModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3ModuleVC.swift; sourceTree = "<group>"; };
+		0A93EA4A22132AC50063A892 /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
+		0A93EA4B22132AC50063A892 /* Avenir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Light.ttf"; sourceTree = "<group>"; };
+		0A93EA4C22132AC60063A892 /* Avenir-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Medium.ttf"; sourceTree = "<group>"; };
+		0A93EA4D22132AC60063A892 /* Avenir-BookOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-BookOblique.ttf"; sourceTree = "<group>"; };
+		0A93EA4E22132AC60063A892 /* Avenir-LightOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-LightOblique.ttf"; sourceTree = "<group>"; };
+		0A93EA4F22132AC60063A892 /* Avenir-HeavyOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-HeavyOblique.ttf"; sourceTree = "<group>"; };
+		0A93EA5022132AC60063A892 /* Avenir-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Black.ttf"; sourceTree = "<group>"; };
+		0A93EA5122132AC70063A892 /* Avenir-MediumOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-MediumOblique.ttf"; sourceTree = "<group>"; };
+		0A93EA5222132AC70063A892 /* Avenir-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Oblique.ttf"; sourceTree = "<group>"; };
+		0A93EA5322132AC70063A892 /* Avenir-Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Roman.ttf"; sourceTree = "<group>"; };
+		0A93EA5422132AC80063A892 /* Avenir-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Book.ttf"; sourceTree = "<group>"; };
+		0A93EA5522132AC80063A892 /* Avenir-BlackOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-BlackOblique.ttf"; sourceTree = "<group>"; };
+		0A93EA5622132BCF0063A892 /* PullBarSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullBarSVC.swift; sourceTree = "<group>"; };
+		0A93EA5722132BCF0063A892 /* PullBarSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PullBarSVC.xib; sourceTree = "<group>"; };
+		0A93EA5A22132BF90063A892 /* Omega3ModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3ModuleVC.swift; sourceTree = "<group>"; };
+		0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRoundCornersUIView.swift; sourceTree = "<group>"; };
 		0AA5284822020BF500CCFEE7 /* ExerciseHistoryDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryDBT.swift; sourceTree = "<group>"; };
 		0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleAbstractVC.swift; sourceTree = "<group>"; };
 		0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleVC.swift; sourceTree = "<group>"; };
@@ -374,8 +390,8 @@
 		0A2BA61A220292A2004074F3 /* ConcreteModuleViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A93EA5A22132BF90063A892 /* Omega3ModuleVC.swift */,
 				0A93EA3E2210D1FC0063A892 /* FoodModuleVC.swift */,
-				0A93EA4822131C2D0063A892 /* Omega3ModuleVC.swift */,
 				0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */,
 				0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */,
 				0AD94DDA220E0D7600B5C2BA /* MeditationModuleVC.swift */,
@@ -398,6 +414,18 @@
 		0A2BAA6B2204AFC3004074F3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0A93EA5022132AC60063A892 /* Avenir-Black.ttf */,
+				0A93EA5522132AC80063A892 /* Avenir-BlackOblique.ttf */,
+				0A93EA5422132AC80063A892 /* Avenir-Book.ttf */,
+				0A93EA4D22132AC60063A892 /* Avenir-BookOblique.ttf */,
+				0A93EA4A22132AC50063A892 /* Avenir-Heavy.ttf */,
+				0A93EA4F22132AC60063A892 /* Avenir-HeavyOblique.ttf */,
+				0A93EA4B22132AC50063A892 /* Avenir-Light.ttf */,
+				0A93EA4E22132AC60063A892 /* Avenir-LightOblique.ttf */,
+				0A93EA4C22132AC60063A892 /* Avenir-Medium.ttf */,
+				0A93EA5122132AC70063A892 /* Avenir-MediumOblique.ttf */,
+				0A93EA5222132AC70063A892 /* Avenir-Oblique.ttf */,
+				0A93EA5322132AC70063A892 /* Avenir-Roman.ttf */,
 				0A2BAA6C2204AFC3004074F3 /* SIL Open Font License.txt */,
 				0A2BAA6D2204AFC3004074F3 /* Quicksand-BoldItalic.otf */,
 				0A2BAA6E2204AFC3004074F3 /* Quicksand-Bold.otf */,
@@ -441,8 +469,8 @@
 		0A93EA43221316350063A892 /* PullBarSVC */ = {
 			isa = PBXGroup;
 			children = (
-				0A93EA44221316490063A892 /* PullBarSVC.xib */,
-				0A93EA462213165D0063A892 /* PullBarSVC.swift */,
+				0A93EA5622132BCF0063A892 /* PullBarSVC.swift */,
+				0A93EA5722132BCF0063A892 /* PullBarSVC.xib */,
 			);
 			path = PullBarSVC;
 			sourceTree = "<group>";
@@ -512,9 +540,9 @@
 		0AD07F9121FE84E000C55831 /* SharedUIViewSupers */ = {
 			isa = PBXGroup;
 			children = (
+				0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */,
 				0AA5285A2202623B00CCFEE7 /* RoundButton.swift */,
 				0AD07F8721FE637600C55831 /* RoundCornersUIView.swift */,
-				0A93EA4022122D840063A892 /* TopRoundCornersUIView.swift */,
 			);
 			path = SharedUIViewSupers;
 			sourceTree = "<group>";
@@ -839,7 +867,7 @@
 				0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
 				0AD94DBE220A5BF700B5C2BA /* TwoSquareButtonSVC.xib in Resources */,
-				0A93EA45221316490063A892 /* PullBarSVC.xib in Resources */,
+				0A93EA45221316490063A892 /* (null) in Resources */,
 				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
 				0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */,
@@ -847,6 +875,7 @@
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
 				0A1FEC532204E79D006CED70 /* QuickCompleteFood.storyboard in Resources */,
 				0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */,
+				0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */,
 				0C8181292211D472008B5A2D /* FoodScreens.storyboard in Resources */,
 				0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */,
 			);
@@ -995,7 +1024,7 @@
 				0AF8E0DB2209248700E1EC33 /* StopwatchAbstractSVC.swift in Sources */,
 				0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */,
 				6130938621E815AF00249B24 /* DietViewController.swift in Sources */,
-				0A93EA472213165D0063A892 /* PullBarSVC.swift in Sources */,
+				0A93EA472213165D0063A892 /* (null) in Sources */,
 				0A1FEC61220529D7006CED70 /* TrackingModulesDBS.swift in Sources */,
 				0AD94DCC220CEE9800B5C2BA /* ExerciseSelectedItem.swift in Sources */,
 				0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */,
@@ -1004,6 +1033,7 @@
 				501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */,
 				0A1FEC5F220529A9006CED70 /* ExerciseHistoryDBS.swift in Sources */,
 				0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */,
+				0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */,
 				0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */,
 				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,
 				0A2BAA662202A24E004074F3 /* TrackingDataStrategies.swift in Sources */,
@@ -1023,6 +1053,7 @@
 				0AD94DD1220DE7F200B5C2BA /* DeleteConfirmationSVC.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
 				0AD94DD7220DEEB300B5C2BA /* DeleteCircleButton.swift in Sources */,
+				0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */,
 				0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */,
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
@@ -1035,13 +1066,14 @@
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AD94DB12209BC2400B5C2BA /* ModifyAbstractSVC.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
-				0A93EA4122122D840063A892 /* TopRoundCornersUIView.swift in Sources */,
+				0A93EA4122122D840063A892 /* (null) in Sources */,
 				0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */,
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
 				0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */,
-				0A93EA4922131C2D0063A892 /* Omega3ModuleVC.swift in Sources */,
+				0A93EA4922131C2D0063A892 /* (null) in Sources */,
 				0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */,
+				0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */,
 				0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */,
 				0AD94DD9220DF8D000B5C2BA /* ExerciseEditSVC.swift in Sources */,
 				500F74DB220CCFCC00752C98 /* MeditationHistoryDBT.swift in Sources */,

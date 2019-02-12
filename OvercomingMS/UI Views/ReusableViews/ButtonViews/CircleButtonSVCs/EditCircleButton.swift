@@ -11,8 +11,8 @@ import UIKit
 class EditCircleButton : CircleButtonSVC {
     
     override func customSetup() {
-        button.setTitle("E", for: .normal)
-        //buttonImage = UIImage(named: "Edit")
+        //button.setTitle("E", for: .normal)
+        buttonImage = UIImage(named: "Edit")
         label.text = "Edit"
     }
 }

@@ -11,6 +11,18 @@
 		<string>Quicksand-Light.otf</string>
 		<string>Quicksand-LightItalic.otf</string>
 		<string>Quicksand-Regular.otf</string>
+		<string>Avenir-Black.ttf</string>
+		<string>Avenir-BlackOblique.ttf</string>
+		<string>Avenir-Book.ttf</string>
+		<string>Avenir-BookOblique.ttf</string>
+		<string>Avenir-Heavy.ttf</string>
+		<string>Avenir-HeavyOblique.ttf</string>
+		<string>Avenir-Light.ttf</string>
+		<string>Avenir-LightOblique.ttf</string>
+		<string>Avenir-Medium.ttf</string>
+		<string>Avenir-MediumOblique.ttf</string>
+		<string>Avenir-Oblique.ttf</string>
+		<string>Avenir-Roman.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
