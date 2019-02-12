@@ -162,7 +162,6 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                 </subviews>
-                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <constraints>
                                                                                     <constraint firstItem="GxO-ht-Md3" firstAttribute="top" secondItem="nOG-r5-tcv" secondAttribute="top" id="cEl-QS-3m1"/>
                                                                                     <constraint firstItem="GxO-ht-Md3" firstAttribute="centerX" secondItem="nOG-r5-tcv" secondAttribute="centerX" id="hw3-Xz-gGf"/>
@@ -183,7 +182,6 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                 </subviews>
-                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <constraints>
                                                                                     <constraint firstItem="fnA-gZ-ep5" firstAttribute="centerY" secondItem="K4N-4V-Z4k" secondAttribute="centerY" id="Z6u-Sy-O5g"/>
                                                                                     <constraint firstItem="fnA-gZ-ep5" firstAttribute="centerX" secondItem="K4N-4V-Z4k" secondAttribute="centerX" id="fIL-PY-cKg"/>
@@ -204,7 +202,6 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                 </subviews>
-                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <constraints>
                                                                                     <constraint firstItem="E3e-C3-RLP" firstAttribute="centerX" secondItem="IP6-JN-ySF" secondAttribute="centerX" id="7ef-9s-geD"/>
                                                                                     <constraint firstItem="E3e-C3-RLP" firstAttribute="top" secondItem="IP6-JN-ySF" secondAttribute="top" id="AKY-68-33I"/>
@@ -213,7 +210,6 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="bottom" secondItem="t0s-Nk-0Cq" secondAttribute="bottom" id="FdA-oy-axf"/>
                                                                     <constraint firstItem="t0s-Nk-0Cq" firstAttribute="leading" secondItem="lvo-lG-7QB" secondAttribute="leading" id="Jxs-dI-P15"/>
@@ -246,7 +242,6 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="2m0-fw-ejm" firstAttribute="leading" secondItem="KyE-NP-hph" secondAttribute="leading" id="7oP-Xy-hSi"/>
                                                     <constraint firstAttribute="trailing" secondItem="2m0-fw-ejm" secondAttribute="trailing" id="LEZ-6s-4ih"/>
@@ -266,7 +261,6 @@
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IO1-W9-0dD" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="86.333333333333343" width="374" height="74"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.0078431372550000003" green="0.63529411759999999" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -276,7 +270,6 @@
                                                             </view>
                                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-va-Kq1" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="172.33333333333331" width="374" height="74.333333333333314"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="1" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -286,7 +279,6 @@
                                                             </view>
                                                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYS-8V-zpv" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="258.66666666666669" width="374" height="74"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Exercise"/>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
@@ -296,7 +288,6 @@
                                                             </view>
                                                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQQ-l4-VC0" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="344.66666666666669" width="374" height="74.333333333333314"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.40000000000000002" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -306,7 +297,6 @@
                                                             </view>
                                                             <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-CW-Z5M" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="431" width="374" height="74"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.46274509800000002" green="0.67843137249999996" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -317,7 +307,6 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="uG2-RS-f9c" firstAttribute="top" secondItem="2x1-2z-34U" secondAttribute="top" id="JFf-GS-IyB"/>
                                                     <constraint firstItem="uG2-RS-f9c" firstAttribute="leading" secondItem="2x1-2z-34U" secondAttribute="leading" id="RpW-Bk-gwf"/>
@@ -328,7 +317,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="DWO-Z2-Tem" firstAttribute="top" secondItem="0Aa-cs-GRV" secondAttribute="top" id="994-Tf-eiE"/>
                                     <constraint firstAttribute="trailing" secondItem="DWO-Z2-Tem" secondAttribute="trailing" constant="15" id="daj-eM-iwM"/>
@@ -344,7 +332,6 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqo-wA-Hr4" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="131.33333333333334" height="100"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Previous"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Goals"/>
@@ -352,7 +339,6 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqb-Vo-Ctx" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                 <rect key="frame" x="136.33333333333331" y="0.0" width="131.33333333333331" height="100"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Progress Day"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Timer"/>
@@ -360,7 +346,6 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USw-ho-yen" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                 <rect key="frame" x="272.66666666666669" y="0.0" width="131.33333333333331" height="100"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Next"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Settings"/>
@@ -369,7 +354,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="IwL-Wh-fNr" firstAttribute="top" secondItem="uRf-zh-af2" secondAttribute="top" id="7dG-ZM-Oq3"/>
                                     <constraint firstAttribute="bottom" secondItem="IwL-Wh-fNr" secondAttribute="bottom" id="Nje-ah-G4P"/>
@@ -379,7 +363,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uRf-zh-af2" firstAttribute="leading" secondItem="50K-Z7-P6m" secondAttribute="leading" constant="5" id="1qJ-Lc-iCx"/>
                             <constraint firstItem="50K-Z7-P6m" firstAttribute="trailing" secondItem="uRf-zh-af2" secondAttribute="trailing" constant="5" id="LZW-wh-FJc"/>
