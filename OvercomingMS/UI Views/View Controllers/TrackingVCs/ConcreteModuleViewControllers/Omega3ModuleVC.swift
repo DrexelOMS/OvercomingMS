@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class FoodModuleVC: TrackingModuleAbstractVC {
+class Omega3ModuleVC: TrackingModuleAbstractVC {
     
     //private let vitaminDHistory = VitaminDHistoryDBS()
     
@@ -17,6 +17,7 @@ class FoodModuleVC: TrackingModuleAbstractVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        progressBar.setTitle(title: "Omega3")
         
         //initializeStackView(defaultView: VitaminDMainSVC())
     }
