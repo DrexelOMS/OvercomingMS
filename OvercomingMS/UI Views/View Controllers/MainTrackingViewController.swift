@@ -174,7 +174,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         case 0:
             //WriteOmega3TrackingData().addData(amount: 5)
             let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "FoodModuleVC") as! FoodModuleVC
+            let vc = storyboard.instantiateViewController(withIdentifier: "Omega3ModuleVC") as! Omega3ModuleVC
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
