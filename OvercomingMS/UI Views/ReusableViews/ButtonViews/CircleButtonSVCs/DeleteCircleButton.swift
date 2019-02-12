@@ -11,8 +11,8 @@ import UIKit
 class DeleteCircleButton : CircleButtonSVC {
     
     override func customSetup() {
-        button.setTitle("D", for: .normal)
-        //buttonImage = UIImage(named: "Add")
+        //button.setTitle("D", for: .normal)
+        buttonImage = UIImage(named: "Delete")
         label.text = "Delete"
     }
 }

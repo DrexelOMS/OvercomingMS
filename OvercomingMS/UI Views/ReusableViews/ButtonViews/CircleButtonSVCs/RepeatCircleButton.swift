@@ -11,8 +11,8 @@ import UIKit
 class RepeatCircleButton : CircleButtonSVC {
     
     override func customSetup() {
-        button.setTitle("R", for: .normal)
-        //buttonImage = UIImage(named: "Add")
+        //button.setTitle("R", for: .normal)
+        buttonImage = UIImage(named: "Repeat")
         label.text = "Repeat"
     }
 }
