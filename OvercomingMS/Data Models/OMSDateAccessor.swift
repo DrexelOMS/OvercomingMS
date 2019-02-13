@@ -33,7 +33,7 @@ class OMSDateAccessor {
     
     static func getDateTime(date : Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm"
+        formatter.dateFormat = "hh:mm a"
         return formatter.string(from: date)
     }
     

@@ -140,7 +140,7 @@
                                             <rect key="frame" x="137.5" y="0.0" width="137.5" height="50"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         </textField>
                                     </subviews>
                                     <constraints>

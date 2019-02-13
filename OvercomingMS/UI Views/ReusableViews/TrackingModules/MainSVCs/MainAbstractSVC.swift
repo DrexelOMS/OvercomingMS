@@ -10,6 +10,12 @@ import UIKit
 
 class MainAbstractSVC: SlidingAbstractSVC {
     
+    override var nibName: String {
+        get {
+            return "MainAbstractSVC"
+        }
+    }
+    
     var defaultCellName : String = "Routine3PartCell"
     
     @IBOutlet weak var totalsCountLabel : UILabel!

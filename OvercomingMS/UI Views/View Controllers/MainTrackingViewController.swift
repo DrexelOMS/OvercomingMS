@@ -130,7 +130,12 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     func didPressLeftContainer(_ sender: TrackingFoodBar) {
         
-        WriteFoodTrackingData().addData(amount: 1)
+        let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "FoodModuleVC") as! FoodModuleVC
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.dismissalDelegate = self
+        
+        self.present(vc, animated: true, completion: nil)
         
         loadCurrentDayUI()
         
@@ -167,14 +172,25 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         switch(sender.tag){
         case 0:
-            WriteOmega3TrackingData().addData(amount: 5)
+            //WriteOmega3TrackingData().addData(amount: 5)
+            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Omega3ModuleVC") as! Omega3ModuleVC
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.dismissalDelegate = self
+            
+            self.present(vc, animated: true, completion: nil)
             break
         case 1:
-            WriteVitaminDTrackingData().addData(amount: 5)
+            //WriteVitaminDTrackingData().addData(amount: 5)
+            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "VitaminDModuleVC") as! VitaminDModuleVC
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.dismissalDelegate = self
+            
+            self.present(vc, animated: true, completion: nil)
             break
         case 2:
-            //WriteExerciseTrackingData().addData(amount: 5)
-            let storyboard = UIStoryboard(name: "ExerciseStoryboard", bundle: nil)
+            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ExerciseModuleVC") as! ExerciseModuleVC
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
@@ -182,10 +198,21 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             self.present(vc, animated: true, completion: nil)
             break
         case 3:
-            MeditationHistoryDBS().addMeditationItem(routineType: "Guided", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
+            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MeditationModuleVC") as! MeditationModuleVC
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.dismissalDelegate = self
+            
+            self.present(vc, animated: true, completion: nil)
             break
         case 4:
-            MedicationHistoryDBS().addMedicationItem(medicationName: "Percocet", time: Date(), medicationAmount: 2, medicationUOM: "pills", freq: "M")
+            //WriteMedicationTrackingData().addData(amount: 1)
+            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MedicationModuleVC") as! MedicationModuleVC
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.dismissalDelegate = self
+            
+            self.present(vc, animated: true, completion: nil)
             break
         default:
             fatalError("Case Not Handled")

@@ -10,12 +10,6 @@ import UIKit
 import RealmSwift
 
 class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
-
-    override var nibName: String {
-        get {
-            return "ExerciseMainSVC"
-        }
-    }
     
     let button1 = AddCircleButton()
     let button2 = TimerCircleButton()
@@ -76,6 +70,13 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         cell.labelRight.text =  "\(exerciseRoutines.getTodaysExerciseItems()![indexPath.row].minutes) min."
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let exerciseItemSVC = ExerciseSelectedItemSVC()
+        exerciseItemSVC.exerciseItem = exerciseRoutines.getTodaysExerciseItems()![indexPath.row]
+        exerciseItemSVC.parentVC = parentVC
+        parentVC.pushSubView(newSubView: exerciseItemSVC)
     }
 
 }
