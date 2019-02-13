@@ -34,7 +34,7 @@ class ProgressBarConfig {
     static let meditationGoal : Int = 30
     static let meditationUOM = "min."
     
-    static let medicationGoal : Int = 5
+    static let medicationGoal : Int = 5 //TODO: change per day for how many meds they have
     static let medicationUOM = "meds"
     
     static func buildDescription(amount: Int, uom: String) -> String {
