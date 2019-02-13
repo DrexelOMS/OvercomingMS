@@ -18,8 +18,7 @@ class TrackingDayDBT: Object {
     //of completeness, we can remember that their percentage and use that if available
     //and update newer entries to use the new conversion of total
     @objc dynamic var FoodEatenRating: Int = 1 // Lets define the food scale as 1-5
-    @objc dynamic var Omega3PercentageComplete: Int = 0
-    @objc dynamic var Omega3Total: Int = 0
+
     @objc dynamic var VitaminDPercentageComplete: Int = 0
     @objc dynamic var VitaminDTotal: Int = 0
     
@@ -124,6 +123,41 @@ class TrackingDayDBT: Object {
     
 
     
+    // ---------------------- OMEGA-3 ------------------------------
+    
+    // @objc dynamic var Omega3PercentageComplete: Int = 0
+    
+    @objc dynamic var IsOmega3Complete: Bool = false
+    var Omega3ComputedPercentageComplete : Int {
+        get {
+            if IsOmega3Complete {
+                return 100
+            }
+            else {
+                let percentage = Int(Float(Omega3Total) / Float(ProgressBarConfig.omega3Goal) * 100)
+                if percentage > 100 {
+                    return 100
+                }
+                else {
+                    return percentage
+                }
+            }
+        }
+    }
+    
+    var Omega3Total: Int {
+        get {
+            var totalGrams = 0
+            for row in omega3HistoryDT {
+                totalGrams += row.Amount
+            }
+            return totalGrams
+        }
+    }
+    
+    let omega3HistoryDT = List<Omega3HistoryDBT>()
+
+    
     //Links to data tables
     //FoodStats  let dietStats = List<FoodStats>() or @objc dynamic var category: Category!
     //ExcersizeRoutines
@@ -135,4 +169,7 @@ class TrackingDayDBT: Object {
     override static func primaryKey() -> String? {
         return "DateCreated"
     }
+    
+    
+    
 }
