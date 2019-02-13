@@ -51,6 +51,11 @@
 		0A93F1512213BB9D0063A892 /* MeditationHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F14C2213BB9C0063A892 /* MeditationHistoryDBT.swift */; };
 		0A93F1522213BB9D0063A892 /* Omega3HistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F14D2213BB9C0063A892 /* Omega3HistoryDBT.swift */; };
 		0A93F1542213BBBB0063A892 /* MedicationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F1532213BBBB0063A892 /* MedicationHistoryDBS.swift */; };
+		0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F1552213C5AF0063A892 /* FoodMainSVC.swift */; };
+		0A93F1582213C5B40063A892 /* FoodMainSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93F1562213C5B40063A892 /* FoodMainSVC.xib */; };
+		0A93F15C2213C62A0063A892 /* RecipesCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F1592213C62A0063A892 /* RecipesCircleButton.swift */; };
+		0A93F15D2213C62A0063A892 /* SearchCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F15A2213C62A0063A892 /* SearchCircleButton.swift */; };
+		0A93F15E2213C62A0063A892 /* ScanCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F15B2213C62A0063A892 /* ScanCircleButton.swift */; };
 		0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */; };
 		0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */; };
 		0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */; };
@@ -102,7 +107,6 @@
 		0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
 		0C8181292211D472008B5A2D /* FoodScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181282211D472008B5A2D /* FoodScreens.storyboard */; };
-		0C81812B22122E17008B5A2D /* FoodMain.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C81812A22122E17008B5A2D /* FoodMain.xib */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
 		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
@@ -191,6 +195,11 @@
 		0A93F14C2213BB9C0063A892 /* MeditationHistoryDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBT.swift; sourceTree = "<group>"; };
 		0A93F14D2213BB9C0063A892 /* Omega3HistoryDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3HistoryDBT.swift; sourceTree = "<group>"; };
 		0A93F1532213BBBB0063A892 /* MedicationHistoryDBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationHistoryDBS.swift; sourceTree = "<group>"; };
+		0A93F1552213C5AF0063A892 /* FoodMainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMainSVC.swift; sourceTree = "<group>"; };
+		0A93F1562213C5B40063A892 /* FoodMainSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodMainSVC.xib; sourceTree = "<group>"; };
+		0A93F1592213C62A0063A892 /* RecipesCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesCircleButton.swift; sourceTree = "<group>"; };
+		0A93F15A2213C62A0063A892 /* SearchCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCircleButton.swift; sourceTree = "<group>"; };
+		0A93F15B2213C62A0063A892 /* ScanCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCircleButton.swift; sourceTree = "<group>"; };
 		0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleAbstractVC.swift; sourceTree = "<group>"; };
 		0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleVC.swift; sourceTree = "<group>"; };
 		0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAbstractSVC.swift; sourceTree = "<group>"; };
@@ -242,7 +251,6 @@
 		0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishCircleButton.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
 		0C8181282211D472008B5A2D /* FoodScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodScreens.storyboard; sourceTree = "<group>"; };
-		0C81812A22122E17008B5A2D /* FoodMain.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodMain.xib; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3HistoryDBS.swift; sourceTree = "<group>"; };
@@ -353,6 +361,9 @@
 			isa = PBXGroup;
 			children = (
 				0A1FEC642206203F006CED70 /* AddCircleButton.swift */,
+				0A93F1592213C62A0063A892 /* RecipesCircleButton.swift */,
+				0A93F15B2213C62A0063A892 /* ScanCircleButton.swift */,
+				0A93F15A2213C62A0063A892 /* SearchCircleButton.swift */,
 				0AD94DE2220E17BD00B5C2BA /* GuidedCircleButton.swift */,
 				0A1FEC662206204E006CED70 /* TimerCircleButton.swift */,
 				0AF8E0DE22092A5E00E1EC33 /* CancelCircleButton.swift */,
@@ -413,6 +424,8 @@
 		0A2BA61B220292BB004074F3 /* MainSVCs */ = {
 			isa = PBXGroup;
 			children = (
+				0A93F1552213C5AF0063A892 /* FoodMainSVC.swift */,
+				0A93F1562213C5B40063A892 /* FoodMainSVC.xib */,
 				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
 				0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */,
 				0AD94DE0220E178E00B5C2BA /* MeditationMainSVC.swift */,
@@ -534,7 +547,6 @@
 				0AD07F7A21FE3EA200C55831 /* TrackingViewController.swift */,
 				0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */,
 				0C8181282211D472008B5A2D /* FoodScreens.storyboard */,
-				0C81812A22122E17008B5A2D /* FoodMain.xib */,
 			);
 			path = CoreyFrontendUI;
 			sourceTree = "<group>";
@@ -862,6 +874,7 @@
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
 				0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */,
 				0AD07F8C21FE703D00C55831 /* TrackingFoodBar.xib in Resources */,
+				0A93F1582213C5B40063A892 /* FoodMainSVC.xib in Resources */,
 				0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */,
 				505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */,
 				8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */,
@@ -869,7 +882,6 @@
 				0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */,
 				0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */,
 				0AD94DAF2209BC0100B5C2BA /* ModifyAbstractSVC.xib in Resources */,
-				0C81812B22122E17008B5A2D /* FoodMain.xib in Resources */,
 				0AA528702202828300CCFEE7 /* BlueButtonSVC.xib in Resources */,
 				0A1FEC4F2204E01C006CED70 /* TrackingModuleStoryboard.storyboard in Resources */,
 				0A2BAA742204AFC3004074F3 /* SIL Open Font License.txt in Resources */,
@@ -1065,6 +1077,7 @@
 				0AD94DD3220DEE8000B5C2BA /* EditCircleButton.swift in Sources */,
 				0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */,
 				0AD94DE3220E17BD00B5C2BA /* GuidedCircleButton.swift in Sources */,
+				0A93F15C2213C62A0063A892 /* RecipesCircleButton.swift in Sources */,
 				0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */,
 				0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */,
 				0A93F1542213BBBB0063A892 /* MedicationHistoryDBS.swift in Sources */,
@@ -1073,12 +1086,14 @@
 				0AD94DD7220DEEB300B5C2BA /* DeleteCircleButton.swift in Sources */,
 				0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */,
 				0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */,
+				0A93F15E2213C62A0063A892 /* ScanCircleButton.swift in Sources */,
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
 				0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */,
 				0AD94DC0220A5F1000B5C2BA /* BackConfirmButtonSVC.swift in Sources */,
 				0AD94DCF220DE7CB00B5C2BA /* RepeatConfirmationSVC.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
+				0A93F15D2213C62A0063A892 /* SearchCircleButton.swift in Sources */,
 				0AD94DB32209BC3C00B5C2BA /* ExerciseAddSVC.swift in Sources */,
 				0A93EA3F2210D1FC0063A892 /* FoodModuleVC.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
@@ -1086,6 +1101,7 @@
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
 				0A93EA4122122D840063A892 /* (null) in Sources */,
 				0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */,
+				0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */,
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
 				0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */,

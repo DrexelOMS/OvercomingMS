@@ -346,6 +346,12 @@
                                                 <rect key="frame" x="0.0" y="30" width="375" height="617"/>
                                             </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="SpA-PQ-zx0" secondAttribute="bottom" id="DJ2-ii-QtJ"/>
+                                            <constraint firstItem="SpA-PQ-zx0" firstAttribute="top" secondItem="5Gc-jA-7O0" secondAttribute="bottom" id="DsO-An-evg"/>
+                                            <constraint firstAttribute="trailing" secondItem="SpA-PQ-zx0" secondAttribute="trailing" id="PKC-id-KNP"/>
+                                            <constraint firstItem="SpA-PQ-zx0" firstAttribute="leading" secondItem="3Kl-Tr-4G4" secondAttribute="leading" id="o8R-C0-CZF"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

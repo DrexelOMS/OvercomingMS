@@ -11,27 +11,16 @@ import RealmSwift
 
 class FoodModuleVC: TrackingModuleAbstractVC {
     
-    //private let vitaminDHistory = VitaminDHistoryDBS()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        //initializeStackView(defaultView: VitaminDMainSVC())
+        initializeStackView(defaultView: FoodMainSVC())
     }
     
     override func updateProgressBar() {
-//        progressBar.setProgressValue(value: exerciseRoutines.getPercentageComplete())
-//        let amountRemaining = ProgressBarConfig.exerciseGoal - exerciseRoutines.getTotalMinutes()
-//        var description = ""
-//        if(amountRemaining <= 0){
-//            description = "Daily goal reached!"
-//        }
-//        else {
-//            description = "\(amountRemaining) minutes left"
-//        }
-//        progressBar.setDescription(description: description)
+
     }
 
 }
