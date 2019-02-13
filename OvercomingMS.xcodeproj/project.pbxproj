@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0818912214647E0021BDF6 /* LengthTFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0818902214647E0021BDF6 /* LengthTFI.swift */; };
 		0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */; };
 		0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */; };
 		0A1FEC4F2204E01C006CED70 /* TrackingModuleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1FEC4E2204E01C006CED70 /* TrackingModuleStoryboard.storyboard */; };
@@ -59,7 +60,7 @@
 		0A93F19222145EA30063A892 /* TFIAbstract.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93F18E22145EA30063A892 /* TFIAbstract.xib */; };
 		0A93F19322145EA30063A892 /* TypeTFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F18F22145EA30063A892 /* TypeTFI.swift */; };
 		0A93F19422145EA30063A892 /* DateTimeTFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19022145EA30063A892 /* DateTimeTFI.swift */; };
-		0A93F19522145EA30063A892 /* TFIAbstractsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19122145EA30063A892 /* TFIAbstractsSVC.swift */; };
+		0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19122145EA30063A892 /* TFIAbstract.swift */; };
 		0A93F19A22145F150063A892 /* ModifyAbstractSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93F19622145F140063A892 /* ModifyAbstractSVC.xib */; };
 		0A93F19B22145F150063A892 /* ModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19722145F140063A892 /* ModifyAbstractSVC.swift */; };
 		0A93F19C22145F150063A892 /* ExerciseEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19822145F150063A892 /* ExerciseEditSVC.swift */; };
@@ -147,6 +148,7 @@
 
 /* Begin PBXFileReference section */
 		06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A0818902214647E0021BDF6 /* LengthTFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthTFI.swift; sourceTree = "<group>"; };
 		0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnTestingViewController.swift; sourceTree = "<group>"; };
 		0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDownCloseViewController.swift; sourceTree = "<group>"; };
 		0A1FEC4E2204E01C006CED70 /* TrackingModuleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrackingModuleStoryboard.storyboard; sourceTree = "<group>"; };
@@ -207,7 +209,7 @@
 		0A93F18E22145EA30063A892 /* TFIAbstract.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFIAbstract.xib; sourceTree = "<group>"; };
 		0A93F18F22145EA30063A892 /* TypeTFI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTFI.swift; sourceTree = "<group>"; };
 		0A93F19022145EA30063A892 /* DateTimeTFI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeTFI.swift; sourceTree = "<group>"; };
-		0A93F19122145EA30063A892 /* TFIAbstractsSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFIAbstractsSVC.swift; sourceTree = "<group>"; };
+		0A93F19122145EA30063A892 /* TFIAbstract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFIAbstract.swift; sourceTree = "<group>"; };
 		0A93F19622145F140063A892 /* ModifyAbstractSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyAbstractSVC.xib; sourceTree = "<group>"; };
 		0A93F19722145F140063A892 /* ModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyAbstractSVC.swift; sourceTree = "<group>"; };
 		0A93F19822145F150063A892 /* ExerciseEditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseEditSVC.swift; sourceTree = "<group>"; };
@@ -514,8 +516,9 @@
 			children = (
 				0A93F18E22145EA30063A892 /* TFIAbstract.xib */,
 				0A93F18F22145EA30063A892 /* TypeTFI.swift */,
+				0A0818902214647E0021BDF6 /* LengthTFI.swift */,
 				0A93F19022145EA30063A892 /* DateTimeTFI.swift */,
-				0A93F19122145EA30063A892 /* TFIAbstractsSVC.swift */,
+				0A93F19122145EA30063A892 /* TFIAbstract.swift */,
 			);
 			path = TextFieldAbstractSVCs;
 			sourceTree = "<group>";
@@ -1098,6 +1101,7 @@
 				0AA5286E2202827000CCFEE7 /* BlueButtonSVC.swift in Sources */,
 				0AD94DDB220E0D7600B5C2BA /* MeditationModuleVC.swift in Sources */,
 				0AD94DD3220DEE8000B5C2BA /* EditCircleButton.swift in Sources */,
+				0A0818912214647E0021BDF6 /* LengthTFI.swift in Sources */,
 				0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */,
 				0AD94DE3220E17BD00B5C2BA /* GuidedCircleButton.swift in Sources */,
 				0A93F15C2213C62A0063A892 /* RecipesCircleButton.swift in Sources */,
@@ -1119,7 +1123,7 @@
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
 				0A93F15D2213C62A0063A892 /* SearchCircleButton.swift in Sources */,
 				0A93EA3F2210D1FC0063A892 /* FoodModuleVC.swift in Sources */,
-				0A93F19522145EA30063A892 /* TFIAbstractsSVC.swift in Sources */,
+				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
 				0A93EA4122122D840063A892 /* (null) in Sources */,

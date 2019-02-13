@@ -39,4 +39,8 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
         fatalError("showtextFieldInput not implemented")
     }
     
+    @objc func cancelPicker(){
+        parentVC.view.endEditing(true)
+    }
+    
 }

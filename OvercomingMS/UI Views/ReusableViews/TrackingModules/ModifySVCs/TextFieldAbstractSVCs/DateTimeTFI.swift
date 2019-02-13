@@ -19,6 +19,12 @@ class DateTimeTFI : TFIAbstract {
     let datePicker = UIDatePicker()
     var selectedStartTime : Date?
     
+    override func customSetup() {
+        super.customSetup()
+        
+        label.text = "Start"
+    }
+    
     override func showTextFieldInput() {
         //Formate Date
         datePicker.datePickerMode = .time
@@ -44,7 +50,4 @@ class DateTimeTFI : TFIAbstract {
         delegate?.onDateTimeTFIDone()
     }
     
-    @objc func cancelPicker(){
-        parentVC.view.endEditing(true)
-    }
 }

@@ -12,14 +12,14 @@ class ExerciseEditSVC : ExerciseModifyAbstractSVC {
     
     var editingExerciseItem : ExerciseHistoryDBT!{
         didSet {
-            typeTextField.text = editingExerciseItem.RoutineType
-            selectedType = editingExerciseItem.RoutineType
+            //typeTextField.text = editingExerciseItem.RoutineType
+            //selectedType = editingExerciseItem.RoutineType
             
             //timeTextField.text = OMSDateAccessor.getDateTime(date: editingExerciseItem.StartTime)
             //selectedStartTime = editingExerciseItem.StartTime
             
-            minutesTextField.text = "\(editingExerciseItem.minutes) .min"
-            selectedLength = editingExerciseItem.minutes
+            //minutesTextField.text = "\(editingExerciseItem.minutes) .min"
+            //selectedLength = editingExerciseItem.minutes
         }
     }
     
