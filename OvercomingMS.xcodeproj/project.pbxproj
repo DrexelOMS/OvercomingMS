@@ -580,6 +580,7 @@
 			children = (
 				0A2BA61822029259004074F3 /* TrackingModules */,
 				0AA5286C2202825100CCFEE7 /* ButtonViews */,
+				0A93F18D22145EA30063A892 /* TextFieldAbstractSVCs */,
 				0AA5284A2202188500CCFEE7 /* TrackingProgressBars */,
 				0AD07F8D21FE79C300C55831 /* CustomView.swift */,
 			);
@@ -616,7 +617,6 @@
 				0A081892221473380021BDF6 /* ExerciseModifyAbstractSVC.swift */,
 				0A93F19722145F140063A892 /* ModifyAbstractSVC.swift */,
 				0A93F19622145F140063A892 /* ModifyAbstractSVC.xib */,
-				0A93F18D22145EA30063A892 /* TextFieldAbstractSVCs */,
 			);
 			path = ModifySVCs;
 			sourceTree = "<group>";
