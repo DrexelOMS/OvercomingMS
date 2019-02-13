@@ -83,7 +83,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             //TODO make a way to get the proper description for each
             //FoodEatenRating is 1 - 5
             foodBar.setDescription(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
-            omega3Bar.setProgressValue(value: currentTrackingDay.Omega3PercentageComplete)
+            omega3Bar.setProgressValue(value: currentTrackingDay.Omega3ComputedPercentageComplete)
             omega3Bar.setDescription(description: String(currentTrackingDay.Omega3Total))
             vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDPercentageComplete)
             vitaminDBar.setDescription(description: String(currentTrackingDay.VitaminDTotal))
@@ -145,7 +145,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         switch(sender.tag){
         case 0:
-            WriteOmega3TrackingData().toggleFilledData()
+            Omega3HistoryDBS().toggleFilledData()
             break
         case 1:
             WriteVitaminDTrackingData().toggleFilledData()
