@@ -86,11 +86,43 @@ class TrackingDayDBT: Object {
     let meditationHistoryDT = List<MeditationHistoryDBT>()
     
     
-    // ---------------------- MEDICATION ------------------------------
-
-    @objc dynamic var MedicationPercentageComplete: Int = 0
-    @objc dynamic var MedicationTotal: Int = 0 //currently guess they would add a number of medications
+    // ---------------------- MEDICCCCCCATION ------------------------------
+    
+    @objc dynamic var IsMedicationComplete: Bool = false
+    var MedicationComputedPercentageComplete : Int {
+        get {
+            if IsMedicationComplete {
+                return 100
+            }
+            else {
+                let percentage = Int(Float(MedicationTotal) / Float(ProgressBarConfig.medicationGoal) * 100)
+                if percentage > 100 {
+                    return 100
+                }
+                else {
+                    return percentage
+                }
+            }
+        }
+    }
+    
+    //currently guess they would add a number of medications
     //you can only take a medication or not, but you could take 2 / 3 for some reason
+    
+    //this will be count of medicationHistoryDT / count of savedMedications with some voodo shit with frequency
+    var MedicationTotal: Int {
+        get {
+            var totalMeds = 0
+            for row in medicationHistoryDT {
+                totalMeds += row.MedicationAmount
+            }
+            return totalMeds
+        }
+    }
+    
+    let medicationHistoryDT = List<MedicationHistoryDBT>()
+    
+
     
     //Links to data tables
     //FoodStats  let dietStats = List<FoodStats>() or @objc dynamic var category: Category!

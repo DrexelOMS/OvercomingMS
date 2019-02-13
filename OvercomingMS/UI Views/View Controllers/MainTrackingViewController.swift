@@ -91,7 +91,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             exerciseBar.setDescription(description: String(currentTrackingDay.ExerciseTimeTotal))
             meditationBar.setProgressValue(value: currentTrackingDay.MeditationComputedPercentageComplete)
             meditationBar.setDescription(description: String(currentTrackingDay.MeditationTimeTotal))
-            medicationBar.setProgressValue(value: currentTrackingDay.MedicationPercentageComplete)
+            medicationBar.setProgressValue(value: currentTrackingDay.MedicationComputedPercentageComplete)
             medicationBar.setDescription(description: String(currentTrackingDay.MedicationTotal))
         }
         else{
@@ -157,7 +157,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             MeditationHistoryDBS().toggleFilledData()
             break
         case 4:
-            WriteMedicationTrackingData().toggleFilledData()
+            MedicationHistoryDBS().toggleFilledData()
             break
         default:
             fatalError("Case Not Handled")
