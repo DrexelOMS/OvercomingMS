@@ -11,8 +11,6 @@ import RealmSwift
 
 class FoodModuleVC: TrackingModuleAbstractVC {
     
-    //private let vitaminDHistory = VitaminDHistoryDBS()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
