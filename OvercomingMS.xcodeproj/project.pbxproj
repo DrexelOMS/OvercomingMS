@@ -1,10 +1,10 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 50;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
 
 /* Begin PBXBuildFile section */
 		0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */; };
@@ -51,6 +51,12 @@
 		0A93EA6322139DD50063A892 /* ScanCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA6222139DD50063A892 /* ScanCircleButton.swift */; };
 		0A93EA6522139E620063A892 /* FoodMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA6422139E620063A892 /* FoodMainSVC.swift */; };
 		0AA5284922020BF500CCFEE7 /* ExerciseHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284822020BF500CCFEE7 /* ExerciseHistoryDBT.swift */; };
+		0A93F14E2213BB9D0063A892 /* MedicationHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F1492213BB9C0063A892 /* MedicationHistoryDBT.swift */; };
+		0A93F14F2213BB9D0063A892 /* ExerciseHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F14A2213BB9C0063A892 /* ExerciseHistoryDBT.swift */; };
+		0A93F1502213BB9D0063A892 /* TrackingDayDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F14B2213BB9C0063A892 /* TrackingDayDBT.swift */; };
+		0A93F1512213BB9D0063A892 /* MeditationHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F14C2213BB9C0063A892 /* MeditationHistoryDBT.swift */; };
+		0A93F1522213BB9D0063A892 /* Omega3HistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F14D2213BB9C0063A892 /* Omega3HistoryDBT.swift */; };
+		0A93F1542213BBBB0063A892 /* MedicationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F1532213BBBB0063A892 /* MedicationHistoryDBS.swift */; };
 		0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */; };
 		0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */; };
 		0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */; };
@@ -107,6 +113,11 @@
 		500F74DB220CCFCC00752C98 /* MeditationHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DA220CCFCC00752C98 /* MeditationHistoryDBT.swift */; };
 		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
 		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
+		0C81812B22122E17008B5A2D /* FoodMain.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C81812A22122E17008B5A2D /* FoodMain.xib */; };
+		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
+		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
+		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
+		50572C9A22139E51000C2E63 /* Omega3HistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */; };
 		505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505DB14621FF6C710045C703 /* CassStoryboard.storyboard */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
 		6129745421DF017E00B9846C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745221DF017E00B9846C /* Main.storyboard */; };
@@ -121,20 +132,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-        6129746021DF017F00B9846C /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 6129744321DF017E00B9846C /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 6129744A21DF017E00B9846C;
-            remoteInfo = OvercomingMS;
-        };
-        6129746B21DF017F00B9846C /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 6129744321DF017E00B9846C /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 6129744A21DF017E00B9846C;
-            remoteInfo = OvercomingMS;
-        };
+		6129746021DF017F00B9846C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6129744321DF017E00B9846C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6129744A21DF017E00B9846C;
+			remoteInfo = OvercomingMS;
+		};
+		6129746B21DF017F00B9846C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6129744321DF017E00B9846C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6129744A21DF017E00B9846C;
+			remoteInfo = OvercomingMS;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -191,6 +202,12 @@
 		0A93EA6222139DD50063A892 /* ScanCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCircleButton.swift; sourceTree = "<group>"; };
 		0A93EA6422139E620063A892 /* FoodMainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMainSVC.swift; sourceTree = "<group>"; };
 		0AA5284822020BF500CCFEE7 /* ExerciseHistoryDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryDBT.swift; sourceTree = "<group>"; };
+		0A93F1492213BB9C0063A892 /* MedicationHistoryDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationHistoryDBT.swift; sourceTree = "<group>"; };
+		0A93F14A2213BB9C0063A892 /* ExerciseHistoryDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryDBT.swift; sourceTree = "<group>"; };
+		0A93F14B2213BB9C0063A892 /* TrackingDayDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingDayDBT.swift; sourceTree = "<group>"; };
+		0A93F14C2213BB9C0063A892 /* MeditationHistoryDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBT.swift; sourceTree = "<group>"; };
+		0A93F14D2213BB9C0063A892 /* Omega3HistoryDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3HistoryDBT.swift; sourceTree = "<group>"; };
+		0A93F1532213BBBB0063A892 /* MedicationHistoryDBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationHistoryDBS.swift; sourceTree = "<group>"; };
 		0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleAbstractVC.swift; sourceTree = "<group>"; };
 		0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleVC.swift; sourceTree = "<group>"; };
 		0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAbstractSVC.swift; sourceTree = "<group>"; };
@@ -246,6 +263,10 @@
 		500F74DA220CCFCC00752C98 /* MeditationHistoryDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBT.swift; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
+		0C81812A22122E17008B5A2D /* FoodMain.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodMain.xib; sourceTree = "<group>"; };
+		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
+		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
+		50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3HistoryDBS.swift; sourceTree = "<group>"; };
 		505DB14621FF6C710045C703 /* CassStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CassStoryboard.storyboard; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6129744E21DF017E00B9846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -272,30 +293,30 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        6129744821DF017E00B9846C /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                E52344C266EF89DAB14C6AA3 /* Pods_OvercomingMS.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        6129745C21DF017F00B9846C /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        6129746721DF017F00B9846C /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                DD500F23445D0A98AC159E98 /* Pods_OvercomingMSUITests.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		6129744821DF017E00B9846C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E52344C266EF89DAB14C6AA3 /* Pods_OvercomingMS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6129745C21DF017F00B9846C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6129746721DF017F00B9846C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD500F23445D0A98AC159E98 /* Pods_OvercomingMSUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -342,6 +363,8 @@
 			children = (
 				0A1FEC5E220529A9006CED70 /* ExerciseHistoryDBS.swift */,
 				500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */,
+				0A93F1532213BBBB0063A892 /* MedicationHistoryDBS.swift */,
+				50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */,
 			);
 			name = DatabaseServices;
 			path = "OvercomingMS/Data Models/TrackingDataStrategies/DatabaseServices";
@@ -486,6 +509,26 @@
 				0A93EA5722132BCF0063A892 /* PullBarSVC.xib */,
 			);
 			path = PullBarSVC;
+		0A93EA43221316350063A892 /* PullBarSVC */ = {
+			isa = PBXGroup;
+			children = (
+				0A93EA5622132BCF0063A892 /* PullBarSVC.swift */,
+				0A93EA5722132BCF0063A892 /* PullBarSVC.xib */,
+			);
+			path = PullBarSVC;
+			sourceTree = "<group>";
+		};
+		0A93F1482213BB9C0063A892 /* RealmDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				0A93F1492213BB9C0063A892 /* MedicationHistoryDBT.swift */,
+				0A93F14A2213BB9C0063A892 /* ExerciseHistoryDBT.swift */,
+				0A93F14B2213BB9C0063A892 /* TrackingDayDBT.swift */,
+				0A93F14C2213BB9C0063A892 /* MeditationHistoryDBT.swift */,
+				0A93F14D2213BB9C0063A892 /* Omega3HistoryDBT.swift */,
+			);
+			name = RealmDataModels;
+			path = "OvercomingMS/Data Models/RealmDataModels";
 			sourceTree = "<group>";
 		};
 		0A976CF921FEB9CB00748EDA /* TeamMembers */ = {
@@ -534,6 +577,7 @@
 				0AD07F7A21FE3EA200C55831 /* TrackingViewController.swift */,
 				0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */,
 				0C8181282211D472008B5A2D /* FoodScreens.storyboard */,
+				0C81812A22122E17008B5A2D /* FoodMain.xib */,
 			);
 			path = CoreyFrontendUI;
 			sourceTree = "<group>";
@@ -562,6 +606,7 @@
 		0AD07F9621FEA52400C55831 /* DatebaseServices */ = {
 			isa = PBXGroup;
 			children = (
+				0A93F1482213BB9C0063A892 /* RealmDataModels */,
 				0A1FEC6222052D58006CED70 /* DatabaseServices */,
 				0A2BAA652202A24E004074F3 /* TrackingDataStrategies.swift */,
 				0A1FEC60220529D7006CED70 /* TrackingModulesDBS.swift */,
@@ -753,104 +798,104 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        6129744A21DF017E00B9846C /* OvercomingMS */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 6129747321DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMS" */;
-            buildPhases = (
-                C8705E6E132C356866B5B997 /* [CP] Check Pods Manifest.lock */,
-                6129744721DF017E00B9846C /* Sources */,
-                6129744821DF017E00B9846C /* Frameworks */,
-                6129744921DF017E00B9846C /* Resources */,
-                468EDA10B756AEAE4E0A2967 /* [CP] Embed Pods Frameworks */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = OvercomingMS;
-            productName = OvercomingMS;
-            productReference = 6129744B21DF017E00B9846C /* OvercomingMS.app */;
-            productType = "com.apple.product-type.application";
-        };
-        6129745E21DF017F00B9846C /* OvercomingMSTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 6129747621DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMSTests" */;
-            buildPhases = (
-                3828C39FE47362F72BE48835 /* [CP] Check Pods Manifest.lock */,
-                6129745B21DF017F00B9846C /* Sources */,
-                6129745C21DF017F00B9846C /* Frameworks */,
-                6129745D21DF017F00B9846C /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                6129746121DF017F00B9846C /* PBXTargetDependency */,
-            );
-            name = OvercomingMSTests;
-            productName = OvercomingMSTests;
-            productReference = 6129745F21DF017F00B9846C /* OvercomingMSTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
-        6129746921DF017F00B9846C /* OvercomingMSUITests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 6129747921DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMSUITests" */;
-            buildPhases = (
-                827DAE719E2D0D8B2DD6D8E5 /* [CP] Check Pods Manifest.lock */,
-                6129746621DF017F00B9846C /* Sources */,
-                6129746721DF017F00B9846C /* Frameworks */,
-                6129746821DF017F00B9846C /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                6129746C21DF017F00B9846C /* PBXTargetDependency */,
-            );
-            name = OvercomingMSUITests;
-            productName = OvercomingMSUITests;
-            productReference = 6129746A21DF017F00B9846C /* OvercomingMSUITests.xctest */;
-            productType = "com.apple.product-type.bundle.ui-testing";
-        };
+		6129744A21DF017E00B9846C /* OvercomingMS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6129747321DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMS" */;
+			buildPhases = (
+				C8705E6E132C356866B5B997 /* [CP] Check Pods Manifest.lock */,
+				6129744721DF017E00B9846C /* Sources */,
+				6129744821DF017E00B9846C /* Frameworks */,
+				6129744921DF017E00B9846C /* Resources */,
+				468EDA10B756AEAE4E0A2967 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OvercomingMS;
+			productName = OvercomingMS;
+			productReference = 6129744B21DF017E00B9846C /* OvercomingMS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6129745E21DF017F00B9846C /* OvercomingMSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6129747621DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMSTests" */;
+			buildPhases = (
+				3828C39FE47362F72BE48835 /* [CP] Check Pods Manifest.lock */,
+				6129745B21DF017F00B9846C /* Sources */,
+				6129745C21DF017F00B9846C /* Frameworks */,
+				6129745D21DF017F00B9846C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6129746121DF017F00B9846C /* PBXTargetDependency */,
+			);
+			name = OvercomingMSTests;
+			productName = OvercomingMSTests;
+			productReference = 6129745F21DF017F00B9846C /* OvercomingMSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6129746921DF017F00B9846C /* OvercomingMSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6129747921DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMSUITests" */;
+			buildPhases = (
+				827DAE719E2D0D8B2DD6D8E5 /* [CP] Check Pods Manifest.lock */,
+				6129746621DF017F00B9846C /* Sources */,
+				6129746721DF017F00B9846C /* Frameworks */,
+				6129746821DF017F00B9846C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6129746C21DF017F00B9846C /* PBXTargetDependency */,
+			);
+			name = OvercomingMSUITests;
+			productName = OvercomingMSUITests;
+			productReference = 6129746A21DF017F00B9846C /* OvercomingMSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        6129744321DF017E00B9846C /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                LastSwiftUpdateCheck = 1010;
-                LastUpgradeCheck = 1010;
-                ORGANIZATIONNAME = DrexelOMS;
-                TargetAttributes = {
-                    6129744A21DF017E00B9846C = {
-                        CreatedOnToolsVersion = 10.1;
-                    };
-                    6129745E21DF017F00B9846C = {
-                        CreatedOnToolsVersion = 10.1;
-                        TestTargetID = 6129744A21DF017E00B9846C;
-                    };
-                    6129746921DF017F00B9846C = {
-                        CreatedOnToolsVersion = 10.1;
-                        TestTargetID = 6129744A21DF017E00B9846C;
-                    };
-                };
-            };
-            buildConfigurationList = 6129744621DF017E00B9846C /* Build configuration list for PBXProject "OvercomingMS" */;
-            compatibilityVersion = "Xcode 9.3";
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 6129744221DF017E00B9846C;
-            productRefGroup = 6129744C21DF017E00B9846C /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                6129744A21DF017E00B9846C /* OvercomingMS */,
-                6129745E21DF017F00B9846C /* OvercomingMSTests */,
-                6129746921DF017F00B9846C /* OvercomingMSUITests */,
-            );
-        };
+		6129744321DF017E00B9846C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = DrexelOMS;
+				TargetAttributes = {
+					6129744A21DF017E00B9846C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					6129745E21DF017F00B9846C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 6129744A21DF017E00B9846C;
+					};
+					6129746921DF017F00B9846C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 6129744A21DF017E00B9846C;
+					};
+				};
+			};
+			buildConfigurationList = 6129744621DF017E00B9846C /* Build configuration list for PBXProject "OvercomingMS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6129744221DF017E00B9846C;
+			productRefGroup = 6129744C21DF017E00B9846C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6129744A21DF017E00B9846C /* OvercomingMS */,
+				6129745E21DF017F00B9846C /* OvercomingMSTests */,
+				6129746921DF017F00B9846C /* OvercomingMSUITests */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -869,6 +914,7 @@
 				0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */,
 				0AD94DAF2209BC0100B5C2BA /* ModifyAbstractSVC.xib in Resources */,
 				0C81812B22122E17008B5A2D /* FoodMainSVC.xib in Resources */,
+				0C81812B22122E17008B5A2D /* FoodMain.xib in Resources */,
 				0AA528702202828300CCFEE7 /* BlueButtonSVC.xib in Resources */,
 				0A1FEC4F2204E01C006CED70 /* TrackingModuleStoryboard.storyboard in Resources */,
 				0A2BAA742204AFC3004074F3 /* SIL Open Font License.txt in Resources */,
@@ -910,108 +956,108 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-        3828C39FE47362F72BE48835 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputFileListPaths = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputFileListPaths = (
-            );
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-OvercomingMSTests-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        468EDA10B756AEAE4E0A2967 /* [CP] Embed Pods Frameworks */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputFileListPaths = (
-            );
-            inputPaths = (
-                "${SRCROOT}/Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS-frameworks.sh",
-                "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-                "${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
-                "${BUILT_PRODUCTS_DIR}/LinearProgressBar/LinearProgressBar.framework",
-                "${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-                "${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-                "${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-                "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-                "${BUILT_PRODUCTS_DIR}/SwiftyPickerPopover/SwiftyPickerPopover.framework",
-            );
-            name = "[CP] Embed Pods Frameworks";
-            outputFileListPaths = (
-            );
-            outputPaths = (
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LinearProgressBar.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyPickerPopover.framework",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS-frameworks.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        827DAE719E2D0D8B2DD6D8E5 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputFileListPaths = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputFileListPaths = (
-            );
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-OvercomingMSUITests-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        C8705E6E132C356866B5B997 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputFileListPaths = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputFileListPaths = (
-            );
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-OvercomingMS-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
+		3828C39FE47362F72BE48835 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OvercomingMSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		468EDA10B756AEAE4E0A2967 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/LinearProgressBar/LinearProgressBar.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyPickerPopover/SwiftyPickerPopover.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LinearProgressBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyPickerPopover.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		827DAE719E2D0D8B2DD6D8E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OvercomingMSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8705E6E132C356866B5B997 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OvercomingMS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1023,10 +1069,13 @@
 				0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */,
 				0AD94DBC220A5B9500B5C2BA /* TwoSquareButtonSVC.swift in Sources */,
 				0A93EA6122139DCA0063A892 /* RecipesCircleButton.swift in Sources */,
+				0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */,
+				0AD94DBC220A5B9500B5C2BA /* TwoSquareButtonSVC.swift in Sources */,
 				0AD07F7221FCFF8100C55831 /* TrackingProgressBar.swift in Sources */,
 				0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */,
 				0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */,
 				0AD07F8821FE637600C55831 /* RoundCornersUIView.swift in Sources */,
+				0A93F1522213BB9D0063A892 /* Omega3HistoryDBT.swift in Sources */,
 				500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */,
 				0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */,
 				0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */,
@@ -1050,10 +1099,28 @@
                 0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */,
 				0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */,
 				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,
+				0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */,
+				6130938621E815AF00249B24 /* DietViewController.swift in Sources */,
+				0A93EA472213165D0063A892 /* (null) in Sources */,
+				0A93F1512213BB9D0063A892 /* MeditationHistoryDBT.swift in Sources */,
+				0A1FEC61220529D7006CED70 /* TrackingModulesDBS.swift in Sources */,
+				0AD94DCC220CEE9800B5C2BA /* ExerciseSelectedItem.swift in Sources */,
+				0A93F14F2213BB9D0063A892 /* ExerciseHistoryDBT.swift in Sources */,
+				0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */,
+				0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */,
+				50572C9A22139E51000C2E63 /* Omega3HistoryDBS.swift in Sources */,
+				501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */,
+				0A1FEC5F220529A9006CED70 /* ExerciseHistoryDBS.swift in Sources */,
+				0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */,
+				0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */,
+				0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */,
+				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,
+				0A93F14E2213BB9D0063A892 /* MedicationHistoryDBT.swift in Sources */,
 				0A2BAA662202A24E004074F3 /* TrackingDataStrategies.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				0AD07F7E21FE3EA200C55831 /* TrackingViewController.swift in Sources */,
 				0AD94DCA220CEE5B00B5C2BA /* SelectedItemSVC.swift in Sources */,
+				0A93F1502213BB9D0063A892 /* TrackingDayDBT.swift in Sources */,
 				0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */,
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
 				0AF8E0DF22092A5E00E1EC33 /* CancelCircleButton.swift in Sources */,
@@ -1064,6 +1131,7 @@
 				0AD94DE3220E17BD00B5C2BA /* GuidedCircleButton.swift in Sources */,
 				0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */,
 				0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */,
+				0A93F1542213BBBB0063A892 /* MedicationHistoryDBS.swift in Sources */,
 				0AD94DD1220DE7F200B5C2BA /* DeleteConfirmationSVC.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
 				0AD94DD7220DEEB300B5C2BA /* DeleteCircleButton.swift in Sources */,
@@ -1083,6 +1151,8 @@
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
 				0A93EA4122122D840063A892 /* (null) in Sources */,
 				0A93EA6522139E620063A892 /* FoodMainSVC.swift in Sources */,
+				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
+				0A93EA4122122D840063A892 /* (null) in Sources */,
 				0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */,
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
@@ -1115,322 +1185,322 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-        6129746121DF017F00B9846C /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 6129744A21DF017E00B9846C /* OvercomingMS */;
-            targetProxy = 6129746021DF017F00B9846C /* PBXContainerItemProxy */;
-        };
-        6129746C21DF017F00B9846C /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 6129744A21DF017E00B9846C /* OvercomingMS */;
-            targetProxy = 6129746B21DF017F00B9846C /* PBXContainerItemProxy */;
-        };
+		6129746121DF017F00B9846C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6129744A21DF017E00B9846C /* OvercomingMS */;
+			targetProxy = 6129746021DF017F00B9846C /* PBXContainerItemProxy */;
+		};
+		6129746C21DF017F00B9846C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6129744A21DF017E00B9846C /* OvercomingMS */;
+			targetProxy = 6129746B21DF017F00B9846C /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-        6129745221DF017E00B9846C /* Main.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                6129745321DF017E00B9846C /* Base */,
-            );
-            name = Main.storyboard;
-            sourceTree = "<group>";
-        };
-        6129745721DF017F00B9846C /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                6129745821DF017F00B9846C /* Base */,
-            );
-            name = LaunchScreen.storyboard;
-            sourceTree = "<group>";
-        };
+		6129745221DF017E00B9846C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6129745321DF017E00B9846C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6129745721DF017F00B9846C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6129745821DF017F00B9846C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-        6129747121DF017F00B9846C /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-                MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-                MTL_FAST_MATH = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            };
-            name = Debug;
-        };
-        6129747221DF017F00B9846C /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                MTL_FAST_MATH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_COMPILATION_MODE = wholemodule;
-                SWIFT_OPTIMIZATION_LEVEL = "-O";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        6129747421DF017F00B9846C /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 724CCA850B24CDC7CCFAF25E /* Pods-OvercomingMS.debug.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = AN6TNSK79R;
-                INFOPLIST_FILE = OvercomingMS/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                );
-                LIBRARY_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "$(PROJECT_DIR)/Pods/Realm/core",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMS;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        6129747521DF017F00B9846C /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = A0433A9C40E2CDD4C4FE48DD /* Pods-OvercomingMS.release.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = AN6TNSK79R;
-                INFOPLIST_FILE = OvercomingMS/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                );
-                LIBRARY_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "$(PROJECT_DIR)/Pods/Realm/core",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMS;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Release;
-        };
-        6129747721DF017F00B9846C /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = A16E3BBC1D5B0C0744651350 /* Pods-OvercomingMSTests.debug.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                INFOPLIST_FILE = OvercomingMSTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMSTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OvercomingMS.app/OvercomingMS";
-            };
-            name = Debug;
-        };
-        6129747821DF017F00B9846C /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 64624BC75971C455C566E626 /* Pods-OvercomingMSTests.release.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                INFOPLIST_FILE = OvercomingMSTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMSTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OvercomingMS.app/OvercomingMS";
-            };
-            name = Release;
-        };
-        6129747A21DF017F00B9846C /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 89CF61DE31F50EFE76BD85FE /* Pods-OvercomingMSUITests.debug.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                CODE_SIGN_STYLE = Automatic;
-                INFOPLIST_FILE = OvercomingMSUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMSUITests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_TARGET_NAME = OvercomingMS;
-            };
-            name = Debug;
-        };
-        6129747B21DF017F00B9846C /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = D0C278635D38E9B87EB94008 /* Pods-OvercomingMSUITests.release.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                CODE_SIGN_STYLE = Automatic;
-                INFOPLIST_FILE = OvercomingMSUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMSUITests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_TARGET_NAME = OvercomingMS;
-            };
-            name = Release;
-        };
+		6129747121DF017F00B9846C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6129747221DF017F00B9846C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6129747421DF017F00B9846C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 724CCA850B24CDC7CCFAF25E /* Pods-OvercomingMS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AN6TNSK79R;
+				INFOPLIST_FILE = OvercomingMS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Realm/core",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6129747521DF017F00B9846C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0433A9C40E2CDD4C4FE48DD /* Pods-OvercomingMS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AN6TNSK79R;
+				INFOPLIST_FILE = OvercomingMS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Realm/core",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6129747721DF017F00B9846C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A16E3BBC1D5B0C0744651350 /* Pods-OvercomingMSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OvercomingMSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OvercomingMS.app/OvercomingMS";
+			};
+			name = Debug;
+		};
+		6129747821DF017F00B9846C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64624BC75971C455C566E626 /* Pods-OvercomingMSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OvercomingMSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OvercomingMS.app/OvercomingMS";
+			};
+			name = Release;
+		};
+		6129747A21DF017F00B9846C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89CF61DE31F50EFE76BD85FE /* Pods-OvercomingMSUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OvercomingMSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OvercomingMS;
+			};
+			name = Debug;
+		};
+		6129747B21DF017F00B9846C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0C278635D38E9B87EB94008 /* Pods-OvercomingMSUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OvercomingMSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OvercomingMS;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        6129744621DF017E00B9846C /* Build configuration list for PBXProject "OvercomingMS" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                6129747121DF017F00B9846C /* Debug */,
-                6129747221DF017F00B9846C /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        6129747321DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMS" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                6129747421DF017F00B9846C /* Debug */,
-                6129747521DF017F00B9846C /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        6129747621DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMSTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                6129747721DF017F00B9846C /* Debug */,
-                6129747821DF017F00B9846C /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        6129747921DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMSUITests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                6129747A21DF017F00B9846C /* Debug */,
-                6129747B21DF017F00B9846C /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		6129744621DF017E00B9846C /* Build configuration list for PBXProject "OvercomingMS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6129747121DF017F00B9846C /* Debug */,
+				6129747221DF017F00B9846C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6129747321DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6129747421DF017F00B9846C /* Debug */,
+				6129747521DF017F00B9846C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6129747621DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6129747721DF017F00B9846C /* Debug */,
+				6129747821DF017F00B9846C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6129747921DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6129747A21DF017F00B9846C /* Debug */,
+				6129747B21DF017F00B9846C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-    };
-    rootObject = 6129744321DF017E00B9846C /* Project object */;
+	};
+	rootObject = 6129744321DF017E00B9846C /* Project object */;
 }
