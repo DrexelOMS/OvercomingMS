@@ -17,7 +17,11 @@ class LengthTFI : TFIAbstract {
     var delegate : LengthTFIDelegate?
     
     var lengthPicker = UIDatePicker()
-    var selectedLength : Int?
+    var selectedLength : Int? {
+        didSet {
+            textField.text = "\(selectedLength!) min."
+        }
+    }
     
     override func customSetup() {
         super.customSetup()
@@ -45,8 +49,6 @@ class LengthTFI : TFIAbstract {
 
     @objc func doneLengthPicker(){
         self.selectedLength = getMinutes(fromInterval: lengthPicker.countDownDuration)
-        print(getMinutes(fromInterval: lengthPicker.countDownDuration))
-        textField.text = "\(getMinutes(fromInterval: lengthPicker.countDownDuration)) .min"
         parentVC.view.endEditing(true)
         delegate?.onLengthTFIDone()
     }

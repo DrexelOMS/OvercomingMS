@@ -10,19 +10,6 @@ import UIKit
 import Cartography
 
 class ModifyAbstractSVC : SlidingAbstractSVC, TypeTFIDelegate, DateTimeTFIDelegate, LengthTFIDelegate {
-    func onLengthTFIDone() {
-        print(typeTFI.selectedType)
-    }
-    
-    func onTypeTFIDone() {
-        print(lengthTFI.selectedLength)
-    }
-    
-    func onDateTimeTFIDone() {
-        print(dateTimeTFI.selectedStartTime)
-    }
-    
-    @IBOutlet weak var textInputStackView: UIStackView!
     
     override var nibName: String {
         get {
@@ -30,10 +17,32 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TypeTFIDelegate, DateTimeTFIDelega
         }
     }
     
-    var tempSelectedType : String?
-    var selectedType : String?
-    var selectedStartTime : Date?
-    var selectedLength : Int? // In minutes
+    @IBOutlet weak var textInputStackView: UIStackView!
+    
+    var selectedType : String? {
+        get {
+            return typeTFI.selectedType
+        }
+        set {
+            typeTFI.selectedType = newValue
+        }
+    }
+    var selectedStartTime : Date? {
+        get {
+            return dateTimeTFI.selectedStartTime
+        }
+        set {
+            dateTimeTFI.selectedStartTime = newValue
+        }
+    }
+    var selectedLength : Int?  { // In minutes
+        get {
+            return lengthTFI.selectedLength
+        }
+        set {
+            lengthTFI.selectedLength = newValue
+        }
+    }
     
     //TODO: replace with pickers
     var typeTFI = ExerciseTypeTFI()
@@ -44,8 +53,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TypeTFIDelegate, DateTimeTFIDelega
     
     override func customSetup() {
         //set the initial text and start time of the textField
-        //selectedStartTime = Date()
-        //timeTextField.text = OMSDateAccessor.getDateTime(date: Date())
+        selectedStartTime = Date()
         
         textInputStackView.addArrangedSubview(typeTFI)
         textInputStackView.addArrangedSubview(dateTimeTFI)
@@ -82,6 +90,18 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TypeTFIDelegate, DateTimeTFIDelega
     
     func ConfirmPressed() {
         fatalError("Override Confirm Pressed")
+    }
+    
+    func onLengthTFIDone() {
+        selectedLength = lengthTFI.selectedLength
+    }
+    
+    func onTypeTFIDone() {
+        selectedType = typeTFI.selectedType
+    }
+    
+    func onDateTimeTFIDone() {
+        selectedStartTime = dateTimeTFI.selectedStartTime
     }
     
 }

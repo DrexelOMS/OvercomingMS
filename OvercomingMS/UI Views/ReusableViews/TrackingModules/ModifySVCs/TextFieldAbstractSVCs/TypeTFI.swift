@@ -19,7 +19,11 @@ class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSourc
     var typePicker = UIPickerView()
     
     var tempSelectedType : String?
-    var selectedType : String?
+    var selectedType : String? {
+        didSet {
+            textField.text = selectedType
+        }
+    }
     
     var choices : [String] {
         get {
@@ -30,6 +34,7 @@ class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSourc
     override func customSetup() {
         super.customSetup()
         label.text = "Type"
+        tempSelectedType = choices[0]
     }
     
     override func showTextFieldInput() {
@@ -38,6 +43,7 @@ class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSourc
         typePicker.dataSource = self
         if let type = selectedType {
             typePicker.selectRow(choices.firstIndex(of: type) ?? 0, inComponent: 0, animated: false)
+            tempSelectedType = choices[choices.firstIndex(of: type) ?? 0]
         }
 
         //ToolBar
@@ -73,7 +79,6 @@ class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSourc
     @objc func doneTypePicker(){
         if let type = tempSelectedType {
             self.selectedType = type
-            textField.text = type
         }
         parentVC.view.endEditing(true)
         delegate?.onTypeTFIDone()

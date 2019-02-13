@@ -18,11 +18,17 @@ class DateTimeTFI : TFIAbstract {
     
     let datePicker = UIDatePicker()
     var selectedStartTime : Date?
+    {
+        didSet {
+            textField.text =  OMSDateAccessor.getDateTime(date: selectedStartTime!)
+        }
+    }
     
     override func customSetup() {
         super.customSetup()
         
         label.text = "Start"
+        selectedStartTime = Date()
     }
     
     override func showTextFieldInput() {
@@ -45,7 +51,6 @@ class DateTimeTFI : TFIAbstract {
     
     @objc func doneDatePicker(){
         self.selectedStartTime = datePicker.date
-        textField.text = OMSDateAccessor.getDateTime(date: datePicker.date)
         parentVC.view.endEditing(true)
         delegate?.onDateTimeTFIDone()
     }
