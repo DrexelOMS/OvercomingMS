@@ -54,9 +54,7 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     }
     
     func cancelButtonPressed() {
-        let confirmationPage = CancelConfirmationSVC()
-        confirmationPage.methodToRunOnConfirm = cancel
-        confirmationPage.resetToDefault = true
+        let confirmationPage = CancelConfirmationSVC(methodToRunOnConfirm: cancel, resetToDefault: true)
         parentVC.pushSubView(newSubView: confirmationPage)
     }
     

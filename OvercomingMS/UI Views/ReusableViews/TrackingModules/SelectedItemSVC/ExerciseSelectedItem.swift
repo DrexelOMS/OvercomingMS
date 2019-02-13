@@ -45,9 +45,7 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
     }
     
     override func repeatButtonPressed() {
-        let repeatPage = RepeatConfirmationSVC()
-        repeatPage.methodToRunOnConfirm = repeatItem
-        repeatPage.resetToDefault = true
+        let repeatPage = RepeatConfirmationSVC(methodToRunOnConfirm: repeatItem, resetToDefault: true)
         parentVC.pushSubView(newSubView: repeatPage)
     }
     
@@ -60,9 +58,7 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
     
     
     override func deleteButtonPressed() {
-        let deletePage = DeleteConfirmationSVC()
-        deletePage.methodToRunOnConfirm = deleteItem
-        deletePage.resetToDefault = true
+        let deletePage = DeleteConfirmationSVC(methodToRunOnConfirm: deleteItem, resetToDefault: true)
         parentVC.pushSubView(newSubView: deletePage)
     }
     

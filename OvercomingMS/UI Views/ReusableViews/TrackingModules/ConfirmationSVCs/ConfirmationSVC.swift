@@ -20,9 +20,16 @@ class ConfirmationSVC: SlidingAbstractSVC {
     @IBOutlet weak var bottomDescription: UILabel!
     @IBOutlet weak var bottomButtonView: UIView!
     
-    var methodToRunOnConfirm : (() -> ())?
+    private var methodToRunOnConfirm : (() -> ())?
     
-    var resetToDefault: Bool = false
+    private var resetToDefault: Bool = false
+    
+    convenience init(methodToRunOnConfirm: @escaping (() ->()), resetToDefault: Bool) {
+        self.init()
+        
+        self.methodToRunOnConfirm = methodToRunOnConfirm
+        self.resetToDefault = resetToDefault
+    }
     
     override func customSetup() {
         let backConfirm = BackConfirmButtonSVC()
