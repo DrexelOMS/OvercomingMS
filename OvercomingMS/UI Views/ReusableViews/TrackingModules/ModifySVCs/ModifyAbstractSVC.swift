@@ -19,9 +19,8 @@ class ModifyAbstractSVC : SlidingAbstractSVC {
     
     @IBOutlet weak var textInputStackView: UIStackView!
     
-    @IBOutlet weak var backConfirmButtons: BackConfirmButtonSVC!
+    @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
     
-    //delegate method of onTextFieldDatePickerDone() { textFieldDatePicker.getDate }
     
     override func updateColors() {
         print("remember to update colors")

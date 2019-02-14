@@ -42,7 +42,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pwm-Jx-CmD">
                     <rect key="frame" x="50" y="120" width="275" height="264"/>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8i-7f-xAc" userLabel="BotButtons" customClass="BackConfirmButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8i-7f-xAc" userLabel="BotButtons" customClass="BackConfirmButtonsSVC" customModule="OvercomingMS" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="404" width="375" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="cs6-ZP-lve"/>
