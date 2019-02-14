@@ -88,21 +88,9 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
             return
         }
         
-        saveTimerData()
-        parentVC.resetToDefaultView()
+        //TODO: make sure to divide seconds by 60 to get the minutes
+        parentVC.pushSubView(newSubView: ExerciseAddSVC(startTime: startTime, length: seconds))
     }
-    
-    func saveTimerData() {
-        exerciseRoutines.addExerciseItem(routineType: "Workout", startTime: startTime, endTime: startTime.addingTimeInterval(TimeInterval(seconds * 60)))
-    }
-    
-//    private func ResetButtonTapped(){
-//        timer.invalidate()
-//        seconds = 60
-//        CountDownLabel.text = timeString(time:TimeInterval(seconds))
-//        isTimerRunning = false
-//    }
-    
     
     //MARK: Run timer
     
