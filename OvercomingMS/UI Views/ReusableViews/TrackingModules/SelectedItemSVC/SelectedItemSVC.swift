@@ -29,6 +29,8 @@ class SelectedItemSVC : SlidingAbstractSVC {
     var repeatButton : CircleButtonSVC!
     var deleteButton : CircleButtonSVC!
     
+    @IBOutlet weak var backButton: SquareButtonSVC!
+    
     override func customSetup() {
         editButton = EditCircleButton()
         editButton.buttonAction = editButtonPressed
@@ -43,9 +45,11 @@ class SelectedItemSVC : SlidingAbstractSVC {
         buttonStackView.addArrangedSubview(deleteButton)
         
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        backButton.backButtonAction = backButtonPressed
     }
     
-    @IBAction func backButtonPressed(_ sender: UIButton) {
+    private func backButtonPressed() {
         parentVC.popSubView()
     }
     

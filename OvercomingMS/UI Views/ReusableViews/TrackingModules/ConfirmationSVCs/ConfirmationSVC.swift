@@ -32,7 +32,7 @@ class ConfirmationSVC: SlidingAbstractSVC {
     }
     
     override func customSetup() {
-        let backConfirm = BackConfirmButtonSVC()
+        let backConfirm = BackConfirmButtonsSVC()
         bottomButtonView.addSubview(backConfirm)
         backConfirm.anchorToView(superView: bottomButtonView)
         

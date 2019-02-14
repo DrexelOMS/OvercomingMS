@@ -93,9 +93,7 @@
 		0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8D21FE79C300C55831 /* CustomView.swift */; };
 		0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */; };
 		0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */; };
-		0AD94DBC220A5B9500B5C2BA /* TwoSquareButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* TwoSquareButtonSVC.swift */; };
-		0AD94DBE220A5BF700B5C2BA /* TwoSquareButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */; };
-		0AD94DC0220A5F1000B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBF220A5F1000B5C2BA /* BackConfirmButtonSVC.swift */; };
+		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
 		0AD94DCA220CEE5B00B5C2BA /* SelectedItemSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC9220CEE5B00B5C2BA /* SelectedItemSVC.swift */; };
@@ -117,7 +115,7 @@
 		0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */; };
 		0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
-		0C5C2A3922157AE30066F669 /* BackConfrimButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2A3822157AE30066F669 /* BackConfrimButtonsSVC.xib */; };
+		0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */; };
 		0C8181292211D472008B5A2D /* FoodScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181282211D472008B5A2D /* FoodScreens.storyboard */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
@@ -249,9 +247,7 @@
 		0AD07F8D21FE79C300C55831 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarConfig.swift; sourceTree = "<group>"; };
 		0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMSDateAccessor.swift; sourceTree = "<group>"; };
-		0AD94DBB220A5B9500B5C2BA /* TwoSquareButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSquareButtonSVC.swift; sourceTree = "<group>"; };
-		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
-		0AD94DBF220A5F1000B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
+		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
 		0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedItemSVC.xib; sourceTree = "<group>"; };
 		0AD94DC9220CEE5B00B5C2BA /* SelectedItemSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemSVC.swift; sourceTree = "<group>"; };
@@ -273,7 +269,7 @@
 		0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPauseCircleButton.swift; sourceTree = "<group>"; };
 		0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishCircleButton.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
-		0C5C2A3822157AE30066F669 /* BackConfrimButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackConfrimButtonsSVC.xib; sourceTree = "<group>"; };
+		0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackConfirmButtonsSVC.xib; sourceTree = "<group>"; };
 		0C8181282211D472008B5A2D /* FoodScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodScreens.storyboard; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
@@ -576,15 +572,13 @@
 		0AA5286C2202825100CCFEE7 /* ButtonViews */ = {
 			isa = PBXGroup;
 			children = (
-				0AD94DBA220A5B6900B5C2BA /* TwoSquareButtonSVCs */,
 				0A1FEC6322061DF8006CED70 /* CircleButtonSVCs */,
 				0AA5286D2202827000CCFEE7 /* SquareButtonSVC.swift */,
 				0AA5286F2202828300CCFEE7 /* SquareButtonSVC.xib */,
 				0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */,
 				0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */,
-				0AD94DBB220A5B9500B5C2BA /* TwoSquareButtonSVC.swift */,
-				0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */,
-				0C5C2A3822157AE30066F669 /* BackConfrimButtonsSVC.xib */,
+				0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */,
+				0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */,
 			);
 			path = ButtonViews;
 			sourceTree = "<group>";
@@ -645,14 +639,6 @@
 				0A93F19622145F140063A892 /* ModifyAbstractSVC.xib */,
 			);
 			path = ModifySVCs;
-			sourceTree = "<group>";
-		};
-		0AD94DBA220A5B6900B5C2BA /* TwoSquareButtonSVCs */ = {
-			isa = PBXGroup;
-			children = (
-				0AD94DBF220A5F1000B5C2BA /* BackConfirmButtonSVC.swift */,
-			);
-			path = TwoSquareButtonSVCs;
 			sourceTree = "<group>";
 		};
 		0AD94DC6220CE44200B5C2BA /* SelectedItemSVC */ = {
@@ -923,7 +909,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C5C2A3922157AE30066F669 /* BackConfrimButtonsSVC.xib in Resources */,
+				0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */,
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
 				0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */,
 				0AD07F8C21FE703D00C55831 /* TrackingFoodBar.xib in Resources */,
@@ -945,7 +931,6 @@
 				0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */,
 				0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
-				0AD94DBE220A5BF700B5C2BA /* TwoSquareButtonSVC.xib in Resources */,
 				0A93EA45221316490063A892 /* (null) in Resources */,
 				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
@@ -1089,7 +1074,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */,
-				0AD94DBC220A5B9500B5C2BA /* TwoSquareButtonSVC.swift in Sources */,
+				0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */,
 				0AD07F7221FCFF8100C55831 /* TrackingProgressBar.swift in Sources */,
 				0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */,
 				0A0818962214E6210021BDF6 /* FoodSearchSVC.swift in Sources */,
@@ -1152,7 +1137,6 @@
 				0A93F19C22145F150063A892 /* ExerciseEditSVC.swift in Sources */,
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
 				0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */,
-				0AD94DC0220A5F1000B5C2BA /* BackConfirmButtonSVC.swift in Sources */,
 				0AD94DCF220DE7CB00B5C2BA /* RepeatConfirmationSVC.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
 				0A93F15D2213C62A0063A892 /* SearchCircleButton.swift in Sources */,
