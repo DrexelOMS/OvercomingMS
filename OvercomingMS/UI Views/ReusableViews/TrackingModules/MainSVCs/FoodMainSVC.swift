@@ -44,7 +44,7 @@ class FoodMainSVC: SlidingAbstractSVC {
     
     func searchButtonPressed() {
         //parentVC.pushSubView(newSubView: ExerciseAddSVC())
-        print("Pressed Search")
+        parentVC.pushSubView(newSubView: FoodSearchSVC())
     }
     
     func recipesButtonPressed() {
