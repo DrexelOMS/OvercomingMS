@@ -13,6 +13,7 @@
 		0A0818982214E6310021BDF6 /* FoodSearchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A0818972214E6310021BDF6 /* FoodSearchSVC.xib */; };
 		0A08189A2214E7E80021BDF6 /* FoodSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */; };
 		0A08189C2214E8CC0021BDF6 /* FoodSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */; };
+		0A08189E2214F82F0021BDF6 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A08189D2214F82F0021BDF6 /* Food.swift */; };
 		0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */; };
 		0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */; };
 		0A1FEC4F2204E01C006CED70 /* TrackingModuleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1FEC4E2204E01C006CED70 /* TrackingModuleStoryboard.storyboard */; };
@@ -159,6 +160,7 @@
 		0A0818972214E6310021BDF6 /* FoodSearchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchSVC.xib; sourceTree = "<group>"; };
 		0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchCell.xib; sourceTree = "<group>"; };
 		0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchCell.swift; sourceTree = "<group>"; };
+		0A08189D2214F82F0021BDF6 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnTestingViewController.swift; sourceTree = "<group>"; };
 		0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDownCloseViewController.swift; sourceTree = "<group>"; };
 		0A1FEC4E2204E01C006CED70 /* TrackingModuleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrackingModuleStoryboard.storyboard; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				0A0818972214E6310021BDF6 /* FoodSearchSVC.xib */,
 				0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */,
 				0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */,
+				0A08189D2214F82F0021BDF6 /* Food.swift */,
 			);
 			path = FoodModule;
 			sourceTree = "<group>";
@@ -1094,6 +1097,7 @@
 				0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */,
 				0A93F19B22145F150063A892 /* ModifyAbstractSVC.swift in Sources */,
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
+				0A08189E2214F82F0021BDF6 /* Food.swift in Sources */,
 				0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */,
 				0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */,
 				0A1FEC6C22063898006CED70 /* Routine3PartCell.swift in Sources */,
