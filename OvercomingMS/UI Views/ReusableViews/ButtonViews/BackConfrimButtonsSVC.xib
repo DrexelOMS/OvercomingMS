@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1qz-l5-45D">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4B-nF-Ucn" userLabel="BackButton">
+                            <rect key="frame" x="0.0" y="0.0" width="159" height="60"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SY6-cv-mBq">
+                                    <rect key="frame" x="42" y="22" width="75.5" height="16"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="L2V-KG-Sxl">
+                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="Wzb-VI-mLd"/>
+                                                <constraint firstAttribute="width" constant="16" id="Xj6-MK-rac"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh3-iL-nen">
+                                            <rect key="frame" x="31" y="0.0" width="44.5" height="16"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Back">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.79607843140000001" green="0.90196078430000004" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="SY6-cv-mBq" firstAttribute="centerY" secondItem="l4B-nF-Ucn" secondAttribute="centerY" id="hSg-Yt-KjB"/>
+                                <constraint firstItem="SY6-cv-mBq" firstAttribute="centerX" secondItem="l4B-nF-Ucn" secondAttribute="centerX" id="nBe-al-xAW"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kkc-85-hw3" userLabel="ConfirmButton">
+                            <rect key="frame" x="161" y="0.0" width="159" height="60"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pcY-n6-0Q9">
+                                    <rect key="frame" x="26.5" y="22" width="106" height="16"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Confirm" translatesAutoresizingMaskIntoConstraints="NO" id="3cO-P1-lI9">
+                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="uOx-AE-jgU"/>
+                                                <constraint firstAttribute="width" constant="16" id="wxu-LQ-5Eb"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHG-Ev-efl">
+                                            <rect key="frame" x="31" y="0.0" width="75" height="16"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Confirm">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.24705882352941178" green="0.38039215686274508" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="pcY-n6-0Q9" firstAttribute="centerX" secondItem="Kkc-85-hw3" secondAttribute="centerX" id="Dit-LF-0hf"/>
+                                <constraint firstItem="pcY-n6-0Q9" firstAttribute="centerY" secondItem="Kkc-85-hw3" secondAttribute="centerY" id="qS9-8M-7vz"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1qz-l5-45D" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Lgf-G5-HVz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1qz-l5-45D" secondAttribute="trailing" id="U39-e2-roP"/>
+                <constraint firstItem="1qz-l5-45D" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cqM-bT-ltK"/>
+                <constraint firstItem="1qz-l5-45D" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ugt-Y7-LIi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="94.400000000000006" y="426.38680659670166"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back" width="689" height="689"/>
+        <image name="Confirm" width="689" height="689"/>
+    </resources>
+</document>

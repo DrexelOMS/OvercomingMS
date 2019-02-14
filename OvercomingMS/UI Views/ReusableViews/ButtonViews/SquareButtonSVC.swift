@@ -8,11 +8,11 @@
 
 import UIKit
 
-class BlueButtonSVC: CustomView {
+class SquareButtonSVC: CustomView {
 
     override var nibName: String {
         get {
-            return "BlueButtonSVC"
+            return "SquareButtonSVC"
         }
     }
     
