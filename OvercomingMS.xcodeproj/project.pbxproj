@@ -79,8 +79,8 @@
 		0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5285A2202623B00CCFEE7 /* RoundButton.swift */; };
 		0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA5286622027FF300CCFEE7 /* ConfirmationSVC.xib */; };
 		0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */; };
-		0AA5286E2202827000CCFEE7 /* BlueButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5286D2202827000CCFEE7 /* BlueButtonSVC.swift */; };
-		0AA528702202828300CCFEE7 /* BlueButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA5286F2202828300CCFEE7 /* BlueButtonSVC.xib */; };
+		0AA5286E2202827000CCFEE7 /* SquareButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5286D2202827000CCFEE7 /* SquareButtonSVC.swift */; };
+		0AA528702202828300CCFEE7 /* SquareButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA5286F2202828300CCFEE7 /* SquareButtonSVC.xib */; };
 		0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */; };
 		0AD07F7221FCFF8100C55831 /* TrackingProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */; };
 		0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F7821FE3EA200C55831 /* CirclesViewController.swift */; };
@@ -235,8 +235,8 @@
 		0AA5285A2202623B00CCFEE7 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		0AA5286622027FF300CCFEE7 /* ConfirmationSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationSVC.xib; sourceTree = "<group>"; };
 		0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationSVC.swift; sourceTree = "<group>"; };
-		0AA5286D2202827000CCFEE7 /* BlueButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonSVC.swift; sourceTree = "<group>"; };
-		0AA5286F2202828300CCFEE7 /* BlueButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlueButtonSVC.xib; sourceTree = "<group>"; };
+		0AA5286D2202827000CCFEE7 /* SquareButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButtonSVC.swift; sourceTree = "<group>"; };
+		0AA5286F2202828300CCFEE7 /* SquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingProgressBar.xib; sourceTree = "<group>"; };
 		0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingProgressBar.swift; sourceTree = "<group>"; };
 		0AD07F7821FE3EA200C55831 /* CirclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesViewController.swift; sourceTree = "<group>"; };
@@ -578,8 +578,8 @@
 			children = (
 				0AD94DBA220A5B6900B5C2BA /* TwoSquareButtonSVCs */,
 				0A1FEC6322061DF8006CED70 /* CircleButtonSVCs */,
-				0AA5286D2202827000CCFEE7 /* BlueButtonSVC.swift */,
-				0AA5286F2202828300CCFEE7 /* BlueButtonSVC.xib */,
+				0AA5286D2202827000CCFEE7 /* SquareButtonSVC.swift */,
+				0AA5286F2202828300CCFEE7 /* SquareButtonSVC.xib */,
 				0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */,
 				0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */,
 				0AD94DBB220A5B9500B5C2BA /* TwoSquareButtonSVC.swift */,
@@ -934,7 +934,7 @@
 				0A2BAA752204AFC3004074F3 /* Quicksand-BoldItalic.otf in Resources */,
 				0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */,
 				0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */,
-				0AA528702202828300CCFEE7 /* BlueButtonSVC.xib in Resources */,
+				0AA528702202828300CCFEE7 /* SquareButtonSVC.xib in Resources */,
 				0A1FEC4F2204E01C006CED70 /* TrackingModuleStoryboard.storyboard in Resources */,
 				0A2BAA742204AFC3004074F3 /* SIL Open Font License.txt in Resources */,
 				0A93F19222145EA30063A892 /* TFIAbstract.xib in Resources */,
@@ -1132,7 +1132,7 @@
 				0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */,
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
 				0AF8E0DF22092A5E00E1EC33 /* CancelCircleButton.swift in Sources */,
-				0AA5286E2202827000CCFEE7 /* BlueButtonSVC.swift in Sources */,
+				0AA5286E2202827000CCFEE7 /* SquareButtonSVC.swift in Sources */,
 				0AD94DDB220E0D7600B5C2BA /* MeditationModuleVC.swift in Sources */,
 				0AD94DD3220DEE8000B5C2BA /* EditCircleButton.swift in Sources */,
 				0A0818912214647E0021BDF6 /* LengthTFI.swift in Sources */,
