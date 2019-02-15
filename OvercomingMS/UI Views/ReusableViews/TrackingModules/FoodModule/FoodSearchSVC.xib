@@ -44,13 +44,16 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eB3-9g-3dB" userLabel="SearchView">
                     <rect key="frame" x="0.0" y="348" width="320" height="110"/>
                     <subviews>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yb6-lh-PRp">
-                            <rect key="frame" x="30" y="30" width="260" height="50"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb6-lh-PRp" customClass="SearchBarButton" customModule="OvercomingMS" customModuleProvider="target">
+                            <rect key="frame" x="30" y="35" width="260" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="X1p-vu-HvZ"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Yb6-lh-PRp" secondAttribute="trailing" constant="30" id="KAj-at-Su4"/>
+                        <constraint firstItem="Yb6-lh-PRp" firstAttribute="centerY" secondItem="eB3-9g-3dB" secondAttribute="centerY" id="YNo-M2-G0V"/>
                         <constraint firstAttribute="height" constant="110" id="oRC-oa-rQy"/>
                         <constraint firstItem="Yb6-lh-PRp" firstAttribute="leading" secondItem="eB3-9g-3dB" secondAttribute="leading" constant="30" id="xHT-bp-tFw"/>
                     </constraints>

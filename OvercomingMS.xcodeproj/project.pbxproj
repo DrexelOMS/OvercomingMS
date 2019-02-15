@@ -71,6 +71,7 @@
 		0A93F19B22145F150063A892 /* ModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19722145F140063A892 /* ModifyAbstractSVC.swift */; };
 		0A93F19C22145F150063A892 /* ExerciseEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19822145F150063A892 /* ExerciseEditSVC.swift */; };
 		0A93F19D22145F150063A892 /* ExerciseAddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19922145F150063A892 /* ExerciseAddSVC.swift */; };
+		0A98DB0F2216447800F4800D /* SearchBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0E2216447800F4800D /* SearchBarButton.swift */; };
 		0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */; };
 		0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */; };
 		0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */; };
@@ -228,6 +229,7 @@
 		0A93F19722145F140063A892 /* ModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyAbstractSVC.swift; sourceTree = "<group>"; };
 		0A93F19822145F150063A892 /* ExerciseEditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseEditSVC.swift; sourceTree = "<group>"; };
 		0A93F19922145F150063A892 /* ExerciseAddSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseAddSVC.swift; sourceTree = "<group>"; };
+		0A98DB0E2216447800F4800D /* SearchBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarButton.swift; sourceTree = "<group>"; };
 		0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleAbstractVC.swift; sourceTree = "<group>"; };
 		0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleVC.swift; sourceTree = "<group>"; };
 		0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAbstractSVC.swift; sourceTree = "<group>"; };
@@ -338,9 +340,10 @@
 			children = (
 				0A0818952214E6210021BDF6 /* FoodSearchSVC.swift */,
 				0A0818972214E6310021BDF6 /* FoodSearchSVC.xib */,
+				0A98DB0E2216447800F4800D /* SearchBarButton.swift */,
 				0C2DAFDD22163057004C1966 /* SearchBarButton.xib */,
-				0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */,
 				0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */,
+				0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */,
 				0A08189D2214F82F0021BDF6 /* Food.swift */,
 			);
 			path = FoodModule;
@@ -1138,6 +1141,7 @@
 				0AF8E0DF22092A5E00E1EC33 /* CancelCircleButton.swift in Sources */,
 				0AA5286E2202827000CCFEE7 /* SquareButtonSVC.swift in Sources */,
 				0AD94DDB220E0D7600B5C2BA /* MeditationModuleVC.swift in Sources */,
+				0A98DB0F2216447800F4800D /* SearchBarButton.swift in Sources */,
 				0AD94DD3220DEE8000B5C2BA /* EditCircleButton.swift in Sources */,
 				0A0818912214647E0021BDF6 /* LengthTFI.swift in Sources */,
 				0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */,
