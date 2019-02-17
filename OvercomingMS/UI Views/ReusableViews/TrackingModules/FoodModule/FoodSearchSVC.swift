@@ -33,7 +33,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
     var foodItemsArray: [Food] = []
     
     override func customSetup() {
-
+        backButton.backButtonAction = backButtonPressed
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -184,7 +184,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
 
     
-    @IBAction func backButtonPressed(_ sender: UIButton) {
+    func backButtonPressed() {
         parentVC.popSubView()
     }
     
