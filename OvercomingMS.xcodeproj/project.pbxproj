@@ -94,6 +94,7 @@
 		0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8D21FE79C300C55831 /* CustomView.swift */; };
 		0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */; };
 		0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */; };
+		0AD7EAEC2219A8F9006F71C0 /* PillBoxUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAEB2219A8F9006F71C0 /* PillBoxUIView.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* TwoSquareButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* TwoSquareButtonSVC.swift */; };
 		0AD94DBE220A5BF700B5C2BA /* TwoSquareButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */; };
 		0AD94DC0220A5F1000B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBF220A5F1000B5C2BA /* BackConfirmButtonSVC.swift */; };
@@ -252,6 +253,7 @@
 		0AD07F8D21FE79C300C55831 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarConfig.swift; sourceTree = "<group>"; };
 		0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMSDateAccessor.swift; sourceTree = "<group>"; };
+		0AD7EAEB2219A8F9006F71C0 /* PillBoxUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillBoxUIView.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* TwoSquareButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSquareButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DBF220A5F1000B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
@@ -625,6 +627,7 @@
 				0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */,
 				0AA5285A2202623B00CCFEE7 /* RoundButton.swift */,
 				0AD07F8721FE637600C55831 /* RoundCornersUIView.swift */,
+				0AD7EAEB2219A8F9006F71C0 /* PillBoxUIView.swift */,
 			);
 			path = SharedUIViewSupers;
 			sourceTree = "<group>";
@@ -1168,6 +1171,7 @@
 				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
+				0AD7EAEC2219A8F9006F71C0 /* PillBoxUIView.swift in Sources */,
 				0A93EA4122122D840063A892 /* (null) in Sources */,
 				0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */,
 				0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */,
