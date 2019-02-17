@@ -59,7 +59,7 @@
                                             <rect key="frame" x="1" y="0.0" width="168" height="40"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0WC-ga-uMe">
-                                                    <rect key="frame" x="0.0" y="5" width="168" height="30"/>
+                                                    <rect key="frame" x="5" y="5" width="158" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -69,9 +69,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="0WC-ga-uMe" secondAttribute="bottom" constant="5" id="HIJ-yg-Hb0"/>
                                                 <constraint firstItem="0WC-ga-uMe" firstAttribute="top" secondItem="rXC-I6-DCa" secondAttribute="top" constant="5" id="MzW-IH-yMf"/>
-                                                <constraint firstItem="0WC-ga-uMe" firstAttribute="leading" secondItem="rXC-I6-DCa" secondAttribute="leading" id="YSq-V2-8Pu"/>
+                                                <constraint firstItem="0WC-ga-uMe" firstAttribute="leading" secondItem="rXC-I6-DCa" secondAttribute="leading" constant="5" id="YSq-V2-8Pu"/>
                                                 <constraint firstAttribute="height" constant="40" id="eRx-kN-pMA"/>
-                                                <constraint firstAttribute="trailing" secondItem="0WC-ga-uMe" secondAttribute="trailing" id="jTn-2v-02a"/>
+                                                <constraint firstAttribute="trailing" secondItem="0WC-ga-uMe" secondAttribute="trailing" constant="5" id="jTn-2v-02a"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ozk-zO-cIV" userLabel="BorderRight">
