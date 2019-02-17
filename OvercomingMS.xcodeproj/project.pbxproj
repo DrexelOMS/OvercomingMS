@@ -73,6 +73,7 @@
 		0A93F19D22145F150063A892 /* ExerciseAddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19922145F150063A892 /* ExerciseAddSVC.swift */; };
 		0A98DB0B221622A200F4800D /* Omega3MainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0A221622A200F4800D /* Omega3MainSVC.swift */; };
 		0A98DB0D221622E900F4800D /* SupplementCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0C221622E900F4800D /* SupplementCircleButton.swift */; };
+		0A98DB0F2216447800F4800D /* SearchBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0E2216447800F4800D /* SearchBarButton.swift */; };
 		0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */; };
 		0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */; };
 		0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */; };
@@ -95,6 +96,7 @@
 		0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8D21FE79C300C55831 /* CustomView.swift */; };
 		0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */; };
 		0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */; };
+		0AD7EAEC2219A8F9006F71C0 /* PillBoxUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAEB2219A8F9006F71C0 /* PillBoxUIView.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -117,6 +119,7 @@
 		0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */; };
 		0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
+		0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAFDD22163057004C1966 /* SearchBarButton.xib */; };
 		0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */; };
 		0C8181292211D472008B5A2D /* FoodScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181282211D472008B5A2D /* FoodScreens.storyboard */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
@@ -229,6 +232,7 @@
 		0A93F19922145F150063A892 /* ExerciseAddSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseAddSVC.swift; sourceTree = "<group>"; };
 		0A98DB0A221622A200F4800D /* Omega3MainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3MainSVC.swift; sourceTree = "<group>"; };
 		0A98DB0C221622E900F4800D /* SupplementCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementCircleButton.swift; sourceTree = "<group>"; };
+		0A98DB0E2216447800F4800D /* SearchBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarButton.swift; sourceTree = "<group>"; };
 		0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleAbstractVC.swift; sourceTree = "<group>"; };
 		0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleVC.swift; sourceTree = "<group>"; };
 		0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAbstractSVC.swift; sourceTree = "<group>"; };
@@ -251,7 +255,9 @@
 		0AD07F8D21FE79C300C55831 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarConfig.swift; sourceTree = "<group>"; };
 		0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMSDateAccessor.swift; sourceTree = "<group>"; };
+		0AD7EAEB2219A8F9006F71C0 /* PillBoxUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillBoxUIView.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
+		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
 		0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedItemSVC.xib; sourceTree = "<group>"; };
 		0AD94DC9220CEE5B00B5C2BA /* SelectedItemSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemSVC.swift; sourceTree = "<group>"; };
@@ -273,6 +279,7 @@
 		0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPauseCircleButton.swift; sourceTree = "<group>"; };
 		0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishCircleButton.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
+		0C2DAFDD22163057004C1966 /* SearchBarButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarButton.xib; sourceTree = "<group>"; };
 		0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackConfirmButtonsSVC.xib; sourceTree = "<group>"; };
 		0C8181282211D472008B5A2D /* FoodScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodScreens.storyboard; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
@@ -336,8 +343,10 @@
 			children = (
 				0A0818952214E6210021BDF6 /* FoodSearchSVC.swift */,
 				0A0818972214E6310021BDF6 /* FoodSearchSVC.xib */,
-				0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */,
+				0A98DB0E2216447800F4800D /* SearchBarButton.swift */,
+				0C2DAFDD22163057004C1966 /* SearchBarButton.xib */,
 				0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */,
+				0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */,
 				0A08189D2214F82F0021BDF6 /* Food.swift */,
 			);
 			path = FoodModule;
@@ -619,6 +628,7 @@
 				0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */,
 				0AA5285A2202623B00CCFEE7 /* RoundButton.swift */,
 				0AD07F8721FE637600C55831 /* RoundCornersUIView.swift */,
+				0AD7EAEB2219A8F9006F71C0 /* PillBoxUIView.swift */,
 			);
 			path = SharedUIViewSupers;
 			sourceTree = "<group>";
@@ -633,6 +643,14 @@
 			);
 			name = DatebaseServices;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		0AD7EAEE2219AADA006F71C0 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		0AD94DAD2209BBD600B5C2BA /* ModifySVCs */ = {
@@ -696,6 +714,7 @@
 				6129744C21DF017E00B9846C /* Products */,
 				EC6D3BCE5A42A73194AA1E3C /* Pods */,
 				DD7121317404FDF12D44D4AB /* Frameworks */,
+				0AD7EAEE2219AADA006F71C0 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -937,6 +956,7 @@
 				0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */,
 				0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
+				0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */,
 				0A93EA45221316490063A892 /* (null) in Resources */,
 				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
@@ -1126,6 +1146,7 @@
 				0AF8E0DF22092A5E00E1EC33 /* CancelCircleButton.swift in Sources */,
 				0AA5286E2202827000CCFEE7 /* SquareButtonSVC.swift in Sources */,
 				0AD94DDB220E0D7600B5C2BA /* MeditationModuleVC.swift in Sources */,
+				0A98DB0F2216447800F4800D /* SearchBarButton.swift in Sources */,
 				0AD94DD3220DEE8000B5C2BA /* EditCircleButton.swift in Sources */,
 				0A0818912214647E0021BDF6 /* LengthTFI.swift in Sources */,
 				0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */,
@@ -1152,6 +1173,7 @@
 				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
+				0AD7EAEC2219A8F9006F71C0 /* PillBoxUIView.swift in Sources */,
 				0A93EA4122122D840063A892 /* (null) in Sources */,
 				0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */,
 				0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */,

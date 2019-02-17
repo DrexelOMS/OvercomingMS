@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I4j-2b-a75">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="0pQ-HU-K0G" userLabel="Diet View Controller" customClass="DietViewController" customModule="OvercomingMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z7r-e6-Rqp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVF-EL-qS4">
-                                <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4ar-hd-zIM"/>
@@ -33,10 +33,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2hI-Yr-rGu">
-                                <rect key="frame" x="0.0" y="20" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="31.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kI-O2-rl1">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="31.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Test">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,14 +46,14 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XY-8q-cRd">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="60"/>
+                                        <rect key="frame" x="106.5" y="0.0" width="107" height="31.5"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slU-L2-haD">
-                                        <rect key="frame" x="276" y="0.0" width="138" height="60"/>
+                                        <rect key="frame" x="213.5" y="0.0" width="106.5" height="31.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Test">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,21 +63,21 @@
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QQO-fa-xY4">
-                                <rect key="frame" x="0.0" y="80" width="414" height="606"/>
+                                <rect key="frame" x="0.0" y="51.5" width="320" height="466.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="606" id="YGm-YW-VRL"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodItemsCell" id="QVX-FL-fEy" userLabel="FoodItemsCell" customClass="FoodItemsCell" customModule="OvercomingMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QVX-FL-fEy" id="5ia-BJ-dgn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJs-W7-0Sf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -126,32 +126,32 @@
             <objects>
                 <viewController id="I4j-2b-a75" customClass="MainTrackingViewController" customModule="OvercomingMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vmN-bR-mVr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Aa-cs-GRV" userLabel="MainView">
-                                <rect key="frame" x="5" y="20" width="404" height="616"/>
+                                <rect key="frame" x="5" y="20" width="310" height="448"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DWO-Z2-Tem">
-                                        <rect key="frame" x="15" y="0.0" width="374" height="616"/>
+                                        <rect key="frame" x="15" y="0.0" width="280" height="448"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KyE-NP-hph" userLabel="TopView">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="92"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="92"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2m0-fw-ejm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="92"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="92"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvo-lG-7QB" userLabel="Navigation">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="36"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="t0s-Nk-0Cq">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="36"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOG-r5-tcv" userLabel="Circles">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="36"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="36"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxO-ht-Md3">
-                                                                                        <rect key="frame" x="38.333333333333329" y="0.0" width="48.333333333333329" height="16.333333333333332"/>
+                                                                                        <rect key="frame" x="22.5" y="0.0" width="48.5" height="16.5"/>
                                                                                         <attributedString key="attributedText">
                                                                                             <fragment content="Circles">
                                                                                                 <attributes>
@@ -168,10 +168,10 @@
                                                                                 </constraints>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K4N-4V-Z4k" userLabel="Tracking">
-                                                                                <rect key="frame" x="124.66666666666666" y="0.0" width="124.66666666666666" height="36"/>
+                                                                                <rect key="frame" x="93.5" y="0.0" width="93" height="36"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnA-gZ-ep5">
-                                                                                        <rect key="frame" x="19.666666666666686" y="6.3333333333333339" width="85.333333333333329" height="23.333333333333329"/>
+                                                                                        <rect key="frame" x="4" y="6.5" width="85.5" height="23.5"/>
                                                                                         <attributedString key="attributedText">
                                                                                             <fragment content="Tracking">
                                                                                                 <attributes>
@@ -188,10 +188,10 @@
                                                                                 </constraints>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IP6-JN-ySF" userLabel="Analysis">
-                                                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="36"/>
+                                                                                <rect key="frame" x="186.5" y="0.0" width="93.5" height="36"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3e-C3-RLP">
-                                                                                        <rect key="frame" x="34" y="0.0" width="56.666666666666657" height="16.333333333333332"/>
+                                                                                        <rect key="frame" x="18.5" y="0.0" width="57" height="16.5"/>
                                                                                         <attributedString key="attributedText">
                                                                                             <fragment content="Analysis">
                                                                                                 <attributes>
@@ -219,10 +219,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIc-Oy-Rw0" userLabel="Achievements" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="46" width="374" height="46"/>
+                                                                <rect key="frame" x="0.0" y="46" width="280" height="46"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilz-Yu-k2m">
-                                                                        <rect key="frame" x="107.33333333333333" y="9" width="159.33333333333337" height="28"/>
+                                                                        <rect key="frame" x="60.5" y="9" width="159.5" height="28"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="You can do it!">
                                                                                 <attributes>
@@ -251,16 +251,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x1-2z-34U" userLabel="TrackingView">
-                                                <rect key="frame" x="0.0" y="108" width="374" height="508"/>
+                                                <rect key="frame" x="0.0" y="108" width="280" height="340"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="uG2-RS-f9c">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="505"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="337"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-EL-iHN" customClass="TrackingFoodBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="74.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="46"/>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IO1-W9-0dD" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="86.333333333333343" width="374" height="74"/>
+                                                                <rect key="frame" x="0.0" y="58" width="280" height="46.5"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.0078431372550000003" green="0.63529411759999999" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -269,7 +269,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-va-Kq1" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="172.33333333333331" width="374" height="74.333333333333314"/>
+                                                                <rect key="frame" x="0.0" y="116.5" width="280" height="46"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="1" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -278,7 +278,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYS-8V-zpv" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="258.66666666666669" width="374" height="74"/>
+                                                                <rect key="frame" x="0.0" y="174.5" width="280" height="46"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Exercise"/>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
@@ -287,7 +287,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQQ-l4-VC0" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="344.66666666666669" width="374" height="74.333333333333314"/>
+                                                                <rect key="frame" x="0.0" y="232.5" width="280" height="46.5"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.40000000000000002" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -296,7 +296,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-CW-Z5M" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="431" width="374" height="74"/>
+                                                                <rect key="frame" x="0.0" y="291" width="280" height="46"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.46274509800000002" green="0.67843137249999996" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -325,27 +325,27 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRf-zh-af2" userLabel="ButtonView">
-                                <rect key="frame" x="5" y="636" width="404" height="100"/>
+                                <rect key="frame" x="5" y="468" width="310" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IwL-Wh-fNr">
-                                        <rect key="frame" x="0.0" y="0.0" width="404" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="100"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqo-wA-Hr4" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.33333333333334" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Previous"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Goals"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqb-Vo-Ctx" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                                <rect key="frame" x="136.33333333333331" y="0.0" width="131.33333333333331" height="100"/>
+                                                <rect key="frame" x="105" y="0.0" width="100" height="100"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Progress Day"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Timer"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USw-ho-yen" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                                <rect key="frame" x="272.66666666666669" y="0.0" width="131.33333333333331" height="100"/>
+                                                <rect key="frame" x="210" y="0.0" width="100" height="100"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Next"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Settings"/>
@@ -394,8 +394,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Goals" width="689.33331298828125" height="689.33331298828125"/>
-        <image name="Settings" width="689.33331298828125" height="689.33331298828125"/>
-        <image name="Timer" width="689.33331298828125" height="689.33331298828125"/>
+        <image name="Goals" width="689" height="689"/>
+        <image name="Settings" width="689" height="689"/>
+        <image name="Timer" width="689" height="689"/>
     </resources>
 </document>

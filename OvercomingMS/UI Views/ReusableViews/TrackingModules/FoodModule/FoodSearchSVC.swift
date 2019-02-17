@@ -14,7 +14,8 @@ import SwiftyJSON
 class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var searchBarButton: SearchBarButton!
+    @IBOutlet weak var backButton: SquareButtonSVC!
     
     let foodCellName = "FoodSearchCell"
     
@@ -32,6 +33,8 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
     var foodItemsArray: [Food] = []
     
     override func customSetup() {
+        backButton.backButtonAction = backButtonPressed
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: foodCellName, bundle: nil), forCellReuseIdentifier: foodCellName)
@@ -181,7 +184,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
 
     
-    @IBAction func backButtonPressed(_ sender: UIButton) {
+    func backButtonPressed() {
         parentVC.popSubView()
     }
     
