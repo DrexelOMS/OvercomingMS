@@ -38,7 +38,6 @@
                                             <state key="normal" title="Search" image="Search"/>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Dug-Rk-gsV" firstAttribute="centerX" secondItem="oSD-t2-DK8" secondAttribute="centerX" id="9CZ-X1-OMy"/>
                                         <constraint firstItem="Dug-Rk-gsV" firstAttribute="centerY" secondItem="oSD-t2-DK8" secondAttribute="centerY" id="GHs-Us-pzC"/>
@@ -109,7 +108,6 @@
                                             <state key="normal" title="Settings" image="Settings"/>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Jip-uw-w5m" firstAttribute="centerX" secondItem="Uka-2k-Dfp" secondAttribute="centerX" id="fxK-nB-W0y"/>
                                         <constraint firstItem="Jip-uw-w5m" firstAttribute="centerY" secondItem="Uka-2k-Dfp" secondAttribute="centerY" id="m9P-a6-dHZ"/>
