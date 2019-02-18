@@ -46,6 +46,10 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     }
     
     @objc private func cancelPicker(){
+        cancelFunction()
+    }
+    
+    func cancelFunction() {
         parentVC.view.endEditing(true)
     }
     

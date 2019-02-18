@@ -19,11 +19,6 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     }
     
     enum ModifyMode {case Supplement, Outside}
-    var mode : ModifyMode = .Supplement {
-        didSet {
-            toggleMode()
-        }
-    }
     
     var fourthSL = SelectedLabelsSVC(mainLabel: "test1", subLabel: "test2")
     
@@ -42,7 +37,6 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     override func reload() {
         fourthSL.removeFromSuperview()
         if vitaminDItem.IsOutsideType {
-            mode = .Outside
             labelsStackView.addArrangedSubview(fourthSL)
             labelsStackView.translatesAutoresizingMaskIntoConstraints = false
             
@@ -56,8 +50,6 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
             labelsStackView.translatesAutoresizingMaskIntoConstraints = false
         }
         else {
-            mode = .Supplement
-            
             bottomSubLabel.text = "Amount"
             bottomMainLabel.text = "\(vitaminDItem.calculatedAmount) \(ProgressBarConfig.vitaminDUOM)"
         }
@@ -66,14 +58,10 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
         middleMainLabel.text = OMSDateAccessor.getDateTime(date: vitaminDItem.StartTime)
     }
     
-    func toggleMode(){
-        
-    }
-    
     override func editButtonPressed() {
-        //let editPage = VitaminDEditSVC()
-        //editPage.editingOmega3Item = omega3Item
-        //parentVC.pushSubView(newSubView: editPage)
+        let editPage = VitaminDEditSVC()
+        editPage.editingVitamindDItem = vitaminDItem
+        parentVC.pushSubView(newSubView: editPage)
     }
     
     override func repeatButtonPressed() {
@@ -82,7 +70,7 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     }
     
     func repeatItem() {
-        if mode == .Supplement {
+        if !vitaminDItem.IsOutsideType {
             
             VitaminDHistoryDBS().addVitaminDSupplementItem(vitaminDType: vitaminDItem.VitaminDType, startTime: Date(), vitaminDAmount: vitaminDItem.Amount)
         }

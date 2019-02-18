@@ -53,16 +53,18 @@ class VitaminDModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTF
         get {
             return conversionLengthTFI.selectedLength
         }
+        set {
+            conversionLengthTFI.selectedLength = newValue
+        }
     }
     
     var vitaminDTypeTFI = VitaminDTypeTFI()
     var dateTimeTFI = DateTimeTFI()
-    var amountTFI = AmountTFI()
+    var amountTFI = AmountTFI(uom: ProgressBarConfig.vitaminDUOM)
     var conversionLengthTFI = VDConversionLengthTFI()
     
     override func customSetup() {
         //set the initial text and start time of the textField
-        selectedType = vitaminDTypeTFI.outside
         selectedStartTime = Date()
         
         textInputStackView.addArrangedSubview(vitaminDTypeTFI)
