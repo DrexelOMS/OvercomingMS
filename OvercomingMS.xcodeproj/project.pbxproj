@@ -97,6 +97,8 @@
 		0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */; };
 		0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */; };
 		0AD7EAEC2219A8F9006F71C0 /* PillBoxUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAEB2219A8F9006F71C0 /* PillBoxUIView.swift */; };
+		0AD7EAF0221AFB47006F71C0 /* AmountTFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAEF221AFB47006F71C0 /* AmountTFI.swift */; };
+		0AD7EAF2221B0047006F71C0 /* CustomEntryTFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAF1221B0047006F71C0 /* CustomEntryTFI.swift */; };
 		0AD7EAF4221B0779006F71C0 /* VitaminDHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAF3221B0778006F71C0 /* VitaminDHistoryDBS.swift */; };
 		0AD7EAF6221B0788006F71C0 /* VitaminDHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAF5221B0788006F71C0 /* VitaminDHistoryDBT.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
@@ -258,6 +260,8 @@
 		0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarConfig.swift; sourceTree = "<group>"; };
 		0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMSDateAccessor.swift; sourceTree = "<group>"; };
 		0AD7EAEB2219A8F9006F71C0 /* PillBoxUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillBoxUIView.swift; sourceTree = "<group>"; };
+		0AD7EAEF221AFB47006F71C0 /* AmountTFI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountTFI.swift; sourceTree = "<group>"; };
+		0AD7EAF1221B0047006F71C0 /* CustomEntryTFI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEntryTFI.swift; sourceTree = "<group>"; };
 		0AD7EAF3221B0778006F71C0 /* VitaminDHistoryDBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDHistoryDBS.swift; sourceTree = "<group>"; };
 		0AD7EAF5221B0788006F71C0 /* VitaminDHistoryDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDHistoryDBT.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
@@ -562,6 +566,8 @@
 				0A93F18E22145EA30063A892 /* TFIAbstract.xib */,
 				0A93F18F22145EA30063A892 /* TypeTFI.swift */,
 				0A0818902214647E0021BDF6 /* LengthTFI.swift */,
+				0AD7EAEF221AFB47006F71C0 /* AmountTFI.swift */,
+				0AD7EAF1221B0047006F71C0 /* CustomEntryTFI.swift */,
 				0A93F19022145EA30063A892 /* DateTimeTFI.swift */,
 				0A93F19122145EA30063A892 /* TFIAbstract.swift */,
 			);
@@ -1114,6 +1120,7 @@
 				0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */,
 				0AD07F8821FE637600C55831 /* RoundCornersUIView.swift in Sources */,
 				0A93F1522213BB9D0063A892 /* Omega3HistoryDBT.swift in Sources */,
+				0AD7EAF0221AFB47006F71C0 /* AmountTFI.swift in Sources */,
 				500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */,
 				0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */,
 				0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */,
@@ -1136,6 +1143,7 @@
 				0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */,
 				50572C9A22139E51000C2E63 /* Omega3HistoryDBS.swift in Sources */,
 				501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */,
+				0AD7EAF2221B0047006F71C0 /* CustomEntryTFI.swift in Sources */,
 				0A1FEC5F220529A9006CED70 /* ExerciseHistoryDBS.swift in Sources */,
 				0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */,
 				0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */,

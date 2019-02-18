@@ -45,17 +45,6 @@ class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSourc
             typePicker.selectRow(choices.firstIndex(of: type) ?? 0, inComponent: 0, animated: false)
             tempSelectedType = choices[choices.firstIndex(of: type) ?? 0]
         }
-
-        //ToolBar
-        let toolbar = UIToolbar();
-        toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneTypePicker));
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPicker));
-
-        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
-
-        textField.inputAccessoryView = toolbar
         textField.inputView = typePicker
 
     }
@@ -76,7 +65,7 @@ class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSourc
         tempSelectedType = choices[row]
     }
 
-    @objc func doneTypePicker(){
+    override func doneFunction() {
         if let type = tempSelectedType {
             self.selectedType = type
         }
