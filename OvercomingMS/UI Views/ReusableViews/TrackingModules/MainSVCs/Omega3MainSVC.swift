@@ -51,6 +51,7 @@ class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource
     func supplementButtonPressed() {
         //parentVC.pushSubView(newSubView: ExerciseStopwatchSVC())
         omega3History.addOmega3Item(supplementName: "Test", StartTime: Date(), Amount: 5)
+        parentVC.updateProgressBar()
         reload()
     }
     
