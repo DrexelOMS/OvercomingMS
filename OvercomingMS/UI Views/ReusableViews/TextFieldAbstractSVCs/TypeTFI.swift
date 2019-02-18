@@ -31,9 +31,15 @@ class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSourc
         }
     }
     
+    var title : String {
+        get {
+            return "Type"
+        }
+    }
+    
     override func customSetup() {
         super.customSetup()
-        label.text = "Type"
+        label.text = title
         tempSelectedType = choices[0]
     }
     
@@ -79,6 +85,22 @@ class ExerciseTypeTFI : TypeTFIAbstract {
     override var choices: [String] {
         get {
             return ["Run", "Lift", "Push Ups"]
+        }
+    }
+    
+}
+
+class Omega3TypeTFI : TypeTFIAbstract {
+    
+    override var title: String {
+        get {
+            return "Name"
+        }
+    }
+    
+    override var choices: [String] {
+        get {
+            return ["Flaxseed Oil", "Supplement"]
         }
     }
     
