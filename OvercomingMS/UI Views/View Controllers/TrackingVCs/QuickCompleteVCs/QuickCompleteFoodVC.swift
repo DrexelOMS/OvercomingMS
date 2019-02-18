@@ -43,27 +43,27 @@ class QuickCompleteFoodVC: SwipeDownCloseViewController {
     }
     
     @objc private func Rank1ItemPressed(tapGestureRecognizer: UITapGestureRecognizer){
-        WriteFoodTrackingData().setRating(amount: 1)
+        FoodRatingDBS().setRating(amount: 1)
         dismiss()
     }
     
     @objc private func Rank2ItemPressed(tapGestureRecognizer: UITapGestureRecognizer){
-        WriteFoodTrackingData().setRating(amount: 2)
+        FoodRatingDBS().setRating(amount: 2)
         dismiss()
     }
     
     @objc private func Rank3ItemPressed(tapGestureRecognizer: UITapGestureRecognizer){
-        WriteFoodTrackingData().setRating(amount: 3)
+        FoodRatingDBS().setRating(amount: 3)
         dismiss()
     }
     
     @objc private func Rank4ItemPressed(tapGestureRecognizer: UITapGestureRecognizer){
-        WriteFoodTrackingData().setRating(amount: 4)
+        FoodRatingDBS().setRating(amount: 4)
         dismiss()
     }
     
     @objc private func Rank5ItemPressed(tapGestureRecognizer: UITapGestureRecognizer){
-        WriteFoodTrackingData().setRating(amount: 5)
+        FoodRatingDBS().setRating(amount: 5)
         dismiss()
     }
 
