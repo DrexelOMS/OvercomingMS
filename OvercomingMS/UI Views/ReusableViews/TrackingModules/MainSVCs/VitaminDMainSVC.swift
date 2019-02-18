@@ -48,8 +48,7 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     }
     
     func addButtonPressed() {
-        //parentVC.pushSubView(newSubView: Omega3AddSVC())
-        print("Add")
+        parentVC.pushSubView(newSubView: VitaminDQuickAddSVC())
     }
     
     func supplementButtonPressed() {
@@ -80,7 +79,7 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         cell.labelLeft.text = items[indexPath.row].VitaminDType
         let startTime = items[indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-        cell.labelRight.text =  "\(items[indexPath.row].VitaminDAmount) \(ProgressBarConfig.vitaminDUOM)"
+        cell.labelRight.text =  "\(items[indexPath.row].calculatedAmount) \(ProgressBarConfig.vitaminDUOM)"
         
         return cell
     }

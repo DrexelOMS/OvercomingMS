@@ -33,7 +33,7 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
                     let item = VitaminDHistoryDBT()
                     item.VitaminDType = vitaminDType
                     item.StartTime = startTime
-                    item.VitaminDAmount = vitaminDAmount
+                    item.Amount = vitaminDAmount
                     day.vitaminDHistoryDT.append(item)
                 }
             }
@@ -43,7 +43,7 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
         
     }
     
-    func addVitaminDOutsideItem(vitaminDType: String, startTime: Date, endTime: Date, vitaminDAmount: Int) {
+    func addVitaminDOutsideItem(vitaminDType: String, startTime: Date, endTime: Date) {
         
         do {
             try realm.write() {
@@ -53,7 +53,6 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
                     item.VitaminDType = vitaminDType
                     item.StartTime = startTime
                     item.EndTime = endTime
-                    item.VitaminDAmount = vitaminDAmount
                     day.vitaminDHistoryDT.append(item)
                 }
             }
@@ -90,7 +89,7 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
             try realm.write() {
                 oldItem.VitaminDType = newItem.VitaminDType
                 oldItem.StartTime = newItem.StartTime
-                oldItem.VitaminDAmount = newItem.VitaminDAmount
+                oldItem.Amount = newItem.Amount
             }
         } catch {
             print("Error update Vitamin D data: \(error)")

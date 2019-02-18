@@ -18,6 +18,8 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var subLeftLabel: UILabel!
+    @IBOutlet weak var subRightLabel: UILabel!
     
     var parentVC : TrackingModuleAbstractVC!
     

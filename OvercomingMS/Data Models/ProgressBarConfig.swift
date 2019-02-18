@@ -37,4 +37,7 @@ class ProgressBarConfig {
     static let medicationGoal : Int = 5 //TODO: change per day for how many meds they have
     static let medicationUOM = "meds"
     
+    static func calculateKLUs(minutes: Int) -> Int {
+        return minutes * 5
+    }
 }
