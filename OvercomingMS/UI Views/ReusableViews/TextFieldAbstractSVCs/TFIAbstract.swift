@@ -20,11 +20,6 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
     
     var parentVC : TrackingModuleAbstractVC!
-    {
-        didSet {
-            print(parentVC)
-        }
-    }
     
     override func customSetup() {
         textField.delegate = self
