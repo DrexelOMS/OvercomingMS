@@ -19,7 +19,7 @@ class LengthTFI : TFIAbstract {
     var lengthPicker = UIDatePicker()
     var selectedLength : Int? {
         didSet {
-            textField.text = "\(selectedLength!) min."
+            textField.text = "\(selectedLength!) \(ProgressBarConfig.lengthUOM)"
         }
     }
     

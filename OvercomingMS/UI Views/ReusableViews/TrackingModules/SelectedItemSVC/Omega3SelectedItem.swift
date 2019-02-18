@@ -33,7 +33,7 @@ class Omega3SelectedItemSVC : SelectedItemSVC {
     override func reload() {
         topMainLabel.text = omega3Item.supplementName
         middleMainLabel.text = OMSDateAccessor.getDateTime(date: omega3Item.StartTime)
-        bottomMainLabel.text = "\(omega3Item.Amount) g."
+        bottomMainLabel.text = "\(omega3Item.Amount) \(ProgressBarConfig.omega3UOM)"
     }
     
     override func editButtonPressed() {

@@ -67,7 +67,7 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         cell.labelLeft.text = exerciseRoutines.getTodaysExerciseItems()![indexPath.row].RoutineType
         let startTime = exerciseRoutines.getTodaysExerciseItems()![indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-        cell.labelRight.text =  "\(exerciseRoutines.getTodaysExerciseItems()![indexPath.row].minutes) min."
+        cell.labelRight.text =  "\(exerciseRoutines.getTodaysExerciseItems()![indexPath.row].minutes) \(ProgressBarConfig.lengthUOM)"
         
         return cell
     }

@@ -70,7 +70,7 @@ class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource
         cell.labelLeft.text = omega3History.getTodaysOmega3Items()![indexPath.row].supplementName
         let startTime = omega3History.getTodaysOmega3Items()![indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-        cell.labelRight.text =  "\(omega3History.getTodaysOmega3Items()![indexPath.row].Amount) g."
+        cell.labelRight.text =  "\(omega3History.getTodaysOmega3Items()![indexPath.row].Amount) \(ProgressBarConfig.omega3UOM)"
         
         return cell
     }

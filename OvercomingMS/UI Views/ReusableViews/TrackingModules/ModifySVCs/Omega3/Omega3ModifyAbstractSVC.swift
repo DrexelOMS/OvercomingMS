@@ -39,7 +39,7 @@ class Omega3ModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTFID
     
     var typeTFI = Omega3TypeTFI()
     var dateTimeTFI = DateTimeTFI()
-    var amountTFI = AmountTFI(uom: "g.")
+    var amountTFI = AmountTFI(uom: ProgressBarConfig.omega3UOM)
     
     override func customSetup() {
         //set the initial text and start time of the textField
