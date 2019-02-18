@@ -105,6 +105,7 @@
 		0AD7EAFC221B1A74006F71C0 /* Omega3EditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAFB221B1A74006F71C0 /* Omega3EditSVC.swift */; };
 		0AD7EAFE221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAFD221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift */; };
 		0AD7EB00221B1E7F006F71C0 /* Omega3SelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */; };
+		0AD7EB02221B2608006F71C0 /* Omega3SupplementSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB01221B2608006F71C0 /* Omega3SupplementSVC.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -272,6 +273,7 @@
 		0AD7EAFB221B1A74006F71C0 /* Omega3EditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3EditSVC.swift; sourceTree = "<group>"; };
 		0AD7EAFD221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3ModifyAbstractSVC.swift; sourceTree = "<group>"; };
 		0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3SelectedItem.swift; sourceTree = "<group>"; };
+		0AD7EB01221B2608006F71C0 /* Omega3SupplementSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3SupplementSVC.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -688,6 +690,7 @@
 			children = (
 				0AD7EAF9221B1A5A006F71C0 /* Omega3AddSVC.swift */,
 				0AD7EAFB221B1A74006F71C0 /* Omega3EditSVC.swift */,
+				0AD7EB01221B2608006F71C0 /* Omega3SupplementSVC.swift */,
 				0AD7EAFD221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift */,
 			);
 			path = Omega3;
@@ -1184,6 +1187,7 @@
 				0A2BAA662202A24E004074F3 /* FoodRatingDBS.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				0AD07F7E21FE3EA200C55831 /* TrackingViewController.swift in Sources */,
+				0AD7EB02221B2608006F71C0 /* Omega3SupplementSVC.swift in Sources */,
 				0AD94DCA220CEE5B00B5C2BA /* SelectedItemSVC.swift in Sources */,
 				0A93F1502213BB9D0063A892 /* TrackingDayDBT.swift in Sources */,
 				0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */,
