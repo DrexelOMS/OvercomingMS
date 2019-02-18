@@ -35,7 +35,7 @@ class CustomEntryTFI : TFIAbstract {
     }
     
     override func showTextFieldInput() {
-        
+        textField.text = ""
     }
 
     override func doneFunction() {

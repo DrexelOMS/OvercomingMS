@@ -104,6 +104,7 @@
 		0AD7EAFA221B1A5A006F71C0 /* Omega3AddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAF9221B1A5A006F71C0 /* Omega3AddSVC.swift */; };
 		0AD7EAFC221B1A74006F71C0 /* Omega3EditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAFB221B1A74006F71C0 /* Omega3EditSVC.swift */; };
 		0AD7EAFE221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAFD221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift */; };
+		0AD7EB00221B1E7F006F71C0 /* Omega3SelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -270,6 +271,7 @@
 		0AD7EAF9221B1A5A006F71C0 /* Omega3AddSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3AddSVC.swift; sourceTree = "<group>"; };
 		0AD7EAFB221B1A74006F71C0 /* Omega3EditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3EditSVC.swift; sourceTree = "<group>"; };
 		0AD7EAFD221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3ModifyAbstractSVC.swift; sourceTree = "<group>"; };
+		0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3SelectedItem.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -708,6 +710,7 @@
 				0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */,
 				0AD94DC9220CEE5B00B5C2BA /* SelectedItemSVC.swift */,
 				0AD94DCB220CEE9800B5C2BA /* ExerciseSelectedItem.swift */,
+				0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */,
 			);
 			path = SelectedItemSVC;
 			sourceTree = "<group>";
@@ -1203,6 +1206,7 @@
 				0AD94DD7220DEEB300B5C2BA /* DeleteCircleButton.swift in Sources */,
 				0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */,
 				0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */,
+				0AD7EB00221B1E7F006F71C0 /* Omega3SelectedItem.swift in Sources */,
 				0A93F15E2213C62A0063A892 /* ScanCircleButton.swift in Sources */,
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
 				0A93F19C22145F150063A892 /* ExerciseEditSVC.swift in Sources */,

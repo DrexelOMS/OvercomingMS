@@ -70,16 +70,16 @@ class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource
         cell.labelLeft.text = omega3History.getTodaysOmega3Items()![indexPath.row].supplementName
         let startTime = omega3History.getTodaysOmega3Items()![indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-        cell.labelRight.text =  "\(omega3History.getTodaysOmega3Items()![indexPath.row].Amount) grams."
+        cell.labelRight.text =  "\(omega3History.getTodaysOmega3Items()![indexPath.row].Amount) g."
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let omega3ItemSVC = Omega3Sele()
-//        exerciseItemSVC.exerciseItem = exerciseRoutines.getTodaysExerciseItems()![indexPath.row]
-//        exerciseItemSVC.parentVC = parentVC
-//        parentVC.pushSubView(newSubView: exerciseItemSVC)
+        let omega3ItemSVC = Omega3SelectedItemSVC()
+        omega3ItemSVC.omega3Item = omega3History.getTodaysOmega3Items()![indexPath.row]
+        omega3ItemSVC.parentVC = parentVC
+        parentVC.pushSubView(newSubView: omega3ItemSVC)
     }
 
 }
