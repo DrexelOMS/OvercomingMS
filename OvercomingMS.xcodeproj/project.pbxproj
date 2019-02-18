@@ -106,6 +106,8 @@
 		0AD7EAFE221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAFD221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift */; };
 		0AD7EB00221B1E7F006F71C0 /* Omega3SelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */; };
 		0AD7EB02221B2608006F71C0 /* Omega3SupplementSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB01221B2608006F71C0 /* Omega3SupplementSVC.swift */; };
+		0AD7EB04221B2FD6006F71C0 /* OutsideCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB03221B2FD6006F71C0 /* OutsideCircleButton.swift */; };
+		0AD7EB06221B3007006F71C0 /* VitaminDMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB05221B3007006F71C0 /* VitaminDMainSVC.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -274,6 +276,8 @@
 		0AD7EAFD221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3ModifyAbstractSVC.swift; sourceTree = "<group>"; };
 		0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3SelectedItem.swift; sourceTree = "<group>"; };
 		0AD7EB01221B2608006F71C0 /* Omega3SupplementSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3SupplementSVC.swift; sourceTree = "<group>"; };
+		0AD7EB03221B2FD6006F71C0 /* OutsideCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutsideCircleButton.swift; sourceTree = "<group>"; };
+		0AD7EB05221B3007006F71C0 /* VitaminDMainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDMainSVC.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -427,6 +431,7 @@
 			children = (
 				0A1FEC642206203F006CED70 /* AddCircleButton.swift */,
 				0A98DB0C221622E900F4800D /* SupplementCircleButton.swift */,
+				0AD7EB03221B2FD6006F71C0 /* OutsideCircleButton.swift */,
 				0A93F1592213C62A0063A892 /* RecipesCircleButton.swift */,
 				0A93F15B2213C62A0063A892 /* ScanCircleButton.swift */,
 				0A93F15A2213C62A0063A892 /* SearchCircleButton.swift */,
@@ -495,6 +500,7 @@
 				0A93F1562213C5B40063A892 /* FoodMainSVC.xib */,
 				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
 				0A98DB0A221622A200F4800D /* Omega3MainSVC.swift */,
+				0AD7EB05221B3007006F71C0 /* VitaminDMainSVC.swift */,
 				0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */,
 				0AD94DE0220E178E00B5C2BA /* MeditationMainSVC.swift */,
 				0AA528532202314600CCFEE7 /* MainAbstractSVC.xib */,
@@ -1221,7 +1227,9 @@
 				0AD94DCF220DE7CB00B5C2BA /* RepeatConfirmationSVC.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
 				0A93F15D2213C62A0063A892 /* SearchCircleButton.swift in Sources */,
+				0AD7EB04221B2FD6006F71C0 /* OutsideCircleButton.swift in Sources */,
 				0A93EA3F2210D1FC0063A892 /* FoodModuleVC.swift in Sources */,
+				0AD7EB06221B3007006F71C0 /* VitaminDMainSVC.swift in Sources */,
 				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
