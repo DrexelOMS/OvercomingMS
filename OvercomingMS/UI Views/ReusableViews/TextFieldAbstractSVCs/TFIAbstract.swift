@@ -23,6 +23,7 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     
     override func customSetup() {
         textField.delegate = self
+        textField.inputAccessoryView = getToolBar()
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -34,8 +35,30 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
         fatalError("showtextFieldInput not implemented")
     }
     
-    @objc func cancelPicker(){
+    @objc private func donePicker(){
+        doneFunction()
+    }
+    
+    func doneFunction() {
         parentVC.view.endEditing(true)
+    }
+    
+    @objc private func cancelPicker(){
+        parentVC.view.endEditing(true)
+    }
+    
+    private func getToolBar() -> UIToolbar{
+        
+        //ToolBar
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donePicker));
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPicker));
+        
+        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+        
+        return toolbar
     }
     
 }

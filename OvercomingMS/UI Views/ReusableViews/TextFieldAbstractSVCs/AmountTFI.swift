@@ -36,21 +36,9 @@ class AmountTFI : TFIAbstract {
     
     override func showTextFieldInput() {
         textField.keyboardType = .numberPad
-
-        //ToolBar
-        let toolbar = UIToolbar();
-        toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneLengthPicker));
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPicker));
-
-        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
-
-        textField.inputAccessoryView = toolbar
-
     }
 
-    @objc func doneLengthPicker(){
+    override func doneFunction(){
         self.selectedAmount = Int(textField.text ?? "0") ?? 0
         parentVC.view.endEditing(true)
         delegate?.onAmountTFIDone()
