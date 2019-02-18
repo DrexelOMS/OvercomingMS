@@ -14,8 +14,12 @@ class VitaminDEditSVC : VitaminDModifyAbstractSVC {
         didSet {
             selectedType = editingVitamindDItem.VitaminDType
             selectedStartTime = editingVitamindDItem.StartTime
-            selectedAmount = editingVitamindDItem.Amount
-            selectedLength = editingVitamindDItem.minutes
+            if !vitaminDTypeTFI.IsOutsideMode() {
+                 selectedAmount = editingVitamindDItem.Amount
+            }
+            else {
+                selectedLength = editingVitamindDItem.minutes
+            }
         }
     }
     
