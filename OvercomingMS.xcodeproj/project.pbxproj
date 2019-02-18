@@ -112,6 +112,8 @@
 		0AD7EB0B221B3331006F71C0 /* VitaminDModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB0A221B3331006F71C0 /* VitaminDModifyAbstractSVC.swift */; };
 		0AD7EB0D221B35F1006F71C0 /* VDConversionLengthTFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB0C221B35F1006F71C0 /* VDConversionLengthTFI.swift */; };
 		0AD7EB0F221B463A006F71C0 /* VitaminDSelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB0E221B463A006F71C0 /* VitaminDSelectedItem.swift */; };
+		0AD7EB11221B4D0F006F71C0 /* SelectedLabelsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB10221B4D0F006F71C0 /* SelectedLabelsSVC.swift */; };
+		0AD7EB13221B4D23006F71C0 /* SelectedLabelsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD7EB12221B4D23006F71C0 /* SelectedLabelsSVC.xib */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -286,6 +288,8 @@
 		0AD7EB0A221B3331006F71C0 /* VitaminDModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDModifyAbstractSVC.swift; sourceTree = "<group>"; };
 		0AD7EB0C221B35F1006F71C0 /* VDConversionLengthTFI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VDConversionLengthTFI.swift; sourceTree = "<group>"; };
 		0AD7EB0E221B463A006F71C0 /* VitaminDSelectedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDSelectedItem.swift; sourceTree = "<group>"; };
+		0AD7EB10221B4D0F006F71C0 /* SelectedLabelsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLabelsSVC.swift; sourceTree = "<group>"; };
+		0AD7EB12221B4D23006F71C0 /* SelectedLabelsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedLabelsSVC.xib; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -735,6 +739,8 @@
 		0AD94DC6220CE44200B5C2BA /* SelectedItemSVC */ = {
 			isa = PBXGroup;
 			children = (
+				0AD7EB10221B4D0F006F71C0 /* SelectedLabelsSVC.swift */,
+				0AD7EB12221B4D23006F71C0 /* SelectedLabelsSVC.xib */,
 				0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */,
 				0AD94DC9220CEE5B00B5C2BA /* SelectedItemSVC.swift */,
 				0AD94DCB220CEE9800B5C2BA /* ExerciseSelectedItem.swift */,
@@ -1030,6 +1036,7 @@
 				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
 				0A08189A2214E7E80021BDF6 /* FoodSearchCell.xib in Resources */,
+				0AD7EB13221B4D23006F71C0 /* SelectedLabelsSVC.xib in Resources */,
 				0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */,
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
@@ -1243,6 +1250,7 @@
 				0A93F15E2213C62A0063A892 /* ScanCircleButton.swift in Sources */,
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
 				0A93F19C22145F150063A892 /* ExerciseEditSVC.swift in Sources */,
+				0AD7EB11221B4D0F006F71C0 /* SelectedLabelsSVC.swift in Sources */,
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
 				0A98DB0D221622E900F4800D /* SupplementCircleButton.swift in Sources */,
 				0AD7EAFA221B1A5A006F71C0 /* Omega3AddSVC.swift in Sources */,

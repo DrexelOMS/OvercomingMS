@@ -25,6 +25,8 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
         }
     }
     
+    var fourthSL = SelectedLabelsSVC(mainLabel: "test1", subLabel: "test2")
+    
     override func customSetup() {
         super.customSetup()
         
@@ -38,16 +40,30 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     }
     
     override func reload() {
+        fourthSL.removeFromSuperview()
         if vitaminDItem.IsOutsideType {
             mode = .Outside
+            labelsStackView.addArrangedSubview(fourthSL)
+            labelsStackView.translatesAutoresizingMaskIntoConstraints = false
+            
+            bottomSubLabel.text = "Length"
+            bottomMainLabel.text = "\(vitaminDItem.minutes) \(ProgressBarConfig.lengthUOM)"
+            
+            fourthSL.mainLabel.text = "\(vitaminDItem.calculatedAmount) \(ProgressBarConfig.vitaminDUOM)"
+            fourthSL.subLabel.text = "klU Conversion"
+            
+            labelsStackView.addArrangedSubview(fourthSL)
+            labelsStackView.translatesAutoresizingMaskIntoConstraints = false
         }
         else {
             mode = .Supplement
+            
+            bottomSubLabel.text = "Amount"
+            bottomMainLabel.text = "\(vitaminDItem.calculatedAmount) \(ProgressBarConfig.vitaminDUOM)"
         }
         
         topMainLabel.text = vitaminDItem.VitaminDType
         middleMainLabel.text = OMSDateAccessor.getDateTime(date: vitaminDItem.StartTime)
-        bottomMainLabel.text = "\(vitaminDItem.calculatedAmount) \(ProgressBarConfig.vitaminDUOM)"
     }
     
     func toggleMode(){
@@ -75,8 +91,6 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
             let endTime = startTime.addingTimeInterval(TimeInterval(vitaminDItem.minutes * 60))
             VitaminDHistoryDBS().addVitaminDOutsideItem(vitaminDType: vitaminDItem.VitaminDType, startTime: startTime, endTime: endTime)
         }
-        
-
     }
     
     
