@@ -85,7 +85,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             foodBar.setDescription(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
             omega3Bar.setProgressValue(value: currentTrackingDay.Omega3ComputedPercentageComplete)
             omega3Bar.setDescription(description: String(currentTrackingDay.Omega3Total))
-            vitaminDBar.setProgressValue(value: currentTrackingDay.Omega3ComputedPercentageComplete)
+            vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDComputedPercentageComplete)
             vitaminDBar.setDescription(description: String(currentTrackingDay.VitaminDTotal))
             exerciseBar.setProgressValue(value: currentTrackingDay.ExerciseComputedPercentageComplete)
             exerciseBar.setDescription(description: String(currentTrackingDay.ExerciseTimeTotal))
