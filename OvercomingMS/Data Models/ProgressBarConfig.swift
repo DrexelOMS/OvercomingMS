@@ -26,7 +26,7 @@ class ProgressBarConfig {
     static let omega3UOM = "g."
     
     static let vitaminDGoal : Int = 100
-    static let vitaminDUOM = "supp."
+    static let vitaminDUOM = "klUs"
     
     static let exerciseGoal : Int = 30
     
@@ -37,4 +37,7 @@ class ProgressBarConfig {
     static let medicationGoal : Int = 5 //TODO: change per day for how many meds they have
     static let medicationUOM = "meds"
     
+    static func calculateKLUs(minutes: Int) -> Int {
+        return minutes * 5
+    }
 }

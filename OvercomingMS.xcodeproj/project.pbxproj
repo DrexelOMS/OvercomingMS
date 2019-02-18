@@ -106,6 +106,15 @@
 		0AD7EAFE221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAFD221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift */; };
 		0AD7EB00221B1E7F006F71C0 /* Omega3SelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */; };
 		0AD7EB02221B2608006F71C0 /* Omega3SupplementSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB01221B2608006F71C0 /* Omega3SupplementSVC.swift */; };
+		0AD7EB04221B2FD6006F71C0 /* OutsideCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB03221B2FD6006F71C0 /* OutsideCircleButton.swift */; };
+		0AD7EB06221B3007006F71C0 /* VitaminDMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB05221B3007006F71C0 /* VitaminDMainSVC.swift */; };
+		0AD7EB09221B3307006F71C0 /* VitaminDQuickAddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB08221B3307006F71C0 /* VitaminDQuickAddSVC.swift */; };
+		0AD7EB0B221B3331006F71C0 /* VitaminDModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB0A221B3331006F71C0 /* VitaminDModifyAbstractSVC.swift */; };
+		0AD7EB0D221B35F1006F71C0 /* VDConversionLengthTFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB0C221B35F1006F71C0 /* VDConversionLengthTFI.swift */; };
+		0AD7EB0F221B463A006F71C0 /* VitaminDSelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB0E221B463A006F71C0 /* VitaminDSelectedItem.swift */; };
+		0AD7EB11221B4D0F006F71C0 /* SelectedLabelsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB10221B4D0F006F71C0 /* SelectedLabelsSVC.swift */; };
+		0AD7EB13221B4D23006F71C0 /* SelectedLabelsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD7EB12221B4D23006F71C0 /* SelectedLabelsSVC.xib */; };
+		0AD7EB15221B52A5006F71C0 /* VitaminDEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB14221B52A5006F71C0 /* VitaminDEditSVC.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -274,6 +283,15 @@
 		0AD7EAFD221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3ModifyAbstractSVC.swift; sourceTree = "<group>"; };
 		0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3SelectedItem.swift; sourceTree = "<group>"; };
 		0AD7EB01221B2608006F71C0 /* Omega3SupplementSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3SupplementSVC.swift; sourceTree = "<group>"; };
+		0AD7EB03221B2FD6006F71C0 /* OutsideCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutsideCircleButton.swift; sourceTree = "<group>"; };
+		0AD7EB05221B3007006F71C0 /* VitaminDMainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDMainSVC.swift; sourceTree = "<group>"; };
+		0AD7EB08221B3307006F71C0 /* VitaminDQuickAddSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDQuickAddSVC.swift; sourceTree = "<group>"; };
+		0AD7EB0A221B3331006F71C0 /* VitaminDModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDModifyAbstractSVC.swift; sourceTree = "<group>"; };
+		0AD7EB0C221B35F1006F71C0 /* VDConversionLengthTFI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VDConversionLengthTFI.swift; sourceTree = "<group>"; };
+		0AD7EB0E221B463A006F71C0 /* VitaminDSelectedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDSelectedItem.swift; sourceTree = "<group>"; };
+		0AD7EB10221B4D0F006F71C0 /* SelectedLabelsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLabelsSVC.swift; sourceTree = "<group>"; };
+		0AD7EB12221B4D23006F71C0 /* SelectedLabelsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedLabelsSVC.xib; sourceTree = "<group>"; };
+		0AD7EB14221B52A5006F71C0 /* VitaminDEditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDEditSVC.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -427,6 +445,7 @@
 			children = (
 				0A1FEC642206203F006CED70 /* AddCircleButton.swift */,
 				0A98DB0C221622E900F4800D /* SupplementCircleButton.swift */,
+				0AD7EB03221B2FD6006F71C0 /* OutsideCircleButton.swift */,
 				0A93F1592213C62A0063A892 /* RecipesCircleButton.swift */,
 				0A93F15B2213C62A0063A892 /* ScanCircleButton.swift */,
 				0A93F15A2213C62A0063A892 /* SearchCircleButton.swift */,
@@ -495,6 +514,7 @@
 				0A93F1562213C5B40063A892 /* FoodMainSVC.xib */,
 				0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */,
 				0A98DB0A221622A200F4800D /* Omega3MainSVC.swift */,
+				0AD7EB05221B3007006F71C0 /* VitaminDMainSVC.swift */,
 				0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */,
 				0AD94DE0220E178E00B5C2BA /* MeditationMainSVC.swift */,
 				0AA528532202314600CCFEE7 /* MainAbstractSVC.xib */,
@@ -576,6 +596,7 @@
 				0A93F18E22145EA30063A892 /* TFIAbstract.xib */,
 				0A93F18F22145EA30063A892 /* TypeTFI.swift */,
 				0A0818902214647E0021BDF6 /* LengthTFI.swift */,
+				0AD7EB0C221B35F1006F71C0 /* VDConversionLengthTFI.swift */,
 				0AD7EAEF221AFB47006F71C0 /* AmountTFI.swift */,
 				0AD7EAF1221B0047006F71C0 /* CustomEntryTFI.swift */,
 				0A93F19022145EA30063A892 /* DateTimeTFI.swift */,
@@ -696,9 +717,20 @@
 			path = Omega3;
 			sourceTree = "<group>";
 		};
+		0AD7EB07221B32D6006F71C0 /* VitaminD */ = {
+			isa = PBXGroup;
+			children = (
+				0AD7EB08221B3307006F71C0 /* VitaminDQuickAddSVC.swift */,
+				0AD7EB14221B52A5006F71C0 /* VitaminDEditSVC.swift */,
+				0AD7EB0A221B3331006F71C0 /* VitaminDModifyAbstractSVC.swift */,
+			);
+			path = VitaminD;
+			sourceTree = "<group>";
+		};
 		0AD94DAD2209BBD600B5C2BA /* ModifySVCs */ = {
 			isa = PBXGroup;
 			children = (
+				0AD7EB07221B32D6006F71C0 /* VitaminD */,
 				0AD7EAF8221B1A3E006F71C0 /* Omega3 */,
 				0AD7EAF7221B19DA006F71C0 /* Exercise */,
 				0A93F19722145F140063A892 /* ModifyAbstractSVC.swift */,
@@ -710,10 +742,13 @@
 		0AD94DC6220CE44200B5C2BA /* SelectedItemSVC */ = {
 			isa = PBXGroup;
 			children = (
+				0AD7EB10221B4D0F006F71C0 /* SelectedLabelsSVC.swift */,
+				0AD7EB12221B4D23006F71C0 /* SelectedLabelsSVC.xib */,
 				0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */,
 				0AD94DC9220CEE5B00B5C2BA /* SelectedItemSVC.swift */,
 				0AD94DCB220CEE9800B5C2BA /* ExerciseSelectedItem.swift */,
 				0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */,
+				0AD7EB0E221B463A006F71C0 /* VitaminDSelectedItem.swift */,
 			);
 			path = SelectedItemSVC;
 			sourceTree = "<group>";
@@ -1004,6 +1039,7 @@
 				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
 				0A08189A2214E7E80021BDF6 /* FoodSearchCell.xib in Resources */,
+				0AD7EB13221B4D23006F71C0 /* SelectedLabelsSVC.xib in Resources */,
 				0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */,
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
@@ -1177,6 +1213,7 @@
 				501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */,
 				0AD7EAF2221B0047006F71C0 /* CustomEntryTFI.swift in Sources */,
 				0A1FEC5F220529A9006CED70 /* ExerciseHistoryDBS.swift in Sources */,
+				0AD7EB0D221B35F1006F71C0 /* VDConversionLengthTFI.swift in Sources */,
 				0AD7EAFC221B1A74006F71C0 /* Omega3EditSVC.swift in Sources */,
 				0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */,
 				0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */,
@@ -1190,6 +1227,7 @@
 				0AD7EB02221B2608006F71C0 /* Omega3SupplementSVC.swift in Sources */,
 				0AD94DCA220CEE5B00B5C2BA /* SelectedItemSVC.swift in Sources */,
 				0A93F1502213BB9D0063A892 /* TrackingDayDBT.swift in Sources */,
+				0AD7EB0F221B463A006F71C0 /* VitaminDSelectedItem.swift in Sources */,
 				0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */,
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
 				0AF8E0DF22092A5E00E1EC33 /* CancelCircleButton.swift in Sources */,
@@ -1206,14 +1244,17 @@
 				0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */,
 				0A93F1542213BBBB0063A892 /* MedicationHistoryDBS.swift in Sources */,
 				0AD94DD1220DE7F200B5C2BA /* DeleteConfirmationSVC.swift in Sources */,
+				0AD7EB09221B3307006F71C0 /* VitaminDQuickAddSVC.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
 				0AD94DD7220DEEB300B5C2BA /* DeleteCircleButton.swift in Sources */,
 				0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */,
 				0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */,
 				0AD7EB00221B1E7F006F71C0 /* Omega3SelectedItem.swift in Sources */,
+				0AD7EB15221B52A5006F71C0 /* VitaminDEditSVC.swift in Sources */,
 				0A93F15E2213C62A0063A892 /* ScanCircleButton.swift in Sources */,
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
 				0A93F19C22145F150063A892 /* ExerciseEditSVC.swift in Sources */,
+				0AD7EB11221B4D0F006F71C0 /* SelectedLabelsSVC.swift in Sources */,
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
 				0A98DB0D221622E900F4800D /* SupplementCircleButton.swift in Sources */,
 				0AD7EAFA221B1A5A006F71C0 /* Omega3AddSVC.swift in Sources */,
@@ -1221,7 +1262,10 @@
 				0AD94DCF220DE7CB00B5C2BA /* RepeatConfirmationSVC.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
 				0A93F15D2213C62A0063A892 /* SearchCircleButton.swift in Sources */,
+				0AD7EB0B221B3331006F71C0 /* VitaminDModifyAbstractSVC.swift in Sources */,
+				0AD7EB04221B2FD6006F71C0 /* OutsideCircleButton.swift in Sources */,
 				0A93EA3F2210D1FC0063A892 /* FoodModuleVC.swift in Sources */,
+				0AD7EB06221B3007006F71C0 /* VitaminDMainSVC.swift in Sources */,
 				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,

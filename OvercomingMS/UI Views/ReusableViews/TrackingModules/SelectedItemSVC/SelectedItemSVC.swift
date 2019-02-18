@@ -23,6 +23,7 @@ class SelectedItemSVC : SlidingAbstractSVC {
     @IBOutlet weak var bottomSubLabel: UILabel!
     @IBOutlet weak var bottomMainLabel: UILabel!
     
+    @IBOutlet weak var labelsStackView: UIStackView!
     @IBOutlet weak var buttonStackView: UIStackView!
     
     var editButton : CircleButtonSVC!

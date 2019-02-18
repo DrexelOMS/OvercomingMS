@@ -16,6 +16,7 @@ class AmountTFI : TFIAbstract {
     
     var delegate : AmountTFIDelegate?
     
+    var savedText : String = ""
     var selectedAmount : Int? {
         didSet {
             textField.text = "\(selectedAmount!) \(uom)"
@@ -35,14 +36,34 @@ class AmountTFI : TFIAbstract {
     }
     
     override func showTextFieldInput() {
+        savedText = textField.text ?? ""
         textField.text = ""
         textField.keyboardType = .numberPad
     }
 
     override func doneFunction(){
-        self.selectedAmount = Int(textField.text ?? "0") ?? 0
+        if let text = textField.text {
+            if text != "" {
+                self.selectedAmount = Int(text) ?? 0
+            }
+            else {
+                textField.text = savedText
+            }
+        }
+        else {
+            textField.text = savedText
+        }
+        
         parentVC.view.endEditing(true)
-        delegate?.onAmountTFIDone()
+        if self.selectedAmount != nil {
+            delegate?.onAmountTFIDone()
+        }
+    }
+    
+    override func cancelFunction() {
+        textField.text = savedText
+        
+        super.cancelFunction()
     }
     
 }

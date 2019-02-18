@@ -25,15 +25,34 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
         
     }
     
-    func addVitaminDItem(vitaminDType: String, timestamp: Date, vitaminDAmount: Int) {
+    func addVitaminDSupplementItem(vitaminDType: String, startTime: Date, vitaminDAmount: Int) {
         
         do {
             try realm.write() {
                 if let day = getTrackingDay(date: globalCurrentDate) {
                     let item = VitaminDHistoryDBT()
                     item.VitaminDType = vitaminDType
-                    item.Timestamp = timestamp
-                    item.VitaminDAmount = vitaminDAmount
+                    item.StartTime = startTime
+                    item.Amount = vitaminDAmount
+                    day.vitaminDHistoryDT.append(item)
+                }
+            }
+        } catch {
+            print("Error updating Vitamin D data : \(error)" )
+        }
+        
+    }
+    
+    func addVitaminDOutsideItem(vitaminDType: String, startTime: Date, endTime: Date) {
+        
+        do {
+            try realm.write() {
+                if let day = getTrackingDay(date: globalCurrentDate) {
+                    let item = VitaminDHistoryDBT()
+                    item.IsOutsideType = true
+                    item.VitaminDType = vitaminDType
+                    item.StartTime = startTime
+                    item.EndTime = endTime
                     day.vitaminDHistoryDT.append(item)
                 }
             }
@@ -68,9 +87,11 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
     func updateVitaminDItem(oldItem: VitaminDHistoryDBT, newItem: VitaminDHistoryDBT) {
         do {
             try realm.write() {
+                oldItem.IsOutsideType = newItem.IsOutsideType
                 oldItem.VitaminDType = newItem.VitaminDType
-                oldItem.Timestamp = newItem.Timestamp
-                oldItem.VitaminDAmount = newItem.VitaminDAmount
+                oldItem.StartTime = newItem.StartTime
+                oldItem.EndTime = newItem.EndTime
+                oldItem.Amount = newItem.Amount
             }
         } catch {
             print("Error update Vitamin D data: \(error)")

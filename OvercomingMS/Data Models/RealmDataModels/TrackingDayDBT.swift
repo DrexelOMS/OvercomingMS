@@ -179,7 +179,7 @@ class TrackingDayDBT: Object {
         get {
             var totalAmount = 0
             for row in vitaminDHistoryDT {
-                totalAmount += row.VitaminDAmount
+                totalAmount += row.calculatedAmount
             }
             return totalAmount
         }

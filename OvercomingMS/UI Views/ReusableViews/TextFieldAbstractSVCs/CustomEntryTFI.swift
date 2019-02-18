@@ -21,6 +21,7 @@ class CustomEntryTFI : TFIAbstract {
             textField.text = "\(selectedCustomEntry!)"
         }
     }
+    var savedText = ""
     var title : String = "Default"
     
     convenience init(title: String) {
@@ -35,13 +36,34 @@ class CustomEntryTFI : TFIAbstract {
     }
     
     override func showTextFieldInput() {
+        savedText = textField.text ?? ""
         textField.text = ""
     }
 
     override func doneFunction() {
-        self.selectedCustomEntry = textField.text ?? ""
+        if let text = textField.text {
+            if text != "" {
+                self.selectedCustomEntry = text
+            }
+            else {
+                textField.text = savedText
+            }
+        }
+        else {
+            textField.text = savedText
+        }
+        
         parentVC.view.endEditing(true)
-        delegate?.onCustomEntryTFIDone()
+        if self.selectedCustomEntry != nil {
+            delegate?.onCustomEntryTFIDone()
+        }
     }
+    
+    override func cancelFunction() {
+        textField.text = savedText
+        
+        super.cancelFunction()
+    }
+
     
 }

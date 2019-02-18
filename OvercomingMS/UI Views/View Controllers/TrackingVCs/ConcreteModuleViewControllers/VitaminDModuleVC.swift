@@ -11,7 +11,7 @@ import RealmSwift
 
 class VitaminDModuleVC: TrackingModuleAbstractVC {
     
-    //private let vitaminDHistory = VitaminDHistoryDBS()
+    private let vitaminDHistory = VitaminDHistoryDBS()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,20 +19,20 @@ class VitaminDModuleVC: TrackingModuleAbstractVC {
         // Do any additional setup after loading the view.
         progressBar.setTitle(title: "VitaminD")
         
-        //initializeStackView(defaultView: VitaminDMainSVC())
+        initializeStackView(defaultView: VitaminDMainSVC())
     }
     
     override func updateProgressBar() {
-//        progressBar.setProgressValue(value: exerciseRoutines.getPercentageComplete())
-//        let amountRemaining = ProgressBarConfig.exerciseGoal - exerciseRoutines.getTotalMinutes()
-//        var description = ""
-//        if(amountRemaining <= 0){
-//            description = "Daily goal reached!"
-//        }
-//        else {
-//            description = "\(amountRemaining) minutes left"
-//        }
-//        progressBar.setDescription(description: description)
+        progressBar.setProgressValue(value: vitaminDHistory.getPercentageComplete())
+        let amountRemaining = ProgressBarConfig.vitaminDGoal - vitaminDHistory.getTotalAmount()
+        var description = ""
+        if(amountRemaining <= 0){
+            description = "Daily goal reached!"
+        }
+        else {
+            description = "\(amountRemaining) \(ProgressBarConfig.vitaminDUOM) left"
+        }
+        progressBar.setDescription(description: description)
     }
 
 }
