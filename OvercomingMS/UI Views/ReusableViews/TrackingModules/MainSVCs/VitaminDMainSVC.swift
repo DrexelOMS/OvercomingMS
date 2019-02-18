@@ -85,10 +85,10 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let omega3ItemSVC = Omega3SelectedItemSVC()
-//        omega3ItemSVC.omega3Item = omega3History.getTodaysOmega3Items()![indexPath.row]
-//        omega3ItemSVC.parentVC = parentVC
-//        parentVC.pushSubView(newSubView: omega3ItemSVC)
+        let vitaminDItemSVC = VitaminDSelectedItemSVC()
+        vitaminDItemSVC.vitaminDItem = vitaminDHistory.getTodaysVitaminDItems()![indexPath.row]
+        vitaminDItemSVC.parentVC = parentVC
+        parentVC.pushSubView(newSubView: vitaminDItemSVC)
     }
 
 }

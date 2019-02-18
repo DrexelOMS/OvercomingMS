@@ -87,8 +87,10 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
     func updateVitaminDItem(oldItem: VitaminDHistoryDBT, newItem: VitaminDHistoryDBT) {
         do {
             try realm.write() {
+                oldItem.IsOutsideType = newItem.IsOutsideType
                 oldItem.VitaminDType = newItem.VitaminDType
                 oldItem.StartTime = newItem.StartTime
+                oldItem.EndTime = newItem.EndTime
                 oldItem.Amount = newItem.Amount
             }
         } catch {
