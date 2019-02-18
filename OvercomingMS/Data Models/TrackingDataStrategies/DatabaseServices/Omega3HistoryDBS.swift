@@ -55,7 +55,7 @@ class Omega3HistoryDBS: TrackingModulesDBS {
         return getTrackingDay()?.Omega3ComputedPercentageComplete ?? 0
     }
     
-    func deleteMeditationItem(item: Omega3HistoryDBT) {
+    func deleteOmega3Item(item: Omega3HistoryDBT) {
         do {
             try realm.write() {
                 realm.delete(item)
@@ -65,7 +65,7 @@ class Omega3HistoryDBS: TrackingModulesDBS {
         }
     }
     
-    func updateExerciseItem(oldItem: Omega3HistoryDBT, newItem: Omega3HistoryDBT) {
+    func updateOmega3Item(oldItem: Omega3HistoryDBT, newItem: Omega3HistoryDBT) {
         do {
             try realm.write() {
                 oldItem.supplementName = newItem.supplementName

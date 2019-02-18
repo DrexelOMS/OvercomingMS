@@ -35,6 +35,7 @@ class AmountTFI : TFIAbstract {
     }
     
     override func showTextFieldInput() {
+        textField.text = ""
         textField.keyboardType = .numberPad
     }
 

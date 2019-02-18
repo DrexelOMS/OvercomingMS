@@ -23,21 +23,18 @@ class ProgressBarConfig {
     }
     
     static let omega3Goal : Int = 100
-    static let omega3UOM = "grams"
+    static let omega3UOM = "g."
     
     static let vitaminDGoal : Int = 100
     static let vitaminDUOM = "supp."
     
     static let exerciseGoal : Int = 30
-    static let exerciseUOM = "min."
     
     static let meditationGoal : Int = 30
-    static let meditationUOM = "min."
+    
+    static let lengthUOM = "min."
     
     static let medicationGoal : Int = 5 //TODO: change per day for how many meds they have
     static let medicationUOM = "meds"
     
-    static func buildDescription(amount: Int, uom: String) -> String {
-        return "\(amount) \(uom) left"
-    }
 }
