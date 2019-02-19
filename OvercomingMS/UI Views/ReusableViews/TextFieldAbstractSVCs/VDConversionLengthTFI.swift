@@ -8,24 +8,31 @@
 
 import UIKit
 
-protocol LengthTFIDelegate: class {
-    func onLengthTFIDone()
+protocol VDConversionLengthTFIDelegate: class {
+    func onVDConversionLengthTFIDone()
 }
 
-class LengthTFI : TFIAbstract {
+class VDConversionLengthTFI : TFIAbstract {
     
-    var delegate : LengthTFIDelegate?
+    var delegate : VDConversionLengthTFIDelegate?
     
     var lengthPicker = UIDatePicker()
     var selectedLength : Int? {
         didSet {
             textField.text = "\(selectedLength!) \(ProgressBarConfig.lengthUOM)"
+            calculatedAmount = ProgressBarConfig.calculateKLUs(minutes: selectedLength!)
+        }
+    }
+    var calculatedAmount : Int? {
+        didSet {
+            subRightLabel.text = "\(calculatedAmount!) \(ProgressBarConfig.vitaminDUOM)"
         }
     }
     
     override func customSetup() {
         super.customSetup()
         label.text = "Length"
+        subLeftLabel.text = "Conversion:"
     }
     
     override func showTextFieldInput() {
@@ -38,7 +45,7 @@ class LengthTFI : TFIAbstract {
     override func doneFunction() {
         self.selectedLength = getMinutes(fromInterval: lengthPicker.countDownDuration)
         parentVC.view.endEditing(true)
-        delegate?.onLengthTFIDone()
+        delegate?.onVDConversionLengthTFIDone()
     }
 
     func getMinutes(fromInterval: TimeInterval) -> Int {

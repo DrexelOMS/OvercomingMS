@@ -76,7 +76,7 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         cell.labelLeft.text = meditationHistory.getTodaysMeditationItems()![indexPath.row].MeditationType
         let startTime = meditationHistory.getTodaysMeditationItems()![indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-        cell.labelRight.text =  "\(meditationHistory.getTodaysMeditationItems()![indexPath.row].minutes) min."
+        cell.labelRight.text =  "\(meditationHistory.getTodaysMeditationItems()![indexPath.row].minutes) \(ProgressBarConfig.lengthUOM)"
         
         return cell
     }

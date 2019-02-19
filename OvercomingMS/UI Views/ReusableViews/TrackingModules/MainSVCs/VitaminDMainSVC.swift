@@ -9,12 +9,13 @@
 import UIKit
 import RealmSwift
 
-class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
+class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
     
     let button1 = AddCircleButton()
     let button2 = SupplementCircleButton()
+    let button3 = OutsideCircleButton()
     
-    let omega3History : Omega3HistoryDBS = Omega3HistoryDBS()
+    let vitaminDHistory : VitaminDHistoryDBS = VitaminDHistoryDBS()
     
     override func customSetup() {
         
@@ -26,9 +27,11 @@ class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource
         
         button1.buttonAction = addButtonPressed
         button2.buttonAction = supplementButtonPressed
+        button3.buttonAction = outsideButtonPressed
         
         buttonStackView.addArrangedSubview(button1)
         buttonStackView.addArrangedSubview(button2)
+        buttonStackView.addArrangedSubview(button3)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
 
         tableView.delegate = self
@@ -40,45 +43,52 @@ class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource
     
     override func reload(){
         tableView.reloadData()
-        totalsCountLabel.text = String(omega3History.getTotalGrams())
-        totalsTextLabel.text = "Grams\nToday"
+        totalsCountLabel.text = String(vitaminDHistory.getTotalAmount())
+        totalsTextLabel.text = "\(ProgressBarConfig.vitaminDUOM)\nToday"
     }
     
     func addButtonPressed() {
-        parentVC.pushSubView(newSubView: Omega3AddSVC())
+        parentVC.pushSubView(newSubView: VitaminDQuickAddSVC())
     }
     
     func supplementButtonPressed() {
-        parentVC.pushSubView(newSubView: Omega3SupplementSVC())
+        //parentVC.pushSubView(newSubView: Omega3SupplementSVC())
+        print("Sup")
+    }
+    
+    func outsideButtonPressed() {
+        //parentVC.pushSubView(newSubView: Omega3SupplementSVC())
+        print("Out")
     }
     
     override func updateColors() {
         button1.colorTheme = parentVC.theme
         button2.colorTheme = parentVC.theme
+        button3.colorTheme = parentVC.theme
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return omega3History.getTodaysOmega3Items()?.count ?? 0
+        return vitaminDHistory.getTodaysVitaminDItems()?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! Routine3PartCell
         
-        let items = omega3History.getTodaysOmega3Items()!
+        let items = vitaminDHistory.getTodaysVitaminDItems()!
         
-        cell.labelLeft.text = items[indexPath.row].supplementName
+        cell.labelLeft.text = items[indexPath.row].VitaminDType
         let startTime = items[indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-        cell.labelRight.text =  "\(items[indexPath.row].Amount) \(ProgressBarConfig.omega3UOM)"
+        cell.labelRight.text =  "\(items[indexPath.row].calculatedAmount) \(ProgressBarConfig.vitaminDUOM)"
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let omega3ItemSVC = Omega3SelectedItemSVC()
-        omega3ItemSVC.omega3Item = omega3History.getTodaysOmega3Items()![indexPath.row]
-        omega3ItemSVC.parentVC = parentVC
-        parentVC.pushSubView(newSubView: omega3ItemSVC)
+        let vitaminDItemSVC = VitaminDSelectedItemSVC()
+        vitaminDItemSVC.vitaminDItem = vitaminDHistory.getTodaysVitaminDItems()![indexPath.row]
+        vitaminDItemSVC.parentVC = parentVC
+        parentVC.pushSubView(newSubView: vitaminDItemSVC)
     }
 
 }

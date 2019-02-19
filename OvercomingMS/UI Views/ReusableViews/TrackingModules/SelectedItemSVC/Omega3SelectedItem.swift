@@ -9,10 +9,9 @@
 import UIKit
 import RealmSwift
 
-class ExerciseSelectedItemSVC : SelectedItemSVC {
+class Omega3SelectedItemSVC : SelectedItemSVC {
     
-    var exerciseItem : ExerciseHistoryDBT!
-        
+    var omega3Item : Omega3HistoryDBT!
     {
         didSet {
             reload()
@@ -22,9 +21,9 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
     override func customSetup() {
         super.customSetup()
         
-        topSubLabel.text = "Type"
+        topSubLabel.text = "Name"
         middleSubLabel.text = "Time"
-        bottomSubLabel.text = "Length"
+        bottomSubLabel.text = "Amount"
     }
     
     override func updateColors() {
@@ -32,14 +31,14 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
     }
     
     override func reload() {
-        topMainLabel.text = exerciseItem.RoutineType
-        middleMainLabel.text = OMSDateAccessor.getDateTime(date: exerciseItem.StartTime)
-        bottomMainLabel.text = "\(exerciseItem.minutes) \(ProgressBarConfig.lengthUOM)"
+        topMainLabel.text = omega3Item.supplementName
+        middleMainLabel.text = OMSDateAccessor.getDateTime(date: omega3Item.StartTime)
+        bottomMainLabel.text = "\(omega3Item.Amount) \(ProgressBarConfig.omega3UOM)"
     }
     
     override func editButtonPressed() {
-        let editPage = ExerciseEditSVC()
-        editPage.editingExerciseItem = exerciseItem
+        let editPage = Omega3EditSVC()
+        editPage.editingOmega3Item = omega3Item
         parentVC.pushSubView(newSubView: editPage)
     }
     
@@ -49,10 +48,10 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
     }
     
     func repeatItem() {
-        let type = exerciseItem.RoutineType
+        let type = omega3Item.supplementName
         let startTime = Date()
-        let endTime = startTime.addingTimeInterval(TimeInterval(exerciseItem.minutes * 60))
-        ExerciseHistoryDBS().addExerciseItem(routineType: type, startTime: startTime, endTime: endTime)
+        let amount = omega3Item.Amount
+        Omega3HistoryDBS().addOmega3Item(supplementName: type, StartTime: startTime, Amount: amount)
     }
     
     
@@ -62,6 +61,6 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
     }
     
     func deleteItem(){
-       ExerciseHistoryDBS().deleteExerciseItem(item: exerciseItem)
+       Omega3HistoryDBS().deleteOmega3Item(item: omega3Item)
     }
 }
