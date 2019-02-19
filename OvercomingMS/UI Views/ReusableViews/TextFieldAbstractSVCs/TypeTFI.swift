@@ -108,21 +108,9 @@ class Omega3TypeTFI : TypeTFIAbstract {
 
 class VitaminDTypeTFI : TypeTFIAbstract {
     
-    let vitamin = "Vitamin"
-    let outside = "Outside"
-    
-    func IsOutsideMode() -> Bool {
-        if let type = self.selectedType {
-            if type == choices [1] {
-                return true
-            }
-        }
-        return false
-    }
-    
     override var choices: [String] {
         get {
-            return [vitamin, outside]
+            return ["Vitamin", "Other"]
         }
     }
     

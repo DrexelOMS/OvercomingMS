@@ -79,7 +79,7 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         cell.labelLeft.text = items[indexPath.row].VitaminDType
         let startTime = items[indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-        cell.labelRight.text =  "\(items[indexPath.row].calculatedAmount) \(ProgressBarConfig.vitaminDUOM)"
+        cell.labelRight.text =  "\(items[indexPath.row].Amount) \(ProgressBarConfig.vitaminDUOM)"
         
         return cell
     }
