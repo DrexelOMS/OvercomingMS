@@ -25,7 +25,7 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
         
     }
     
-    func addVitaminDSupplementItem(vitaminDType: String, startTime: Date, vitaminDAmount: Int) {
+    func addVitaminDItem(vitaminDType: String, startTime: Date, vitaminDAmount: Int) {
         
         do {
             try realm.write() {
@@ -34,25 +34,6 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
                     item.VitaminDType = vitaminDType
                     item.StartTime = startTime
                     item.Amount = vitaminDAmount
-                    day.vitaminDHistoryDT.append(item)
-                }
-            }
-        } catch {
-            print("Error updating Vitamin D data : \(error)" )
-        }
-        
-    }
-    
-    func addVitaminDOutsideItem(vitaminDType: String, startTime: Date, endTime: Date) {
-        
-        do {
-            try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    let item = VitaminDHistoryDBT()
-                    item.IsOutsideType = true
-                    item.VitaminDType = vitaminDType
-                    item.StartTime = startTime
-                    item.EndTime = endTime
                     day.vitaminDHistoryDT.append(item)
                 }
             }
@@ -87,10 +68,8 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
     func updateVitaminDItem(oldItem: VitaminDHistoryDBT, newItem: VitaminDHistoryDBT) {
         do {
             try realm.write() {
-                oldItem.IsOutsideType = newItem.IsOutsideType
                 oldItem.VitaminDType = newItem.VitaminDType
                 oldItem.StartTime = newItem.StartTime
-                oldItem.EndTime = newItem.EndTime
                 oldItem.Amount = newItem.Amount
             }
         } catch {

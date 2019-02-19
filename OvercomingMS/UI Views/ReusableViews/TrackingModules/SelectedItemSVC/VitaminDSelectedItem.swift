@@ -18,10 +18,6 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
         }
     }
     
-    enum ModifyMode {case Supplement, Outside}
-    
-    var fourthSL = SelectedLabelsSVC(mainLabel: "test1", subLabel: "test2")
-    
     override func customSetup() {
         super.customSetup()
         
@@ -35,25 +31,7 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     }
     
     override func reload() {
-        fourthSL.removeFromSuperview()
-        if vitaminDItem.IsOutsideType {
-            labelsStackView.addArrangedSubview(fourthSL)
-            labelsStackView.translatesAutoresizingMaskIntoConstraints = false
-            
-            bottomSubLabel.text = "Length"
-            bottomMainLabel.text = "\(vitaminDItem.minutes) \(ProgressBarConfig.lengthUOM)"
-            
-            fourthSL.mainLabel.text = "\(vitaminDItem.calculatedAmount) \(ProgressBarConfig.vitaminDUOM)"
-            fourthSL.subLabel.text = "klU Conversion"
-            
-            labelsStackView.addArrangedSubview(fourthSL)
-            labelsStackView.translatesAutoresizingMaskIntoConstraints = false
-        }
-        else {
-            bottomSubLabel.text = "Amount"
-            bottomMainLabel.text = "\(vitaminDItem.calculatedAmount) \(ProgressBarConfig.vitaminDUOM)"
-        }
-        
+        bottomMainLabel.text = "\(vitaminDItem.Amount) \(ProgressBarConfig.vitaminDUOM)"
         topMainLabel.text = vitaminDItem.VitaminDType
         middleMainLabel.text = OMSDateAccessor.getDateTime(date: vitaminDItem.StartTime)
     }
@@ -70,15 +48,7 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     }
     
     func repeatItem() {
-        if !vitaminDItem.IsOutsideType {
-            
-            VitaminDHistoryDBS().addVitaminDSupplementItem(vitaminDType: vitaminDItem.VitaminDType, startTime: Date(), vitaminDAmount: vitaminDItem.Amount)
-        }
-        else {
-            let startTime = Date()
-            let endTime = startTime.addingTimeInterval(TimeInterval(vitaminDItem.minutes * 60))
-            VitaminDHistoryDBS().addVitaminDOutsideItem(vitaminDType: vitaminDItem.VitaminDType, startTime: startTime, endTime: endTime)
-        }
+        VitaminDHistoryDBS().addVitaminDItem(vitaminDType: vitaminDItem.VitaminDType, startTime: Date(), vitaminDAmount: vitaminDItem.Amount)
     }
     
     

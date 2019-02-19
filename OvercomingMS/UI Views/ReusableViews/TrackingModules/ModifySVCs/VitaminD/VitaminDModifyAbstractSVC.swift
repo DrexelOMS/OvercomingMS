@@ -8,16 +8,9 @@
 
 import UIKit
 
-class VitaminDModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTFIDelegate, VDConversionLengthTFIDelegate, AmountTFIDelegate {
+class VitaminDModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTFIDelegate, AmountTFIDelegate {
     
     let vitaminDHistory = VitaminDHistoryDBS()
-    
-    enum ModifyMode {case Supplement, Outside}
-    var mode : ModifyMode = .Supplement {
-        didSet {
-            toggleMode()
-        }
-    }
     
     var selectedType : String? {
         get {
@@ -25,12 +18,6 @@ class VitaminDModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTF
         }
         set {
             vitaminDTypeTFI.selectedType = newValue
-            if vitaminDTypeTFI.IsOutsideMode() {
-                mode = .Outside
-            }
-            else {
-                mode = .Supplement
-            }
         }
     }
     var selectedStartTime : Date? {
@@ -49,19 +36,10 @@ class VitaminDModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTF
             amountTFI.selectedAmount = newValue
         }
     }
-    var selectedLength : Int? {
-        get {
-            return conversionLengthTFI.selectedLength
-        }
-        set {
-            conversionLengthTFI.selectedLength = newValue
-        }
-    }
     
     var vitaminDTypeTFI = VitaminDTypeTFI()
     var dateTimeTFI = DateTimeTFI()
     var amountTFI = AmountTFI(uom: ProgressBarConfig.vitaminDUOM)
-    var conversionLengthTFI = VDConversionLengthTFI()
     
     override func customSetup() {
         //set the initial text and start time of the textField
@@ -69,12 +47,7 @@ class VitaminDModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTF
         
         textInputStackView.addArrangedSubview(vitaminDTypeTFI)
         textInputStackView.addArrangedSubview(dateTimeTFI)
-        if mode == .Supplement {
-            textInputStackView.addArrangedSubview(amountTFI)
-        }
-        else {
-            textInputStackView.addArrangedSubview(conversionLengthTFI)
-        }
+        textInputStackView.addArrangedSubview(amountTFI)
         textInputStackView.translatesAutoresizingMaskIntoConstraints = false
         
         backConfirmButtons.leftButtonAction = BackPressed
@@ -93,28 +66,10 @@ class VitaminDModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTF
     
         amountTFI.delegate = self
         amountTFI.parentVC = parentVC
-        
-        conversionLengthTFI.delegate = self
-        conversionLengthTFI.parentVC = parentVC
-    }
-    
-    func toggleMode() {
-        if mode == .Supplement {
-            conversionLengthTFI.removeFromSuperview()
-            textInputStackView.addArrangedSubview(amountTFI)
-        }
-        else {
-            amountTFI.removeFromSuperview()
-            textInputStackView.addArrangedSubview(conversionLengthTFI)
-        }
     }
     
     func onAmountTFIDone() {
         selectedAmount = amountTFI.selectedAmount
-    }
-    
-    func onVDConversionLengthTFIDone() {
-        return
     }
     
     func onTypeTFIDone() {
