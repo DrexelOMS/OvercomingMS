@@ -24,7 +24,7 @@ class VitaminDQuickAddSVC : VitaminDModifyAbstractSVC {
                 return;
             }
             
-            vitaminDHistory.addVitaminDSupplementItem(vitaminDType: type, startTime: startTime, vitaminDAmount: amount)
+            vitaminDHistory.addVitaminDItem(vitaminDType: type, startTime: startTime, vitaminDAmount: amount)
             parentVC.updateProgressBar();
             parentVC.resetToDefaultView()
         }

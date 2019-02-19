@@ -114,6 +114,7 @@
 		0AD7EB11221B4D0F006F71C0 /* SelectedLabelsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB10221B4D0F006F71C0 /* SelectedLabelsSVC.swift */; };
 		0AD7EB13221B4D23006F71C0 /* SelectedLabelsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD7EB12221B4D23006F71C0 /* SelectedLabelsSVC.xib */; };
 		0AD7EB15221B52A5006F71C0 /* VitaminDEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB14221B52A5006F71C0 /* VitaminDEditSVC.swift */; };
+		0AD7EB17221C68B4006F71C0 /* VitaminDSupplementSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB16221C68B4006F71C0 /* VitaminDSupplementSVC.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -290,6 +291,7 @@
 		0AD7EB10221B4D0F006F71C0 /* SelectedLabelsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLabelsSVC.swift; sourceTree = "<group>"; };
 		0AD7EB12221B4D23006F71C0 /* SelectedLabelsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedLabelsSVC.xib; sourceTree = "<group>"; };
 		0AD7EB14221B52A5006F71C0 /* VitaminDEditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDEditSVC.swift; sourceTree = "<group>"; };
+		0AD7EB16221C68B4006F71C0 /* VitaminDSupplementSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDSupplementSVC.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -719,6 +721,7 @@
 			children = (
 				0AD7EB08221B3307006F71C0 /* VitaminDQuickAddSVC.swift */,
 				0AD7EB14221B52A5006F71C0 /* VitaminDEditSVC.swift */,
+				0AD7EB16221C68B4006F71C0 /* VitaminDSupplementSVC.swift */,
 				0AD7EB0A221B3331006F71C0 /* VitaminDModifyAbstractSVC.swift */,
 			);
 			path = VitaminD;
@@ -1216,6 +1219,7 @@
 				0AD7EAF4221B0779006F71C0 /* VitaminDHistoryDBS.swift in Sources */,
 				0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */,
 				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,
+				0AD7EB17221C68B4006F71C0 /* VitaminDSupplementSVC.swift in Sources */,
 				0A93F14E2213BB9D0063A892 /* MedicationHistoryDBT.swift in Sources */,
 				0A2BAA662202A24E004074F3 /* FoodRatingDBS.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,

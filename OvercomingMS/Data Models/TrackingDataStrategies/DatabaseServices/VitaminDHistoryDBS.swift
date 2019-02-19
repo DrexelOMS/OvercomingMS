@@ -25,7 +25,7 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
         
     }
     
-    func addVitaminDSupplementItem(vitaminDType: String, startTime: Date, vitaminDAmount: Int) {
+    func addVitaminDItem(vitaminDType: String, startTime: Date, vitaminDAmount: Int) {
         
         do {
             try realm.write() {

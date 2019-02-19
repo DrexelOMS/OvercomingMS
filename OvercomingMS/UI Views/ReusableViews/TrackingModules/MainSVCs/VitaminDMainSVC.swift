@@ -52,8 +52,7 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     }
     
     func supplementButtonPressed() {
-        //parentVC.pushSubView(newSubView: Omega3SupplementSVC())
-        print("Sup")
+        parentVC.pushSubView(newSubView: VitaminDSupplementSVC())
     }
     
     func outsideButtonPressed() {

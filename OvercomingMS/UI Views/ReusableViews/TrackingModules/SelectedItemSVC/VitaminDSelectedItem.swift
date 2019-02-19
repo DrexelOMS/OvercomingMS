@@ -48,7 +48,7 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     }
     
     func repeatItem() {
-        VitaminDHistoryDBS().addVitaminDSupplementItem(vitaminDType: vitaminDItem.VitaminDType, startTime: Date(), vitaminDAmount: vitaminDItem.Amount)
+        VitaminDHistoryDBS().addVitaminDItem(vitaminDType: vitaminDItem.VitaminDType, startTime: Date(), vitaminDAmount: vitaminDItem.Amount)
     }
     
     
