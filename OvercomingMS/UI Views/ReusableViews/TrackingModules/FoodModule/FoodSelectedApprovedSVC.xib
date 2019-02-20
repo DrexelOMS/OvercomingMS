@@ -43,7 +43,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-zo-gfa">
                     <rect key="frame" x="0.0" y="30" width="320" height="428"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-Ju-4Vj">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-Ju-4Vj">
                             <rect key="frame" x="20" y="0.0" width="280" height="428"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjQ-4D-czE" userLabel="LabelView">
@@ -81,7 +81,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDu-S9-dhl">
-                                    <rect key="frame" x="0.0" y="50" width="280" height="283"/>
+                                    <rect key="frame" x="0.0" y="80" width="280" height="223"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifI-jM-CKr" userLabel="ReferenceView">
                                     <rect key="frame" x="0.0" y="333" width="280" height="95"/>
