@@ -9,7 +9,7 @@
 import UIKit
 import Cartography
 
-class ModifyAbstractSVC : SlidingAbstractSVC {
+class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     
     override var nibName: String {
         get {
@@ -34,5 +34,30 @@ class ModifyAbstractSVC : SlidingAbstractSVC {
         fatalError("Override Confirm Pressed")
     }
     
+    func OnTFIOpened(tfi: TFIAbstract, inputHeight: CGFloat) {
+        topLabelViewHeight.constant = 0
+        textInputStackBottom.constant += inputHeight - backConfirmButtons.bounds.height
+        layoutIfNeeded()
+
+        for  view in textInputStackView.arrangedSubviews {
+            if view != tfi {
+                view.isHidden = true
+            }
+        }
+        
+    }
+    
+    func OnTFIClosed(tfi: TFIAbstract, inputHeight: CGFloat) {
+        topLabelViewHeight.constant = 100
+        textInputStackBottom.constant -= inputHeight - backConfirmButtons.bounds.height
+        layoutIfNeeded()
+        
+        for  view in textInputStackView.arrangedSubviews {
+            if view != tfi {
+                view.isHidden = false
+            }
+        }
+        
+    }
     
 }

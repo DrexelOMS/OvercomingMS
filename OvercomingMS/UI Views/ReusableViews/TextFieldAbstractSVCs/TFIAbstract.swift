@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol TFIDelegate: class {
+    func OnTFIOpened(tfi: TFIAbstract, inputHeight: CGFloat)
+    func OnTFIClosed(tfi: TFIAbstract, inputHeight: CGFloat)
+}
+
 class TFIAbstract : CustomView, UITextFieldDelegate {
     
     override var nibName: String {
@@ -21,23 +26,21 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     @IBOutlet weak var subLeftLabel: UILabel!
     @IBOutlet weak var subRightLabel: UILabel!
     
-    var parentVC : TrackingModuleAbstractVC!
-    var method: (() -> ())?
-    var endMethod: (() -> ())?
+    var parentVC: TrackingModuleAbstractVC!
+    var tfiDelegate: TFIDelegate?
     
     override func customSetup() {
         textField.delegate = self
         textField.inputAccessoryView = getToolBar()
     }
     
+    func getInputHeight() -> CGFloat {
+        return textField.inputView!.bounds.height + textField.inputAccessoryView!.bounds.height
+    }
+    
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         showTextFieldInput()
-        guard let method = self.method else {
-            fatalError("did not work")
-        }
-        method()
-        print("\(textField.inputView?.bounds.height) + \(textField.inputAccessoryView?.bounds.height)")
-        
+        tfiDelegate?.OnTFIOpened(tfi: self, inputHeight: getInputHeight())
         return true
     }
     
@@ -46,11 +49,8 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     }
     
     @objc private func donePicker(){
+        tfiDelegate?.OnTFIClosed(tfi: self, inputHeight: getInputHeight())
         doneFunction()
-        guard let method = self.endMethod else {
-            fatalError("did not work")
-        }
-        method()
     }
     
     func doneFunction() {
@@ -58,11 +58,8 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     }
     
     @objc private func cancelPicker(){
+        tfiDelegate?.OnTFIClosed(tfi: self, inputHeight: getInputHeight())
         cancelFunction()
-        guard let method = self.endMethod else {
-            fatalError("did not work")
-        }
-        method()
     }
     
     func cancelFunction() {
