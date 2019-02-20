@@ -19,7 +19,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W3-TB-2CZ">
                     <rect key="frame" x="0.0" y="0.0" width="260" height="48"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ButtonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="tGP-mx-WbQ">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ButtonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="tGP-mx-WbQ">
                             <rect key="frame" x="0.0" y="0.0" width="260" height="48"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
