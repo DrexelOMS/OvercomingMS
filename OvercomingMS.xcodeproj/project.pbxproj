@@ -140,6 +140,9 @@
 		0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAFDD22163057004C1966 /* SearchBarButton.xib */; };
 		0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */; };
 		0C8181292211D472008B5A2D /* FoodScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181282211D472008B5A2D /* FoodScreens.storyboard */; };
+		0C9910852219C2F00008A727 /* FoodSelectedApprovedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9910842219C2F00008A727 /* FoodSelectedApprovedSVC.xib */; };
+		0CAD6315221D9C7700E50E72 /* FoodApprovedSCV.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6314221D9C7700E50E72 /* FoodApprovedSCV.xib */; };
+		0CAD6317221DAAEE00E50E72 /* FoodRejectedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
 		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
@@ -318,6 +321,9 @@
 		0C2DAFDD22163057004C1966 /* SearchBarButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarButton.xib; sourceTree = "<group>"; };
 		0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackConfirmButtonsSVC.xib; sourceTree = "<group>"; };
 		0C8181282211D472008B5A2D /* FoodScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodScreens.storyboard; sourceTree = "<group>"; };
+		0C9910842219C2F00008A727 /* FoodSelectedApprovedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSelectedApprovedSVC.xib; sourceTree = "<group>"; };
+		0CAD6314221D9C7700E50E72 /* FoodApprovedSCV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodApprovedSCV.xib; sourceTree = "<group>"; };
+		0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodRejectedSVC.xib; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3HistoryDBS.swift; sourceTree = "<group>"; };
@@ -381,6 +387,9 @@
 				0A0818972214E6310021BDF6 /* FoodSearchSVC.xib */,
 				0A98DB0E2216447800F4800D /* SearchBarButton.swift */,
 				0C2DAFDD22163057004C1966 /* SearchBarButton.xib */,
+				0C9910842219C2F00008A727 /* FoodSelectedApprovedSVC.xib */,
+				0CAD6314221D9C7700E50E72 /* FoodApprovedSCV.xib */,
+				0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */,
 				0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */,
 				0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */,
 				0A08189D2214F82F0021BDF6 /* Food.swift */,
@@ -1013,6 +1022,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */,
+				0CAD6315221D9C7700E50E72 /* FoodApprovedSCV.xib in Resources */,
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
 				0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */,
 				0AD07F8C21FE703D00C55831 /* TrackingFoodBar.xib in Resources */,
@@ -1032,6 +1042,7 @@
 				0A1FEC6E220638A7006CED70 /* Routine3PartCell.xib in Resources */,
 				0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */,
 				0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */,
+				0C9910852219C2F00008A727 /* FoodSelectedApprovedSVC.xib in Resources */,
 				0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
 				0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */,
@@ -1048,6 +1059,7 @@
 				0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */,
 				0A93F19A22145F150063A892 /* ModifyAbstractSVC.xib in Resources */,
 				0C8181292211D472008B5A2D /* FoodScreens.storyboard in Resources */,
+				0CAD6317221DAAEE00E50E72 /* FoodRejectedSVC.xib in Resources */,
 				0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

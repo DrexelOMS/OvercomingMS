@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="223"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRB-uu-FQl">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="223"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o01-Z3-Buo">
+                            <rect key="frame" x="10" y="10" width="260" height="203"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQc-6d-CJh" userLabel="CautionView">
+                                    <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="POH-dO-FAJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RiQ-Ek-SAn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Caution" translatesAutoresizingMaskIntoConstraints="NO" id="oqC-fH-vuy">
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="FIR-Do-bbf"/>
+                                                        <constraint firstItem="oqC-fH-vuy" firstAttribute="top" secondItem="RiQ-Ek-SAn" secondAttribute="top" id="YhP-ne-tO5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="oqC-fH-vuy" secondAttribute="trailing" id="b1z-mj-P58"/>
+                                                        <constraint firstAttribute="bottom" secondItem="oqC-fH-vuy" secondAttribute="bottom" id="e8D-YS-V6r"/>
+                                                        <constraint firstItem="oqC-fH-vuy" firstAttribute="leading" secondItem="RiQ-Ek-SAn" secondAttribute="leading" id="mnm-Yu-hvA"/>
+                                                        <constraint firstAttribute="height" constant="30" id="o0E-p4-gsj"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skg-zk-yXv">
+                                                    <rect key="frame" x="40" y="0.0" width="220" height="30"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Caution! This food has">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="Quicksand-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RiQ-Ek-SAn" firstAttribute="leading" secondItem="POH-dO-FAJ" secondAttribute="leading" id="1jF-Vl-Ide"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="1gL-Q1-pjR"/>
+                                        <constraint firstAttribute="trailing" secondItem="POH-dO-FAJ" secondAttribute="trailing" id="TZZ-NJ-w4p"/>
+                                        <constraint firstAttribute="bottom" secondItem="POH-dO-FAJ" secondAttribute="bottom" id="gfR-u8-Xxx"/>
+                                        <constraint firstItem="POH-dO-FAJ" firstAttribute="top" secondItem="BQc-6d-CJh" secondAttribute="top" id="ohS-th-MTU"/>
+                                        <constraint firstItem="POH-dO-FAJ" firstAttribute="leading" secondItem="BQc-6d-CJh" secondAttribute="leading" id="ws0-hL-lCo"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffx-1V-pmR" userLabel="InfoView">
+                                    <rect key="frame" x="0.0" y="40" width="260" height="113"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dUM-GF-uou">
+                                            <rect key="frame" x="0.0" y="0.0" width="260" height="113"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableView>
+                                    </subviews>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76F-zG-38r" userLabel="LearnMoreView">
+                                    <rect key="frame" x="0.0" y="163" width="260" height="40"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wWc-zr-oDO">
+                                            <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMX-RW-1aT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="210" height="40"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Surprised? Learn more about what to watch for in the OMS Diet here!">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="0.99999000000000005" blue="0.99999000000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="12" name="Quicksand-Bold"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="18.350000000000001" maximumLineHeight="18.350000000000001" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                    <tabStops>
+                                                                        <textTab alignment="left" location="28">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="56">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="84">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="112">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="140">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="168">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="196">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="224">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="252">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="280">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="308">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="336">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                    </tabStops>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvN-0u-Izg" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
+                                                    <rect key="frame" x="220" y="0.0" width="40" height="40"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="7DF-Mx-FNu"/>
+                                                        <constraint firstAttribute="height" constant="40" id="raJ-Kd-Pim"/>
+                                                    </constraints>
+                                                    <state key="normal" title="B">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="wWc-zr-oDO" secondAttribute="trailing" id="NvH-oj-dkW"/>
+                                        <constraint firstItem="wWc-zr-oDO" firstAttribute="top" secondItem="76F-zG-38r" secondAttribute="top" id="Rxg-FF-mw0"/>
+                                        <constraint firstAttribute="bottom" secondItem="wWc-zr-oDO" secondAttribute="bottom" id="T8p-hX-g9v"/>
+                                        <constraint firstAttribute="height" constant="40" id="c8S-5O-cAP"/>
+                                        <constraint firstItem="wWc-zr-oDO" firstAttribute="leading" secondItem="76F-zG-38r" secondAttribute="leading" id="fYK-xv-lMW"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="o01-Z3-Buo" secondAttribute="trailing" constant="10" id="1yg-oj-MY5"/>
+                        <constraint firstItem="o01-Z3-Buo" firstAttribute="top" secondItem="RRB-uu-FQl" secondAttribute="top" constant="10" id="Y3X-CD-X6S"/>
+                        <constraint firstItem="o01-Z3-Buo" firstAttribute="leading" secondItem="RRB-uu-FQl" secondAttribute="leading" constant="10" id="YUO-oX-Rq0"/>
+                        <constraint firstAttribute="bottom" secondItem="o01-Z3-Buo" secondAttribute="bottom" constant="10" id="sUj-QG-6Dx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RRB-uu-FQl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4Ps-wL-Jin"/>
+                <constraint firstItem="RRB-uu-FQl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8Hl-N3-hdm"/>
+                <constraint firstItem="RRB-uu-FQl" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="CD7-E5-87v"/>
+                <constraint firstItem="RRB-uu-FQl" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="p7p-Yn-k3Z"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="214.40000000000001" y="353.07346326836586"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Caution" width="19" height="20"/>
+    </resources>
+</document>
