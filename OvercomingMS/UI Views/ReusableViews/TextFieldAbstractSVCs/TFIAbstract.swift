@@ -22,6 +22,8 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     @IBOutlet weak var subRightLabel: UILabel!
     
     var parentVC : TrackingModuleAbstractVC!
+    var method: (() -> ())?
+    var endMethod: (() -> ())?
     
     override func customSetup() {
         textField.delegate = self
@@ -30,6 +32,12 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         showTextFieldInput()
+        guard let method = self.method else {
+            fatalError("did not work")
+        }
+        method()
+        print("\(textField.inputView?.bounds.height) + \(textField.inputAccessoryView?.bounds.height)")
+        
         return true
     }
     
@@ -39,6 +47,10 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     
     @objc private func donePicker(){
         doneFunction()
+        guard let method = self.endMethod else {
+            fatalError("did not work")
+        }
+        method()
     }
     
     func doneFunction() {
@@ -47,6 +59,10 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     
     @objc private func cancelPicker(){
         cancelFunction()
+        guard let method = self.endMethod else {
+            fatalError("did not work")
+        }
+        method()
     }
     
     func cancelFunction() {

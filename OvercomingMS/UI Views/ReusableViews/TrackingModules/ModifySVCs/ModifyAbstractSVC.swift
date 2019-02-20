@@ -16,11 +16,11 @@ class ModifyAbstractSVC : SlidingAbstractSVC {
             return "ModifyAbstractSVC"
         }
     }
-    
-    @IBOutlet weak var textInputStackView: UIStackView!
-    
-    @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
 
+    @IBOutlet weak var topLabelViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var textInputStackBottom: NSLayoutConstraint!
+    @IBOutlet weak var textInputStackView: UIStackView!
+    @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
     
     override func updateColors() {
         print("remember to update colors")
