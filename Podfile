@@ -11,7 +11,7 @@ target 'OvercomingMS' do
   pod 'RealmSwift'
   pod 'LinearProgressBar', '~> 1.0.1'
   pod 'Cartography'
-  pod 'SwiftyPickerPopover'
+  pod 'BarcodeScanner', '~> 4.1'
 
   target 'OvercomingMSTests' do
     inherit! :search_paths
