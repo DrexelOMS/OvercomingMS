@@ -8,13 +8,7 @@
 
 import UIKit
 
-protocol LengthTFIDelegate: class {
-    func onLengthTFIDone()
-}
-
 class LengthTFI : TFIAbstract {
-    
-    var delegate : LengthTFIDelegate?
     
     var lengthPicker = UIDatePicker()
     var selectedLength : Int? {
@@ -38,7 +32,6 @@ class LengthTFI : TFIAbstract {
     override func doneFunction() {
         self.selectedLength = getMinutes(fromInterval: lengthPicker.countDownDuration)
         parentVC.view.endEditing(true)
-        delegate?.onLengthTFIDone()
     }
 
     func getMinutes(fromInterval: TimeInterval) -> Int {

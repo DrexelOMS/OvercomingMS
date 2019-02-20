@@ -8,13 +8,7 @@
 
 import UIKit
 
-protocol CustomEntryTFIDelegate: class {
-    func onCustomEntryTFIDone()
-}
-
 class CustomEntryTFI : TFIAbstract {
-    
-    var delegate : CustomEntryTFIDelegate?
     
     var selectedCustomEntry : String? {
         didSet {
@@ -54,9 +48,6 @@ class CustomEntryTFI : TFIAbstract {
         }
         
         parentVC.view.endEditing(true)
-        if self.selectedCustomEntry != nil {
-            delegate?.onCustomEntryTFIDone()
-        }
     }
     
     override func cancelFunction() {

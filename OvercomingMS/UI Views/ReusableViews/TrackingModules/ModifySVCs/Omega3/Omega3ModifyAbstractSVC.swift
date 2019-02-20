@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Omega3ModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTFIDelegate, AmountTFIDelegate {
+class Omega3ModifyAbstractSVC : ModifyAbstractSVC {
     
     let omega3History = Omega3HistoryDBS()
     
@@ -57,26 +57,12 @@ class Omega3ModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTFID
     
     override func initialize(parentVC: TrackingModuleAbstractVC) {
         super.initialize(parentVC: parentVC)
-        
-        typeTFI.delegate = self
+
         typeTFI.parentVC = parentVC
         
-        dateTimeTFI.delegate = self
         dateTimeTFI.parentVC = parentVC
         
-        amountTFI.delegate = self
         amountTFI.parentVC = parentVC
     }
     
-    func onAmountTFIDone() {
-        selectedAmount = amountTFI.selectedAmount
-    }
-    
-    func onTypeTFIDone() {
-        selectedType = typeTFI.selectedType
-    }
-    
-    func onDateTimeTFIDone() {
-        selectedStartTime = dateTimeTFI.selectedStartTime
-    }
 }

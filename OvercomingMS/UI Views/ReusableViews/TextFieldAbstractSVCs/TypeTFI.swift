@@ -8,13 +8,7 @@
 
 import UIKit
 
-protocol TypeTFIDelegate : class {
-    func onTypeTFIDone()
-}
-
 class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    var delegate : TypeTFIDelegate?
     
     var typePicker = UIPickerView()
     
@@ -76,7 +70,6 @@ class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSourc
             self.selectedType = type
         }
         parentVC.view.endEditing(true)
-        delegate?.onTypeTFIDone()
     }
 }
 

@@ -8,13 +8,7 @@
 
 import UIKit
 
-protocol DateTimeTFIDelegate: class {
-    func onDateTimeTFIDone()
-}
-
 class DateTimeTFI : TFIAbstract {
-    
-    var delegate : DateTimeTFIDelegate?
     
     let datePicker = UIDatePicker()
     var selectedStartTime : Date?
@@ -42,7 +36,6 @@ class DateTimeTFI : TFIAbstract {
     override func doneFunction() {
         self.selectedStartTime = datePicker.date
         parentVC.view.endEditing(true)
-        delegate?.onDateTimeTFIDone()
     }
     
 }
