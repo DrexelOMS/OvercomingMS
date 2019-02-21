@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Cartography
 
-class ExerciseModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTFIDelegate, LengthTFIDelegate {
+class ExerciseModifyAbstractSVC : ModifyAbstractSVC {
     
     let exerciseRoutines = ExerciseHistoryDBS()
     
@@ -58,25 +59,6 @@ class ExerciseModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTF
     override func initialize(parentVC: TrackingModuleAbstractVC) {
         super.initialize(parentVC: parentVC)
         
-        typeTFI.delegate = self
-        typeTFI.parentVC = parentVC
-        
-        dateTimeTFI.delegate = self
-        dateTimeTFI.parentVC = parentVC
-        
-        lengthTFI.delegate = self
-        lengthTFI.parentVC = parentVC
     }
     
-    func onLengthTFIDone() {
-        selectedLength = lengthTFI.selectedLength
-    }
-    
-    func onTypeTFIDone() {
-        selectedType = typeTFI.selectedType
-    }
-    
-    func onDateTimeTFIDone() {
-        selectedStartTime = dateTimeTFI.selectedStartTime
-    }
 }

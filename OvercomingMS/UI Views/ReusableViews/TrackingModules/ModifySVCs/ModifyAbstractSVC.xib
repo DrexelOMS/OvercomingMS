@@ -13,7 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModifyAbstractSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="backConfirmButtons" destination="W8i-7f-xAc" id="iJo-dg-yXr"/>
+                <outlet property="textInputStackBottom" destination="Kcu-Cw-fPX" id="Tc9-EV-OjJ"/>
                 <outlet property="textInputStackView" destination="pwm-Jx-CmD" id="gwo-A7-2I4"/>
+                <outlet property="topLabelViewHeight" destination="abu-D5-vW4" id="0oc-xw-a2m"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -40,7 +42,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pwm-Jx-CmD">
-                    <rect key="frame" x="50" y="120" width="275" height="264"/>
+                    <rect key="frame" x="30" y="110" width="315" height="284"/>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8i-7f-xAc" userLabel="BotButtons" customClass="BackConfirmButtonsSVC" customModule="OvercomingMS" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="404" width="375" height="60"/>
@@ -52,10 +54,10 @@
             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="W8i-7f-xAc" secondAttribute="bottom" id="5Nk-lc-Ybg"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pwm-Jx-CmD" secondAttribute="trailing" constant="50" id="5ZX-3Z-BGT"/>
-                <constraint firstItem="W8i-7f-xAc" firstAttribute="top" secondItem="pwm-Jx-CmD" secondAttribute="bottom" constant="20" id="Kcu-Cw-fPX"/>
-                <constraint firstItem="pwm-Jx-CmD" firstAttribute="top" secondItem="nG2-DQ-L2R" secondAttribute="bottom" constant="20" id="My6-lB-U6C"/>
-                <constraint firstItem="pwm-Jx-CmD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="O0s-9P-FPl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pwm-Jx-CmD" secondAttribute="trailing" constant="30" id="5ZX-3Z-BGT"/>
+                <constraint firstItem="W8i-7f-xAc" firstAttribute="top" secondItem="pwm-Jx-CmD" secondAttribute="bottom" constant="10" id="Kcu-Cw-fPX"/>
+                <constraint firstItem="pwm-Jx-CmD" firstAttribute="top" secondItem="nG2-DQ-L2R" secondAttribute="bottom" constant="10" id="My6-lB-U6C"/>
+                <constraint firstItem="pwm-Jx-CmD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="O0s-9P-FPl"/>
                 <constraint firstItem="nG2-DQ-L2R" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="V0U-9K-K7K"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nG2-DQ-L2R" secondAttribute="trailing" id="WEl-Dz-75P"/>
                 <constraint firstItem="nG2-DQ-L2R" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dqI-td-hDq"/>

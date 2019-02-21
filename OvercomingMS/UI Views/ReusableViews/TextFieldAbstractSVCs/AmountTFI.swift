@@ -8,13 +8,7 @@
 
 import UIKit
 
-protocol AmountTFIDelegate: class {
-    func onAmountTFIDone()
-}
-
 class AmountTFI : TFIAbstract {
-    
-    var delegate : AmountTFIDelegate?
     
     var savedText : String = ""
     var selectedAmount : Int? {
@@ -55,9 +49,6 @@ class AmountTFI : TFIAbstract {
         }
         
         parentVC.view.endEditing(true)
-        if self.selectedAmount != nil {
-            delegate?.onAmountTFIDone()
-        }
     }
     
     override func cancelFunction() {

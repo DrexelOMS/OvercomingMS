@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VitaminDModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTFIDelegate, AmountTFIDelegate {
+class VitaminDModifyAbstractSVC : ModifyAbstractSVC {
     
     let vitaminDHistory = VitaminDHistoryDBS()
     
@@ -58,26 +58,6 @@ class VitaminDModifyAbstractSVC : ModifyAbstractSVC, TypeTFIDelegate, DateTimeTF
     override func initialize(parentVC: TrackingModuleAbstractVC) {
         super.initialize(parentVC: parentVC)
         
-        vitaminDTypeTFI.delegate = self
-        vitaminDTypeTFI.parentVC = parentVC
-        
-        dateTimeTFI.delegate = self
-        dateTimeTFI.parentVC = parentVC
-    
-        amountTFI.delegate = self
-        amountTFI.parentVC = parentVC
-    }
-    
-    func onAmountTFIDone() {
-        selectedAmount = amountTFI.selectedAmount
-    }
-    
-    func onTypeTFIDone() {
-        selectedType = vitaminDTypeTFI.selectedType
-    }
-    
-    func onDateTimeTFIDone() {
-        selectedStartTime = dateTimeTFI.selectedStartTime
     }
     
 }

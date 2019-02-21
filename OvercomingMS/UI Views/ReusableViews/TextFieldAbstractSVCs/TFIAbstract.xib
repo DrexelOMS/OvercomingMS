@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zrg-8d-M5H">
-                    <rect key="frame" x="0.0" y="7" width="375" height="80"/>
+                    <rect key="frame" x="0.0" y="3.5" width="375" height="80"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vRl-Eq-gcX">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -95,7 +95,7 @@
             <constraints>
                 <constraint firstItem="Zrg-8d-M5H" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="16m-uy-4Qh"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Zrg-8d-M5H" secondAttribute="trailing" id="Lkk-88-ryo"/>
-                <constraint firstItem="Zrg-8d-M5H" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ZAG-r8-FKb"/>
+                <constraint firstItem="Zrg-8d-M5H" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dHh-kj-CI0"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
