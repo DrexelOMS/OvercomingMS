@@ -28,19 +28,39 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     
     var parentVC: TrackingModuleAbstractVC!
     var tfiDelegate: TFIDelegate?
+    var active: Bool = false
     
     override func customSetup() {
         textField.delegate = self
         textField.inputAccessoryView = getToolBar()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIResponder.keyboardDidShowNotification,
+            object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardDidHideNotification,
+            object: nil
+        )
+        
     }
     
-    func getInputHeight() -> CGFloat {
-        return textField.inputView!.bounds.height + textField.inputAccessoryView!.bounds.height
-    }
+//    func getInputHeight() -> CGFloat {
+//        let mainHeight = textField.inputView?.bounds.height ?? 0.0
+//        let accessoryHeight = textField.inputAccessoryView?.bounds.height ?? 0.0
+////        if mainHeight == 0.0 {
+////
+////        }
+//        return mainHeight + accessoryHeight
+//    }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         showTextFieldInput()
-        tfiDelegate?.OnTFIOpened(tfi: self, inputHeight: getInputHeight())
+        active = true
         return true
     }
     
@@ -49,7 +69,6 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     }
     
     @objc private func donePicker(){
-        tfiDelegate?.OnTFIClosed(tfi: self, inputHeight: getInputHeight())
         doneFunction()
     }
     
@@ -58,7 +77,6 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     }
     
     @objc private func cancelPicker(){
-        tfiDelegate?.OnTFIClosed(tfi: self, inputHeight: getInputHeight())
         cancelFunction()
     }
     
@@ -78,6 +96,28 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
         toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
         
         return toolbar
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            if active {
+                tfiDelegate?.OnTFIOpened(tfi: self, inputHeight: keyboardHeight)
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            if active {
+                tfiDelegate?.OnTFIClosed(tfi: self, inputHeight: keyboardHeight)
+                active = false
+                print(keyboardHeight)
+            }
+        }
     }
     
 }

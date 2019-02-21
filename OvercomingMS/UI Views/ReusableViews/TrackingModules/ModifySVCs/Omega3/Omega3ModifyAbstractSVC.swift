@@ -58,11 +58,6 @@ class Omega3ModifyAbstractSVC : ModifyAbstractSVC {
     override func initialize(parentVC: TrackingModuleAbstractVC) {
         super.initialize(parentVC: parentVC)
 
-        typeTFI.parentVC = parentVC
-        
-        dateTimeTFI.parentVC = parentVC
-        
-        amountTFI.parentVC = parentVC
     }
     
 }

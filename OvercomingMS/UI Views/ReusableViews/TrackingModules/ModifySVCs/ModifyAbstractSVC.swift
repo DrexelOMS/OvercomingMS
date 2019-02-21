@@ -22,6 +22,17 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     @IBOutlet weak var textInputStackView: UIStackView!
     @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
     
+    override func initialize(parentVC: TrackingModuleAbstractVC) {
+        super.initialize(parentVC: parentVC)
+        
+        for view in textInputStackView.arrangedSubviews {
+            if let tfiView = view as? TFIAbstract {
+                tfiView.parentVC = parentVC
+                tfiView.tfiDelegate = self
+            }
+        }
+    }
+    
     override func updateColors() {
         print("remember to update colors")
     }
@@ -35,11 +46,12 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     }
     
     func OnTFIOpened(tfi: TFIAbstract, inputHeight: CGFloat) {
+        
         topLabelViewHeight.constant = 0
         textInputStackBottom.constant += inputHeight - backConfirmButtons.bounds.height
-        layoutIfNeeded()
+        parentVC.view.layoutIfNeeded()
 
-        for  view in textInputStackView.arrangedSubviews {
+        for view in textInputStackView.arrangedSubviews {
             if view != tfi {
                 view.isHidden = true
             }
@@ -52,7 +64,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
         textInputStackBottom.constant -= inputHeight - backConfirmButtons.bounds.height
         layoutIfNeeded()
         
-        for  view in textInputStackView.arrangedSubviews {
+        for view in textInputStackView.arrangedSubviews {
             if view != tfi {
                 view.isHidden = false
             }

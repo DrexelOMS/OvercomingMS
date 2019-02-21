@@ -58,11 +58,6 @@ class VitaminDModifyAbstractSVC : ModifyAbstractSVC {
     override func initialize(parentVC: TrackingModuleAbstractVC) {
         super.initialize(parentVC: parentVC)
         
-        vitaminDTypeTFI.parentVC = parentVC
-        
-        dateTimeTFI.parentVC = parentVC
-    
-        amountTFI.parentVC = parentVC
     }
     
 }

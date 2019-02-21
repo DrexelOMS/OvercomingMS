@@ -59,14 +59,6 @@ class ExerciseModifyAbstractSVC : ModifyAbstractSVC {
     override func initialize(parentVC: TrackingModuleAbstractVC) {
         super.initialize(parentVC: parentVC)
         
-        typeTFI.parentVC = parentVC
-        typeTFI.tfiDelegate = self
-    
-        dateTimeTFI.parentVC = parentVC
-        dateTimeTFI.tfiDelegate = self
-        
-        lengthTFI.parentVC = parentVC
-        lengthTFI.tfiDelegate = self
     }
     
 }
