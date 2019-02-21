@@ -21,9 +21,12 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     @IBOutlet weak var textInputStackBottom: NSLayoutConstraint!
     @IBOutlet weak var textInputStackView: UIStackView!
     @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
+    var originalBottomConstraint: CGFloat!
     
     override func initialize(parentVC: TrackingModuleAbstractVC) {
         super.initialize(parentVC: parentVC)
+        
+        originalBottomConstraint = textInputStackBottom.constant
         
         for view in textInputStackView.arrangedSubviews {
             if let tfiView = view as? TFIAbstract {
@@ -45,30 +48,37 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
         fatalError("Override Confirm Pressed")
     }
     
-    func OnTFIOpened(tfi: TFIAbstract, inputHeight: CGFloat) {
-        
-        topLabelViewHeight.constant = 0
-        textInputStackBottom.constant += inputHeight - backConfirmButtons.bounds.height
-        parentVC.view.layoutIfNeeded()
-
-        for view in textInputStackView.arrangedSubviews {
+    private func hideOtherStackViews(_ tfi: TFIAbstract) {
+        for view in self.textInputStackView.arrangedSubviews {
             if view != tfi {
                 view.isHidden = true
             }
         }
-        
     }
     
-    func OnTFIClosed(tfi: TFIAbstract, inputHeight: CGFloat) {
-        topLabelViewHeight.constant = 100
-        textInputStackBottom.constant -= inputHeight - backConfirmButtons.bounds.height
-        layoutIfNeeded()
-        
-        for view in textInputStackView.arrangedSubviews {
+    private func showOtherStackViews(_ tfi: TFIAbstract) {
+        for view in self.textInputStackView.arrangedSubviews {
             if view != tfi {
                 view.isHidden = false
             }
         }
+    }
+    
+    func OnTFIOpened(tfi: TFIAbstract, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions, keyboardHeight: CGFloat) {
+
+        self.topLabelViewHeight.constant = 0
+        self.textInputStackBottom.constant = originalBottomConstraint + keyboardHeight - self.backConfirmButtons.bounds.height
+        self.hideOtherStackViews(tfi)
+        self.layoutIfNeeded()
+        
+    }
+    
+    func OnTFIClosed(tfi: TFIAbstract, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions, keyboardHeight: CGFloat) {
+        
+        self.topLabelViewHeight.constant = 100
+        self.textInputStackBottom.constant = originalBottomConstraint
+        self.showOtherStackViews(tfi)
+        self.layoutIfNeeded()
         
     }
     

@@ -9,8 +9,8 @@
 import UIKit
 
 protocol TFIDelegate: class {
-    func OnTFIOpened(tfi: TFIAbstract, inputHeight: CGFloat)
-    func OnTFIClosed(tfi: TFIAbstract, inputHeight: CGFloat)
+    func OnTFIOpened(tfi: TFIAbstract, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions, keyboardHeight: CGFloat)
+    func OnTFIClosed(tfi: TFIAbstract, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions, keyboardHeight: CGFloat)
 }
 
 class TFIAbstract : CustomView, UITextFieldDelegate {
@@ -49,14 +49,10 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
         
     }
     
-//    func getInputHeight() -> CGFloat {
-//        let mainHeight = textField.inputView?.bounds.height ?? 0.0
-//        let accessoryHeight = textField.inputAccessoryView?.bounds.height ?? 0.0
-////        if mainHeight == 0.0 {
-////
-////        }
-//        return mainHeight + accessoryHeight
-//    }
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         showTextFieldInput()
@@ -99,23 +95,46 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
-        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            if active {
-                tfiDelegate?.OnTFIOpened(tfi: self, inputHeight: keyboardHeight)
+        if active {
+            let userInfo = notification.userInfo
+            
+            var animationDuration: TimeInterval = 0.0
+            var animationOptions: UIView.AnimationOptions = []
+            
+            if let animationDurationFromUserInfo = userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval {
+                animationDuration = animationDurationFromUserInfo
+            }
+            
+            if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                
+                animationOptions.update(with: .layoutSubviews)
+                
+                tfiDelegate?.OnTFIOpened(tfi: self, animationDuration: animationDuration, animationOptions: animationOptions, keyboardHeight: keyboardHeight)
             }
         }
     }
     
     @objc func keyboardWillHide(_ notification: Notification) {
-        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            if active {
-                tfiDelegate?.OnTFIClosed(tfi: self, inputHeight: keyboardHeight)
+        if active {
+            let userInfo = notification.userInfo
+            
+            var animationDuration: TimeInterval = 0.0
+            var animationOptions: UIView.AnimationOptions = []
+            
+            if let animationDurationFromUserInfo = userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval {
+                animationDuration = animationDurationFromUserInfo
+            }
+            
+            if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                
+                animationOptions.update(with: .layoutSubviews)
+                
+                tfiDelegate?.OnTFIClosed(tfi: self, animationDuration: animationDuration, animationOptions: animationOptions, keyboardHeight: keyboardHeight)
                 active = false
-                print(keyboardHeight)
             }
         }
     }
