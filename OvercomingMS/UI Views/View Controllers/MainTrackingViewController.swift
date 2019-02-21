@@ -157,7 +157,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             MeditationHistoryDBS().toggleFilledData()
             break
         case 4:
-            MedicationHistoryDBS().toggleFilledData()
+            SavedMedicationDBS().toggleFilledData()
             break
         default:
             fatalError("Case Not Handled")

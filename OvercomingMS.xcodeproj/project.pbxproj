@@ -52,12 +52,10 @@
 		0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93EA5722132BCF0063A892 /* PullBarSVC.xib */; };
 		0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5A22132BF90063A892 /* Omega3ModuleVC.swift */; };
 		0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */; };
-		0A93F14E2213BB9D0063A892 /* MedicationHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F1492213BB9C0063A892 /* MedicationHistoryDBT.swift */; };
 		0A93F14F2213BB9D0063A892 /* ExerciseHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F14A2213BB9C0063A892 /* ExerciseHistoryDBT.swift */; };
 		0A93F1502213BB9D0063A892 /* TrackingDayDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F14B2213BB9C0063A892 /* TrackingDayDBT.swift */; };
 		0A93F1512213BB9D0063A892 /* MeditationHistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F14C2213BB9C0063A892 /* MeditationHistoryDBT.swift */; };
 		0A93F1522213BB9D0063A892 /* Omega3HistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F14D2213BB9C0063A892 /* Omega3HistoryDBT.swift */; };
-		0A93F1542213BBBB0063A892 /* MedicationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F1532213BBBB0063A892 /* MedicationHistoryDBS.swift */; };
 		0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F1552213C5AF0063A892 /* FoodMainSVC.swift */; };
 		0A93F1582213C5B40063A892 /* FoodMainSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93F1562213C5B40063A892 /* FoodMainSVC.xib */; };
 		0A93F15C2213C62A0063A892 /* RecipesCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F1592213C62A0063A892 /* RecipesCircleButton.swift */; };
@@ -127,6 +125,8 @@
 		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
 		50572C9A22139E51000C2E63 /* Omega3HistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */; };
 		505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505DB14621FF6C710045C703 /* CassStoryboard.storyboard */; };
+		50AB2ACD221F347F008C5BA5 /* SavedMedicationDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB2ACC221F347F008C5BA5 /* SavedMedicationDBT.swift */; };
+		50AB2ACF221F3879008C5BA5 /* SavedMedicationDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB2ACE221F3879008C5BA5 /* SavedMedicationDBS.swift */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
 		6129745421DF017E00B9846C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745221DF017E00B9846C /* Main.storyboard */; };
 		6129745621DF017F00B9846C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6129745521DF017F00B9846C /* Assets.xcassets */; };
@@ -211,12 +211,10 @@
 		0A93EA5722132BCF0063A892 /* PullBarSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PullBarSVC.xib; sourceTree = "<group>"; };
 		0A93EA5A22132BF90063A892 /* Omega3ModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3ModuleVC.swift; sourceTree = "<group>"; };
 		0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRoundCornersUIView.swift; sourceTree = "<group>"; };
-		0A93F1492213BB9C0063A892 /* MedicationHistoryDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationHistoryDBT.swift; sourceTree = "<group>"; };
 		0A93F14A2213BB9C0063A892 /* ExerciseHistoryDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryDBT.swift; sourceTree = "<group>"; };
 		0A93F14B2213BB9C0063A892 /* TrackingDayDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingDayDBT.swift; sourceTree = "<group>"; };
 		0A93F14C2213BB9C0063A892 /* MeditationHistoryDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBT.swift; sourceTree = "<group>"; };
 		0A93F14D2213BB9C0063A892 /* Omega3HistoryDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3HistoryDBT.swift; sourceTree = "<group>"; };
-		0A93F1532213BBBB0063A892 /* MedicationHistoryDBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationHistoryDBS.swift; sourceTree = "<group>"; };
 		0A93F1552213C5AF0063A892 /* FoodMainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMainSVC.swift; sourceTree = "<group>"; };
 		0A93F1562213C5B40063A892 /* FoodMainSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodMainSVC.xib; sourceTree = "<group>"; };
 		0A93F1592213C62A0063A892 /* RecipesCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesCircleButton.swift; sourceTree = "<group>"; };
@@ -286,6 +284,8 @@
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3HistoryDBS.swift; sourceTree = "<group>"; };
 		505DB14621FF6C710045C703 /* CassStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CassStoryboard.storyboard; sourceTree = "<group>"; };
+		50AB2ACC221F347F008C5BA5 /* SavedMedicationDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMedicationDBT.swift; sourceTree = "<group>"; };
+		50AB2ACE221F3879008C5BA5 /* SavedMedicationDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMedicationDBS.swift; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6129744E21DF017E00B9846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6129745321DF017E00B9846C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -395,8 +395,8 @@
 			children = (
 				0A1FEC5E220529A9006CED70 /* ExerciseHistoryDBS.swift */,
 				500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */,
-				0A93F1532213BBBB0063A892 /* MedicationHistoryDBS.swift */,
 				50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */,
+				50AB2ACE221F3879008C5BA5 /* SavedMedicationDBS.swift */,
 			);
 			name = DatabaseServices;
 			path = "OvercomingMS/Data Models/TrackingDataStrategies/DatabaseServices";
@@ -539,11 +539,11 @@
 		0A93F1482213BB9C0063A892 /* RealmDataModels */ = {
 			isa = PBXGroup;
 			children = (
-				0A93F1492213BB9C0063A892 /* MedicationHistoryDBT.swift */,
-				0A93F14A2213BB9C0063A892 /* ExerciseHistoryDBT.swift */,
 				0A93F14B2213BB9C0063A892 /* TrackingDayDBT.swift */,
+				0A93F14A2213BB9C0063A892 /* ExerciseHistoryDBT.swift */,
 				0A93F14C2213BB9C0063A892 /* MeditationHistoryDBT.swift */,
 				0A93F14D2213BB9C0063A892 /* Omega3HistoryDBT.swift */,
+				50AB2ACC221F347F008C5BA5 /* SavedMedicationDBT.swift */,
 			);
 			name = RealmDataModels;
 			path = "OvercomingMS/Data Models/RealmDataModels";
@@ -1124,18 +1124,19 @@
 				0A93EA472213165D0063A892 /* (null) in Sources */,
 				0A93F1512213BB9D0063A892 /* MeditationHistoryDBT.swift in Sources */,
 				0A1FEC61220529D7006CED70 /* TrackingModulesDBS.swift in Sources */,
+				50AB2ACD221F347F008C5BA5 /* SavedMedicationDBT.swift in Sources */,
 				0AD94DCC220CEE9800B5C2BA /* ExerciseSelectedItem.swift in Sources */,
 				0A93F14F2213BB9D0063A892 /* ExerciseHistoryDBT.swift in Sources */,
 				0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */,
 				0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */,
 				50572C9A22139E51000C2E63 /* Omega3HistoryDBS.swift in Sources */,
+				50AB2ACF221F3879008C5BA5 /* SavedMedicationDBS.swift in Sources */,
 				501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */,
 				0A1FEC5F220529A9006CED70 /* ExerciseHistoryDBS.swift in Sources */,
 				0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */,
 				0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */,
 				0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */,
 				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,
-				0A93F14E2213BB9D0063A892 /* MedicationHistoryDBT.swift in Sources */,
 				0A2BAA662202A24E004074F3 /* TrackingDataStrategies.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				0AD07F7E21FE3EA200C55831 /* TrackingViewController.swift in Sources */,
@@ -1154,7 +1155,6 @@
 				0A93F15C2213C62A0063A892 /* RecipesCircleButton.swift in Sources */,
 				0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */,
 				0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */,
-				0A93F1542213BBBB0063A892 /* MedicationHistoryDBS.swift in Sources */,
 				0AD94DD1220DE7F200B5C2BA /* DeleteConfirmationSVC.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
 				0AD94DD7220DEEB300B5C2BA /* DeleteCircleButton.swift in Sources */,
