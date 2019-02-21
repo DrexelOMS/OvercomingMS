@@ -22,11 +22,13 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     @IBOutlet weak var textInputStackView: UIStackView!
     @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
     var originalBottomConstraint: CGFloat!
+    var originalTopLabelContraint: CGFloat!
     
     override func initialize(parentVC: TrackingModuleAbstractVC) {
         super.initialize(parentVC: parentVC)
         
         originalBottomConstraint = textInputStackBottom.constant
+        originalTopLabelContraint = topLabelViewHeight.constant
         
         for view in textInputStackView.arrangedSubviews {
             if let tfiView = view as? TFIAbstract {
@@ -75,7 +77,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     
     func OnTFIClosed(tfi: TFIAbstract, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions, keyboardHeight: CGFloat) {
         
-        self.topLabelViewHeight.constant = 100
+        self.topLabelViewHeight.constant = originalTopLabelContraint
         self.textInputStackBottom.constant = originalBottomConstraint
         self.showOtherStackViews(tfi)
         self.layoutIfNeeded()
