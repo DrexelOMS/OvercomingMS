@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodSelectedSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
+                <outlet property="approveDisaproveView" destination="nDu-S9-dhl" id="3m4-l4-J79"/>
                 <outlet property="backButton" destination="cbz-sv-NAZ" id="1d7-hL-GCI"/>
             </connections>
         </placeholder>

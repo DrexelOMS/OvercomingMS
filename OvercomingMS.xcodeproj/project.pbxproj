@@ -116,6 +116,8 @@
 		0AD7EB15221B52A5006F71C0 /* VitaminDEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB14221B52A5006F71C0 /* VitaminDEditSVC.swift */; };
 		0AD7EB17221C68B4006F71C0 /* VitaminDSupplementSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB16221C68B4006F71C0 /* VitaminDSupplementSVC.swift */; };
 		0AD7EB1A2220A546006F71C0 /* FoodSelectedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */; };
+		0AD7EB1C2220B2A4006F71C0 /* FoodApprovedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB1B2220B2A4006F71C0 /* FoodApprovedSVC.swift */; };
+		0AD7EB1E2220B2D9006F71C0 /* FoodRejectedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB1D2220B2D9006F71C0 /* FoodRejectedSVC.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -142,7 +144,7 @@
 		0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */; };
 		0C8181292211D472008B5A2D /* FoodScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181282211D472008B5A2D /* FoodScreens.storyboard */; };
 		0C9910852219C2F00008A727 /* FoodSelectedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9910842219C2F00008A727 /* FoodSelectedSVC.xib */; };
-		0CAD6315221D9C7700E50E72 /* FoodApprovedSCV.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6314221D9C7700E50E72 /* FoodApprovedSCV.xib */; };
+		0CAD6315221D9C7700E50E72 /* FoodApprovedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6314221D9C7700E50E72 /* FoodApprovedSVC.xib */; };
 		0CAD6317221DAAEE00E50E72 /* FoodRejectedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */; };
 		0CAD6319221DD50500E50E72 /* SeeMoreButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
@@ -298,6 +300,8 @@
 		0AD7EB14221B52A5006F71C0 /* VitaminDEditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDEditSVC.swift; sourceTree = "<group>"; };
 		0AD7EB16221C68B4006F71C0 /* VitaminDSupplementSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDSupplementSVC.swift; sourceTree = "<group>"; };
 		0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelectedSVC.swift; sourceTree = "<group>"; };
+		0AD7EB1B2220B2A4006F71C0 /* FoodApprovedSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApprovedSVC.swift; sourceTree = "<group>"; };
+		0AD7EB1D2220B2D9006F71C0 /* FoodRejectedSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRejectedSVC.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -325,7 +329,7 @@
 		0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackConfirmButtonsSVC.xib; sourceTree = "<group>"; };
 		0C8181282211D472008B5A2D /* FoodScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodScreens.storyboard; sourceTree = "<group>"; };
 		0C9910842219C2F00008A727 /* FoodSelectedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSelectedSVC.xib; sourceTree = "<group>"; };
-		0CAD6314221D9C7700E50E72 /* FoodApprovedSCV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodApprovedSCV.xib; sourceTree = "<group>"; };
+		0CAD6314221D9C7700E50E72 /* FoodApprovedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodApprovedSVC.xib; sourceTree = "<group>"; };
 		0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodRejectedSVC.xib; sourceTree = "<group>"; };
 		0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeMoreButtonSVC.xib; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
@@ -387,14 +391,11 @@
 		0A0818942214E5F90021BDF6 /* FoodModule */ = {
 			isa = PBXGroup;
 			children = (
+				0AD7EB1F2220B5D6006F71C0 /* FoodSelected */,
 				0A0818952214E6210021BDF6 /* FoodSearchSVC.swift */,
 				0A0818972214E6310021BDF6 /* FoodSearchSVC.xib */,
 				0A98DB0E2216447800F4800D /* SearchBarButton.swift */,
 				0C2DAFDD22163057004C1966 /* SearchBarButton.xib */,
-				0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */,
-				0C9910842219C2F00008A727 /* FoodSelectedSVC.xib */,
-				0CAD6314221D9C7700E50E72 /* FoodApprovedSCV.xib */,
-				0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */,
 				0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */,
 				0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */,
 				0A08189D2214F82F0021BDF6 /* Food.swift */,
@@ -742,6 +743,19 @@
 			path = VitaminD;
 			sourceTree = "<group>";
 		};
+		0AD7EB1F2220B5D6006F71C0 /* FoodSelected */ = {
+			isa = PBXGroup;
+			children = (
+				0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */,
+				0C9910842219C2F00008A727 /* FoodSelectedSVC.xib */,
+				0AD7EB1B2220B2A4006F71C0 /* FoodApprovedSVC.swift */,
+				0CAD6314221D9C7700E50E72 /* FoodApprovedSVC.xib */,
+				0AD7EB1D2220B2D9006F71C0 /* FoodRejectedSVC.swift */,
+				0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */,
+			);
+			path = FoodSelected;
+			sourceTree = "<group>";
+		};
 		0AD94DAD2209BBD600B5C2BA /* ModifySVCs */ = {
 			isa = PBXGroup;
 			children = (
@@ -1028,7 +1042,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */,
-				0CAD6315221D9C7700E50E72 /* FoodApprovedSCV.xib in Resources */,
+				0CAD6315221D9C7700E50E72 /* FoodApprovedSVC.xib in Resources */,
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
 				0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */,
 				0AD07F8C21FE703D00C55831 /* TrackingFoodBar.xib in Resources */,
@@ -1270,6 +1284,7 @@
 				0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */,
 				0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */,
 				0AD7EB00221B1E7F006F71C0 /* Omega3SelectedItem.swift in Sources */,
+				0AD7EB1C2220B2A4006F71C0 /* FoodApprovedSVC.swift in Sources */,
 				0AD7EB15221B52A5006F71C0 /* VitaminDEditSVC.swift in Sources */,
 				0A93F15E2213C62A0063A892 /* ScanCircleButton.swift in Sources */,
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
@@ -1303,6 +1318,7 @@
 				0A08189C2214E8CC0021BDF6 /* FoodSearchCell.swift in Sources */,
 				0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */,
 				0A081893221473380021BDF6 /* ExerciseModifyAbstractSVC.swift in Sources */,
+				0AD7EB1E2220B2D9006F71C0 /* FoodRejectedSVC.swift in Sources */,
 				0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
