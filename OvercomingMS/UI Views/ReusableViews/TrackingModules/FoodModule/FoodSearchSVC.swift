@@ -209,4 +209,8 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         return 100.0;//Choose your custom row height
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        parentVC.pushSubView(newSubView: FoodSelectedSVC(stuff: "Stuff"))
+    }
+    
 }
