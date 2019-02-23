@@ -28,7 +28,8 @@ class StopwatchAbstractSVC : TimerStopWatchAbstractSVC {
         }
         
         //TODO: make sure to divide seconds by 60 to get the minutes
-        let minutes = seconds
+        // we will say that it will always round up
+        let minutes = Int(ceil(Double(seconds) / 60.0))
         pushFinishSVC(minutes: minutes)
     }
     

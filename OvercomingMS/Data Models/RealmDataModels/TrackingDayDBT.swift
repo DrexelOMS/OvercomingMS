@@ -20,7 +20,8 @@ class TrackingDayDBT: Object {
     
     @objc dynamic var FoodEatenRating: Int = 1 // Lets define the food scale as 1-5
     
-    // ------------------------------ EXERCISE ------------------------------
+    //MARK: ------------------------------ EXERCISE ------------------------------
+    
     @objc dynamic var IsExerciseComplete: Bool = false //This should be read only
     var ExerciseComputedPercentageComplete : Int {
         get {
@@ -49,7 +50,7 @@ class TrackingDayDBT: Object {
     }
     let exerciseHistoryDT = List<ExerciseHistoryDBT>()
     
-    // --------------------- MEDITATION ------------------------------
+    //MARK: --------------------- MEDITATION ------------------------------
 
     @objc dynamic var IsMeditationComplete: Bool = false
     var MeditationComputedPercentageComplete : Int {
@@ -83,7 +84,7 @@ class TrackingDayDBT: Object {
     let meditationHistoryDT = List<MeditationHistoryDBT>()
     
     
-    // ---------------------- MEDICCCCCCATION ------------------------------
+    //MARK: ---------------------- MEDICATION ------------------------------
     
     @objc dynamic var IsMedicationComplete: Bool = false
     var MedicationComputedPercentageComplete : Int {
@@ -121,7 +122,7 @@ class TrackingDayDBT: Object {
     
 
     
-    // ---------------------- OMEGA-3 ------------------------------
+    //MARK: ---------------------- OMEGA-3 ------------------------------
     
     // @objc dynamic var Omega3PercentageComplete: Int = 0
     
@@ -155,7 +156,7 @@ class TrackingDayDBT: Object {
     
     let omega3HistoryDT = List<Omega3HistoryDBT>()
 
-    // -------------------------------- VITAMIN D ----------------------------------
+    //MARK: -------------------------------- VITAMIN D ----------------------------------
     @objc dynamic var IsVitaminDComplete: Bool = false //This should be read only
     var VitaminDComputedPercentageComplete : Int {
         get {
