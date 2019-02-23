@@ -115,6 +115,7 @@
 		0AD7EB13221B4D23006F71C0 /* SelectedLabelsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD7EB12221B4D23006F71C0 /* SelectedLabelsSVC.xib */; };
 		0AD7EB15221B52A5006F71C0 /* VitaminDEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB14221B52A5006F71C0 /* VitaminDEditSVC.swift */; };
 		0AD7EB17221C68B4006F71C0 /* VitaminDSupplementSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB16221C68B4006F71C0 /* VitaminDSupplementSVC.swift */; };
+		0AD7EB212221E537006F71C0 /* TimerAbsractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB202221E537006F71C0 /* TimerAbsractSVC.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -296,6 +297,7 @@
 		0AD7EB12221B4D23006F71C0 /* SelectedLabelsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedLabelsSVC.xib; sourceTree = "<group>"; };
 		0AD7EB14221B52A5006F71C0 /* VitaminDEditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDEditSVC.swift; sourceTree = "<group>"; };
 		0AD7EB16221C68B4006F71C0 /* VitaminDSupplementSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDSupplementSVC.swift; sourceTree = "<group>"; };
+		0AD7EB202221E537006F71C0 /* TimerAbsractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAbsractSVC.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -781,6 +783,7 @@
 				0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */,
 				0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */,
 				0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */,
+				0AD7EB202221E537006F71C0 /* TimerAbsractSVC.swift */,
 				0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */,
 			);
 			path = TimerStopwatchSVC;
@@ -1226,6 +1229,7 @@
 				0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */,
 				0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */,
 				50572C9A22139E51000C2E63 /* Omega3HistoryDBS.swift in Sources */,
+				0AD7EB212221E537006F71C0 /* TimerAbsractSVC.swift in Sources */,
 				501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */,
 				0AD7EAF2221B0047006F71C0 /* CustomEntryTFI.swift in Sources */,
 				0A1FEC5F220529A9006CED70 /* ExerciseHistoryDBS.swift in Sources */,
