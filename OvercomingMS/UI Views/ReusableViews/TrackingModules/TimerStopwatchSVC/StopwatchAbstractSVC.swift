@@ -16,6 +16,23 @@ class StopwatchAbstractSVC : TimerStopWatchAbstractSVC {
     override func customSetup() {
         super.customSetup()
         
+        timerLabel.text = "00:00:00"
         descriptionLabel.text = "Get Ready To Start."
+    }
+    
+    override func finishButtonPressed() {
+        super.finishButtonPressed()
+        
+        if(seconds <= 0) {
+            return
+        }
+        
+        //TODO: make sure to divide seconds by 60 to get the minutes
+        let minutes = seconds
+        pushFinishSVC(minutes: minutes)
+    }
+    
+    override func changeSeconds() {
+        seconds += 1
     }
 }
