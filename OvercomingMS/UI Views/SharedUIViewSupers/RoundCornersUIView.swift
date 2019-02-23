@@ -10,6 +10,17 @@ import UIKit
 
 @IBDesignable
 class RoundCornersUIView: UIView {
+    
+    @IBInspectable var hasShadow: Bool = true {
+        didSet {
+            if(hasShadow) {
+                layer.addShadow()
+            }
+            else {
+                layer.masksToBounds = true
+            }
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,8 +33,8 @@ class RoundCornersUIView: UIView {
     }
     
     private func setup(){
-        layer.addShadow()
         layer.roundCorners(radius: bounds.height / 4)
+        layer.addShadow()
     }
 
 }
