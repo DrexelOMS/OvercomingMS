@@ -116,6 +116,7 @@
 		0AD7EB15221B52A5006F71C0 /* VitaminDEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB14221B52A5006F71C0 /* VitaminDEditSVC.swift */; };
 		0AD7EB17221C68B4006F71C0 /* VitaminDSupplementSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB16221C68B4006F71C0 /* VitaminDSupplementSVC.swift */; };
 		0AD7EB212221E537006F71C0 /* TimerAbsractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB202221E537006F71C0 /* TimerAbsractSVC.swift */; };
+		0AD7EB232221F1E1006F71C0 /* SeeMoreButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB222221F1E1006F71C0 /* SeeMoreButtonSVC.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -298,6 +299,7 @@
 		0AD7EB14221B52A5006F71C0 /* VitaminDEditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDEditSVC.swift; sourceTree = "<group>"; };
 		0AD7EB16221C68B4006F71C0 /* VitaminDSupplementSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDSupplementSVC.swift; sourceTree = "<group>"; };
 		0AD7EB202221E537006F71C0 /* TimerAbsractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAbsractSVC.swift; sourceTree = "<group>"; };
+		0AD7EB222221F1E1006F71C0 /* SeeMoreButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -650,6 +652,7 @@
 				0A2BAA67220336A5004074F3 /* CircleButtonSVC.xib */,
 				0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */,
 				0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */,
+				0AD7EB222221F1E1006F71C0 /* SeeMoreButtonSVC.swift */,
 				0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */,
 			);
 			path = ButtonViews;
@@ -1286,6 +1289,7 @@
 				0AD7EB04221B2FD6006F71C0 /* OutsideCircleButton.swift in Sources */,
 				0A93EA3F2210D1FC0063A892 /* FoodModuleVC.swift in Sources */,
 				0AD7EB06221B3007006F71C0 /* VitaminDMainSVC.swift in Sources */,
+				0AD7EB232221F1E1006F71C0 /* SeeMoreButtonSVC.swift in Sources */,
 				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
