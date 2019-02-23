@@ -11,7 +11,7 @@ import RealmSwift
 
 class MeditationModuleVC: TrackingModuleAbstractVC {
     
-    private let meditationRoutines = MeditationHistoryDBS()
+    private let meditationHistory = MeditationHistoryDBS()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,8 @@ class MeditationModuleVC: TrackingModuleAbstractVC {
     }
     
     override func updateProgressBar() {
-        progressBar.setProgressValue(value: meditationRoutines.getPercentageComplete())
-        let amountRemaining = ProgressBarConfig.meditationGoal - meditationRoutines.getTotalMinutes()
+        progressBar.setProgressValue(value: meditationHistory.getPercentageComplete())
+        let amountRemaining = ProgressBarConfig.meditationGoal - meditationHistory.getTotalMinutes()
         var description = ""
         if(amountRemaining <= 0){
             description = "Daily goal reached!"

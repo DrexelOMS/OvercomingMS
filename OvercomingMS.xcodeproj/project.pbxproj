@@ -117,6 +117,9 @@
 		0AD7EB17221C68B4006F71C0 /* VitaminDSupplementSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB16221C68B4006F71C0 /* VitaminDSupplementSVC.swift */; };
 		0AD7EB212221E537006F71C0 /* TimerAbsractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB202221E537006F71C0 /* TimerAbsractSVC.swift */; };
 		0AD7EB232221F1E1006F71C0 /* SeeMoreButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB222221F1E1006F71C0 /* SeeMoreButtonSVC.swift */; };
+		0AD7EB252222008A006F71C0 /* MedicationMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB242222008A006F71C0 /* MedicationMainSVC.swift */; };
+		0AD7EB28222202AB006F71C0 /* MedicationModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB27222202AB006F71C0 /* MedicationModifyAbstractSVC.swift */; };
+		0AD7EB2A222202BB006F71C0 /* MedicationAddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB29222202BB006F71C0 /* MedicationAddSVC.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -300,6 +303,9 @@
 		0AD7EB16221C68B4006F71C0 /* VitaminDSupplementSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDSupplementSVC.swift; sourceTree = "<group>"; };
 		0AD7EB202221E537006F71C0 /* TimerAbsractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAbsractSVC.swift; sourceTree = "<group>"; };
 		0AD7EB222221F1E1006F71C0 /* SeeMoreButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreButtonSVC.swift; sourceTree = "<group>"; };
+		0AD7EB242222008A006F71C0 /* MedicationMainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationMainSVC.swift; sourceTree = "<group>"; };
+		0AD7EB27222202AB006F71C0 /* MedicationModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationModifyAbstractSVC.swift; sourceTree = "<group>"; };
+		0AD7EB29222202BB006F71C0 /* MedicationAddSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationAddSVC.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -532,6 +538,7 @@
 				0AD7EB05221B3007006F71C0 /* VitaminDMainSVC.swift */,
 				0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */,
 				0AD94DE0220E178E00B5C2BA /* MeditationMainSVC.swift */,
+				0AD7EB242222008A006F71C0 /* MedicationMainSVC.swift */,
 				0AA528532202314600CCFEE7 /* MainAbstractSVC.xib */,
 			);
 			path = MainSVCs;
@@ -744,9 +751,19 @@
 			path = VitaminD;
 			sourceTree = "<group>";
 		};
+		0AD7EB262222028D006F71C0 /* Medication */ = {
+			isa = PBXGroup;
+			children = (
+				0AD7EB27222202AB006F71C0 /* MedicationModifyAbstractSVC.swift */,
+				0AD7EB29222202BB006F71C0 /* MedicationAddSVC.swift */,
+			);
+			path = Medication;
+			sourceTree = "<group>";
+		};
 		0AD94DAD2209BBD600B5C2BA /* ModifySVCs */ = {
 			isa = PBXGroup;
 			children = (
+				0AD7EB262222028D006F71C0 /* Medication */,
 				0AD7EB07221B32D6006F71C0 /* VitaminD */,
 				0AD7EAF8221B1A3E006F71C0 /* Omega3 */,
 				0AD7EAF7221B19DA006F71C0 /* Exercise */,
@@ -1209,6 +1226,7 @@
 				0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */,
 				0AD07F8821FE637600C55831 /* RoundCornersUIView.swift in Sources */,
 				0A93F1522213BB9D0063A892 /* Omega3HistoryDBT.swift in Sources */,
+				0AD7EB28222202AB006F71C0 /* MedicationModifyAbstractSVC.swift in Sources */,
 				0AD7EAF0221AFB47006F71C0 /* AmountTFI.swift in Sources */,
 				500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */,
 				0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */,
@@ -1245,6 +1263,7 @@
 				0AD7EB17221C68B4006F71C0 /* VitaminDSupplementSVC.swift in Sources */,
 				0A93F14E2213BB9D0063A892 /* MedicationHistoryDBT.swift in Sources */,
 				0A2BAA662202A24E004074F3 /* FoodRatingDBS.swift in Sources */,
+				0AD7EB252222008A006F71C0 /* MedicationMainSVC.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				0AD07F7E21FE3EA200C55831 /* TrackingViewController.swift in Sources */,
 				0AD7EB02221B2608006F71C0 /* Omega3SupplementSVC.swift in Sources */,
@@ -1292,6 +1311,7 @@
 				0AD7EB232221F1E1006F71C0 /* SeeMoreButtonSVC.swift in Sources */,
 				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
+				0AD7EB2A222202BB006F71C0 /* MedicationAddSVC.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
 				0AD7EAEC2219A8F9006F71C0 /* PillBoxUIView.swift in Sources */,
 				0A93EA4122122D840063A892 /* (null) in Sources */,
