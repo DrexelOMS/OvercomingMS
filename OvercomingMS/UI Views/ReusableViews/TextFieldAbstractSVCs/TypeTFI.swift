@@ -69,7 +69,7 @@ class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSourc
         if let type = tempSelectedType {
             self.selectedType = type
         }
-        parentVC.view.endEditing(true)
+        closePicker()
     }
 }
 

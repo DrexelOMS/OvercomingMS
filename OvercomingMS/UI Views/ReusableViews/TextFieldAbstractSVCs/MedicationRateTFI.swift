@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 class MedicationRateTFI : TypeTFIAbstract {
     
@@ -16,19 +17,39 @@ class MedicationRateTFI : TypeTFIAbstract {
         }
     }
     
+    let medRate = MedRateButtonsSVC()
+    
+    override func customSetup() {
+        super.customSetup()
+        
+        constrain(medRate) { (view) in
+            view.height == 100.0
+        }
+        
+        stackView.addArrangedSubview(medRate)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        medRate.isHidden = true
+    }
+    
     override var title : String {
         get {
             return "Rate"
         }
     }
+    
+    override func closePicker() {
+        super.closePicker()
+        medRate.isHidden = true
+    }
 
     override func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         tempSelectedType = choices[row]
         if choices[row] == "Custom" {
-            print("show custom")
+            medRate.isHidden = false
         }
         else {
-            print("hide custom")
+            medRate.isHidden = true
         }
     }
 
