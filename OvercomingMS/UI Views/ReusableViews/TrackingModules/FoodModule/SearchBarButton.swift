@@ -8,8 +8,11 @@
 
 import UIKit
 
-class SearchBarButton: CustomView {
+class SearchBarButton: CustomView, UITextFieldDelegate{
     
+    @IBOutlet weak var SettingsButton: UIButton!
+    @IBOutlet weak var SearchButton: UIButton!
+    @IBOutlet weak var SearchTextField: UITextField!
     override var nibName: String {
         get {
             return "SearchBarButton"
@@ -17,7 +20,11 @@ class SearchBarButton: CustomView {
     }
     
     override func customSetup() {
-        
+        SearchTextField.delegate = self
     }
-    
+    func textFieldShouldReturn(_ SearchTextField: UITextField) -> Bool {
+        endEditing(true)
+        SearchButton.sendActions(for: .touchUpInside)
+        return true
+    }
 }

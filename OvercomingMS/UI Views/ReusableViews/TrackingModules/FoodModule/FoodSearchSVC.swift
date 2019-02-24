@@ -25,11 +25,11 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         }
     }
     
-    let URLBeginning = "https://world.openfoodfacts.org/cgi/search.pl?search_terms=";
+    let URLBeginning = "https://us.openfoodfacts.org/cgi/search.pl?search_terms=";
     let URLEnd = "&search_simple=1&action=process&json=1";
-    let searchCriteria = "Chicken%20Wing";
+    var searchCriteria = "Chicken%20Wing";
     var nameArray = [String]()
-
+    
     var foodItemsArray: [Food] = []
     
     override func customSetup() {
@@ -38,7 +38,9 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: foodCellName, bundle: nil), forCellReuseIdentifier: foodCellName)
-    
+        
+        searchBarButton.SearchButton.addTarget(self, action: #selector(getJsonFromUrl), for: .touchUpInside)
+        
         getJsonFromUrl();
     }
     
@@ -47,8 +49,14 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     //this function is fetching the json from URL
-    func getJsonFromUrl(){
+    @objc func getJsonFromUrl(){
         //creating a NSURL
+        
+        searchCriteria = searchBarButton.SearchTextField.text ?? ""
+        if(searchCriteria == ""){
+            return
+        }
+        
         let url = NSURL(string: URLBeginning+searchCriteria+URLEnd)
         
         //fetching the data from the url
@@ -177,12 +185,12 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         
         return RecommendedLevel.Good
     }
-
+    
     
     override func reload(){
         tableView.reloadData()
     }
-
+    
     
     func backButtonPressed() {
         parentVC.popSubView()
