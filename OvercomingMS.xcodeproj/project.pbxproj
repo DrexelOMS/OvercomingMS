@@ -125,7 +125,7 @@
 		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
 		50572C9A22139E51000C2E63 /* Omega3HistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */; };
 		505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505DB14621FF6C710045C703 /* CassStoryboard.storyboard */; };
-		50AB2ACD221F347F008C5BA5 /* SavedMedicationDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB2ACC221F347F008C5BA5 /* SavedMedicationDBT.swift */; };
+		509646FC22223EA9006FFDBB /* SavedMedicationDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509646FB22223EA9006FFDBB /* SavedMedicationDBT.swift */; };
 		50AB2ACF221F3879008C5BA5 /* SavedMedicationDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB2ACE221F3879008C5BA5 /* SavedMedicationDBS.swift */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
 		6129745421DF017E00B9846C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745221DF017E00B9846C /* Main.storyboard */; };
@@ -284,7 +284,7 @@
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3HistoryDBS.swift; sourceTree = "<group>"; };
 		505DB14621FF6C710045C703 /* CassStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CassStoryboard.storyboard; sourceTree = "<group>"; };
-		50AB2ACC221F347F008C5BA5 /* SavedMedicationDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMedicationDBT.swift; sourceTree = "<group>"; };
+		509646FB22223EA9006FFDBB /* SavedMedicationDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMedicationDBT.swift; sourceTree = "<group>"; };
 		50AB2ACE221F3879008C5BA5 /* SavedMedicationDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMedicationDBS.swift; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6129744E21DF017E00B9846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -543,7 +543,7 @@
 				0A93F14A2213BB9C0063A892 /* ExerciseHistoryDBT.swift */,
 				0A93F14C2213BB9C0063A892 /* MeditationHistoryDBT.swift */,
 				0A93F14D2213BB9C0063A892 /* Omega3HistoryDBT.swift */,
-				50AB2ACC221F347F008C5BA5 /* SavedMedicationDBT.swift */,
+				509646FB22223EA9006FFDBB /* SavedMedicationDBT.swift */,
 			);
 			name = RealmDataModels;
 			path = "OvercomingMS/Data Models/RealmDataModels";
@@ -1124,7 +1124,6 @@
 				0A93EA472213165D0063A892 /* (null) in Sources */,
 				0A93F1512213BB9D0063A892 /* MeditationHistoryDBT.swift in Sources */,
 				0A1FEC61220529D7006CED70 /* TrackingModulesDBS.swift in Sources */,
-				50AB2ACD221F347F008C5BA5 /* SavedMedicationDBT.swift in Sources */,
 				0AD94DCC220CEE9800B5C2BA /* ExerciseSelectedItem.swift in Sources */,
 				0A93F14F2213BB9D0063A892 /* ExerciseHistoryDBT.swift in Sources */,
 				0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */,
@@ -1135,6 +1134,7 @@
 				0A1FEC5F220529A9006CED70 /* ExerciseHistoryDBS.swift in Sources */,
 				0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */,
 				0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */,
+				509646FC22223EA9006FFDBB /* SavedMedicationDBT.swift in Sources */,
 				0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */,
 				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,
 				0A2BAA662202A24E004074F3 /* TrackingDataStrategies.swift in Sources */,
