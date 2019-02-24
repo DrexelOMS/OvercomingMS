@@ -11,6 +11,8 @@ import RealmSwift
 
 class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
     
+    let medicationCellName = "MedicationCell"
+    
     let button1 = AddCircleButton()
     
     override func customSetup() {
@@ -30,7 +32,7 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         tableView.dataSource = self
         
         //TODO make a new UI for this cell
-        tableView.register(UINib(nibName: defaultCellName, bundle: nil), forCellReuseIdentifier: defaultCellName)
+        tableView.register(UINib(nibName: medicationCellName, bundle: nil), forCellReuseIdentifier: medicationCellName)
         
         reload()
     }
@@ -52,11 +54,16 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return meditationHistory.getTodaysMeditationItems()?.count ?? 0
-        return 0
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! Routine3PartCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: medicationCellName, for: indexPath) as! MedicationCell
+        
+        cell.timeLabel.text = "Time"
+        cell.nameLabel.text = "Name"
+        cell.amountLabel.text = "Amount"
+        cell.doneCheckButton.IsDone = false
         
 //        cell.labelLeft.text = meditationHistory.getTodaysMeditationItems()![indexPath.row].MeditationType
 //        let startTime = meditationHistory.getTodaysMeditationItems()![indexPath.row].StartTime
@@ -71,6 +78,11 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         //exerciseItemSVC.exerciseItem = exerciseRoutines.getTodaysExerciseItems()![indexPath.row]
         //exerciseItemSVC.parentVC = parentVC
         //parentVC.pushSubView(newSubView: exerciseItemSVC)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 100.0
     }
 
 }
