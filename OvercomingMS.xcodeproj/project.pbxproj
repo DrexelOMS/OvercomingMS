@@ -121,6 +121,7 @@
 		0AD7EB3B2223043A006F71C0 /* MedicationMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB382223043A006F71C0 /* MedicationMainSVC.swift */; };
 		0AD7EB3F22230464006F71C0 /* MedicationModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB3D22230464006F71C0 /* MedicationModifyAbstractSVC.swift */; };
 		0AD7EB4022230464006F71C0 /* MedicationAddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB3E22230464006F71C0 /* MedicationAddSVC.swift */; };
+		0AD7EB42222341B3006F71C0 /* MedicationRateTFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB41222341B3006F71C0 /* MedicationRateTFI.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -310,6 +311,7 @@
 		0AD7EB382223043A006F71C0 /* MedicationMainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationMainSVC.swift; sourceTree = "<group>"; };
 		0AD7EB3D22230464006F71C0 /* MedicationModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationModifyAbstractSVC.swift; sourceTree = "<group>"; };
 		0AD7EB3E22230464006F71C0 /* MedicationAddSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationAddSVC.swift; sourceTree = "<group>"; };
+		0AD7EB41222341B3006F71C0 /* MedicationRateTFI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationRateTFI.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -623,6 +625,7 @@
 			children = (
 				0A93F18E22145EA30063A892 /* TFIAbstract.xib */,
 				0A93F18F22145EA30063A892 /* TypeTFI.swift */,
+				0AD7EB41222341B3006F71C0 /* MedicationRateTFI.swift */,
 				0A0818902214647E0021BDF6 /* LengthTFI.swift */,
 				0AD7EAEF221AFB47006F71C0 /* AmountTFI.swift */,
 				0AD7EAF1221B0047006F71C0 /* CustomEntryTFI.swift */,
@@ -771,8 +774,8 @@
 		0AD7EB3C22230464006F71C0 /* Medication */ = {
 			isa = PBXGroup;
 			children = (
-				0AD7EB3D22230464006F71C0 /* MedicationModifyAbstractSVC.swift */,
 				0AD7EB3E22230464006F71C0 /* MedicationAddSVC.swift */,
+				0AD7EB3D22230464006F71C0 /* MedicationModifyAbstractSVC.swift */,
 			);
 			path = Medication;
 			sourceTree = "<group>";
@@ -1343,6 +1346,7 @@
 				0A93EA4922131C2D0063A892 /* (null) in Sources */,
 				0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */,
 				0A93F19D22145F150063A892 /* ExerciseAddSVC.swift in Sources */,
+				0AD7EB42222341B3006F71C0 /* MedicationRateTFI.swift in Sources */,
 				0A93F19422145EA30063A892 /* DateTimeTFI.swift in Sources */,
 				0A08189C2214E8CC0021BDF6 /* FoodSearchCell.swift in Sources */,
 				0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */,
