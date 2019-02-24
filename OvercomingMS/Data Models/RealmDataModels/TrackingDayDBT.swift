@@ -111,14 +111,14 @@ class TrackingDayDBT: Object {
     var MedicationTotal: Int {
         get {
             var totalMeds = 0
-            for row in medicationHistoryDT {
+            for row in savedMedicationDT {
                 totalMeds += row.MedicationAmount
             }
             return totalMeds
         }
     }
     
-    let medicationHistoryDT = List<MedicationHistoryDBT>()
+    let savedMedicationDT = List<SavedMedicationDBT>()
     
 
     
