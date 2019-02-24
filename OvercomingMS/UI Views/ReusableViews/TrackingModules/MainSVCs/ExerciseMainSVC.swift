@@ -64,10 +64,12 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! Routine3PartCell
         
-        cell.labelLeft.text = exerciseRoutines.getTodaysExerciseItems()![indexPath.row].RoutineType
-        let startTime = exerciseRoutines.getTodaysExerciseItems()![indexPath.row].StartTime
+        let items = exerciseRoutines.getTodaysExerciseItems()!
+        
+        cell.labelLeft.text = items[indexPath.row].RoutineType
+        let startTime = items[indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-        cell.labelRight.text =  "\(exerciseRoutines.getTodaysExerciseItems()![indexPath.row].minutes) min."
+        cell.labelRight.text =  "\(items[indexPath.row].minutes) \(ProgressBarConfig.lengthUOM)"
         
         return cell
     }

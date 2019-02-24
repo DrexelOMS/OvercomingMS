@@ -45,13 +45,11 @@ class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource
     }
     
     func addButtonPressed() {
-        //parentVC.pushSubView(newSubView: ExerciseAddSVC())
+        parentVC.pushSubView(newSubView: Omega3AddSVC())
     }
     
     func supplementButtonPressed() {
-        //parentVC.pushSubView(newSubView: ExerciseStopwatchSVC())
-        omega3History.addOmega3Item(supplementName: "Test", StartTime: Date(), Amount: 5)
-        reload()
+        parentVC.pushSubView(newSubView: Omega3SupplementSVC())
     }
     
     override func updateColors() {
@@ -66,19 +64,21 @@ class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! Routine3PartCell
         
-        cell.labelLeft.text = omega3History.getTodaysOmega3Items()![indexPath.row].supplementName
-        let startTime = omega3History.getTodaysOmega3Items()![indexPath.row].StartTime
+        let items = omega3History.getTodaysOmega3Items()!
+        
+        cell.labelLeft.text = items[indexPath.row].supplementName
+        let startTime = items[indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-        cell.labelRight.text =  "\(omega3History.getTodaysOmega3Items()![indexPath.row].Amount) grams."
+        cell.labelRight.text =  "\(items[indexPath.row].Amount) \(ProgressBarConfig.omega3UOM)"
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let exerciseItemSVC = ExerciseSelectedItemSVC()
-        //exerciseItemSVC.exerciseItem = exerciseRoutines.getTodaysExerciseItems()![indexPath.row]
-        //exerciseItemSVC.parentVC = parentVC
-        //parentVC.pushSubView(newSubView: exerciseItemSVC)
+        let omega3ItemSVC = Omega3SelectedItemSVC()
+        omega3ItemSVC.omega3Item = omega3History.getTodaysOmega3Items()![indexPath.row]
+        omega3ItemSVC.parentVC = parentVC
+        parentVC.pushSubView(newSubView: omega3ItemSVC)
     }
 
 }

@@ -8,8 +8,9 @@
 
 import UIKit
 import RealmSwift
+import BarcodeScanner
 
-class FoodMainSVC: SlidingAbstractSVC {
+class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, BarcodeScannerDismissalDelegate {
     
     override var nibName: String {
         get {
@@ -52,15 +53,35 @@ class FoodMainSVC: SlidingAbstractSVC {
         print("Pressed Recipes")
     }
     
+    
     func scanButtonPressed() {
-        //parentVC.pushSubView(newSubView: ExerciseStopwatchSVC())
-        print("Pressed Scan")
+        let barcodeScannerVC = BarcodeScannerViewController()
+        barcodeScannerVC.codeDelegate = self
+        barcodeScannerVC.errorDelegate = self
+        barcodeScannerVC.dismissalDelegate = self
+        
+        parentVC.present(barcodeScannerVC, animated: true, completion: nil)
     }
     
     override func updateColors() {
         button1.colorTheme = parentVC.theme
         button2.colorTheme = parentVC.theme
         button3.colorTheme = parentVC.theme
+    }
+    
+    func scanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {
+        print(error)
+    }
+    
+    func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
+        print(code)
+        controller.dismiss(animated: true) {
+            print("Bring up FoodSelectionSVC with barcode: \(code)")
+        }
     }
 
 }

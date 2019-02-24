@@ -32,10 +32,9 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
     }
     
     override func reload() {
-        print(exerciseItem)
         topMainLabel.text = exerciseItem.RoutineType
         middleMainLabel.text = OMSDateAccessor.getDateTime(date: exerciseItem.StartTime)
-        bottomMainLabel.text = "\(exerciseItem.minutes) min."
+        bottomMainLabel.text = "\(exerciseItem.minutes) \(ProgressBarConfig.lengthUOM)"
     }
     
     override func editButtonPressed() {

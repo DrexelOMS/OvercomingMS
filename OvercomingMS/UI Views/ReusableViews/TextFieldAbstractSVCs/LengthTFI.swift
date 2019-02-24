@@ -8,18 +8,12 @@
 
 import UIKit
 
-protocol LengthTFIDelegate: class {
-    func onLengthTFIDone()
-}
-
 class LengthTFI : TFIAbstract {
-    
-    var delegate : LengthTFIDelegate?
     
     var lengthPicker = UIDatePicker()
     var selectedLength : Int? {
         didSet {
-            textField.text = "\(selectedLength!) min."
+            textField.text = "\(selectedLength!) \(ProgressBarConfig.lengthUOM)"
         }
     }
     
@@ -32,25 +26,12 @@ class LengthTFI : TFIAbstract {
         //Formate Date
         lengthPicker.datePickerMode = .countDownTimer
         lengthPicker.countDownDuration = getTimeInterval(fromMinutes: selectedLength ?? 0)
-
-        //ToolBar
-        let toolbar = UIToolbar();
-        toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneLengthPicker));
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPicker));
-
-        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
-
-        textField.inputAccessoryView = toolbar
         textField.inputView = lengthPicker
-
     }
 
-    @objc func doneLengthPicker(){
+    override func doneFunction() {
         self.selectedLength = getMinutes(fromInterval: lengthPicker.countDownDuration)
         parentVC.view.endEditing(true)
-        delegate?.onLengthTFIDone()
     }
 
     func getMinutes(fromInterval: TimeInterval) -> Int {

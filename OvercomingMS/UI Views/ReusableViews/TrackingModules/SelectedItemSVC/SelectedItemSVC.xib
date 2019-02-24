@@ -16,6 +16,7 @@
                 <outlet property="bottomMainLabel" destination="yYS-tr-CsD" id="rtN-4d-AsK"/>
                 <outlet property="bottomSubLabel" destination="xPW-dt-pzN" id="n5g-eK-Y06"/>
                 <outlet property="buttonStackView" destination="f3w-FE-AYF" id="71p-5U-QgJ"/>
+                <outlet property="labelsStackView" destination="sZR-ez-QdZ" id="DEo-6V-HKX"/>
                 <outlet property="middleMainLabel" destination="a3p-uX-IVT" id="RNV-fB-2pE"/>
                 <outlet property="middleSubLabel" destination="1TB-Fu-tKo" id="YbD-OL-jx9"/>
                 <outlet property="topMainLabel" destination="TrO-Lk-5Ho" id="6sk-Nf-IgR"/>

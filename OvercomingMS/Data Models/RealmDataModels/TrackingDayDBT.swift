@@ -17,12 +17,11 @@ class TrackingDayDBT: Object {
     //We save both percentage complete and their total so if we ever change the requirement
     //of completeness, we can remember that their percentage and use that if available
     //and update newer entries to use the new conversion of total
-    @objc dynamic var FoodEatenRating: Int = 1 // Lets define the food scale as 1-5
-
-    @objc dynamic var VitaminDPercentageComplete: Int = 0
-    @objc dynamic var VitaminDTotal: Int = 0
     
-    // ------------------------------ EXERCISE ------------------------------
+    @objc dynamic var FoodEatenRating: Int = 1 // Lets define the food scale as 1-5
+    
+    //MARK: ------------------------------ EXERCISE ------------------------------
+    
     @objc dynamic var IsExerciseComplete: Bool = false //This should be read only
     var ExerciseComputedPercentageComplete : Int {
         get {
@@ -51,7 +50,7 @@ class TrackingDayDBT: Object {
     }
     let exerciseHistoryDT = List<ExerciseHistoryDBT>()
     
-    // --------------------- MEDITATION ------------------------------
+    //MARK: --------------------- MEDITATION ------------------------------
 
     @objc dynamic var IsMeditationComplete: Bool = false
     var MeditationComputedPercentageComplete : Int {
@@ -85,7 +84,7 @@ class TrackingDayDBT: Object {
     let meditationHistoryDT = List<MeditationHistoryDBT>()
     
     
-    // ---------------------- MEDICCCCCCATION ------------------------------
+    //MARK: ---------------------- MEDICATION ------------------------------
     
     @objc dynamic var IsMedicationComplete: Bool = false
     var MedicationComputedPercentageComplete : Int {
@@ -123,7 +122,7 @@ class TrackingDayDBT: Object {
     
 
     
-    // ---------------------- OMEGA-3 ------------------------------
+    //MARK: ---------------------- OMEGA-3 ------------------------------
     
     // @objc dynamic var Omega3PercentageComplete: Int = 0
     
@@ -157,14 +156,37 @@ class TrackingDayDBT: Object {
     
     let omega3HistoryDT = List<Omega3HistoryDBT>()
 
+    //MARK: -------------------------------- VITAMIN D ----------------------------------
+    @objc dynamic var IsVitaminDComplete: Bool = false //This should be read only
+    var VitaminDComputedPercentageComplete : Int {
+        get {
+            if IsVitaminDComplete {
+                return 100
+            }
+            else {
+                let percentage = Int(Float(VitaminDTotal) / Float(ProgressBarConfig.vitaminDGoal) * 100)
+                if percentage > 100 {
+                    return 100
+                }
+                else {
+                    return percentage
+                }
+            }
+        }
+    }
     
-    //Links to data tables
-    //FoodStats  let dietStats = List<FoodStats>() or @objc dynamic var category: Category!
-    //ExcersizeRoutines
-    //MeditationRoutines
-    //MedicationRoutines
-    //Note that Routines are different from a standard list saved on the phone
-    //which they can save and add custom routine names
+    
+    @objc dynamic var VitaminDTotal: Int {
+        get {
+            var totalAmount = 0
+            for row in vitaminDHistoryDT {
+                totalAmount += row.Amount
+            }
+            return totalAmount
+        }
+    }
+    
+    let vitaminDHistoryDT = List<VitaminDHistoryDBT>()
     
     override static func primaryKey() -> String? {
         return "DateCreated"

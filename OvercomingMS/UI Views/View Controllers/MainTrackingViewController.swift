@@ -85,7 +85,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             foodBar.setDescription(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
             omega3Bar.setProgressValue(value: currentTrackingDay.Omega3ComputedPercentageComplete)
             omega3Bar.setDescription(description: String(currentTrackingDay.Omega3Total))
-            vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDPercentageComplete)
+            vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDComputedPercentageComplete)
             vitaminDBar.setDescription(description: String(currentTrackingDay.VitaminDTotal))
             exerciseBar.setProgressValue(value: currentTrackingDay.ExerciseComputedPercentageComplete)
             exerciseBar.setDescription(description: String(currentTrackingDay.ExerciseTimeTotal))
@@ -148,7 +148,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             Omega3HistoryDBS().toggleFilledData()
             break
         case 1:
-            WriteVitaminDTrackingData().toggleFilledData()
+            VitaminDHistoryDBS().toggleFilledData()
             break
         case 2:
             ExerciseHistoryDBS().toggleFilledData()
@@ -172,7 +172,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         switch(sender.tag){
         case 0:
-            //WriteOmega3TrackingData().addData(amount: 5)
             let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "Omega3ModuleVC") as! Omega3ModuleVC
             vc.modalPresentationStyle = .overCurrentContext
@@ -206,7 +205,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             self.present(vc, animated: true, completion: nil)
             break
         case 4:
-            //WriteMedicationTrackingData().addData(amount: 1)
             let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "MedicationModuleVC") as! MedicationModuleVC
             vc.modalPresentationStyle = .overCurrentContext
