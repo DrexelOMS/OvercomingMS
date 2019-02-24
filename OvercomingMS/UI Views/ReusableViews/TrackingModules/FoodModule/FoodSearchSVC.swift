@@ -27,7 +27,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     let URLBeginning = "https://us.openfoodfacts.org/cgi/search.pl?search_terms=";
     let URLEnd = "&search_simple=1&action=process&json=1";
-    var searchCriteria = "Chicken%20Wing";
+    var searchCriteria = "";
     var nameArray = [String]()
     
     var foodItemsArray: [Food] = []
