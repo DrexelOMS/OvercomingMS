@@ -73,7 +73,7 @@ class Omega3HistoryDBS: TrackingModulesDBS {
                 oldItem.Amount = newItem.Amount
             }
         } catch {
-            print("Error update Meditation data: \(error)")
+            print("Error update Omega3 data: \(error)")
         }
     }
     
