@@ -145,11 +145,14 @@
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
 		0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAFDD22163057004C1966 /* SearchBarButton.xib */; };
 		0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */; };
-		0C8181292211D472008B5A2D /* FoodScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8181282211D472008B5A2D /* FoodScreens.storyboard */; };
 		0C9910852219C2F00008A727 /* FoodSelectedApprovedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9910842219C2F00008A727 /* FoodSelectedApprovedSVC.xib */; };
 		0CAD6315221D9C7700E50E72 /* FoodApprovedSCV.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6314221D9C7700E50E72 /* FoodApprovedSCV.xib */; };
 		0CAD6317221DAAEE00E50E72 /* FoodRejectedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */; };
 		0CAD6319221DD50500E50E72 /* SeeMoreButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */; };
+		0CB44DEA2223280F004D0580 /* GuidedMeditation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB44DE92223280F004D0580 /* GuidedMeditation.xib */; };
+		0CB44DEC22233A76004D0580 /* MeditationLevelSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB44DEB22233A76004D0580 /* MeditationLevelSVC.xib */; };
+		0CBE98AB22237E2600D3C090 /* MeditationTypeSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE98AA22237E2600D3C090 /* MeditationTypeSVC.xib */; };
+		0CBE98AD2223835300D3C090 /* MeditationTypeButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE98AC2223835300D3C090 /* MeditationTypeButtonSVC.xib */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
 		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
@@ -335,11 +338,14 @@
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
 		0C2DAFDD22163057004C1966 /* SearchBarButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarButton.xib; sourceTree = "<group>"; };
 		0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackConfirmButtonsSVC.xib; sourceTree = "<group>"; };
-		0C8181282211D472008B5A2D /* FoodScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodScreens.storyboard; sourceTree = "<group>"; };
 		0C9910842219C2F00008A727 /* FoodSelectedApprovedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSelectedApprovedSVC.xib; sourceTree = "<group>"; };
 		0CAD6314221D9C7700E50E72 /* FoodApprovedSCV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodApprovedSCV.xib; sourceTree = "<group>"; };
 		0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodRejectedSVC.xib; sourceTree = "<group>"; };
 		0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeMoreButtonSVC.xib; sourceTree = "<group>"; };
+		0CB44DE92223280F004D0580 /* GuidedMeditation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuidedMeditation.xib; sourceTree = "<group>"; };
+		0CB44DEB22233A76004D0580 /* MeditationLevelSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationLevelSVC.xib; sourceTree = "<group>"; };
+		0CBE98AA22237E2600D3C090 /* MeditationTypeSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationTypeSVC.xib; sourceTree = "<group>"; };
+		0CBE98AC2223835300D3C090 /* MeditationTypeButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationTypeButtonSVC.xib; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3HistoryDBS.swift; sourceTree = "<group>"; };
@@ -500,6 +506,7 @@
 		0A2BA61822029259004074F3 /* TrackingModules */ = {
 			isa = PBXGroup;
 			children = (
+				0CB44DE8222325BB004D0580 /* GuidedMeditation */,
 				0A0818942214E5F90021BDF6 /* FoodModule */,
 				0A2BA61922029262004074F3 /* ConfirmationSVCs */,
 				0AD94DC6220CE44200B5C2BA /* SelectedItemSVC */,
@@ -678,7 +685,6 @@
 				0AD07F7921FE3EA200C55831 /* AnalysisViewController.swift */,
 				0AD07F7A21FE3EA200C55831 /* TrackingViewController.swift */,
 				0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */,
-				0C8181282211D472008B5A2D /* FoodScreens.storyboard */,
 			);
 			path = CoreyFrontendUI;
 			sourceTree = "<group>";
@@ -824,6 +830,17 @@
 				0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */,
 			);
 			path = TimerStopwatchSVC;
+			sourceTree = "<group>";
+		};
+		0CB44DE8222325BB004D0580 /* GuidedMeditation */ = {
+			isa = PBXGroup;
+			children = (
+				0CB44DE92223280F004D0580 /* GuidedMeditation.xib */,
+				0CB44DEB22233A76004D0580 /* MeditationLevelSVC.xib */,
+				0CBE98AA22237E2600D3C090 /* MeditationTypeSVC.xib */,
+				0CBE98AC2223835300D3C090 /* MeditationTypeButtonSVC.xib */,
+			);
+			path = GuidedMeditation;
 			sourceTree = "<group>";
 		};
 		505DB14521FF6C570045C703 /* CassUITesting */ = {
@@ -1075,12 +1092,16 @@
 				8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */,
 				0A2BAA752204AFC3004074F3 /* Quicksand-BoldItalic.otf in Resources */,
 				0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */,
+				0CBE98AB22237E2600D3C090 /* MeditationTypeSVC.xib in Resources */,
 				0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */,
 				0AA528702202828300CCFEE7 /* SquareButtonSVC.xib in Resources */,
 				0A1FEC4F2204E01C006CED70 /* TrackingModuleStoryboard.storyboard in Resources */,
 				0A2BAA742204AFC3004074F3 /* SIL Open Font License.txt in Resources */,
+				0CB44DEC22233A76004D0580 /* MeditationLevelSVC.xib in Resources */,
+				0CB44DEA2223280F004D0580 /* GuidedMeditation.xib in Resources */,
 				0A93F19222145EA30063A892 /* TFIAbstract.xib in Resources */,
 				0A0818982214E6310021BDF6 /* FoodSearchSVC.xib in Resources */,
+				0CBE98AD2223835300D3C090 /* MeditationTypeButtonSVC.xib in Resources */,
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
 				0A1FEC6E220638A7006CED70 /* Routine3PartCell.xib in Resources */,
 				0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */,
@@ -1103,7 +1124,6 @@
 				0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */,
 				0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */,
 				0A93F19A22145F150063A892 /* ModifyAbstractSVC.xib in Resources */,
-				0C8181292211D472008B5A2D /* FoodScreens.storyboard in Resources */,
 				0CAD6317221DAAEE00E50E72 /* FoodRejectedSVC.xib in Resources */,
 				0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */,
 			);
