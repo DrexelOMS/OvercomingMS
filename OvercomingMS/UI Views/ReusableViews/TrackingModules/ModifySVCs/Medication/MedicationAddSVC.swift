@@ -24,7 +24,25 @@ class MedicationAddSVC : MedicationModifyAbstractSVC {
 //            parentVC.resetToDefaultView()
 //        }
         
-        parentVC.resetToDefaultView()
+//        if let rate = rateTFI.selectedType {
+//            if rate != "Custom" {
+//                print(rate)
+//                selectedRate = rate
+//            }
+//            else {
+//                print(rate)
+//                print(rateTFI.rateString)
+//                if(rateTFI.rateString != "") {
+//                   selectedRate = rate
+//                }
+//                else {
+//                    selectedRate = "MTR"
+//                }
+//                //rateTFI
+//            }
+//        }
+        
+        //parentVC.resetToDefaultView()
         
     }
     

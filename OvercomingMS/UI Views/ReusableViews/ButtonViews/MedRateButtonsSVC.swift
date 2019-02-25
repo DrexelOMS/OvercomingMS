@@ -16,11 +16,30 @@ class MedRateButtonsSVC : CustomView {
         }
     }
     
-    var rateString : String = "" {
-        didSet {
-            
+    var rateString : String {
+        get {
+            let medicationRate = MedicationRateModel()
+            medicationRate.monday = mondayButton.IsDone
+            medicationRate.tuesday = tuesdayButton.IsDone
+            medicationRate.wednesday = wedButton.IsDone
+            medicationRate.thursday = thursButton.IsDone
+            medicationRate.friday = fridayButton.IsDone
+            medicationRate.saturday = satButton.IsDone
+            medicationRate.sunday = sunButton.IsDone
+            return medicationRate.rateString
+        }
+        set {
+            let medicationRate = MedicationRateModel(rateString: newValue)
+            mondayButton.IsDone = medicationRate.monday
+            tuesdayButton.IsDone = medicationRate.tuesday
+            wedButton.IsDone = medicationRate.wednesday
+            thursButton.IsDone = medicationRate.thursday
+            fridayButton.IsDone = medicationRate.friday
+            satButton.IsDone = medicationRate.saturday
+            sunButton.IsDone = medicationRate.sunday
         }
     }
+    
     @IBOutlet weak var mondayButton: ToggleLabelCircleButton!
     @IBOutlet weak var tuesdayButton: ToggleLabelCircleButton!
     @IBOutlet weak var wedButton: ToggleLabelCircleButton!
@@ -38,10 +57,6 @@ class MedRateButtonsSVC : CustomView {
     
     @IBAction func buttonPressed(_ sender: ToggleLabelCircleButton) {
         sender.toggle()
-        
-//        if let text = sender.titleLabel?.text {
-//
-//        }
     }
 
 }

@@ -125,6 +125,7 @@
 		0AD7EB4422234491006F71C0 /* MedRateButtonsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4322234491006F71C0 /* MedRateButtonsSVC.swift */; };
 		0AD7EB4622234524006F71C0 /* MedRateButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4522234524006F71C0 /* MedRateButtonsSVC.xib */; };
 		0AD7EB48222345A9006F71C0 /* ToggleLabeledCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */; };
+		0AD7EB4A22249DD0006F71C0 /* MedicationRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -318,6 +319,7 @@
 		0AD7EB4322234491006F71C0 /* MedRateButtonsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedRateButtonsSVC.swift; sourceTree = "<group>"; };
 		0AD7EB4522234524006F71C0 /* MedRateButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedRateButtonsSVC.xib; sourceTree = "<group>"; };
 		0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleLabeledCircleButton.swift; sourceTree = "<group>"; };
+		0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationRateModel.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -922,6 +924,7 @@
 				0AD07F8421FE53B900C55831 /* DesignConstants.swift */,
 				0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */,
 				0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */,
+				0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -1289,6 +1292,7 @@
 				0AD7EAF2221B0047006F71C0 /* CustomEntryTFI.swift in Sources */,
 				0A1FEC5F220529A9006CED70 /* ExerciseHistoryDBS.swift in Sources */,
 				0AD7EAFC221B1A74006F71C0 /* Omega3EditSVC.swift in Sources */,
+				0AD7EB4A22249DD0006F71C0 /* MedicationRateModel.swift in Sources */,
 				0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */,
 				0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */,
 				509646FC22223EA9006FFDBB /* SavedMedicationDBT.swift in Sources */,

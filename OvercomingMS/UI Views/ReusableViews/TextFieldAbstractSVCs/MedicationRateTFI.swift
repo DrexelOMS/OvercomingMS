@@ -18,6 +18,14 @@ class MedicationRateTFI : TypeTFIAbstract {
     }
     
     let medRate = MedRateButtonsSVC()
+    var rateString: String {
+        get {
+            return medRate.rateString
+        }
+        set {
+            medRate.rateString = newValue
+        }
+    }
     
     override func customSetup() {
         super.customSetup()
@@ -35,6 +43,14 @@ class MedicationRateTFI : TypeTFIAbstract {
     override var title : String {
         get {
             return "Rate"
+        }
+    }
+    
+    override func showTextFieldInput() {
+        super.showTextFieldInput()
+
+        if tempSelectedType == "Custom" {
+            medRate.isHidden = false
         }
     }
     

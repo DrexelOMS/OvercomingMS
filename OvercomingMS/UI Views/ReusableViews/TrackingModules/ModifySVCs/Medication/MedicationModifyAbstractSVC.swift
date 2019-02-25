@@ -42,7 +42,15 @@ class MedicationModifyAbstractSVC : ModifyAbstractSVC {
             return rateTFI.selectedType
         }
         set {
-            rateTFI.selectedType = newValue
+            if let string = newValue {
+            if !rateTFI.choices.contains(string) {
+                rateTFI.rateString = string
+                rateTFI.selectedType = "Custom"
+            }
+            else {
+                rateTFI.selectedType = string
+            }
+            }
         }
     }
     
