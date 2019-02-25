@@ -11,7 +11,7 @@ import Cartography
 
 class MedicationModifyAbstractSVC : ModifyAbstractSVC {
     
-    //let exerciseRoutines = ExerciseHistoryDBS()
+    let savedMedications = SavedMedicationDBS()
     
     var selectedName : String? {
         get {

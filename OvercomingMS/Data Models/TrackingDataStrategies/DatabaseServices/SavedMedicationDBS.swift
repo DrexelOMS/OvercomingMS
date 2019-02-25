@@ -29,17 +29,15 @@ class SavedMedicationDBS: TrackingModulesDBS {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    let item = SavedMedicationDBT()
-                    
-                    item.MedicationName = medicationName
-                    item.TimeOfDay = timeOfDay
-                    item.MedicationAmount = medicationAmount
-                    item.MedicationUOM = medicationUOM
-                    item.Frequency = freq
-                    item.Active = active
-                    day.savedMedicationDT.append(item)
-                }
+                let item = SavedMedicationDBT()
+                
+                item.MedicationName = medicationName
+                item.TimeOfDay = timeOfDay
+                item.MedicationAmount = medicationAmount
+                item.MedicationUOM = medicationUOM
+                item.Frequency = freq
+                item.Active = active
+                realm.add(item)
             }
         } catch {
             print("Error updating Medication data : \(error)" )
