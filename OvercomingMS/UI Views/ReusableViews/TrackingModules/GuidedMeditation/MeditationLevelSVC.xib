@@ -32,7 +32,7 @@
                                 <constraint firstAttribute="height" constant="50" id="VT7-eP-wsr"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ux-QS-wam">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ux-QS-wam" userLabel="LevelView">
                             <rect key="frame" x="0.0" y="51" width="280" height="267"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iTR-72-hk7">
@@ -55,13 +55,13 @@
                                             <nil key="highlightedColor"/>
                                             <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1h-dX-IqX">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1h-dX-IqX" userLabel="ButtonView">
                                             <rect key="frame" x="0.0" y="40" width="280" height="227"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t92-sK-qJP">
                                                     <rect key="frame" x="0.0" y="0.0" width="280" height="227"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFm-e3-L3e">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFm-e3-L3e" userLabel="TopView">
                                                             <rect key="frame" x="0.0" y="0.0" width="280" height="108.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fIr-nP-kvg">
@@ -77,11 +77,11 @@
                                                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="80.5"/>
                                                                                             <subviews>
                                                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Seed" translatesAutoresizingMaskIntoConstraints="NO" id="E99-Kc-dzz">
-                                                                                                    <rect key="frame" x="27.5" y="5.5" width="70" height="70"/>
+                                                                                                    <rect key="frame" x="42.5" y="20.5" width="40" height="40"/>
                                                                                                     <constraints>
-                                                                                                        <constraint firstAttribute="height" constant="70" id="J9t-VB-9YO"/>
+                                                                                                        <constraint firstAttribute="height" constant="40" id="J9t-VB-9YO"/>
                                                                                                         <constraint firstAttribute="width" secondItem="E99-Kc-dzz" secondAttribute="height" multiplier="1:1" id="UE8-uy-zAZ"/>
-                                                                                                        <constraint firstAttribute="width" constant="70" id="dxz-b5-p5d"/>
+                                                                                                        <constraint firstAttribute="width" constant="40" id="dxz-b5-p5d"/>
                                                                                                     </constraints>
                                                                                                 </imageView>
                                                                                             </subviews>
@@ -124,11 +124,11 @@
                                                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="80.5"/>
                                                                                             <subviews>
                                                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sprout" translatesAutoresizingMaskIntoConstraints="NO" id="8C6-mp-Hfx">
-                                                                                                    <rect key="frame" x="27.5" y="5.5" width="70" height="70"/>
+                                                                                                    <rect key="frame" x="37.5" y="15.5" width="50" height="50"/>
                                                                                                     <constraints>
-                                                                                                        <constraint firstAttribute="width" constant="70" id="DhR-jZ-mxL"/>
+                                                                                                        <constraint firstAttribute="width" constant="50" id="DhR-jZ-mxL"/>
                                                                                                         <constraint firstAttribute="width" secondItem="8C6-mp-Hfx" secondAttribute="height" multiplier="1:1" id="NtX-m5-KXZ"/>
-                                                                                                        <constraint firstAttribute="height" constant="70" id="pv7-VI-yFO"/>
+                                                                                                        <constraint firstAttribute="height" constant="50" id="pv7-VI-yFO"/>
                                                                                                     </constraints>
                                                                                                 </imageView>
                                                                                             </subviews>
@@ -171,7 +171,7 @@
                                                                 <constraint firstItem="fIr-nP-kvg" firstAttribute="leading" secondItem="SFm-e3-L3e" secondAttribute="leading" constant="5" id="klU-Ra-1tC"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geu-uC-DD0">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geu-uC-DD0" userLabel="BottomView">
                                                             <rect key="frame" x="0.0" y="118.5" width="280" height="108.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="i0v-P3-env">
@@ -187,11 +187,11 @@
                                                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="80.5"/>
                                                                                             <subviews>
                                                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flower" translatesAutoresizingMaskIntoConstraints="NO" id="ekN-bp-ruf">
-                                                                                                    <rect key="frame" x="27.5" y="5.5" width="70" height="70"/>
+                                                                                                    <rect key="frame" x="32.5" y="10.5" width="60" height="60"/>
                                                                                                     <constraints>
                                                                                                         <constraint firstAttribute="width" secondItem="ekN-bp-ruf" secondAttribute="height" multiplier="1:1" id="SX0-CD-9zE"/>
-                                                                                                        <constraint firstAttribute="width" constant="70" id="fAh-ua-bKv"/>
-                                                                                                        <constraint firstAttribute="height" constant="70" id="zI9-uU-ifR"/>
+                                                                                                        <constraint firstAttribute="width" constant="60" id="fAh-ua-bKv"/>
+                                                                                                        <constraint firstAttribute="height" constant="60" id="zI9-uU-ifR"/>
                                                                                                     </constraints>
                                                                                                 </imageView>
                                                                                             </subviews>
@@ -320,7 +320,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="137.59999999999999" y="260.86956521739131"/>
+            <point key="canvasLocation" x="136" y="259.97001499250376"/>
         </view>
     </objects>
     <resources>
