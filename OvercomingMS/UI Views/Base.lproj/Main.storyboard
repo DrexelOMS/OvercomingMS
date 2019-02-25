@@ -77,7 +77,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJs-W7-0Sf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="305" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -333,21 +333,21 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqo-wA-Hr4" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Previous"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Goals"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Goals"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqb-Vo-Ctx" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                 <rect key="frame" x="105" y="0.0" width="100" height="100"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Progress Day"/>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Timer"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Symptons"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Symptons"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USw-ho-yen" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                 <rect key="frame" x="210" y="0.0" width="100" height="100"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Next"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Settings"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Settings"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
@@ -396,6 +396,6 @@
     <resources>
         <image name="Goals" width="689" height="689"/>
         <image name="Settings" width="689" height="689"/>
-        <image name="Timer" width="689" height="689"/>
+        <image name="Symptons" width="689" height="689"/>
     </resources>
 </document>
