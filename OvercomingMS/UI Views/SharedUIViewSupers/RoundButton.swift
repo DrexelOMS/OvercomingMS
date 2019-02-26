@@ -25,7 +25,7 @@ class RoundButton: UIButton {
         setup()
     }
     
-    private func setup(){
+    func setup(){
         layer.cornerRadius = layer.bounds.size.width / 2
         layoutSubviews()
         

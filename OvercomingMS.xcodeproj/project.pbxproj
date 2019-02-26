@@ -121,6 +121,13 @@
 		0AD7EB3B2223043A006F71C0 /* MedicationMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB382223043A006F71C0 /* MedicationMainSVC.swift */; };
 		0AD7EB3F22230464006F71C0 /* MedicationModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB3D22230464006F71C0 /* MedicationModifyAbstractSVC.swift */; };
 		0AD7EB4022230464006F71C0 /* MedicationAddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB3E22230464006F71C0 /* MedicationAddSVC.swift */; };
+		0AD7EB42222341B3006F71C0 /* MedicationRateTFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB41222341B3006F71C0 /* MedicationRateTFI.swift */; };
+		0AD7EB4422234491006F71C0 /* MedRateButtonsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4322234491006F71C0 /* MedRateButtonsSVC.swift */; };
+		0AD7EB4622234524006F71C0 /* MedRateButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4522234524006F71C0 /* MedRateButtonsSVC.xib */; };
+		0AD7EB48222345A9006F71C0 /* ToggleLabeledCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */; };
+		0AD7EB4A22249DD0006F71C0 /* MedicationRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */; };
+		0AD7EB4C2224B9EC006F71C0 /* MedicationSelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4B2224B9EC006F71C0 /* MedicationSelectedItem.swift */; };
+		0AD7EB4E2224C057006F71C0 /* MedicationEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4D2224C057006F71C0 /* MedicationEditSVC.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -313,6 +320,13 @@
 		0AD7EB382223043A006F71C0 /* MedicationMainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationMainSVC.swift; sourceTree = "<group>"; };
 		0AD7EB3D22230464006F71C0 /* MedicationModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationModifyAbstractSVC.swift; sourceTree = "<group>"; };
 		0AD7EB3E22230464006F71C0 /* MedicationAddSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationAddSVC.swift; sourceTree = "<group>"; };
+		0AD7EB41222341B3006F71C0 /* MedicationRateTFI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationRateTFI.swift; sourceTree = "<group>"; };
+		0AD7EB4322234491006F71C0 /* MedRateButtonsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedRateButtonsSVC.swift; sourceTree = "<group>"; };
+		0AD7EB4522234524006F71C0 /* MedRateButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedRateButtonsSVC.xib; sourceTree = "<group>"; };
+		0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleLabeledCircleButton.swift; sourceTree = "<group>"; };
+		0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationRateModel.swift; sourceTree = "<group>"; };
+		0AD7EB4B2224B9EC006F71C0 /* MedicationSelectedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationSelectedItem.swift; sourceTree = "<group>"; };
+		0AD7EB4D2224C057006F71C0 /* MedicationEditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationEditSVC.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -630,6 +644,7 @@
 			children = (
 				0A93F18E22145EA30063A892 /* TFIAbstract.xib */,
 				0A93F18F22145EA30063A892 /* TypeTFI.swift */,
+				0AD7EB41222341B3006F71C0 /* MedicationRateTFI.swift */,
 				0A0818902214647E0021BDF6 /* LengthTFI.swift */,
 				0AD7EAEF221AFB47006F71C0 /* AmountTFI.swift */,
 				0AD7EAF1221B0047006F71C0 /* CustomEntryTFI.swift */,
@@ -674,6 +689,8 @@
 				0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */,
 				0AD7EB222221F1E1006F71C0 /* SeeMoreButtonSVC.swift */,
 				0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */,
+				0AD7EB4322234491006F71C0 /* MedRateButtonsSVC.swift */,
+				0AD7EB4522234524006F71C0 /* MedRateButtonsSVC.xib */,
 			);
 			path = ButtonViews;
 			sourceTree = "<group>";
@@ -707,6 +724,7 @@
 				0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */,
 				0AA5285A2202623B00CCFEE7 /* RoundButton.swift */,
 				0AD7EB322223040F006F71C0 /* DoneCheckButton.swift */,
+				0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */,
 				0AD07F8721FE637600C55831 /* RoundCornersUIView.swift */,
 				0AD7EAEB2219A8F9006F71C0 /* PillBoxUIView.swift */,
 			);
@@ -777,8 +795,9 @@
 		0AD7EB3C22230464006F71C0 /* Medication */ = {
 			isa = PBXGroup;
 			children = (
-				0AD7EB3D22230464006F71C0 /* MedicationModifyAbstractSVC.swift */,
 				0AD7EB3E22230464006F71C0 /* MedicationAddSVC.swift */,
+				0AD7EB4D2224C057006F71C0 /* MedicationEditSVC.swift */,
+				0AD7EB3D22230464006F71C0 /* MedicationModifyAbstractSVC.swift */,
 			);
 			path = Medication;
 			sourceTree = "<group>";
@@ -806,6 +825,7 @@
 				0AD94DCB220CEE9800B5C2BA /* ExerciseSelectedItem.swift */,
 				0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */,
 				0AD7EB0E221B463A006F71C0 /* VitaminDSelectedItem.swift */,
+				0AD7EB4B2224B9EC006F71C0 /* MedicationSelectedItem.swift */,
 			);
 			path = SelectedItemSVC;
 			sourceTree = "<group>";
@@ -927,6 +947,7 @@
 				0AD07F8421FE53B900C55831 /* DesignConstants.swift */,
 				0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */,
 				0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */,
+				0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -1121,6 +1142,7 @@
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
 				0A1FEC532204E79D006CED70 /* QuickCompleteFood.storyboard in Resources */,
+				0AD7EB4622234524006F71C0 /* MedRateButtonsSVC.xib in Resources */,
 				0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */,
 				0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */,
 				0A93F19A22145F150063A892 /* ModifyAbstractSVC.xib in Resources */,
@@ -1270,6 +1292,7 @@
 				0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */,
 				0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */,
 				0A93F19B22145F150063A892 /* ModifyAbstractSVC.swift in Sources */,
+				0AD7EB4422234491006F71C0 /* MedRateButtonsSVC.swift in Sources */,
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
 				0A08189E2214F82F0021BDF6 /* Food.swift in Sources */,
 				0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */,
@@ -1295,6 +1318,7 @@
 				0AD7EAF2221B0047006F71C0 /* CustomEntryTFI.swift in Sources */,
 				0A1FEC5F220529A9006CED70 /* ExerciseHistoryDBS.swift in Sources */,
 				0AD7EAFC221B1A74006F71C0 /* Omega3EditSVC.swift in Sources */,
+				0AD7EB4A22249DD0006F71C0 /* MedicationRateModel.swift in Sources */,
 				0A1FEC672206204E006CED70 /* TimerCircleButton.swift in Sources */,
 				0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */,
 				509646FC22223EA9006FFDBB /* SavedMedicationDBT.swift in Sources */,
@@ -1303,11 +1327,14 @@
 				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,
 				0AD7EB17221C68B4006F71C0 /* VitaminDSupplementSVC.swift in Sources */,
 				0A2BAA662202A24E004074F3 /* FoodRatingDBS.swift in Sources */,
+				0AD7EB4E2224C057006F71C0 /* MedicationEditSVC.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				0AD07F7E21FE3EA200C55831 /* TrackingViewController.swift in Sources */,
+				0AD7EB48222345A9006F71C0 /* ToggleLabeledCircleButton.swift in Sources */,
 				0AD7EB02221B2608006F71C0 /* Omega3SupplementSVC.swift in Sources */,
 				0AD94DCA220CEE5B00B5C2BA /* SelectedItemSVC.swift in Sources */,
 				0A93F1502213BB9D0063A892 /* TrackingDayDBT.swift in Sources */,
+				0AD7EB4C2224B9EC006F71C0 /* MedicationSelectedItem.swift in Sources */,
 				0AD7EB0F221B463A006F71C0 /* VitaminDSelectedItem.swift in Sources */,
 				0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */,
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
@@ -1363,6 +1390,7 @@
 				0A93EA4922131C2D0063A892 /* (null) in Sources */,
 				0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */,
 				0A93F19D22145F150063A892 /* ExerciseAddSVC.swift in Sources */,
+				0AD7EB42222341B3006F71C0 /* MedicationRateTFI.swift in Sources */,
 				0A93F19422145EA30063A892 /* DateTimeTFI.swift in Sources */,
 				0A08189C2214E8CC0021BDF6 /* FoodSearchCell.swift in Sources */,
 				0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */,

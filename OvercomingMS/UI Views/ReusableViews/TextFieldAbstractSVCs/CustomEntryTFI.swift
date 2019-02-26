@@ -16,17 +16,23 @@ class CustomEntryTFI : TFIAbstract {
         }
     }
     var savedText = ""
-    var title : String = "Default"
+    var title : String {
+        get {
+            return label.text ?? ""
+        }
+        set {
+            label.text = newValue
+        }
+    }
     
     convenience init(title: String) {
         self.init()
-        
+    
         self.title = title
     }
     
     override func customSetup() {
         super.customSetup()
-        label.text = title
     }
     
     override func showTextFieldInput() {

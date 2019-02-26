@@ -12,19 +12,24 @@ class MedicationAddSVC : MedicationModifyAbstractSVC {
     
     override func ConfirmPressed() {
         
-//        if let type = selectedType, let startTime = selectedStartTime, let minutes = selectedLength {
-//            if minutes <= 0 {
-//                return;
-//            }
-//
-//            let endTime = startTime.addingTimeInterval(TimeInterval(minutes * 60))
-//            exerciseRoutines.addExerciseItem(routineType: type, startTime: startTime, endTime: endTime)
-//            parentVC.updateProgressBar();
-//
-//            parentVC.resetToDefaultView()
-//        }
-        
-        parentVC.resetToDefaultView()
+        if let name = selectedName, let startTime = selectedStartTime, let amount = selectedAmount, let rate = rateTFI.selectedType  {
+
+            var freq = ""
+            if rate == "Custom" {
+                if(rateTFI.rateString == "") {
+                    selectedRate = ""
+                    return
+                }
+                else {
+                    freq = rateTFI.rateString
+                }
+            }
+            
+            savedMedications.addMedicationItem(medicationName: name, timeOfDay: startTime, medicationAmount: amount, medicationUOM: "pills", freq: freq, active: true)
+            
+            parentVC.updateProgressBar();
+            parentVC.resetToDefaultView()
+        }
         
     }
     

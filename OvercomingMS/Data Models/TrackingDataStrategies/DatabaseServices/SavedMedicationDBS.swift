@@ -10,6 +10,8 @@ import Foundation
 import RealmSwift
 
 class SavedMedicationDBS: TrackingModulesDBS {
+    
+    //TODO: not currently correct
     func toggleFilledData() {
         let date = globalCurrentDate
         do {
@@ -24,22 +26,19 @@ class SavedMedicationDBS: TrackingModulesDBS {
         
     }
     
-//needs a method to add a new medication
     func addMedicationItem(medicationName: String, timeOfDay: Date, medicationAmount: Int, medicationUOM: String, freq: String, active: Bool) {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    let item = SavedMedicationDBT()
-                    
-                    item.MedicationName = medicationName
-                    item.TimeOfDay = timeOfDay
-                    item.MedicationAmount = medicationAmount
-                    item.MedicationUOM = medicationUOM
-                    item.Frequency = freq
-                    item.Active = active
-                    day.savedMedicationDT.append(item)
-                }
+                let item = SavedMedicationDBT()
+                
+                item.MedicationName = medicationName
+                item.TimeOfDay = timeOfDay
+                item.MedicationAmount = medicationAmount
+                item.MedicationUOM = medicationUOM
+                item.Frequency = freq
+                item.Active = active
+                realm.add(item)
             }
         } catch {
             print("Error updating Medication data : \(error)" )
@@ -48,11 +47,10 @@ class SavedMedicationDBS: TrackingModulesDBS {
     }
 
 //get all the saved medications
-    func getSavedMedicationItems() -> List<SavedMedicationDBT>? {
-        return getTrackingDay()?.savedMedicationDT
+    func getSavedMedicationItems() -> Results<SavedMedicationDBT>? {
+        return realm.objects(SavedMedicationDBT.self)
     }
 
-//update a saved medication,
     func updateSavedMedicationItem(oldItem: SavedMedicationDBT, newItem: SavedMedicationDBT) {
         do {
             try realm.write() {
@@ -73,7 +71,9 @@ class SavedMedicationDBS: TrackingModulesDBS {
     func deleteSavedMedication(item: SavedMedicationDBT) {
         do {
             try realm.write() {
-                item.Active = false
+                //item.Active = false
+                realm.delete(item) //more thought for tracking over time
+                print("test")
             }
         } catch {
             print("Error delete SavedMedication data: \(error)")
@@ -81,11 +81,12 @@ class SavedMedicationDBS: TrackingModulesDBS {
     }
     
     
-    
+    //TODO: this is not correct?
     func getTotalMeds() -> Int {
         return getTrackingDay()?.MedicationTotal ?? 0
     }
     
+    //TODO: this is not correct?
     func getPercentageComplete() -> Int {
         return getTrackingDay()?.MedicationComputedPercentageComplete ?? 0
     }
