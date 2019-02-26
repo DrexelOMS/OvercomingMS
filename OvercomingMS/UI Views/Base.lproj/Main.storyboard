@@ -222,11 +222,12 @@
                                                                 <rect key="frame" x="0.0" y="46" width="280" height="46"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilz-Yu-k2m">
-                                                                        <rect key="frame" x="60.5" y="9" width="159.5" height="28"/>
+                                                                        <rect key="frame" x="29" y="9" width="222.5" height="28"/>
                                                                         <attributedString key="attributedText">
-                                                                            <fragment content="You can do it!">
+                                                                            <fragment content="One day at a time.">
                                                                                 <attributes>
                                                                                     <font key="NSFont" size="24" name="Quicksand-Bold"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                 </attributes>
                                                                             </fragment>
                                                                         </attributedString>
@@ -238,6 +239,9 @@
                                                                     <constraint firstItem="ilz-Yu-k2m" firstAttribute="centerX" secondItem="xIc-Oy-Rw0" secondAttribute="centerX" id="Gob-gr-Kea"/>
                                                                     <constraint firstItem="ilz-Yu-k2m" firstAttribute="centerY" secondItem="xIc-Oy-Rw0" secondAttribute="centerY" id="qux-41-t8O"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
                                                     </stackView>
