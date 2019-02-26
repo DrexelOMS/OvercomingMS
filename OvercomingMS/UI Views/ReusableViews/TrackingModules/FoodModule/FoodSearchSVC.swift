@@ -232,7 +232,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         var badingredients = [""]
         var badTypes = [""]
         if isFoodGood(food: food)==RecommendedLevel.Good{
-            parentVC.pushSubView(newSubView: FoodSelectedSVC(stuff: "", ingredients:[""], types:[""]))
+            parentVC.pushSubView(newSubView: FoodSelectedSVC(ingredients:[""], types:[""]))
         }
         else{
             for str in food.Ingredients.split(separator: ","){
@@ -245,7 +245,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
                     badTypes.append(String(str))
                 }
             }
-            parentVC.pushSubView(newSubView: FoodSelectedSVC(stuff: "Stuff", ingredients:badingredients, types:badTypes))
+            parentVC.pushSubView(newSubView: FoodSelectedSVC(ingredients:badingredients, types:badTypes))
         }
     }
     // had to include this here to have access to it in this class. should probably be here anyway so that each food object doesn't get a copy of the array
