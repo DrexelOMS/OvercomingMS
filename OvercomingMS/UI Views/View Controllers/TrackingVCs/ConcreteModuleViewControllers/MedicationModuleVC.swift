@@ -11,7 +11,7 @@ import RealmSwift
 
 class MedicationModuleVC: TrackingModuleAbstractVC {
     
-    //private let medicationRoutines = MedicationHistoryDBS()
+    //private let medicationHistory = MedicationHistoryDBS()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class MedicationModuleVC: TrackingModuleAbstractVC {
         // Do any additional setup after loading the view.
         progressBar.setTitle(title: "Medication")
         
-        //initializeStackView(defaultView: MedicationMainSVC())
+        initializeStackView(defaultView: MedicationMainSVC())
     }
     
     override func updateProgressBar() {
