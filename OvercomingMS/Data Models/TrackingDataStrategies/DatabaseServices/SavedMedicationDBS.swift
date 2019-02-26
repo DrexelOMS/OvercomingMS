@@ -71,7 +71,9 @@ class SavedMedicationDBS: TrackingModulesDBS {
     func deleteSavedMedication(item: SavedMedicationDBT) {
         do {
             try realm.write() {
-                item.Active = false
+                //item.Active = false
+                realm.delete(item) //more thought for tracking over time
+                print("test")
             }
         } catch {
             print("Error delete SavedMedication data: \(error)")

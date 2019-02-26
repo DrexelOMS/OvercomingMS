@@ -126,6 +126,7 @@
 		0AD7EB4622234524006F71C0 /* MedRateButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4522234524006F71C0 /* MedRateButtonsSVC.xib */; };
 		0AD7EB48222345A9006F71C0 /* ToggleLabeledCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */; };
 		0AD7EB4A22249DD0006F71C0 /* MedicationRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */; };
+		0AD7EB4C2224B9EC006F71C0 /* MedicationSelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4B2224B9EC006F71C0 /* MedicationSelectedItem.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -320,6 +321,7 @@
 		0AD7EB4522234524006F71C0 /* MedRateButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedRateButtonsSVC.xib; sourceTree = "<group>"; };
 		0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleLabeledCircleButton.swift; sourceTree = "<group>"; };
 		0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationRateModel.swift; sourceTree = "<group>"; };
+		0AD7EB4B2224B9EC006F71C0 /* MedicationSelectedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationSelectedItem.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -814,6 +816,7 @@
 				0AD94DCB220CEE9800B5C2BA /* ExerciseSelectedItem.swift */,
 				0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */,
 				0AD7EB0E221B463A006F71C0 /* VitaminDSelectedItem.swift */,
+				0AD7EB4B2224B9EC006F71C0 /* MedicationSelectedItem.swift */,
 			);
 			path = SelectedItemSVC;
 			sourceTree = "<group>";
@@ -1307,6 +1310,7 @@
 				0AD7EB02221B2608006F71C0 /* Omega3SupplementSVC.swift in Sources */,
 				0AD94DCA220CEE5B00B5C2BA /* SelectedItemSVC.swift in Sources */,
 				0A93F1502213BB9D0063A892 /* TrackingDayDBT.swift in Sources */,
+				0AD7EB4C2224B9EC006F71C0 /* MedicationSelectedItem.swift in Sources */,
 				0AD7EB0F221B463A006F71C0 /* VitaminDSelectedItem.swift in Sources */,
 				0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */,
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,

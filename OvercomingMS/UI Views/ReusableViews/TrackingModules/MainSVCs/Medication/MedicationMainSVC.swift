@@ -71,15 +71,15 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let exerciseItemSVC = ExerciseSelectedItemSVC()
-        //exerciseItemSVC.exerciseItem = exerciseRoutines.getTodaysExerciseItems()![indexPath.row]
-        //exerciseItemSVC.parentVC = parentVC
-        //parentVC.pushSubView(newSubView: exerciseItemSVC)
+        let medicationItemSVC = MedicationSelectedItemSVC()
+        medicationItemSVC.savedMedicationItem = savedMedications.getSavedMedicationItems()![indexPath.row]
+        medicationItemSVC.parentVC = parentVC
+        parentVC.pushSubView(newSubView: medicationItemSVC)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 100.0
+        return 80.0
     }
 
 }
