@@ -89,7 +89,7 @@
                                                 <constraint firstAttribute="width" constant="40" id="SQF-lD-4co"/>
                                                 <constraint firstAttribute="height" constant="40" id="o9Q-gZ-9O0"/>
                                             </constraints>
-                                            <state key="normal" image="checkmark"/>
+                                            <state key="normal" image="QuickComplete"/>
                                             <connections>
                                                 <action selector="checkButtonPressed:" destination="-1" eventType="touchUpInside" id="hG4-xc-cQa"/>
                                             </connections>
@@ -126,6 +126,6 @@
         </view>
     </objects>
     <resources>
-        <image name="checkmark" width="75" height="75"/>
+        <image name="QuickComplete" width="682.66668701171875" height="682.66668701171875"/>
     </resources>
 </document>
