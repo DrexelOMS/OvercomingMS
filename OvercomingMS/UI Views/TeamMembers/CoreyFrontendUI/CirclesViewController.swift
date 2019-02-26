@@ -12,10 +12,10 @@ class CirclesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
-        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
-        self.view.addGestureRecognizer(swipeLeft)
+//
+//        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+//        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+//        self.view.addGestureRecognizer(swipeLeft)
     }
     
     override func didReceiveMemoryWarning() {

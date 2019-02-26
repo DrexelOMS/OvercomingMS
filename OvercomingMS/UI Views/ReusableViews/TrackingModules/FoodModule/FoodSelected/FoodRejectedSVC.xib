@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodRejectedSVC" customModule="OvercomingMS" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="280" height="223"/>
@@ -26,7 +26,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="POH-dO-FAJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                            <rect key="frame" x="10" y="0.0" width="240.5" height="30"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RiQ-Ek-SAn">
                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -45,7 +45,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skg-zk-yXv">
-                                                    <rect key="frame" x="40" y="0.0" width="220" height="30"/>
+                                                    <rect key="frame" x="40" y="0.0" width="200.5" height="30"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Caution! This food has">
                                                             <attributes>
@@ -58,28 +58,29 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="RiQ-Ek-SAn" firstAttribute="leading" secondItem="POH-dO-FAJ" secondAttribute="leading" id="1jF-Vl-Ide"/>
-                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="1gL-Q1-pjR"/>
-                                        <constraint firstAttribute="trailing" secondItem="POH-dO-FAJ" secondAttribute="trailing" id="TZZ-NJ-w4p"/>
                                         <constraint firstAttribute="bottom" secondItem="POH-dO-FAJ" secondAttribute="bottom" id="gfR-u8-Xxx"/>
                                         <constraint firstItem="POH-dO-FAJ" firstAttribute="top" secondItem="BQc-6d-CJh" secondAttribute="top" id="ohS-th-MTU"/>
-                                        <constraint firstItem="POH-dO-FAJ" firstAttribute="leading" secondItem="BQc-6d-CJh" secondAttribute="leading" id="ws0-hL-lCo"/>
+                                        <constraint firstItem="POH-dO-FAJ" firstAttribute="centerX" secondItem="BQc-6d-CJh" secondAttribute="centerX" id="tM7-t0-FiT"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffx-1V-pmR" userLabel="InfoView">
                                     <rect key="frame" x="0.0" y="40" width="260" height="113"/>
                                     <subviews>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dUM-GF-uou">
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dUM-GF-uou">
                                             <rect key="frame" x="0.0" y="0.0" width="260" height="113"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="dUM-GF-uou" secondAttribute="trailing" id="30Q-D8-rZk"/>
+                                        <constraint firstAttribute="bottom" secondItem="dUM-GF-uou" secondAttribute="bottom" id="807-tJ-eog"/>
+                                        <constraint firstItem="dUM-GF-uou" firstAttribute="top" secondItem="Ffx-1V-pmR" secondAttribute="top" id="F8m-po-JFe"/>
+                                        <constraint firstItem="dUM-GF-uou" firstAttribute="leading" secondItem="Ffx-1V-pmR" secondAttribute="leading" id="cg8-5t-vZS"/>
+                                    </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76F-zG-38r" userLabel="LearnMoreView">
                                     <rect key="frame" x="0.0" y="163" width="260" height="40"/>
@@ -95,46 +96,7 @@
                                                                 <color key="NSColor" red="1" green="0.99999000000000005" blue="0.99999000000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <font key="NSFont" size="12" name="Quicksand-Bold"/>
                                                                 <real key="NSKern" value="0.0"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="18.350000000000001" maximumLineHeight="18.350000000000001" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                    <tabStops>
-                                                                        <textTab alignment="left" location="28">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="56">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="84">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="112">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="140">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="168">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="196">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="224">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="252">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="280">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="308">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="336">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                    </tabStops>
-                                                                </paragraphStyle>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="18.350000000000001" maximumLineHeight="18.350000000000001" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>

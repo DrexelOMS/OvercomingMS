@@ -12,10 +12,10 @@ class AnalysisViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
-        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
-        self.view.addGestureRecognizer(swipeRight)
+//
+//        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+//        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+//        self.view.addGestureRecognizer(swipeRight)
     }
     
     override func didReceiveMemoryWarning() {
