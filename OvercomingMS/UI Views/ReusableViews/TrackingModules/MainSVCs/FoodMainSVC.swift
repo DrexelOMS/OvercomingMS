@@ -44,15 +44,12 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     }
     
     func searchButtonPressed() {
-        //parentVC.pushSubView(newSubView: ExerciseAddSVC())
         parentVC.pushSubView(newSubView: FoodSearchSVC())
     }
     
     func recipesButtonPressed() {
-        //parentVC.pushSubView(newSubView: ExerciseStopwatchSVC())
         print("Pressed Recipes")
     }
-    
     
     func scanButtonPressed() {
         let barcodeScannerVC = BarcodeScannerViewController()

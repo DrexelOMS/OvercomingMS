@@ -12,9 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchBarButton" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
-                <outlet property="SearchButton" destination="Dug-Rk-gsV" id="pk3-Lp-xOk"/>
-                <outlet property="SearchTextField" destination="0WC-ga-uMe" id="GUf-CD-OmU"/>
-                <outlet property="SettingsButton" destination="Jip-uw-w5m" id="dAy-kF-m0o"/>
+                <outlet property="SearchButton" destination="Dug-Rk-gsV" id="3mF-2b-biB"/>
+                <outlet property="SearchTextField" destination="0WC-ga-uMe" id="PEk-AN-72B"/>
+                <outlet property="SettingsButton" destination="Jip-uw-w5m" id="KrD-hd-yub"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -68,7 +68,7 @@
                                                     <rect key="frame" x="5" y="5" width="158" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -11,45 +11,63 @@ import Cartography
 
 class MedicationModifyAbstractSVC : ModifyAbstractSVC {
     
-    //let exerciseRoutines = ExerciseHistoryDBS()
+    let savedMedications = SavedMedicationDBS()
     
-//    var selectedType : String? {
-//        get {
-//            return typeTFI.selectedType
-//        }
-//        set {
-//            typeTFI.selectedType = newValue
-//        }
-//    }
-//    var selectedStartTime : Date? {
-//        get {
-//            return dateTimeTFI.selectedStartTime
-//        }
-//        set {
-//            dateTimeTFI.selectedStartTime = newValue
-//        }
-//    }
-//    var selectedLength : Int?  { // In minutes
-//        get {
-//            return lengthTFI.selectedLength
-//        }
-//        set {
-//            lengthTFI.selectedLength = newValue
-//        }
-//    }
+    var selectedName : String? {
+        get {
+            return nameTFI.selectedCustomEntry
+        }
+        set {
+            nameTFI.selectedCustomEntry = newValue
+        }
+    }
+    var selectedStartTime : Date? {
+        get {
+            return dateTimeTFI.selectedStartTime
+        }
+        set {
+            dateTimeTFI.selectedStartTime = newValue
+        }
+    }
+    var selectedAmount : Int?  { // In minutes
+        get {
+            return amountTFI.selectedAmount
+        }
+        set {
+            amountTFI.selectedAmount = newValue
+        }
+    }
+    var selectedRate : String? {
+        get {
+            return rateTFI.selectedType
+        }
+        set {
+            if let string = newValue {
+            if !rateTFI.choices.contains(string) {
+                rateTFI.rateString = string
+                rateTFI.selectedType = "Custom"
+            }
+            else {
+                rateTFI.selectedType = string
+            }
+            }
+        }
+    }
     
-//    var typeTFI = ExerciseTypeTFI()
-//    var dateTimeTFI = DateTimeTFI()
-//    var lengthTFI = LengthTFI()
+    var nameTFI = CustomEntryTFI(title: "Name")
+    var dateTimeTFI = DateTimeTFI()
+    var amountTFI = AmountTFI(uom: "pills")
+    var rateTFI = MedicationRateTFI()
     
     override func customSetup() {
         //set the initial text and start time of the textField
-//        selectedStartTime = Date()
-//        
-//        textInputStackView.addArrangedSubview(typeTFI)
-//        textInputStackView.addArrangedSubview(dateTimeTFI)
-//        textInputStackView.addArrangedSubview(lengthTFI)
-//        textInputStackView.translatesAutoresizingMaskIntoConstraints = false
+        selectedStartTime = Date()
+        
+        textInputStackView.addArrangedSubview(nameTFI)
+        textInputStackView.addArrangedSubview(dateTimeTFI)
+        textInputStackView.addArrangedSubview(amountTFI)
+        textInputStackView.addArrangedSubview(rateTFI)
+        textInputStackView.translatesAutoresizingMaskIntoConstraints = false
         
         backConfirmButtons.leftButtonAction = BackPressed
         backConfirmButtons.rightButtonAction = ConfirmPressed

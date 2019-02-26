@@ -1,5 +1,5 @@
 //
-//  DoneCheckButton.swift
+//  ToggleLabeledCircleButton.swift
 //  OvercomingMS
 //
 //  Created by Vincent Finn on 2/24/19.
@@ -8,12 +8,17 @@
 
 import UIKit
 
-class DoneCheckButton: UIButton {
+class ToggleLabelCircleButton: RoundButton {
     
     var IsDone = false {
         didSet {
             setDone(done: IsDone)
         }
+    }
+    
+    override func setup() {
+        super.setup()
+        IsDone = false
     }
     
     func toggle() {
@@ -22,10 +27,12 @@ class DoneCheckButton: UIButton {
     
     private func setDone(done: Bool){
         if done {
-            setImage(UIImage(named: "Approved"), for: .normal)
+            backgroundColor = UIColor.black
+            setTitleColor(UIColor.white, for: .normal)
         }
         else {
-            setImage(UIImage(named: "Cancel"), for: .normal)
+            backgroundColor = UIColor.white
+            setTitleColor(UIColor.black, for: .normal)
         }
     }
     

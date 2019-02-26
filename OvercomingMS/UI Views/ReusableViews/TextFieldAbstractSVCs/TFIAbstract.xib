@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TFIAbstract" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="label" destination="19u-VC-IDc" id="J8I-U5-JWx"/>
+                <outlet property="stackView" destination="Zrg-8d-M5H" id="r7b-db-6vz"/>
                 <outlet property="subLeftLabel" destination="2ha-71-VA0" id="XQ6-zi-gNj"/>
                 <outlet property="subRightLabel" destination="adO-Nc-nXP" id="kvj-nO-SHm"/>
                 <outlet property="textField" destination="p8a-YF-lWz" id="fxu-05-VFy"/>
@@ -20,11 +21,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zrg-8d-M5H">
-                    <rect key="frame" x="0.0" y="3.5" width="375" height="80"/>
+                    <rect key="frame" x="0.0" y="25.5" width="375" height="80"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vRl-Eq-gcX">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -44,7 +45,6 @@
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="HwZ-X9-Tqf"/>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="r0c-Ip-Uce"/>
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r56-Zb-zA7">
@@ -85,11 +85,11 @@
                                     </constraints>
                                 </view>
                             </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="fSr-WG-HB9"/>
+                            </constraints>
                         </stackView>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="80" id="0EA-bV-Cqp"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <constraints>
@@ -99,7 +99,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="138.40000000000001" y="402.54872563718146"/>
+            <point key="canvasLocation" x="132" y="364.7676161919041"/>
         </view>
     </objects>
 </document>

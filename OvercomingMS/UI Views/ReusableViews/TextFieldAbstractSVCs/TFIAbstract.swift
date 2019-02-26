@@ -25,6 +25,7 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var subLeftLabel: UILabel!
     @IBOutlet weak var subRightLabel: UILabel!
+    @IBOutlet weak var stackView: UIStackView!
     
     var parentVC: TrackingModuleAbstractVC!
     var tfiDelegate: TFIDelegate?
@@ -69,7 +70,7 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     }
     
     func doneFunction() {
-        parentVC.view.endEditing(true)
+        closePicker()
     }
     
     @objc private func cancelPicker(){
@@ -77,6 +78,10 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     }
     
     func cancelFunction() {
+        closePicker()
+    }
+    
+    func closePicker() {
         parentVC.view.endEditing(true)
     }
     
