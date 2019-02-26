@@ -12,6 +12,7 @@ import RealmSwift
 class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
     
     let medicationCellName = "MedicationCell"
+    let savedMedications = SavedMedicationDBS()
     
     let button1 = AddCircleButton()
     
@@ -53,22 +54,18 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return meditationHistory.getTodaysMeditationItems()?.count ?? 0
-        return 3
+        return savedMedications.getSavedMedicationItems()?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: medicationCellName, for: indexPath) as! MedicationCell
         
-        cell.timeLabel.text = "Time"
-        cell.nameLabel.text = "Name"
-        cell.amountLabel.text = "Amount"
-        cell.doneCheckButton.IsDone = false
+        let item = savedMedications.getSavedMedicationItems()![indexPath.row]
         
-//        cell.labelLeft.text = meditationHistory.getTodaysMeditationItems()![indexPath.row].MeditationType
-//        let startTime = meditationHistory.getTodaysMeditationItems()![indexPath.row].StartTime
-//        cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-//        cell.labelRight.text =  "\(meditationHistory.getTodaysMeditationItems()![indexPath.row].minutes) \(ProgressBarConfig.lengthUOM)"
+        cell.timeLabel.text = OMSDateAccessor.getDateTime(date: item.TimeOfDay)
+        cell.nameLabel.text = item.MedicationName
+        cell.amountLabel.text = "\(item.MedicationAmount) \(item.MedicationUOM)"
+        cell.doneCheckButton.IsDone = false // this will need to use another DBS method
         
         return cell
     }

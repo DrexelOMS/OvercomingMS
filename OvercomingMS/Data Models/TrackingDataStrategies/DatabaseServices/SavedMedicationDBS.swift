@@ -10,6 +10,8 @@ import Foundation
 import RealmSwift
 
 class SavedMedicationDBS: TrackingModulesDBS {
+    
+    //TODO: not currently correct
     func toggleFilledData() {
         let date = globalCurrentDate
         do {
@@ -24,7 +26,6 @@ class SavedMedicationDBS: TrackingModulesDBS {
         
     }
     
-//needs a method to add a new medication
     func addMedicationItem(medicationName: String, timeOfDay: Date, medicationAmount: Int, medicationUOM: String, freq: String, active: Bool) {
         
         do {
@@ -46,11 +47,10 @@ class SavedMedicationDBS: TrackingModulesDBS {
     }
 
 //get all the saved medications
-    func getSavedMedicationItems() -> List<SavedMedicationDBT>? {
-        return getTrackingDay()?.savedMedicationDT
+    func getSavedMedicationItems() -> Results<SavedMedicationDBT>? {
+        return realm.objects(SavedMedicationDBT.self)
     }
 
-//update a saved medication,
     func updateSavedMedicationItem(oldItem: SavedMedicationDBT, newItem: SavedMedicationDBT) {
         do {
             try realm.write() {
@@ -79,11 +79,12 @@ class SavedMedicationDBS: TrackingModulesDBS {
     }
     
     
-    
+    //TODO: this is not correct?
     func getTotalMeds() -> Int {
         return getTrackingDay()?.MedicationTotal ?? 0
     }
     
+    //TODO: this is not correct?
     func getPercentageComplete() -> Int {
         return getTrackingDay()?.MedicationComputedPercentageComplete ?? 0
     }
