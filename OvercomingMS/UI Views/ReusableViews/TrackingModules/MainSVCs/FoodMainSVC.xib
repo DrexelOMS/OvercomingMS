@@ -90,7 +90,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="z1D-yT-XMI" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="2Nx-5a-zyn"/>
                 <constraint firstItem="z1D-yT-XMI" firstAttribute="top" secondItem="8xU-7s-fYq" secondAttribute="bottom" id="JPW-Vs-kCJ"/>

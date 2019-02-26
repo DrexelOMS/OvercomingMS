@@ -129,7 +129,7 @@
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xjg-f0-uHe" customClass="SquareButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="436" width="320" height="60"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="5XO-w7-qqc"/>
                             </constraints>

@@ -78,7 +78,7 @@ Today</string>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bfj-aj-J4I">
                     <rect key="frame" x="20" y="180" width="338" height="231"/>
-                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQ2-ra-ozk" userLabel="Buttons">
                     <rect key="frame" x="0.0" y="411" width="378" height="100"/>
@@ -96,7 +96,7 @@ Today</string>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="LJX-K7-Gqx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="9tg-7X-HsA"/>
                 <constraint firstItem="bfj-aj-J4I" firstAttribute="top" secondItem="LJX-K7-Gqx" secondAttribute="bottom" constant="10" id="BHe-Ty-mfG"/>

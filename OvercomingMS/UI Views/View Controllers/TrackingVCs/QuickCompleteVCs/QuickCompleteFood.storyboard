@@ -195,7 +195,7 @@ eat today?</string>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mfm-0X-Tdy" firstAttribute="bottom" secondItem="gbc-7N-RAv" secondAttribute="bottom" constant="-30" id="Q1A-uz-37R"/>
                             <constraint firstItem="mfm-0X-Tdy" firstAttribute="leading" secondItem="gbc-7N-RAv" secondAttribute="leading" constant="30" id="cgV-Uf-DrN"/>
