@@ -101,7 +101,7 @@
                     <constraint firstItem="U5m-XH-c9w" firstAttribute="top" secondItem="LTF-mC-POA" secondAttribute="top" constant="5" id="ugI-ea-NsL"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="amountLabel" destination="86d-DQ-pr3" id="QCD-Qi-dHX"/>
                 <outlet property="doneCheckButton" destination="Iza-jE-FyU" id="38J-aa-H9y"/>

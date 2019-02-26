@@ -114,14 +114,14 @@
                                 </view>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5bP-Zm-3nk">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0BQ-Cs-UL4">
                             <rect key="frame" x="0.0" y="60.5" width="375" height="60.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dv6-ep-aG3">
-                                    <rect key="frame" x="0.0" y="0.0" width="125" height="60.5"/>
+                                    <rect key="frame" x="47" y="0.0" width="93.5" height="60.5"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUC-Bm-akT" customClass="ToggleLabelCircleButton" customModule="OvercomingMS" customModuleProvider="target">
-                                            <rect key="frame" x="42.5" y="10.5" width="40" height="40"/>
+                                            <rect key="frame" x="27" y="10.5" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="Edc-Wh-7Xt"/>
                                                 <constraint firstAttribute="width" constant="40" id="HQA-0l-AIB"/>
@@ -138,10 +138,10 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUW-Ly-scT">
-                                    <rect key="frame" x="125" y="0.0" width="125" height="60.5"/>
+                                    <rect key="frame" x="140.5" y="0.0" width="94" height="60.5"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hoh-PX-GZo" customClass="ToggleLabelCircleButton" customModule="OvercomingMS" customModuleProvider="target">
-                                            <rect key="frame" x="42.5" y="10.5" width="40" height="40"/>
+                                            <rect key="frame" x="27" y="10.5" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="HWY-Rw-3e0"/>
                                                 <constraint firstAttribute="height" constant="40" id="t8H-Gr-QC0"/>
@@ -158,10 +158,10 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODn-dx-6Eo">
-                                    <rect key="frame" x="250" y="0.0" width="125" height="60.5"/>
+                                    <rect key="frame" x="234.5" y="0.0" width="93.5" height="60.5"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDO-wd-zBi" customClass="ToggleLabelCircleButton" customModule="OvercomingMS" customModuleProvider="target">
-                                            <rect key="frame" x="42.5" y="10.5" width="40" height="40"/>
+                                            <rect key="frame" x="27" y="10.5" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="7lf-q1-ccb"/>
                                                 <constraint firstAttribute="height" constant="40" id="tln-EV-G6T"/>
@@ -178,11 +178,26 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                        </stackView>
+                            <constraints>
+                                <constraint firstItem="Dv6-ep-aG3" firstAttribute="top" secondItem="0BQ-Cs-UL4" secondAttribute="top" id="4cL-YN-Ghf"/>
+                                <constraint firstAttribute="bottom" secondItem="wUW-Ly-scT" secondAttribute="bottom" id="Qen-Hv-CsR"/>
+                                <constraint firstItem="wUW-Ly-scT" firstAttribute="leading" secondItem="Dv6-ep-aG3" secondAttribute="trailing" id="RaS-DZ-gwt"/>
+                                <constraint firstAttribute="bottom" secondItem="Dv6-ep-aG3" secondAttribute="bottom" id="YC4-5e-nmG"/>
+                                <constraint firstItem="ODn-dx-6Eo" firstAttribute="top" secondItem="0BQ-Cs-UL4" secondAttribute="top" id="a0h-Ff-b6s"/>
+                                <constraint firstItem="ODn-dx-6Eo" firstAttribute="leading" secondItem="wUW-Ly-scT" secondAttribute="trailing" id="aIQ-oE-NE2"/>
+                                <constraint firstAttribute="bottom" secondItem="ODn-dx-6Eo" secondAttribute="bottom" id="jGp-zz-0Ci"/>
+                                <constraint firstItem="wUW-Ly-scT" firstAttribute="centerX" secondItem="0BQ-Cs-UL4" secondAttribute="centerX" id="n4h-he-Vnm"/>
+                                <constraint firstItem="wUW-Ly-scT" firstAttribute="top" secondItem="0BQ-Cs-UL4" secondAttribute="top" id="tuU-3h-E6W"/>
+                            </constraints>
+                        </view>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="ODn-dx-6Eo" firstAttribute="width" secondItem="95i-ct-64y" secondAttribute="width" id="EjO-Ug-w6c"/>
+                        <constraint firstItem="Dv6-ep-aG3" firstAttribute="width" secondItem="95i-ct-64y" secondAttribute="width" id="JhR-2M-nzw"/>
+                        <constraint firstItem="wUW-Ly-scT" firstAttribute="width" secondItem="95i-ct-64y" secondAttribute="width" id="TpD-F2-pYm"/>
+                    </constraints>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="DBt-aS-9l5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QdU-D6-Fab"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DBt-aS-9l5" secondAttribute="trailing" id="RJA-Ei-xwu"/>

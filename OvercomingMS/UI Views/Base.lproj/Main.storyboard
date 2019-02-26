@@ -159,29 +159,46 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIc-Oy-Rw0" userLabel="Achievements" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="46"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButtonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="wyn-U5-yUf">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1G-Uo-Ip2" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="46"/>
-                                                                    </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilz-Yu-k2m">
-                                                                        <rect key="frame" x="29" y="9" width="222.5" height="28"/>
-                                                                        <attributedString key="attributedText">
-                                                                            <fragment content="One day at a time.">
-                                                                                <attributes>
-                                                                                    <font key="NSFont" size="24" name="Quicksand-Bold"/>
-                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                                </attributes>
-                                                                            </fragment>
-                                                                        </attributedString>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                        <subviews>
+                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButtonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="wyn-U5-yUf">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="46"/>
+                                                                            </imageView>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilz-Yu-k2m">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="46"/>
+                                                                                <attributedString key="attributedText">
+                                                                                    <fragment content="One day at a time.">
+                                                                                        <attributes>
+                                                                                            <font key="NSFont" size="24" name="Quicksand-Bold"/>
+                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                        </attributes>
+                                                                                    </fragment>
+                                                                                </attributedString>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="wyn-U5-yUf" firstAttribute="leading" secondItem="y1G-Uo-Ip2" secondAttribute="leading" id="1jH-GL-GjR"/>
+                                                                            <constraint firstItem="ilz-Yu-k2m" firstAttribute="top" secondItem="y1G-Uo-Ip2" secondAttribute="top" id="Hv6-Y2-GTF"/>
+                                                                            <constraint firstItem="ilz-Yu-k2m" firstAttribute="leading" secondItem="y1G-Uo-Ip2" secondAttribute="leading" id="KlN-Sa-U58"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="wyn-U5-yUf" secondAttribute="bottom" id="Mdn-cY-nd3"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="ilz-Yu-k2m" secondAttribute="bottom" id="OR8-ea-DK5"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="wyn-U5-yUf" secondAttribute="trailing" id="sKZ-Hm-Uod"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="ilz-Yu-k2m" secondAttribute="trailing" id="yai-ZZ-Cf7"/>
+                                                                            <constraint firstItem="wyn-U5-yUf" firstAttribute="top" secondItem="y1G-Uo-Ip2" secondAttribute="top" id="zm3-WH-4re"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasShadow" value="NO"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="bottom" secondItem="wyn-U5-yUf" secondAttribute="bottom" id="BcX-yM-I99"/>
-                                                                    <constraint firstItem="ilz-Yu-k2m" firstAttribute="centerX" secondItem="xIc-Oy-Rw0" secondAttribute="centerX" id="Gob-gr-Kea"/>
-                                                                    <constraint firstItem="wyn-U5-yUf" firstAttribute="top" secondItem="xIc-Oy-Rw0" secondAttribute="top" id="NCd-X8-lZU"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="wyn-U5-yUf" secondAttribute="trailing" id="a9m-Tf-aM1"/>
-                                                                    <constraint firstItem="wyn-U5-yUf" firstAttribute="leading" secondItem="xIc-Oy-Rw0" secondAttribute="leading" id="ed0-Nc-tRb"/>
-                                                                    <constraint firstItem="ilz-Yu-k2m" firstAttribute="centerY" secondItem="xIc-Oy-Rw0" secondAttribute="centerY" id="qux-41-t8O"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="y1G-Uo-Ip2" secondAttribute="trailing" id="50S-87-sHd"/>
+                                                                    <constraint firstItem="y1G-Uo-Ip2" firstAttribute="leading" secondItem="xIc-Oy-Rw0" secondAttribute="leading" id="JIc-Ll-SXB"/>
+                                                                    <constraint firstItem="y1G-Uo-Ip2" firstAttribute="top" secondItem="xIc-Oy-Rw0" secondAttribute="top" id="RH7-md-kGx"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="y1G-Uo-Ip2" secondAttribute="bottom" id="clq-3w-ndl"/>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
