@@ -20,6 +20,7 @@ class SelectedItemSVC : SlidingAbstractSVC {
     @IBOutlet weak var topMainLabel: UILabel!
     @IBOutlet weak var middleSubLabel: UILabel!
     @IBOutlet weak var middleMainLabel: UILabel!
+    @IBOutlet weak var middleFrequencyLabel: UILabel!
     @IBOutlet weak var bottomSubLabel: UILabel!
     @IBOutlet weak var bottomMainLabel: UILabel!
     
