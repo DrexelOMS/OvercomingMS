@@ -51,8 +51,18 @@
                                                                                         </attributedString>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
+                                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ec-Lq-gEG" userLabel="NavDot" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
+                                                                                        <rect key="frame" x="44.5" y="20.5" width="4" height="4"/>
+                                                                                        <color key="backgroundColor" red="0.58431372549019611" green="0.58431372549019611" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="height" constant="4" id="8N5-lM-TMI"/>
+                                                                                            <constraint firstAttribute="width" constant="4" id="YbN-5m-8i2"/>
+                                                                                        </constraints>
+                                                                                    </view>
                                                                                 </subviews>
                                                                                 <constraints>
+                                                                                    <constraint firstItem="5ec-Lq-gEG" firstAttribute="centerX" secondItem="nOG-r5-tcv" secondAttribute="centerX" id="5Mj-oo-gva"/>
+                                                                                    <constraint firstItem="5ec-Lq-gEG" firstAttribute="centerY" secondItem="nOG-r5-tcv" secondAttribute="centerY" constant="5" id="Tdr-Yz-7gR"/>
                                                                                     <constraint firstItem="GxO-ht-Md3" firstAttribute="top" secondItem="nOG-r5-tcv" secondAttribute="top" id="cEl-QS-3m1"/>
                                                                                     <constraint firstItem="GxO-ht-Md3" firstAttribute="centerX" secondItem="nOG-r5-tcv" secondAttribute="centerX" id="hw3-Xz-gGf"/>
                                                                                 </constraints>
@@ -60,11 +70,20 @@
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K4N-4V-Z4k" userLabel="Tracking">
                                                                                 <rect key="frame" x="93.5" y="0.0" width="93" height="35"/>
                                                                                 <subviews>
+                                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMT-vE-zRK" userLabel="NavDot" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
+                                                                                        <rect key="frame" x="43.5" y="29.5" width="6" height="6"/>
+                                                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="height" constant="6" id="cam-Ub-b6E"/>
+                                                                                            <constraint firstAttribute="width" constant="6" id="vzY-L2-QzJ"/>
+                                                                                        </constraints>
+                                                                                    </view>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnA-gZ-ep5">
                                                                                         <rect key="frame" x="4" y="6" width="85.5" height="23.5"/>
                                                                                         <attributedString key="attributedText">
                                                                                             <fragment content="Tracking">
                                                                                                 <attributes>
+                                                                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                     <font key="NSFont" size="20" name="Quicksand-Bold"/>
                                                                                                 </attributes>
                                                                                             </fragment>
@@ -73,6 +92,8 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                                 <constraints>
+                                                                                    <constraint firstItem="wMT-vE-zRK" firstAttribute="centerY" secondItem="K4N-4V-Z4k" secondAttribute="centerY" constant="15" id="BHH-Uv-LNB"/>
+                                                                                    <constraint firstItem="wMT-vE-zRK" firstAttribute="centerX" secondItem="K4N-4V-Z4k" secondAttribute="centerX" id="Ee0-93-gfe"/>
                                                                                     <constraint firstItem="fnA-gZ-ep5" firstAttribute="centerY" secondItem="K4N-4V-Z4k" secondAttribute="centerY" id="Z6u-Sy-O5g"/>
                                                                                     <constraint firstItem="fnA-gZ-ep5" firstAttribute="centerX" secondItem="K4N-4V-Z4k" secondAttribute="centerX" id="fIL-PY-cKg"/>
                                                                                 </constraints>
@@ -80,6 +101,14 @@
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IP6-JN-ySF" userLabel="Analysis">
                                                                                 <rect key="frame" x="186.5" y="0.0" width="93.5" height="35"/>
                                                                                 <subviews>
+                                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYK-lh-6e4" userLabel="NavDot" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
+                                                                                        <rect key="frame" x="45" y="20.5" width="4" height="4"/>
+                                                                                        <color key="backgroundColor" red="0.58431372550000005" green="0.58431372550000005" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="height" constant="4" id="O15-qP-sE5"/>
+                                                                                            <constraint firstAttribute="width" constant="4" id="iFz-Oh-a4c"/>
+                                                                                        </constraints>
+                                                                                    </view>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3e-C3-RLP">
                                                                                         <rect key="frame" x="18.5" y="0.0" width="57" height="16.5"/>
                                                                                         <attributedString key="attributedText">
@@ -96,6 +125,8 @@
                                                                                 <constraints>
                                                                                     <constraint firstItem="E3e-C3-RLP" firstAttribute="centerX" secondItem="IP6-JN-ySF" secondAttribute="centerX" id="7ef-9s-geD"/>
                                                                                     <constraint firstItem="E3e-C3-RLP" firstAttribute="top" secondItem="IP6-JN-ySF" secondAttribute="top" id="AKY-68-33I"/>
+                                                                                    <constraint firstItem="qYK-lh-6e4" firstAttribute="centerX" secondItem="IP6-JN-ySF" secondAttribute="centerX" id="GRk-jx-hXg"/>
+                                                                                    <constraint firstItem="qYK-lh-6e4" firstAttribute="centerY" secondItem="IP6-JN-ySF" secondAttribute="centerY" constant="5" id="T0Y-JT-F87"/>
                                                                                 </constraints>
                                                                             </view>
                                                                         </subviews>
