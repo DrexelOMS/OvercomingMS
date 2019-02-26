@@ -56,7 +56,7 @@ class MedicationModifyAbstractSVC : ModifyAbstractSVC {
     
     var nameTFI = CustomEntryTFI(title: "Name")
     var dateTimeTFI = DateTimeTFI()
-    var amountTFI = AmountTFI()
+    var amountTFI = AmountTFI(uom: "pills")
     var rateTFI = MedicationRateTFI()
     
     override func customSetup() {

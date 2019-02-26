@@ -127,6 +127,7 @@
 		0AD7EB48222345A9006F71C0 /* ToggleLabeledCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */; };
 		0AD7EB4A22249DD0006F71C0 /* MedicationRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */; };
 		0AD7EB4C2224B9EC006F71C0 /* MedicationSelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4B2224B9EC006F71C0 /* MedicationSelectedItem.swift */; };
+		0AD7EB4E2224C057006F71C0 /* MedicationEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4D2224C057006F71C0 /* MedicationEditSVC.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -322,6 +323,7 @@
 		0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleLabeledCircleButton.swift; sourceTree = "<group>"; };
 		0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationRateModel.swift; sourceTree = "<group>"; };
 		0AD7EB4B2224B9EC006F71C0 /* MedicationSelectedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationSelectedItem.swift; sourceTree = "<group>"; };
+		0AD7EB4D2224C057006F71C0 /* MedicationEditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationEditSVC.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -788,6 +790,7 @@
 			isa = PBXGroup;
 			children = (
 				0AD7EB3E22230464006F71C0 /* MedicationAddSVC.swift */,
+				0AD7EB4D2224C057006F71C0 /* MedicationEditSVC.swift */,
 				0AD7EB3D22230464006F71C0 /* MedicationModifyAbstractSVC.swift */,
 			);
 			path = Medication;
@@ -1304,6 +1307,7 @@
 				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,
 				0AD7EB17221C68B4006F71C0 /* VitaminDSupplementSVC.swift in Sources */,
 				0A2BAA662202A24E004074F3 /* FoodRatingDBS.swift in Sources */,
+				0AD7EB4E2224C057006F71C0 /* MedicationEditSVC.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				0AD07F7E21FE3EA200C55831 /* TrackingViewController.swift in Sources */,
 				0AD7EB48222345A9006F71C0 /* ToggleLabeledCircleButton.swift in Sources */,
