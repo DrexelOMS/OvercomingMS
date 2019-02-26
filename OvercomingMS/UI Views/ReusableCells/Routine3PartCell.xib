@@ -49,7 +49,7 @@
                     <constraint firstItem="jwI-aw-RF0" firstAttribute="leading" secondItem="UoX-0G-9p6" secondAttribute="leading" constant="10" id="y3F-H3-c5L"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="labelCenter" destination="T0t-rS-BMi" id="CDK-gI-hH2"/>
                 <outlet property="labelLeft" destination="JIs-bG-aSu" id="Lfa-3J-Yf0"/>
