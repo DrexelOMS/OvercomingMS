@@ -11,7 +11,3 @@ import UIKit
 protocol DismissalDelegate : class {
     func finishedShowing(viewController: UIViewController)
 }
-
-protocol Dismissable : class {
-    var dismissalDelegate : DismissalDelegate? {get set}
-}

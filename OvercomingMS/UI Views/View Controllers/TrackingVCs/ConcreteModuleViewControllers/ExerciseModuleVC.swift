@@ -19,7 +19,7 @@ class ExerciseModuleVC: TrackingModuleAbstractVC {
         // Do any additional setup after loading the view.
         progressBar.setTitle(title: "Exercise")
         
-        initializeStackView(defaultView: ExerciseMainSVC())
+        initializeviewStack(defaultView: ExerciseMainSVC())
     }
     
     override func updateProgressBar() {

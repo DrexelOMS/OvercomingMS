@@ -19,7 +19,7 @@ class MedicationModuleVC: TrackingModuleAbstractVC {
         // Do any additional setup after loading the view.
         progressBar.setTitle(title: "Medication")
         
-        initializeStackView(defaultView: MedicationMainSVC())
+        initializeviewStack(defaultView: MedicationMainSVC())
     }
     
     override func updateProgressBar() {

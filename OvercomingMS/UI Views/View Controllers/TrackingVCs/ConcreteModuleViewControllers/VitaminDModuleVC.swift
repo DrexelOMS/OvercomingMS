@@ -19,7 +19,7 @@ class VitaminDModuleVC: TrackingModuleAbstractVC {
         // Do any additional setup after loading the view.
         progressBar.setTitle(title: "VitaminD")
         
-        initializeStackView(defaultView: VitaminDMainSVC())
+        initializeviewStack(defaultView: VitaminDMainSVC())
     }
     
     override func updateProgressBar() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DismissableVC : UIViewController, Dismissable {
+class DismissableVC : UIViewController {
     
     var dismissalDelegate: DismissalDelegate?
     

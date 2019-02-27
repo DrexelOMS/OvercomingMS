@@ -16,12 +16,11 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     //var progressBar : TrackingModuleProgressBar
     
     @IBOutlet weak var progressBar: TrackingProgressBar!
-    @IBOutlet weak var pullBarSVC: PullBarSVC!
+    @IBOutlet private weak var pullBarSVC: PullBarSVC!
     
     
-    @IBOutlet var mainView : UIView!
+    @IBOutlet private var mainView : UIView!
     
-    var defaultView : SlidingAbstractSVC!
     var topView : SlidingAbstractSVC {
         get {
             return viewStack[viewStack.count - 1]
@@ -48,11 +47,10 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         view.backgroundColor = theme.withAlphaComponent(0.6)
     }
     
-    func initializeStackView(defaultView: SlidingAbstractSVC) {
-        self.defaultView = defaultView
+    func initializeviewStack(defaultView: SlidingAbstractSVC) {
         
         viewStack = [SlidingAbstractSVC]()
-        viewStack.append(self.defaultView)
+        viewStack.append(defaultView)
         
         setMainView(slideMode: .Instant)
     }
