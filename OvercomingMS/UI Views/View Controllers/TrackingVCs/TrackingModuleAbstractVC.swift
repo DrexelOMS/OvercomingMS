@@ -11,15 +11,13 @@ import UIKit
 @IBDesignable
 class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     
-    @IBInspectable var theme : UIColor = UIColor.blue
-    
-    //var progressBar : TrackingModuleProgressBar
+    //MARK: Attributes
     
     @IBOutlet weak var progressBar: TrackingProgressBar!
     @IBOutlet private weak var pullBarSVC: PullBarSVC!
-    
-    
     @IBOutlet private var mainView : UIView!
+    
+    @IBInspectable var theme : UIColor = UIColor.blue
     
     var topView : SlidingAbstractSVC {
         get {
@@ -35,6 +33,7 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     
     private enum SlideMode { case Instant, RightToLeft, LeftToRight }
     
+    //MARK: Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,8 +72,9 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         updateProgressBar()
     }
     
+    //MARK: Helper methods
+    
     private func setMainView(slideMode: SlideMode){
-        topView.initialize(parentVC: self)
         
         topView.frame = mainView.bounds
         topView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -129,6 +129,8 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
             self.viewStack.remove(at: self.viewStack.count - 1)
         })
     }
+    
+    //MARK: Abstract Methods
     
     func updateProgressBar(){
         
