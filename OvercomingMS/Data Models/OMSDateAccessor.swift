@@ -70,6 +70,14 @@ class OMSDateAccessor {
         return false
     }
     
+    func lessThanComparison(dateToCompare: Date) -> Bool {
+        let currentDay = OMSDateAccessor.getFullDate(date: globalCurrentDate)
+        if let days = dateToCompare.totalDistance(from: currentDay, resultIn: .day) {
+            return days < 0
+        }
+        return false
+    }
+    
     var todaysDate : String { // this is to temporarily change the real world date
         get {
             if let today = defaults.object(forKey: "today") as? String {

@@ -11,6 +11,7 @@ import RealmSwift
 
 class SavedMedicationDBT: Object {
     @objc dynamic var MedicationName : String = ""
+    @objc dynamic var DateCreated : Date = Date()
     @objc dynamic var TimeOfDay : Date = Date()
     @objc dynamic var MedicationAmount : Int = 0
     @objc dynamic var MedicationUOM : String = ""
