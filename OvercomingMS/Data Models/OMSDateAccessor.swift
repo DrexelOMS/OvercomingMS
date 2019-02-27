@@ -62,6 +62,14 @@ class OMSDateAccessor {
         return weekdays[weekDay - 1]
     }
     
+    func greaterThanEqualComparison(dateToCompare: Date) -> Bool {
+        let currentDay = OMSDateAccessor.getFullDate(date: globalCurrentDate)
+        if let days = dateToCompare.totalDistance(from: currentDay, resultIn: .day) {
+            return days >= 0
+        }
+        return false
+    }
+    
     var todaysDate : String { // this is to temporarily change the real world date
         get {
             if let today = defaults.object(forKey: "today") as? String {
@@ -111,5 +119,19 @@ class OMSDateAccessor {
 extension Date {
     func minutes(from date: Date) -> Int {
         return Calendar.current.dateComponents([.minute], from: date, to: self).minute ?? 0
+    }
+    
+    func totalDistance(from date: Date, resultIn component: Calendar.Component) -> Int? {
+        return Calendar.current.dateComponents([component], from: self, to: date).value(for: component)
+    }
+    
+    func compare(with date: Date, only component: Calendar.Component) -> Int {
+        let days1 = Calendar.current.component(component, from: self)
+        let days2 = Calendar.current.component(component, from: date)
+        return days1 - days2
+    }
+    
+    func hasSame(_ component: Calendar.Component, as date: Date) -> Bool {
+        return self.compare(with: date, only: component) == 0
     }
 }

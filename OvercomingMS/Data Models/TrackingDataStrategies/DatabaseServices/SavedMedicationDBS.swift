@@ -45,9 +45,20 @@ class SavedMedicationDBS: TrackingModulesDBS {
         
     }
 
+    //TODO: we need a better way to delete items
 //get all the saved medications
-    func getSavedMedicationItems() -> Results<SavedMedicationDBT>? {
-        return realm.objects(SavedMedicationDBT.self)
+    func getSavedMedicationItems() -> List<SavedMedicationDBT>? {
+        let savedMeds: List<SavedMedicationDBT> = List<SavedMedicationDBT>()
+        let da = OMSDateAccessor()
+        for med in realm.objects(SavedMedicationDBT.self) {
+            if let deleteDate = med.DateDeleted {
+                if (da.greaterThanEqualComparison(dateToCompare: deleteDate)) {
+                    continue
+                }
+            }
+            savedMeds.append(med)
+        }
+        return savedMeds
     }
 
     func updateSavedMedicationItem(oldItem: SavedMedicationDBT, newItem: SavedMedicationDBT) {
