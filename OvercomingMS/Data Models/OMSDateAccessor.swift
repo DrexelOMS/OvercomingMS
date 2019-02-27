@@ -44,6 +44,24 @@ class OMSDateAccessor {
         //TODO: what if we change the date format, maybe it should go through a history of options
     }
     
+    static func getDayOfWeekLetter(_ today: String) -> Character {
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        let todayDate = formatter.date(from: today)!
+        let myCalendar = Calendar(identifier: .gregorian)
+        let weekDay = myCalendar.component(.weekday, from: todayDate)
+        let weekdays: [Character] = [
+            "U",
+            "M",
+            "T",
+            "W",
+            "R",
+            "F",
+            "S"
+        ]
+        return weekdays[weekDay - 1]
+    }
+    
     var todaysDate : String { // this is to temporarily change the real world date
         get {
             if let today = defaults.object(forKey: "today") as? String {

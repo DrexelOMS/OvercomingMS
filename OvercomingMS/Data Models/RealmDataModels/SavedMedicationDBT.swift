@@ -16,7 +16,4 @@ class SavedMedicationDBT: Object {
     @objc dynamic var MedicationUOM : String = ""
     @objc dynamic var Frequency : String = "" //Conversion is MTWRFSU, U is sunday
     @objc dynamic var DateDeleted: Date? = nil
-    
-    var parentDay = LinkingObjects(fromType: TrackingDayDBT.self, property: "savedMedicationDT")
-
 }

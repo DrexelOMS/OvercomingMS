@@ -62,10 +62,7 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         
         let item = savedMedications.getSavedMedicationItems()![indexPath.row]
         
-        cell.timeLabel.text = OMSDateAccessor.getDateTime(date: item.TimeOfDay)
-        cell.nameLabel.text = item.MedicationName
-        cell.amountLabel.text = "\(item.MedicationAmount) \(item.MedicationUOM)"
-        cell.doneCheckButton.IsDone = false // this will need to use another DBS method
+        cell.item = item
         
         return cell
     }

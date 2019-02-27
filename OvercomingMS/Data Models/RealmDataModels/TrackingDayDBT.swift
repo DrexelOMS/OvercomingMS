@@ -93,7 +93,11 @@ class TrackingDayDBT: Object {
                 return 100
             }
             else {
-                let percentage = Int(Float(MedicationTotal) / Float(ProgressBarConfig.medicationGoal) * 100)
+                let todaysTotalMeds : Float = Float(SavedMedicationDBS().getTodaysTotalMeds())
+                if todaysTotalMeds <= 0 {
+                    return 100
+                }
+                let percentage = Int(Float(MedicationTotal) / todaysTotalMeds) * 100
                 if percentage > 100 {
                     return 100
                 }
@@ -104,23 +108,17 @@ class TrackingDayDBT: Object {
         }
     }
     
+    var MedicationTotal: Int {
+        get {
+            return savedMedicationDT.count
+        }
+    }
+    
     //currently guess they would add a number of medications
     //you can only take a medication or not, but you could take 2 / 3 for some reason
     
     //this will be count of medicationHistoryDT / count of savedMedications with some voodo shit with frequency
-    var MedicationTotal: Int {
-        get {
-            var totalMeds = 0
-            for row in savedMedicationDT {
-                totalMeds += row.MedicationAmount
-            }
-            return totalMeds
-        }
-    }
-    
-    let savedMedicationDT = List<SavedMedicationDBT>()
-    
-
+    var savedMedicationDT = List<SavedMedicationDBT>()
     
     //MARK: ---------------------- OMEGA-3 ------------------------------
     

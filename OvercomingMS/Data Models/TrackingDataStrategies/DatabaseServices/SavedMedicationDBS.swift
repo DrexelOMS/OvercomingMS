@@ -77,10 +77,56 @@ class SavedMedicationDBS: TrackingModulesDBS {
         }
     }
     
+    func addTakenMedication(item: SavedMedicationDBT) {
+        do {
+            try realm.write() {
+               getTrackingDay()?.savedMedicationDT.append(item)
+            }
+        } catch {
+            print("Error delete SavedMedication data: \(error)")
+        }
+    }
+    
+    func removeTakenMedication(item: SavedMedicationDBT) {
+        do {
+            try realm.write() {
+                
+                if let index = getTrackingDay()?.savedMedicationDT.index(of: item){
+                    getTrackingDay()?.savedMedicationDT.remove(at: index)
+                }
+
+            }
+        } catch {
+            print("Error delete SavedMedication data: \(error)")
+        }
+    }
+    
+    func wasTaken(item: SavedMedicationDBT) -> Bool {
+        if getTrackingDay()?.savedMedicationDT.index(of: item) != nil{
+            return true
+        }
+        return false
+    }
+    
+    func isTrackedToday(item: SavedMedicationDBT) -> Bool {
+        return item.Frequency.contains(OMSDateAccessor.getDayOfWeekLetter(globalCurrentDate))
+    }
+    
     
     //TODO: this is not correct?
-    func getTotalMeds() -> Int {
-        return getTrackingDay()?.MedicationTotal ?? 0
+    func getTodaysTotalMeds() -> Int {
+        var count = 0
+
+        if let meds = getSavedMedicationItems(){
+            let todaysLetter = OMSDateAccessor.getDayOfWeekLetter(globalCurrentDate)
+            for med in meds {
+                
+                if med.Frequency.contains(todaysLetter) {
+                    count += 1
+                }
+            }
+        }
+        return count
     }
     
     //TODO: this is not correct?
