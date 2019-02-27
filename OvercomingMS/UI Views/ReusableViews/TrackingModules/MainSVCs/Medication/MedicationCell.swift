@@ -25,10 +25,14 @@ class MedicationCell : UITableViewCell {
             nameLabel.text = item.MedicationName
             amountLabel.text = "\(item.MedicationAmount) \(item.MedicationUOM)"
             doneCheckButton.IsDone = savedMedications.wasTaken(item: item)
-            isUserInteractionEnabled = savedMedications.isTrackedToday(item: item)
-            if(!isUserInteractionEnabled){
+            doneCheckButton.isUserInteractionEnabled = savedMedications.isTrackedToday(item: item)
+            if(!doneCheckButton.isUserInteractionEnabled){
                 backgroundColor = UIColor.lightGray
                 backgroundColor?.withAlphaComponent(0.5)
+            }
+            else {
+                backgroundColor = UIColor.clear
+                backgroundColor?.withAlphaComponent(1.0)
             }
         }
     }
