@@ -16,27 +16,29 @@ class MedRateButtonsSVC : CustomView {
         }
     }
     
-    var rateString : String {
+    private var medicationRate = MedicationRateModel()
+    
+    var rateModel : MedicationRateModel {
         get {
-            let medicationRate = MedicationRateModel()
-            medicationRate.monday = mondayButton.IsDone
-            medicationRate.tuesday = tuesdayButton.IsDone
-            medicationRate.wednesday = wedButton.IsDone
-            medicationRate.thursday = thursButton.IsDone
-            medicationRate.friday = fridayButton.IsDone
-            medicationRate.saturday = satButton.IsDone
-            medicationRate.sunday = sunButton.IsDone
-            return medicationRate.rateString
+            medicationRate.dictionary["M"] = mondayButton.IsDone
+            medicationRate.dictionary["T"] = tuesdayButton.IsDone
+            medicationRate.dictionary["W"] = wedButton.IsDone
+            medicationRate.dictionary["R"] = thursButton.IsDone
+            medicationRate.dictionary["F"] = fridayButton.IsDone
+            medicationRate.dictionary["S"] = satButton.IsDone
+            medicationRate.dictionary["U"] = sunButton.IsDone
+            
+            return medicationRate
         }
         set {
-            let medicationRate = MedicationRateModel(rateString: newValue)
-            mondayButton.IsDone = medicationRate.monday
-            tuesdayButton.IsDone = medicationRate.tuesday
-            wedButton.IsDone = medicationRate.wednesday
-            thursButton.IsDone = medicationRate.thursday
-            fridayButton.IsDone = medicationRate.friday
-            satButton.IsDone = medicationRate.saturday
-            sunButton.IsDone = medicationRate.sunday
+            let medicationRate = newValue
+            mondayButton.IsDone = medicationRate.dictionary["M"]!
+            tuesdayButton.IsDone = medicationRate.dictionary["T"]!
+            wedButton.IsDone = medicationRate.dictionary["W"]!
+            thursButton.IsDone = medicationRate.dictionary["R"]!
+            fridayButton.IsDone = medicationRate.dictionary["F"]!
+            satButton.IsDone = medicationRate.dictionary["S"]!
+            sunButton.IsDone = medicationRate.dictionary["U"]!
         }
     }
     

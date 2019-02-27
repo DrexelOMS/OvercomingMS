@@ -33,11 +33,11 @@ class SavedMedicationDBS: TrackingModulesDBS {
                 let item = SavedMedicationDBT()
                 
                 item.MedicationName = medicationName
+                item.DateCreated = OMSDateAccessor.getFullDate(date: globalCurrentDate)
                 item.TimeOfDay = timeOfDay
                 item.MedicationAmount = medicationAmount
                 item.MedicationUOM = medicationUOM
                 item.Frequency = freq
-                item.Active = active
                 realm.add(item)
             }
         } catch {
@@ -46,9 +46,24 @@ class SavedMedicationDBS: TrackingModulesDBS {
         
     }
 
+    //TODO: we need a better way to delete items
 //get all the saved medications
-    func getSavedMedicationItems() -> Results<SavedMedicationDBT>? {
-        return realm.objects(SavedMedicationDBT.self)
+    func getSavedMedicationItems() -> List<SavedMedicationDBT>? {
+        let savedMeds: List<SavedMedicationDBT> = List<SavedMedicationDBT>()
+        let da = OMSDateAccessor()
+        for med in realm.objects(SavedMedicationDBT.self) {
+            if let deleteDate = med.DateDeleted {
+                if da.greaterThanEqualComparison(dateToCompare: deleteDate) {
+                    continue
+                }
+            }
+            if da.lessThanComparison(dateToCompare: med.DateCreated) {
+                continue
+            }
+            print(med.DateCreated)
+            savedMeds.append(med)
+        }
+        return savedMeds
     }
 
     func updateSavedMedicationItem(oldItem: SavedMedicationDBT, newItem: SavedMedicationDBT) {
@@ -59,7 +74,6 @@ class SavedMedicationDBS: TrackingModulesDBS {
                 oldItem.MedicationAmount = newItem.MedicationAmount
                 oldItem.MedicationUOM = newItem.MedicationUOM
                 oldItem.Frequency = newItem.Frequency
-                oldItem.Active = newItem.Active
             }
         } catch {
             print("Error update SavedMedication data: \(error)")
@@ -72,18 +86,63 @@ class SavedMedicationDBS: TrackingModulesDBS {
         do {
             try realm.write() {
                 //item.Active = false
-                realm.delete(item) //more thought for tracking over time
-                print("test")
+                item.DateDeleted = OMSDateAccessor.getFullDate(date: getTrackingDay()!.DateCreated) //more thought for tracking over time
             }
         } catch {
             print("Error delete SavedMedication data: \(error)")
         }
     }
     
+    func addTakenMedication(item: SavedMedicationDBT) {
+        do {
+            try realm.write() {
+               getTrackingDay()?.savedMedicationDT.append(item)
+            }
+        } catch {
+            print("Error delete SavedMedication data: \(error)")
+        }
+    }
+    
+    func removeTakenMedication(item: SavedMedicationDBT) {
+        do {
+            try realm.write() {
+                
+                if let index = getTrackingDay()?.savedMedicationDT.index(of: item){
+                    getTrackingDay()?.savedMedicationDT.remove(at: index)
+                }
+
+            }
+        } catch {
+            print("Error delete SavedMedication data: \(error)")
+        }
+    }
+    
+    func wasTaken(item: SavedMedicationDBT) -> Bool {
+        if getTrackingDay()?.savedMedicationDT.index(of: item) != nil{
+            return true
+        }
+        return false
+    }
+    
+    func isTrackedToday(item: SavedMedicationDBT) -> Bool {
+        return item.Frequency.contains(OMSDateAccessor.getDayOfWeekLetter(globalCurrentDate))
+    }
+    
     
     //TODO: this is not correct?
-    func getTotalMeds() -> Int {
-        return getTrackingDay()?.MedicationTotal ?? 0
+    func getTodaysTotalMedGoal() -> Int {
+        var count = 0
+
+        if let meds = getSavedMedicationItems(){
+            let todaysLetter = OMSDateAccessor.getDayOfWeekLetter(globalCurrentDate)
+            for med in meds {
+                
+                if med.Frequency.contains(todaysLetter) {
+                    count += 1
+                }
+            }
+        }
+        return count
     }
     
     //TODO: this is not correct?

@@ -15,6 +15,24 @@ class MedicationCell : UITableViewCell {
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var doneCheckButton: DoneCheckButton!
     
+    var parentVC : TrackingModuleAbstractVC!
+    let savedMedications = SavedMedicationDBS()
+    
+    var item: SavedMedicationDBT!
+    {
+        didSet {
+            timeLabel.text = OMSDateAccessor.getDateTime(date: item.TimeOfDay)
+            nameLabel.text = item.MedicationName
+            amountLabel.text = "\(item.MedicationAmount) \(item.MedicationUOM)"
+            doneCheckButton.IsDone = savedMedications.wasTaken(item: item)
+            isUserInteractionEnabled = savedMedications.isTrackedToday(item: item)
+            if(!isUserInteractionEnabled){
+                backgroundColor = UIColor.lightGray
+                backgroundColor?.withAlphaComponent(0.5)
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization Code
@@ -28,6 +46,13 @@ class MedicationCell : UITableViewCell {
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
         doneCheckButton.toggle()
+        if(doneCheckButton.IsDone){
+            SavedMedicationDBS().addTakenMedication(item: item)
+        }
+        else {
+            SavedMedicationDBS().removeTakenMedication(item: item)
+        }
+        parentVC.updateProgressBar()
     }
     
 }

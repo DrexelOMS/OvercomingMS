@@ -13,31 +13,44 @@ class MedicationRateTFI : TypeTFIAbstract {
     
     override var choices: [String] {
         get {
-            return ["EveryDay", "WeekDays", "WeekEnds", "Custom"]
+            return MedicationRateModel.options
         }
     }
     
-    let medRate = MedRateButtonsSVC()
-    var rateString: String {
+    let medRateButtons = MedRateButtonsSVC()
+    var rateModel: MedicationRateModel? {
         get {
-            return medRate.rateString
+            if selectedType == "Custom" {
+                return medRateButtons.rateModel
+            }
+            else if let type = selectedType {
+                return MedicationRateModel(rateString: type)
+            }
+            return nil
         }
         set {
-            medRate.rateString = newValue
+            if newValue!.isEveryDay() {
+                selectedType = MedicationRateModel.options[0]
+            }
+            else
+            {
+                selectedType = MedicationRateModel.options[MedicationRateModel.options.count - 1]
+                medRateButtons.rateModel = newValue!
+            }
         }
     }
     
     override func customSetup() {
         super.customSetup()
         
-        constrain(medRate) { (view) in
+        constrain(medRateButtons) { (view) in
             view.height == 100.0
         }
         
-        stackView.addArrangedSubview(medRate)
+        stackView.addArrangedSubview(medRateButtons)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        medRate.isHidden = true
+        medRateButtons.isHidden = true
     }
     
     override var title : String {
@@ -50,22 +63,22 @@ class MedicationRateTFI : TypeTFIAbstract {
         super.showTextFieldInput()
 
         if tempSelectedType == "Custom" {
-            medRate.isHidden = false
+            medRateButtons.isHidden = false
         }
     }
     
     override func closePicker() {
         super.closePicker()
-        medRate.isHidden = true
+        medRateButtons.isHidden = true
     }
 
     override func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         tempSelectedType = choices[row]
         if choices[row] == "Custom" {
-            medRate.isHidden = false
+            medRateButtons.isHidden = false
         }
         else {
-            medRate.isHidden = true
+            medRateButtons.isHidden = true
         }
     }
 
