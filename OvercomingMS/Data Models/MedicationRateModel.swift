@@ -10,42 +10,80 @@ import Foundation
 
 class MedicationRateModel {
     
-    static let options = ["EveryDay", "WeekDays", "WeekEnds", "Custom"]
+    static let options = ["EveryDay", "Custom"]
     
     var dictionary : Dictionary = ["M": false, "T": false, "W": false, "R": false, "F": false, "S": false, "U": false]
-    
-    private var _rateString = ""
     
     var rateString: String { //MTWRFSU
         get{
             var string = ""
-            if !MedicationRateModel.options.contains(_rateString) {
-                for key in dictionary.keys {
-                    if dictionary[key] ?? false {
-                        string += key
-                    }
+            
+            for key in dictionary.keys {
+                if dictionary[key] ?? false {
+                    string += key
                 }
             }
-            else {
-                string = _rateString
-            }
+
             return string
         }
         set {
-            if MedicationRateModel.options.contains(newValue) {
-                _rateString = newValue
-            }
-            else {
-                for key in dictionary.keys {
-                    dictionary[key] = newValue.contains(key)
-                }
+            for key in dictionary.keys {
+                dictionary[key] = newValue.contains(key) || newValue == "EveryDay"
             }
         }
     }
     
+    func isEveryDay() -> Bool {
+        for pair in dictionary {
+            if !pair.value {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func formattedString() -> String {
+        var string = ""
+        var count = 0
+        
+        if dictionary["U"] ?? false {
+            string += "S"
+            count += 1
+        }
+        if dictionary["M"] ?? false {
+            string += "M"
+            count += 1
+        }
+        if dictionary["T"] ?? false {
+            string += "T"
+            count += 1
+        }
+        if dictionary["W"] ?? false {
+            string += "W"
+            count += 1
+        }
+        if dictionary["R"] ?? false {
+            string += "R"
+            count += 1
+        }
+        if dictionary["F"] ?? false {
+            string += "F"
+            count += 1
+        }
+        if dictionary["S"] ?? false {
+            string += "S"
+            count += 1
+        }
+        
+        if count >= 7 {
+            return MedicationRateModel.options[0]
+        }
+        
+        return string
+    }
+    
     convenience init(rateString: String) {
         self.init()
-        
         self.rateString = rateString
     }
     

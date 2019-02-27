@@ -16,9 +16,10 @@ class MedRateButtonsSVC : CustomView {
         }
     }
     
+    private var medicationRate = MedicationRateModel()
+    
     var rateModel : MedicationRateModel {
         get {
-            let medicationRate = MedicationRateModel()
             medicationRate.dictionary["M"] = mondayButton.IsDone
             medicationRate.dictionary["T"] = tuesdayButton.IsDone
             medicationRate.dictionary["W"] = wedButton.IsDone

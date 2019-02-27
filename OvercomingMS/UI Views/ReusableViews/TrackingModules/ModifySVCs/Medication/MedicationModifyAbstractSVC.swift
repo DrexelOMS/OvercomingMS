@@ -39,11 +39,11 @@ class MedicationModifyAbstractSVC : ModifyAbstractSVC {
     }
     var selectedRate : String? {
         get {
-            return rateTFI.rateString
+            return rateTFI.rateModel?.rateString
         }
         set {
             if let string = newValue {
-                rateTFI.rateString = string
+                rateTFI.rateModel = MedicationRateModel(rateString: string)
             }
         }
     }
