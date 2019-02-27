@@ -13,17 +13,28 @@ class MedicationRateTFI : TypeTFIAbstract {
     
     override var choices: [String] {
         get {
-            return ["EveryDay", "WeekDays", "WeekEnds", "Custom"]
+            return MedicationRateModel.options
         }
     }
     
     let medRate = MedRateButtonsSVC()
-    var rateString: String {
+    var rateString: String? {
         get {
-            return medRate.rateString
+            if selectedType == "Custom" {
+                return medRate.rateModel.rateString
+            }
+            else {
+                return selectedType
+            }
         }
         set {
-            medRate.rateString = newValue
+            if MedicationRateModel.options.contains(newValue!) {
+                selectedType = newValue
+            }
+            else {
+                selectedType = "Custom"
+                medRate.rateModel = MedicationRateModel(rateString: newValue!)
+            }
         }
     }
     
@@ -57,6 +68,7 @@ class MedicationRateTFI : TypeTFIAbstract {
     override func closePicker() {
         super.closePicker()
         medRate.isHidden = true
+        print(rateString)
     }
 
     override func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

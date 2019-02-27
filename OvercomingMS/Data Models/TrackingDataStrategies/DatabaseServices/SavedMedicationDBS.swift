@@ -37,7 +37,6 @@ class SavedMedicationDBS: TrackingModulesDBS {
                 item.MedicationAmount = medicationAmount
                 item.MedicationUOM = medicationUOM
                 item.Frequency = freq
-                item.Active = active
                 realm.add(item)
             }
         } catch {
@@ -59,7 +58,6 @@ class SavedMedicationDBS: TrackingModulesDBS {
                 oldItem.MedicationAmount = newItem.MedicationAmount
                 oldItem.MedicationUOM = newItem.MedicationUOM
                 oldItem.Frequency = newItem.Frequency
-                oldItem.Active = newItem.Active
             }
         } catch {
             print("Error update SavedMedication data: \(error)")
@@ -72,8 +70,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
         do {
             try realm.write() {
                 //item.Active = false
-                realm.delete(item) //more thought for tracking over time
-                print("test")
+                item.DateDeleted = OMSDateAccessor.getFullDate(date: getTrackingDay()!.DateCreated) //more thought for tracking over time
             }
         } catch {
             print("Error delete SavedMedication data: \(error)")

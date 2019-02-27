@@ -21,26 +21,20 @@ class MedicationEditSVC : MedicationModifyAbstractSVC {
     
     override func ConfirmPressed() {
         
-        if let name = selectedName, let startTime = selectedStartTime, let amount = selectedAmount, let rate = rateTFI.selectedType  {
+        if let name = selectedName, let startTime = selectedStartTime, let amount = selectedAmount, let rate =  selectedRate  {
 
-            var freq = ""
-            if rate == "Custom" {
-                if(rateTFI.rateString == "") {
-                    selectedRate = ""
-                    return
-                }
-                else {
-                    freq = rateTFI.rateString
-                }
+            if rate == "" {
+                return
             }
+            
+            print("Rate: " + rate)
             
             let newItem = SavedMedicationDBT()
             newItem.MedicationName = name
             newItem.TimeOfDay = startTime
             newItem.MedicationAmount = amount
             newItem.MedicationUOM = "pills"
-            newItem.Frequency = freq
-            newItem.Active = true
+            newItem.Frequency = rate
             
             savedMedications.updateSavedMedicationItem(oldItem: editingMedicationItem, newItem: newItem)
             

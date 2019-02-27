@@ -12,20 +12,15 @@ class MedicationAddSVC : MedicationModifyAbstractSVC {
     
     override func ConfirmPressed() {
         
-        if let name = selectedName, let startTime = selectedStartTime, let amount = selectedAmount, let rate = rateTFI.selectedType  {
-
-            var freq = ""
-            if rate == "Custom" {
-                if(rateTFI.rateString == "") {
-                    selectedRate = ""
-                    return
-                }
-                else {
-                    freq = rateTFI.rateString
-                }
+        if let name = selectedName, let startTime = selectedStartTime, let amount = selectedAmount, let rate = selectedRate  {
+            
+            if rate == "" {
+                return
             }
             
-            savedMedications.addMedicationItem(medicationName: name, timeOfDay: startTime, medicationAmount: amount, medicationUOM: "pills", freq: freq, active: true)
+            print("Rate: " + rate)
+            
+            savedMedications.addMedicationItem(medicationName: name, timeOfDay: startTime, medicationAmount: amount, medicationUOM: "pills", freq: rate, active: true)
             
             parentVC.updateProgressBar();
             parentVC.resetToDefaultView()

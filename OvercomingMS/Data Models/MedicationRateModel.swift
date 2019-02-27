@@ -10,37 +10,38 @@ import Foundation
 
 class MedicationRateModel {
     
+    static let options = ["EveryDay", "WeekDays", "WeekEnds", "Custom"]
+    
+    var dictionary : Dictionary = ["M": false, "T": false, "W": false, "R": false, "F": false, "S": false, "U": false]
+    
+    private var _rateString = ""
+    
     var rateString: String { //MTWRFSU
         get{
             var string = ""
-            if monday { string += "M" }
-            if tuesday { string += "T" }
-            if wednesday { string += "W" }
-            if thursday { string += "R" }
-            if friday { string += "F" }
-            if saturday { string += "S" }
-            if sunday { string += "U" }
+            if !MedicationRateModel.options.contains(_rateString) {
+                for key in dictionary.keys {
+                    if dictionary[key] ?? false {
+                        string += key
+                    }
+                }
+            }
+            else {
+                string = _rateString
+            }
             return string
         }
         set {
-            monday = newValue.lowercased().contains("m")
-            tuesday = newValue.lowercased().contains("t")
-            wednesday = newValue.lowercased().contains("w")
-            thursday = newValue.lowercased().contains("r")
-            friday = newValue.lowercased().contains("f")
-            saturday = newValue.lowercased().contains("s")
-            sunday = newValue.lowercased().contains("u")
+            if MedicationRateModel.options.contains(newValue) {
+                _rateString = newValue
+            }
+            else {
+                for key in dictionary.keys {
+                    dictionary[key] = newValue.contains(key)
+                }
+            }
         }
     }
-    
-    //ReadOnly
-    var monday: Bool = false
-    var tuesday: Bool = false
-    var wednesday: Bool = false
-    var thursday: Bool = false
-    var friday: Bool = false
-    var saturday: Bool = false
-    var sunday: Bool = false
     
     convenience init(rateString: String) {
         self.init()
