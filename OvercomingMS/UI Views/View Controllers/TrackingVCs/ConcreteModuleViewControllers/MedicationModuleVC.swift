@@ -11,7 +11,7 @@ import RealmSwift
 
 class MedicationModuleVC: TrackingModuleAbstractVC {
     
-    //private let medicationHistory = MedicationHistoryDBS()
+    private let savedMedications = SavedMedicationDBS()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +23,16 @@ class MedicationModuleVC: TrackingModuleAbstractVC {
     }
     
     override func updateProgressBar() {
-//        progressBar.setProgressValue(value: meditationRoutines.getPercentageComplete())
-//        let amountRemaining = ProgressBarConfig.meditationGoal - meditationRoutines.getTotalMinutes()
-//        var description = ""
-//        if(amountRemaining <= 0){
-//            description = "Daily goal reached!"
-//        }
-//        else {
-//            description = "\(amountRemaining) minutes left"
-//        }
-//        progressBar.setDescription(description: description)
+        progressBar.setProgressValue(value: savedMedications.getPercentageComplete())
+        let amountRemaining = savedMedications.getTodaysTotalMedGoal() - savedMedications.getTrackingDay()!.MedicationTotal
+        var description = ""
+        if(amountRemaining <= 0){
+            description = "Daily goal reached!"
+        }
+        else {
+            description = "\(amountRemaining) meds left"
+        }
+        progressBar.setDescription(description: description)
     }
 
 }

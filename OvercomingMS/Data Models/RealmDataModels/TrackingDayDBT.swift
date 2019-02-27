@@ -93,11 +93,11 @@ class TrackingDayDBT: Object {
                 return 100
             }
             else {
-                let todaysTotalMeds : Float = Float(SavedMedicationDBS().getTodaysTotalMeds())
+                let todaysTotalMeds : Float = Float(SavedMedicationDBS().getTodaysTotalMedGoal())
                 if todaysTotalMeds <= 0 {
                     return 100
                 }
-                let percentage = Int(Float(MedicationTotal) / todaysTotalMeds) * 100
+                let percentage = Int(Float(MedicationTotal) / Float(todaysTotalMeds) * 100)
                 if percentage > 100 {
                     return 100
                 }

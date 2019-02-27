@@ -63,6 +63,7 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         let item = savedMedications.getSavedMedicationItems()![indexPath.row]
         
         cell.item = item
+        cell.parentVC = parentVC
         
         return cell
     }

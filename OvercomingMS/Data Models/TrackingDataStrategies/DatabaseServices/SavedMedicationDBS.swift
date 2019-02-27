@@ -125,7 +125,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
     
     
     //TODO: this is not correct?
-    func getTodaysTotalMeds() -> Int {
+    func getTodaysTotalMedGoal() -> Int {
         var count = 0
 
         if let meds = getSavedMedicationItems(){
