@@ -31,7 +31,7 @@ class ExerciseEditSVC : ExerciseModifyAbstractSVC {
             newItem.StartTime = startTime
             newItem.EndTime = startTime.addingTimeInterval(TimeInterval(minutes * 60))
             
-            exerciseRoutines.updateExerciseItem(oldItem: editingExerciseItem, newItem: newItem)
+            exerciseHistory.updateExerciseItem(oldItem: editingExerciseItem, newItem: newItem)
             
             parentVC.updateProgressBar();
             
