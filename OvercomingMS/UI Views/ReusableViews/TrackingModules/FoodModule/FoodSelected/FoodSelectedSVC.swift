@@ -32,7 +32,10 @@ class FoodSelectedSVC : SlidingAbstractSVC {
             approveDisaproveView.addSubview(view)
         }
         else{
-            view = FoodRejectedSVC()
+            print(ingredients)
+            print(types)
+            let allBadStuff = ingredients + types
+            view = FoodRejectedSVC(_badLabels: allBadStuff)
             approveDisaproveView.addSubview(view)
         }
         

@@ -143,6 +143,8 @@
 		0AD94DDB220E0D7600B5C2BA /* MeditationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DDA220E0D7600B5C2BA /* MeditationModuleVC.swift */; };
 		0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DE0220E178E00B5C2BA /* MeditationMainSVC.swift */; };
 		0AD94DE3220E17BD00B5C2BA /* GuidedCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DE2220E17BD00B5C2BA /* GuidedCircleButton.swift */; };
+		0AEF7A29222AFA88009A0292 /* BadIngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */; };
+		0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -347,6 +349,8 @@
 		0AD94DDA220E0D7600B5C2BA /* MeditationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationModuleVC.swift; sourceTree = "<group>"; };
 		0AD94DE0220E178E00B5C2BA /* MeditationMainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationMainSVC.swift; sourceTree = "<group>"; };
 		0AD94DE2220E17BD00B5C2BA /* GuidedCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidedCircleButton.swift; sourceTree = "<group>"; };
+		0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadIngredientsCell.swift; sourceTree = "<group>"; };
+		0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadIngredientsCell.xib; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -798,6 +802,8 @@
 				0CAD6314221D9C7700E50E72 /* FoodApprovedSVC.xib */,
 				0AD7EB1D2220B2D9006F71C0 /* FoodRejectedSVC.swift */,
 				0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */,
+				0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */,
+				0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */,
 			);
 			path = FoodSelected;
 			sourceTree = "<group>";
@@ -1158,6 +1164,7 @@
 				0CAD6319221DD50500E50E72 /* SeeMoreButtonSVC.xib in Resources */,
 				0AD7EB13221B4D23006F71C0 /* SelectedLabelsSVC.xib in Resources */,
 				0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */,
+				0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */,
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
 				0A1FEC532204E79D006CED70 /* QuickCompleteFood.storyboard in Resources */,
@@ -1346,6 +1353,7 @@
 				0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */,
 				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,
 				0AD7EB17221C68B4006F71C0 /* VitaminDSupplementSVC.swift in Sources */,
+				0AEF7A29222AFA88009A0292 /* BadIngredientsCell.swift in Sources */,
 				0A2BAA662202A24E004074F3 /* FoodRatingDBS.swift in Sources */,
 				0AD7EB4E2224C057006F71C0 /* MedicationEditSVC.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,

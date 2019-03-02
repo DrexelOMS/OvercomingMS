@@ -61,7 +61,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         let url = NSURL(string: eurl ?? "")
         
         //fetching the data from the url
-        URLSession.shared.dataTask(with: (url as? URL)!, completionHandler: {(data, response, error) -> Void in
+        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                 
@@ -76,7 +76,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
                         
                         //converting the element to a dictionary
                         if let foodDict = food as? NSDictionary {
-                            var satfat : Int = 0;
+                            let satfat : Int = 0;
                             var categories : String = ""
                             var id : String = ""
                             var ingrdientsList = ""
@@ -103,8 +103,8 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
                             //                            }
                             //getting the name from the dictionary
                             if let name = foodDict.value(forKey: "product_name") {
-                                let fooditem = Food(id:id,name:name as! String, categories: categories, satfats: satfat, ingredients: ingrdientsList)
-                                print(name as! String + ": " + categories + "\n")
+                                let fooditem = Food(id:id,name:(name as! String), categories: categories, satfats: satfat, ingredients: ingrdientsList)
+                                //print(name as! String + ": " + categories + "\n")
                                 //adding the name to the array
                                 self.foodItemsArray.append(fooditem);
                                 //self.nameArray.append((name as? String)!)
