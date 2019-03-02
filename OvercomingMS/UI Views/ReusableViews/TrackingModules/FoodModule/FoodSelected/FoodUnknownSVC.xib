@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodUnknownSVC"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="7Zr-zP-4jv">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="223"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFV-9i-PZZ">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="223"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nNt-Yq-ReW">
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="223"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GlI-KD-rfr">
+                                    <rect key="frame" x="0.0" y="0.0" width="280" height="190"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cancel" translatesAutoresizingMaskIntoConstraints="NO" id="USv-CE-1rn">
+                                            <rect key="frame" x="10" y="10" width="260" height="170"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="USv-CE-1rn" firstAttribute="leading" secondItem="GlI-KD-rfr" secondAttribute="leading" constant="10" id="8J6-uD-bus"/>
+                                        <constraint firstItem="USv-CE-1rn" firstAttribute="top" secondItem="GlI-KD-rfr" secondAttribute="top" constant="10" id="acN-8x-1gr"/>
+                                        <constraint firstAttribute="bottom" secondItem="USv-CE-1rn" secondAttribute="bottom" constant="10" id="kO3-qM-8Lx"/>
+                                        <constraint firstAttribute="trailing" secondItem="USv-CE-1rn" secondAttribute="trailing" constant="10" id="xcq-UM-qxc"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMT-ZO-EEa">
+                                    <rect key="frame" x="0.0" y="198" width="280" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="DKu-IY-1wP"/>
+                                    </constraints>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Not enough info.">
+                                            <attributes>
+                                                <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="19.332999999999998" name="Quicksand-Bold"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="nNt-Yq-ReW" secondAttribute="bottom" id="Ogb-8V-04O"/>
+                        <constraint firstAttribute="trailing" secondItem="nNt-Yq-ReW" secondAttribute="trailing" id="ezM-bd-txg"/>
+                        <constraint firstItem="nNt-Yq-ReW" firstAttribute="top" secondItem="jFV-9i-PZZ" secondAttribute="top" id="gP3-PJ-r4L"/>
+                        <constraint firstItem="nNt-Yq-ReW" firstAttribute="leading" secondItem="jFV-9i-PZZ" secondAttribute="leading" id="kbA-xd-Kkx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="jFV-9i-PZZ" firstAttribute="bottom" secondItem="Ed4-2f-BQ5" secondAttribute="bottom" id="2DJ-FZ-XmT"/>
+                <constraint firstItem="jFV-9i-PZZ" firstAttribute="leading" secondItem="Ed4-2f-BQ5" secondAttribute="leading" id="mSZ-iz-4Gy"/>
+                <constraint firstItem="jFV-9i-PZZ" firstAttribute="top" secondItem="Ed4-2f-BQ5" secondAttribute="top" id="vxz-E3-VVz"/>
+                <constraint firstItem="jFV-9i-PZZ" firstAttribute="trailing" secondItem="Ed4-2f-BQ5" secondAttribute="trailing" id="z6l-bY-z7J"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Ed4-2f-BQ5"/>
+            <point key="canvasLocation" x="57.600000000000001" y="380.95952023988008"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Cancel" width="689" height="689"/>
+    </resources>
+</document>

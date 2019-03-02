@@ -56,11 +56,12 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         if(searchCriteria == ""){
             return
         }
-        
-        let url = NSURL(string: URLBeginning+searchCriteria+URLEnd)
+        let neurl = URLBeginning+searchCriteria+URLEnd
+        let eurl = neurl.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let url = NSURL(string: eurl ?? "")
         
         //fetching the data from the url
-        URLSession.shared.dataTask(with: (url as? URL)!, completionHandler: {(data, response, error) -> Void in
+        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                 
@@ -75,7 +76,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
                         
                         //converting the element to a dictionary
                         if let foodDict = food as? NSDictionary {
-                            var satfat : Int = 0;
+                            let satfat : Int = 0;
                             var categories : String = ""
                             var id : String = ""
                             var ingrdientsList = ""
@@ -102,8 +103,8 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
                             //                            }
                             //getting the name from the dictionary
                             if let name = foodDict.value(forKey: "product_name") {
-                                let fooditem = Food(id:id,name:name as! String, categories: categories, satfats: satfat, ingredients: ingrdientsList)
-                                print(name as! String + ": " + categories + "\n")
+                                let fooditem = Food(id:id,name:(name as! String), categories: categories, satfats: satfat, ingredients: ingrdientsList)
+                                //print(name as! String + ": " + categories + "\n")
                                 //adding the name to the array
                                 self.foodItemsArray.append(fooditem);
                                 //self.nameArray.append((name as? String)!)
@@ -129,49 +130,49 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func checkType(type:String) -> RecommendedLevel{
-        if(type == "Dairy"){
+        if(type.contains("Dairy")){
             return RecommendedLevel.Bad
         }
-        if(type == "Dairies"){
+        if(type.contains("Dairies")){
             return RecommendedLevel.Bad
         }
-        if(type == "Meat"){
+        if(type.contains("Meat")){
             return RecommendedLevel.Bad
         }
-        if(type == "Meats"){
+        if(type.contains("Meats")){
             return RecommendedLevel.Bad
         }
-        if(type == "Fat"){
+        if(type.contains("Fat")){
             return RecommendedLevel.Bad
         }
-        if(type == "Fats"){
+        if(type.contains("Fats")){
             return RecommendedLevel.Bad
         }
-        if(type == "Egg"){
+        if(type.contains("Egg")){
             return RecommendedLevel.Caution
         }
-        if(type == "Eggs"){
+        if(type.contains("Eggs")){
             return RecommendedLevel.Caution
         }
-        if(type == "Cheese"){
+        if(type.contains("Cheese")){
             return RecommendedLevel.Bad
         }
-        if(type == "Poultry"){
+        if(type.contains("Poultry")){
             return RecommendedLevel.Bad
         }
-        if(type == "Poultries"){
+        if(type.contains("Poultries")){
             return RecommendedLevel.Bad
         }
-        if(type == "Beef"){
+        if(type.contains("Beef")){
             return RecommendedLevel.Bad
         }
-        if(type == "Beefs"){
+        if(type.contains("Beefs")){
             return RecommendedLevel.Bad
         }
-        if(type == "Chicken"){
+        if(type.contains("Chicken")){
             return RecommendedLevel.Bad
         }
-        if(type == "Chickens"){
+        if(type.contains("Chickens")){
             return RecommendedLevel.Bad
         }
         return RecommendedLevel.Good
@@ -235,12 +236,15 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
             parentVC.pushSubView(newSubView: FoodSelectedSVC(ingredients:[""], types:[""]))
         }
         else{
-            for str in food.Ingredients.split(separator: ","){
-                if self.nonVeganPhrases.contains(String(str)){
-                    badingredients.append(String(str))
+            
+            for str in food.Ingredients.components(separatedBy: ","){
+                for phrases in nonVeganPhrases{
+                    if String(str).lowercased().contains(phrases){
+                        badingredients.append(String(str))
+                    }
                 }
             }
-            for str in food.Categories.split(separator: ","){
+            for str in food.Categories.components(separatedBy: ","){
                 if checkType(type: String(str)) == RecommendedLevel.Bad{
                     badTypes.append(String(str))
                 }

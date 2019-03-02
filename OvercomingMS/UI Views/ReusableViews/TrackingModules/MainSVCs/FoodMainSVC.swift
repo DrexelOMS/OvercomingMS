@@ -72,12 +72,18 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     
     func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
         controller.dismiss(animated: true, completion: nil)
+        self.parentVC.pushSubView(newSubView: FoodSelectedSVC(unknown: true))
     }
     
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         print(code)
         controller.dismiss(animated: true) {
             print("Bring up FoodSelectionSVC with barcode: \(code)")
+        
+            //TODO: use an api accessor class to get the list of ingredients/type for the given barcode number
+            // Note if this fails to find  a food for the barcode, it should pass the unknown mode
+            //Use the appropriate FoodSelected Contstructor if you have ingrediants / types, or couldnt find enough info
+            self.parentVC.pushSubView(newSubView: FoodSelectedSVC(unknown: true))
         }
     }
 

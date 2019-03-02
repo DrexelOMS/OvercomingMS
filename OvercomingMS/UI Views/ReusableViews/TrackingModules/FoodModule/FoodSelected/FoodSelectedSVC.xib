@@ -14,6 +14,8 @@
             <connections>
                 <outlet property="approveDisaproveView" destination="nDu-S9-dhl" id="3m4-l4-J79"/>
                 <outlet property="backButton" destination="cbz-sv-NAZ" id="1d7-hL-GCI"/>
+                <outlet property="foodDescriptionLabel" destination="elZ-RQ-wbe" id="hb6-Zv-cfa"/>
+                <outlet property="foodNameLabel" destination="iwe-Sk-ZzF" id="8Xu-O6-3ed"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
