@@ -79,37 +79,31 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     private func loadCurrentDayUI() {
         
         if let currentTrackingDay = TrackingModulesDBS().getTrackingDay(date: globalCurrentDate) {
-            dateLog.text = currentTrackingDay.DateCreated
-            //TODO make a way to get the proper description for each
-            //FoodEatenRating is 1 - 5
-            foodBar.setDescription(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
-            omega3Bar.setProgressValue(value: currentTrackingDay.Omega3ComputedPercentageComplete)
-            omega3Bar.setDescription(description: String(currentTrackingDay.Omega3Total))
-            vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDComputedPercentageComplete)
-            vitaminDBar.setDescription(description: String(currentTrackingDay.VitaminDTotal))
-            exerciseBar.setProgressValue(value: currentTrackingDay.ExerciseComputedPercentageComplete)
-            exerciseBar.setDescription(description: String(currentTrackingDay.ExerciseTimeTotal))
-            meditationBar.setProgressValue(value: currentTrackingDay.MeditationComputedPercentageComplete)
-            meditationBar.setDescription(description: String(currentTrackingDay.MeditationTimeTotal))
-            medicationBar.setProgressValue(value: currentTrackingDay.MedicationComputedPercentageComplete)
-            medicationBar.setDescription(description: String(currentTrackingDay.MedicationTotal))
+            updatePageUI(currentTrackingDay)
         }
         else{
             print("Do something for days that were not tracked")
-            dateLog.text = globalCurrentDate
-            foodBar.setDescription(description: "Untracked")
-            omega3Bar.setProgressValue(value: 0)
-            omega3Bar.setDescription(description: "Untracked")
-            vitaminDBar.setProgressValue(value: 0)
-            vitaminDBar.setDescription(description: "Untracked")
-            exerciseBar.setProgressValue(value: 0)
-            exerciseBar.setDescription(description: "Untracked")
-            meditationBar.setProgressValue(value: 0)
-            meditationBar.setDescription(description: "Untracked")
-            medicationBar.setProgressValue(value: 0)
-            medicationBar.setDescription(description: "Untracked")
+            OMSDateAccessor().createDay(date: globalCurrentDate)
+            loadCurrentDayUI()
         }
         
+    }
+    
+    private func updatePageUI(_ currentTrackingDay: TrackingDayDBT) {
+        dateLog.text = currentTrackingDay.DateCreated
+        //TODO make a way to get the proper description for each
+        //FoodEatenRating is 1 - 5
+        foodBar.setDescription(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
+        omega3Bar.setProgressValue(value: currentTrackingDay.Omega3ComputedPercentageComplete)
+        omega3Bar.setDescription(description: String(currentTrackingDay.Omega3Total))
+        vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDComputedPercentageComplete)
+        vitaminDBar.setDescription(description: String(currentTrackingDay.VitaminDTotal))
+        exerciseBar.setProgressValue(value: currentTrackingDay.ExerciseComputedPercentageComplete)
+        exerciseBar.setDescription(description: String(currentTrackingDay.ExerciseTimeTotal))
+        meditationBar.setProgressValue(value: currentTrackingDay.MeditationComputedPercentageComplete)
+        meditationBar.setDescription(description: String(currentTrackingDay.MeditationTimeTotal))
+        medicationBar.setProgressValue(value: currentTrackingDay.MedicationComputedPercentageComplete)
+        medicationBar.setDescription(description: String(currentTrackingDay.MedicationTotal))
     }
     
     //MARK: Delegates
