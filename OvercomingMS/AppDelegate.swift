@@ -26,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error initialising new realm, \(error)")
         }
         
+        SymptomsNoteDBS().addNote(note: "feeling numb", dateCreated: globalCurrentFullDate)
+        
+        
         
         return true
     }
