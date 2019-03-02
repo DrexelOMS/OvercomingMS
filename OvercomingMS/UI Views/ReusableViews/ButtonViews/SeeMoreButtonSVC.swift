@@ -17,6 +17,8 @@ class SeeMoreButtonSVC : CustomView {
         }
     }
     
+    var url = "https://overcomingms.org"
+    
     override func customSetup() {
         self.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonTapped(tapGestureRecognizer: )))
@@ -25,7 +27,7 @@ class SeeMoreButtonSVC : CustomView {
     
     @objc func buttonTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         let popupvc = PTPopupWebViewController()
-        popupvc.popupView.URL(string: "https://overcomingms.org")
+        popupvc.popupView.URL(string: url)
         popupvc.show()
     }
     
