@@ -17,7 +17,13 @@ class SeeMoreButtonSVC : CustomView {
     }
     
     override func customSetup() {
-        
+        self.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonTapped(tapGestureRecognizer: )))
+        self.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func buttonTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        print("buttonTapped")
     }
     
 }

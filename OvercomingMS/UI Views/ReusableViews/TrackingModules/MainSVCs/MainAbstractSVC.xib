@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainAbstractSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="buttonStackView" destination="eyX-rE-Fma" id="F9A-bV-2N5"/>
+                <outlet property="internetPopupButton" destination="UeA-7A-NxG" id="5zS-Zq-Wbh"/>
                 <outlet property="tableView" destination="bfj-aj-J4I" id="yKR-1W-7Jv"/>
                 <outlet property="totalsCountLabel" destination="bXC-Bw-61b" id="uVf-P7-LYs"/>
                 <outlet property="totalsTextLabel" destination="DHZ-Fv-UcE" id="BcE-qL-fJb"/>
