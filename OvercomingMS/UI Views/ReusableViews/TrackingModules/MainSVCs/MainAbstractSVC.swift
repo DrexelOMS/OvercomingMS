@@ -20,7 +20,7 @@ class MainAbstractSVC: SlidingAbstractSVC {
     
     @IBOutlet weak var totalsCountLabel : UILabel!
     @IBOutlet weak var totalsTextLabel: UILabel!
-    //@IBOutlet var internetPopUpButton : UIButton!
+    @IBOutlet weak var internetPopupButton: SeeMoreButtonSVC!
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var buttonStackView : UIStackView!
 

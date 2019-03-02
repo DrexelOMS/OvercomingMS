@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PTPopupWebView
 
 class SeeMoreButtonSVC : CustomView {
     
@@ -16,8 +17,18 @@ class SeeMoreButtonSVC : CustomView {
         }
     }
     
+    var url = "https://overcomingms.org"
+    
     override func customSetup() {
-        
+        self.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonTapped(tapGestureRecognizer: )))
+        self.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func buttonTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let popupvc = PTPopupWebViewController()
+        popupvc.popupView.URL(string: url)
+        popupvc.show()
     }
     
 }
