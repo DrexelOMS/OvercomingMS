@@ -32,6 +32,7 @@ class FoodSelectedSVC : SlidingAbstractSVC {
             constrainView(view: FoodApprovedSVC())
         }
 
+        setLabel(name: "Test", description: "Test")
     }
     
     //change stuff to what you want to pass in when you instantiate the class with FoodSelected
@@ -47,9 +48,9 @@ class FoodSelectedSVC : SlidingAbstractSVC {
             print(types)
             let allBadStuff = ingredients + types
             constrainView(view: FoodRejectedSVC(_badLabels: allBadStuff))
-
         }
         
+        setLabel(name: "Test", description: "Test")
     }
     
     private func constrainView(view: UIView){
@@ -63,6 +64,11 @@ class FoodSelectedSVC : SlidingAbstractSVC {
             view.left == superview.left
         }
         
+    }
+    
+    private func setLabel(name: String, description: String) {
+        foodNameLabel.text = name
+        foodDescriptionLabel.text = description
     }
     
     override func customSetup() {
