@@ -17,47 +17,42 @@ class FoodSelectedSVC : SlidingAbstractSVC {
         }
     }
     
+    @IBOutlet weak var foodNameLabel: UILabel!
+    @IBOutlet weak var foodDescriptionLabel: UILabel!
     @IBOutlet weak var approveDisaproveView: UIView!
     @IBOutlet weak var backButton: SquareButtonSVC!
     
     convenience init(unknown: Bool) {
         self.init()
         
-        var view = UIView()
         if (unknown) {
-            view = FoodUnknownSVC()
+            constrainView(view: FoodUnknownSVC())
         }
         else {
-            view = FoodApprovedSVC()
+            constrainView(view: FoodApprovedSVC())
         }
-        
-        approveDisaproveView.addSubview(view)
-        
-        constrain(view, approveDisaproveView) { (view, superview) in
-            view.top == superview.top
-            view.right == superview.right
-            view.bottom == superview.bottom
-            view.left == superview.left
-        }
+
     }
     
     //change stuff to what you want to pass in when you instantiate the class with FoodSelected
     convenience init(ingredients: [String], types: [String]){
         self.init()
-
-        var view = UIView()
         
         //initialize
         if(ingredients == [""]){
-            view = FoodApprovedSVC()
+            constrainView(view: FoodApprovedSVC())
         }
         else{
             print(ingredients)
             print(types)
             let allBadStuff = ingredients + types
-            view = FoodRejectedSVC(_badLabels: allBadStuff)
+            constrainView(view: FoodRejectedSVC(_badLabels: allBadStuff))
 
         }
+        
+    }
+    
+    private func constrainView(view: UIView){
         
         approveDisaproveView.addSubview(view)
         
@@ -67,6 +62,7 @@ class FoodSelectedSVC : SlidingAbstractSVC {
             view.bottom == superview.bottom
             view.left == superview.left
         }
+        
     }
     
     override func customSetup() {
