@@ -108,6 +108,10 @@ class OMSDateAccessor {
 
     }
     
+    func createDay(date: String) {
+        initializeTodaysData(date: date)
+    }
+    
     private func initializeTodaysData(date : String) {
         if TrackingModulesDBS().getTrackingDay(date: date) == nil {
             do {
