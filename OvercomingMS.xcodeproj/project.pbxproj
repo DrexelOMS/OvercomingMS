@@ -145,6 +145,8 @@
 		0AD94DE3220E17BD00B5C2BA /* GuidedCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DE2220E17BD00B5C2BA /* GuidedCircleButton.swift */; };
 		0AEF7A29222AFA88009A0292 /* BadIngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */; };
 		0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */; };
+		0AEF7A2D222B01FC009A0292 /* FoodUnknownSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2C222B01FC009A0292 /* FoodUnknownSVC.xib */; };
+		0AEF7A2F222B0268009A0292 /* FoodUnknownSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2E222B0268009A0292 /* FoodUnknownSVC.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -351,6 +353,8 @@
 		0AD94DE2220E17BD00B5C2BA /* GuidedCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidedCircleButton.swift; sourceTree = "<group>"; };
 		0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadIngredientsCell.swift; sourceTree = "<group>"; };
 		0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadIngredientsCell.xib; sourceTree = "<group>"; };
+		0AEF7A2C222B01FC009A0292 /* FoodUnknownSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodUnknownSVC.xib; sourceTree = "<group>"; };
+		0AEF7A2E222B0268009A0292 /* FoodUnknownSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodUnknownSVC.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -796,6 +800,8 @@
 		0AD7EB1F2220B5D6006F71C0 /* FoodSelected */ = {
 			isa = PBXGroup;
 			children = (
+				0AEF7A2E222B0268009A0292 /* FoodUnknownSVC.swift */,
+				0AEF7A2C222B01FC009A0292 /* FoodUnknownSVC.xib */,
 				0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */,
 				0C9910842219C2F00008A727 /* FoodSelectedSVC.xib */,
 				0AD7EB1B2220B2A4006F71C0 /* FoodApprovedSVC.swift */,
@@ -1135,6 +1141,7 @@
 				0A93F1582213C5B40063A892 /* FoodMainSVC.xib in Resources */,
 				0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */,
 				505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */,
+				0AEF7A2D222B01FC009A0292 /* FoodUnknownSVC.xib in Resources */,
 				8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */,
 				0A2BAA752204AFC3004074F3 /* Quicksand-BoldItalic.otf in Resources */,
 				0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */,
@@ -1410,6 +1417,7 @@
 				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
+				0AEF7A2F222B0268009A0292 /* FoodUnknownSVC.swift in Sources */,
 				0AD7EAEC2219A8F9006F71C0 /* PillBoxUIView.swift in Sources */,
 				0A93EA4122122D840063A892 /* (null) in Sources */,
 				0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */,
