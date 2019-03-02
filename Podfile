@@ -12,7 +12,8 @@ target 'OvercomingMS' do
   pod 'LinearProgressBar', '~> 1.0.1'
   pod 'Cartography'
   pod 'BarcodeScanner', '~> 4.1'
-
+  pod 'PTPopupWebView'
+  
   target 'OvercomingMSTests' do
     inherit! :search_paths
     # Pods for testing
