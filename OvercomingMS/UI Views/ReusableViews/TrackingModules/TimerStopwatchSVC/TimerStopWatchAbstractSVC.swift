@@ -25,17 +25,13 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     let startPauseButton = StartPauseCircleButton()
     let finishButton = FinishCircleButton()
     
-    private var seconds = 0
-    private var startTime = Date()
+    var seconds = 0
+    var startTime = Date() //This is when you STARTED THE TIMER, not to be used as the countown length
     private var firstStart = true
     private var timer = Timer()
     private var isTimerRunning = false
     
-    let exerciseRoutines : ExerciseHistoryDBS = ExerciseHistoryDBS()
-    
     override func customSetup() {
-        timerLabel.text = "00:00:00"
-        
         cancelButton.buttonAction = cancelButtonPressed
         startPauseButton.buttonAction = startPauseButtonPressed
         finishButton.buttonAction = finishButtonPressed
@@ -54,12 +50,25 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     }
     
     func cancelButtonPressed() {
-        let confirmationPage = CancelConfirmationSVC(methodToRunOnConfirm: cancel, resetToDefault: true)
-        parentVC.pushSubView(newSubView: confirmationPage)
+        parentVC.pushSubView(newSubView: CancelConfirmationSVC(methodToRunOnConfirm: cancel, resetToDefault: true))
     }
     
-    func cancel() {
+    func cancel() {}
+    
+    private func stopTimer() {
+        startPauseButton.setResumeMode()
+        descriptionLabel.text = "Taking a break"
         
+        timer.invalidate()
+        isTimerRunning = false
+    }
+    
+    private func resumeTimer() {
+        startPauseButton.setPauseMode()
+        descriptionLabel.text = "In Progress"
+        
+        runTimer()
+        isTimerRunning = true
     }
     
     func startPauseButtonPressed() {
@@ -69,27 +78,20 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
             startTime = Date()
         }
         if isTimerRunning {
-            startPauseButton.setResumeMode()
-            descriptionLabel.text = "Taking a break"
-            //StartTimer
-            timer.invalidate()
+            stopTimer()
         }
         else {
-            startPauseButton.setPauseMode()
-            descriptionLabel.text = "Workout has begun"
-            //StopTimer
-            runTimer()
+            resumeTimer()
         }
-        isTimerRunning = !isTimerRunning
     }
     
+    //Override to do stuff when pressed
     func finishButtonPressed() {
-        if(seconds <= 0) {
-            return
-        }
-        
-        //TODO: make sure to divide seconds by 60 to get the minutes
-        parentVC.pushSubView(newSubView: ExerciseAddSVC(startTime: startTime, length: seconds))
+        stopTimer()
+    }
+    
+    func pushFinishSVC(minutes: Int) {
+        fatalError("Override finishButtonPressed")
     }
     
     //MARK: Run timer
@@ -99,8 +101,12 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     }
     
     @objc func updateTimer(){
-        seconds += 1
+        changeSeconds()
         timerLabel.text = timeString(time:TimeInterval(seconds))
+    }
+    
+    func changeSeconds(){
+        fatalError("Override changeSeconds")
     }
     
     func timeString(time:TimeInterval) -> String {

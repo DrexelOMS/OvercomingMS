@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MedRateButtonsSVC" customModule="OvercomingMS" customModuleProvider="target">
+            <connections>
+                <outlet property="fridayButton" destination="bUC-Bm-akT" id="GNL-EU-u7l"/>
+                <outlet property="mondayButton" destination="ugF-Ky-bgg" id="9kC-bZ-eHg"/>
+                <outlet property="satButton" destination="Hoh-PX-GZo" id="f5t-hS-bJZ"/>
+                <outlet property="sunButton" destination="kDO-wd-zBi" id="5kU-Gc-i8x"/>
+                <outlet property="thursButton" destination="qeK-Ot-arR" id="GEe-Y3-ObJ"/>
+                <outlet property="tuesdayButton" destination="Knz-f0-DUi" id="mJy-9J-ju6"/>
+                <outlet property="wedButton" destination="Tn8-At-J7t" id="T4y-Be-rTJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DBt-aS-9l5">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MpX-y8-M1e">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95i-ct-64y">
+                                    <rect key="frame" x="0.0" y="0.0" width="94" height="60.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugF-Ky-bgg" customClass="ToggleLabelCircleButton" customModule="OvercomingMS" customModuleProvider="target">
+                                            <rect key="frame" x="27" y="10.5" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Uvn-OH-ONK"/>
+                                                <constraint firstAttribute="width" constant="40" id="gyW-sh-gB1"/>
+                                            </constraints>
+                                            <state key="normal" title="M"/>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="1Ae-n1-qbY"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ugF-Ky-bgg" firstAttribute="centerY" secondItem="95i-ct-64y" secondAttribute="centerY" id="N2c-1s-NeC"/>
+                                        <constraint firstItem="ugF-Ky-bgg" firstAttribute="centerX" secondItem="95i-ct-64y" secondAttribute="centerX" id="WCc-jr-t3Y"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Amw-5i-OAu">
+                                    <rect key="frame" x="94" y="0.0" width="93.5" height="60.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knz-f0-DUi" customClass="ToggleLabelCircleButton" customModule="OvercomingMS" customModuleProvider="target">
+                                            <rect key="frame" x="26.5" y="10.5" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="L0B-yo-dD0"/>
+                                                <constraint firstAttribute="height" constant="40" id="sws-RF-P5A"/>
+                                            </constraints>
+                                            <state key="normal" title="T"/>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="5li-QW-sge"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Knz-f0-DUi" firstAttribute="centerY" secondItem="Amw-5i-OAu" secondAttribute="centerY" id="2i1-EJ-IvV"/>
+                                        <constraint firstItem="Knz-f0-DUi" firstAttribute="centerX" secondItem="Amw-5i-OAu" secondAttribute="centerX" id="JBM-iE-oY7"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ko3-Pd-2eP">
+                                    <rect key="frame" x="187.5" y="0.0" width="94" height="60.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tn8-At-J7t" customClass="ToggleLabelCircleButton" customModule="OvercomingMS" customModuleProvider="target">
+                                            <rect key="frame" x="27" y="10.5" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="2gG-Bj-RDX"/>
+                                                <constraint firstAttribute="width" constant="40" id="Llz-rd-QxW"/>
+                                            </constraints>
+                                            <state key="normal" title="W"/>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="nL0-OB-R3V"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Tn8-At-J7t" firstAttribute="centerY" secondItem="Ko3-Pd-2eP" secondAttribute="centerY" id="1id-HX-k44"/>
+                                        <constraint firstItem="Tn8-At-J7t" firstAttribute="centerX" secondItem="Ko3-Pd-2eP" secondAttribute="centerX" id="EPN-lv-8Al"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8H-5X-5Ym">
+                                    <rect key="frame" x="281.5" y="0.0" width="93.5" height="60.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeK-Ot-arR" customClass="ToggleLabelCircleButton" customModule="OvercomingMS" customModuleProvider="target">
+                                            <rect key="frame" x="26.5" y="10.5" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="3A9-b5-Wud"/>
+                                                <constraint firstAttribute="width" constant="40" id="rPl-jb-sAw"/>
+                                            </constraints>
+                                            <state key="normal" title="R"/>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="3y8-Uf-UCi"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qeK-Ot-arR" firstAttribute="centerX" secondItem="l8H-5X-5Ym" secondAttribute="centerX" id="gke-XR-q7a"/>
+                                        <constraint firstItem="qeK-Ot-arR" firstAttribute="centerY" secondItem="l8H-5X-5Ym" secondAttribute="centerY" id="zkz-bz-NgQ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0BQ-Cs-UL4">
+                            <rect key="frame" x="0.0" y="60.5" width="375" height="60.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dv6-ep-aG3">
+                                    <rect key="frame" x="47" y="0.0" width="93.5" height="60.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUC-Bm-akT" customClass="ToggleLabelCircleButton" customModule="OvercomingMS" customModuleProvider="target">
+                                            <rect key="frame" x="27" y="10.5" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Edc-Wh-7Xt"/>
+                                                <constraint firstAttribute="width" constant="40" id="HQA-0l-AIB"/>
+                                            </constraints>
+                                            <state key="normal" title="F"/>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="yA4-mj-ucK"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bUC-Bm-akT" firstAttribute="centerX" secondItem="Dv6-ep-aG3" secondAttribute="centerX" id="PQ8-RF-ERa"/>
+                                        <constraint firstItem="bUC-Bm-akT" firstAttribute="centerY" secondItem="Dv6-ep-aG3" secondAttribute="centerY" id="zRc-eA-u9f"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUW-Ly-scT">
+                                    <rect key="frame" x="140.5" y="0.0" width="94" height="60.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hoh-PX-GZo" customClass="ToggleLabelCircleButton" customModule="OvercomingMS" customModuleProvider="target">
+                                            <rect key="frame" x="27" y="10.5" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="HWY-Rw-3e0"/>
+                                                <constraint firstAttribute="height" constant="40" id="t8H-Gr-QC0"/>
+                                            </constraints>
+                                            <state key="normal" title="S"/>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="IPH-YR-60I"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Hoh-PX-GZo" firstAttribute="centerY" secondItem="wUW-Ly-scT" secondAttribute="centerY" id="IFX-Cd-doi"/>
+                                        <constraint firstItem="Hoh-PX-GZo" firstAttribute="centerX" secondItem="wUW-Ly-scT" secondAttribute="centerX" id="ueH-rQ-Y6v"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODn-dx-6Eo">
+                                    <rect key="frame" x="234.5" y="0.0" width="93.5" height="60.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDO-wd-zBi" customClass="ToggleLabelCircleButton" customModule="OvercomingMS" customModuleProvider="target">
+                                            <rect key="frame" x="27" y="10.5" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="7lf-q1-ccb"/>
+                                                <constraint firstAttribute="height" constant="40" id="tln-EV-G6T"/>
+                                            </constraints>
+                                            <state key="normal" title="S"/>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="ZtH-Ws-u7H"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="kDO-wd-zBi" firstAttribute="centerY" secondItem="ODn-dx-6Eo" secondAttribute="centerY" id="aHv-UG-jZI"/>
+                                        <constraint firstItem="kDO-wd-zBi" firstAttribute="centerX" secondItem="ODn-dx-6Eo" secondAttribute="centerX" id="fhA-kA-db8"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Dv6-ep-aG3" firstAttribute="top" secondItem="0BQ-Cs-UL4" secondAttribute="top" id="4cL-YN-Ghf"/>
+                                <constraint firstAttribute="bottom" secondItem="wUW-Ly-scT" secondAttribute="bottom" id="Qen-Hv-CsR"/>
+                                <constraint firstItem="wUW-Ly-scT" firstAttribute="leading" secondItem="Dv6-ep-aG3" secondAttribute="trailing" id="RaS-DZ-gwt"/>
+                                <constraint firstAttribute="bottom" secondItem="Dv6-ep-aG3" secondAttribute="bottom" id="YC4-5e-nmG"/>
+                                <constraint firstItem="ODn-dx-6Eo" firstAttribute="top" secondItem="0BQ-Cs-UL4" secondAttribute="top" id="a0h-Ff-b6s"/>
+                                <constraint firstItem="ODn-dx-6Eo" firstAttribute="leading" secondItem="wUW-Ly-scT" secondAttribute="trailing" id="aIQ-oE-NE2"/>
+                                <constraint firstAttribute="bottom" secondItem="ODn-dx-6Eo" secondAttribute="bottom" id="jGp-zz-0Ci"/>
+                                <constraint firstItem="wUW-Ly-scT" firstAttribute="centerX" secondItem="0BQ-Cs-UL4" secondAttribute="centerX" id="n4h-he-Vnm"/>
+                                <constraint firstItem="wUW-Ly-scT" firstAttribute="top" secondItem="0BQ-Cs-UL4" secondAttribute="top" id="tuU-3h-E6W"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ODn-dx-6Eo" firstAttribute="width" secondItem="95i-ct-64y" secondAttribute="width" id="EjO-Ug-w6c"/>
+                        <constraint firstItem="Dv6-ep-aG3" firstAttribute="width" secondItem="95i-ct-64y" secondAttribute="width" id="JhR-2M-nzw"/>
+                        <constraint firstItem="wUW-Ly-scT" firstAttribute="width" secondItem="95i-ct-64y" secondAttribute="width" id="TpD-F2-pYm"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="DBt-aS-9l5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QdU-D6-Fab"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DBt-aS-9l5" secondAttribute="trailing" id="RJA-Ei-xwu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="DBt-aS-9l5" secondAttribute="bottom" id="TGN-as-3XU"/>
+                <constraint firstItem="DBt-aS-9l5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fiF-i0-nHP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.40000000000001" y="387.25637181409297"/>
+        </view>
+    </objects>
+</document>

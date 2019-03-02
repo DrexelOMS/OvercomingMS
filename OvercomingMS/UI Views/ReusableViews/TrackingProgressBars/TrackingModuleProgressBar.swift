@@ -14,5 +14,6 @@ class TrackingModuleProgressBar : TrackingProgressBar {
         super.customSetup()
         
         self.rightContainerView.removeFromSuperview()
+        roundedView.hasShadow = false
     }
 }

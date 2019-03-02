@@ -21,24 +21,26 @@ class FoodSelectedSVC : SlidingAbstractSVC {
     @IBOutlet weak var backButton: SquareButtonSVC!
     
     //change stuff to what you want to pass in when you instantiate the class with FoodSelected
-    convenience init(stuff: String, ingredients: [String], types: [String]){
+    convenience init(ingredients: [String], types: [String]){
         self.init()
+
+        var view = UIView()
         
         //initialize
-        if(stuff != ""){
-            let view = FoodRejectedSVC()
-            
+        if(ingredients == [""]){
+            view = FoodApprovedSVC()
             approveDisaproveView.addSubview(view)
-            
-            constrain(view, approveDisaproveView) { (view, superview) in
-                view.top == superview.top
-                view.right == superview.right
-                view.bottom == superview.bottom
-                view.left == superview.left
-            }
         }
         else{
-            let view = FoodApprovedSVC()
+            view = FoodRejectedSVC()
+            approveDisaproveView.addSubview(view)
+        }
+        
+        constrain(view, approveDisaproveView) { (view, superview) in
+            view.top == superview.top
+            view.right == superview.right
+            view.bottom == superview.bottom
+            view.left == superview.left
         }
     }
     

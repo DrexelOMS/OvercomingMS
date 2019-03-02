@@ -11,7 +11,7 @@ import Cartography
 
 class ExerciseModifyAbstractSVC : ModifyAbstractSVC {
     
-    let exerciseRoutines = ExerciseHistoryDBS()
+    let exerciseHistory = ExerciseHistoryDBS()
     
     var selectedType : String? {
         get {

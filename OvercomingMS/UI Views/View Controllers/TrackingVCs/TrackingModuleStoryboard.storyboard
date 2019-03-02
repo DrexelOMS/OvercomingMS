@@ -32,32 +32,32 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAO-sZ-Qwe" userLabel="TopView">
-                                                <rect key="frame" x="0.0" y="30" width="375" height="123.5"/>
+                                                <rect key="frame" x="0.0" y="30" width="375" height="100"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsw-3Q-HeZ" userLabel="ProgressBar" customClass="TrackingModuleProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="20" width="335" height="83.5"/>
+                                                        <rect key="frame" x="20" y="10" width="335" height="80"/>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="Vsw-3Q-HeZ" secondAttribute="trailing" constant="20" id="BDA-K3-ErN"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Vsw-3Q-HeZ" secondAttribute="bottom" constant="20" id="El6-5c-jTg"/>
+                                                    <constraint firstAttribute="height" constant="100" id="DK3-dp-WFm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Vsw-3Q-HeZ" secondAttribute="bottom" constant="10" id="El6-5c-jTg"/>
                                                     <constraint firstItem="Vsw-3Q-HeZ" firstAttribute="leading" secondItem="zAO-sZ-Qwe" secondAttribute="leading" constant="20" id="uIV-eb-rnf"/>
-                                                    <constraint firstItem="Vsw-3Q-HeZ" firstAttribute="top" secondItem="zAO-sZ-Qwe" secondAttribute="top" constant="20" id="wMb-JP-j8t"/>
+                                                    <constraint firstItem="Vsw-3Q-HeZ" firstAttribute="top" secondItem="zAO-sZ-Qwe" secondAttribute="top" constant="10" id="wMb-JP-j8t"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2C-GT-TTF" userLabel="MainView">
-                                                <rect key="frame" x="0.0" y="153.5" width="375" height="493.5"/>
+                                                <rect key="frame" x="0.0" y="130" width="375" height="517"/>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="W2C-GT-TTF" firstAttribute="height" secondItem="zAO-sZ-Qwe" secondAttribute="height" multiplier="4:1" id="CN8-7s-Kcl"/>
                                             <constraint firstAttribute="trailing" secondItem="YSZ-JT-vqh" secondAttribute="trailing" id="YQb-ji-6NT"/>
                                             <constraint firstItem="YSZ-JT-vqh" firstAttribute="leading" secondItem="E7a-m6-tb3" secondAttribute="leading" id="pdA-tI-RO4"/>
                                             <constraint firstItem="YSZ-JT-vqh" firstAttribute="top" secondItem="E7a-m6-tb3" secondAttribute="top" id="wvm-nM-8vA"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="E7a-m6-tb3" firstAttribute="leading" secondItem="aoi-lC-kXN" secondAttribute="leading" id="C5v-4p-r8N"/>
                                     <constraint firstAttribute="bottom" secondItem="E7a-m6-tb3" secondAttribute="bottom" id="hSl-tn-kl0"/>
@@ -112,29 +112,27 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lz9-a8-VFC" userLabel="TopView">
-                                                <rect key="frame" x="0.0" y="30" width="375" height="123.5"/>
+                                                <rect key="frame" x="0.0" y="30" width="375" height="100"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rso-UY-9f6" userLabel="ProgressBar" customClass="TrackingModuleProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="20" width="335" height="83.5"/>
+                                                        <rect key="frame" x="20" y="10" width="335" height="80"/>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="rso-UY-9f6" firstAttribute="leading" secondItem="Lz9-a8-VFC" secondAttribute="leading" constant="20" id="QJg-iR-77b"/>
-                                                    <constraint firstItem="rso-UY-9f6" firstAttribute="top" secondItem="Lz9-a8-VFC" secondAttribute="top" constant="20" id="Rg1-3F-hji"/>
+                                                    <constraint firstItem="rso-UY-9f6" firstAttribute="top" secondItem="Lz9-a8-VFC" secondAttribute="top" constant="10" id="Rg1-3F-hji"/>
+                                                    <constraint firstAttribute="height" constant="100" id="Uga-Jd-MKW"/>
                                                     <constraint firstAttribute="trailing" secondItem="rso-UY-9f6" secondAttribute="trailing" constant="20" id="ltI-1l-gCb"/>
-                                                    <constraint firstAttribute="bottom" secondItem="rso-UY-9f6" secondAttribute="bottom" constant="20" id="wm4-Es-Tk5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="rso-UY-9f6" secondAttribute="bottom" constant="10" id="wm4-Es-Tk5"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLZ-Ia-5V0" userLabel="MainView">
-                                                <rect key="frame" x="0.0" y="153.5" width="375" height="493.5"/>
+                                                <rect key="frame" x="0.0" y="130" width="375" height="517"/>
                                             </view>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="jLZ-Ia-5V0" firstAttribute="height" secondItem="Lz9-a8-VFC" secondAttribute="height" multiplier="4:1" id="6sB-LT-85a"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="2lS-Dq-yGG" firstAttribute="leading" secondItem="rWX-y3-3FI" secondAttribute="leading" id="DUG-TN-SZV"/>
                                     <constraint firstAttribute="bottom" secondItem="2lS-Dq-yGG" secondAttribute="bottom" id="Sm6-n5-Ni7"/>
@@ -189,29 +187,27 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfx-lo-1xM" userLabel="TopView">
-                                                <rect key="frame" x="0.0" y="30" width="375" height="123.5"/>
+                                                <rect key="frame" x="0.0" y="30" width="375" height="100"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hyr-Ns-bfF" userLabel="ProgressBar" customClass="TrackingModuleProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="20" width="335" height="83.5"/>
+                                                        <rect key="frame" x="20" y="10" width="335" height="80"/>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="Hyr-Ns-bfF" secondAttribute="bottom" constant="20" id="Qr4-gQ-5AQ"/>
-                                                    <constraint firstItem="Hyr-Ns-bfF" firstAttribute="top" secondItem="Cfx-lo-1xM" secondAttribute="top" constant="20" id="aVL-ki-Icn"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Hyr-Ns-bfF" secondAttribute="bottom" constant="10" id="Qr4-gQ-5AQ"/>
+                                                    <constraint firstItem="Hyr-Ns-bfF" firstAttribute="top" secondItem="Cfx-lo-1xM" secondAttribute="top" constant="10" id="aVL-ki-Icn"/>
+                                                    <constraint firstAttribute="height" constant="100" id="bBB-2W-7w1"/>
                                                     <constraint firstItem="Hyr-Ns-bfF" firstAttribute="leading" secondItem="Cfx-lo-1xM" secondAttribute="leading" constant="20" id="bv5-4b-jT1"/>
                                                     <constraint firstAttribute="trailing" secondItem="Hyr-Ns-bfF" secondAttribute="trailing" constant="20" id="wAK-d8-0b2"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zsi-6q-fO2" userLabel="MainView">
-                                                <rect key="frame" x="0.0" y="153.5" width="375" height="493.5"/>
+                                                <rect key="frame" x="0.0" y="130" width="375" height="517"/>
                                             </view>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="Zsi-6q-fO2" firstAttribute="height" secondItem="Cfx-lo-1xM" secondAttribute="height" multiplier="4:1" id="ugh-qb-R7I"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Ccq-JN-ngu" firstAttribute="leading" secondItem="FlB-b3-UUw" secondAttribute="leading" id="AIm-ID-fOW"/>
                                     <constraint firstAttribute="trailing" secondItem="Ccq-JN-ngu" secondAttribute="trailing" id="VCR-wQ-nJF"/>
@@ -266,29 +262,27 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hc9-F2-SAx" userLabel="TopView">
-                                                <rect key="frame" x="0.0" y="30" width="375" height="123.5"/>
+                                                <rect key="frame" x="0.0" y="30" width="375" height="100"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rih-oc-Zmd" userLabel="ProgressBar" customClass="TrackingModuleProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="20" width="335" height="83.5"/>
+                                                        <rect key="frame" x="20" y="10" width="335" height="80"/>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="Rih-oc-Zmd" firstAttribute="leading" secondItem="hc9-F2-SAx" secondAttribute="leading" constant="20" id="JaV-4v-Yqh"/>
-                                                    <constraint firstItem="Rih-oc-Zmd" firstAttribute="top" secondItem="hc9-F2-SAx" secondAttribute="top" constant="20" id="a59-bg-Wsx"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Rih-oc-Zmd" secondAttribute="bottom" constant="20" id="fs1-Cf-jhy"/>
+                                                    <constraint firstAttribute="height" constant="100" id="TfH-Cn-uML"/>
+                                                    <constraint firstItem="Rih-oc-Zmd" firstAttribute="top" secondItem="hc9-F2-SAx" secondAttribute="top" constant="10" id="a59-bg-Wsx"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Rih-oc-Zmd" secondAttribute="bottom" constant="10" id="fs1-Cf-jhy"/>
                                                     <constraint firstAttribute="trailing" secondItem="Rih-oc-Zmd" secondAttribute="trailing" constant="20" id="upY-bW-ACx"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1E-Vo-6ug" userLabel="MainView">
-                                                <rect key="frame" x="0.0" y="153.5" width="375" height="493.5"/>
+                                                <rect key="frame" x="0.0" y="130" width="375" height="517"/>
                                             </view>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="z1E-Vo-6ug" firstAttribute="height" secondItem="hc9-F2-SAx" secondAttribute="height" multiplier="4:1" id="XIX-lT-61J"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="GbR-EU-m73" secondAttribute="bottom" id="0qo-YQ-JFl"/>
                                     <constraint firstItem="GbR-EU-m73" firstAttribute="top" secondItem="IDb-gX-N1z" secondAttribute="top" id="VNE-jI-94G"/>
@@ -354,7 +348,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="3Kl-Tr-4G4" secondAttribute="trailing" id="9VE-zF-ESJ"/>
                                     <constraint firstItem="3Kl-Tr-4G4" firstAttribute="top" secondItem="382-HP-fCp" secondAttribute="top" id="fpc-JT-uAq"/>
@@ -408,29 +402,27 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RpB-th-8Eh" userLabel="TopView">
-                                                <rect key="frame" x="0.0" y="30" width="375" height="123.5"/>
+                                                <rect key="frame" x="0.0" y="30" width="375" height="100"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Gl-pg-9Vr" userLabel="ProgressBar" customClass="TrackingModuleProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="20" width="335" height="83.5"/>
+                                                        <rect key="frame" x="20" y="10" width="335" height="80"/>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="4Gl-pg-9Vr" secondAttribute="trailing" constant="20" id="5yA-RP-MlE"/>
                                                     <constraint firstItem="4Gl-pg-9Vr" firstAttribute="leading" secondItem="RpB-th-8Eh" secondAttribute="leading" constant="20" id="dWf-Ts-OrS"/>
-                                                    <constraint firstItem="4Gl-pg-9Vr" firstAttribute="top" secondItem="RpB-th-8Eh" secondAttribute="top" constant="20" id="l1l-cb-Smd"/>
-                                                    <constraint firstAttribute="bottom" secondItem="4Gl-pg-9Vr" secondAttribute="bottom" constant="20" id="mIE-oI-hJy"/>
+                                                    <constraint firstItem="4Gl-pg-9Vr" firstAttribute="top" secondItem="RpB-th-8Eh" secondAttribute="top" constant="10" id="l1l-cb-Smd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4Gl-pg-9Vr" secondAttribute="bottom" constant="10" id="mIE-oI-hJy"/>
+                                                    <constraint firstAttribute="height" constant="100" id="oQ0-yx-kUS"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrC-YC-tub" userLabel="MainView">
-                                                <rect key="frame" x="0.0" y="153.5" width="375" height="493.5"/>
+                                                <rect key="frame" x="0.0" y="130" width="375" height="517"/>
                                             </view>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="YrC-YC-tub" firstAttribute="height" secondItem="RpB-th-8Eh" secondAttribute="height" multiplier="4:1" id="EV6-Ny-Vqv"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="TIl-cm-0r4" secondAttribute="bottom" id="87N-Lg-uhL"/>
                                     <constraint firstItem="TIl-cm-0r4" firstAttribute="leading" secondItem="ZTG-8y-MQi" secondAttribute="leading" id="AJ9-h8-oQG"/>

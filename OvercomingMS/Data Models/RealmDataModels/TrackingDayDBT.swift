@@ -20,7 +20,8 @@ class TrackingDayDBT: Object {
     
     @objc dynamic var FoodEatenRating: Int = 1 // Lets define the food scale as 1-5
     
-    // ------------------------------ EXERCISE ------------------------------
+    //MARK: ------------------------------ EXERCISE ------------------------------
+    
     @objc dynamic var IsExerciseComplete: Bool = false //This should be read only
     var ExerciseComputedPercentageComplete : Int {
         get {
@@ -49,7 +50,7 @@ class TrackingDayDBT: Object {
     }
     let exerciseHistoryDT = List<ExerciseHistoryDBT>()
     
-    // --------------------- MEDITATION ------------------------------
+    //MARK: --------------------- MEDITATION ------------------------------
 
     @objc dynamic var IsMeditationComplete: Bool = false
     var MeditationComputedPercentageComplete : Int {
@@ -83,7 +84,7 @@ class TrackingDayDBT: Object {
     let meditationHistoryDT = List<MeditationHistoryDBT>()
     
     
-    // ---------------------- MEDICCCCCCATION ------------------------------
+    //MARK: ---------------------- MEDICATION ------------------------------
     
     @objc dynamic var IsMedicationComplete: Bool = false
     var MedicationComputedPercentageComplete : Int {
@@ -92,7 +93,11 @@ class TrackingDayDBT: Object {
                 return 100
             }
             else {
-                let percentage = Int(Float(MedicationTotal) / Float(ProgressBarConfig.medicationGoal) * 100)
+                let todaysTotalMeds : Float = Float(SavedMedicationDBS().getTodaysTotalMedGoal())
+                if todaysTotalMeds <= 0 {
+                    return 100
+                }
+                let percentage = Int(Float(MedicationTotal) / Float(todaysTotalMeds) * 100)
                 if percentage > 100 {
                     return 100
                 }
@@ -103,25 +108,19 @@ class TrackingDayDBT: Object {
         }
     }
     
+    var MedicationTotal: Int {
+        get {
+            return savedMedicationDT.count
+        }
+    }
+    
     //currently guess they would add a number of medications
     //you can only take a medication or not, but you could take 2 / 3 for some reason
     
     //this will be count of medicationHistoryDT / count of savedMedications with some voodo shit with frequency
-    var MedicationTotal: Int {
-        get {
-            var totalMeds = 0
-            for row in medicationHistoryDT {
-                totalMeds += row.MedicationAmount
-            }
-            return totalMeds
-        }
-    }
+    var savedMedicationDT = List<SavedMedicationDBT>()
     
-    let medicationHistoryDT = List<MedicationHistoryDBT>()
-    
-
-    
-    // ---------------------- OMEGA-3 ------------------------------
+    //MARK: ---------------------- OMEGA-3 ------------------------------
     
     // @objc dynamic var Omega3PercentageComplete: Int = 0
     
@@ -155,7 +154,7 @@ class TrackingDayDBT: Object {
     
     let omega3HistoryDT = List<Omega3HistoryDBT>()
 
-    // -------------------------------- VITAMIN D ----------------------------------
+    //MARK: -------------------------------- VITAMIN D ----------------------------------
     @objc dynamic var IsVitaminDComplete: Bool = false //This should be read only
     var VitaminDComputedPercentageComplete : Int {
         get {
@@ -192,5 +191,10 @@ class TrackingDayDBT: Object {
     }
     
     
+    //MARK: ---------------------- SYMPTOMS ------------------------------
+    
+    @objc dynamic var SymptomsRating: Int = 1 // rate from 1-5
+
+    let symptomsNoteDT = List<SymptomsNoteDBT>()
     
 }

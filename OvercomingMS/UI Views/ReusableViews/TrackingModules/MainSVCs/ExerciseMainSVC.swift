@@ -14,7 +14,7 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     let button1 = AddCircleButton()
     let button2 = TimerCircleButton()
     
-    let exerciseRoutines : ExerciseHistoryDBS = ExerciseHistoryDBS()
+    let exerciseHistory : ExerciseHistoryDBS = ExerciseHistoryDBS()
     
     override func customSetup() {
         
@@ -40,7 +40,7 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     
     override func reload(){
         tableView.reloadData()
-        totalsCountLabel.text = String(exerciseRoutines.getTotalMinutes())
+        totalsCountLabel.text = String(exerciseHistory.getTotalMinutes())
         totalsTextLabel.text = "Minutes\nToday"
     }
     
@@ -57,14 +57,16 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         button2.colorTheme = parentVC.theme
     }
     
+    //MARK: TableView Delegate Methods
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exerciseRoutines.getTodaysExerciseItems()?.count ?? 0
+        return exerciseHistory.getTodaysExerciseItems()?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! Routine3PartCell
         
-        let items = exerciseRoutines.getTodaysExerciseItems()!
+        let items = exerciseHistory.getTodaysExerciseItems()!
         
         cell.labelLeft.text = items[indexPath.row].RoutineType
         let startTime = items[indexPath.row].StartTime
@@ -76,7 +78,7 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let exerciseItemSVC = ExerciseSelectedItemSVC()
-        exerciseItemSVC.exerciseItem = exerciseRoutines.getTodaysExerciseItems()![indexPath.row]
+        exerciseItemSVC.exerciseItem = exerciseHistory.getTodaysExerciseItems()![indexPath.row]
         exerciseItemSVC.parentVC = parentVC
         parentVC.pushSubView(newSubView: exerciseItemSVC)
     }

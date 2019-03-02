@@ -17,6 +17,7 @@
                 <outlet property="bottomSubLabel" destination="xPW-dt-pzN" id="n5g-eK-Y06"/>
                 <outlet property="buttonStackView" destination="f3w-FE-AYF" id="71p-5U-QgJ"/>
                 <outlet property="labelsStackView" destination="sZR-ez-QdZ" id="DEo-6V-HKX"/>
+                <outlet property="middleFrequencyLabel" destination="LFO-Jx-CFN" id="fuO-31-Svw"/>
                 <outlet property="middleMainLabel" destination="a3p-uX-IVT" id="RNV-fB-2pE"/>
                 <outlet property="middleSubLabel" destination="1TB-Fu-tKo" id="YbD-OL-jx9"/>
                 <outlet property="topMainLabel" destination="TrO-Lk-5Ho" id="6sk-Nf-IgR"/>
@@ -71,7 +72,10 @@
                                     <rect key="frame" x="0.0" y="109.5" width="320" height="109"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TB-Fu-tKo">
-                                            <rect key="frame" x="0.0" y="19.5" width="320" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="20" width="320" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="aVb-hf-UQX"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -82,12 +86,22 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFO-Jx-CFN" userLabel="Middle Frequency Label">
+                                            <rect key="frame" x="0.0" y="69" width="320" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="KOm-Q1-DZY"/>
+                                            </constraints>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="1TB-Fu-tKo" secondAttribute="trailing" id="4vA-6M-l0G"/>
+                                        <constraint firstItem="LFO-Jx-CFN" firstAttribute="top" secondItem="a3p-uX-IVT" secondAttribute="bottom" id="EC0-uZ-7oz"/>
                                         <constraint firstAttribute="trailing" secondItem="a3p-uX-IVT" secondAttribute="trailing" id="M3h-VF-laO"/>
                                         <constraint firstItem="a3p-uX-IVT" firstAttribute="top" secondItem="1TB-Fu-tKo" secondAttribute="bottom" id="YVZ-oU-yrI"/>
-                                        <constraint firstItem="a3p-uX-IVT" firstAttribute="top" secondItem="1TB-Fu-tKo" secondAttribute="bottom" id="dQp-7O-qfg"/>
+                                        <constraint firstAttribute="trailing" secondItem="LFO-Jx-CFN" secondAttribute="trailing" id="Zan-64-TLA"/>
+                                        <constraint firstItem="LFO-Jx-CFN" firstAttribute="leading" secondItem="L2z-dE-VpK" secondAttribute="leading" id="cWB-Ru-g7I"/>
                                         <constraint firstItem="a3p-uX-IVT" firstAttribute="centerY" secondItem="L2z-dE-VpK" secondAttribute="centerY" id="eDH-5H-4SP"/>
                                         <constraint firstItem="a3p-uX-IVT" firstAttribute="leading" secondItem="L2z-dE-VpK" secondAttribute="leading" id="ehN-9N-epf"/>
                                         <constraint firstItem="1TB-Fu-tKo" firstAttribute="leading" secondItem="L2z-dE-VpK" secondAttribute="leading" id="pjM-gV-ct5"/>
@@ -129,7 +143,7 @@
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xjg-f0-uHe" customClass="SquareButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="436" width="320" height="60"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="5XO-w7-qqc"/>
                             </constraints>
