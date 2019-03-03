@@ -8,6 +8,6 @@
 
 import UIKit
 
-class GoalsVC : SlidingAbstractSVC {
+class GoalsVC : SwipeDownCloseViewController {
     
 }

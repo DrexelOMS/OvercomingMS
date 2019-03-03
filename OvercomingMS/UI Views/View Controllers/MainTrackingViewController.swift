@@ -33,10 +33,12 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     @IBOutlet weak var meditationBar: TrackingProgressBar!
     @IBOutlet weak var medicationBar: TrackingProgressBar!
     
-    @IBOutlet weak var previousButton: CircleButtonSVC!
-    @IBOutlet weak var progressDayButton: CircleButtonSVC!
-    @IBOutlet weak var nextDay: CircleButtonSVC!
+    @IBOutlet weak var previousButton: UIButton!
+    @IBOutlet weak var nextDay: UIButton!
     
+    @IBOutlet weak var GoalButton: CircleButtonSVC!
+    @IBOutlet weak var SymptomsButton: CircleButtonSVC!
+    @IBOutlet weak var SettingsButton: CircleButtonSVC!
     
     private let realm = try! Realm()
     private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
@@ -69,9 +71,21 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         meditationBar.delegate = self
         medicationBar.delegate = self
         
-        previousButton.buttonAction = previousDate;
-        progressDayButton.buttonAction = ProgressDayPressed;
-        nextDay.buttonAction = nextDate
+        previousButton.isUserInteractionEnabled = true
+        let previusGesture = UITapGestureRecognizer(target: self, action: #selector(previousDate(gesture: )))
+        previousButton.addGestureRecognizer(previusGesture)
+        
+        dateLog.isUserInteractionEnabled = true
+        let progressGesture = UITapGestureRecognizer(target: self, action: #selector(ProgressDayPressed(gesture: )))
+        dateLog.addGestureRecognizer(progressGesture)
+        
+        nextDay.isUserInteractionEnabled = true
+        let nextGesture = UITapGestureRecognizer(target: self, action: #selector(nextDate(gesture: )))
+        nextDay.addGestureRecognizer(nextGesture)
+
+        GoalButton.buttonAction = goalPressed
+        SymptomsButton.buttonAction = symptomsPressed
+        SettingsButton.buttonAction = settingsPressed
         
         loadCurrentDayUI()
     }
@@ -215,14 +229,14 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     //MARK: IBActions
 
-    private func previousDate() {
+    @objc private func previousDate(gesture: UIGestureRecognizer) {
         
         globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(-60*60*24)
         
         loadCurrentDayUI()
     }
     
-    private func nextDate() {
+    @objc private func nextDate(gesture: UIGestureRecognizer) {
         if globalCurrentDate == todaysDate {
             return
         }
@@ -234,9 +248,26 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     //TODO: this is a test button, normally the day would progress, and the ui is not automatically updated unless we check in the loadCurrentDayUI to check if todays date has changed
     //basically nothing can ever write using current day, they write using todays date
-    private func ProgressDayPressed() {
+    @objc private func ProgressDayPressed(gesture: UIGestureRecognizer) {
         omsDateFormatter.progressDay()
         
         loadCurrentDayUI()
     }
+    
+    func goalPressed() {
+        let vc = GoalsVC()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.dismissalDelegate = self
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func symptomsPressed() {
+        
+    }
+    
+    func settingsPressed() {
+        
+    }
+    
 }

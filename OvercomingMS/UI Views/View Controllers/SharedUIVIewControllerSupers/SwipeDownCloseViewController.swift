@@ -117,7 +117,7 @@ class SwipeDownCloseViewController: DismissableVC, UIGestureRecognizerDelegate {
         view.addGestureRecognizer(swipeDown)
         
         pullBarSVC.isUserInteractionEnabled = true
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pullBarTapped(tapGestureRecognizer: )))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pullBarTapped(gesture: )))
         pullBarSVC.addGestureRecognizer(tapGesture)
     }
     
@@ -137,7 +137,7 @@ class SwipeDownCloseViewController: DismissableVC, UIGestureRecognizerDelegate {
         }
     }
     
-    @objc func pullBarTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+    @objc func pullBarTapped(gesture: UITapGestureRecognizer) {
         self.dismiss()
     }
     
