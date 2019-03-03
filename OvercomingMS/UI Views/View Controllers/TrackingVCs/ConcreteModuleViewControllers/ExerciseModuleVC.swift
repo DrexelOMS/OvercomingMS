@@ -22,7 +22,7 @@ class ExerciseModuleVC: TrackingModuleAbstractVC {
         initializeviewStack(defaultView: ExerciseMainSVC())
     }
     
-    override func updateProgressBar() {
+    override func reload() {
         progressBar.setProgressValue(value: exerciseHistory.getPercentageComplete())
         let amountRemaining = ProgressBarConfig.exerciseGoal - exerciseHistory.getTotalMinutes()
         var description = ""
