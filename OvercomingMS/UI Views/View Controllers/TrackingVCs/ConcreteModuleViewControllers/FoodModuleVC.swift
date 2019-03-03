@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class FoodModuleVC: TrackingModuleAbstractVC {
+class FoodModuleVC: SwipeDownCloseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

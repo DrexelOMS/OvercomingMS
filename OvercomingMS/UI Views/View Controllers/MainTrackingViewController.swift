@@ -112,8 +112,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         //WriteFoodTrackingData().toggleFilledData()
         
-        let storyboard = UIStoryboard(name: "QuickCompleteFood", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "QuickCompleteFoodVC") as! QuickCompleteFoodVC
+        let vc = QuickCompleteFoodVC()
         vc.modalPresentationStyle = .overCurrentContext
         vc.dismissalDelegate = self
         
