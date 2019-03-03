@@ -161,6 +161,7 @@ class SwipeDownCloseViewController: DismissableVC, UIGestureRecognizerDelegate {
         viewStack.append(defaultView)
         
         setMainView(slideMode: .Instant)
+        reload()
     }
     
     func reload() {
