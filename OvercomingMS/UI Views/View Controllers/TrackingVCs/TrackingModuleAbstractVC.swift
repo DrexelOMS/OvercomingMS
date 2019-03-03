@@ -14,7 +14,6 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     //MARK: Attributes
     
     var progressBar: TrackingProgressBar = TrackingModuleProgressBar()
-    var pullBarSVC: PullBarSVC = PullBarSVC()
     var mainView : UIView = UIView()
     
     var topView : SlidingAbstractSVC {
@@ -40,10 +39,6 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
         
         // Do any additional setup after loading the view.
         updateProgressBar()
-        progressBar.colorTheme = theme
-        
-        pullBarSVC.colorTheme = theme.withAlphaComponent(0.6)
-        view.backgroundColor = theme.withAlphaComponent(0.6)
     }
     
     func addProgressBar() {
@@ -61,6 +56,8 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
             view.bottom == superView.bottom - 10
             view.left == superView.left + 20
         }
+        
+        progressBar.colorTheme = theme
     }
     
     func setupViews() {

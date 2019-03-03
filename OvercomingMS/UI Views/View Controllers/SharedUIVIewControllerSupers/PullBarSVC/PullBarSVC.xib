@@ -29,7 +29,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8CZ-pI-Dz1" customClass="TopRoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7q-oG-k05">
+                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7q-oG-k05">
                                             <rect key="frame" x="147" y="10" width="26" height="10"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="26" id="LYB-Nf-NG4"/>

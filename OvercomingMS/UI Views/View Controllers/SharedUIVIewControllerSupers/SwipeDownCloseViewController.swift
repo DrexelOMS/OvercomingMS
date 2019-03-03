@@ -59,6 +59,7 @@ class SwipeDownCloseViewController: DismissableVC, UIGestureRecognizerDelegate {
 //    }
     
     let contentStackView = UIStackView()
+    var pullBarSVC: PullBarSVC = PullBarSVC()
    
     var theme : UIColor = UIColor.gray
     
@@ -67,11 +68,22 @@ class SwipeDownCloseViewController: DismissableVC, UIGestureRecognizerDelegate {
         
         setupContentStackView()
         
+        pullBarSVC.colorTheme = theme.withAlphaComponent(0.6)
+        view.backgroundColor = theme.withAlphaComponent(0.6)
+        
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(gesture:)))
         swipeDown.direction = UISwipeGestureRecognizer.Direction.down
         view.addGestureRecognizer(swipeDown)
-    }
     
+        pullBarSVC.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pullBarTapped(tapGestureRecognizer: )))
+        pullBarSVC.addGestureRecognizer(tapGesture)
+    }
+
+    @objc func pullBarTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        self.dismiss()
+    }
+        
     private func setupContentStackView() {
         let contentView = UIView()
         contentView.backgroundColor = DesignConstants.DEFAULT_BACKGROUND_COLOR
