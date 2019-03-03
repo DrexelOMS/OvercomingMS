@@ -7,17 +7,15 @@
 //
 
 import UIKit
+import Cartography
 
-@IBDesignable
 class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     
     //MARK: Attributes
     
-    @IBOutlet weak var progressBar: TrackingProgressBar!
-    @IBOutlet private weak var pullBarSVC: PullBarSVC!
-    @IBOutlet private var mainView : UIView!
-    
-    @IBInspectable var theme : UIColor = UIColor.blue
+    var progressBar: TrackingProgressBar = TrackingModuleProgressBar()
+    var pullBarSVC: PullBarSVC = PullBarSVC()
+    var mainView : UIView = UIView()
     
     var topView : SlidingAbstractSVC {
         get {
@@ -38,12 +36,43 @@ class TrackingModuleAbstractVC: SwipeDownCloseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViews()
+        
         // Do any additional setup after loading the view.
         updateProgressBar()
-        progressBar?.colorTheme = theme
+        progressBar.colorTheme = theme
         
         pullBarSVC.colorTheme = theme.withAlphaComponent(0.6)
         view.backgroundColor = theme.withAlphaComponent(0.6)
+    }
+    
+    func addProgressBar() {
+        let progressView = UIView()
+        contentStackView.addArrangedSubview(progressView)
+        constrain(progressView) { (view) in
+            view.height == 100.0
+        }
+        
+        progressView.addSubview(progressBar)
+        
+        constrain(progressBar, progressView) { (view, superView) in
+            view.top == superView.top + 10
+            view.right == superView.right - 20
+            view.bottom == superView.bottom - 10
+            view.left == superView.left + 20
+        }
+    }
+    
+    func setupViews() {
+
+        contentStackView.addArrangedSubview(pullBarSVC)
+        constrain(pullBarSVC) { (view) in
+            view.height == 30.0
+        }
+        
+        addProgressBar()
+        
+        contentStackView.addArrangedSubview(mainView)
     }
     
     func initializeviewStack(defaultView: SlidingAbstractSVC) {

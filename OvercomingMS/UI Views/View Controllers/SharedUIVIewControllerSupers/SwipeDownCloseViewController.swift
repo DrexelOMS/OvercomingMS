@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 //NOTE: you must add a Pan Gesture Recognizer to the view controller, and ctrl drag from it to the view controller icon (white square in yellow square) and make it the delegate, and then connect to this IBAction, unless I can add the gesture recognizer in code
 
@@ -57,12 +58,40 @@ class SwipeDownCloseViewController: DismissableVC, UIGestureRecognizerDelegate {
 //        }
 //    }
     
+    let contentStackView = UIStackView()
+   
+    var theme : UIColor = UIColor.gray
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupContentStackView()
         
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(gesture:)))
         swipeDown.direction = UISwipeGestureRecognizer.Direction.down
         view.addGestureRecognizer(swipeDown)
+    }
+    
+    private func setupContentStackView() {
+        let contentView = UIView()
+        contentView.backgroundColor = DesignConstants.DEFAULT_BACKGROUND_COLOR
+        self.view.addSubview(contentView)
+        constrain(contentView, self.view.safeAreaLayoutGuide) { (view, superView) in
+            view.top == superView.top
+            view.right == superView.right
+            view.bottom == superView.bottom
+            view.left == superView.left
+        }
+        
+        contentView.addSubview(contentStackView)
+        contentStackView.axis = .vertical
+        constrain(contentStackView, contentView) { (stackView, superView) in
+            stackView.top == superView.top
+            stackView.right == superView.right
+            stackView.bottom == superView.bottom
+            stackView.left == superView.left
+        }
+        contentStackView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {

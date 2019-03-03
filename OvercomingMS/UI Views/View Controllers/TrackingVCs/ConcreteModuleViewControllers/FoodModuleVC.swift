@@ -19,6 +19,10 @@ class FoodModuleVC: TrackingModuleAbstractVC {
         initializeviewStack(defaultView: FoodMainSVC())
     }
     
+    override func addProgressBar() {
+        
+    }
+    
     override func updateProgressBar() {
 
     }

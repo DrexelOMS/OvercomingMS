@@ -124,8 +124,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     func didPressLeftContainer(_ sender: TrackingFoodBar) {
         
-        let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "FoodModuleVC") as! FoodModuleVC
+        let vc = FoodModuleVC()
         vc.modalPresentationStyle = .overCurrentContext
         vc.dismissalDelegate = self
         
@@ -166,8 +165,8 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         switch(sender.tag){
         case 0:
-            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Omega3ModuleVC") as! Omega3ModuleVC
+            let vc = Omega3ModuleVC()
+            vc.theme = omega3Bar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
@@ -175,32 +174,32 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             break
         case 1:
             //WriteVitaminDTrackingData().addData(amount: 5)
-            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "VitaminDModuleVC") as! VitaminDModuleVC
+            let vc = VitaminDModuleVC()
+            vc.theme = vitaminDBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
             self.present(vc, animated: true, completion: nil)
             break
         case 2:
-            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "ExerciseModuleVC") as! ExerciseModuleVC
+            let vc = ExerciseModuleVC()
+            vc.theme = exerciseBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
             self.present(vc, animated: true, completion: nil)
             break
         case 3:
-            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MeditationModuleVC") as! MeditationModuleVC
+            let vc = MeditationModuleVC()
+            vc.theme = medicationBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
             self.present(vc, animated: true, completion: nil)
             break
         case 4:
-            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MedicationModuleVC") as! MedicationModuleVC
+            let vc = MedicationModuleVC()
+            vc.theme = medicationBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
