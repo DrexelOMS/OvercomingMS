@@ -10,4 +10,10 @@ import UIKit
 
 class GoalsVC : SwipeDownCloseViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        initializeviewStack(defaultView: GoalsMainSVC())
+    }
+    
 }

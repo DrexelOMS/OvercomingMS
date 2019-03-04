@@ -148,6 +148,8 @@
 		0AEF7A34222C78B3009A0292 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A33222C78B3009A0292 /* GoalsVC.swift */; };
 		0AEF7A36222C7EDB009A0292 /* FoodQuickCompleteSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A35222C7EDB009A0292 /* FoodQuickCompleteSVC.xib */; };
 		0AEF7A38222C7F37009A0292 /* FoodQuickCompleteSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A37222C7F37009A0292 /* FoodQuickCompleteSVC.swift */; };
+		0AEF7A3A222CD774009A0292 /* GoalsMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A39222CD774009A0292 /* GoalsMainSVC.swift */; };
+		0AEF7A3C222CD782009A0292 /* GoalsMainSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A3B222CD782009A0292 /* GoalsMainSVC.xib */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -357,6 +359,8 @@
 		0AEF7A33222C78B3009A0292 /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		0AEF7A35222C7EDB009A0292 /* FoodQuickCompleteSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodQuickCompleteSVC.xib; sourceTree = "<group>"; };
 		0AEF7A37222C7F37009A0292 /* FoodQuickCompleteSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuickCompleteSVC.swift; sourceTree = "<group>"; };
+		0AEF7A39222CD774009A0292 /* GoalsMainSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsMainSVC.swift; sourceTree = "<group>"; };
+		0AEF7A3B222CD782009A0292 /* GoalsMainSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalsMainSVC.xib; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -879,6 +883,8 @@
 			isa = PBXGroup;
 			children = (
 				0AEF7A33222C78B3009A0292 /* GoalsVC.swift */,
+				0AEF7A39222CD774009A0292 /* GoalsMainSVC.swift */,
+				0AEF7A3B222CD782009A0292 /* GoalsMainSVC.xib */,
 			);
 			path = "Goals And Settings";
 			sourceTree = "<group>";
@@ -1152,6 +1158,7 @@
 				0AD07F8C21FE703D00C55831 /* TrackingFoodBar.xib in Resources */,
 				0A93F1582213C5B40063A892 /* FoodMainSVC.xib in Resources */,
 				0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */,
+				0AEF7A3C222CD782009A0292 /* GoalsMainSVC.xib in Resources */,
 				505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */,
 				0AEF7A2D222B01FC009A0292 /* FoodUnknownSVC.xib in Resources */,
 				8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */,
@@ -1406,6 +1413,7 @@
 				0AD7EB09221B3307006F71C0 /* VitaminDQuickAddSVC.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
 				0AD94DD7220DEEB300B5C2BA /* DeleteCircleButton.swift in Sources */,
+				0AEF7A3A222CD774009A0292 /* GoalsMainSVC.swift in Sources */,
 				0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */,
 				0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */,
 				0AD7EB00221B1E7F006F71C0 /* Omega3SelectedItem.swift in Sources */,

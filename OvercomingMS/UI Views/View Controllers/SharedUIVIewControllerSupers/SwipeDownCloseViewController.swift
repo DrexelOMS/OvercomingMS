@@ -206,6 +206,7 @@ class SwipeDownCloseViewController: DismissableVC, UIGestureRecognizerDelegate {
             
         default:
             mainView.addSubview(topView)
+            topView.reload()
             break;
         }
         
