@@ -22,7 +22,7 @@ class MeditationModuleVC: TrackingModuleAbstractVC {
         initializeviewStack(defaultView: MeditationMainSVC())
     }
     
-    override func updateProgressBar() {
+    override func reload() {
         progressBar.setProgressValue(value: meditationHistory.getPercentageComplete())
         let amountRemaining = ProgressBarConfig.meditationGoal - meditationHistory.getTotalMinutes()
         var description = ""

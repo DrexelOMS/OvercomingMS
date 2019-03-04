@@ -22,7 +22,7 @@ class MedicationModuleVC: TrackingModuleAbstractVC {
         initializeviewStack(defaultView: MedicationMainSVC())
     }
     
-    override func updateProgressBar() {
+    override func reload() {
         progressBar.setProgressValue(value: savedMedications.getPercentageComplete())
         let amountRemaining = savedMedications.getTodaysTotalMedGoal() - savedMedications.getTrackingDay()!.MedicationTotal
         var description = ""

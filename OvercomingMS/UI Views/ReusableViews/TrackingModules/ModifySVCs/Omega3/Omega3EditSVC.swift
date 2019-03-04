@@ -30,7 +30,7 @@ class Omega3EditSVC : Omega3ModifyAbstractSVC {
             newItem.Amount = amount
             
             omega3History.updateOmega3Item(oldItem: editingOmega3Item, newItem: newItem)
-            parentVC.updateProgressBar();
+            parentVC.reload();
             parentVC.popSubView()
         }
     }

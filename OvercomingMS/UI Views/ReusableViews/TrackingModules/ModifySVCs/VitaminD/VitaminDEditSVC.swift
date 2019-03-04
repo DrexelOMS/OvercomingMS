@@ -31,7 +31,7 @@ class VitaminDEditSVC : VitaminDModifyAbstractSVC {
             newItem.Amount = amount
             
             vitaminDHistory.updateVitaminDItem(oldItem: editingVitamindDItem, newItem: newItem)
-            parentVC.updateProgressBar();
+            parentVC.reload();
             parentVC.resetToDefaultView()
         }
 

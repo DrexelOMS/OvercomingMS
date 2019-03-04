@@ -35,7 +35,7 @@ class VitaminDSupplementSVC : VitaminDModifyAbstractSVC {
             saveSupplementQuery(name: type, amount: amount)
             
             vitaminDHistory.addVitaminDItem(vitaminDType: type, startTime: startTime, vitaminDAmount: amount)
-            parentVC.updateProgressBar();
+            parentVC.reload();
             parentVC.popSubView()
         }
     }
