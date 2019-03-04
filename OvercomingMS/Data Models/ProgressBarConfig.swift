@@ -22,15 +22,47 @@ class ProgressBarConfig {
         return foodDescriptions[rating - 1]
     }
     
-    static let omega3Goal : Int = 100
+    static var omega3Goal : Int {
+        get {
+            return o3g
+        }
+        set {
+            o3g = newValue
+        }
+    }
+    static private var o3g = 100
     static let omega3UOM = "g."
     
-    static let vitaminDGoal : Int = 100
+    static var vitaminDGoal : Int {
+        get {
+            return vdg
+        }
+        set {
+            vdg = newValue
+        }
+    }
+    static private var vdg = 100
     static let vitaminDUOM = "klUs"
     
-    static let exerciseGoal : Int = 30
+    static var exerciseGoal : Int {
+        get {
+            return eg
+        }
+        set {
+            eg = newValue
+        }
+    }
+    static private var eg = 30
     
-    static let meditationGoal : Int = 30
+    static var meditationGoal : Int {
+        get {
+            return mg
+        }
+        set {
+            mg = newValue
+        }
+    }
+    static private var mg = 30
     
     static let lengthUOM = "min."
     

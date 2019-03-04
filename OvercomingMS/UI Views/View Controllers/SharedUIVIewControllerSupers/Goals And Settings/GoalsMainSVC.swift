@@ -38,11 +38,11 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
     
     override func reload() {
         print("reloaded")
-        foodGoalLabel.text = "Food Goal: "
-        omega3GoalLabel.text = "Omega3 Goal: "
-        vitaminDGoalLabel.text = "VitaminD Goal: "
-        exerciseGoalLabel.text = "Exercise Goal: "
-        meditationGoalLabel.text = "Meditation Goal: "
+        foodGoalLabel.text = "Food Goal: Not Read Yet"
+        omega3GoalLabel.text = "Omega3 Goal: \(ProgressBarConfig.omega3Goal)"
+        vitaminDGoalLabel.text = "VitaminD Goal: \(ProgressBarConfig.vitaminDGoal)"
+        exerciseGoalLabel.text = "Exercise Goal: \(ProgressBarConfig.exerciseGoal)"
+        meditationGoalLabel.text = "Meditation Goal: \(ProgressBarConfig.meditationGoal)"
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -50,23 +50,24 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
         
         switch textField {
         case foodGoalTextField:
-            foodGoalLabel.text = textField.text ?? ""
             break
         case omega3GoalTextField:
-            omega3GoalLabel.text = textField.text ?? ""
+            ProgressBarConfig.omega3Goal = Int(textField.text ?? "") ?? ProgressBarConfig.omega3Goal
             break
         case vitaminDGoalTextField:
-            vitaminDGoalLabel.text = textField.text ?? ""
+            ProgressBarConfig.vitaminDGoal = Int(textField.text ?? "") ?? ProgressBarConfig.vitaminDGoal
             break
         case exerciseGoalTextField:
-            exerciseGoalLabel.text = textField.text ?? ""
+            ProgressBarConfig.exerciseGoal = Int(textField.text ?? "") ?? ProgressBarConfig.exerciseGoal
             break
         case meditationGoalTextField:
-            meditationGoalLabel.text = textField.text ?? ""
+            ProgressBarConfig.meditationGoal = Int(textField.text ?? "") ?? ProgressBarConfig.meditationGoal
             break
         default:
             break
         }
+        
+        reload()
         
         return true
     }
