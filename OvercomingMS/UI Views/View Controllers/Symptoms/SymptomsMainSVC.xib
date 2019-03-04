@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SymptomsMainSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="plusButtonView" destination="k10-S1-jWJ" id="jBf-e3-h8J"/>
+                <outlet property="tableView" destination="GYa-6d-7me" id="2Qu-1Y-qXN"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

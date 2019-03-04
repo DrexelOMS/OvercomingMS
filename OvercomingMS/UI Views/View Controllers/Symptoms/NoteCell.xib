@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" id="19S-99-iPt">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" id="19S-99-iPt" customClass="NoteCell" customModule="OvercomingMS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="19S-99-iPt" id="O3M-Yx-yGo">
@@ -20,16 +20,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FsJ-Yl-6lH" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                        <rect key="frame" x="10" y="10" width="355" height="23.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vN9-eo-kYU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="23.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFE-iw-pkI">
-                                        <rect key="frame" x="0.0" y="0.0" width="285" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="23.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD0-7b-Jcf">
-                                                <rect key="frame" x="10" y="5" width="275" height="33.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD0-7b-Jcf">
+                                                <rect key="frame" x="10" y="5" width="255" height="13.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -49,10 +49,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1d-8q-IIR">
-                                        <rect key="frame" x="295" y="0.0" width="80" height="43.5"/>
+                                        <rect key="frame" x="275" y="0.0" width="80" height="23.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcZ-gP-XYe">
-                                                <rect key="frame" x="4.5" y="5" width="65.5" height="33.5"/>
+                                                <rect key="frame" x="0.0" y="5" width="70" height="13.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="12:00 AM">
                                                         <attributes>
@@ -66,6 +66,7 @@
                                             </label>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="BcZ-gP-XYe" firstAttribute="leading" secondItem="c1d-8q-IIR" secondAttribute="leading" id="5W9-ka-KWC"/>
                                             <constraint firstAttribute="bottom" secondItem="BcZ-gP-XYe" secondAttribute="bottom" constant="5" id="BG7-q3-XvA"/>
                                             <constraint firstAttribute="width" constant="80" id="bLx-Ze-IOb"/>
                                             <constraint firstAttribute="trailing" secondItem="BcZ-gP-XYe" secondAttribute="trailing" constant="10" id="czb-mP-SAJ"/>
@@ -85,13 +86,19 @@
                         <viewLayoutGuide key="safeArea" id="gOb-3v-xKR"/>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="FsJ-Yl-6lH" firstAttribute="top" secondItem="O3M-Yx-yGo" secondAttribute="top" id="Bq2-iy-5Ud"/>
-                    <constraint firstAttribute="bottom" secondItem="FsJ-Yl-6lH" secondAttribute="bottom" id="XxO-fJ-jyC"/>
-                    <constraint firstItem="FsJ-Yl-6lH" firstAttribute="leading" secondItem="O3M-Yx-yGo" secondAttribute="leading" id="ZxE-0Y-hIX"/>
-                    <constraint firstAttribute="trailing" secondItem="FsJ-Yl-6lH" secondAttribute="trailing" id="raz-P2-oOy"/>
+                    <constraint firstItem="FsJ-Yl-6lH" firstAttribute="top" secondItem="O3M-Yx-yGo" secondAttribute="top" constant="10" id="Bq2-iy-5Ud"/>
+                    <constraint firstAttribute="bottom" secondItem="FsJ-Yl-6lH" secondAttribute="bottom" constant="10" id="XxO-fJ-jyC"/>
+                    <constraint firstItem="FsJ-Yl-6lH" firstAttribute="leading" secondItem="O3M-Yx-yGo" secondAttribute="leading" constant="10" id="ZxE-0Y-hIX"/>
+                    <constraint firstAttribute="trailing" secondItem="FsJ-Yl-6lH" secondAttribute="trailing" constant="10" id="raz-P2-oOy"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="noteLabel" destination="PD0-7b-Jcf" id="0au-SS-14C"/>
+                <outlet property="timeLabel" destination="BcZ-gP-XYe" id="gdf-bm-pVz"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
