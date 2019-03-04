@@ -96,7 +96,7 @@
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3h-Y8-gLi" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
                                                                             <subviews>
-                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pxj-VB-0Nl">
+                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Distressed" translatesAutoresizingMaskIntoConstraints="NO" id="pxj-VB-0Nl">
                                                                                     <rect key="frame" x="9" y="9" width="28" height="28"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="28" id="mAn-AY-7mJ"/>
@@ -147,7 +147,7 @@
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZW-nS-hwD" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
                                                                             <subviews>
-                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BVw-Cg-hEu">
+                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sad" translatesAutoresizingMaskIntoConstraints="NO" id="BVw-Cg-hEu">
                                                                                     <rect key="frame" x="9" y="9" width="28" height="28"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="28" id="D6j-i5-Rbj"/>
@@ -195,7 +195,7 @@
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1GK-Dv-fPa" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
                                                                             <subviews>
-                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="glw-CO-i5f">
+                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meh" translatesAutoresizingMaskIntoConstraints="NO" id="glw-CO-i5f">
                                                                                     <rect key="frame" x="9" y="9" width="28" height="28"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="28" id="5Kd-za-u2W"/>
@@ -243,7 +243,7 @@
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mga-Lh-arM" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
                                                                             <subviews>
-                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kdt-g3-497">
+                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="Kdt-g3-497">
                                                                                     <rect key="frame" x="9" y="9" width="28" height="28"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="28" id="9qY-jP-2QW"/>
@@ -291,7 +291,7 @@
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHf-8q-ibI" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
                                                                             <subviews>
-                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SAi-Ia-pKJ">
+                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Excited" translatesAutoresizingMaskIntoConstraints="NO" id="SAi-Ia-pKJ">
                                                                                     <rect key="frame" x="9" y="9" width="28" height="28"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="28" id="OJv-0J-OiW"/>
@@ -476,5 +476,10 @@
     </objects>
     <resources>
         <image name="Add" width="689" height="689"/>
+        <image name="Distressed" width="689" height="689"/>
+        <image name="Excited" width="689" height="689"/>
+        <image name="Happy" width="689" height="689"/>
+        <image name="Meh" width="689" height="689"/>
+        <image name="Sad" width="689" height="689"/>
     </resources>
 </document>
