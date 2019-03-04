@@ -159,6 +159,8 @@
 		0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAFDD22163057004C1966 /* SearchBarButton.xib */; };
 		0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */; };
 		0C7D5866222C652100D00CB0 /* SymptomsMainSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7D5865222C652100D00CB0 /* SymptomsMainSVC.xib */; };
+		0C7D5868222D8DA300D00CB0 /* NoteButtonViewSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7D5867222D8DA300D00CB0 /* NoteButtonViewSVC.xib */; };
+		0C7D586A222D942B00D00CB0 /* NoteReviewSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7D5869222D942B00D00CB0 /* NoteReviewSVC.xib */; };
 		0C9910852219C2F00008A727 /* FoodSelectedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9910842219C2F00008A727 /* FoodSelectedSVC.xib */; };
 		0CAD6315221D9C7700E50E72 /* FoodApprovedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6314221D9C7700E50E72 /* FoodApprovedSVC.xib */; };
 		0CAD6317221DAAEE00E50E72 /* FoodRejectedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */; };
@@ -368,6 +370,8 @@
 		0C2DAFDD22163057004C1966 /* SearchBarButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarButton.xib; sourceTree = "<group>"; };
 		0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackConfirmButtonsSVC.xib; sourceTree = "<group>"; };
 		0C7D5865222C652100D00CB0 /* SymptomsMainSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SymptomsMainSVC.xib; sourceTree = "<group>"; };
+		0C7D5867222D8DA300D00CB0 /* NoteButtonViewSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteButtonViewSVC.xib; sourceTree = "<group>"; };
+		0C7D5869222D942B00D00CB0 /* NoteReviewSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteReviewSVC.xib; sourceTree = "<group>"; };
 		0C9910842219C2F00008A727 /* FoodSelectedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSelectedSVC.xib; sourceTree = "<group>"; };
 		0CAD6314221D9C7700E50E72 /* FoodApprovedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodApprovedSVC.xib; sourceTree = "<group>"; };
 		0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodRejectedSVC.xib; sourceTree = "<group>"; };
@@ -584,7 +588,6 @@
 				0AA52851220230CD00CCFEE7 /* ExerciseMainSVC.swift */,
 				0AD94DE0220E178E00B5C2BA /* MeditationMainSVC.swift */,
 				0AA528532202314600CCFEE7 /* MainAbstractSVC.xib */,
-				0C7D5865222C652100D00CB0 /* SymptomsMainSVC.xib */,
 			);
 			path = MainSVCs;
 			sourceTree = "<group>";
@@ -891,6 +894,9 @@
 		0C7D5864222C63DA00D00CB0 /* SymptomsModule */ = {
 			isa = PBXGroup;
 			children = (
+				0C7D5865222C652100D00CB0 /* SymptomsMainSVC.xib */,
+				0C7D5867222D8DA300D00CB0 /* NoteButtonViewSVC.xib */,
+				0C7D5869222D942B00D00CB0 /* NoteReviewSVC.xib */,
 			);
 			path = SymptomsModule;
 			sourceTree = "<group>";
@@ -1157,12 +1163,14 @@
 				0A2BAA752204AFC3004074F3 /* Quicksand-BoldItalic.otf in Resources */,
 				0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */,
 				0CBE98AB22237E2600D3C090 /* MeditationTypeSVC.xib in Resources */,
+				0C7D5868222D8DA300D00CB0 /* NoteButtonViewSVC.xib in Resources */,
 				0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */,
 				0AA528702202828300CCFEE7 /* SquareButtonSVC.xib in Resources */,
 				0A1FEC4F2204E01C006CED70 /* TrackingModuleStoryboard.storyboard in Resources */,
 				0A2BAA742204AFC3004074F3 /* SIL Open Font License.txt in Resources */,
 				0CB44DEC22233A76004D0580 /* MeditationLevelSVC.xib in Resources */,
 				0CB44DEA2223280F004D0580 /* GuidedMeditation.xib in Resources */,
+				0C7D586A222D942B00D00CB0 /* NoteReviewSVC.xib in Resources */,
 				0A93F19222145EA30063A892 /* TFIAbstract.xib in Resources */,
 				0A0818982214E6310021BDF6 /* FoodSearchSVC.xib in Resources */,
 				0CBE98AD2223835300D3C090 /* MeditationTypeButtonSVC.xib in Resources */,

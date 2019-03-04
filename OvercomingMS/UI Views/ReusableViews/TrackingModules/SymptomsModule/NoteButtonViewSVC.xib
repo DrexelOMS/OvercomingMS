@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="41"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpl-lB-QuF" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                    <rect key="frame" x="10" y="0.0" width="260" height="41"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P9w-u4-bNd">
+                            <rect key="frame" x="0.0" y="0.0" width="260" height="41"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7Y-31-S6Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="170" height="41"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkN-F4-5hJ">
+                                            <rect key="frame" x="10" y="5" width="160" height="31"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Label">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="14" name="Avenir-Roman"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="bkN-F4-5hJ" secondAttribute="bottom" constant="5" id="0Ly-DH-SZh"/>
+                                        <constraint firstAttribute="trailing" secondItem="bkN-F4-5hJ" secondAttribute="trailing" id="EbF-Lr-TnJ"/>
+                                        <constraint firstItem="bkN-F4-5hJ" firstAttribute="top" secondItem="S7Y-31-S6Z" secondAttribute="top" constant="5" id="Hi9-Ke-CzO"/>
+                                        <constraint firstItem="bkN-F4-5hJ" firstAttribute="leading" secondItem="S7Y-31-S6Z" secondAttribute="leading" constant="10" id="SB6-Xy-YKG"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MIg-D1-xBf">
+                                    <rect key="frame" x="180" y="0.0" width="80" height="41"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhm-nP-jyj">
+                                            <rect key="frame" x="4.5" y="5" width="65.5" height="31"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="12:00 AM">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="14" name="Avenir-Black"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="vhm-nP-jyj" secondAttribute="bottom" constant="5" id="PtL-UC-eV1"/>
+                                        <constraint firstAttribute="width" constant="80" id="c3d-Hz-F0Z"/>
+                                        <constraint firstAttribute="trailing" secondItem="vhm-nP-jyj" secondAttribute="trailing" constant="10" id="gqt-OT-3Sw"/>
+                                        <constraint firstItem="vhm-nP-jyj" firstAttribute="top" secondItem="MIg-D1-xBf" secondAttribute="top" constant="5" id="mCE-CK-bne"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.50980392156862742" green="0.56862745098039214" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="P9w-u4-bNd" secondAttribute="trailing" id="3Rd-Ug-UtI"/>
+                        <constraint firstItem="P9w-u4-bNd" firstAttribute="leading" secondItem="Wpl-lB-QuF" secondAttribute="leading" id="9xp-bA-Tpg"/>
+                        <constraint firstAttribute="bottom" secondItem="P9w-u4-bNd" secondAttribute="bottom" id="GY8-eN-xl5"/>
+                        <constraint firstItem="P9w-u4-bNd" firstAttribute="top" secondItem="Wpl-lB-QuF" secondAttribute="top" id="ZU1-fv-ba7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Wpl-lB-QuF" secondAttribute="trailing" constant="10" id="1c6-Sh-8TL"/>
+                <constraint firstAttribute="bottom" secondItem="Wpl-lB-QuF" secondAttribute="bottom" id="gKY-Zw-oUN"/>
+                <constraint firstItem="Wpl-lB-QuF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oGz-BF-aU4"/>
+                <constraint firstItem="Wpl-lB-QuF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="sny-W5-PNr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="48.75" y="434.68309859154931"/>
+        </view>
+    </objects>
+</document>
