@@ -22,7 +22,7 @@ class Omega3ModuleVC: TrackingModuleAbstractVC {
         initializeviewStack(defaultView: Omega3MainSVC())
     }
     
-    override func updateProgressBar() {
+    override func reload() {
         progressBar.setProgressValue(value: omega3History.getPercentageComplete())
         let amountRemaining = ProgressBarConfig.omega3Goal - omega3History.getTotalGrams()
         var description = ""

@@ -54,10 +54,6 @@ class VitaminDModifyAbstractSVC : ModifyAbstractSVC {
         backConfirmButtons.rightButtonAction = ConfirmPressed
         
     }
-    
-    override func initialize(parentVC: TrackingModuleAbstractVC) {
-        super.initialize(parentVC: parentVC)
-        
-    }
+
     
 }

@@ -38,7 +38,7 @@ class MedicationEditSVC : MedicationModifyAbstractSVC {
             
             savedMedications.updateSavedMedicationItem(oldItem: editingMedicationItem, newItem: newItem)
             
-            parentVC.updateProgressBar();
+            parentVC.reload();
             parentVC.resetToDefaultView()
         }
         

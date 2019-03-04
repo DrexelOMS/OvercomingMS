@@ -22,7 +22,7 @@ class VitaminDModuleVC: TrackingModuleAbstractVC {
         initializeviewStack(defaultView: VitaminDMainSVC())
     }
     
-    override func updateProgressBar() {
+    override func reload() {
         progressBar.setProgressValue(value: vitaminDHistory.getPercentageComplete())
         let amountRemaining = ProgressBarConfig.vitaminDGoal - vitaminDHistory.getTotalAmount()
         var description = ""

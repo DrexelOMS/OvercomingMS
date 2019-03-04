@@ -35,7 +35,7 @@ class Omega3SupplementSVC : Omega3ModifyAbstractSVC {
             saveSupplementQuery(name: type, amount: amount)
             
             omega3History.addOmega3Item(supplementName: type, StartTime: startTime, Amount: amount)
-            parentVC.updateProgressBar();
+            parentVC.reload();
             parentVC.popSubView()
         }
     }
