@@ -44,10 +44,10 @@
 		0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */; };
 		0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */; };
 		0A93EA3F2210D1FC0063A892 /* FoodModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3E2210D1FC0063A892 /* FoodModuleVC.swift */; };
-		0A93EA4122122D840063A892 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		0A93EA45221316490063A892 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		0A93EA472213165D0063A892 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		0A93EA4922131C2D0063A892 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		0A93EA4122122D840063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0A93EA45221316490063A892 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		0A93EA472213165D0063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0A93EA4922131C2D0063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5622132BCF0063A892 /* PullBarSVC.swift */; };
 		0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93EA5722132BCF0063A892 /* PullBarSVC.xib */; };
 		0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5A22132BF90063A892 /* Omega3ModuleVC.swift */; };
@@ -182,6 +182,9 @@
 		6129746421DF017F00B9846C /* OvercomingMSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746321DF017F00B9846C /* OvercomingMSTests.swift */; };
 		6129746F21DF017F00B9846C /* OvercomingMSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746E21DF017F00B9846C /* OvercomingMSUITests.swift */; };
 		8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */; };
+		83985923222D758E00782A10 /* MeditationModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985922222D758E00782A10 /* MeditationModifyAbstractSVC.swift */; };
+		83985925222D768600782A10 /* MeditationAddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985924222D768600782A10 /* MeditationAddSVC.swift */; };
+		83985927222EBA3300782A10 /* MeditationEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985926222EBA3300782A10 /* MeditationEditSVC.swift */; };
 		DD500F23445D0A98AC159E98 /* Pods_OvercomingMSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613999C2BAE695AFE369D7B7 /* Pods_OvercomingMSUITests.framework */; };
 		E52344C266EF89DAB14C6AA3 /* Pods_OvercomingMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFED95C83375718D7DCA1211 /* Pods_OvercomingMS.framework */; };
 /* End PBXBuildFile section */
@@ -398,6 +401,9 @@
 		64624BC75971C455C566E626 /* Pods-OvercomingMSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.release.xcconfig"; sourceTree = "<group>"; };
 		724CCA850B24CDC7CCFAF25E /* Pods-OvercomingMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.debug.xcconfig"; sourceTree = "<group>"; };
 		8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimerStoryBoard.storyboard; sourceTree = "<group>"; };
+		83985922222D758E00782A10 /* MeditationModifyAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationModifyAbstractSVC.swift; sourceTree = "<group>"; };
+		83985924222D768600782A10 /* MeditationAddSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAddSVC.swift; sourceTree = "<group>"; };
+		83985926222EBA3300782A10 /* MeditationEditSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationEditSVC.swift; sourceTree = "<group>"; };
 		89CF61DE31F50EFE76BD85FE /* Pods-OvercomingMSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0433A9C40E2CDD4C4FE48DD /* Pods-OvercomingMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.release.xcconfig"; sourceTree = "<group>"; };
 		A16E3BBC1D5B0C0744651350 /* Pods-OvercomingMSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -837,6 +843,7 @@
 		0AD94DAD2209BBD600B5C2BA /* ModifySVCs */ = {
 			isa = PBXGroup;
 			children = (
+				83985921222D72A600782A10 /* Meditation */,
 				0AD7EB07221B32D6006F71C0 /* VitaminD */,
 				0AD7EAF8221B1A3E006F71C0 /* Omega3 */,
 				0AD7EAF7221B19DA006F71C0 /* Exercise */,
@@ -1002,6 +1009,16 @@
 			path = ChrisUITesting;
 			sourceTree = "<group>";
 		};
+		83985921222D72A600782A10 /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				83985922222D758E00782A10 /* MeditationModifyAbstractSVC.swift */,
+				83985924222D768600782A10 /* MeditationAddSVC.swift */,
+				83985926222EBA3300782A10 /* MeditationEditSVC.swift */,
+			);
+			path = Meditation;
+			sourceTree = "<group>";
+		};
 		DD7121317404FDF12D44D4AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1164,7 +1181,7 @@
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
 				0AD7EB392223043A006F71C0 /* MedicationCell.xib in Resources */,
 				0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */,
-				0A93EA45221316490063A892 /* BuildFile in Resources */,
+				0A93EA45221316490063A892 /* (null) in Resources */,
 				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
 				0A08189A2214E7E80021BDF6 /* FoodSearchCell.xib in Resources */,
@@ -1330,6 +1347,7 @@
 				0A93F19B22145F150063A892 /* ModifyAbstractSVC.swift in Sources */,
 				503A524A2228A51200E5A009 /* SymptomsNoteDBS.swift in Sources */,
 				0AD7EB4422234491006F71C0 /* MedRateButtonsSVC.swift in Sources */,
+				83985925222D768600782A10 /* MeditationAddSVC.swift in Sources */,
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
 				0A08189E2214F82F0021BDF6 /* Food.swift in Sources */,
 				0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */,
@@ -1339,7 +1357,7 @@
 				0AF8E0DB2209248700E1EC33 /* StopwatchAbstractSVC.swift in Sources */,
 				0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */,
 				0A93F19322145EA30063A892 /* TypeTFI.swift in Sources */,
-				0A93EA472213165D0063A892 /* BuildFile in Sources */,
+				0A93EA472213165D0063A892 /* (null) in Sources */,
 				0A93F1512213BB9D0063A892 /* MeditationHistoryDBT.swift in Sources */,
 				0A1FEC61220529D7006CED70 /* TrackingModulesDBS.swift in Sources */,
 				0AD94DCC220CEE9800B5C2BA /* ExerciseSelectedItem.swift in Sources */,
@@ -1366,6 +1384,7 @@
 				0A2BAA662202A24E004074F3 /* FoodRatingDBS.swift in Sources */,
 				0AD7EB4E2224C057006F71C0 /* MedicationEditSVC.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
+				83985923222D758E00782A10 /* MeditationModifyAbstractSVC.swift in Sources */,
 				0AD7EB1A2220A546006F71C0 /* FoodSelectedSVC.swift in Sources */,
 				0AD7EB3A2223043A006F71C0 /* MedicationCell.swift in Sources */,
 				0AD7EB48222345A9006F71C0 /* ToggleLabeledCircleButton.swift in Sources */,
@@ -1421,13 +1440,14 @@
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
 				0AEF7A2F222B0268009A0292 /* FoodUnknownSVC.swift in Sources */,
 				0AD7EAEC2219A8F9006F71C0 /* PillBoxUIView.swift in Sources */,
-				0A93EA4122122D840063A892 /* BuildFile in Sources */,
+				0A93EA4122122D840063A892 /* (null) in Sources */,
 				0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */,
 				0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */,
+				83985927222EBA3300782A10 /* MeditationEditSVC.swift in Sources */,
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
 				0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */,
-				0A93EA4922131C2D0063A892 /* BuildFile in Sources */,
+				0A93EA4922131C2D0063A892 /* (null) in Sources */,
 				0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */,
 				0A93F19D22145F150063A892 /* ExerciseAddSVC.swift in Sources */,
 				0AD7EB42222341B3006F71C0 /* MedicationRateTFI.swift in Sources */,
