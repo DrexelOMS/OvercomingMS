@@ -33,8 +33,8 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     @IBOutlet weak var meditationBar: TrackingProgressBar!
     @IBOutlet weak var medicationBar: TrackingProgressBar!
     
-    @IBOutlet weak var previousButton: UIButton!
-    @IBOutlet weak var nextDay: UIButton!
+    @IBOutlet weak var previousButton: UIView!
+    @IBOutlet weak var nextDay: UIView!
     
     @IBOutlet weak var GoalButton: CircleButtonSVC!
     @IBOutlet weak var SymptomsButton: CircleButtonSVC!
