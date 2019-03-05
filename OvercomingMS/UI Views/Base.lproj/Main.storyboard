@@ -28,7 +28,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2m0-fw-ejm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvo-lG-7QB" userLabel="Navigation">
                                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
@@ -119,7 +119,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sh-On-vKM" userLabel="GoalMessageView">
-                                                                <rect key="frame" x="0.0" y="40.5" width="320" height="39.5"/>
+                                                                <rect key="frame" x="0.0" y="40.5" width="320" height="35.5"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zCL-SO-l48">
                                                                         <rect key="frame" x="20" y="0.0" width="280" height="35.5"/>
@@ -178,7 +178,7 @@
                                                                 <constraints>
                                                                     <constraint firstItem="zCL-SO-l48" firstAttribute="top" secondItem="9sh-On-vKM" secondAttribute="top" id="HFM-4f-9ag"/>
                                                                     <constraint firstItem="zCL-SO-l48" firstAttribute="leading" secondItem="9sh-On-vKM" secondAttribute="leading" constant="20" id="dYS-f9-ZIB"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="zCL-SO-l48" secondAttribute="bottom" constant="4" id="hva-Ly-6EN"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="zCL-SO-l48" secondAttribute="bottom" id="hva-Ly-6EN"/>
                                                                     <constraint firstAttribute="trailing" secondItem="zCL-SO-l48" secondAttribute="trailing" constant="20" id="nbF-vr-6oM"/>
                                                                 </constraints>
                                                             </view>
@@ -190,7 +190,7 @@
                                                     <constraint firstAttribute="height" constant="80" id="EHl-T4-E2R"/>
                                                     <constraint firstAttribute="trailing" secondItem="2m0-fw-ejm" secondAttribute="trailing" id="LEZ-6s-4ih"/>
                                                     <constraint firstItem="2m0-fw-ejm" firstAttribute="top" secondItem="KyE-NP-hph" secondAttribute="top" id="j2g-OS-1YI"/>
-                                                    <constraint firstAttribute="bottom" secondItem="2m0-fw-ejm" secondAttribute="bottom" id="uGa-Wd-MjT"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2m0-fw-ejm" secondAttribute="bottom" constant="4" id="uGa-Wd-MjT"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4m-or-7q3" userLabel="DateView">

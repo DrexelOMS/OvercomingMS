@@ -58,8 +58,6 @@ class BottomRoundCornersUIView: UIView {
             shadowLayer.shadowRadius = 1.0
             shadowLayer.shadowOpacity = 0.3
             
-            shadowLayer.masksToBounds = false
-            
             layer.insertSublayer(shadowLayer, at: 0)
         }
     }
