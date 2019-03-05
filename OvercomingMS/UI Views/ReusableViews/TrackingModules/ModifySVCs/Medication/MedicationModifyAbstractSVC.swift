@@ -68,9 +68,4 @@ class MedicationModifyAbstractSVC : ModifyAbstractSVC {
         
     }
     
-    override func initialize(parentVC: SwipeDownCloseViewController) {
-        super.initialize(parentVC: parentVC)
-        
-    }
-    
 }

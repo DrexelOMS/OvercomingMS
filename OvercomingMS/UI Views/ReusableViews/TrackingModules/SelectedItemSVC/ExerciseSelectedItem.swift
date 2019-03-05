@@ -27,10 +27,6 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
         bottomSubLabel.text = "Length"
     }
     
-    override func updateColors() {
-        //Update color themes
-    }
-    
     override func reload() {
         topMainLabel.text = exerciseItem.RoutineType
         middleMainLabel.text = OMSDateAccessor.getDateTime(date: exerciseItem.StartTime)

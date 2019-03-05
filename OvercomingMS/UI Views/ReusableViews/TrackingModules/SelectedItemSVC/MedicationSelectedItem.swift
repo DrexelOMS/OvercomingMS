@@ -26,10 +26,6 @@ class MedicationSelectedItemSVC : SelectedItemSVC {
         bottomSubLabel.text = "Amount"
     }
     
-    override func updateColors() {
-        //Update color themes
-    }
-    
     override func reload() {
         bottomMainLabel.text = "\(savedMedicationItem.MedicationAmount) \(savedMedicationItem.MedicationUOM)"
         topMainLabel.text = savedMedicationItem.MedicationName

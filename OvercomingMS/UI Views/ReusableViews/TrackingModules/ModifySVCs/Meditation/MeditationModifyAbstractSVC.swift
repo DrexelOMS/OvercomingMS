@@ -48,10 +48,5 @@ class MeditationModifyAbstractSVC : ModifyAbstractSVC {
         backConfirmButtons.rightButtonAction = ConfirmPressed
         
     }
-    
-    override func initialize(parentVC: SwipeDownCloseViewController) {
-        super.initialize(parentVC: parentVC)
-        
-    }
-    
+
 }

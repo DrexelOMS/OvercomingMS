@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoteReviewSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
-                <outlet property="backConfirmButton" destination="Gcs-iO-kUb" id="QIZ-bL-7Xj"/>
+                <outlet property="backConfirmButtons" destination="Gcs-iO-kUb" id="YCb-tZ-b2a"/>
                 <outlet property="deleteCircleButton" destination="RFQ-dY-D44" id="51M-P6-u2H"/>
                 <outlet property="noteLabel" destination="WmN-Lv-WOT" id="n6m-ZK-5qf"/>
                 <outlet property="timeLabel" destination="aa0-N2-nhs" id="8Ba-qP-xyM"/>

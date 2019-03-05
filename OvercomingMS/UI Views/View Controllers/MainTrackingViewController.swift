@@ -204,7 +204,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             break
         case 3:
             let vc = MeditationModuleVC()
-            vc.theme = medicationBar.colorTheme
+            vc.theme = meditationBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             

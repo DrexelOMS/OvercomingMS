@@ -39,7 +39,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     }
     
     override func updateColors() {
-        print("remember to update colors")
+        backConfirmButtons.colorTheme = parentVC.theme
     }
     
     func BackPressed() {

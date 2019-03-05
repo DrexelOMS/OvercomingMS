@@ -25,11 +25,7 @@ class Omega3SelectedItemSVC : SelectedItemSVC {
         middleSubLabel.text = "Time"
         bottomSubLabel.text = "Amount"
     }
-    
-    override func updateColors() {
-        //Update color themes
-    }
-    
+
     override func reload() {
         topMainLabel.text = omega3Item.supplementName
         middleMainLabel.text = OMSDateAccessor.getDateTime(date: omega3Item.StartTime)

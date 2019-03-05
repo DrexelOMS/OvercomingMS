@@ -56,9 +56,4 @@ class ExerciseModifyAbstractSVC : ModifyAbstractSVC {
         
     }
     
-    override func initialize(parentVC: SwipeDownCloseViewController) {
-        super.initialize(parentVC: parentVC)
-        
-    }
-    
 }

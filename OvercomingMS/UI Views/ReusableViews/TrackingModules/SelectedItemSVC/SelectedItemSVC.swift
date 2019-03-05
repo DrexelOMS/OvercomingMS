@@ -51,6 +51,10 @@ class SelectedItemSVC : SlidingAbstractSVC {
         backButton.backButtonAction = backButtonPressed
     }
     
+    override func updateColors() {
+        backButton.colorTheme = parentVC.theme
+    }
+    
     private func backButtonPressed() {
         parentVC.popSubView()
     }

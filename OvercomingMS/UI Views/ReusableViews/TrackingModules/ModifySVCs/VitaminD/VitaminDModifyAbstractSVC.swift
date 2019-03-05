@@ -54,6 +54,5 @@ class VitaminDModifyAbstractSVC : ModifyAbstractSVC {
         backConfirmButtons.rightButtonAction = ConfirmPressed
         
     }
-
     
 }

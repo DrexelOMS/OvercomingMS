@@ -21,7 +21,7 @@ class NoteReviewSVC: SlidingAbstractSVC {
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var deleteCircleButton: DeleteCircleButton!
-    @IBOutlet weak var backConfirmButton: BackConfirmButtonsSVC!
+    @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
     
     convenience init(noteItem: SymptomsNoteDBT) {
         self.init()
@@ -38,10 +38,14 @@ class NoteReviewSVC: SlidingAbstractSVC {
     override func initialize(parentVC: SwipeDownCloseViewController) {
         super.initialize(parentVC: parentVC)
         
-        deleteCircleButton.colorTheme = parentVC.theme
         deleteCircleButton.buttonAction = deletePressed
-        backConfirmButton.leftButtonAction = backPressed
-        backConfirmButton.rightButtonAction = backPressed
+        backConfirmButtons.leftButtonAction = backPressed
+        backConfirmButtons.rightButtonAction = backPressed
+    }
+    
+    override func updateColors() {
+        deleteCircleButton.colorTheme = parentVC.theme
+        backConfirmButtons.colorTheme = parentVC.theme
     }
     
     override func reload() {
