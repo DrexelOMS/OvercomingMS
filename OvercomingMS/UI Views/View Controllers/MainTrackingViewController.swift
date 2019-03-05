@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingProgressBarDelegate, TrackingFoodBarDelegate {
+class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingProgressBarDelegate {
     
     func finishedShowing(viewController: UIViewController) {
         print("ReloadedData")
@@ -122,31 +122,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     //MARK: Delegates
     
-    func didPressCheckButton(_ sender: TrackingFoodBar) {
-        
-        //WriteFoodTrackingData().toggleFilledData()
-        
-        let vc = QuickCompleteFoodVC()
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.dismissalDelegate = self
-        
-        self.present(vc, animated: true, completion: nil)
-        
-        //loadCurrentDayUI()  
-    }
-    
-    func didPressLeftContainer(_ sender: TrackingFoodBar) {
-        
-        let vc = FoodModuleVC()
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.dismissalDelegate = self
-        
-        self.present(vc, animated: true, completion: nil)
-        
-        loadCurrentDayUI()
-        
-    }
-    
     func didPressCheckButton(_ sender: TrackingProgressBar) {
         
         switch(sender.tag){
@@ -164,6 +139,13 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             break
         case 4:
             SavedMedicationDBS().toggleFilledData()
+            break
+        case 5:
+            let vc = QuickCompleteFoodVC()
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.dismissalDelegate = self
+            
+            self.present(vc, animated: true, completion: nil)
             break
         default:
             fatalError("Case Not Handled")
@@ -217,6 +199,15 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             vc.dismissalDelegate = self
             
             self.present(vc, animated: true, completion: nil)
+            break
+        case 5:
+            let vc = FoodModuleVC()
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.dismissalDelegate = self
+            
+            self.present(vc, animated: true, completion: nil)
+            
+            loadCurrentDayUI()
             break
         default:
             fatalError("Case Not Handled")

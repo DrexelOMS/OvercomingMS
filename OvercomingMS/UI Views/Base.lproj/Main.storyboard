@@ -295,8 +295,11 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uG2-RS-f9c">
                                                         <rect key="frame" x="20" y="0.0" width="280" height="320"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-EL-iHN" customClass="TrackingFoodBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-EL-iHN" customClass="TrackingFoodBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Food"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IO1-W9-0dD" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="55" width="280" height="45"/>
