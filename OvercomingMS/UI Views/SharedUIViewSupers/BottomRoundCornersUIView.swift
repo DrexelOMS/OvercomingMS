@@ -10,33 +10,6 @@ import UIKit
 
 @IBDesignable
 class BottomRoundCornersUIView: UIView {
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
-    private func setup(){
-        
-//        if #available(iOS 11.0, *){
-//            self.clipsToBounds = false
-//            self.layer.cornerRadius = bounds.height / 4
-//            self.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-//        }else{
-//            let rectShape = CAShapeLayer()
-//            rectShape.bounds = self.frame
-//            rectShape.position = self.center
-//            rectShape.path = UIBezierPath(roundedRect: self.bounds,    byRoundingCorners: [.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 20, height: 20)).cgPath
-//            self.layer.mask = rectShape
-//        }
-//        self.layer.addShadow()
-        
-    }
     
     private var shadowLayer: CAShapeLayer!
     private var cornerRadius: CGFloat = 15.0
