@@ -9,7 +9,6 @@
 import UIKit
 
 class MeditationSelectedItemSVC: UIView {
-
     var meditationItem : MeditationHistoryDBT!
         
         {
@@ -26,10 +25,6 @@ class MeditationSelectedItemSVC: UIView {
         bottomSubLabel.text = "Length"
     }
     
-    override func updateColors() {
-        //Update color themes
-    }
-    
     override func reload() {
         topMainLabel.text = meditationItem.RoutineType
         middleMainLabel.text = OMSDateAccessor.getDateTime(date: meditationItem.StartTime)
@@ -37,8 +32,8 @@ class MeditationSelectedItemSVC: UIView {
     }
     
     override func editButtonPressed() {
-        let editPage = Meditation()
-        editPage.editingExerciseItem = exerciseItem
+        let editPage = MeditationEditSVC()
+        editPage.editingMeditationItem = meditationItem
         parentVC.pushSubView(newSubView: editPage)
     }
     
@@ -48,10 +43,10 @@ class MeditationSelectedItemSVC: UIView {
     }
     
     func repeatItem() {
-        let type = exerciseItem.RoutineType
+        let type = meditationItem.RoutineType
         let startTime = Date()
-        let endTime = startTime.addingTimeInterval(TimeInterval(exerciseItem.minutes * 60))
-        ExerciseHistoryDBS().addExerciseItem(routineType: type, startTime: startTime, endTime: endTime)
+        let endTime = startTime.addingTimeInterval(TimeInterval(meditationItem.minutes * 60))
+        MeditationHistoryDBS().addMeditationItem(routineType: type, startTime: startTime, endTime: endTime)
     }
     
     
@@ -61,6 +56,7 @@ class MeditationSelectedItemSVC: UIView {
     }
     
     func deleteItem(){
-        ExerciseHistoryDBS().deleteExerciseItem(item: exerciseItem)
+        MeditationHistoryDBS().deleteMeditationItem(item: meditationItem)
     }
 }
+
