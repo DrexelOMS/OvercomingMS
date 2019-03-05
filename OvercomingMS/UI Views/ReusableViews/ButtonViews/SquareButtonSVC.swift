@@ -16,11 +16,19 @@ class SquareButtonSVC: CustomView {
         }
     }
     
+    var colorTheme: UIColor = UIColor.gray {
+        didSet {
+            setColors()
+        }
+    }
+    
     @IBOutlet weak var buttonView: UIView!
     var backButtonAction : (() -> ())?
     @IBOutlet weak var backIcon: UIImageView!
     
     override func customSetup() {
+        setColors()
+        
         let tintedImage = backIcon.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         backIcon.image = tintedImage
         backIcon.tintColor = UIColor.white
@@ -28,6 +36,10 @@ class SquareButtonSVC: CustomView {
         buttonView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonPressed(tapGestureRecognizer: )))
         buttonView.addGestureRecognizer(tapGesture)
+    }
+    
+    private func setColors(){
+        buttonView.backgroundColor = colorTheme.withAlphaComponent(0.6)
     }
     
     @objc private func buttonPressed(tapGestureRecognizer: UITapGestureRecognizer){

@@ -21,13 +21,15 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     //must be called by 
-    override func initialize(parentVC: TrackingModuleAbstractVC) {
+    override func initialize(parentVC: SlidingStackVC) {
         super.initialize(parentVC: parentVC)
         
         button1.buttonAction = addButtonPressed
         
         buttonStackView.addArrangedSubview(button1)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        internetPopupButton.url = "https://overcomingms.org/recovery-program/drug-therapies/"
 
         tableView.delegate = self
         tableView.dataSource = self

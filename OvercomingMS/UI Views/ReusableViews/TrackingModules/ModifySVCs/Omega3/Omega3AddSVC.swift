@@ -26,7 +26,7 @@ class Omega3AddSVC : Omega3ModifyAbstractSVC {
             }
             
             omega3History.addOmega3Item(supplementName: type, StartTime: startTime, Amount: amount)
-            parentVC.updateProgressBar();
+            parentVC.reload();
             parentVC.resetToDefaultView()
         }
         

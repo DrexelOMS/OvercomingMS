@@ -45,7 +45,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     override func updateColors() {
-        
+        backButton.colorTheme = parentVC.theme
     }
     
     //this function is fetching the json from URL

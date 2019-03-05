@@ -60,7 +60,6 @@ class SavedMedicationDBS: TrackingModulesDBS {
             if da.lessThanComparison(dateToCompare: med.DateCreated) {
                 continue
             }
-            print(med.DateCreated)
             savedMeds.append(med)
         }
         return savedMeds

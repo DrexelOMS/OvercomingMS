@@ -68,9 +68,4 @@ class MedicationModifyAbstractSVC : ModifyAbstractSVC {
         
     }
     
-    override func initialize(parentVC: TrackingModuleAbstractVC) {
-        super.initialize(parentVC: parentVC)
-        
-    }
-    
 }

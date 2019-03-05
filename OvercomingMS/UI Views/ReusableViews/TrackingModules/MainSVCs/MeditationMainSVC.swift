@@ -22,7 +22,7 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     //must be called by 
-    override func initialize(parentVC: TrackingModuleAbstractVC) {
+    override func initialize(parentVC: SlidingStackVC) {
         super.initialize(parentVC: parentVC)
         
         button1.buttonAction = addButtonPressed
@@ -33,6 +33,8 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         buttonStackView.addArrangedSubview(button2)
         buttonStackView.addArrangedSubview(button3)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        internetPopupButton.url = "https://overcomingms.org/recovery-program/meditation/"
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -48,8 +50,9 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func addButtonPressed() {
-        //parentVC.pushSubView(newSubView: ExerciseAddSVC())
-        MeditationHistoryDBS().addMeditationItem(routineType: "Guided", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
+        parentVC.pushSubView(newSubView: MeditationAddSVC())
+        //MeditationHistoryDBS().addMeditationItem(routineType: "Guided", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
+        
     }
     
     func timerButtonPressed() {

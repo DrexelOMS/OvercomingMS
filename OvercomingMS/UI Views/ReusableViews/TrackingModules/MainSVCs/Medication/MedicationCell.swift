@@ -15,7 +15,7 @@ class MedicationCell : UITableViewCell {
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var doneCheckButton: DoneCheckButton!
     
-    var parentVC : TrackingModuleAbstractVC!
+    var parentVC : SlidingStackVC!
     let savedMedications = SavedMedicationDBS()
     
     var item: SavedMedicationDBT!
@@ -56,7 +56,7 @@ class MedicationCell : UITableViewCell {
         else {
             SavedMedicationDBS().removeTakenMedication(item: item)
         }
-        parentVC.updateProgressBar()
+        parentVC.reload()
     }
     
 }

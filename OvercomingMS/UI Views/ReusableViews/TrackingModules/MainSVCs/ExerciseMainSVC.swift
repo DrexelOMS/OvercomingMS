@@ -21,7 +21,7 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     }
     
     //must be called by 
-    override func initialize(parentVC: TrackingModuleAbstractVC) {
+    override func initialize(parentVC: SlidingStackVC) {
         super.initialize(parentVC: parentVC)
         
         button1.buttonAction = addButtonPressed
@@ -34,6 +34,8 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: defaultCellName, bundle: nil), forCellReuseIdentifier: defaultCellName)
+        
+        internetPopupButton.url = "https://overcomingms.org/recovery-program/exercise/"
         
         reload()
     }

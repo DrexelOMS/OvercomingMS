@@ -22,7 +22,7 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     }
     
     //must be called by 
-    override func initialize(parentVC: TrackingModuleAbstractVC) {
+    override func initialize(parentVC: SlidingStackVC) {
         super.initialize(parentVC: parentVC)
         
         button1.buttonAction = addButtonPressed
@@ -33,6 +33,8 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         buttonStackView.addArrangedSubview(button2)
         buttonStackView.addArrangedSubview(button3)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        internetPopupButton.url = "https://overcomingms.org/recovery-program/sunlight-vitamin-d/"
 
         tableView.delegate = self
         tableView.dataSource = self

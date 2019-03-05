@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class FoodModuleVC: TrackingModuleAbstractVC {
+class FoodModuleVC: SlidingStackVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,10 +17,6 @@ class FoodModuleVC: TrackingModuleAbstractVC {
         // Do any additional setup after loading the view.
         
         initializeviewStack(defaultView: FoodMainSVC())
-    }
-    
-    override func updateProgressBar() {
-
     }
 
 }

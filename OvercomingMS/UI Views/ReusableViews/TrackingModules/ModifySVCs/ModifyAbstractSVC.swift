@@ -24,7 +24,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     var originalBottomConstraint: CGFloat!
     var originalTopLabelContraint: CGFloat!
     
-    override func initialize(parentVC: TrackingModuleAbstractVC) {
+    override func initialize(parentVC: SlidingStackVC) {
         super.initialize(parentVC: parentVC)
         
         originalBottomConstraint = textInputStackBottom.constant
@@ -39,7 +39,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     }
     
     override func updateColors() {
-        print("remember to update colors")
+        backConfirmButtons.colorTheme = parentVC.theme
     }
     
     func BackPressed() {

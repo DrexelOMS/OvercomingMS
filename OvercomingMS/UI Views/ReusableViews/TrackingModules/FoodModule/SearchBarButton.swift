@@ -22,6 +22,7 @@ class SearchBarButton: CustomView, UITextFieldDelegate{
     override func customSetup() {
         SearchTextField.delegate = self
     }
+    
     func textFieldShouldReturn(_ SearchTextField: UITextField) -> Bool {
         endEditing(true)
         SearchButton.sendActions(for: .touchUpInside)

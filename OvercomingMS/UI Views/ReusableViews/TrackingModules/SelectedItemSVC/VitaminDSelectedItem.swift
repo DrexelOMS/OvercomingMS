@@ -25,11 +25,7 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
         middleSubLabel.text = "Time"
         bottomSubLabel.text = "Amount"
     }
-    
-    override func updateColors() {
-        //Update color themes
-    }
-    
+ 
     override func reload() {
         bottomMainLabel.text = "\(vitaminDItem.Amount) \(ProgressBarConfig.vitaminDUOM)"
         topMainLabel.text = vitaminDItem.VitaminDType

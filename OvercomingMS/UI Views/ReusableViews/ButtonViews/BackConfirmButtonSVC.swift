@@ -19,6 +19,13 @@ class BackConfirmButtonsSVC : CustomView {
     @IBOutlet weak var backIcon: UIImageView!
     @IBOutlet weak var confirmIcon: UIImageView!
     
+    var colorTheme: UIColor = UIColor.gray
+    {
+        didSet {
+            setColors()
+        }
+    }
+    
     override var nibName: String {
         get {
             return "BackConfirmButtonsSVC"
@@ -26,6 +33,8 @@ class BackConfirmButtonsSVC : CustomView {
     }
     
     override func customSetup() {
+        
+        setColors()
         
         let tintedImage = backIcon.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         backIcon.image = tintedImage
@@ -42,6 +51,11 @@ class BackConfirmButtonsSVC : CustomView {
         RightButton.isUserInteractionEnabled = true
         let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(RightButtonPressed(tapGestureRecognizer: )))
         RightButton.addGestureRecognizer(tapGesture2)
+    }
+    
+    private func setColors(){
+        LeftButton.backgroundColor = colorTheme.withAlphaComponent(0.6)
+        RightButton.backgroundColor = colorTheme
     }
     
     @objc private func leftButtonPressed(tapGestureRecognizer: UITapGestureRecognizer){

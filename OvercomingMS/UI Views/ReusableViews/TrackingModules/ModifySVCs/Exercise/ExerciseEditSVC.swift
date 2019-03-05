@@ -33,8 +33,7 @@ class ExerciseEditSVC : ExerciseModifyAbstractSVC {
             
             exerciseHistory.updateExerciseItem(oldItem: editingExerciseItem, newItem: newItem)
             
-            parentVC.updateProgressBar();
-            
+            parentVC.reload();
             parentVC.popSubView()
         }
     }

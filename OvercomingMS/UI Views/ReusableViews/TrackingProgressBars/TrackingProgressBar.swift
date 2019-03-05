@@ -42,15 +42,18 @@ class TrackingProgressBar: CustomView {
             barColor = newValue
         }
     }
-    
-    @IBOutlet weak var roundedView: RoundCornersUIView!
+    @IBOutlet weak var shadowedRoundedView: OMSRoundedBox!
+    @IBOutlet weak var roundedView: OMSRoundedBox!
     @IBOutlet weak var rightContainerView: UIView!
     @IBOutlet private weak var leftContainerView: UIView!
     @IBOutlet private weak var leftLabel: UILabel!
     @IBOutlet private weak var rightLabel: UILabel!
-    @IBOutlet private weak var linearProgressBar: LinearProgressBar!
+    @IBOutlet weak var linearProgressBar: LinearProgressBar!
+    @IBOutlet weak var checkButton: UIButton!
     
     override func customSetup() {
+        //set the default progress bar to full
+        linearProgressBar.progressValue = 100
         
         leftContainerView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(leftContainerPressed(tapGestureRecognizer: )))
@@ -66,7 +69,24 @@ class TrackingProgressBar: CustomView {
     }
     
     func setProgressValue(value : Int){
+        if linearProgressBar.progressValue < 100 && value >= 100 {
+            NotificationCenter.default.post(name: .didCompleteModule, object: self, userInfo: ["colorTheme": colorTheme])
+        }
         linearProgressBar.progressValue = CGFloat(value);
+        setColorMode(completed: linearProgressBar.progressValue >= 100)
+    }
+    
+    private func setColorMode(completed: Bool) {
+        if(completed) {
+            roundedView.backgroundColor = colorTheme
+            checkButton.setImage(UIImage(named: "QuickCompleteReversed"), for: .normal)
+            linearProgressBar.isHidden = true
+        }
+        else {
+            roundedView.backgroundColor = UIColor.white
+            checkButton.setImage(UIImage(named: "QuickComplete"), for: .normal)
+            linearProgressBar.isHidden = false
+        }
     }
     
     func getProgressValue() -> Float{
@@ -75,6 +95,10 @@ class TrackingProgressBar: CustomView {
     
     func setTitle(title: String) {
         Title = title
+    }
+    func getTitle() -> String
+    {
+        return Title
     }
     
     func setDescription(description: String){

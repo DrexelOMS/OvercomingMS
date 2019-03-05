@@ -19,6 +19,7 @@ class ConfirmationSVC: SlidingAbstractSVC {
     @IBOutlet weak var topDescription: UILabel!
     @IBOutlet weak var bottomDescription: UILabel!
     @IBOutlet weak var bottomButtonView: UIView!
+    let backConfirm = BackConfirmButtonsSVC()
     
     private var methodToRunOnConfirm : (() -> ())?
     
@@ -32,7 +33,6 @@ class ConfirmationSVC: SlidingAbstractSVC {
     }
     
     override func customSetup() {
-        let backConfirm = BackConfirmButtonsSVC()
         bottomButtonView.addSubview(backConfirm)
         backConfirm.anchorToView(superView: bottomButtonView)
         
@@ -42,7 +42,7 @@ class ConfirmationSVC: SlidingAbstractSVC {
     }
     
     override func updateColors() {
-        
+        backConfirm.colorTheme = parentVC.theme
     }
     
     private func backButtonPressed() {

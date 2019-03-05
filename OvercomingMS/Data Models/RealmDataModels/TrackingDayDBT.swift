@@ -173,7 +173,6 @@ class TrackingDayDBT: Object {
         }
     }
     
-    
     @objc dynamic var VitaminDTotal: Int {
         get {
             var totalAmount = 0
@@ -186,15 +185,18 @@ class TrackingDayDBT: Object {
     
     let vitaminDHistoryDT = List<VitaminDHistoryDBT>()
     
-    override static func primaryKey() -> String? {
-        return "DateCreated"
-    }
-    
-    
     //MARK: ---------------------- SYMPTOMS ------------------------------
     
     @objc dynamic var SymptomsRating: Int = 1 // rate from 1-5
-
+    
     let symptomsNoteDT = List<SymptomsNoteDBT>()
+    
+    //MARK: ---------------------- SYMPTOMS ------------------------------
+    
+    let foodLogDT = List<FoodLogDBT>()
+    
+    override static func primaryKey() -> String? {
+        return "DateCreated"
+    }
     
 }

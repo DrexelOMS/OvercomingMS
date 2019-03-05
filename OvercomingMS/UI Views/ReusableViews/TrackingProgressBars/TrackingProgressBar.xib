@@ -12,20 +12,22 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
+                <outlet property="checkButton" destination="2rJ-fM-xng" id="E3m-Xi-Ee8"/>
                 <outlet property="leftContainerView" destination="LMb-nR-B7u" id="mkM-yu-6qq"/>
                 <outlet property="leftLabel" destination="ZgR-vj-Qt3" id="VAI-Mp-g7Q"/>
                 <outlet property="linearProgressBar" destination="Q1G-Wh-S9S" id="ePP-Sl-1to"/>
                 <outlet property="rightContainerView" destination="DD8-0L-vXd" id="qQW-Jh-Ih9"/>
                 <outlet property="rightLabel" destination="cy3-n8-ccr" id="siq-FB-PSD"/>
-                <outlet property="roundedView" destination="I5E-v9-Wxp" id="4FL-Rz-R3U"/>
+                <outlet property="roundedView" destination="I5E-v9-Wxp" id="Zif-fY-FDT"/>
+                <outlet property="shadowedRoundedView" destination="iN0-l3-epB" id="Ze0-B7-sg1"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="260" height="46"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5E-v9-Wxp" userLabel="RoundedView" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5E-v9-Wxp" userLabel="RoundedView" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="260" height="46"/>
                     <userGuides>
                         <userLayoutGuide location="45" affinity="minY"/>
