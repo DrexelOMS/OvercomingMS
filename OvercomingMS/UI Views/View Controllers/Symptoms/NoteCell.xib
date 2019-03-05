@@ -15,21 +15,21 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="60" id="19S-99-iPt" customClass="NoteCell" customModule="OvercomingMS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="19S-99-iPt" id="O3M-Yx-yGo">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="19S-99-iPt" id="O3M-Yx-yGo">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FsJ-Yl-6lH" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="10" width="375" height="40"/>
+                        <rect key="frame" x="0.0" y="10.5" width="372" height="40"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vN9-eo-kYU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="372" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFE-iw-pkI">
-                                        <rect key="frame" x="0.0" y="0.0" width="285" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD0-7b-Jcf">
-                                                <rect key="frame" x="10" y="5" width="275" height="30"/>
+                                                <rect key="frame" x="10" y="5" width="272" height="30"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -49,7 +49,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1d-8q-IIR">
-                                        <rect key="frame" x="295" y="0.0" width="80" height="40"/>
+                                        <rect key="frame" x="292" y="0.0" width="80" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcZ-gP-XYe">
                                                 <rect key="frame" x="0.0" y="5" width="70" height="30"/>
@@ -89,8 +89,9 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="FsJ-Yl-6lH" firstAttribute="centerY" secondItem="O3M-Yx-yGo" secondAttribute="centerY" id="Njj-dl-Voh"/>
-                    <constraint firstAttribute="trailing" secondItem="FsJ-Yl-6lH" secondAttribute="trailing" id="aAR-1B-DmU"/>
+                    <constraint firstItem="FsJ-Yl-6lH" firstAttribute="top" secondItem="O3M-Yx-yGo" secondAttribute="top" constant="10" id="HYd-pf-A2f"/>
+                    <constraint firstAttribute="trailing" secondItem="FsJ-Yl-6lH" secondAttribute="trailing" constant="3" id="aAR-1B-DmU"/>
+                    <constraint firstAttribute="bottom" secondItem="FsJ-Yl-6lH" secondAttribute="bottom" constant="10" id="ecX-6m-I9E"/>
                     <constraint firstItem="FsJ-Yl-6lH" firstAttribute="leading" secondItem="O3M-Yx-yGo" secondAttribute="leading" id="lqR-5x-0T6"/>
                 </constraints>
             </tableViewCellContentView>

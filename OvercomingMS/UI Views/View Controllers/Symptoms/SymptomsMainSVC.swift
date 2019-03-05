@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSource {
+class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     override var nibName: String {
         get {
@@ -18,14 +18,17 @@ class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataS
     
     let defaultCellName = "NoteCell"
     
-    var testArray = ["word", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "word2"]
+    let savedNotes = SymptomsNoteDBS()
     
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var plusButtonView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     override func customSetup() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(plusButtonPressed(gesture: )))
-        plusButtonView.addGestureRecognizer(tapGesture)
+        //let tapGesture = UITapGestureRecognizer(target: self, action: #selector(plusButtonPressed(gesture: )))
+        //plusButtonView.addGestureRecognizer(tapGesture)
+        
+        textField.delegate = self
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -35,12 +38,12 @@ class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataS
     
     override func reload() {
         tableView.reloadData()
-        configureTableView()
+        //configureTableView()
     }
     
-    @objc func plusButtonPressed(gesture: UITapGestureRecognizer) {
-        parentVC.pushSubView(newSubView: NoteReviewSVC())
-    }
+//    @objc func plusButtonPressed(gesture: UITapGestureRecognizer) {
+//        parentVC.pushSubView(newSubView: NoteReviewSVC())
+//    }
     
     func configureTableView() {
         tableView.rowHeight = UITableView.automaticDimension
@@ -48,14 +51,31 @@ class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testArray.count
+        return savedNotes.getTodaysNotes()?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! NoteCell
         
-        cell.noteLabel.text = testArray[indexPath.row]
+        cell.noteLabel.text = savedNotes.getTodaysNotes()![indexPath.row].Note
+        cell.timeLabel.text = OMSDateAccessor.getDateTime(date: savedNotes.getTodaysNotes()![indexPath.row].DateCreated)
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        parentVC.pushSubView(newSubView: NoteReviewSVC(noteItem: savedNotes.getTodaysNotes()![indexPath.row]))
+    }
+
+    func textFieldShouldReturn(_ SearchTextField: UITextField) -> Bool {
+        endEditing(true)
+        if let text = textField.text {
+            if text != "" {
+                savedNotes.addNote(note: text, dateCreated: Date())
+                reload()
+            }
+        }
+        return true
+    }
+    
 }
