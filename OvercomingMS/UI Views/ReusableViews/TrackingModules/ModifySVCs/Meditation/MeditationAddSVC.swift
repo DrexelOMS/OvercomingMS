@@ -27,7 +27,7 @@ class MeditationAddSVC: MeditationModifyAbstractSVC {
             
             let endTime = startTime.addingTimeInterval(TimeInterval(minutes * 60))
             meditationHistory.addMeditationItem(routineType: type, startTime: startTime, endTime: endTime)
-            parentVC.updateProgressBar();
+            parentVC.reload();
             
             parentVC.resetToDefaultView()
         }

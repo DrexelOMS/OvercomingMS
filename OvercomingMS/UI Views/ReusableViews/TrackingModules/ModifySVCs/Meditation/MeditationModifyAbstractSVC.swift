@@ -2,7 +2,8 @@
 import UIKit
 import Cartography
 
-class MeditationAbstractSVC : ModifyAbstractSVC {
+class MeditationModifyAbstractSVC : ModifyAbstractSVC {
+    
     let meditationHistory  = MeditationHistoryDBS()
     
     var selectedType : String? {
@@ -30,7 +31,7 @@ class MeditationAbstractSVC : ModifyAbstractSVC {
         }
     }
     
-    var typeTFI = ExerciseTypeTFI()
+    var typeTFI = MeditationTypeTFI()
     var dateTimeTFI = DateTimeTFI()
     var lengthTFI = LengthTFI()
     
@@ -48,7 +49,7 @@ class MeditationAbstractSVC : ModifyAbstractSVC {
         
     }
     
-    override func initialize(parentVC: TrackingModuleAbstractVC) {
+    override func initialize(parentVC: SwipeDownCloseViewController) {
         super.initialize(parentVC: parentVC)
         
     }

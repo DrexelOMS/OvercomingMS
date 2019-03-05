@@ -12,7 +12,7 @@ class MeditationEditSVC: MeditationModifyAbstractSVC {
 
     var editingMeditationItem : MeditationHistoryDBT!{
         didSet {
-            selectedType = editingMeditationItem.RoutineType
+            selectedType = editingMeditationItem.MeditationType
             
             selectedStartTime = editingMeditationItem.StartTime
             
@@ -27,13 +27,13 @@ class MeditationEditSVC: MeditationModifyAbstractSVC {
             }
             
             let newItem = MeditationHistoryDBT()
-            newItem.RoutineType = type
+            newItem.MeditationType = type
             newItem.StartTime = startTime
             newItem.EndTime = startTime.addingTimeInterval(TimeInterval(minutes * 60))
             
             meditationHistory.updateExerciseItem(oldItem: editingMeditationItem, newItem: newItem)
             
-            parentVC.updateProgressBar();
+            parentVC.reload();
             
             parentVC.popSubView()
         }
