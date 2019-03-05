@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.otf">
+            <string>Quicksand-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodQuickCompleteSVC" customModule="OvercomingMS" customModuleProvider="target">
+            <connections>
+                <outlet property="Rank1Item" destination="gok-Lw-4WP" id="eZA-xI-ULn"/>
+                <outlet property="Rank2Item" destination="C4o-z6-Kb9" id="KtZ-V3-xxs"/>
+                <outlet property="Rank3Item" destination="2Sv-Fu-mld" id="A7X-AO-WWK"/>
+                <outlet property="Rank4Item" destination="vV9-8t-Xb6" id="Xmw-Mj-Gbt"/>
+                <outlet property="Rank5Item" destination="Hpx-I4-jHe" id="PbG-RV-LDS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yI3-0h-lnf">
+                    <rect key="frame" x="30" y="50" width="315" height="587"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkd-Xa-Rm2">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="147"/>
+                            <string key="text">How well did you
+eat today?</string>
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pp4-G3-RZT">
+                            <rect key="frame" x="0.0" y="147" width="315" height="440"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gok-Lw-4WP" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="315" height="72"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pFf-kl-wtV">
+                                            <rect key="frame" x="20" y="0.0" width="275" height="72"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aweful." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95M-rY-ZeC">
+                                                    <rect key="frame" x="0.0" y="22" width="235" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tSJ-lR-3Ub">
+                                                    <rect key="frame" x="235" y="16" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="WMN-cv-ebk"/>
+                                                        <constraint firstAttribute="width" constant="40" id="rX0-FN-yVJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="pFf-kl-wtV" firstAttribute="leading" secondItem="gok-Lw-4WP" secondAttribute="leading" constant="20" id="8OR-wj-WPm"/>
+                                        <constraint firstItem="pFf-kl-wtV" firstAttribute="top" secondItem="gok-Lw-4WP" secondAttribute="top" id="bfn-Xb-fkE"/>
+                                        <constraint firstAttribute="trailing" secondItem="pFf-kl-wtV" secondAttribute="trailing" constant="20" id="fBb-ru-dLj"/>
+                                        <constraint firstAttribute="bottom" secondItem="pFf-kl-wtV" secondAttribute="bottom" id="mHr-Ju-AOs"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4o-z6-Kb9" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="92" width="315" height="72"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="evd-LN-Ypx">
+                                            <rect key="frame" x="20" y="0.0" width="275" height="72"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not great." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5e-J2-qPS">
+                                                    <rect key="frame" x="0.0" y="22" width="235" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1dM-I9-vZK">
+                                                    <rect key="frame" x="235" y="16" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="c7O-QL-h0C"/>
+                                                        <constraint firstAttribute="width" constant="40" id="x1l-DU-Tf8"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="evd-LN-Ypx" firstAttribute="top" secondItem="C4o-z6-Kb9" secondAttribute="top" id="40v-Cv-OtH"/>
+                                        <constraint firstAttribute="trailing" secondItem="evd-LN-Ypx" secondAttribute="trailing" constant="20" id="TIF-6p-8ww"/>
+                                        <constraint firstItem="evd-LN-Ypx" firstAttribute="leading" secondItem="C4o-z6-Kb9" secondAttribute="leading" constant="20" id="e85-ff-UtX"/>
+                                        <constraint firstAttribute="bottom" secondItem="evd-LN-Ypx" secondAttribute="bottom" id="qcm-09-v3F"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Sv-Fu-mld" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="184" width="315" height="72"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pMH-rb-wuq">
+                                            <rect key="frame" x="20" y="0.0" width="275" height="72"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alright." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixf-MY-7sc">
+                                                    <rect key="frame" x="0.0" y="22" width="235" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FFd-xs-aQQ">
+                                                    <rect key="frame" x="235" y="16" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Srw-60-sNX"/>
+                                                        <constraint firstAttribute="width" constant="40" id="kJc-qV-G6t"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="pMH-rb-wuq" secondAttribute="bottom" id="Lo6-r3-8bp"/>
+                                        <constraint firstItem="pMH-rb-wuq" firstAttribute="leading" secondItem="2Sv-Fu-mld" secondAttribute="leading" constant="20" id="Oap-eg-YpF"/>
+                                        <constraint firstItem="pMH-rb-wuq" firstAttribute="top" secondItem="2Sv-Fu-mld" secondAttribute="top" id="SwS-hL-bt3"/>
+                                        <constraint firstAttribute="trailing" secondItem="pMH-rb-wuq" secondAttribute="trailing" constant="20" id="jjS-sx-Beb"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vV9-8t-Xb6" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="276" width="315" height="72"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c06-a6-ZVm">
+                                            <rect key="frame" x="20" y="0.0" width="275" height="72"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pretty good." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aix-kO-P5e">
+                                                    <rect key="frame" x="0.0" y="22" width="235" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mmL-Lu-OTV">
+                                                    <rect key="frame" x="235" y="16" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Zgx-zR-orp"/>
+                                                        <constraint firstAttribute="width" constant="40" id="jZr-yG-zzl"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="c06-a6-ZVm" firstAttribute="top" secondItem="vV9-8t-Xb6" secondAttribute="top" id="DcO-Ly-J13"/>
+                                        <constraint firstAttribute="bottom" secondItem="c06-a6-ZVm" secondAttribute="bottom" id="SjC-Xe-8X5"/>
+                                        <constraint firstItem="c06-a6-ZVm" firstAttribute="leading" secondItem="vV9-8t-Xb6" secondAttribute="leading" constant="20" id="ZRC-Pr-rls"/>
+                                        <constraint firstAttribute="trailing" secondItem="c06-a6-ZVm" secondAttribute="trailing" constant="20" id="xSa-sa-72X"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hpx-I4-jHe" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="368" width="315" height="72"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e3z-AA-cxL">
+                                            <rect key="frame" x="20" y="0.0" width="275" height="72"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfect!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYN-Lm-lxk">
+                                                    <rect key="frame" x="0.0" y="22" width="235" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8b8-Tf-rmn">
+                                                    <rect key="frame" x="235" y="16" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="MXv-yf-xbp"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Poa-Dc-DdZ"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="e3z-AA-cxL" secondAttribute="bottom" id="Efl-j2-SiC"/>
+                                        <constraint firstItem="e3z-AA-cxL" firstAttribute="top" secondItem="Hpx-I4-jHe" secondAttribute="top" id="IMH-cM-z6S"/>
+                                        <constraint firstItem="e3z-AA-cxL" firstAttribute="leading" secondItem="Hpx-I4-jHe" secondAttribute="leading" constant="20" id="YpK-7V-KdF"/>
+                                        <constraint firstAttribute="trailing" secondItem="e3z-AA-cxL" secondAttribute="trailing" constant="20" id="ebP-fB-aCH"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="pp4-G3-RZT" firstAttribute="height" secondItem="Gkd-Xa-Rm2" secondAttribute="height" multiplier="3:1" id="fXM-Cm-F1r"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="gt6-nt-ixZ"/>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="yI3-0h-lnf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="Olf-Vl-SOg"/>
+                <constraint firstItem="yI3-0h-lnf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="PIj-8u-hSM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="yI3-0h-lnf" secondAttribute="bottom" constant="30" id="qwa-R7-UcW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yI3-0h-lnf" secondAttribute="trailing" constant="30" id="r18-N3-XbD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

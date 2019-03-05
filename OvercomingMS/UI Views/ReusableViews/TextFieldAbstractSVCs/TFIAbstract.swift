@@ -27,7 +27,7 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     @IBOutlet weak var subRightLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     
-    var parentVC: TrackingModuleAbstractVC!
+    var parentVC: SwipeDownCloseViewController!
     var tfiDelegate: TFIDelegate?
     var active: Bool = false
     

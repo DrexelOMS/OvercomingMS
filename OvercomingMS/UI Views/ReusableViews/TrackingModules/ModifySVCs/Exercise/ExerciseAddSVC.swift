@@ -27,7 +27,7 @@ class ExerciseAddSVC : ExerciseModifyAbstractSVC {
             
             let endTime = startTime.addingTimeInterval(TimeInterval(minutes * 60))
             exerciseHistory.addExerciseItem(routineType: type, startTime: startTime, endTime: endTime)
-            parentVC.updateProgressBar();
+            parentVC.reload();
             
             parentVC.resetToDefaultView()
         }

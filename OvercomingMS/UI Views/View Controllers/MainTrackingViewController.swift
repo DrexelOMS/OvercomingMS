@@ -33,10 +33,12 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     @IBOutlet weak var meditationBar: TrackingProgressBar!
     @IBOutlet weak var medicationBar: TrackingProgressBar!
     
-    @IBOutlet weak var previousButton: CircleButtonSVC!
-    @IBOutlet weak var progressDayButton: CircleButtonSVC!
-    @IBOutlet weak var nextDay: CircleButtonSVC!
+    @IBOutlet weak var previousButton: UIButton!
+    @IBOutlet weak var nextDay: UIButton!
     
+    @IBOutlet weak var GoalButton: CircleButtonSVC!
+    @IBOutlet weak var SymptomsButton: CircleButtonSVC!
+    @IBOutlet weak var SettingsButton: CircleButtonSVC!
     
     private let realm = try! Realm()
     private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
@@ -69,9 +71,21 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         meditationBar.delegate = self
         medicationBar.delegate = self
         
-        previousButton.buttonAction = previousDate;
-        progressDayButton.buttonAction = ProgressDayPressed;
-        nextDay.buttonAction = nextDate
+        previousButton.isUserInteractionEnabled = true
+        let previusGesture = UITapGestureRecognizer(target: self, action: #selector(previousDate(gesture: )))
+        previousButton.addGestureRecognizer(previusGesture)
+        
+        dateLog.isUserInteractionEnabled = true
+        let progressGesture = UITapGestureRecognizer(target: self, action: #selector(ProgressDayPressed(gesture: )))
+        dateLog.addGestureRecognizer(progressGesture)
+        
+        nextDay.isUserInteractionEnabled = true
+        let nextGesture = UITapGestureRecognizer(target: self, action: #selector(nextDate(gesture: )))
+        nextDay.addGestureRecognizer(nextGesture)
+
+        GoalButton.buttonAction = goalPressed
+        SymptomsButton.buttonAction = symptomsPressed
+        SettingsButton.buttonAction = settingsPressed
         
         loadCurrentDayUI()
     }
@@ -112,8 +126,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         //WriteFoodTrackingData().toggleFilledData()
         
-        let storyboard = UIStoryboard(name: "QuickCompleteFood", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "QuickCompleteFoodVC") as! QuickCompleteFoodVC
+        let vc = QuickCompleteFoodVC()
         vc.modalPresentationStyle = .overCurrentContext
         vc.dismissalDelegate = self
         
@@ -124,8 +137,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     func didPressLeftContainer(_ sender: TrackingFoodBar) {
         
-        let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "FoodModuleVC") as! FoodModuleVC
+        let vc = FoodModuleVC()
         vc.modalPresentationStyle = .overCurrentContext
         vc.dismissalDelegate = self
         
@@ -166,8 +178,8 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         switch(sender.tag){
         case 0:
-            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Omega3ModuleVC") as! Omega3ModuleVC
+            let vc = Omega3ModuleVC()
+            vc.theme = omega3Bar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
@@ -175,32 +187,32 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             break
         case 1:
             //WriteVitaminDTrackingData().addData(amount: 5)
-            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "VitaminDModuleVC") as! VitaminDModuleVC
+            let vc = VitaminDModuleVC()
+            vc.theme = vitaminDBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
             self.present(vc, animated: true, completion: nil)
             break
         case 2:
-            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "ExerciseModuleVC") as! ExerciseModuleVC
+            let vc = ExerciseModuleVC()
+            vc.theme = exerciseBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
             self.present(vc, animated: true, completion: nil)
             break
         case 3:
-            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MeditationModuleVC") as! MeditationModuleVC
+            let vc = MeditationModuleVC()
+            vc.theme = medicationBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
             self.present(vc, animated: true, completion: nil)
             break
         case 4:
-            let storyboard = UIStoryboard(name: "TrackingModuleStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MedicationModuleVC") as! MedicationModuleVC
+            let vc = MedicationModuleVC()
+            vc.theme = medicationBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
@@ -217,14 +229,14 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     //MARK: IBActions
 
-    private func previousDate() {
+    @objc private func previousDate(gesture: UIGestureRecognizer) {
         
         globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(-60*60*24)
         
         loadCurrentDayUI()
     }
     
-    private func nextDate() {
+    @objc private func nextDate(gesture: UIGestureRecognizer) {
         if globalCurrentDate == todaysDate {
             return
         }
@@ -236,9 +248,31 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     //TODO: this is a test button, normally the day would progress, and the ui is not automatically updated unless we check in the loadCurrentDayUI to check if todays date has changed
     //basically nothing can ever write using current day, they write using todays date
-    private func ProgressDayPressed() {
+    @objc private func ProgressDayPressed(gesture: UIGestureRecognizer) {
         omsDateFormatter.progressDay()
         
         loadCurrentDayUI()
     }
+    
+    func goalPressed() {
+        let vc = GoalsVC()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.dismissalDelegate = self
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func symptomsPressed() {
+        let vc = SymptomsVC()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.dismissalDelegate = self
+        vc.theme = UIColor(red: 130 / 255.0, green: 145 / 255.0, blue: 201 / 255.0, alpha: 1.0)
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func settingsPressed() {
+        
+    }
+    
 }

@@ -22,7 +22,7 @@ class MedicationAddSVC : MedicationModifyAbstractSVC {
             
             savedMedications.addMedicationItem(medicationName: name, timeOfDay: startTime, medicationAmount: amount, medicationUOM: "pills", freq: rate, active: true)
             
-            parentVC.updateProgressBar();
+            parentVC.reload();
             parentVC.resetToDefaultView()
         }
         

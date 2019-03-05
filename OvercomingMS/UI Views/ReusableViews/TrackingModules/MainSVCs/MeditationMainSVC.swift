@@ -22,7 +22,7 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     //must be called by 
-    override func initialize(parentVC: TrackingModuleAbstractVC) {
+    override func initialize(parentVC: SwipeDownCloseViewController) {
         super.initialize(parentVC: parentVC)
         
         button1.buttonAction = addButtonPressed
