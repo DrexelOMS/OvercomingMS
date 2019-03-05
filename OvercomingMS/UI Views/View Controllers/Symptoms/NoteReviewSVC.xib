@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoteReviewSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="backConfirmButton" destination="Gcs-iO-kUb" id="QIZ-bL-7Xj"/>
+                <outlet property="deleteCircleButton" destination="RFQ-dY-D44" id="51M-P6-u2H"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

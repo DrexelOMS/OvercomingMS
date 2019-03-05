@@ -16,9 +16,17 @@ class NoteReviewSVC: SlidingAbstractSVC {
         }
     }
     
+    @IBOutlet weak var deleteCircleButton: DeleteCircleButton!
     @IBOutlet weak var backConfirmButton: BackConfirmButtonsSVC!
     
     override func customSetup() {
+        
+    }
+    
+    override func initialize(parentVC: SwipeDownCloseViewController) {
+        super.initialize(parentVC: parentVC)
+        
+        deleteCircleButton.colorTheme = parentVC.theme
         backConfirmButton.leftButtonAction = backPressed
     }
     
