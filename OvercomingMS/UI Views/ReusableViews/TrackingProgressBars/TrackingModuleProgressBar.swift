@@ -13,7 +13,7 @@ class TrackingModuleProgressBar : TrackingProgressBar {
     override func customSetup() {
         super.customSetup()
         
-        self.rightContainerView.removeFromSuperview()
+        self.rightContainerView.isHidden = true
         roundedView.hasShadow = false
     }
 }
