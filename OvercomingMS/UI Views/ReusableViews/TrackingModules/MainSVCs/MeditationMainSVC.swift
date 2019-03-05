@@ -48,8 +48,9 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func addButtonPressed() {
-        //parentVC.pushSubView(newSubView: ExerciseAddSVC())
-        MeditationHistoryDBS().addMeditationItem(routineType: "Guided", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
+        parentVC.pushSubView(newSubView: MeditationAddSVC())
+        //MeditationHistoryDBS().addMeditationItem(routineType: "Guided", startTime: Date(), endTime: Date().addingTimeInterval(60*5))
+        
     }
     
     func timerButtonPressed() {

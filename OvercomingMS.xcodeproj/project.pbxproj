@@ -192,6 +192,9 @@
 		6129746421DF017F00B9846C /* OvercomingMSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746321DF017F00B9846C /* OvercomingMSTests.swift */; };
 		6129746F21DF017F00B9846C /* OvercomingMSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746E21DF017F00B9846C /* OvercomingMSUITests.swift */; };
 		8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */; };
+		83985923222D758E00782A10 /* MeditationModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985922222D758E00782A10 /* MeditationModifyAbstractSVC.swift */; };
+		83985925222D768600782A10 /* MeditationAddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985924222D768600782A10 /* MeditationAddSVC.swift */; };
+		83985927222EBA3300782A10 /* MeditationEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985926222EBA3300782A10 /* MeditationEditSVC.swift */; };
 		DD500F23445D0A98AC159E98 /* Pods_OvercomingMSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613999C2BAE695AFE369D7B7 /* Pods_OvercomingMSUITests.framework */; };
 		E52344C266EF89DAB14C6AA3 /* Pods_OvercomingMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFED95C83375718D7DCA1211 /* Pods_OvercomingMS.framework */; };
 /* End PBXBuildFile section */
@@ -418,6 +421,9 @@
 		64624BC75971C455C566E626 /* Pods-OvercomingMSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.release.xcconfig"; sourceTree = "<group>"; };
 		724CCA850B24CDC7CCFAF25E /* Pods-OvercomingMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.debug.xcconfig"; sourceTree = "<group>"; };
 		8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimerStoryBoard.storyboard; sourceTree = "<group>"; };
+		83985922222D758E00782A10 /* MeditationModifyAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationModifyAbstractSVC.swift; sourceTree = "<group>"; };
+		83985924222D768600782A10 /* MeditationAddSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAddSVC.swift; sourceTree = "<group>"; };
+		83985926222EBA3300782A10 /* MeditationEditSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationEditSVC.swift; sourceTree = "<group>"; };
 		89CF61DE31F50EFE76BD85FE /* Pods-OvercomingMSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0433A9C40E2CDD4C4FE48DD /* Pods-OvercomingMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.release.xcconfig"; sourceTree = "<group>"; };
 		A16E3BBC1D5B0C0744651350 /* Pods-OvercomingMSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -857,6 +863,7 @@
 		0AD94DAD2209BBD600B5C2BA /* ModifySVCs */ = {
 			isa = PBXGroup;
 			children = (
+				83985921222D72A600782A10 /* Meditation */,
 				0AD7EB07221B32D6006F71C0 /* VitaminD */,
 				0AD7EAF8221B1A3E006F71C0 /* Omega3 */,
 				0AD7EAF7221B19DA006F71C0 /* Exercise */,
@@ -1046,6 +1053,16 @@
 				8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */,
 			);
 			path = ChrisUITesting;
+			sourceTree = "<group>";
+		};
+		83985921222D72A600782A10 /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				83985922222D758E00782A10 /* MeditationModifyAbstractSVC.swift */,
+				83985924222D768600782A10 /* MeditationAddSVC.swift */,
+				83985926222EBA3300782A10 /* MeditationEditSVC.swift */,
+			);
+			path = Meditation;
 			sourceTree = "<group>";
 		};
 		DD7121317404FDF12D44D4AB /* Frameworks */ = {
@@ -1380,6 +1397,7 @@
 				0A93F19B22145F150063A892 /* ModifyAbstractSVC.swift in Sources */,
 				503A524A2228A51200E5A009 /* SymptomsNoteDBS.swift in Sources */,
 				0AD7EB4422234491006F71C0 /* MedRateButtonsSVC.swift in Sources */,
+				83985925222D768600782A10 /* MeditationAddSVC.swift in Sources */,
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
 				0A08189E2214F82F0021BDF6 /* Food.swift in Sources */,
 				0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */,
@@ -1419,6 +1437,7 @@
 				0A2BAA662202A24E004074F3 /* FoodRatingDBS.swift in Sources */,
 				0AD7EB4E2224C057006F71C0 /* MedicationEditSVC.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
+				83985923222D758E00782A10 /* MeditationModifyAbstractSVC.swift in Sources */,
 				0AD7EB1A2220A546006F71C0 /* FoodSelectedSVC.swift in Sources */,
 				0AD7EB3A2223043A006F71C0 /* MedicationCell.swift in Sources */,
 				0AD7EB48222345A9006F71C0 /* ToggleLabeledCircleButton.swift in Sources */,
@@ -1479,6 +1498,7 @@
 				0A93EA4122122D840063A892 /* (null) in Sources */,
 				0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */,
 				0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */,
+				83985927222EBA3300782A10 /* MeditationEditSVC.swift in Sources */,
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
 				0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */,

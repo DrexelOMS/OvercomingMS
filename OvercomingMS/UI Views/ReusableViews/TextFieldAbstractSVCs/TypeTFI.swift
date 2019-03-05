@@ -108,3 +108,13 @@ class VitaminDTypeTFI : TypeTFIAbstract {
     }
     
 }
+
+class MeditationTypeTFI: TypeTFIAbstract {
+    
+    override var choices: [String] {
+        get {
+            return ["Silent", "Guided"]
+        }
+    }
+    
+}
