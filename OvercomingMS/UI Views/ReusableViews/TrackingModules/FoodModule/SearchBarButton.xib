@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6g-zs-7ua" customClass="PillBoxUIView" customModule="OvercomingMS" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6g-zs-7ua" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0yE-nq-Wmx">
@@ -130,6 +130,11 @@
                         <constraint firstAttribute="bottom" secondItem="0yE-nq-Wmx" secondAttribute="bottom" id="mwn-xd-gel"/>
                         <constraint firstItem="0yE-nq-Wmx" firstAttribute="leading" secondItem="D6g-zs-7ua" secondAttribute="leading" id="yE1-Qx-kyO"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <constraints>

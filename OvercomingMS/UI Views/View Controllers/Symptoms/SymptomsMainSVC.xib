@@ -369,7 +369,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkG-KW-tiR" userLabel="OuterView">
                                             <rect key="frame" x="0.0" y="248" width="280" height="40"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjo-qy-Izy" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjo-qy-Izy" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="0.0" width="260" height="40"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uk1-Zh-LiV">
@@ -438,7 +438,9 @@
                                                         <constraint firstItem="uk1-Zh-LiV" firstAttribute="top" secondItem="kjo-qy-Izy" secondAttribute="top" id="NHX-Fs-eAk"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasShadow" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
