@@ -52,6 +52,8 @@ class TrackingProgressBar: CustomView {
     @IBOutlet weak var checkButton: UIButton!
     
     override func customSetup() {
+        //set the default progress bar to full
+        linearProgressBar.progressValue = 100
         
         leftContainerView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(leftContainerPressed(tapGestureRecognizer: )))
@@ -67,6 +69,9 @@ class TrackingProgressBar: CustomView {
     }
     
     func setProgressValue(value : Int){
+        if linearProgressBar.progressValue < 100 && value >= 100 {
+            NotificationCenter.default.post(name: .didCompleteModule, object: self, userInfo: ["colorTheme": colorTheme])
+        }
         linearProgressBar.progressValue = CGFloat(value);
         setColorMode(completed: linearProgressBar.progressValue >= 100)
     }
@@ -90,6 +95,10 @@ class TrackingProgressBar: CustomView {
     
     func setTitle(title: String) {
         Title = title
+    }
+    func getTitle() -> String
+    {
+        return Title
     }
     
     func setDescription(description: String){

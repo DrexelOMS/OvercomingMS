@@ -12,7 +12,6 @@ import RealmSwift
 class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingProgressBarDelegate {
     
     func finishedShowing(viewController: UIViewController) {
-        print("ReloadedData")
         loadCurrentDayUI()
     }
     
@@ -25,6 +24,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         }
     }
     
+    @IBOutlet weak var header: HeaderSVC!
     @IBOutlet weak var dateLog: UILabel!
     @IBOutlet weak var foodBar: TrackingFoodBar!
     @IBOutlet weak var omega3Bar: TrackingProgressBar!
@@ -47,6 +47,38 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     
     //MARK: View Transition Initializers
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteModule(_:)), name: .didCompleteModule, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteModule(_:)), name: .didCompleteModule, object: nil)
+    }
+    
+    @objc func onDidCompleteModule(_ notification:Notification) {
+        let sender = notification.object
+        // We only want to process notifications when sent by the object of type AuthorizedUser
+        if let trackingModule = sender as? TrackingProgressBar {
+            header.displayTrackingMessage(colorTheme: trackingModule.colorTheme, message: "You Completed \(trackingModule.getTitle()). Great work!")
+        }
+        
+//        // userInfo is the payload send by sender of notification
+//        if let userInfo = not.userInfo {
+//            // Safely unwrap the name sent out by the notification sender
+//            if let userName = userInfo["name"] as? String {
+//                print(userName)
+//            }
+//        }
+
+    }
+    
+    func attemptMenuRestore() {
+            header.stopRestoreThread()
+            header.startRestoreThread()
+    }
     
     //TODO: Consider changing to view will appear, and initialize TodaysData should be handled everytime the app enters the foreground
     override func viewDidLoad() {
@@ -100,6 +132,8 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             OMSDateAccessor().createDay(date: globalCurrentDate)
             loadCurrentDayUI()
         }
+        
+        attemptMenuRestore()
         
     }
     

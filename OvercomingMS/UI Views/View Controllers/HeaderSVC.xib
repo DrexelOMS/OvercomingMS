@@ -10,7 +10,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderSVC" customModule="OvercomingMS" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderSVC" customModule="OvercomingMS" customModuleProvider="target">
+            <connections>
+                <outlet property="circlesLabel" destination="G2b-ms-EXl" id="jJU-Tn-iio"/>
+                <outlet property="daysInARow" destination="XGT-XR-GJa" id="zbk-tN-q1W"/>
+                <outlet property="goalMessageStackView" destination="jPd-Wf-4q2" id="6au-lg-xuy"/>
+                <outlet property="historyLabel" destination="Qiq-oz-Wd1" id="eWy-a0-zMy"/>
+                <outlet property="mainView" destination="f3f-MW-4O7" id="IJr-8T-YRO"/>
+                <outlet property="perfectDaysLabel" destination="Fx3-aO-bU4" id="uGI-1y-sR2"/>
+                <outlet property="trackingLabel" destination="DK8-wN-Om8" id="QyG-3S-Xe9"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
@@ -113,62 +123,35 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-Nr-BpB" userLabel="GoalMessageView">
                                     <rect key="frame" x="0.0" y="40.5" width="375" height="56.5"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jPd-Wf-4q2">
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jPd-Wf-4q2">
                                             <rect key="frame" x="20" y="0.0" width="335" height="56.5"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hOi-NF-MQG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="56.5"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwS-8a-w2z">
-                                                            <rect key="frame" x="0.0" y="0.0" width="160" height="56.5"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-XR-GJa">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="56.5"/>
-                                                                    <attributedString key="attributedText">
-                                                                        <fragment content="## days in a row!">
-                                                                            <attributes>
-                                                                                <color key="NSColor" red="0.062745098039215685" green="0.2196078431372549" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                <font key="NSFont" size="14" name="Avenir-Medium"/>
-                                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="XGT-XR-GJa" firstAttribute="top" secondItem="iwS-8a-w2z" secondAttribute="top" id="eaZ-gw-UOR"/>
-                                                                <constraint firstAttribute="trailing" secondItem="XGT-XR-GJa" secondAttribute="trailing" id="hPl-y1-apV"/>
-                                                                <constraint firstItem="XGT-XR-GJa" firstAttribute="leading" secondItem="iwS-8a-w2z" secondAttribute="leading" id="odV-8L-Z4p"/>
-                                                                <constraint firstAttribute="bottom" secondItem="XGT-XR-GJa" secondAttribute="bottom" id="phH-dt-llg"/>
-                                                            </constraints>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CkF-Iy-mvq">
-                                                            <rect key="frame" x="175" y="0.0" width="160" height="56.5"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx3-aO-bU4">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="56.5"/>
-                                                                    <attributedString key="attributedText">
-                                                                        <fragment content="## perfect days!">
-                                                                            <attributes>
-                                                                                <color key="NSColor" red="0.31372549019607843" green="0.047058823529411764" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                <font key="NSFont" size="14" name="Avenir-Medium"/>
-                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="Fx3-aO-bU4" firstAttribute="leading" secondItem="CkF-Iy-mvq" secondAttribute="leading" id="BYO-jm-mgV"/>
-                                                                <constraint firstAttribute="bottom" secondItem="Fx3-aO-bU4" secondAttribute="bottom" id="iJ8-om-NgT"/>
-                                                                <constraint firstAttribute="trailing" secondItem="Fx3-aO-bU4" secondAttribute="trailing" id="rFc-fG-m3k"/>
-                                                                <constraint firstItem="Fx3-aO-bU4" firstAttribute="top" secondItem="CkF-Iy-mvq" secondAttribute="top" id="raS-sh-69M"/>
-                                                            </constraints>
-                                                        </view>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-XR-GJa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="56.5"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="## days in a row!">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.062745098039215685" green="0.2196078431372549" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="Avenir-Medium"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx3-aO-bU4">
+                                                    <rect key="frame" x="175" y="0.0" width="160" height="56.5"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="## perfect days!">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.31372549019607843" green="0.047058823529411764" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="Avenir-Medium"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </stackView>
                                     </subviews>
