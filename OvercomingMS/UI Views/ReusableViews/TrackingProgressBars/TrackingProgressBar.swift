@@ -42,7 +42,7 @@ class TrackingProgressBar: CustomView {
             barColor = newValue
         }
     }
-    
+    @IBOutlet weak var shadowedRoundedView: OMSRoundedBox!
     @IBOutlet weak var roundedView: OMSRoundedBox!
     @IBOutlet weak var rightContainerView: UIView!
     @IBOutlet private weak var leftContainerView: UIView!
