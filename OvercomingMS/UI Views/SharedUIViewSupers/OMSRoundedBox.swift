@@ -24,18 +24,12 @@ class OMSRoundedBox: UIView {
 //        setup()
 //    }
     
-    @IBInspectable var template : String = "" {
-        didSet {
-            if template == "R" {
-                cornerRadius = 15
-            }
-            else if template == "RS" {
-                cornerRadius = 15
-                shadowColor = UIColor.black
-                shadowOffset = CGSize(width: 3, height: 3)
-                shadowRadius = 1
-                shadowOpacity = 0.3
-            }
+    @IBInspectable var maskToBounds: Bool {
+        get {
+            return layer.masksToBounds
+        }
+        set {
+            layer.masksToBounds = newValue
         }
     }
     
@@ -108,6 +102,55 @@ class OMSRoundedBox: UIView {
             layer.shadowOpacity = newValue
             layer.masksToBounds = false
         }
+    }
+    
+}
+
+class RoundedBoxTemplate: OMSRoundedBox {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        setup()
+    }
+    
+    func setup(){
+        cornerRadius = 15
+        maskToBounds = true
+    }
+    
+}
+
+class RoundedBoxShadowsTemplate: OMSRoundedBox {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        setup()
+    }
+    
+    func setup(){
+        cornerRadius = 15
+        shadowColor = UIColor.black
+        shadowOffset = CGSize(width: 3, height: 3)
+        shadowRadius = 1
+        shadowOpacity = 0.3
     }
     
 }

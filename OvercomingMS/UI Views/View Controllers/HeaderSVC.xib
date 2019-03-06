@@ -185,7 +185,6 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="R33-gT-yIq" secondAttribute="trailing" id="BuK-Fm-bVR"/>
                         <constraint firstItem="R33-gT-yIq" firstAttribute="leading" secondItem="f3f-MW-4O7" secondAttribute="leading" id="Ilq-sO-VG5"/>
-                        <constraint firstAttribute="height" constant="80" id="cH9-R9-aQa"/>
                         <constraint firstItem="R33-gT-yIq" firstAttribute="top" secondItem="f3f-MW-4O7" secondAttribute="top" id="fiQ-i0-tho"/>
                         <constraint firstAttribute="bottom" secondItem="R33-gT-yIq" secondAttribute="bottom" constant="4" id="lpP-xQ-uPs"/>
                     </constraints>
