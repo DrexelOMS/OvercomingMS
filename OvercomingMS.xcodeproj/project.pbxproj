@@ -154,6 +154,8 @@
 		0AEF7A42222DD58D009A0292 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A41222DD58D009A0292 /* NoteCell.swift */; };
 		0AEF7A44222DD59F009A0292 /* NoteReviewSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A43222DD59F009A0292 /* NoteReviewSVC.swift */; };
 		0AEF7A48222ED4A5009A0292 /* BottomRoundCornersUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A47222ED4A4009A0292 /* BottomRoundCornersUIView.swift */; };
+		0AEF7A4E223024D5009A0292 /* HeaderSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A4D223024D5009A0292 /* HeaderSVC.xib */; };
+		0AEF7A50223024E9009A0292 /* HeaderSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A4F223024E9009A0292 /* HeaderSVC.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -375,6 +377,8 @@
 		0AEF7A41222DD58D009A0292 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		0AEF7A43222DD59F009A0292 /* NoteReviewSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteReviewSVC.swift; sourceTree = "<group>"; };
 		0AEF7A47222ED4A4009A0292 /* BottomRoundCornersUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomRoundCornersUIView.swift; sourceTree = "<group>"; };
+		0AEF7A4D223024D5009A0292 /* HeaderSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderSVC.xib; sourceTree = "<group>"; };
+		0AEF7A4F223024E9009A0292 /* HeaderSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSVC.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -1043,6 +1047,8 @@
 				0A1FEC592204F239006CED70 /* SharedUIVIewControllerSupers */,
 				0A1FEC502204E6F1006CED70 /* TrackingVCs */,
 				0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */,
+				0AEF7A4D223024D5009A0292 /* HeaderSVC.xib */,
+				0AEF7A4F223024E9009A0292 /* HeaderSVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -1243,6 +1249,7 @@
 				0AD7EB4622234524006F71C0 /* MedRateButtonsSVC.xib in Resources */,
 				0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */,
 				0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */,
+				0AEF7A4E223024D5009A0292 /* HeaderSVC.xib in Resources */,
 				0A93F19A22145F150063A892 /* ModifyAbstractSVC.xib in Resources */,
 				0CAD6317221DAAEE00E50E72 /* FoodRejectedSVC.xib in Resources */,
 				0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */,
@@ -1479,6 +1486,7 @@
 				0AD7EB11221B4D0F006F71C0 /* SelectedLabelsSVC.swift in Sources */,
 				0AA52852220230CD00CCFEE7 /* ExerciseMainSVC.swift in Sources */,
 				0AEF7A40222DD571009A0292 /* SymptomsMainSVC.swift in Sources */,
+				0AEF7A50223024E9009A0292 /* HeaderSVC.swift in Sources */,
 				0A98DB0D221622E900F4800D /* SupplementCircleButton.swift in Sources */,
 				0AD7EAFA221B1A5A006F71C0 /* Omega3AddSVC.swift in Sources */,
 				0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */,
