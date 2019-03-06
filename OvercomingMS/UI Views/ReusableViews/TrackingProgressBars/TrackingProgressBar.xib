@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
+                <outlet property="checkButton" destination="2rJ-fM-xng" id="E3m-Xi-Ee8"/>
                 <outlet property="leftContainerView" destination="LMb-nR-B7u" id="mkM-yu-6qq"/>
                 <outlet property="leftLabel" destination="ZgR-vj-Qt3" id="VAI-Mp-g7Q"/>
                 <outlet property="linearProgressBar" destination="Q1G-Wh-S9S" id="ePP-Sl-1to"/>

@@ -87,7 +87,6 @@
 		0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8421FE53B900C55831 /* DesignConstants.swift */; };
 		0AD07F8821FE637600C55831 /* RoundCornersUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8721FE637600C55831 /* RoundCornersUIView.swift */; };
 		0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */; };
-		0AD07F8C21FE703D00C55831 /* TrackingFoodBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD07F8B21FE703D00C55831 /* TrackingFoodBar.xib */; };
 		0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8D21FE79C300C55831 /* CustomView.swift */; };
 		0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */; };
 		0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */; };
@@ -308,7 +307,6 @@
 		0AD07F8421FE53B900C55831 /* DesignConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignConstants.swift; sourceTree = "<group>"; };
 		0AD07F8721FE637600C55831 /* RoundCornersUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornersUIView.swift; sourceTree = "<group>"; };
 		0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingFoodBar.swift; sourceTree = "<group>"; };
-		0AD07F8B21FE703D00C55831 /* TrackingFoodBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackingFoodBar.xib; sourceTree = "<group>"; };
 		0AD07F8D21FE79C300C55831 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarConfig.swift; sourceTree = "<group>"; };
 		0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMSDateAccessor.swift; sourceTree = "<group>"; };
@@ -713,7 +711,6 @@
 			children = (
 				0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */,
 				0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */,
-				0AD07F8B21FE703D00C55831 /* TrackingFoodBar.xib */,
 				0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */,
 				0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */,
 			);
@@ -1204,7 +1201,6 @@
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
 				0AEF7A36222C7EDB009A0292 /* FoodQuickCompleteSVC.xib in Resources */,
 				0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */,
-				0AD07F8C21FE703D00C55831 /* TrackingFoodBar.xib in Resources */,
 				0A93F1582213C5B40063A892 /* FoodMainSVC.xib in Resources */,
 				0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */,
 				0AEF7A3C222CD782009A0292 /* GoalsMainSVC.xib in Resources */,

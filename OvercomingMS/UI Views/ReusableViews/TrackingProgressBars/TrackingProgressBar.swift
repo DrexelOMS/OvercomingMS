@@ -48,7 +48,8 @@ class TrackingProgressBar: CustomView {
     @IBOutlet private weak var leftContainerView: UIView!
     @IBOutlet private weak var leftLabel: UILabel!
     @IBOutlet private weak var rightLabel: UILabel!
-    @IBOutlet private weak var linearProgressBar: LinearProgressBar!
+    @IBOutlet weak var linearProgressBar: LinearProgressBar!
+    @IBOutlet weak var checkButton: UIButton!
     
     override func customSetup() {
         
@@ -67,6 +68,20 @@ class TrackingProgressBar: CustomView {
     
     func setProgressValue(value : Int){
         linearProgressBar.progressValue = CGFloat(value);
+        setColorMode(completed: linearProgressBar.progressValue >= 100)
+    }
+    
+    private func setColorMode(completed: Bool) {
+        if(completed) {
+            roundedView.backgroundColor = colorTheme
+            checkButton.setImage(UIImage(named: "QuickCompleteReversed"), for: .normal)
+            linearProgressBar.isHidden = true
+        }
+        else {
+            roundedView.backgroundColor = UIColor.white
+            checkButton.setImage(UIImage(named: "QuickComplete"), for: .normal)
+            linearProgressBar.isHidden = false
+        }
     }
     
     func getProgressValue() -> Float{

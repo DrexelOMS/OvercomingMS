@@ -8,37 +8,12 @@
 
 import UIKit
 
-protocol TrackingFoodBarDelegate : class {
-    func didPressCheckButton(_ sender: TrackingFoodBar)
-    func didPressLeftContainer(_ sender: TrackingFoodBar)
-}
-
-class TrackingFoodBar: CustomView {
-
-    override var nibName: String { return "TrackingFoodBar" }
-    
-    weak var delegate : TrackingFoodBarDelegate?
-    
-    @IBOutlet private weak var leftContainerView: UIView!
-    @IBOutlet private weak var rightLabel: UILabel!
+class TrackingFoodBar: TrackingProgressBar {
     
     override func customSetup() {
-        leftContainerView.isUserInteractionEnabled = true
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(leftContainerPressed(tapGestureRecognizer: )))
-        leftContainerView.addGestureRecognizer(tapGesture)
+        super.customSetup()
+        
+        linearProgressBar.isHidden = true
     }
-    
-    func setDescription(description: String){
-        rightLabel.text = description
-    }
-    
-    @objc private func leftContainerPressed(tapGestureRecognizer: UITapGestureRecognizer){
-        delegate?.didPressLeftContainer(self)
-    }
-    
-    @IBAction private func checkButtonPressed(_ sender: UIButton) {
-        delegate?.didPressCheckButton(self)
-    }
-    
 
 }
