@@ -16,11 +16,11 @@ class FoodQuickCompleteSVC: SlidingAbstractSVC {
         }
     }
     
-    @IBOutlet weak var Rank1Item: RoundCornersUIView!
-    @IBOutlet weak var Rank2Item: RoundCornersUIView!
-    @IBOutlet weak var Rank3Item: RoundCornersUIView!
-    @IBOutlet weak var Rank4Item: RoundCornersUIView!
-    @IBOutlet weak var Rank5Item: RoundCornersUIView!
+    @IBOutlet weak var Rank1Item: RoundedBoxShadowsTemplate!
+    @IBOutlet weak var Rank2Item: RoundedBoxShadowsTemplate!
+    @IBOutlet weak var Rank3Item: RoundedBoxShadowsTemplate!
+    @IBOutlet weak var Rank4Item: RoundedBoxShadowsTemplate!
+    @IBOutlet weak var Rank5Item: RoundedBoxShadowsTemplate!
     
     override func customSetup() {
         

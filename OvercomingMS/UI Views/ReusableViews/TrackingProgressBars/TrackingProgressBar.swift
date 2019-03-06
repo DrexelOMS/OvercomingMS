@@ -43,7 +43,7 @@ class TrackingProgressBar: CustomView {
         }
     }
     
-    @IBOutlet weak var roundedView: RoundCornersUIView!
+    @IBOutlet weak var roundedView: OMSRoundedBox!
     @IBOutlet weak var rightContainerView: UIView!
     @IBOutlet private weak var leftContainerView: UIView!
     @IBOutlet private weak var leftLabel: UILabel!

@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FsJ-Yl-6lH" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FsJ-Yl-6lH" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="10.5" width="372" height="40"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vN9-eo-kYU">

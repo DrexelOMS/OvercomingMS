@@ -149,9 +149,6 @@
                         <constraint firstAttribute="bottom" secondItem="Qi2-7t-Ch6" secondAttribute="bottom" id="syq-hQ-gSh"/>
                         <constraint firstItem="Qi2-7t-Ch6" firstAttribute="top" secondItem="I5E-v9-Wxp" secondAttribute="top" id="x7e-Ex-5E6"/>
                     </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="template" value="R"/>
-                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <constraints>
@@ -162,9 +159,6 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="template" value="RS"/>
-            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="138.75" y="332.74647887323943"/>
         </view>
     </objects>

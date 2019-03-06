@@ -43,7 +43,7 @@ eat today?</string>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pp4-G3-RZT">
                             <rect key="frame" x="0.0" y="147" width="315" height="440"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gok-Lw-4WP" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gok-Lw-4WP" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="315" height="72"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pFf-kl-wtV">
@@ -73,7 +73,7 @@ eat today?</string>
                                         <constraint firstAttribute="bottom" secondItem="pFf-kl-wtV" secondAttribute="bottom" id="mHr-Ju-AOs"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4o-z6-Kb9" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4o-z6-Kb9" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="92" width="315" height="72"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="evd-LN-Ypx">
@@ -103,7 +103,7 @@ eat today?</string>
                                         <constraint firstAttribute="bottom" secondItem="evd-LN-Ypx" secondAttribute="bottom" id="qcm-09-v3F"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Sv-Fu-mld" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Sv-Fu-mld" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="184" width="315" height="72"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pMH-rb-wuq">
@@ -133,7 +133,7 @@ eat today?</string>
                                         <constraint firstAttribute="trailing" secondItem="pMH-rb-wuq" secondAttribute="trailing" constant="20" id="jjS-sx-Beb"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vV9-8t-Xb6" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vV9-8t-Xb6" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="276" width="315" height="72"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c06-a6-ZVm">
@@ -163,7 +163,7 @@ eat today?</string>
                                         <constraint firstAttribute="trailing" secondItem="c06-a6-ZVm" secondAttribute="trailing" constant="20" id="xSa-sa-72X"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hpx-I4-jHe" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hpx-I4-jHe" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="368" width="315" height="72"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e3z-AA-cxL">
