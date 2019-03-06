@@ -22,11 +22,11 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OMSRoundedBox" customModule="OvercomingMS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="260" height="46"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5E-v9-Wxp" userLabel="RoundedView" customClass="RoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5E-v9-Wxp" userLabel="RoundedView" customClass="OMSRoundedBox" customModule="OvercomingMS" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="260" height="46"/>
                     <userGuides>
                         <userLayoutGuide location="45" affinity="minY"/>
@@ -149,6 +149,9 @@
                         <constraint firstAttribute="bottom" secondItem="Qi2-7t-Ch6" secondAttribute="bottom" id="syq-hQ-gSh"/>
                         <constraint firstItem="Qi2-7t-Ch6" firstAttribute="top" secondItem="I5E-v9-Wxp" secondAttribute="top" id="x7e-Ex-5E6"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="template" value="RS"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <constraints>
@@ -159,6 +162,9 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="template" value="R"/>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="138.75" y="332.74647887323943"/>
         </view>
     </objects>

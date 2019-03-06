@@ -156,6 +156,7 @@
 		0AEF7A48222ED4A5009A0292 /* BottomRoundCornersUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A47222ED4A4009A0292 /* BottomRoundCornersUIView.swift */; };
 		0AEF7A4E223024D5009A0292 /* HeaderSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A4D223024D5009A0292 /* HeaderSVC.xib */; };
 		0AEF7A50223024E9009A0292 /* HeaderSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A4F223024E9009A0292 /* HeaderSVC.swift */; };
+		0AEF7A52223025F9009A0292 /* OMSRoundedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A51223025F9009A0292 /* OMSRoundedBox.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -379,6 +380,7 @@
 		0AEF7A47222ED4A4009A0292 /* BottomRoundCornersUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomRoundCornersUIView.swift; sourceTree = "<group>"; };
 		0AEF7A4D223024D5009A0292 /* HeaderSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderSVC.xib; sourceTree = "<group>"; };
 		0AEF7A4F223024E9009A0292 /* HeaderSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSVC.swift; sourceTree = "<group>"; };
+		0AEF7A51223025F9009A0292 /* OMSRoundedBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMSRoundedBox.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -772,6 +774,7 @@
 				0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */,
 				0AD07F8721FE637600C55831 /* RoundCornersUIView.swift */,
 				0AD7EAEB2219A8F9006F71C0 /* PillBoxUIView.swift */,
+				0AEF7A51223025F9009A0292 /* OMSRoundedBox.swift */,
 			);
 			path = SharedUIViewSupers;
 			sourceTree = "<group>";
@@ -1511,6 +1514,7 @@
 				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
 				0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */,
 				0A93EA4922131C2D0063A892 /* (null) in Sources */,
+				0AEF7A52223025F9009A0292 /* OMSRoundedBox.swift in Sources */,
 				0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */,
 				0A93F19D22145F150063A892 /* ExerciseAddSVC.swift in Sources */,
 				0AD7EB42222341B3006F71C0 /* MedicationRateTFI.swift in Sources */,
