@@ -75,12 +75,12 @@ class TrackingProgressBar: CustomView {
         if(completed) {
             roundedView.backgroundColor = colorTheme
             checkButton.setImage(UIImage(named: "QuickCompleteReversed"), for: .normal)
-            //linearProgressBar.isHidden = true
+            linearProgressBar.isHidden = true
         }
         else {
             roundedView.backgroundColor = UIColor.white
             checkButton.setImage(UIImage(named: "QuickComplete"), for: .normal)
-            //linearProgressBar.isHidden = false
+            linearProgressBar.isHidden = false
         }
     }
     
