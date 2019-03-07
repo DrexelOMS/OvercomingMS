@@ -15,6 +15,9 @@ class HeaderSVC: CustomView {
             return "HeaderSVC"
         }
     }
+    
+    let motivationalMessages = ["Keep Going", "Great Work", "You Can Do It"]
+    
     @IBOutlet weak var daysInARow: UILabel!
     @IBOutlet weak var perfectDaysLabel: UILabel!
     @IBOutlet weak var circlesLabel: UILabel!
@@ -34,8 +37,14 @@ class HeaderSVC: CustomView {
     
     let messageLabel = UILabel()
     
+    weak var messageUpdateThread: Timer?
+    weak var motivationUpdateThread: Timer?
+    
     override func customSetup() {
         //displayTrackingMessage(colorTheme: UIColor.blue, message: "test")
+        daysInARow.text = "2 days in a row"
+        perfectDaysLabel.text = "100 perfect days"
+        startMotivationStartThread()
     }
     
     func setLabelColors(colored: Bool = false) {
@@ -79,12 +88,8 @@ class HeaderSVC: CustomView {
         
         setLabelColors(colored: true)
         
-        daysInARow.isHidden = true
-        perfectDaysLabel.isHidden = true
-        goalMessageStackView.addArrangedSubview(messageLabel)
+        showMessageLabel()
     }
-    
-    weak var messageUpdateThread: Timer?
     
     func startRestoreThread() {
         messageUpdateThread = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.restore), userInfo: nil, repeats: false)
@@ -92,6 +97,7 @@ class HeaderSVC: CustomView {
     
     func stopRestoreThread() {
         messageUpdateThread?.invalidate()
+        stopMotivationThread()
     }
     
     @objc func restore() {
@@ -99,9 +105,53 @@ class HeaderSVC: CustomView {
         
         setLabelColors()
         
-        messageLabel.removeFromSuperview()
+        hideMessageLabel()
+        
+        startMotivationStartThread()
+    }
+    
+    func startMotivationStartThread() {
+        motivationUpdateThread?.invalidate()
+        motivationUpdateThread = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.showMotivationMessage), userInfo: nil, repeats: false)
+    }
+    
+    func startMotivationEndThread() {
+        motivationUpdateThread?.invalidate()
+        motivationUpdateThread = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.hideMotivationMessage), userInfo: nil, repeats: false)
+    }
+    
+    @objc func showMotivationMessage() {
+        messageLabel.textAlignment = .center
+        let index = Int.random(in: 0 ... motivationalMessages.count - 1)
+        messageLabel.text = motivationalMessages[index]
+        messageLabel.textColor = UIColor.black
+
+        showMessageLabel()
+        
+        startMotivationEndThread()
+    }
+    
+    @objc func hideMotivationMessage() {
+        hideMessageLabel()
+        
+        startMotivationStartThread()
+    }
+    
+    func stopMotivationThread() {
+        motivationUpdateThread?.invalidate()
+        //hideMotivationMessage()
+    }
+    
+    private func hideMessageLabel() {
         daysInARow.isHidden = false
         perfectDaysLabel.isHidden = false
+        messageLabel.removeFromSuperview()
+    }
+    
+    private func showMessageLabel() {
+        daysInARow.isHidden = true
+        perfectDaysLabel.isHidden = true
+        goalMessageStackView.addArrangedSubview(messageLabel)
     }
     
     // if appropriate, make sure to stop your timer in `deinit`
