@@ -24,7 +24,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     var originalBottomConstraint: CGFloat!
     var originalTopLabelContraint: CGFloat!
     
-    override func initialize(parentVC: SwipeDownCloseViewController) {
+    override func initialize(parentVC: SlidingStackVC) {
         super.initialize(parentVC: parentVC)
         
         originalBottomConstraint = textInputStackBottom.constant

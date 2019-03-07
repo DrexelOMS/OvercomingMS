@@ -35,7 +35,7 @@ class NoteReviewSVC: SlidingAbstractSVC {
         
     }
     
-    override func initialize(parentVC: SwipeDownCloseViewController) {
+    override func initialize(parentVC: SlidingStackVC) {
         super.initialize(parentVC: parentVC)
         
         deleteCircleButton.buttonAction = deletePressed

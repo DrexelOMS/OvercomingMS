@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class FoodModuleVC: SwipeDownCloseViewController {
+class FoodModuleVC: SlidingStackVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()

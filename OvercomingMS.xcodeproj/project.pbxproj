@@ -15,7 +15,7 @@
 		0A08189C2214E8CC0021BDF6 /* FoodSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */; };
 		0A08189E2214F82F0021BDF6 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A08189D2214F82F0021BDF6 /* Food.swift */; };
 		0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */; };
-		0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */; };
+		0A1FEC482204C74A006CED70 /* SlidingStackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC472204C74A006CED70 /* SlidingStackVC.swift */; };
 		0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC542204E7F8006CED70 /* QuickCompleteFoodVC.swift */; };
 		0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC572204ECBF006CED70 /* Dismissable.swift */; };
 		0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC5A2204F265006CED70 /* DismissableVC.swift */; };
@@ -155,6 +155,7 @@
 		0AEF7A4E223024D5009A0292 /* HeaderSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A4D223024D5009A0292 /* HeaderSVC.xib */; };
 		0AEF7A50223024E9009A0292 /* HeaderSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A4F223024E9009A0292 /* HeaderSVC.swift */; };
 		0AEF7A52223025F9009A0292 /* OMSRoundedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A51223025F9009A0292 /* OMSRoundedBox.swift */; };
+		0AEF7A542231B487009A0292 /* SwipeDownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A532231B487009A0292 /* SwipeDownVC.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -227,7 +228,7 @@
 		0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchCell.swift; sourceTree = "<group>"; };
 		0A08189D2214F82F0021BDF6 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnTestingViewController.swift; sourceTree = "<group>"; };
-		0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDownCloseViewController.swift; sourceTree = "<group>"; };
+		0A1FEC472204C74A006CED70 /* SlidingStackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingStackVC.swift; sourceTree = "<group>"; };
 		0A1FEC542204E7F8006CED70 /* QuickCompleteFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCompleteFoodVC.swift; sourceTree = "<group>"; };
 		0A1FEC572204ECBF006CED70 /* Dismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissable.swift; sourceTree = "<group>"; };
 		0A1FEC5A2204F265006CED70 /* DismissableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableVC.swift; sourceTree = "<group>"; };
@@ -377,6 +378,7 @@
 		0AEF7A4D223024D5009A0292 /* HeaderSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderSVC.xib; sourceTree = "<group>"; };
 		0AEF7A4F223024E9009A0292 /* HeaderSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSVC.swift; sourceTree = "<group>"; };
 		0AEF7A51223025F9009A0292 /* OMSRoundedBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMSRoundedBox.swift; sourceTree = "<group>"; };
+		0AEF7A532231B487009A0292 /* SwipeDownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDownVC.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -508,7 +510,8 @@
 			isa = PBXGroup;
 			children = (
 				0A93EA43221316350063A892 /* PullBarSVC */,
-				0A1FEC472204C74A006CED70 /* SwipeDownCloseViewController.swift */,
+				0A1FEC472204C74A006CED70 /* SlidingStackVC.swift */,
+				0AEF7A532231B487009A0292 /* SwipeDownVC.swift */,
 				0A1FEC5A2204F265006CED70 /* DismissableVC.swift */,
 			);
 			path = SharedUIVIewControllerSupers;
@@ -1495,6 +1498,7 @@
 				0AD7EB06221B3007006F71C0 /* VitaminDMainSVC.swift in Sources */,
 				0AD7EB232221F1E1006F71C0 /* SeeMoreButtonSVC.swift in Sources */,
 				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
+				0AEF7A542231B487009A0292 /* SwipeDownVC.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
 				0AEF7A2F222B0268009A0292 /* FoodUnknownSVC.swift in Sources */,
@@ -1503,7 +1507,7 @@
 				0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */,
 				83985927222EBA3300782A10 /* MeditationEditSVC.swift in Sources */,
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
-				0A1FEC482204C74A006CED70 /* SwipeDownCloseViewController.swift in Sources */,
+				0A1FEC482204C74A006CED70 /* SlidingStackVC.swift in Sources */,
 				0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */,
 				0A93EA4922131C2D0063A892 /* (null) in Sources */,
 				0AEF7A52223025F9009A0292 /* OMSRoundedBox.swift in Sources */,

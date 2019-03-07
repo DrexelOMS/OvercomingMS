@@ -10,7 +10,7 @@ import UIKit
 
 class SlidingAbstractSVC : CustomView {
     
-    var parentVC: SwipeDownCloseViewController!{
+    var parentVC: SlidingStackVC!{
         didSet {
             colorTheme = parentVC.theme
         }
@@ -22,7 +22,7 @@ class SlidingAbstractSVC : CustomView {
     }
     
     //MUST BE CALLED BY THE VC THAT USES THIS OBJECT
-    func initialize(parentVC: SwipeDownCloseViewController){
+    func initialize(parentVC: SlidingStackVC){
         self.parentVC = parentVC
     }
     

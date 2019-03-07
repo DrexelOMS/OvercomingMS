@@ -9,7 +9,7 @@
 import UIKit
 import Cartography
 
-class TrackingModuleAbstractVC: SwipeDownCloseViewController {
+class TrackingModuleAbstractVC: SlidingStackVC {
     
     //MARK: Attributes
     

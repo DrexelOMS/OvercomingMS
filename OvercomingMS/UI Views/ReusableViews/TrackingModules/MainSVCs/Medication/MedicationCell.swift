@@ -15,7 +15,7 @@ class MedicationCell : UITableViewCell {
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var doneCheckButton: DoneCheckButton!
     
-    var parentVC : SwipeDownCloseViewController!
+    var parentVC : SlidingStackVC!
     let savedMedications = SavedMedicationDBS()
     
     var item: SavedMedicationDBT!

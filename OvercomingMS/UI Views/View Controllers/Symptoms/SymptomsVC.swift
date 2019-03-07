@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SymptomsVC : SwipeDownCloseViewController {
+class SymptomsVC : SlidingStackVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
