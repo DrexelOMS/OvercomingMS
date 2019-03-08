@@ -159,6 +159,7 @@
 		0AEF7A5A2232AA08009A0292 /* FoodLogDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A592232AA07009A0292 /* FoodLogDBT.swift */; };
 		0AEF7A5C2232AA0F009A0292 /* FoodLogDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A5B2232AA0F009A0292 /* FoodLogDBS.swift */; };
 		0AEF7A5E22331329009A0292 /* GoalsDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A5D22331329009A0292 /* GoalsDBT.swift */; };
+		0AEF7A60223314BC009A0292 /* GoalsDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A5F223314BC009A0292 /* GoalsDBS.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -385,6 +386,7 @@
 		0AEF7A592232AA07009A0292 /* FoodLogDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodLogDBT.swift; sourceTree = "<group>"; };
 		0AEF7A5B2232AA0F009A0292 /* FoodLogDBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodLogDBS.swift; sourceTree = "<group>"; };
 		0AEF7A5D22331329009A0292 /* GoalsDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsDBT.swift; sourceTree = "<group>"; };
+		0AEF7A5F223314BC009A0292 /* GoalsDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsDBS.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -534,6 +536,7 @@
 				50AB2ACE221F3879008C5BA5 /* SavedMedicationDBS.swift */,
 				503A52492228A51200E5A009 /* SymptomsNoteDBS.swift */,
 				0AEF7A5B2232AA0F009A0292 /* FoodLogDBS.swift */,
+				0AEF7A5F223314BC009A0292 /* GoalsDBS.swift */,
 			);
 			name = DatabaseServices;
 			path = "OvercomingMS/Data Models/TrackingDataStrategies/DatabaseServices";
@@ -1404,6 +1407,7 @@
 				0A93F1522213BB9D0063A892 /* Omega3HistoryDBT.swift in Sources */,
 				0AD7EAF0221AFB47006F71C0 /* AmountTFI.swift in Sources */,
 				500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */,
+				0AEF7A60223314BC009A0292 /* GoalsDBS.swift in Sources */,
 				0AEF7A3E222DD55E009A0292 /* SymptomsVC.swift in Sources */,
 				0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */,
 				0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */,
