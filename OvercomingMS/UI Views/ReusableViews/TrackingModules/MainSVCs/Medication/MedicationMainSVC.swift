@@ -28,6 +28,8 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         
         buttonStackView.addArrangedSubview(button1)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        internetPopupButton.url = "https://overcomingms.org/recovery-program/drug-therapies/"
 
         tableView.delegate = self
         tableView.dataSource = self
