@@ -186,8 +186,6 @@
 		0CAD6317221DAAEE00E50E72 /* FoodRejectedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */; };
 		0CAD6319221DD50500E50E72 /* SeeMoreButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */; };
 		0CB44DEA2223280F004D0580 /* MeditationSetupSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB44DE92223280F004D0580 /* MeditationSetupSVC.xib */; };
-		0CB44DEC22233A76004D0580 /* MeditationLevelSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB44DEB22233A76004D0580 /* MeditationLevelSVC.xib */; };
-		0CBE98AB22237E2600D3C090 /* MeditationTypeSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE98AA22237E2600D3C090 /* MeditationTypeSVC.xib */; };
 		0CBE98AD2223835300D3C090 /* TitleTimeOverTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE98AC2223835300D3C090 /* TitleTimeOverTextCell.xib */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
@@ -420,8 +418,6 @@
 		0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodRejectedSVC.xib; sourceTree = "<group>"; };
 		0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeMoreButtonSVC.xib; sourceTree = "<group>"; };
 		0CB44DE92223280F004D0580 /* MeditationSetupSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationSetupSVC.xib; sourceTree = "<group>"; };
-		0CB44DEB22233A76004D0580 /* MeditationLevelSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationLevelSVC.xib; sourceTree = "<group>"; };
-		0CBE98AA22237E2600D3C090 /* MeditationTypeSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationTypeSVC.xib; sourceTree = "<group>"; };
 		0CBE98AC2223835300D3C090 /* TitleTimeOverTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTimeOverTextCell.xib; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
@@ -948,8 +944,6 @@
 				0CB44DE92223280F004D0580 /* MeditationSetupSVC.xib */,
 				0AEF7A6822341E14009A0292 /* MeditationLevelButtonSVC.swift */,
 				0AEF7A6A22341E51009A0292 /* MeditationLevelButtonSVC.xib */,
-				0CB44DEB22233A76004D0580 /* MeditationLevelSVC.xib */,
-				0CBE98AA22237E2600D3C090 /* MeditationTypeSVC.xib */,
 				0AEF7A6C22341EC0009A0292 /* TitleTimeOverTextCell.swift */,
 				0CBE98AC2223835300D3C090 /* TitleTimeOverTextCell.xib */,
 			);
@@ -1249,12 +1243,10 @@
 				8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */,
 				0A2BAA752204AFC3004074F3 /* Quicksand-BoldItalic.otf in Resources */,
 				0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */,
-				0CBE98AB22237E2600D3C090 /* MeditationTypeSVC.xib in Resources */,
 				0C7D5868222D8DA300D00CB0 /* NoteCell.xib in Resources */,
 				0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */,
 				0AA528702202828300CCFEE7 /* SquareButtonSVC.xib in Resources */,
 				0A2BAA742204AFC3004074F3 /* SIL Open Font License.txt in Resources */,
-				0CB44DEC22233A76004D0580 /* MeditationLevelSVC.xib in Resources */,
 				0CB44DEA2223280F004D0580 /* MeditationSetupSVC.xib in Resources */,
 				0C7D586A222D942B00D00CB0 /* NoteReviewSVC.xib in Resources */,
 				0A93F19222145EA30063A892 /* TFIAbstract.xib in Resources */,

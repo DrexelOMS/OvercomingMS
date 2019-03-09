@@ -14,6 +14,10 @@
             <connections>
                 <outlet property="backButton" destination="l9P-g0-EiO" id="o3f-lI-tKI"/>
                 <outlet property="defaultMainView" destination="Fnv-5j-WZk" id="pLX-ad-xzn"/>
+                <outlet property="level1Button" destination="tha-Xv-DMm" id="OUi-D3-lSp"/>
+                <outlet property="level2Button" destination="Dj3-Ke-3Ik" id="r08-Wb-u3a"/>
+                <outlet property="level3Button" destination="EfD-0z-QJN" id="hfc-dH-C9B"/>
+                <outlet property="level4Button" destination="onv-ev-BvT" id="A6S-0T-4KP"/>
                 <outlet property="mainLabel" destination="WcQ-Mg-lUx" id="Uvd-OE-vW9"/>
                 <outlet property="mainViewContainer" destination="0Ax-jy-HFY" id="Lpm-g1-f3t"/>
             </connections>
@@ -56,10 +60,10 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sBI-Ip-Gan">
                                                     <rect key="frame" x="5" y="1" width="270" height="105.5"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tha-Xv-DMm" customClass="MeditationLevelButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tha-Xv-DMm" customClass="level1MedLevelButton" customModule="OvercomingMS" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="105.5"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dj3-Ke-3Ik" customClass="MeditationLevelButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dj3-Ke-3Ik" customClass="level2MedLevelButton" customModule="OvercomingMS" customModuleProvider="target">
                                                             <rect key="frame" x="145" y="0.0" width="125" height="105.5"/>
                                                         </view>
                                                     </subviews>
@@ -78,10 +82,10 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="55x-oV-MTQ">
                                                     <rect key="frame" x="5" y="1" width="270" height="105.5"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EfD-0z-QJN" customClass="MeditationLevelButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EfD-0z-QJN" customClass="level3MedLevelButton" customModule="OvercomingMS" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="105.5"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onv-ev-BvT" customClass="MeditationLevelButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onv-ev-BvT" customClass="level4MedLevelButton" customModule="OvercomingMS" customModuleProvider="target">
                                                             <rect key="frame" x="145" y="0.0" width="125" height="105.5"/>
                                                         </view>
                                                     </subviews>

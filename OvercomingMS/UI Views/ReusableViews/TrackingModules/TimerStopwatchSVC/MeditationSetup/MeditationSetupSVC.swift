@@ -21,8 +21,14 @@ class MeditationTimerSetupAbstractSVC : SlidingAbstractSVC {
     @IBOutlet weak var backButton: SquareButtonSVC!
     @IBOutlet weak var mainLabel: UILabel!
     
+    @IBOutlet weak var level1Button: MeditationLevelButtonSVC!
+    @IBOutlet weak var level2Button: MeditationLevelButtonSVC!
+    @IBOutlet weak var level3Button: MeditationLevelButtonSVC!
+    @IBOutlet weak var level4Button: MeditationLevelButtonSVC!
+    
+    
     override func customSetup() {
-
+    
     }
     
     override func initialize(parentVC: SlidingStackVC) {
@@ -34,6 +40,10 @@ class MeditationTimerSetupAbstractSVC : SlidingAbstractSVC {
     
     override func reload() {
         
+    }
+    
+    func pushTimerWithLength(_ length: Int) {
+        print(length);
     }
     
 }

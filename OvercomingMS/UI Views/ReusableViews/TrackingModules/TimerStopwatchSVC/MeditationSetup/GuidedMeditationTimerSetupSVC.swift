@@ -20,7 +20,7 @@ class GuidededMeditationTimerSetupSVC: MeditationTimerSetupAbstractSVC, UITableV
     ]
     let lengthArray: [Int] = [
         15,
-        20,
+        30,
     ]
     let descriptionArray: [String] = [
         "Lorem ipsum uno",
@@ -58,4 +58,9 @@ class GuidededMeditationTimerSetupSVC: MeditationTimerSetupAbstractSVC, UITableV
         
         return cell;
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        pushTimerWithLength(lengthArray[indexPath.row])
+    }
+    
 }
