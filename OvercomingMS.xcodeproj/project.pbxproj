@@ -161,6 +161,12 @@
 		0AEF7A5E22331329009A0292 /* GoalsDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A5D22331329009A0292 /* GoalsDBT.swift */; };
 		0AEF7A60223314BC009A0292 /* GoalsDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A5F223314BC009A0292 /* GoalsDBS.swift */; };
 		0AEF7A6422340068009A0292 /* MeditationSelectedItemSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6322340068009A0292 /* MeditationSelectedItemSVC.swift */; };
+		0AEF7A6722341DBF009A0292 /* MeditationSetupSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6622341DBF009A0292 /* MeditationSetupSVC.swift */; };
+		0AEF7A6922341E14009A0292 /* MeditationLevelButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6822341E14009A0292 /* MeditationLevelButtonSVC.swift */; };
+		0AEF7A6B22341E51009A0292 /* MeditationLevelButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6A22341E51009A0292 /* MeditationLevelButtonSVC.xib */; };
+		0AEF7A6D22341EC0009A0292 /* TitleTimeOverTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6C22341EC0009A0292 /* TitleTimeOverTextCell.swift */; };
+		0AEF7A6F223429BF009A0292 /* MeditationTimerSetupSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6E223429BE009A0292 /* MeditationTimerSetupSVC.swift */; };
+		0AEF7A7122342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A7022342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -179,10 +185,10 @@
 		0CAD6315221D9C7700E50E72 /* FoodApprovedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6314221D9C7700E50E72 /* FoodApprovedSVC.xib */; };
 		0CAD6317221DAAEE00E50E72 /* FoodRejectedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */; };
 		0CAD6319221DD50500E50E72 /* SeeMoreButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */; };
-		0CB44DEA2223280F004D0580 /* GuidedMeditation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB44DE92223280F004D0580 /* GuidedMeditation.xib */; };
+		0CB44DEA2223280F004D0580 /* MeditationSetupSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB44DE92223280F004D0580 /* MeditationSetupSVC.xib */; };
 		0CB44DEC22233A76004D0580 /* MeditationLevelSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB44DEB22233A76004D0580 /* MeditationLevelSVC.xib */; };
 		0CBE98AB22237E2600D3C090 /* MeditationTypeSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE98AA22237E2600D3C090 /* MeditationTypeSVC.xib */; };
-		0CBE98AD2223835300D3C090 /* MeditationTypeButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE98AC2223835300D3C090 /* MeditationTypeButtonSVC.xib */; };
+		0CBE98AD2223835300D3C090 /* TitleTimeOverTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE98AC2223835300D3C090 /* TitleTimeOverTextCell.xib */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
 		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
@@ -389,6 +395,12 @@
 		0AEF7A5D22331329009A0292 /* GoalsDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsDBT.swift; sourceTree = "<group>"; };
 		0AEF7A5F223314BC009A0292 /* GoalsDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsDBS.swift; sourceTree = "<group>"; };
 		0AEF7A6322340068009A0292 /* MeditationSelectedItemSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationSelectedItemSVC.swift; sourceTree = "<group>"; };
+		0AEF7A6622341DBF009A0292 /* MeditationSetupSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSetupSVC.swift; sourceTree = "<group>"; };
+		0AEF7A6822341E14009A0292 /* MeditationLevelButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationLevelButtonSVC.swift; sourceTree = "<group>"; };
+		0AEF7A6A22341E51009A0292 /* MeditationLevelButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationLevelButtonSVC.xib; sourceTree = "<group>"; };
+		0AEF7A6C22341EC0009A0292 /* TitleTimeOverTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTimeOverTextCell.swift; sourceTree = "<group>"; };
+		0AEF7A6E223429BE009A0292 /* MeditationTimerSetupSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerSetupSVC.swift; sourceTree = "<group>"; };
+		0AEF7A7022342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidedMeditationTimerSetupSVC.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -407,10 +419,10 @@
 		0CAD6314221D9C7700E50E72 /* FoodApprovedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodApprovedSVC.xib; sourceTree = "<group>"; };
 		0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodRejectedSVC.xib; sourceTree = "<group>"; };
 		0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeMoreButtonSVC.xib; sourceTree = "<group>"; };
-		0CB44DE92223280F004D0580 /* GuidedMeditation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuidedMeditation.xib; sourceTree = "<group>"; };
+		0CB44DE92223280F004D0580 /* MeditationSetupSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationSetupSVC.xib; sourceTree = "<group>"; };
 		0CB44DEB22233A76004D0580 /* MeditationLevelSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationLevelSVC.xib; sourceTree = "<group>"; };
 		0CBE98AA22237E2600D3C090 /* MeditationTypeSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationTypeSVC.xib; sourceTree = "<group>"; };
-		0CBE98AC2223835300D3C090 /* MeditationTypeButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationTypeButtonSVC.xib; sourceTree = "<group>"; };
+		0CBE98AC2223835300D3C090 /* TitleTimeOverTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTimeOverTextCell.xib; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
 		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		503A52472228A3BD00E5A009 /* SymptomsNoteDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsNoteDBT.swift; sourceTree = "<group>"; };
@@ -577,7 +589,6 @@
 		0A2BA61822029259004074F3 /* TrackingModules */ = {
 			isa = PBXGroup;
 			children = (
-				0CB44DE8222325BB004D0580 /* GuidedMeditation */,
 				0A0818942214E5F90021BDF6 /* FoodModule */,
 				0A2BA61922029262004074F3 /* ConfirmationSVCs */,
 				0AD94DC6220CE44200B5C2BA /* SelectedItemSVC */,
@@ -928,9 +939,27 @@
 			path = "Goals And Settings";
 			sourceTree = "<group>";
 		};
+		0AEF7A6522341C4A009A0292 /* MeditationSetup */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF7A6622341DBF009A0292 /* MeditationSetupSVC.swift */,
+				0AEF7A6E223429BE009A0292 /* MeditationTimerSetupSVC.swift */,
+				0AEF7A7022342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift */,
+				0CB44DE92223280F004D0580 /* MeditationSetupSVC.xib */,
+				0AEF7A6822341E14009A0292 /* MeditationLevelButtonSVC.swift */,
+				0AEF7A6A22341E51009A0292 /* MeditationLevelButtonSVC.xib */,
+				0CB44DEB22233A76004D0580 /* MeditationLevelSVC.xib */,
+				0CBE98AA22237E2600D3C090 /* MeditationTypeSVC.xib */,
+				0AEF7A6C22341EC0009A0292 /* TitleTimeOverTextCell.swift */,
+				0CBE98AC2223835300D3C090 /* TitleTimeOverTextCell.xib */,
+			);
+			path = MeditationSetup;
+			sourceTree = "<group>";
+		};
 		0AF8E0C622090C0700E1EC33 /* TimerStopwatchSVC */ = {
 			isa = PBXGroup;
 			children = (
+				0AEF7A6522341C4A009A0292 /* MeditationSetup */,
 				0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */,
 				0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */,
 				0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */,
@@ -952,17 +981,6 @@
 				0C7D5869222D942B00D00CB0 /* NoteReviewSVC.xib */,
 			);
 			path = Symptoms;
-			sourceTree = "<group>";
-		};
-		0CB44DE8222325BB004D0580 /* GuidedMeditation */ = {
-			isa = PBXGroup;
-			children = (
-				0CB44DE92223280F004D0580 /* GuidedMeditation.xib */,
-				0CB44DEB22233A76004D0580 /* MeditationLevelSVC.xib */,
-				0CBE98AA22237E2600D3C090 /* MeditationTypeSVC.xib */,
-				0CBE98AC2223835300D3C090 /* MeditationTypeButtonSVC.xib */,
-			);
-			path = GuidedMeditation;
 			sourceTree = "<group>";
 		};
 		505DB14521FF6C570045C703 /* CassUITesting */ = {
@@ -1224,6 +1242,7 @@
 				0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */,
 				0A93F1582213C5B40063A892 /* FoodMainSVC.xib in Resources */,
 				0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */,
+				0AEF7A6B22341E51009A0292 /* MeditationLevelButtonSVC.xib in Resources */,
 				0AEF7A3C222CD782009A0292 /* GoalsMainSVC.xib in Resources */,
 				505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */,
 				0AEF7A2D222B01FC009A0292 /* FoodUnknownSVC.xib in Resources */,
@@ -1236,11 +1255,11 @@
 				0AA528702202828300CCFEE7 /* SquareButtonSVC.xib in Resources */,
 				0A2BAA742204AFC3004074F3 /* SIL Open Font License.txt in Resources */,
 				0CB44DEC22233A76004D0580 /* MeditationLevelSVC.xib in Resources */,
-				0CB44DEA2223280F004D0580 /* GuidedMeditation.xib in Resources */,
+				0CB44DEA2223280F004D0580 /* MeditationSetupSVC.xib in Resources */,
 				0C7D586A222D942B00D00CB0 /* NoteReviewSVC.xib in Resources */,
 				0A93F19222145EA30063A892 /* TFIAbstract.xib in Resources */,
 				0A0818982214E6310021BDF6 /* FoodSearchSVC.xib in Resources */,
-				0CBE98AD2223835300D3C090 /* MeditationTypeButtonSVC.xib in Resources */,
+				0CBE98AD2223835300D3C090 /* TitleTimeOverTextCell.xib in Resources */,
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
 				0A1FEC6E220638A7006CED70 /* Routine3PartCell.xib in Resources */,
 				0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */,
@@ -1423,6 +1442,7 @@
 				0A08189E2214F82F0021BDF6 /* Food.swift in Sources */,
 				0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */,
 				0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */,
+				0AEF7A6722341DBF009A0292 /* MeditationSetupSVC.swift in Sources */,
 				0A1FEC6C22063898006CED70 /* Routine3PartCell.swift in Sources */,
 				0AD7EB3B2223043A006F71C0 /* MedicationMainSVC.swift in Sources */,
 				0AF8E0DB2209248700E1EC33 /* StopwatchAbstractSVC.swift in Sources */,
@@ -1437,6 +1457,7 @@
 				0AEF7A44222DD59F009A0292 /* NoteReviewSVC.swift in Sources */,
 				0AEF7A5A2232AA08009A0292 /* FoodLogDBT.swift in Sources */,
 				0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */,
+				0AEF7A6922341E14009A0292 /* MeditationLevelButtonSVC.swift in Sources */,
 				0AEF7A5E22331329009A0292 /* GoalsDBT.swift in Sources */,
 				0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */,
 				50572C9A22139E51000C2E63 /* Omega3HistoryDBS.swift in Sources */,
@@ -1481,6 +1502,7 @@
 				0AD94DD3220DEE8000B5C2BA /* EditCircleButton.swift in Sources */,
 				0A0818912214647E0021BDF6 /* LengthTFI.swift in Sources */,
 				0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */,
+				0AEF7A6F223429BF009A0292 /* MeditationTimerSetupSVC.swift in Sources */,
 				0AD94DE3220E17BD00B5C2BA /* GuidedCircleButton.swift in Sources */,
 				0A93F15C2213C62A0063A892 /* RecipesCircleButton.swift in Sources */,
 				0AD7EB1A2220A546006F71C0 /* FoodSelectedSVC.swift in Sources */,
@@ -1494,6 +1516,7 @@
 				0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */,
 				0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */,
 				0AD7EB00221B1E7F006F71C0 /* Omega3SelectedItem.swift in Sources */,
+				0AEF7A7122342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift in Sources */,
 				0AD7EB1C2220B2A4006F71C0 /* FoodApprovedSVC.swift in Sources */,
 				0AD7EB15221B52A5006F71C0 /* VitaminDEditSVC.swift in Sources */,
 				0A93F15E2213C62A0063A892 /* ScanCircleButton.swift in Sources */,
@@ -1510,6 +1533,7 @@
 				0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */,
 				0AD94DCF220DE7CB00B5C2BA /* RepeatConfirmationSVC.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
+				0AEF7A6D22341EC0009A0292 /* TitleTimeOverTextCell.swift in Sources */,
 				0A93F15D2213C62A0063A892 /* SearchCircleButton.swift in Sources */,
 				0AD7EB0B221B3331006F71C0 /* VitaminDModifyAbstractSVC.swift in Sources */,
 				0AD7EB04221B2FD6006F71C0 /* OutsideCircleButton.swift in Sources */,
