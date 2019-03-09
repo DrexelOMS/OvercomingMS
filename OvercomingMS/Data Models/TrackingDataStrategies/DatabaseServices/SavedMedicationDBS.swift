@@ -53,11 +53,11 @@ class SavedMedicationDBS: TrackingModulesDBS {
         let da = OMSDateAccessor()
         for med in realm.objects(SavedMedicationDBT.self) {
             if let deleteDate = med.DateDeleted {
-                if da.greaterThanEqualComparison(dateToCompare: deleteDate) {
+                if da.greaterThanEqualComparison(left: globalCurrentFullDate, right: deleteDate) {
                     continue
                 }
             }
-            if da.lessThanComparison(dateToCompare: med.DateCreated) {
+            if da.lessThanComparison(left: globalCurrentFullDate, right: med.DateCreated) {
                 continue
             }
             savedMeds.append(med)

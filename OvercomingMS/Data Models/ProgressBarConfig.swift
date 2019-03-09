@@ -12,8 +12,7 @@ enum TrackingMode { case food, omega3, vitaminD, exercise, meditation, medicatio
 
 class ProgressBarConfig {
     
-    static private let defaults = UserDefaults.standard
-    
+    //TODO: make food goal setable and usable?
     static var foodDescriptions : [String] = ["Aweful.", "Not great.", "Alright.", "Pretty good.", "Perfect!"]
     static func getfoodDescription(rating: Int) -> String {
         if(rating - 1 < 0){
@@ -25,45 +24,49 @@ class ProgressBarConfig {
         return foodDescriptions[rating - 1]
     }
     
-    static private let omega3Key = "omega3Goal"
     static var omega3Goal : Int {
         get {
-            return getIntFromKey(_default: 100, _key: omega3Key)
+            return GoalsDBS().mostRecentGoals.Omega3Goal
         }
         set {
-            defaults.set(newValue, forKey: omega3Key)
+            let goalsDBS = GoalsDBS()
+            goalsDBS.omega3GoalToSet = newValue
+            goalsDBS.writeGoals()
         }
     }
     static let omega3UOM = "g."
     
-    static private let vitaminDKey = "vitaminDGoal"
     static var vitaminDGoal : Int {
         get {
-            return getIntFromKey(_default: 100, _key: vitaminDKey)
+            return GoalsDBS().mostRecentGoals.VitaminDGoal
         }
         set {
-            defaults.set(newValue, forKey: vitaminDKey)
+            let goalsDBS = GoalsDBS()
+            goalsDBS.vitaminDGoalToSet = newValue
+            goalsDBS.writeGoals()
         }
     }
     static let vitaminDUOM = "klUs"
     
-    static private let exerciseKey = "exerciseGoal"
     static var exerciseGoal : Int {
         get {
-            return getIntFromKey(_default: 30, _key: exerciseKey)
+            return GoalsDBS().mostRecentGoals.ExerciseGoal
         }
         set {
-            defaults.set(newValue, forKey: exerciseKey)
+            let goalsDBS = GoalsDBS()
+            goalsDBS.exerciseGoalToSet = newValue
+            goalsDBS.writeGoals()
         }
     }
     
-    static private let meditationKey = "meditationGoal"
     static var meditationGoal : Int {
         get {
-            return getIntFromKey(_default: 30, _key: meditationKey)
+            return GoalsDBS().mostRecentGoals.MeditationGoal
         }
         set {
-            defaults.set(newValue, forKey: meditationKey)
+            let goalsDBS = GoalsDBS()
+            goalsDBS.meditationGoalToSet = newValue
+            goalsDBS.writeGoals()
         }
     }
     
@@ -72,20 +75,11 @@ class ProgressBarConfig {
     static func calculateKLUs(minutes: Int) -> Int {
         return minutes * 5
     }
-    
-    static private func getIntFromKey(_default: Int, _key: String) -> Int {
-        if defaults.contains(key: _key){
-            return defaults.integer(forKey: _key)
-        }
-        else {
-            defaults.set(_default, forKey: _key)
-            return defaults.integer(forKey: _key)
-        }
-    }
+
 }
 
-extension UserDefaults {
-    func contains(key: String) -> Bool {
-        return UserDefaults.standard.object(forKey: key) != nil
-    }
-}
+//extension UserDefaults {
+//    func contains(key: String) -> Bool {
+//        return UserDefaults.standard.object(forKey: key) != nil
+//    }
+//}
