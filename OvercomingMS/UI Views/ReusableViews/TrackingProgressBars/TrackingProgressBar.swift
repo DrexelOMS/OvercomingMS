@@ -31,6 +31,7 @@ class TrackingProgressBar: CustomView {
     @IBInspectable var barColor: UIColor = UIColor.red {
         didSet {
             linearProgressBar.barColor = barColor
+            linearProgressBar.trackColor = barColor.withAlphaComponent(0.2)
         }
     }
     
