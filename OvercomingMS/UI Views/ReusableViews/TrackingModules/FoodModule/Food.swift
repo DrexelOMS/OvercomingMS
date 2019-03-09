@@ -25,6 +25,78 @@ class Food {
         self.Ingredients = ingredients ?? ""
     }
 
+    func checkType(type:String) -> RecommendedLevel{
+        if(type.contains("Dairy")){
+            return RecommendedLevel.Bad
+        }
+        if(type.contains("Dairies")){
+            return RecommendedLevel.Bad
+        }
+        if(type.contains("Meat")){
+            return RecommendedLevel.Bad
+        }
+        if(type.contains("Meats")){
+            return RecommendedLevel.Bad
+        }
+        if(type.contains("Fat")){
+            return RecommendedLevel.Bad
+        }
+        if(type.contains("Fats")){
+            return RecommendedLevel.Bad
+        }
+        if(type.contains("Egg")){
+            return RecommendedLevel.Caution
+        }
+        if(type.contains("Eggs")){
+            return RecommendedLevel.Caution
+        }
+        if(type.contains("Cheese")){
+            return RecommendedLevel.Bad
+        }
+        if(type.contains("Poultry")){
+            return RecommendedLevel.Bad
+        }
+        if(type.contains("Poultries")){
+            return RecommendedLevel.Bad
+        }
+        if(type.contains("Beef")){
+            return RecommendedLevel.Bad
+        }
+        if(type.contains("Beefs")){
+            return RecommendedLevel.Bad
+        }
+        if(type.contains("Chicken")){
+            return RecommendedLevel.Bad
+        }
+        if(type.contains("Chickens")){
+            return RecommendedLevel.Bad
+        }
+        return RecommendedLevel.Good
+    }
+    
+    func getVeganPhrases()->[String]{
+        return Food.nonVeganPhrases
+    }
+    
+    func isFoodGood(food : Food) -> RecommendedLevel{
+        if food.SatFats>1{
+            return RecommendedLevel.Bad
+        }
+        for str in food.Categories.split(separator: ","){
+            if checkType(type: String(str)) == RecommendedLevel.Bad{
+                return RecommendedLevel.Bad
+            }
+        }
+        
+        for ingredient in Food.nonVeganPhrases{
+            if(food.Ingredients.contains(ingredient)){
+                return RecommendedLevel.Bad
+            }
+        }
+        
+        return RecommendedLevel.Good
+    }
+    
     static var nonVeganPhrases :[String] = [
         "abalone",
         "acetate",
