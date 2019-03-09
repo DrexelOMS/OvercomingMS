@@ -257,6 +257,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     @objc private func previousDate(gesture: UIGestureRecognizer) {
         
         globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(-60*60*24)
+        //print(globalCurrentFullDate)
         
         loadCurrentDayUI()
     }
@@ -267,6 +268,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         }
         
         globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(60*60*24)
+        //print(globalCurrentFullDate)
         
         loadCurrentDayUI()
     }

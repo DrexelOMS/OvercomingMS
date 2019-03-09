@@ -15,5 +15,9 @@ class GoalsDBT: Object {
     @objc dynamic var VitaminDGoal : Int = 100
     @objc dynamic var ExerciseGoal : Int = 30
     @objc dynamic var MeditationGoal : Int = 30
-    @objc dynamic var DateModified: Date = Date()
+    @objc dynamic var DateModified: String = ""
+    
+    override static func primaryKey() -> String? {
+        return "DateModified"
+    }
 }

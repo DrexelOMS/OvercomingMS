@@ -62,20 +62,25 @@ class OMSDateAccessor {
         return weekdays[weekDay - 1]
     }
     
-    func greaterThanEqualComparison(dateToCompare: Date) -> Bool {
-        let currentDay = OMSDateAccessor.getFullDate(date: globalCurrentDate)
-        if let days = dateToCompare.totalDistance(from: currentDay, resultIn: .day) {
-            return days >= 0
-        }
-        return false
+    //TODO this is not correct, becuase today at 11pm = within the same day as tomorrow 1 am
+    func greaterThanEqualComparison(left: Date, right: Date) -> Bool {
+        let order = Calendar.current.compare(left, to: right, toGranularity: .day)
+        return order == .orderedSame || order == .orderedDescending
     }
     
-    func lessThanComparison(dateToCompare: Date) -> Bool {
-        let currentDay = OMSDateAccessor.getFullDate(date: globalCurrentDate)
-        if let days = dateToCompare.totalDistance(from: currentDay, resultIn: .day) {
-            return days < 0
-        }
-        return false
+    func greaterThanComparison(left: Date, right: Date) -> Bool {
+        let order = Calendar.current.compare(left, to: right, toGranularity: .day)
+        return order == .orderedDescending
+    }
+    
+    func lessThanEqualComparison(left: Date, right: Date) -> Bool {
+        let order = Calendar.current.compare(left, to: right, toGranularity: .day)
+        return order == .orderedSame || order == .orderedAscending
+    }
+    
+    func lessThanComparison(left: Date, right: Date) -> Bool {
+        let order = Calendar.current.compare(left, to: right, toGranularity: .day)
+        return order == .orderedAscending
     }
     
     var todaysDate : String { // this is to temporarily change the real world date

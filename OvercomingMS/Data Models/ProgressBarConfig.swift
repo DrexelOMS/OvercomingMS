@@ -26,7 +26,7 @@ class ProgressBarConfig {
     
     static var omega3Goal : Int {
         get {
-            return GoalsDBS().todaysGoals.Omega3Goal
+            return GoalsDBS().mostRecentGoals.Omega3Goal
         }
         set {
             let goalsDBS = GoalsDBS()
@@ -38,7 +38,7 @@ class ProgressBarConfig {
     
     static var vitaminDGoal : Int {
         get {
-            return GoalsDBS().todaysGoals.VitaminDGoal
+            return GoalsDBS().mostRecentGoals.VitaminDGoal
         }
         set {
             let goalsDBS = GoalsDBS()
@@ -50,7 +50,7 @@ class ProgressBarConfig {
     
     static var exerciseGoal : Int {
         get {
-            return GoalsDBS().todaysGoals.ExerciseGoal
+            return GoalsDBS().mostRecentGoals.ExerciseGoal
         }
         set {
             let goalsDBS = GoalsDBS()
@@ -61,7 +61,7 @@ class ProgressBarConfig {
     
     static var meditationGoal : Int {
         get {
-            return GoalsDBS().todaysGoals.MeditationGoal
+            return GoalsDBS().mostRecentGoals.MeditationGoal
         }
         set {
             let goalsDBS = GoalsDBS()
