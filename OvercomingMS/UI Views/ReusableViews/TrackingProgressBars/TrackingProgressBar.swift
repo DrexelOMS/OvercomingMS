@@ -79,11 +79,15 @@ class TrackingProgressBar: CustomView {
     private func setColorMode(completed: Bool) {
         if(completed) {
             roundedView.backgroundColor = colorTheme
+            leftLabel.textColor = UIColor.white
+            rightLabel.textColor = UIColor.white
             checkButton.setImage(UIImage(named: "QuickCompleteReversed"), for: .normal)
             linearProgressBar.isHidden = true
         }
         else {
             roundedView.backgroundColor = UIColor.white
+            leftLabel.textColor = UIColor.black
+            rightLabel.textColor = UIColor.black
             checkButton.setImage(UIImage(named: "QuickComplete"), for: .normal)
             linearProgressBar.isHidden = false
         }

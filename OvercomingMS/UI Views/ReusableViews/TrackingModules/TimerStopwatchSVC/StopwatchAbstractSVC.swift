@@ -16,7 +16,6 @@ class StopwatchAbstractSVC : TimerStopWatchAbstractSVC {
     override func customSetup() {
         super.customSetup()
         
-        timerLabel.text = "00:00:00"
         descriptionLabel.text = "Get Ready To Start."
     }
     
