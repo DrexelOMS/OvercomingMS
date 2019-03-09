@@ -19,27 +19,31 @@ var globalCurrentDate : String {// this is for going to previus dates
 
 class OMSDateAccessor {
     
-    let formatter = DateFormatter()
     private let defaults = UserDefaults.standard
     
     private let realm = try! Realm()
     private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
     
     static func getFormatedDate(date: Date) -> String {
+        print(date)
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
+        formatter.timeZone = TimeZone(secondsFromGMT: TimeZone.current.secondsFromGMT())
+        print(formatter.string(from: date))
         return formatter.string(from: date)
     }
     
     static func getDateTime(date : Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "hh:mm a"
+        formatter.timeZone = TimeZone(secondsFromGMT: TimeZone.current.secondsFromGMT())
         return formatter.string(from: date)
     }
     
     static func getFullDate(date : String) -> Date {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
+        formatter.timeZone = TimeZone(secondsFromGMT: TimeZone.current.secondsFromGMT())
         return formatter.date(from: date)!
         //TODO: what if we change the date format, maybe it should go through a history of options
     }
@@ -47,6 +51,7 @@ class OMSDateAccessor {
     static func getDayOfWeekLetter(_ today: String) -> Character {
         let formatter  = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
+        formatter.timeZone = TimeZone(secondsFromGMT: TimeZone.current.secondsFromGMT())
         let todayDate = formatter.date(from: today)!
         let myCalendar = Calendar(identifier: .gregorian)
         let weekDay = myCalendar.component(.weekday, from: todayDate)
