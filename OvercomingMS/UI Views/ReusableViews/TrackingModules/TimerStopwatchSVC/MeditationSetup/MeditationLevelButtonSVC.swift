@@ -16,13 +16,19 @@ class MeditationLevelButtonSVC: CustomView {
         }
     }
     
+    var title: String {
+        get {
+            return "Seed"
+        }
+    }
+    
     var length: Int {
         get {
             return 15;
         }
     }
     
-    var buttonAction: ((_ length: Int) -> ())!
+    var buttonAction: ((_ length: Int, _ type: String) -> ())!
     @IBOutlet weak var buttonView: RoundedBoxShadowsTemplate!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -40,7 +46,7 @@ class MeditationLevelButtonSVC: CustomView {
         guard let buttonAction = buttonAction else {
             fatalError("ButtonAction not set")
         }
-        buttonAction(length)
+        buttonAction(length, title)
     }
     
 }
@@ -53,10 +59,16 @@ class level1MedLevelButton: MeditationLevelButtonSVC {
         }
     }
     
+    override var title: String {
+        get {
+            return "Seed"
+        }
+    }
+    
     override func customSetup() {
         super.customSetup()
         
-        imageView.image = UIImage(named: "Seed")
+        imageView.image = UIImage(named: title)
     }
 }
 
@@ -68,10 +80,16 @@ class level2MedLevelButton: MeditationLevelButtonSVC {
         }
     }
     
+    override var title: String {
+        get {
+            return "Sprout"
+        }
+    }
+    
     override func customSetup() {
         super.customSetup()
         
-        imageView.image = UIImage(named: "Sprout")
+        imageView.image = UIImage(named: title)
     }
 }
 
@@ -83,10 +101,16 @@ class level3MedLevelButton: MeditationLevelButtonSVC {
         }
     }
     
+    override var title: String {
+        get {
+            return "Flower"
+        }
+    }
+    
     override func customSetup() {
         super.customSetup()
         
-        imageView.image = UIImage(named: "Flower")
+        imageView.image = UIImage(named: title)
     }
 }
 
@@ -98,9 +122,15 @@ class level4MedLevelButton: MeditationLevelButtonSVC {
         }
     }
     
+    override var title: String {
+        get {
+            return "Tree"
+        }
+    }
+    
     override func customSetup() {
         super.customSetup()
         
-        imageView.image = UIImage(named: "Tree")
+        imageView.image = UIImage(named: title)
     }
 }

@@ -13,10 +13,10 @@ class MeditationTimerSetupSVC: MeditationTimerSetupAbstractSVC {
     override func customSetup() {
         mainLabel.text = "Chose a level:"
         
-        level1Button.buttonAction = pushTimerWithLength(_:)
-        level2Button.buttonAction = pushTimerWithLength(_:)
-        level3Button.buttonAction = pushTimerWithLength(_:)
-        level4Button.buttonAction = pushTimerWithLength(_:)
+        level1Button.buttonAction = pushTimerWithLength
+        level2Button.buttonAction = pushTimerWithLength
+        level3Button.buttonAction = pushTimerWithLength
+        level4Button.buttonAction = pushTimerWithLength
     }
     
 }

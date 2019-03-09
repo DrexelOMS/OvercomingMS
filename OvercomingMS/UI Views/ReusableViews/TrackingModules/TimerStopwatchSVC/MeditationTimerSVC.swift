@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MeditationCountdownSVC : TimerAbstractSVC {
+class MeditationTimerSVC : TimerAbstractSVC {
     
     //allow instantiation with start length in seconds
-    convenience init(startingSeconds: Int) {
+    convenience init(startingSeconds: Int, meditationType: String) {
         self.init()
         
-        print("Start timer with \(startingSeconds)")
+        print("Start \(meditationType) timer with \(startingSeconds)")
     }
 }

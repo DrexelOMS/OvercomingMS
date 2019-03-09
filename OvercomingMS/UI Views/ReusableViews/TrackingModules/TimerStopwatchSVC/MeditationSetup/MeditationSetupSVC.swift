@@ -43,8 +43,8 @@ class MeditationTimerSetupAbstractSVC : SlidingAbstractSVC {
     }
     
     //TODO: have this push to the timer view view a convenience init
-    func pushTimerWithLength(_ length: Int) {
-        parentVC.pushSubView(newSubView: MeditationCountdownSVC(startingSeconds: length))
+    func pushTimerWithLength(_ length: Int, _ type: String) {
+        parentVC.pushSubView(newSubView: MeditationTimerSVC(startingSeconds: length * 60, meditationType: type))
     }
     
 }

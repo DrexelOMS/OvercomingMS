@@ -60,7 +60,7 @@ class GuidededMeditationTimerSetupSVC: MeditationTimerSetupAbstractSVC, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        pushTimerWithLength(lengthArray[indexPath.row])
+        pushTimerWithLength(lengthArray[indexPath.row], titleArray[indexPath.row])
     }
     
 }
