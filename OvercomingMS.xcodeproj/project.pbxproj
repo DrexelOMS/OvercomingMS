@@ -160,6 +160,7 @@
 		0AEF7A5C2232AA0F009A0292 /* FoodLogDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A5B2232AA0F009A0292 /* FoodLogDBS.swift */; };
 		0AEF7A5E22331329009A0292 /* GoalsDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A5D22331329009A0292 /* GoalsDBT.swift */; };
 		0AEF7A60223314BC009A0292 /* GoalsDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A5F223314BC009A0292 /* GoalsDBS.swift */; };
+		0AEF7A6422340068009A0292 /* MeditationSelectedItemSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6322340068009A0292 /* MeditationSelectedItemSVC.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -387,6 +388,7 @@
 		0AEF7A5B2232AA0F009A0292 /* FoodLogDBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodLogDBS.swift; sourceTree = "<group>"; };
 		0AEF7A5D22331329009A0292 /* GoalsDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsDBT.swift; sourceTree = "<group>"; };
 		0AEF7A5F223314BC009A0292 /* GoalsDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsDBS.swift; sourceTree = "<group>"; };
+		0AEF7A6322340068009A0292 /* MeditationSelectedItemSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationSelectedItemSVC.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -900,6 +902,7 @@
 				0AD94DCB220CEE9800B5C2BA /* ExerciseSelectedItem.swift */,
 				0AD7EAFF221B1E7F006F71C0 /* Omega3SelectedItem.swift */,
 				0AD7EB0E221B463A006F71C0 /* VitaminDSelectedItem.swift */,
+				0AEF7A6322340068009A0292 /* MeditationSelectedItemSVC.swift */,
 				0AD7EB4B2224B9EC006F71C0 /* MedicationSelectedItem.swift */,
 			);
 			path = SelectedItemSVC;
@@ -1522,6 +1525,7 @@
 				0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */,
 				0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */,
 				83985927222EBA3300782A10 /* MeditationEditSVC.swift in Sources */,
+				0AEF7A6422340068009A0292 /* MeditationSelectedItemSVC.swift in Sources */,
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SlidingStackVC.swift in Sources */,
 				0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */,

@@ -257,7 +257,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     @objc private func previousDate(gesture: UIGestureRecognizer) {
         
         globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(-60*60*24)
-        testing()
         
         loadCurrentDayUI()
     }
@@ -268,16 +267,8 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         }
         
         globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(60*60*24)
-        testing()
         
         loadCurrentDayUI()
-    }
-    
-    func testing() {
-//        print(globalCurrentFullDate)
-//        print(OMSDateAccessor.getFormatedDate(date: globalCurrentFullDate))
-//        print(globalCurrentDate)
-//        print(TrackingModulesDBS().getTrackingDay(date: globalCurrentDate)?.DateCreated)
     }
     
     //TODO: this is a test button, normally the day would progress, and the ui is not automatically updated unless we check in the loadCurrentDayUI to check if todays date has changed

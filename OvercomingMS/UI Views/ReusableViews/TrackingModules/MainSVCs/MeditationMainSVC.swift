@@ -85,10 +85,10 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let exerciseItemSVC = ExerciseSelectedItemSVC()
-        //exerciseItemSVC.exerciseItem = exerciseRoutines.getTodaysExerciseItems()![indexPath.row]
-        //exerciseItemSVC.parentVC = parentVC
-        //parentVC.pushSubView(newSubView: exerciseItemSVC)
+        let meditationItemSVC = MeditationSelectedItemSVC()
+        meditationItemSVC.meditationItem = meditationHistory.getTodaysMeditationItems()![indexPath.row]
+        meditationItemSVC.parentVC = parentVC
+        parentVC.pushSubView(newSubView: meditationItemSVC)
     }
 
 }
