@@ -38,8 +38,8 @@ class CircleButtonSVC: CustomView {
     var colorTheme : UIColor = UIColor.black {
         didSet {
             //label.textColor = colorTheme
-            button.setTitleColor(colorTheme, for: .normal)
-            button.tintColor = colorTheme
+            button.setTitleColor(UIColor(rgb: 0x333333), for: .normal)
+            //button.tintColor = colorTheme
         }
     }
     
