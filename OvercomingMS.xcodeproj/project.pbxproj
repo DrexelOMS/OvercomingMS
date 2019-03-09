@@ -167,6 +167,7 @@
 		0AEF7A6D22341EC0009A0292 /* TitleTimeOverTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6C22341EC0009A0292 /* TitleTimeOverTextCell.swift */; };
 		0AEF7A6F223429BF009A0292 /* MeditationTimerSetupSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6E223429BE009A0292 /* MeditationTimerSetupSVC.swift */; };
 		0AEF7A7122342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A7022342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift */; };
+		0AEF7A732234454B009A0292 /* MeditationCountdownSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A722234454B009A0292 /* MeditationCountdownSVC.swift */; };
 		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
@@ -399,6 +400,7 @@
 		0AEF7A6C22341EC0009A0292 /* TitleTimeOverTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTimeOverTextCell.swift; sourceTree = "<group>"; };
 		0AEF7A6E223429BE009A0292 /* MeditationTimerSetupSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerSetupSVC.swift; sourceTree = "<group>"; };
 		0AEF7A7022342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidedMeditationTimerSetupSVC.swift; sourceTree = "<group>"; };
+		0AEF7A722234454B009A0292 /* MeditationCountdownSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCountdownSVC.swift; sourceTree = "<group>"; };
 		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -959,6 +961,7 @@
 				0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */,
 				0AD7EB202221E537006F71C0 /* TimerAbsractSVC.swift */,
 				0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */,
+				0AEF7A722234454B009A0292 /* MeditationCountdownSVC.swift */,
 			);
 			path = TimerStopwatchSVC;
 			sourceTree = "<group>";
@@ -1444,6 +1447,7 @@
 				0A93F1512213BB9D0063A892 /* MeditationHistoryDBT.swift in Sources */,
 				0A1FEC61220529D7006CED70 /* TrackingModulesDBS.swift in Sources */,
 				0AD94DCC220CEE9800B5C2BA /* ExerciseSelectedItem.swift in Sources */,
+				0AEF7A732234454B009A0292 /* MeditationCountdownSVC.swift in Sources */,
 				0A93F14F2213BB9D0063A892 /* ExerciseHistoryDBT.swift in Sources */,
 				0AD7EAFE221B1A86006F71C0 /* Omega3ModifyAbstractSVC.swift in Sources */,
 				0AEF7A44222DD59F009A0292 /* NoteReviewSVC.swift in Sources */,
