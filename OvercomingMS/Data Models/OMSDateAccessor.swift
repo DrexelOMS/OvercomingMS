@@ -25,11 +25,9 @@ class OMSDateAccessor {
     private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
     
     static func getFormatedDate(date: Date) -> String {
-        print(date)
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
         formatter.timeZone = TimeZone(secondsFromGMT: TimeZone.current.secondsFromGMT())
-        print(formatter.string(from: date))
         return formatter.string(from: date)
     }
     

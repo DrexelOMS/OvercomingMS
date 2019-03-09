@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeditationSelectedItemSVC: UIView {
+class MeditationSelectedItemSVC: SelectedItemSVC {
     var meditationItem : MeditationHistoryDBT!
         
         {
@@ -26,7 +26,7 @@ class MeditationSelectedItemSVC: UIView {
     }
     
     override func reload() {
-        topMainLabel.text = meditationItem.RoutineType
+        topMainLabel.text = meditationItem.MeditationType
         middleMainLabel.text = OMSDateAccessor.getDateTime(date: meditationItem.StartTime)
         bottomMainLabel.text = "\(meditationItem.minutes) \(ProgressBarConfig.lengthUOM)"
     }
@@ -43,7 +43,7 @@ class MeditationSelectedItemSVC: UIView {
     }
     
     func repeatItem() {
-        let type = meditationItem.RoutineType
+        let type = meditationItem.MeditationType
         let startTime = Date()
         let endTime = startTime.addingTimeInterval(TimeInterval(meditationItem.minutes * 60))
         MeditationHistoryDBS().addMeditationItem(routineType: type, startTime: startTime, endTime: endTime)
