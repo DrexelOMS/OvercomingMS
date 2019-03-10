@@ -18,15 +18,15 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="85" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <userGuides>
                 <userLayoutGuide affinity="minY"/>
-                <userLayoutGuide location="29" affinity="minY"/>
+                <userLayoutGuide location="20" affinity="minY"/>
             </userGuides>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uJd-PL-ujI" userLabel="Stack Button Label View">
-                    <rect key="frame" x="22.5" y="19.5" width="40" height="61.5"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uJd-PL-ujI" userLabel="Stack Button Label View">
+                    <rect key="frame" x="20" y="7" width="40" height="66.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJt-ul-1yn" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -43,7 +43,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAz-6H-cPV">
-                            <rect key="frame" x="1" y="45" width="38" height="16.5"/>
+                            <rect key="frame" x="1" y="50" width="38" height="16.5"/>
                             <attributedString key="attributedText">
                                 <fragment content="Label">
                                     <attributes>
@@ -64,7 +64,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="180.9375" y="362.32394366197184"/>
+            <point key="canvasLocation" x="185.625" y="350.7042253521127"/>
         </view>
     </objects>
 </document>
