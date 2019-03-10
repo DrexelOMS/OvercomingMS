@@ -24,26 +24,26 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="260" height="46"/>
+            <rect key="frame" x="0.0" y="0.0" width="316" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5E-v9-Wxp" userLabel="RoundedView" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="260" height="46"/>
+                    <rect key="frame" x="0.0" y="0.0" width="316" height="100"/>
                     <userGuides>
                         <userLayoutGuide location="45" affinity="minY"/>
                     </userGuides>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qi2-7t-Ch6">
-                            <rect key="frame" x="10" y="0.0" width="240" height="46"/>
+                            <rect key="frame" x="10" y="0.0" width="296" height="100"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMb-nR-B7u" userLabel="leftContainerView">
-                                    <rect key="frame" x="0.0" y="0.0" width="190" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="246" height="100"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-tc-HaU">
-                                            <rect key="frame" x="0.0" y="4.5" width="190" height="37"/>
+                                            <rect key="frame" x="0.0" y="17.5" width="246" height="65"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-Bv-8c1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="190" height="23.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="246" height="23.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-vj-Qt3">
                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="23.5"/>
@@ -63,7 +63,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-n8-ccr">
-                                                            <rect key="frame" x="125" y="0.0" width="65" height="23.5"/>
+                                                            <rect key="frame" x="125" y="0.0" width="121" height="23.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
@@ -80,10 +80,10 @@
                                                     </constraints>
                                                 </stackView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1G-Wh-S9S" userLabel="BottomProgressBar" customClass="LinearProgressBar" customModule="LinearProgressBar">
-                                                    <rect key="frame" x="0.0" y="25" width="190" height="12"/>
+                                                    <rect key="frame" x="0.0" y="25" width="246" height="40"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="12" id="bsM-ea-3P9"/>
+                                                        <constraint firstAttribute="height" constant="40" id="bsM-ea-3P9"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="barColor">
@@ -117,10 +117,10 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DD8-0L-vXd" userLabel="rightContainerView">
-                                    <rect key="frame" x="200" y="0.0" width="40" height="46"/>
+                                    <rect key="frame" x="256" y="0.0" width="40" height="100"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rJ-fM-xng" userLabel="Check">
-                                            <rect key="frame" x="0.0" y="3" width="40" height="40"/>
+                                            <rect key="frame" x="0.0" y="30" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="A1I-Nk-tDf"/>
                                                 <constraint firstAttribute="width" constant="40" id="Aw9-Pw-D3R"/>
@@ -143,7 +143,6 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Qi2-7t-Ch6" secondAttribute="trailing" constant="10" id="i11-uy-Jjb"/>
                         <constraint firstItem="Qi2-7t-Ch6" firstAttribute="leading" secondItem="I5E-v9-Wxp" secondAttribute="leading" constant="10" id="oxK-wm-dSB"/>
@@ -152,6 +151,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="I5E-v9-Wxp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RGT-QO-kP3"/>
                 <constraint firstItem="I5E-v9-Wxp" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="YvT-69-hSN"/>
@@ -160,7 +160,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="138.75" y="332.74647887323943"/>
+            <point key="canvasLocation" x="184" y="369"/>
         </view>
     </objects>
     <resources>

@@ -15,5 +15,9 @@ class TrackingModuleProgressBar : TrackingProgressBar {
         
         self.rightContainerView.isHidden = true
         shadowedRoundedView.shadowOpacity = 0
+        
+        originalBackground = UIColor(rgb: 0xF8F8F8)
+        shadowedRoundedView.backgroundColor = originalBackground
+        roundedView.backgroundColor = originalBackground
     }
 }
