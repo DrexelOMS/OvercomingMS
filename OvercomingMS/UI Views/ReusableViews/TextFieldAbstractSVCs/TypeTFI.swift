@@ -77,7 +77,7 @@ class ExerciseTypeTFI : TypeTFIAbstract {
     
     override var choices: [String] {
         get {
-            return ["Run", "Lift", "Push Ups"]
+            return ["Exercise", "Run", "Bike", "Cardio", "Elliptical", "Lift", "Row", "Swim", "Other"]
         }
     }
     
