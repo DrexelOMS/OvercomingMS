@@ -40,7 +40,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="246" height="100"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-tc-HaU">
-                                            <rect key="frame" x="0.0" y="17.5" width="246" height="65"/>
+                                            <rect key="frame" x="0.0" y="31.5" width="246" height="37"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-Bv-8c1">
                                                     <rect key="frame" x="0.0" y="0.0" width="246" height="23.5"/>
@@ -80,10 +80,10 @@
                                                     </constraints>
                                                 </stackView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1G-Wh-S9S" userLabel="BottomProgressBar" customClass="LinearProgressBar" customModule="LinearProgressBar">
-                                                    <rect key="frame" x="0.0" y="25" width="246" height="40"/>
+                                                    <rect key="frame" x="0.0" y="25" width="246" height="12"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="bsM-ea-3P9"/>
+                                                        <constraint firstAttribute="height" constant="12" id="bsM-ea-3P9"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="barColor">
