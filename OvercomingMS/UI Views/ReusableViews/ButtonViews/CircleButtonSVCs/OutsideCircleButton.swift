@@ -11,8 +11,8 @@ import UIKit
 class OutsideCircleButton : CircleButtonSVC {
     
     override func customSetup() {
-        button.setTitle("O", for: .normal)
-        //buttonImage = UIImage(named: "Sup")
+        //button.setTitle("O", for: .normal)
+        buttonImage = UIImage(named: "Outside")
         label.text = "Outside"
     }
 }
