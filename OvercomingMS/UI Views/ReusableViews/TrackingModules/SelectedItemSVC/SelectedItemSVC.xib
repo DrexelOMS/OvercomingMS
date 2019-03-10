@@ -30,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPr-64-u4P" userLabel="BorderTop">
-                    <rect key="frame" x="20" y="0.0" width="320" height="1"/>
+                    <rect key="frame" x="20" y="0.0" width="280" height="1"/>
                     <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="AkI-si-Hby"/>
@@ -47,7 +47,7 @@
                     </userGuides>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="sZR-ez-QdZ">
-                            <rect key="frame" x="20" y="30" width="280" height="225"/>
+                            <rect key="frame" x="20" y="40" width="280" height="225"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAa-AJ-SPs" userLabel="TopView">
                                     <rect key="frame" x="0.0" y="0.0" width="280" height="55"/>
@@ -206,7 +206,7 @@
                         <constraint firstAttribute="bottom" secondItem="Xjg-f0-uHe" secondAttribute="bottom" id="A1c-HD-4sG"/>
                         <constraint firstAttribute="trailing" secondItem="sZR-ez-QdZ" secondAttribute="trailing" constant="20" id="KMe-u6-itu"/>
                         <constraint firstAttribute="trailing" secondItem="f3w-FE-AYF" secondAttribute="trailing" id="UYj-DI-ywI"/>
-                        <constraint firstItem="sZR-ez-QdZ" firstAttribute="top" secondItem="Ttt-pQ-ryf" secondAttribute="top" constant="30" id="Um5-D8-GT7"/>
+                        <constraint firstItem="sZR-ez-QdZ" firstAttribute="top" secondItem="Ttt-pQ-ryf" secondAttribute="top" constant="40" id="Um5-D8-GT7"/>
                         <constraint firstItem="f3w-FE-AYF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sZR-ez-QdZ" secondAttribute="bottom" constant="30" id="aMW-Aa-Qp7"/>
                         <constraint firstItem="f3w-FE-AYF" firstAttribute="leading" secondItem="Ttt-pQ-ryf" secondAttribute="leading" id="gAr-oh-fVv"/>
                         <constraint firstAttribute="trailing" secondItem="Xjg-f0-uHe" secondAttribute="trailing" id="hBW-58-WMY"/>
@@ -218,16 +218,16 @@
             <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Ttt-pQ-ryf" firstAttribute="top" secondItem="lPr-64-u4P" secondAttribute="bottom" id="3Wx-e9-NJ8"/>
+                <constraint firstAttribute="trailing" secondItem="lPr-64-u4P" secondAttribute="trailing" constant="20" id="6DR-dA-UCn"/>
                 <constraint firstItem="lPr-64-u4P" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="KGg-di-HJO"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ttt-pQ-ryf" secondAttribute="bottom" id="Lu3-hx-Jme"/>
                 <constraint firstItem="Ttt-pQ-ryf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NA2-FL-2vb"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ttt-pQ-ryf" secondAttribute="trailing" id="adB-OX-aOw"/>
-                <constraint firstItem="lPr-64-u4P" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="20" id="c79-sq-Kks"/>
-                <constraint firstItem="lPr-64-u4P" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gVl-W3-64a"/>
+                <constraint firstItem="lPr-64-u4P" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="stx-RX-7Cx"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-101" y="193"/>
+            <point key="canvasLocation" x="-102.40000000000001" y="192.50374812593705"/>
         </view>
     </objects>
 </document>
