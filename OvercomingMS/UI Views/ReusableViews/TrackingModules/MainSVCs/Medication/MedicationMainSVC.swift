@@ -17,7 +17,7 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     let button1 = AddCircleButton()
     
     override func customSetup() {
-        
+        totalsView.isHidden = true
     }
     
     //must be called by 

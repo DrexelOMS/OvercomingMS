@@ -18,6 +18,7 @@ class MainAbstractSVC: SlidingAbstractSVC {
     
     var defaultCellName : String = "Routine3PartCell"
     
+    @IBOutlet weak var totalsView: UIView!
     @IBOutlet weak var totalsCountLabel : UILabel!
     @IBOutlet weak var totalsTextLabel: UILabel!
     @IBOutlet weak var internetPopupButton: SeeMoreButtonSVC!

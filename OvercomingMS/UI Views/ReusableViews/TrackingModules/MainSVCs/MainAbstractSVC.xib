@@ -17,6 +17,7 @@
                 <outlet property="tableView" destination="bfj-aj-J4I" id="yKR-1W-7Jv"/>
                 <outlet property="totalsCountLabel" destination="bXC-Bw-61b" id="uVf-P7-LYs"/>
                 <outlet property="totalsTextLabel" destination="DHZ-Fv-UcE" id="BcE-qL-fJb"/>
+                <outlet property="totalsView" destination="cbi-At-eNK" id="vwu-yp-WxH"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -75,6 +76,7 @@ Today</string>
                             <constraints>
                                 <constraint firstItem="Nk0-8d-kcW" firstAttribute="centerX" secondItem="cbi-At-eNK" secondAttribute="centerX" id="9nA-4C-LGC"/>
                                 <constraint firstItem="Nk0-8d-kcW" firstAttribute="top" secondItem="cbi-At-eNK" secondAttribute="top" id="TQq-XU-OOP"/>
+                                <constraint firstAttribute="height" constant="70" id="Yqf-oB-7SB"/>
                                 <constraint firstAttribute="bottom" secondItem="Nk0-8d-kcW" secondAttribute="bottom" id="fhu-7Q-vfi"/>
                             </constraints>
                         </view>
@@ -83,22 +85,17 @@ Today</string>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeA-7A-NxG" customClass="SeeMoreButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                     <rect key="frame" x="30" y="0.0" width="260" height="50"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="cJg-al-eBJ"/>
-                                    </constraints>
                                 </view>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="UeA-7A-NxG" secondAttribute="trailing" constant="30" id="MHq-Oq-kZy"/>
+                                <constraint firstAttribute="height" constant="50" id="ROz-qQ-BsN"/>
                                 <constraint firstItem="UeA-7A-NxG" firstAttribute="leading" secondItem="DXO-RH-WEd" secondAttribute="leading" constant="30" id="WyR-zx-Rlf"/>
                                 <constraint firstAttribute="bottom" secondItem="UeA-7A-NxG" secondAttribute="bottom" id="dcs-pP-Ga6"/>
                                 <constraint firstItem="UeA-7A-NxG" firstAttribute="top" secondItem="DXO-RH-WEd" secondAttribute="top" id="qV6-O7-1xG"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="150" id="FhZ-Yn-FL6"/>
-                    </constraints>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bfj-aj-J4I">
                     <rect key="frame" x="30" y="190" width="260" height="160"/>
