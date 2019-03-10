@@ -55,7 +55,7 @@ class MeditationTimerSVC : TimerAbstractSVC {
     
     
     override func pushFinishSVC(minutes: Int) {
-        parentVC.pushSubView(newSubView: MeditationAddSVC(startTime: startTime, length: minutes))
+        parentVC.pushSubView(newSubView: MeditationAddSVC(type: type, startTime: startTime, length: minutes))
     }
     
 }
