@@ -138,8 +138,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     }
     
     private func updatePageUI(_ currentTrackingDay: TrackingDayDBT) {
-        print(globalCurrentDate)
-        print(todaysDate)
         if globalCurrentDate == todaysDate {
             dateLog.text = "Today, \(OMSDateAccessor.getStyledDate(date: currentTrackingDay.DateCreated))"
         }
