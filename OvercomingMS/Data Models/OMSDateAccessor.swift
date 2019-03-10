@@ -46,6 +46,14 @@ class OMSDateAccessor {
         //TODO: what if we change the date format, maybe it should go through a history of options
     }
     
+    static func getStyledDate(date: String) -> String {
+        let trueDate = getFullDate(date: date)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM dd, yyyy"
+        formatter.timeZone = TimeZone(secondsFromGMT: TimeZone.current.secondsFromGMT())
+        return formatter.string(from: trueDate)
+    }
+    
     static func getDayOfWeekLetter(_ today: String) -> Character {
         let formatter  = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
