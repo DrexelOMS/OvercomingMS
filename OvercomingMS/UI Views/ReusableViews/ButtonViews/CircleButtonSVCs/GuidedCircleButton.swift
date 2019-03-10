@@ -11,8 +11,8 @@ import UIKit
 class GuidedCircleButton : CircleButtonSVC {
     
     override func customSetup() {
-        button.setTitle("G", for: .normal)
-        //buttonImage = UIImage(named: "Add")
+        //button.setTitle("G", for: .normal)
+        buttonImage = UIImage(named: "Guided")
         label.text = "Guided"
     }
 }
