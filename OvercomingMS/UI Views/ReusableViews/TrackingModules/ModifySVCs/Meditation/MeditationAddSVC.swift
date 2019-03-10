@@ -10,10 +10,11 @@ import UIKit
 
 class MeditationAddSVC: MeditationModifyAbstractSVC {
         
-    convenience init(startTime: Date, length: Int)
+    convenience init(type: String, startTime: Date, length: Int)
     {
         self.init()
         
+        selectedType = type
         selectedStartTime = startTime
         selectedLength = length
     }

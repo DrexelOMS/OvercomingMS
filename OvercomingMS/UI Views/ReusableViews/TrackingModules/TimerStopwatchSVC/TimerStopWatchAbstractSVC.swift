@@ -32,6 +32,8 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     private var isTimerRunning = false
     
     override func customSetup() {
+        timerLabel.text = "00:00:00"
+        
         cancelButton.buttonAction = cancelButtonPressed
         startPauseButton.buttonAction = startPauseButtonPressed
         finishButton.buttonAction = finishButtonPressed
