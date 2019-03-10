@@ -8,6 +8,7 @@
 
 import UIKit
 import Cartography
+import PTPopupWebView
 
 class FoodSelectedSVC : SlidingAbstractSVC {
     
@@ -74,11 +75,18 @@ class FoodSelectedSVC : SlidingAbstractSVC {
         foodDescriptionLabel.text = description
     }
     
-//    func learnMoreButtonPressed() {
-//        let popupvc = PTPopupWebViewController()
-//        popupvc.popupView.URL(string: "https://world.openfoodfacts.org/product/"+food.Id)
-//        popupvc.show()
-//    }
+    @IBAction func learnMoreButtonPressed(_ sender: Any) {
+        
+        let popupvc = PTPopupWebViewController()
+        if let id = food?.Id {
+            popupvc.popupView.URL(string: "https://world.openfoodfacts.org/product/" + id )
+        }
+        else {
+            popupvc.popupView.URL(string: "https://world.openfoodfacts.org")
+        }
+        popupvc.show()
+
+    }
     
     override func customSetup() {
         backButton.backButtonAction = backButtonPressed
