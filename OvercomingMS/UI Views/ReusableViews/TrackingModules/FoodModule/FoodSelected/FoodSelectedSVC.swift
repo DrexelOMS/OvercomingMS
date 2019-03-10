@@ -8,6 +8,7 @@
 
 import UIKit
 import Cartography
+import PTPopupWebView
 
 class FoodSelectedSVC : SlidingAbstractSVC {
     
@@ -16,15 +17,19 @@ class FoodSelectedSVC : SlidingAbstractSVC {
             return "FoodSelectedSVC"
         }
     }
+    var food: Food? = nil
     
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var foodDescriptionLabel: UILabel!
     @IBOutlet weak var approveDisaproveView: UIView!
     @IBOutlet weak var backButton: SquareButtonSVC!
     
-    convenience init(unknown: Bool) {
+    
+    
+    convenience init(food:Food, unknown: Bool) {
         self.init()
         
+        self.food = food
         if (unknown) {
             constrainView(view: FoodUnknownSVC())
         }
@@ -32,16 +37,16 @@ class FoodSelectedSVC : SlidingAbstractSVC {
             constrainView(view: FoodApprovedSVC())
         }
 
-        setLabel(name: "Test", description: "Test")
+        setLabel(name: food.Name, description: food.Brand)
     }
     
-    //change stuff to what you want to pass in when you instantiate the class with FoodSelected
-    convenience init(ingredients: [String], types: [String]){
+    convenience init(food: Food, ingredients: [String], types: [String]){
         self.init()
         
+        self.food = food
         //initialize
-        if(ingredients == [""]){
-            constrainView(view: FoodApprovedSVC())
+        if(ingredients == [""] && types == [""]){
+            constrainView(view: FoodUnknownSVC())
         }
         else{
             print(ingredients)
@@ -50,9 +55,8 @@ class FoodSelectedSVC : SlidingAbstractSVC {
             constrainView(view: FoodRejectedSVC(_badLabels: allBadStuff))
         }
         
-        setLabel(name: "Test", description: "Test")
+        setLabel(name: food.Name, description: food.Brand)
     }
-    
     private func constrainView(view: UIView){
         
         approveDisaproveView.addSubview(view)
@@ -69,6 +73,19 @@ class FoodSelectedSVC : SlidingAbstractSVC {
     private func setLabel(name: String, description: String) {
         foodNameLabel.text = name
         foodDescriptionLabel.text = description
+    }
+    
+    @IBAction func learnMoreButtonPressed(_ sender: Any) {
+        
+        let popupvc = PTPopupWebViewController()
+        if let id = food?.Id {
+            popupvc.popupView.URL(string: "https://world.openfoodfacts.org/product/" + id )
+        }
+        else {
+            popupvc.popupView.URL(string: "https://world.openfoodfacts.org")
+        }
+        popupvc.show()
+
     }
     
     override func customSetup() {

@@ -16,6 +16,7 @@ class Food {
     var Categories: String
     var SatFats: Int
     var Ingredients: String
+    var Brand: String
     
     init() {
         Id = ""
@@ -23,16 +24,17 @@ class Food {
         Categories = ""
         SatFats = 0
         Ingredients = ""
+        Brand = ""
     }
     
-    convenience init(id: String, name: String?, categories:String?, satfats: Int?, ingredients:String?) {
+    convenience init(id: String, name: String?, categories: String?, satfats: Int?, ingredients: String?, brand: String?) {
         self.init()
-        
         Id = id
         Name = name ?? ""
         Categories = categories ?? ""
         SatFats = satfats ?? 0
         Ingredients = ingredients ?? ""
+        Brand = brand ?? ""
     }
 
     func checkType(type:String) -> RecommendedLevel{
@@ -112,7 +114,7 @@ class Food {
     
     func getFoodFromID(id: String, parentVC:SlidingStackVC)->Void{
         let barcodeSearch = "https://world.openfoodfacts.org/api/v0/product/"+id+".json"
-        var foodinfo: Food = Food(id: "",name: "",categories: "",satfats: 0,ingredients: "")
+        var foodinfo: Food = Food(id: "",name: "",categories: "",satfats: 0,ingredients: "", brand: "")
         //let barcodeSearch = "https://world.openfoodfacts.org/api/v0/product/3181232127608.json"
         let eurl = barcodeSearch.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let url = NSURL(string: eurl ?? "")
@@ -131,6 +133,7 @@ class Food {
                     var categories : String = ""
                     var id : String = ""
                     var ingrdientsList = ""
+                    var brand = ""
                     
                     if let types = foodDict.value(forKey: "categories") {
                         categories=types as! String;
@@ -140,6 +143,9 @@ class Food {
                     }
                     if let ID = foodDict.value(forKey: "_id") {
                         id=ID as! String;
+                    }
+                    if let Brand = foodDict.value(forKey: "brands") {
+                        brand=Brand as! String;
                     }
                     //not sure how to get this
                     //                            if let nutrientArray = foodDict.value(forKey: "nutriments") as! NSArray{
@@ -154,7 +160,7 @@ class Food {
                     //                            }
                     //getting the name from the dictionary
                     if let name = foodDict.value(forKey: "product_name") {
-                        let fooditem = Food(id:id,name:(name as! String), categories: categories, satfats: satfat, ingredients: ingrdientsList)
+                        let fooditem = Food(id:id,name:(name as! String), categories: categories, satfats: satfat, ingredients: ingrdientsList, brand:brand)
                         //print(name as! String + ": " + categories + "\n")
                         //adding the name to the array
                         foodinfo = fooditem
@@ -166,11 +172,11 @@ class Food {
                     //calling another function after fetching the json
                     // push unknown if we're unbale to get any info from the barcode
                     if foodinfo.Ingredients.count<1 && foodinfo.Categories.count<1{
-                        parentVC.pushSubView(newSubView: FoodSelectedSVC(unknown: true))
+                        parentVC.pushSubView(newSubView: FoodSelectedSVC(food: foodinfo, unknown: true))
                     }
                         
                     else if(foodinfo.isFoodGood(food: foodinfo)==RecommendedLevel.Good){
-                        parentVC.pushSubView(newSubView: FoodSelectedSVC(ingredients:[""], types:[""]))
+                        parentVC.pushSubView(newSubView: FoodSelectedSVC(food: foodinfo, ingredients:[""], types:[""]))
                     }
                     else if(foodinfo.isFoodGood(food: foodinfo)==RecommendedLevel.Bad){
                         var badingredients = [""]
@@ -188,12 +194,12 @@ class Food {
                                 badTypes.append(String(str))
                             }
                         }
-                        parentVC.pushSubView(newSubView: FoodSelectedSVC(ingredients:badingredients, types:badTypes))
+                        parentVC.pushSubView(newSubView: FoodSelectedSVC(food: foodinfo, ingredients:badingredients, types:badTypes))
                     }
                         // push unknown if we don't get either good or bad back from the call
                     else
                     {
-                        parentVC.pushSubView(newSubView: FoodSelectedSVC(unknown: true))
+                        parentVC.pushSubView(newSubView: FoodSelectedSVC(food: foodinfo, unknown: true))
                     }
                     parentVC.reload()
                 })
@@ -211,7 +217,6 @@ class Food {
         "acetylated lanolin alcohol",
         "acetylated lanolin ricinoleate",
         "acetylated tallow",
-        "acid",
         "acidophilus milk",
         "adrenaline",
         "adrenals of cattle",
@@ -258,7 +263,6 @@ class Food {
         "back bacon",
         "back fat",
         "bacon",
-        "bass",
         "batyl alcohol",
         "batyl isostearate",
         "bear",
@@ -303,7 +307,6 @@ class Food {
         "buttermilk",
         "buttermilk powder",
         "c30-46 piscine oil",
-        "calamari",
         "calciferol",
         "calciferool",
         "calcium caseinate",
@@ -381,7 +384,6 @@ class Food {
         "confectioners glaze",
         "cooked ham",
         "cooked meats",
-        "coral",
         "corned beef",
         "cornish game hen",
         "cortico steroid",
@@ -391,14 +393,8 @@ class Food {
         "cortisone: see cortico steroid.",
         "cotechino",
         "cottage cheese",
-        "crab",
-        "crab",
-        "crabmeat",
-        "crawfish",
-        "crayfish",
         "cream",
         "cream",
-        "crustacean shellfish",
         "curds",
         "custard",
         "cysteine, l-form",
@@ -671,7 +667,6 @@ class Food {
         "liver",
         "liver extract",
         "liverwurst",
-        "lobster",
         "low fat milk",
         "low fat yogurt",
         "lunasponge",
@@ -705,7 +700,6 @@ class Food {
         "mink oil",
         "minkamidopropyl diethylamine",
         "mohair",
-        "molluscan shellfish",
         "mono and di-glycerides",
         "monoglycerides glycerides",
         "monoglycerides glycerides (see glycerin)",
@@ -736,9 +730,7 @@ class Food {
         "nougat",
         "nucleicacids",
         "ocenol",
-        "octopus",
         "octyl dodecanol",
-        "oils",
         "oleamidopropyl dimethylamine hydrolyzed animal protein",
         "oleic acid",
         "oleoic oil",
@@ -764,7 +756,6 @@ class Food {
         "ovarian extract",
         "ox bile",
         "oxgall",
-        "oyster",
         "palmitamide",
         "palmitamine",
         "palmitate",
@@ -777,7 +768,6 @@ class Food {
         "paracasein",
         "partridge",
         "pasteurized milk",
-        "pearl",
         "pearl essence",
         "pentahydrosqualene",
         "pepsin",
@@ -813,7 +803,6 @@ class Food {
         "ppg-12-peg-50 lanolin",
         "ppg-2,-5, -10. -20, -30 lanolinalcohol ethers",
         "ppg-30 lanolin ether",
-        "prawn",
         "pregnenolone acetate",
         "pristane",
         "progesterone",
@@ -848,11 +837,6 @@ class Food {
         "salceson",
         "sausage",
         "sausages",
-        "scallop",
-        "scallops",
-        "sea sponge",
-        "sea turtle oil",
-        "seasponge",
         "serum albumin",
         "serum proteins",
         "sheep milk",
@@ -861,7 +845,6 @@ class Food {
         "shellac resinous glaze",
         "shellac wax",
         "shoulder",
-        "shrimp",
         "shrimph",
         "side bacon",
         "silk",
@@ -902,7 +885,6 @@ class Food {
         "squab",
         "squalane",
         "squalene",
-        "squid",
         "squirrel",
         "steak",
         "stearamide",
