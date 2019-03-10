@@ -24,16 +24,17 @@ class Food {
         Categories = ""
         SatFats = 0
         Ingredients = ""
+        Brand = ""
     }
     
-    convenience init(id: String, name: String?, categories:String?, satfats: Int?, ingredients:String?) {
+    convenience init(id: String, name: String?, categories: String?, satfats: Int?, ingredients: String?, brand: String?) {
         self.init()
-        
         Id = id
         Name = name ?? ""
         Categories = categories ?? ""
         SatFats = satfats ?? 0
         Ingredients = ingredients ?? ""
+        Brand = brand ?? ""
     }
 
     func checkType(type:String) -> RecommendedLevel{
