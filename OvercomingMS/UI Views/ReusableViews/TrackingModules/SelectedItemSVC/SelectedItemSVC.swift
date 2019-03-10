@@ -34,6 +34,8 @@ class SelectedItemSVC : SlidingAbstractSVC {
     @IBOutlet weak var backButton: SquareButtonSVC!
     
     override func customSetup() {
+        middleFrequencyLabel.isHidden = true
+        
         editButton = EditCircleButton()
         editButton.buttonAction = editButtonPressed
         buttonStackView.addArrangedSubview(editButton)

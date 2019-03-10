@@ -52,6 +52,8 @@ class TrackingProgressBar: CustomView {
     @IBOutlet weak var linearProgressBar: LinearProgressBar!
     @IBOutlet weak var checkButton: UIButton!
     
+    var originalBackground: UIColor = UIColor.white
+    
     override func customSetup() {
         //set the default progress bar to full
         linearProgressBar.progressValue = 100
@@ -86,7 +88,7 @@ class TrackingProgressBar: CustomView {
             linearProgressBar.isHidden = true
         }
         else {
-            roundedView.backgroundColor = UIColor.white
+            roundedView.backgroundColor = originalBackground
             leftLabel.textColor = UIColor.black
             rightLabel.textColor = UIColor.black
             checkButton.setImage(UIImage(named: "QuickComplete"), for: .normal)
