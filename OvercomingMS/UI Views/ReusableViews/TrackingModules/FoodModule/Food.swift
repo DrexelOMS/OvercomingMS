@@ -18,13 +18,22 @@ class Food {
     var Ingredients: String
     var Brand: String
     
-    init(id: String, name: String?, categories:String?, satfats: Int?, ingredients:String?, brand:String?) {
-        self.Id = id
-        self.Name = name ?? ""
-        self.Categories = categories ?? ""
-        self.SatFats = satfats ?? 0
-        self.Ingredients = ingredients ?? ""
-        self.Brand = brand ?? ""
+    init() {
+        Id = ""
+        Name = ""
+        Categories = ""
+        SatFats = 0
+        Ingredients = ""
+    }
+    
+    convenience init(id: String, name: String?, categories:String?, satfats: Int?, ingredients:String?) {
+        self.init()
+        
+        Id = id
+        Name = name ?? ""
+        Categories = categories ?? ""
+        SatFats = satfats ?? 0
+        Ingredients = ingredients ?? ""
     }
 
     func checkType(type:String) -> RecommendedLevel{

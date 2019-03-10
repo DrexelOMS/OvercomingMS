@@ -138,7 +138,14 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     }
     
     private func updatePageUI(_ currentTrackingDay: TrackingDayDBT) {
-        dateLog.text = currentTrackingDay.DateCreated
+        if globalCurrentDate == todaysDate {
+            dateLog.text = "Today, \(OMSDateAccessor.getStyledDate(date: currentTrackingDay.DateCreated))"
+        }
+        else {
+            dateLog.text = OMSDateAccessor.getStyledDate(date: currentTrackingDay.DateCreated)
+        }
+        //dateLog.text = currentTrackingDay.DateCreated
+        
         //TODO make a way to get the proper description for each
         //FoodEatenRating is 1 - 5
         foodBar.setDescription(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -27,21 +27,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="425"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="425"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xn0-oV-Cgl">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="365"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xn0-oV-Cgl">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="365"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKI-nG-0ce" userLabel="TextTop">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="121.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="167.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6t-Bo-Lbw">
-                                    <rect key="frame" x="20" y="0.0" width="335" height="121.5"/>
-                                    <string key="text">Label
-Label
-Label
-Label</string>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6t-Bo-Lbw">
+                                    <rect key="frame" x="30" y="139.5" width="260" height="28"/>
                                     <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -49,20 +45,15 @@ Label</string>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="Y6t-Bo-Lbw" secondAttribute="bottom" id="Bvj-Qg-WMx"/>
-                                <constraint firstItem="Y6t-Bo-Lbw" firstAttribute="top" secondItem="DKI-nG-0ce" secondAttribute="top" id="G7r-1d-9fy"/>
-                                <constraint firstItem="Y6t-Bo-Lbw" firstAttribute="leading" secondItem="DKI-nG-0ce" secondAttribute="leading" constant="20" id="KO9-Vr-vvp"/>
-                                <constraint firstAttribute="trailing" secondItem="Y6t-Bo-Lbw" secondAttribute="trailing" constant="20" id="YxT-ZQ-Pvm"/>
+                                <constraint firstItem="Y6t-Bo-Lbw" firstAttribute="leading" secondItem="DKI-nG-0ce" secondAttribute="leading" constant="30" id="KO9-Vr-vvp"/>
+                                <constraint firstAttribute="trailing" secondItem="Y6t-Bo-Lbw" secondAttribute="trailing" constant="30" id="YxT-ZQ-Pvm"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbU-zD-YKq" userLabel="TextBot">
-                            <rect key="frame" x="0.0" y="121.5" width="375" height="122"/>
+                            <rect key="frame" x="0.0" y="197.5" width="320" height="167.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd1-LJ-ffb">
-                                    <rect key="frame" x="20" y="0.0" width="335" height="122"/>
-                                    <string key="text">Label
-Label
-Label
-Label</string>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd1-LJ-ffb">
+                                    <rect key="frame" x="30" y="0.0" width="260" height="21"/>
                                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -70,18 +61,14 @@ Label</string>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="fd1-LJ-ffb" firstAttribute="top" secondItem="nbU-zD-YKq" secondAttribute="top" id="JXU-Cv-JUk"/>
-                                <constraint firstAttribute="trailing" secondItem="fd1-LJ-ffb" secondAttribute="trailing" constant="20" id="cTC-2X-R56"/>
-                                <constraint firstAttribute="bottom" secondItem="fd1-LJ-ffb" secondAttribute="bottom" id="pEE-dU-fAO"/>
-                                <constraint firstItem="fd1-LJ-ffb" firstAttribute="leading" secondItem="nbU-zD-YKq" secondAttribute="leading" constant="20" id="uLq-qM-0dG"/>
+                                <constraint firstAttribute="trailing" secondItem="fd1-LJ-ffb" secondAttribute="trailing" constant="30" id="cTC-2X-R56"/>
+                                <constraint firstItem="fd1-LJ-ffb" firstAttribute="leading" secondItem="nbU-zD-YKq" secondAttribute="leading" constant="30" id="uLq-qM-0dG"/>
                             </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Te0-jX-Q9R" userLabel="SpacingView">
-                            <rect key="frame" x="0.0" y="243.5" width="375" height="121.5"/>
                         </view>
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5n-vV-Ja2" userLabel="BottomButtonView">
-                    <rect key="frame" x="0.0" y="365" width="375" height="60"/>
+                    <rect key="frame" x="0.0" y="365" width="320" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="ur3-fa-YhT"/>
                     </constraints>
@@ -98,7 +85,7 @@ Label</string>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="140" y="248.72563718140933"/>
+            <point key="canvasLocation" x="88.125" y="247.71126760563379"/>
         </view>
     </objects>
 </document>
