@@ -125,10 +125,6 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         }).resume()
     }
     
-    func getFoodItems(json : JSON) {
-        
-    }
-    
     func checkType(type:String) -> RecommendedLevel{
         if(type.contains("Dairy")){
             return RecommendedLevel.Bad
@@ -178,25 +174,6 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         return RecommendedLevel.Good
     }
     
-    func isFoodGood(food : Food) -> RecommendedLevel{
-        if food.SatFats>1{
-            return RecommendedLevel.Bad
-        }
-        for str in food.Categories.split(separator: ","){
-            if checkType(type: String(str)) == RecommendedLevel.Bad{
-                return RecommendedLevel.Bad
-            }
-        }
-        
-        for ingredient in Food.nonVeganPhrases{
-            if(food.Ingredients.contains(ingredient)){
-                return RecommendedLevel.Bad
-            }
-        }
-        
-        return RecommendedLevel.Good
-    }
-    
     
     override func reload(){
         tableView.reloadData()
@@ -218,7 +195,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         
         cell.nameLabel.text = food.Name
         cell.descriptionLabel.text = food.Id
-        cell.setRecommendedStatus(isGood: isFoodGood(food: food))
+        cell.setRecommendedStatus(isGood: food.isFoodGood(food: food))
         
         return cell
     }
@@ -232,8 +209,11 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         let food = foodItemsArray[indexPath.row]
         var badingredients = [""]
         var badTypes = [""]
-        if isFoodGood(food: food)==RecommendedLevel.Good{
+        if food.isFoodGood(food: food)==RecommendedLevel.Good{
             parentVC.pushSubView(newSubView: FoodSelectedSVC(ingredients:[""], types:[""]))
+        }
+        else if food.isFoodGood(food: food) == RecommendedLevel.Caution{
+            parentVC.pushSubView(newSubView: FoodSelectedSVC(unknown: true))
         }
         else{
             
@@ -241,6 +221,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
                 for phrases in nonVeganPhrases{
                     if String(str).lowercased().contains(phrases){
                         badingredients.append(String(str))
+                        break;
                     }
                 }
             }
@@ -249,6 +230,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
                     badTypes.append(String(str))
                 }
             }
+            
             parentVC.pushSubView(newSubView: FoodSelectedSVC(ingredients:badingredients, types:badTypes))
         }
     }

@@ -17,12 +17,22 @@ class Food {
     var SatFats: Int
     var Ingredients: String
     
-    init(id: String, name: String?, categories:String?, satfats: Int?, ingredients:String?) {
-        self.Id = id
-        self.Name = name ?? ""
-        self.Categories = categories ?? ""
-        self.SatFats = satfats ?? 0
-        self.Ingredients = ingredients ?? ""
+    init() {
+        Id = ""
+        Name = ""
+        Categories = ""
+        SatFats = 0
+        Ingredients = ""
+    }
+    
+    convenience init(id: String, name: String?, categories:String?, satfats: Int?, ingredients:String?) {
+        self.init()
+        
+        Id = id
+        Name = name ?? ""
+        Categories = categories ?? ""
+        SatFats = satfats ?? 0
+        Ingredients = ingredients ?? ""
     }
 
     func checkType(type:String) -> RecommendedLevel{
@@ -94,7 +104,103 @@ class Food {
             }
         }
         
+        if food.Ingredients.count < 1 && food.Categories.count < 1{
+         return RecommendedLevel.Caution
+        }
         return RecommendedLevel.Good
+    }
+    
+    func getFoodFromID(id: String, parentVC:SlidingStackVC)->Void{
+        let barcodeSearch = "https://world.openfoodfacts.org/api/v0/product/"+id+".json"
+        var foodinfo: Food = Food(id: "",name: "",categories: "",satfats: 0,ingredients: "")
+        //let barcodeSearch = "https://world.openfoodfacts.org/api/v0/product/3181232127608.json"
+        let eurl = barcodeSearch.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let url = NSURL(string: eurl ?? "")
+        
+        //fetching the data from the url
+        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
+            
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                
+                //printing the json in console
+                //print(jsonObj!.value(forKey: "products")!)
+                
+                //converting the element to a dictionary
+                if let foodDict = jsonObj!.value(forKey: "product") as? NSDictionary {
+                    let satfat : Int = 0;
+                    var categories : String = ""
+                    var id : String = ""
+                    var ingrdientsList = ""
+                    
+                    if let types = foodDict.value(forKey: "categories") {
+                        categories=types as! String;
+                    }
+                    if let types = foodDict.value(forKey: "ingredients_text") {
+                        ingrdientsList=types as! String;
+                    }
+                    if let ID = foodDict.value(forKey: "_id") {
+                        id=ID as! String;
+                    }
+                    //not sure how to get this
+                    //                            if let nutrientArray = foodDict.value(forKey: "nutriments") as! NSArray{
+                    //                                for nutrient in nutrientArray{
+                    //                                    if let nutrientDict = nutrient as? NSDictionary {
+                    //                                        if let sf = nutrientDict.value(forKey: "saturated-fat_serving") {
+                    //                                        satfat = sf as! Int
+                    //                                            print(sf);
+                    //                                        }
+                    //                                    }
+                    //                                }
+                    //                            }
+                    //getting the name from the dictionary
+                    if let name = foodDict.value(forKey: "product_name") {
+                        let fooditem = Food(id:id,name:(name as! String), categories: categories, satfats: satfat, ingredients: ingrdientsList)
+                        //print(name as! String + ": " + categories + "\n")
+                        //adding the name to the array
+                        foodinfo = fooditem
+                        
+                    }
+                    
+                }
+                OperationQueue.main.addOperation({
+                    //calling another function after fetching the json
+                    // push unknown if we're unbale to get any info from the barcode
+                    if foodinfo.Ingredients.count<1 && foodinfo.Categories.count<1{
+                        parentVC.pushSubView(newSubView: FoodSelectedSVC(unknown: true))
+                    }
+                        
+                    else if(foodinfo.isFoodGood(food: foodinfo)==RecommendedLevel.Good){
+                        parentVC.pushSubView(newSubView: FoodSelectedSVC(ingredients:[""], types:[""]))
+                    }
+                    else if(foodinfo.isFoodGood(food: foodinfo)==RecommendedLevel.Bad){
+                        var badingredients = [""]
+                        var badTypes = [""]
+                        for str in foodinfo.Ingredients.components(separatedBy: ","){
+                            for phrases in foodinfo.getVeganPhrases(){
+                                if String(str).lowercased().contains(phrases){
+                                    badingredients.append(String(str))
+                                    break;
+                                }
+                            }
+                        }
+                        for str in foodinfo.Categories.components(separatedBy: ","){
+                            if foodinfo.checkType(type: String(str)) == RecommendedLevel.Bad{
+                                badTypes.append(String(str))
+                            }
+                        }
+                        parentVC.pushSubView(newSubView: FoodSelectedSVC(ingredients:badingredients, types:badTypes))
+                    }
+                        // push unknown if we don't get either good or bad back from the call
+                    else
+                    {
+                        parentVC.pushSubView(newSubView: FoodSelectedSVC(unknown: true))
+                    }
+                    parentVC.reload()
+                })
+                
+            }
+        }).resume()
+        
     }
     
     static var nonVeganPhrases :[String] = [
