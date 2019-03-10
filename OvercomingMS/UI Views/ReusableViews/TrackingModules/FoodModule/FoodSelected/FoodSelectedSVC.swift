@@ -16,15 +16,19 @@ class FoodSelectedSVC : SlidingAbstractSVC {
             return "FoodSelectedSVC"
         }
     }
+    var food: Food? = nil
     
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var foodDescriptionLabel: UILabel!
     @IBOutlet weak var approveDisaproveView: UIView!
     @IBOutlet weak var backButton: SquareButtonSVC!
     
+    
+    
     convenience init(food:Food, unknown: Bool) {
         self.init()
         
+        self.food = food
         if (unknown) {
             constrainView(view: FoodUnknownSVC())
         }
@@ -38,6 +42,7 @@ class FoodSelectedSVC : SlidingAbstractSVC {
     convenience init(food: Food, ingredients: [String], types: [String]){
         self.init()
         
+        self.food = food
         //initialize
         if(ingredients == [""] && types == [""]){
             constrainView(view: FoodUnknownSVC())
@@ -68,6 +73,12 @@ class FoodSelectedSVC : SlidingAbstractSVC {
         foodNameLabel.text = name
         foodDescriptionLabel.text = description
     }
+    
+//    func learnMoreButtonPressed() {
+//        let popupvc = PTPopupWebViewController()
+//        popupvc.popupView.URL(string: "https://world.openfoodfacts.org/product/"+food.Id)
+//        popupvc.show()
+//    }
     
     override func customSetup() {
         backButton.backButtonAction = backButtonPressed
