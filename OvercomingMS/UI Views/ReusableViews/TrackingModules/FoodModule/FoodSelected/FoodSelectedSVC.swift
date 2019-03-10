@@ -22,7 +22,7 @@ class FoodSelectedSVC : SlidingAbstractSVC {
     @IBOutlet weak var approveDisaproveView: UIView!
     @IBOutlet weak var backButton: SquareButtonSVC!
     
-    convenience init(unknown: Bool) {
+    convenience init(food:Food, unknown: Bool) {
         self.init()
         
         if (unknown) {
@@ -32,16 +32,15 @@ class FoodSelectedSVC : SlidingAbstractSVC {
             constrainView(view: FoodApprovedSVC())
         }
 
-        setLabel(name: "Test", description: "Test")
+        setLabel(name: food.Name, description: food.Brand)
     }
     
-    //change stuff to what you want to pass in when you instantiate the class with FoodSelected
-    convenience init(ingredients: [String], types: [String]){
+    convenience init(food: Food, ingredients: [String], types: [String]){
         self.init()
         
         //initialize
-        if(ingredients == [""]){
-            constrainView(view: FoodApprovedSVC())
+        if(ingredients == [""] && types == [""]){
+            constrainView(view: FoodUnknownSVC())
         }
         else{
             print(ingredients)
@@ -50,9 +49,8 @@ class FoodSelectedSVC : SlidingAbstractSVC {
             constrainView(view: FoodRejectedSVC(_badLabels: allBadStuff))
         }
         
-        setLabel(name: "Test", description: "Test")
+        setLabel(name: food.Name, description: food.Brand)
     }
-    
     private func constrainView(view: UIView){
         
         approveDisaproveView.addSubview(view)
