@@ -17,7 +17,7 @@
                 <outlet property="bottomSubLabel" destination="xPW-dt-pzN" id="n5g-eK-Y06"/>
                 <outlet property="buttonStackView" destination="f3w-FE-AYF" id="71p-5U-QgJ"/>
                 <outlet property="labelsStackView" destination="sZR-ez-QdZ" id="DEo-6V-HKX"/>
-                <outlet property="middleFrequencyLabel" destination="LFO-Jx-CFN" id="fuO-31-Svw"/>
+                <outlet property="middleFrequencyLabel" destination="aza-JM-VnD" id="BSJ-Td-lKz"/>
                 <outlet property="middleMainLabel" destination="a3p-uX-IVT" id="RNV-fB-2pE"/>
                 <outlet property="middleSubLabel" destination="1TB-Fu-tKo" id="YbD-OL-jx9"/>
                 <outlet property="topMainLabel" destination="TrO-Lk-5Ho" id="6sk-Nf-IgR"/>
@@ -99,7 +99,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="280" height="55"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TB-Fu-tKo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="23.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="17.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Label">
                                                             <attributes>
@@ -112,7 +112,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3p-uX-IVT">
-                                                    <rect key="frame" x="0.0" y="23.5" width="280" height="31.5"/>
+                                                    <rect key="frame" x="0.0" y="17.5" width="280" height="23"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Label">
                                                             <attributes>
@@ -124,10 +124,10 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFO-Jx-CFN" userLabel="Middle Frequency Label">
-                                                    <rect key="frame" x="0.0" y="55" width="280" height="0.0"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
-                                                    <color key="textColor" white="0.65041738013698636" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aza-JM-VnD">
+                                                    <rect key="frame" x="0.0" y="40.5" width="280" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
