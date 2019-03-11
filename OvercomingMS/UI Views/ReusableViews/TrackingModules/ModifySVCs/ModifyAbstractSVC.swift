@@ -17,18 +17,21 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
         }
     }
 
+    @IBOutlet weak var topPaddingConstraint: NSLayoutConstraint!
     @IBOutlet weak var topLabelViewHeight: NSLayoutConstraint!
     @IBOutlet weak var textInputStackBottom: NSLayoutConstraint!
     @IBOutlet weak var textInputStackView: UIStackView!
     @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
     var originalBottomConstraint: CGFloat!
     var originalTopLabelContraint: CGFloat!
+    var originalTopPaddingContraint: CGFloat!
     
     override func initialize(parentVC: SlidingStackVC) {
         super.initialize(parentVC: parentVC)
         
         originalBottomConstraint = textInputStackBottom.constant
         originalTopLabelContraint = topLabelViewHeight.constant
+        originalTopPaddingContraint = topPaddingConstraint.constant
         
         for view in textInputStackView.arrangedSubviews {
             if let tfiView = view as? TFIAbstract {
@@ -68,8 +71,9 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     
     func OnTFIOpened(tfi: TFIAbstract, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions, keyboardHeight: CGFloat) {
 
+        self.topPaddingConstraint.constant = 0
         self.topLabelViewHeight.constant = 0
-        self.textInputStackBottom.constant = originalBottomConstraint + keyboardHeight - self.backConfirmButtons.bounds.height
+        self.textInputStackBottom.constant = keyboardHeight - self.backConfirmButtons.bounds.height
         self.hideOtherStackViews(tfi)
         self.layoutIfNeeded()
         
@@ -77,6 +81,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     
     func OnTFIClosed(tfi: TFIAbstract, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions, keyboardHeight: CGFloat) {
         
+        self.topPaddingConstraint.constant = originalTopPaddingContraint
         self.topLabelViewHeight.constant = originalTopLabelContraint
         self.textInputStackBottom.constant = originalBottomConstraint
         self.showOtherStackViews(tfi)

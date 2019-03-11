@@ -16,6 +16,7 @@
                 <outlet property="textInputStackBottom" destination="Kcu-Cw-fPX" id="Tc9-EV-OjJ"/>
                 <outlet property="textInputStackView" destination="pwm-Jx-CmD" id="gwo-A7-2I4"/>
                 <outlet property="topLabelViewHeight" destination="abu-D5-vW4" id="0oc-xw-a2m"/>
+                <outlet property="topPaddingConstraint" destination="jH9-xR-acI" id="TWj-v8-vii"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
