@@ -148,9 +148,9 @@ class RoundedBoxShadowsTemplate: OMSRoundedBox {
     func setup(){
         cornerRadius = 15
         shadowColor = UIColor.black
-        shadowOffset = CGSize(width: 3, height: 3)
-        shadowRadius = 1
-        shadowOpacity = 0.3
+        shadowOffset = CGSize(width: 2, height: 2)
+        shadowRadius = 3
+        shadowOpacity = 0.18
     }
     
 }

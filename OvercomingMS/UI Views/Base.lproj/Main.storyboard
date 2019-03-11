@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Aa-cs-GRV" userLabel="MainView">
-                                <rect key="frame" x="0.0" y="20" width="320" height="448"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="440"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DWO-Z2-Tem">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="448"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcW-NB-qsi" customClass="HeaderSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
@@ -128,19 +128,19 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x1-2z-34U" userLabel="TrackingView">
-                                                <rect key="frame" x="0.0" y="125" width="320" height="323"/>
+                                                <rect key="frame" x="0.0" y="125" width="320" height="315"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uG2-RS-f9c">
-                                                        <rect key="frame" x="20" y="0.0" width="280" height="320"/>
+                                                        <rect key="frame" x="20" y="0.0" width="280" height="315"/>
                                                         <subviews>
                                                             <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-EL-iHN" customClass="TrackingFoodBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Food"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IO1-W9-0dD" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="55" width="280" height="45"/>
+                                                                <rect key="frame" x="0.0" y="54" width="280" height="44.5"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.0078431372550000003" green="0.63529411759999999" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -149,7 +149,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-va-Kq1" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="110" width="280" height="45"/>
+                                                                <rect key="frame" x="0.0" y="108.5" width="280" height="44"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="1" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -158,7 +158,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYS-8V-zpv" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="165" width="280" height="45"/>
+                                                                <rect key="frame" x="0.0" y="162.5" width="280" height="44"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Exercise"/>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
@@ -167,7 +167,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQQ-l4-VC0" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="220" width="280" height="45"/>
+                                                                <rect key="frame" x="0.0" y="216.5" width="280" height="44.5"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.40000000000000002" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -176,7 +176,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-CW-Z5M" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="275" width="280" height="45"/>
+                                                                <rect key="frame" x="0.0" y="271" width="280" height="44"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.46274509800000002" green="0.67843137249999996" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -191,7 +191,7 @@
                                                 <constraints>
                                                     <constraint firstItem="uG2-RS-f9c" firstAttribute="top" secondItem="2x1-2z-34U" secondAttribute="top" id="JFf-GS-IyB"/>
                                                     <constraint firstItem="uG2-RS-f9c" firstAttribute="leading" secondItem="2x1-2z-34U" secondAttribute="leading" constant="20" id="RpW-Bk-gwf"/>
-                                                    <constraint firstAttribute="bottom" secondItem="uG2-RS-f9c" secondAttribute="bottom" constant="3" id="fPg-60-5Qy"/>
+                                                    <constraint firstAttribute="bottom" secondItem="uG2-RS-f9c" secondAttribute="bottom" id="fPg-60-5Qy"/>
                                                     <constraint firstAttribute="trailing" secondItem="uG2-RS-f9c" secondAttribute="trailing" constant="20" id="xEc-wK-rB3"/>
                                                 </constraints>
                                             </view>
@@ -253,7 +253,7 @@
                             <constraint firstItem="50K-Z7-P6m" firstAttribute="trailing" secondItem="0Aa-cs-GRV" secondAttribute="trailing" id="Ykt-0X-k5d"/>
                             <constraint firstItem="uRf-zh-af2" firstAttribute="bottom" secondItem="50K-Z7-P6m" secondAttribute="bottom" id="isy-kz-4ys"/>
                             <constraint firstItem="0Aa-cs-GRV" firstAttribute="leading" secondItem="50K-Z7-P6m" secondAttribute="leading" id="kbz-yn-qpw"/>
-                            <constraint firstItem="uRf-zh-af2" firstAttribute="top" secondItem="0Aa-cs-GRV" secondAttribute="bottom" id="zsz-EY-0fW"/>
+                            <constraint firstItem="uRf-zh-af2" firstAttribute="top" secondItem="0Aa-cs-GRV" secondAttribute="bottom" constant="8" symbolic="YES" id="zsz-EY-0fW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="50K-Z7-P6m"/>
                     </view>

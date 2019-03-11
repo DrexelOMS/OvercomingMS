@@ -40,7 +40,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="210" height="50"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-tc-HaU">
-                                            <rect key="frame" x="0.0" y="6.5" width="210" height="37"/>
+                                            <rect key="frame" x="0.0" y="7.5" width="210" height="35"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-Bv-8c1">
                                                     <rect key="frame" x="0.0" y="0.0" width="210" height="23.5"/>
@@ -56,17 +56,29 @@
                                                                     <attributes>
                                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                         <font key="NSFont" size="20" name="Quicksand-Bold"/>
-                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="kerning">
+                                                                    <real key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-n8-ccr">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-n8-ccr">
                                                             <rect key="frame" x="125" y="0.0" width="85" height="23.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <nil key="textColor"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.75107020547945202" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="14" name="Avenir-Medium"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -80,7 +92,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1G-Wh-S9S" userLabel="BottomProgressBar" customClass="LinearProgressBar" customModule="LinearProgressBar">
-                                                    <rect key="frame" x="0.0" y="25" width="210" height="12"/>
+                                                    <rect key="frame" x="0.0" y="23" width="210" height="12"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="bsM-ea-3P9"/>
@@ -120,12 +132,10 @@
                                     <rect key="frame" x="220" y="0.0" width="40" height="50"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rJ-fM-xng" userLabel="Check">
-                                            <rect key="frame" x="0.0" y="5" width="40" height="40"/>
+                                            <rect key="frame" x="2.5" y="7.5" width="35" height="35"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="A1I-Nk-tDf"/>
-                                                <constraint firstAttribute="width" constant="40" id="Aw9-Pw-D3R"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="MSc-l7-xSs"/>
-                                                <constraint firstAttribute="height" constant="40" id="tdd-CZ-z24"/>
+                                                <constraint firstAttribute="width" constant="35" id="Aw9-Pw-D3R"/>
+                                                <constraint firstAttribute="height" constant="35" id="tdd-CZ-z24"/>
                                             </constraints>
                                             <state key="normal" image="QuickComplete"/>
                                             <connections>
@@ -144,6 +154,8 @@
                         </stackView>
                     </subviews>
                     <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="CQQ-yp-7Hz"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="Lla-FA-L2y"/>
                         <constraint firstAttribute="trailing" secondItem="Qi2-7t-Ch6" secondAttribute="trailing" constant="10" id="i11-uy-Jjb"/>
                         <constraint firstItem="Qi2-7t-Ch6" firstAttribute="leading" secondItem="I5E-v9-Wxp" secondAttribute="leading" constant="10" id="oxK-wm-dSB"/>
                         <constraint firstAttribute="bottom" secondItem="Qi2-7t-Ch6" secondAttribute="bottom" id="syq-hQ-gSh"/>

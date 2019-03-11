@@ -19,15 +19,15 @@ class TrackingModuleAbstractVC: SlidingStackVC {
         let progressView = UIView()
         contentStackView.addArrangedSubview(progressView)
         constrain(progressView) { (view) in
-            view.height == 80.0
+            view.height == 60.0
         }
         
         progressView.addSubview(progressBar)
         
         constrain(progressBar, progressView) { (view, superView) in
-            view.top == superView.top + 10
+            view.top == superView.top - 0
             view.right == superView.right - 20
-            view.bottom == superView.bottom - 10
+            view.bottom == superView.bottom - 20
             view.left == superView.left + 20
         }
         

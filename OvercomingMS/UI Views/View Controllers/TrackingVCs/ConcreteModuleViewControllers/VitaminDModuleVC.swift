@@ -17,7 +17,7 @@ class VitaminDModuleVC: TrackingModuleAbstractVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        progressBar.setTitle(title: "VitaminD")
+        progressBar.setTitle(title: "Vitamin D")
         
         initializeviewStack(defaultView: VitaminDMainSVC())
     }
