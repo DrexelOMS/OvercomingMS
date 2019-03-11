@@ -24,7 +24,9 @@ class TrackingProgressBar: CustomView {
     
     @IBInspectable private var Title: String = "Title" {
         didSet {
+            let kern = leftLabel.kerning
             leftLabel.text = Title
+            leftLabel.kerning = kern
         }
     }
     
