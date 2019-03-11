@@ -213,11 +213,12 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         let food = foodItemsArray[indexPath.row]
         var badingredients = [""]
         var badTypes = [""]
+        print(food.isFoodGood(food: food))
         if food.isFoodGood(food: food)==RecommendedLevel.Good{
-            parentVC.pushSubView(newSubView: FoodSelectedSVC(food:food, ingredients:[""], types:[""]))
+            parentVC.pushSubView(newSubView: FoodSelectedSVC(food: food, unknown: false))
         }
         else if food.isFoodGood(food: food) == RecommendedLevel.Caution{
-            parentVC.pushSubView(newSubView: FoodSelectedSVC(food:food, unknown: true))
+            parentVC.pushSubView(newSubView: FoodSelectedSVC(food: food, unknown: true))
         }
         else{
             

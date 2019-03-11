@@ -24,8 +24,6 @@ class FoodSelectedSVC : SlidingAbstractSVC {
     @IBOutlet weak var approveDisaproveView: UIView!
     @IBOutlet weak var backButton: SquareButtonSVC!
     
-    
-    
     convenience init(food:Food, unknown: Bool) {
         self.init()
         
