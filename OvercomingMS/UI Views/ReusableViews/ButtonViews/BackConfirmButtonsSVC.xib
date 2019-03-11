@@ -67,15 +67,8 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pcY-n6-0Q9">
                                     <rect key="frame" x="26.5" y="22" width="106" height="16"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Confirm" translatesAutoresizingMaskIntoConstraints="NO" id="3cO-P1-lI9">
-                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="16" id="uOx-AE-jgU"/>
-                                                <constraint firstAttribute="width" constant="16" id="wxu-LQ-5Eb"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHG-Ev-efl">
-                                            <rect key="frame" x="31" y="0.0" width="75" height="16"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="16"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Confirm">
                                                     <attributes>
@@ -87,6 +80,13 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Confirm" translatesAutoresizingMaskIntoConstraints="NO" id="3cO-P1-lI9">
+                                            <rect key="frame" x="90" y="0.0" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="uOx-AE-jgU"/>
+                                                <constraint firstAttribute="width" constant="16" id="wxu-LQ-5Eb"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                 </stackView>
                             </subviews>

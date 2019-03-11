@@ -31,12 +31,12 @@ class RoundButton: UIButton {
         
         layer.masksToBounds = false
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-        layer.shadowRadius = 1.0
-        layer.shadowOpacity = 0.3
+        layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        layer.shadowRadius = 3.0
+        layer.shadowOpacity = 0.20
         
-        layer.borderColor = UIColor.gray.cgColor.copy(alpha: 0.5)
-        layer.borderWidth = 1
+        //layer.borderColor = UIColor.gray.cgColor.copy(alpha: 0.5)
+        //layer.borderWidth = 1
     }
 
 }
