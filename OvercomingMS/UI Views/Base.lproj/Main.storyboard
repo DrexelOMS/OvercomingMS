@@ -34,7 +34,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4m-or-7q3" userLabel="DateView">
                                                 <rect key="frame" x="0.0" y="80" width="320" height="45"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LPm-LC-hKP">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPm-LC-hKP">
                                                         <rect key="frame" x="20" y="0.0" width="280" height="45"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQV-r2-tiw" userLabel="LeftButtonView">
@@ -56,10 +56,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzs-21-drx" userLabel="CenterDateView">
-                                                                <rect key="frame" x="55" y="0.0" width="170" height="45"/>
+                                                                <rect key="frame" x="40" y="0.0" width="200" height="45"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1y-Q8-aCF">
-                                                                        <rect key="frame" x="4" y="14.5" width="162.5" height="16.5"/>
+                                                                        <rect key="frame" x="9" y="14.5" width="162.5" height="16.5"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="Today, Month ##, ####">
                                                                                 <attributes>
@@ -71,7 +71,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H33-LW-Fg1" userLabel="DropdownView">
-                                                                        <rect key="frame" x="171.5" y="0.0" width="12" height="45"/>
+                                                                        <rect key="frame" x="176.5" y="0.0" width="12" height="45"/>
                                                                         <subviews>
                                                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5k8-Aq-5FZ">
                                                                                 <rect key="frame" x="1" y="17.5" width="10" height="10"/>
@@ -90,11 +90,11 @@
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="g1y-Q8-aCF" firstAttribute="centerY" secondItem="yzs-21-drx" secondAttribute="centerY" id="0iW-cO-gKD"/>
                                                                     <constraint firstItem="H33-LW-Fg1" firstAttribute="leading" secondItem="g1y-Q8-aCF" secondAttribute="trailing" constant="5" id="Ddk-N5-bAe"/>
+                                                                    <constraint firstItem="g1y-Q8-aCF" firstAttribute="centerY" secondItem="yzs-21-drx" secondAttribute="centerY" id="Flj-De-sMU"/>
+                                                                    <constraint firstItem="g1y-Q8-aCF" firstAttribute="centerX" secondItem="yzs-21-drx" secondAttribute="centerX" constant="-10" id="dIq-DF-uN6"/>
                                                                     <constraint firstItem="H33-LW-Fg1" firstAttribute="top" secondItem="yzs-21-drx" secondAttribute="top" id="eex-gN-R2e"/>
                                                                     <constraint firstAttribute="bottom" secondItem="H33-LW-Fg1" secondAttribute="bottom" id="wud-XE-q4j"/>
-                                                                    <constraint firstItem="g1y-Q8-aCF" firstAttribute="centerX" secondItem="yzs-21-drx" secondAttribute="centerX" id="zBT-fG-A0T"/>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQ9-e7-rdh" userLabel="RightButtonView">

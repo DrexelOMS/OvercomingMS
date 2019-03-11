@@ -60,11 +60,12 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBh-8c-uPQ">
                                     <rect key="frame" x="0.0" y="119" width="280" height="109"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rr9-lX-5Zv">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Exercise" translatesAutoresizingMaskIntoConstraints="NO" id="Rr9-lX-5Zv">
                                             <rect key="frame" x="107.5" y="22" width="65" height="65"/>
                                             <constraints>
+                                                <constraint firstAttribute="width" secondItem="Rr9-lX-5Zv" secondAttribute="height" multiplier="1:1" id="BWW-Vl-NnQ"/>
                                                 <constraint firstAttribute="width" constant="65" id="Tsr-Sf-87p"/>
-                                                <constraint firstAttribute="height" constant="65" id="rcP-To-f2V"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="rcP-To-f2V"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
@@ -140,4 +141,7 @@
             <point key="canvasLocation" x="94.400000000000006" y="251.87406296851577"/>
         </view>
     </objects>
+    <resources>
+        <image name="Exercise" width="689" height="689"/>
+    </resources>
 </document>
