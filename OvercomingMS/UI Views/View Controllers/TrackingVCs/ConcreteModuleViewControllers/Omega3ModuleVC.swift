@@ -12,19 +12,24 @@ import RealmSwift
 class Omega3ModuleVC: TrackingModuleAbstractVC {
     
     private let omega3History = Omega3HistoryDBS()
+    let progressBar = Omega3ProgressBar()
+    
+    override func getProgressBar() -> TrackingProgressBar {
+        return progressBar
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         progressBar.setTitle(title: "Omega3")
+        progressBar.toggleCheckMarkVisibility(isHidden: true)
         
         initializeviewStack(defaultView: Omega3MainSVC())
     }
     
     override func reload() {
-        progressBar.setProgressValue(value: omega3History.getPercentageComplete())
-        progressBar.setDescription(amountRemaining: ProgressBarConfig.omega3Goal - omega3History.getTotalGrams(), uom: ProgressBarConfig.omega3UOM)
+        progressBar.updateProgress()
     }
     
 }

@@ -13,14 +13,14 @@ class TrackingModuleAbstractVC: SlidingStackVC {
     
     //MARK: Attributes
     
-    var progressBar: TrackingProgressBar = TrackingModuleProgressBar()
-    
     override func addViewsBeforeMain() {
         let progressView = UIView()
         contentStackView.addArrangedSubview(progressView)
         constrain(progressView) { (view) in
             view.height == 60.0
         }
+        
+        let progressBar = getProgressBar()
         
         progressView.addSubview(progressBar)
         
@@ -32,6 +32,10 @@ class TrackingModuleAbstractVC: SlidingStackVC {
         }
         
         progressBar.colorTheme = theme
+    }
+    
+    func getProgressBar() -> TrackingProgressBar {
+        return TrackingProgressBar()
     }
     
 }

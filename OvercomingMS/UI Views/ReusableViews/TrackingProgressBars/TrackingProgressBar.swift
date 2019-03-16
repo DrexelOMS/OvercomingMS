@@ -15,8 +15,12 @@ protocol TrackingProgressBarDelegate : class {
     func didPressLeftContainer(_ sender: TrackingProgressBar)
 }
 
+protocol IUpdateProgressBar: class {
+    func updateProgress()
+}
+
 @IBDesignable
-class TrackingProgressBar: CustomView {
+class TrackingProgressBar: CustomView{
     
     override var nibName: String { return "TrackingProgressBar" }
     
@@ -82,6 +86,8 @@ class TrackingProgressBar: CustomView {
         
     }
     
+    
+    //TODO: Remove
     func setDescription(amountRemaining: Int, uom: String){
         var description = ""
         if(amountRemaining <= 0){
@@ -124,6 +130,17 @@ class TrackingProgressBar: CustomView {
     func getTitle() -> String
     {
         return Title
+    }
+    
+    func toggleCheckMarkVisibility(isHidden: Bool) {
+        self.rightContainerView.isHidden = isHidden
+        if isHidden {
+            shadowedRoundedView.shadowOpacity = 0
+            
+            originalBackground = UIColor(rgb: 0xF8F8F8)
+            shadowedRoundedView.backgroundColor = originalBackground
+            roundedView.backgroundColor = originalBackground
+        }
     }
     
     @objc private func leftContainerPressed(tapGestureRecognizer: UITapGestureRecognizer){

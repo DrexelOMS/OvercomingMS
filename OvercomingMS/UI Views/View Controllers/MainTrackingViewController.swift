@@ -27,11 +27,11 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     @IBOutlet weak var header: HeaderSVC!
     @IBOutlet weak var dateLog: UILabel!
     @IBOutlet weak var foodBar: TrackingFoodBar!
-    @IBOutlet weak var omega3Bar: TrackingProgressBar!
-    @IBOutlet weak var vitaminDBar: TrackingProgressBar!
-    @IBOutlet weak var exerciseBar: TrackingProgressBar!
-    @IBOutlet weak var meditationBar: TrackingProgressBar!
-    @IBOutlet weak var medicationBar: TrackingProgressBar!
+    @IBOutlet weak var omega3Bar: Omega3ProgressBar!
+    @IBOutlet weak var vitaminDBar: VitaminDProgressBar!
+    @IBOutlet weak var exerciseBar: ExerciseProgressBar!
+    @IBOutlet weak var meditationBar: MeditationProgressBar!
+    @IBOutlet weak var medicationBar: MedicationProgressBar!
     
     @IBOutlet weak var previousButton: UIView!
     @IBOutlet weak var nextDay: UIView!
@@ -147,16 +147,11 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         //TODO make a way to get the proper description for each
         //FoodEatenRating is 1 - 5
         foodBar.setRightLabel(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
-        omega3Bar.setProgressValue(value: currentTrackingDay.Omega3ComputedPercentageComplete)
-        omega3Bar.setDescription(amountRemaining: ProgressBarConfig.omega3Goal - Omega3HistoryDBS().getTotalGrams(), uom: ProgressBarConfig.omega3UOM)
-        vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDComputedPercentageComplete)
-        vitaminDBar.setDescription(amountRemaining: ProgressBarConfig.vitaminDGoal - VitaminDHistoryDBS().getTotalAmount(), uom: ProgressBarConfig.vitaminDUOM)
-        exerciseBar.setProgressValue(value: currentTrackingDay.ExerciseComputedPercentageComplete)
-        exerciseBar.setDescription(amountRemaining: ProgressBarConfig.exerciseGoal - ExerciseHistoryDBS().getTotalMinutes(), uom: ProgressBarConfig.lengthUOM)
-        meditationBar.setProgressValue(value: currentTrackingDay.MeditationComputedPercentageComplete)
-        meditationBar.setDescription(amountRemaining: ProgressBarConfig.meditationGoal - MeditationHistoryDBS().getTotalMinutes(), uom: ProgressBarConfig.lengthUOM)
-        medicationBar.setProgressValue(value: currentTrackingDay.MedicationComputedPercentageComplete)
-        medicationBar.setDescription(amountRemaining: SavedMedicationDBS().getTodaysTotalMedGoal() - SavedMedicationDBS().getTrackingDay()!.MedicationTotal, uom: "meds")
+        omega3Bar.updateProgress()
+        vitaminDBar.updateProgress()
+        exerciseBar.updateProgress()
+        meditationBar.updateProgress()
+        medicationBar.updateProgress()
     }
     
     //MARK: Delegates

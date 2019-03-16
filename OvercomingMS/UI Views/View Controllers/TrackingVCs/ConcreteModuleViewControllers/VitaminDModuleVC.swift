@@ -12,19 +12,24 @@ import RealmSwift
 class VitaminDModuleVC: TrackingModuleAbstractVC {
     
     private let vitaminDHistory = VitaminDHistoryDBS()
+    private let progressBar = VitaminDProgressBar()
+    
+    override func getProgressBar() -> TrackingProgressBar {
+        return progressBar
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         progressBar.setTitle(title: "Vitamin D")
+        progressBar.toggleCheckMarkVisibility(isHidden: true)
         
         initializeviewStack(defaultView: VitaminDMainSVC())
     }
     
     override func reload() {
-        progressBar.setProgressValue(value: vitaminDHistory.getPercentageComplete())
-        progressBar.setDescription(amountRemaining: ProgressBarConfig.vitaminDGoal - vitaminDHistory.getTotalAmount(), uom: ProgressBarConfig.vitaminDUOM)
+        progressBar.updateProgress()
     }
 
 }

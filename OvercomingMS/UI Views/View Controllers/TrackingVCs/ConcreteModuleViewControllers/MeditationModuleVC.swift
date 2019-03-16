@@ -12,19 +12,24 @@ import RealmSwift
 class MeditationModuleVC: TrackingModuleAbstractVC {
     
     private let meditationHistory = MeditationHistoryDBS()
+    private let progressBar = MeditationProgressBar()
+    
+    override func getProgressBar() -> TrackingProgressBar {
+        return progressBar
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         progressBar.setTitle(title: "Meditation")
+        progressBar.toggleCheckMarkVisibility(isHidden: true)
         
         initializeviewStack(defaultView: MeditationMainSVC())
     }
     
     override func reload() {
-        progressBar.setProgressValue(value: meditationHistory.getPercentageComplete())
-        progressBar.setDescription(amountRemaining: ProgressBarConfig.meditationGoal - meditationHistory.getTotalMinutes(), uom: ProgressBarConfig.lengthUOM)
+        progressBar.updateProgress()
     }
 
 }

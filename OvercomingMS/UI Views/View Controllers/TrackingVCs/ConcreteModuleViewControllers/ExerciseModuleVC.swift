@@ -12,19 +12,24 @@ import RealmSwift
 class ExerciseModuleVC: TrackingModuleAbstractVC {
     
     private let exerciseHistory = ExerciseHistoryDBS()
+    private let progressBar = ExerciseProgressBar()
+    
+    override func getProgressBar() -> TrackingProgressBar {
+        return progressBar
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         progressBar.setTitle(title: "Exercise")
+        progressBar.toggleCheckMarkVisibility(isHidden: true)
         
         initializeviewStack(defaultView: ExerciseMainSVC())
     }
     
     override func reload() {
-        progressBar.setProgressValue(value: exerciseHistory.getPercentageComplete())
-        progressBar.setDescription(amountRemaining: ProgressBarConfig.exerciseGoal - exerciseHistory.getTotalMinutes(), uom: ProgressBarConfig.lengthUOM)
+        progressBar.updateProgress()
     }
 
 }
