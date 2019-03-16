@@ -9,6 +9,14 @@
 import Foundation
 import RealmSwift
 
+enum Modules {
+    case Omega3,
+    VitaminD,
+    Exercise,
+    Meditation,
+    Medication
+}
+
 class TrackingModulesDBS{
     
     let realm = try! Realm()
@@ -16,6 +24,11 @@ class TrackingModulesDBS{
     
     func getTrackingDay(date: String = globalCurrentDate) -> TrackingDayDBT? {
         return realm.object(ofType: TrackingDayDBT.self, forPrimaryKey: date)
+    }
+    
+    func notify(module: Modules) {
+        //NotificationCenter.default.post(name: .didCompleteModule, object: module, userInfo: ["Module": module])
+        NotificationCenter.default.post(name: .didCompleteModule, object: module)
     }
     
 }

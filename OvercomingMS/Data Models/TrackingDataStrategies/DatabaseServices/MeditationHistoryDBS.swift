@@ -12,6 +12,7 @@ import RealmSwift
 class MeditationHistoryDBS: TrackingModulesDBS {
     
     func toggleFilledData() {
+        let percent = getPercentageComplete()
         let date = globalCurrentDate
         do {
             try realm.write() {
@@ -22,11 +23,13 @@ class MeditationHistoryDBS: TrackingModulesDBS {
         } catch {
             print("Error updating todays data : \(error)" )
         }
-        
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Meditation)
+        }
     }
     
     func addMeditationItem(routineType: String, startTime: Date, endTime: Date) {
-        
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                 if let day = getTrackingDay(date: globalCurrentDate) {
@@ -40,7 +43,9 @@ class MeditationHistoryDBS: TrackingModulesDBS {
         } catch {
             print("Error updating Meditation data : \(error)" )
         }
-        
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Meditation)
+        }
     }
     
     func getTodaysMeditationItems() -> List<MeditationHistoryDBT>? {
@@ -66,6 +71,7 @@ class MeditationHistoryDBS: TrackingModulesDBS {
     }
     
     func updateExerciseItem(oldItem: MeditationHistoryDBT, newItem: MeditationHistoryDBT) {
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                 oldItem.MeditationType = newItem.MeditationType
@@ -74,6 +80,9 @@ class MeditationHistoryDBS: TrackingModulesDBS {
             }
         } catch {
             print("Error update Meditation data: \(error)")
+        }
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Meditation)
         }
     }
     

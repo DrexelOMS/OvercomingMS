@@ -61,15 +61,47 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     @objc func onDidCompleteModule(_ notification:Notification) {
         let sender = notification.object
         // We only want to process notifications when sent by the object of type AuthorizedUser
-        if let trackingModule = sender as? TrackingProgressBar {
-            header.displayTrackingMessage(colorTheme: trackingModule.colorTheme, message: "You Completed \(trackingModule.getTitle()). Great work!")
+        if let trackingModule = sender as? Modules {
+            var name = ""
+            var color = UIColor.black
+            
+            switch trackingModule {
+            case .Omega3:
+                name = "Omega 3"
+                color = omega3Bar.colorTheme
+            case .VitaminD:
+                name = "Vitamin D"
+                color = vitaminDBar.colorTheme
+                break;
+            case .Exercise:
+                name = "Exercise"
+                color = exerciseBar.colorTheme
+                break
+            case .Meditation:
+                name = "Meditation"
+                color = meditationBar.colorTheme
+            case .Medication:
+                name = "Medication"
+                color = medicationBar.colorTheme
+            default:
+                break;
+            }
+            let message = "You Completed \(name). Great Work!"
+            header.displayTrackingMessage(colorTheme: color, message: message)
         }
         
 //        // userInfo is the payload send by sender of notification
-//        if let userInfo = not.userInfo {
+//        if let userInfo = notification.userInfo {
 //            // Safely unwrap the name sent out by the notification sender
-//            if let userName = userInfo["name"] as? String {
-//                print(userName)
+//            if let userName = userInfo["Module"] as? String {
+//                let message = "You Completed \(userName). Great Work!"
+//                switch userName {
+//                case "VitaminD":
+//                    header.displayTrackingMessage(colorTheme: vitaminDBar.colorTheme, message: message)
+//                    break;
+//                default:
+//                    break;
+//                }
 //            }
 //        }
 

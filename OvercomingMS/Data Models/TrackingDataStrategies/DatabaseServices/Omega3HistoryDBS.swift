@@ -12,6 +12,7 @@ import RealmSwift
 class Omega3HistoryDBS: TrackingModulesDBS {
     
     func toggleFilledData() {
+        let percent = getPercentageComplete()
         let date = globalCurrentDate
         do {
             try realm.write() {
@@ -22,11 +23,13 @@ class Omega3HistoryDBS: TrackingModulesDBS {
         } catch {
             print("Error updating todays data : \(error)" )
         }
-        
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Omega3)
+        }
     }
     
     func addOmega3Item(supplementName: String, StartTime: Date, Amount: Int) {
-        
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                 if let day = getTrackingDay(date: globalCurrentDate) {
@@ -40,7 +43,9 @@ class Omega3HistoryDBS: TrackingModulesDBS {
         } catch {
             print("Error updating Omega3 data : \(error)" )
         }
-        
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Omega3)
+        }
     }
     
     func getTodaysOmega3Items() -> List<Omega3HistoryDBT>? {
@@ -66,6 +71,7 @@ class Omega3HistoryDBS: TrackingModulesDBS {
     }
     
     func updateOmega3Item(oldItem: Omega3HistoryDBT, newItem: Omega3HistoryDBT) {
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                 oldItem.supplementName = newItem.supplementName
@@ -74,6 +80,9 @@ class Omega3HistoryDBS: TrackingModulesDBS {
             }
         } catch {
             print("Error update Omega3 data: \(error)")
+        }
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Omega3)
         }
     }
     

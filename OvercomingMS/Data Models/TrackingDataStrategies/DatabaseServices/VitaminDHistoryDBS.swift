@@ -12,6 +12,7 @@ import RealmSwift
 class VitaminDHistoryDBS: TrackingModulesDBS {
     
     func toggleFilledData() {
+        let percent = getPercentageComplete()
         let date = globalCurrentDate
         do {
             try realm.write() {
@@ -22,11 +23,13 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
         } catch {
             print("Error updating todays data : \(error)" )
         }
-        
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .VitaminD)
+        }
     }
     
     func addVitaminDItem(vitaminDType: String, startTime: Date, vitaminDAmount: Int) {
-        
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                 if let day = getTrackingDay(date: globalCurrentDate) {
@@ -40,7 +43,9 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
         } catch {
             print("Error updating Vitamin D data : \(error)" )
         }
-        
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .VitaminD)
+        }
     }
     
     func getTodaysVitaminDItems() -> List<VitaminDHistoryDBT>? {
@@ -66,6 +71,7 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
     }
     
     func updateVitaminDItem(oldItem: VitaminDHistoryDBT, newItem: VitaminDHistoryDBT) {
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                 oldItem.VitaminDType = newItem.VitaminDType
@@ -74,6 +80,9 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
             }
         } catch {
             print("Error update Vitamin D data: \(error)")
+        }
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .VitaminD)
         }
     }
     

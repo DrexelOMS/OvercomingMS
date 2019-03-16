@@ -78,9 +78,6 @@ class TrackingProgressBar: CustomView{
     }
     
     func setProgressValue(value : Int){
-        if linearProgressBar.progressValue < 100 && value >= 100 {
-            NotificationCenter.default.post(name: .didCompleteModule, object: self, userInfo: ["colorTheme": colorTheme])
-        }
         linearProgressBar.progressValue = CGFloat(value);
         setColorMode(completed: linearProgressBar.progressValue >= 100)
         
