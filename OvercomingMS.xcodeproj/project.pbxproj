@@ -737,6 +737,7 @@
 		0AA5284A2202188500CCFEE7 /* TrackingProgressBars */ = {
 			isa = PBXGroup;
 			children = (
+				0AB66E4F223D649F00DF6B67 /* ConcreteProgressBars */,
 				0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */,
 				0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */,
 				0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */,
@@ -761,6 +762,13 @@
 				0AD7EB4522234524006F71C0 /* MedRateButtonsSVC.xib */,
 			);
 			path = ButtonViews;
+			sourceTree = "<group>";
+		};
+		0AB66E4F223D649F00DF6B67 /* ConcreteProgressBars */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ConcreteProgressBars;
 			sourceTree = "<group>";
 		};
 		0AD07F7721FE3EA200C55831 /* CoreyFrontendUI */ = {

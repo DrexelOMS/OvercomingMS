@@ -24,15 +24,7 @@ class VitaminDModuleVC: TrackingModuleAbstractVC {
     
     override func reload() {
         progressBar.setProgressValue(value: vitaminDHistory.getPercentageComplete())
-        let amountRemaining = ProgressBarConfig.vitaminDGoal - vitaminDHistory.getTotalAmount()
-        var description = ""
-        if(amountRemaining <= 0){
-            description = "Daily goal reached!"
-        }
-        else {
-            description = "\(amountRemaining) \(ProgressBarConfig.vitaminDUOM) left"
-        }
-        progressBar.setDescription(description: description)
+        progressBar.setDescription(amountRemaining: ProgressBarConfig.vitaminDGoal - vitaminDHistory.getTotalAmount(), uom: ProgressBarConfig.vitaminDUOM)
     }
 
 }

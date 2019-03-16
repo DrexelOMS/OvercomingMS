@@ -24,15 +24,7 @@ class Omega3ModuleVC: TrackingModuleAbstractVC {
     
     override func reload() {
         progressBar.setProgressValue(value: omega3History.getPercentageComplete())
-        let amountRemaining = ProgressBarConfig.omega3Goal - omega3History.getTotalGrams()
-        var description = ""
-        if(amountRemaining <= 0){
-            description = "Daily goal reached!"
-        }
-        else {
-            description = "\(amountRemaining) grams left"
-        }
-        progressBar.setDescription(description: description)
+        progressBar.setDescription(amountRemaining: ProgressBarConfig.omega3Goal - omega3History.getTotalGrams(), uom: ProgressBarConfig.omega3UOM)
     }
-
+    
 }

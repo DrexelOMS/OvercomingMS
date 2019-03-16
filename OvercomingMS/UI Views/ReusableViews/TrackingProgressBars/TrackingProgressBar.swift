@@ -79,6 +79,22 @@ class TrackingProgressBar: CustomView {
         }
         linearProgressBar.progressValue = CGFloat(value);
         setColorMode(completed: linearProgressBar.progressValue >= 100)
+        
+    }
+    
+    func setDescription(amountRemaining: Int, uom: String){
+        var description = ""
+        if(amountRemaining <= 0){
+            description = "Daily goal reached!"
+        }
+        else {
+            description = "\(amountRemaining) \(uom) left"
+        }
+        rightLabel.text = description
+    }
+    
+    func setRightLabel(description: String) {
+        rightLabel.text = description
     }
     
     private func setColorMode(completed: Bool) {
@@ -108,10 +124,6 @@ class TrackingProgressBar: CustomView {
     func getTitle() -> String
     {
         return Title
-    }
-    
-    func setDescription(description: String){
-        rightLabel.text = description
     }
     
     @objc private func leftContainerPressed(tapGestureRecognizer: UITapGestureRecognizer){

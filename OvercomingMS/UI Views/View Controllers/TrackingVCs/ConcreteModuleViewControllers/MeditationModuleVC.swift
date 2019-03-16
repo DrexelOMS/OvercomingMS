@@ -24,15 +24,7 @@ class MeditationModuleVC: TrackingModuleAbstractVC {
     
     override func reload() {
         progressBar.setProgressValue(value: meditationHistory.getPercentageComplete())
-        let amountRemaining = ProgressBarConfig.meditationGoal - meditationHistory.getTotalMinutes()
-        var description = ""
-        if(amountRemaining <= 0){
-            description = "Daily goal reached!"
-        }
-        else {
-            description = "\(amountRemaining) minutes left"
-        }
-        progressBar.setDescription(description: description)
+        progressBar.setDescription(amountRemaining: ProgressBarConfig.meditationGoal - meditationHistory.getTotalMinutes(), uom: ProgressBarConfig.lengthUOM)
     }
 
 }

@@ -84,8 +84,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view
-        
         //reset user defaults and realm
 //        let defaults = UserDefaults.standard
 //        let dictionary = defaults.dictionaryRepresentation()
@@ -148,17 +146,17 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         //TODO make a way to get the proper description for each
         //FoodEatenRating is 1 - 5
-        foodBar.setDescription(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
+        foodBar.setRightLabel(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
         omega3Bar.setProgressValue(value: currentTrackingDay.Omega3ComputedPercentageComplete)
-        omega3Bar.setDescription(description: String(currentTrackingDay.Omega3Total))
+        omega3Bar.setDescription(amountRemaining: ProgressBarConfig.omega3Goal - Omega3HistoryDBS().getTotalGrams(), uom: ProgressBarConfig.omega3UOM)
         vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDComputedPercentageComplete)
-        vitaminDBar.setDescription(description: String(currentTrackingDay.VitaminDTotal))
+        vitaminDBar.setDescription(amountRemaining: ProgressBarConfig.vitaminDGoal - VitaminDHistoryDBS().getTotalAmount(), uom: ProgressBarConfig.vitaminDUOM)
         exerciseBar.setProgressValue(value: currentTrackingDay.ExerciseComputedPercentageComplete)
-        exerciseBar.setDescription(description: String(currentTrackingDay.ExerciseTimeTotal))
+        exerciseBar.setDescription(amountRemaining: ProgressBarConfig.exerciseGoal - ExerciseHistoryDBS().getTotalMinutes(), uom: ProgressBarConfig.lengthUOM)
         meditationBar.setProgressValue(value: currentTrackingDay.MeditationComputedPercentageComplete)
-        meditationBar.setDescription(description: String(currentTrackingDay.MeditationTimeTotal))
+        meditationBar.setDescription(amountRemaining: ProgressBarConfig.meditationGoal - MeditationHistoryDBS().getTotalMinutes(), uom: ProgressBarConfig.lengthUOM)
         medicationBar.setProgressValue(value: currentTrackingDay.MedicationComputedPercentageComplete)
-        medicationBar.setDescription(description: String(currentTrackingDay.MedicationTotal))
+        medicationBar.setDescription(amountRemaining: SavedMedicationDBS().getTodaysTotalMedGoal() - SavedMedicationDBS().getTrackingDay()!.MedicationTotal, uom: "meds")
     }
     
     //MARK: Delegates
@@ -262,9 +260,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     //MARK: IBActions
 
     @objc private func previousDate(gesture: UIGestureRecognizer) {
-        
         globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(-60*60*24)
-        
         loadCurrentDayUI()
     }
     
@@ -272,9 +268,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         if globalCurrentDate == todaysDate {
             return
         }
-        
         globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(60*60*24)
-        
         loadCurrentDayUI()
     }
     
@@ -282,7 +276,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     //basically nothing can ever write using current day, they write using todays date
     @objc private func ProgressDayPressed(gesture: UIGestureRecognizer) {
         omsDateFormatter.progressDay()
-        
         loadCurrentDayUI()
     }
     

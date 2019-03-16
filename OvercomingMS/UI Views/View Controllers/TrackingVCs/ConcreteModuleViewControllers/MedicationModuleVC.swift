@@ -24,15 +24,7 @@ class MedicationModuleVC: TrackingModuleAbstractVC {
     
     override func reload() {
         progressBar.setProgressValue(value: savedMedications.getPercentageComplete())
-        let amountRemaining = savedMedications.getTodaysTotalMedGoal() - savedMedications.getTrackingDay()!.MedicationTotal
-        var description = ""
-        if(amountRemaining <= 0){
-            description = "Daily goal reached!"
-        }
-        else {
-            description = "\(amountRemaining) meds left"
-        }
-        progressBar.setDescription(description: description)
+        progressBar.setDescription(amountRemaining: savedMedications.getTodaysTotalMedGoal() - savedMedications.getTrackingDay()!.MedicationTotal, uom: "meds")
     }
 
 }

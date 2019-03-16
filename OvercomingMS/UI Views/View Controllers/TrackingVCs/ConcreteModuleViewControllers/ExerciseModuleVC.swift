@@ -24,15 +24,7 @@ class ExerciseModuleVC: TrackingModuleAbstractVC {
     
     override func reload() {
         progressBar.setProgressValue(value: exerciseHistory.getPercentageComplete())
-        let amountRemaining = ProgressBarConfig.exerciseGoal - exerciseHistory.getTotalMinutes()
-        var description = ""
-        if(amountRemaining <= 0){
-            description = "Daily goal reached!"
-        }
-        else {
-            description = "\(amountRemaining) minutes left"
-        }
-        progressBar.setDescription(description: description)
+        progressBar.setDescription(amountRemaining: ProgressBarConfig.exerciseGoal - exerciseHistory.getTotalMinutes(), uom: ProgressBarConfig.lengthUOM)
     }
 
 }
