@@ -27,11 +27,11 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     @IBOutlet weak var header: HeaderSVC!
     @IBOutlet weak var dateLog: UILabel!
     @IBOutlet weak var foodBar: TrackingFoodBar!
-    @IBOutlet weak var omega3Bar: TrackingProgressBar!
-    @IBOutlet weak var vitaminDBar: TrackingProgressBar!
-    @IBOutlet weak var exerciseBar: TrackingProgressBar!
-    @IBOutlet weak var meditationBar: TrackingProgressBar!
-    @IBOutlet weak var medicationBar: TrackingProgressBar!
+    @IBOutlet weak var omega3Bar: Omega3ProgressBar!
+    @IBOutlet weak var vitaminDBar: VitaminDProgressBar!
+    @IBOutlet weak var exerciseBar: ExerciseProgressBar!
+    @IBOutlet weak var meditationBar: MeditationProgressBar!
+    @IBOutlet weak var medicationBar: MedicationProgressBar!
     
     @IBOutlet weak var previousButton: UIView!
     @IBOutlet weak var nextDay: UIView!
@@ -61,15 +61,47 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     @objc func onDidCompleteModule(_ notification:Notification) {
         let sender = notification.object
         // We only want to process notifications when sent by the object of type AuthorizedUser
-        if let trackingModule = sender as? TrackingProgressBar {
-            header.displayTrackingMessage(colorTheme: trackingModule.colorTheme, message: "You Completed \(trackingModule.getTitle()). Great work!")
+        if let trackingModule = sender as? Modules {
+            var name = ""
+            var color = UIColor.black
+            
+            switch trackingModule {
+            case .Omega3:
+                name = "Omega 3"
+                color = omega3Bar.colorTheme
+            case .VitaminD:
+                name = "Vitamin D"
+                color = vitaminDBar.colorTheme
+                break;
+            case .Exercise:
+                name = "Exercise"
+                color = exerciseBar.colorTheme
+                break
+            case .Meditation:
+                name = "Meditation"
+                color = meditationBar.colorTheme
+            case .Medication:
+                name = "Medication"
+                color = medicationBar.colorTheme
+            default:
+                break;
+            }
+            let message = "You Completed \(name). Great Work!"
+            header.displayTrackingMessage(colorTheme: color, message: message)
         }
         
 //        // userInfo is the payload send by sender of notification
-//        if let userInfo = not.userInfo {
+//        if let userInfo = notification.userInfo {
 //            // Safely unwrap the name sent out by the notification sender
-//            if let userName = userInfo["name"] as? String {
-//                print(userName)
+//            if let userName = userInfo["Module"] as? String {
+//                let message = "You Completed \(userName). Great Work!"
+//                switch userName {
+//                case "VitaminD":
+//                    header.displayTrackingMessage(colorTheme: vitaminDBar.colorTheme, message: message)
+//                    break;
+//                default:
+//                    break;
+//                }
 //            }
 //        }
 
@@ -83,8 +115,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     //TODO: Consider changing to view will appear, and initialize TodaysData should be handled everytime the app enters the foreground
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view
         
         //reset user defaults and realm
 //        let defaults = UserDefaults.standard
@@ -148,17 +178,12 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         //TODO make a way to get the proper description for each
         //FoodEatenRating is 1 - 5
-        foodBar.setDescription(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
-        omega3Bar.setProgressValue(value: currentTrackingDay.Omega3ComputedPercentageComplete)
-        omega3Bar.setDescription(description: String(currentTrackingDay.Omega3Total))
-        vitaminDBar.setProgressValue(value: currentTrackingDay.VitaminDComputedPercentageComplete)
-        vitaminDBar.setDescription(description: String(currentTrackingDay.VitaminDTotal))
-        exerciseBar.setProgressValue(value: currentTrackingDay.ExerciseComputedPercentageComplete)
-        exerciseBar.setDescription(description: String(currentTrackingDay.ExerciseTimeTotal))
-        meditationBar.setProgressValue(value: currentTrackingDay.MeditationComputedPercentageComplete)
-        meditationBar.setDescription(description: String(currentTrackingDay.MeditationTimeTotal))
-        medicationBar.setProgressValue(value: currentTrackingDay.MedicationComputedPercentageComplete)
-        medicationBar.setDescription(description: String(currentTrackingDay.MedicationTotal))
+        foodBar.setRightLabel(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
+        omega3Bar.updateProgress()
+        vitaminDBar.updateProgress()
+        exerciseBar.updateProgress()
+        meditationBar.updateProgress()
+        medicationBar.updateProgress()
     }
     
     //MARK: Delegates
@@ -262,9 +287,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     //MARK: IBActions
 
     @objc private func previousDate(gesture: UIGestureRecognizer) {
-        
         globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(-60*60*24)
-        
         loadCurrentDayUI()
     }
     
@@ -272,9 +295,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         if globalCurrentDate == todaysDate {
             return
         }
-        
         globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(60*60*24)
-        
         loadCurrentDayUI()
     }
     
@@ -282,7 +303,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     //basically nothing can ever write using current day, they write using todays date
     @objc private func ProgressDayPressed(gesture: UIGestureRecognizer) {
         omsDateFormatter.progressDay()
-        
         loadCurrentDayUI()
     }
     

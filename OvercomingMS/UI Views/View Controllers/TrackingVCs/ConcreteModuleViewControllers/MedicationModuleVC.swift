@@ -12,27 +12,24 @@ import RealmSwift
 class MedicationModuleVC: TrackingModuleAbstractVC {
     
     private let savedMedications = SavedMedicationDBS()
+    private let progressBar = MedicationProgressBar()
+    
+    override func getProgressBar() -> TrackingProgressBar {
+        return progressBar
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         progressBar.setTitle(title: "Medication")
+        progressBar.toggleCheckMarkVisibility(isHidden: true)
         
         initializeviewStack(defaultView: MedicationMainSVC())
     }
     
     override func reload() {
-        progressBar.setProgressValue(value: savedMedications.getPercentageComplete())
-        let amountRemaining = savedMedications.getTodaysTotalMedGoal() - savedMedications.getTrackingDay()!.MedicationTotal
-        var description = ""
-        if(amountRemaining <= 0){
-            description = "Daily goal reached!"
-        }
-        else {
-            description = "\(amountRemaining) meds left"
-        }
-        progressBar.setDescription(description: description)
+        progressBar.updateProgress()
     }
 
 }

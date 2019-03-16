@@ -10,8 +10,9 @@ import Foundation
 import RealmSwift
 
 class ExerciseHistoryDBS: TrackingModulesDBS {
-        
+    
     func toggleFilledData() {
+        let percent = getPercentageComplete()
         let date = globalCurrentDate
         do {
             try realm.write() {
@@ -22,11 +23,13 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
         } catch {
             print("Error updating todays data : \(error)" )
         }
-        
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Exercise)
+        }
     }
     
     func addExerciseItem(routineType: String, startTime: Date, endTime: Date) {
-        
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                 if let day = getTrackingDay(date: globalCurrentDate) {
@@ -40,7 +43,9 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
         } catch {
             print("Error updating Exercise data : \(error)" )
         }
-        
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Exercise)
+        }
     }
     
     func getTodaysExerciseItems() -> List<ExerciseHistoryDBT>? {
@@ -66,6 +71,7 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
     }
     
     func updateExerciseItem(oldItem: ExerciseHistoryDBT, newItem: ExerciseHistoryDBT) {
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                 oldItem.RoutineType = newItem.RoutineType
@@ -74,6 +80,9 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
             }
         } catch {
             print("Error update Exercise data: \(error)")
+        }
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Exercise)
         }
     }
 

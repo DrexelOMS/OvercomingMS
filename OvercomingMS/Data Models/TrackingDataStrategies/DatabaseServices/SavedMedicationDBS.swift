@@ -13,6 +13,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
     
     //TODO: not currently correct
     func toggleFilledData() {
+        let percent = getPercentageComplete()
         let date = globalCurrentDate
         do {
             try realm.write() {
@@ -23,11 +24,13 @@ class SavedMedicationDBS: TrackingModulesDBS {
         } catch {
             print("Error updating todays data : \(error)" )
         }
-        
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Medication)
+        }
     }
     
     func addMedicationItem(medicationName: String, timeOfDay: Date, medicationAmount: Int, medicationUOM: String, freq: String, active: Bool) {
-        
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                 let item = SavedMedicationDBT()
@@ -43,7 +46,9 @@ class SavedMedicationDBS: TrackingModulesDBS {
         } catch {
             print("Error updating Medication data : \(error)" )
         }
-        
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Medication)
+        }
     }
 
     //TODO: we need a better way to delete items
@@ -66,6 +71,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
     }
 
     func updateSavedMedicationItem(oldItem: SavedMedicationDBT, newItem: SavedMedicationDBT) {
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                 oldItem.MedicationName = newItem.MedicationName
@@ -76,6 +82,9 @@ class SavedMedicationDBS: TrackingModulesDBS {
             }
         } catch {
             print("Error update SavedMedication data: \(error)")
+        }
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Medication)
         }
     }
 
@@ -93,12 +102,16 @@ class SavedMedicationDBS: TrackingModulesDBS {
     }
     
     func addTakenMedication(item: SavedMedicationDBT) {
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                getTrackingDay()?.savedMedicationDT.append(item)
             }
         } catch {
             print("Error delete SavedMedication data: \(error)")
+        }
+        if percent < 100 && getPercentageComplete() >= 100 {
+            notify(module: .Medication)
         }
     }
     

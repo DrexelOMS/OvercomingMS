@@ -15,8 +15,12 @@ protocol TrackingProgressBarDelegate : class {
     func didPressLeftContainer(_ sender: TrackingProgressBar)
 }
 
+protocol IUpdateProgressBar: class {
+    func updateProgress()
+}
+
 @IBDesignable
-class TrackingProgressBar: CustomView {
+class TrackingProgressBar: CustomView{
     
     override var nibName: String { return "TrackingProgressBar" }
     
@@ -74,11 +78,26 @@ class TrackingProgressBar: CustomView {
     }
     
     func setProgressValue(value : Int){
-        if linearProgressBar.progressValue < 100 && value >= 100 {
-            NotificationCenter.default.post(name: .didCompleteModule, object: self, userInfo: ["colorTheme": colorTheme])
-        }
         linearProgressBar.progressValue = CGFloat(value);
         setColorMode(completed: linearProgressBar.progressValue >= 100)
+        
+    }
+    
+    
+    //TODO: Remove
+    func setDescription(amountRemaining: Int, uom: String){
+        var description = ""
+        if(amountRemaining <= 0){
+            description = "Daily goal reached!"
+        }
+        else {
+            description = "\(amountRemaining) \(uom) left"
+        }
+        rightLabel.text = description
+    }
+    
+    func setRightLabel(description: String) {
+        rightLabel.text = description
     }
     
     private func setColorMode(completed: Bool) {
@@ -110,8 +129,15 @@ class TrackingProgressBar: CustomView {
         return Title
     }
     
-    func setDescription(description: String){
-        rightLabel.text = description
+    func toggleCheckMarkVisibility(isHidden: Bool) {
+        self.rightContainerView.isHidden = isHidden
+        if isHidden {
+            shadowedRoundedView.shadowOpacity = 0
+            
+            originalBackground = UIColor(rgb: 0xF8F8F8)
+            shadowedRoundedView.backgroundColor = originalBackground
+            roundedView.backgroundColor = originalBackground
+        }
     }
     
     @objc private func leftContainerPressed(tapGestureRecognizer: UITapGestureRecognizer){

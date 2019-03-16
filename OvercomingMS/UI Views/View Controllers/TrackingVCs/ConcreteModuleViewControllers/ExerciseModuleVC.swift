@@ -12,27 +12,24 @@ import RealmSwift
 class ExerciseModuleVC: TrackingModuleAbstractVC {
     
     private let exerciseHistory = ExerciseHistoryDBS()
+    private let progressBar = ExerciseProgressBar()
+    
+    override func getProgressBar() -> TrackingProgressBar {
+        return progressBar
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         progressBar.setTitle(title: "Exercise")
+        progressBar.toggleCheckMarkVisibility(isHidden: true)
         
         initializeviewStack(defaultView: ExerciseMainSVC())
     }
     
     override func reload() {
-        progressBar.setProgressValue(value: exerciseHistory.getPercentageComplete())
-        let amountRemaining = ProgressBarConfig.exerciseGoal - exerciseHistory.getTotalMinutes()
-        var description = ""
-        if(amountRemaining <= 0){
-            description = "Daily goal reached!"
-        }
-        else {
-            description = "\(amountRemaining) minutes left"
-        }
-        progressBar.setDescription(description: description)
+        progressBar.updateProgress()
     }
 
 }
