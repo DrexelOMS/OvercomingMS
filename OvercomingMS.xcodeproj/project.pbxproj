@@ -15,7 +15,8 @@
 		0A08189C2214E8CC0021BDF6 /* FoodSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */; };
 		0A08189E2214F82F0021BDF6 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A08189D2214F82F0021BDF6 /* Food.swift */; };
 		0A19B3BB2253BBF100F4B02B /* FoodSelectedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */; };
-		0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */; };
+		0A19B3BD2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */; };
+		0A19B3BF2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */; };
 		0A1FEC482204C74A006CED70 /* SlidingStackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC472204C74A006CED70 /* SlidingStackVC.swift */; };
 		0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC542204E7F8006CED70 /* QuickCompleteFoodVC.swift */; };
 		0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FEC572204ECBF006CED70 /* Dismissable.swift */; };
@@ -38,7 +39,6 @@
 		0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA712204AFC3004074F3 /* Quicksand-Light.otf */; };
 		0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA722204AFC3004074F3 /* Quicksand-Regular.otf */; };
 		0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA732204AFC3004074F3 /* Quicksand_Dash.otf */; };
-		0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */; };
 		0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */; };
 		0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */; };
 		0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */; };
@@ -88,8 +88,6 @@
 		0AB66E5A223D6C5400DF6B67 /* MedicationProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66E59223D6C5400DF6B67 /* MedicationProgressBar.swift */; };
 		0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */; };
 		0AD07F7221FCFF8100C55831 /* TrackingProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */; };
-		0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F7821FE3EA200C55831 /* CirclesViewController.swift */; };
-		0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F7921FE3EA200C55831 /* AnalysisViewController.swift */; };
 		0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8421FE53B900C55831 /* DesignConstants.swift */; };
 		0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */; };
 		0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8D21FE79C300C55831 /* CustomView.swift */; };
@@ -173,7 +171,6 @@
 		0AEF7A6F223429BF009A0292 /* MeditationTimerSetupSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6E223429BE009A0292 /* MeditationTimerSetupSVC.swift */; };
 		0AEF7A7122342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A7022342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift */; };
 		0AEF7A732234454B009A0292 /* MeditationTimerSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A722234454B009A0292 /* MeditationTimerSVC.swift */; };
-		0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */; };
 		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
 		0AF8E0DB2209248700E1EC33 /* StopwatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */; };
@@ -195,11 +192,9 @@
 		0CBE98AD2223835300D3C090 /* TitleTimeOverTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE98AC2223835300D3C090 /* TitleTimeOverTextCell.xib */; };
 		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */; };
-		501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501B3D0721FF7647003A7202 /* MeditationViewController.swift */; };
 		503A52482228A3BD00E5A009 /* SymptomsNoteDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503A52472228A3BD00E5A009 /* SymptomsNoteDBT.swift */; };
 		503A524A2228A51200E5A009 /* SymptomsNoteDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503A52492228A51200E5A009 /* SymptomsNoteDBS.swift */; };
 		50572C9A22139E51000C2E63 /* Omega3HistoryDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */; };
-		505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505DB14621FF6C710045C703 /* CassStoryboard.storyboard */; };
 		509646FC22223EA9006FFDBB /* SavedMedicationDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509646FB22223EA9006FFDBB /* SavedMedicationDBT.swift */; };
 		50AB2ACF221F3879008C5BA5 /* SavedMedicationDBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB2ACE221F3879008C5BA5 /* SavedMedicationDBS.swift */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
@@ -208,7 +203,6 @@
 		6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745721DF017F00B9846C /* LaunchScreen.storyboard */; };
 		6129746421DF017F00B9846C /* OvercomingMSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746321DF017F00B9846C /* OvercomingMSTests.swift */; };
 		6129746F21DF017F00B9846C /* OvercomingMSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746E21DF017F00B9846C /* OvercomingMSUITests.swift */; };
-		8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */; };
 		83985923222D758E00782A10 /* MeditationModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985922222D758E00782A10 /* MeditationModifyAbstractSVC.swift */; };
 		83985925222D768600782A10 /* MeditationAddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985924222D768600782A10 /* MeditationAddSVC.swift */; };
 		83985927222EBA3300782A10 /* MeditationEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985926222EBA3300782A10 /* MeditationEditSVC.swift */; };
@@ -242,7 +236,8 @@
 		0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchCell.xib; sourceTree = "<group>"; };
 		0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchCell.swift; sourceTree = "<group>"; };
 		0A08189D2214F82F0021BDF6 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
-		0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnTestingViewController.swift; sourceTree = "<group>"; };
+		0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiveScaleRatingButtonsSVC.xib; sourceTree = "<group>"; };
+		0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveScaleRatingButtonsSVC.swift; sourceTree = "<group>"; };
 		0A1FEC472204C74A006CED70 /* SlidingStackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingStackVC.swift; sourceTree = "<group>"; };
 		0A1FEC542204E7F8006CED70 /* QuickCompleteFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCompleteFoodVC.swift; sourceTree = "<group>"; };
 		0A1FEC572204ECBF006CED70 /* Dismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissable.swift; sourceTree = "<group>"; };
@@ -265,7 +260,6 @@
 		0A2BAA712204AFC3004074F3 /* Quicksand-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.otf"; sourceTree = "<group>"; };
 		0A2BAA722204AFC3004074F3 /* Quicksand-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.otf"; sourceTree = "<group>"; };
 		0A2BAA732204AFC3004074F3 /* Quicksand_Dash.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Quicksand_Dash.otf; sourceTree = "<group>"; };
-		0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinnStoryboard.storyboard; sourceTree = "<group>"; };
 		0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingViewController.swift; sourceTree = "<group>"; };
 		0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationModuleVC.swift; sourceTree = "<group>"; };
 		0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDModuleVC.swift; sourceTree = "<group>"; };
@@ -323,9 +317,6 @@
 		0AB66E59223D6C5400DF6B67 /* MedicationProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationProgressBar.swift; sourceTree = "<group>"; };
 		0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingProgressBar.xib; sourceTree = "<group>"; };
 		0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingProgressBar.swift; sourceTree = "<group>"; };
-		0AD07F7821FE3EA200C55831 /* CirclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesViewController.swift; sourceTree = "<group>"; };
-		0AD07F7921FE3EA200C55831 /* AnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
-		0AD07F7A21FE3EA200C55831 /* TrackingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
 		0AD07F8421FE53B900C55831 /* DesignConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignConstants.swift; sourceTree = "<group>"; };
 		0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingFoodBar.swift; sourceTree = "<group>"; };
 		0AD07F8D21FE79C300C55831 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -411,7 +402,6 @@
 		0AEF7A6E223429BE009A0292 /* MeditationTimerSetupSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerSetupSVC.swift; sourceTree = "<group>"; };
 		0AEF7A7022342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidedMeditationTimerSetupSVC.swift; sourceTree = "<group>"; };
 		0AEF7A722234454B009A0292 /* MeditationTimerSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerSVC.swift; sourceTree = "<group>"; };
-		0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreyFrontendUI.storyboard; sourceTree = "<group>"; };
 		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
 		0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchAbstractSVC.swift; sourceTree = "<group>"; };
@@ -432,11 +422,9 @@
 		0CB44DE92223280F004D0580 /* MeditationSetupSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationSetupSVC.xib; sourceTree = "<group>"; };
 		0CBE98AC2223835300D3C090 /* TitleTimeOverTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTimeOverTextCell.xib; sourceTree = "<group>"; };
 		500F74DC220CD08D00752C98 /* MeditationHistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHistoryDBS.swift; sourceTree = "<group>"; };
-		501B3D0721FF7647003A7202 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		503A52472228A3BD00E5A009 /* SymptomsNoteDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsNoteDBT.swift; sourceTree = "<group>"; };
 		503A52492228A51200E5A009 /* SymptomsNoteDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsNoteDBS.swift; sourceTree = "<group>"; };
 		50572C9922139E51000C2E63 /* Omega3HistoryDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3HistoryDBS.swift; sourceTree = "<group>"; };
-		505DB14621FF6C710045C703 /* CassStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CassStoryboard.storyboard; sourceTree = "<group>"; };
 		509646FB22223EA9006FFDBB /* SavedMedicationDBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMedicationDBT.swift; sourceTree = "<group>"; };
 		50AB2ACE221F3879008C5BA5 /* SavedMedicationDBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMedicationDBS.swift; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -454,7 +442,6 @@
 		613999C2BAE695AFE369D7B7 /* Pods_OvercomingMSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64624BC75971C455C566E626 /* Pods-OvercomingMSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.release.xcconfig"; sourceTree = "<group>"; };
 		724CCA850B24CDC7CCFAF25E /* Pods-OvercomingMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.debug.xcconfig"; sourceTree = "<group>"; };
-		8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimerStoryBoard.storyboard; sourceTree = "<group>"; };
 		83985922222D758E00782A10 /* MeditationModifyAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationModifyAbstractSVC.swift; sourceTree = "<group>"; };
 		83985924222D768600782A10 /* MeditationAddSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAddSVC.swift; sourceTree = "<group>"; };
 		83985926222EBA3300782A10 /* MeditationEditSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationEditSVC.swift; sourceTree = "<group>"; };
@@ -674,15 +661,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		0A4DF4AC21EEEB5900EA991E /* FinnUITesting */ = {
-			isa = PBXGroup;
-			children = (
-				0A4DF4AD21EEEBA100EA991E /* FinnStoryboard.storyboard */,
-				0A1FEC452204C732006CED70 /* FinnTestingViewController.swift */,
-			);
-			path = FinnUITesting;
-			sourceTree = "<group>";
-		};
 		0A7FC87721F0FAB600492E93 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,17 +711,6 @@
 			path = TextFieldAbstractSVCs;
 			sourceTree = "<group>";
 		};
-		0A976CF921FEB9CB00748EDA /* TeamMembers */ = {
-			isa = PBXGroup;
-			children = (
-				505DB14521FF6C570045C703 /* CassUITesting */,
-				0A4DF4AC21EEEB5900EA991E /* FinnUITesting */,
-				8387974C21EEB6DA009EA5EF /* ChrisUITesting */,
-				0AD07F7721FE3EA200C55831 /* CoreyFrontendUI */,
-			);
-			path = TeamMembers;
-			sourceTree = "<group>";
-		};
 		0AA5284A2202188500CCFEE7 /* TrackingProgressBars */ = {
 			isa = PBXGroup;
 			children = (
@@ -769,6 +736,8 @@
 				0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */,
 				0AD7EB4322234491006F71C0 /* MedRateButtonsSVC.swift */,
 				0AD7EB4522234524006F71C0 /* MedRateButtonsSVC.xib */,
+				0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */,
+				0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */,
 			);
 			path = ButtonViews;
 			sourceTree = "<group>";
@@ -784,17 +753,6 @@
 				0AB66E59223D6C5400DF6B67 /* MedicationProgressBar.swift */,
 			);
 			path = ConcreteProgressBars;
-			sourceTree = "<group>";
-		};
-		0AD07F7721FE3EA200C55831 /* CoreyFrontendUI */ = {
-			isa = PBXGroup;
-			children = (
-				0AD07F7821FE3EA200C55831 /* CirclesViewController.swift */,
-				0AD07F7921FE3EA200C55831 /* AnalysisViewController.swift */,
-				0AD07F7A21FE3EA200C55831 /* TrackingViewController.swift */,
-				0AF8E0C72209118900E1EC33 /* CoreyFrontendUI.storyboard */,
-			);
-			path = CoreyFrontendUI;
 			sourceTree = "<group>";
 		};
 		0AD07F8621FE596F00C55831 /* ReusableViews */ = {
@@ -1003,15 +961,6 @@
 			path = Symptoms;
 			sourceTree = "<group>";
 		};
-		505DB14521FF6C570045C703 /* CassUITesting */ = {
-			isa = PBXGroup;
-			children = (
-				505DB14621FF6C710045C703 /* CassStoryboard.storyboard */,
-				501B3D0721FF7647003A7202 /* MeditationViewController.swift */,
-			);
-			path = CassUITesting;
-			sourceTree = "<group>";
-		};
 		6129744221DF017E00B9846C = {
 			isa = PBXGroup;
 			children = (
@@ -1068,7 +1017,6 @@
 		6129747D21DF020E00B9846C /* UI Views */ = {
 			isa = PBXGroup;
 			children = (
-				0A976CF921FEB9CB00748EDA /* TeamMembers */,
 				0AD07F9121FE84E000C55831 /* SharedUIViewSupers */,
 				0A1FEC6A2206371C006CED70 /* ReusableCells */,
 				0AD07F8621FE596F00C55831 /* ReusableViews */,
@@ -1104,14 +1052,6 @@
 				0AEF7A4F223024E9009A0292 /* HeaderSVC.swift */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		8387974C21EEB6DA009EA5EF /* ChrisUITesting */ = {
-			isa = PBXGroup;
-			children = (
-				8387974D21EEB723009EA5EF /* TimerStoryBoard.storyboard */,
-			);
-			path = ChrisUITesting;
 			sourceTree = "<group>";
 		};
 		83985921222D72A600782A10 /* Meditation */ = {
@@ -1259,14 +1199,11 @@
 				0CAD6315221D9C7700E50E72 /* FoodApprovedSVC.xib in Resources */,
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
 				0AEF7A36222C7EDB009A0292 /* FoodQuickCompleteSVC.xib in Resources */,
-				0A4DF4AE21EEEBA100EA991E /* FinnStoryboard.storyboard in Resources */,
 				0A93F1582213C5B40063A892 /* FoodMainSVC.xib in Resources */,
 				0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */,
 				0AEF7A6B22341E51009A0292 /* MeditationLevelButtonSVC.xib in Resources */,
 				0AEF7A3C222CD782009A0292 /* GoalsMainSVC.xib in Resources */,
-				505DB14721FF6C710045C703 /* CassStoryboard.storyboard in Resources */,
 				0AEF7A2D222B01FC009A0292 /* FoodUnknownSVC.xib in Resources */,
-				8387974E21EEB723009EA5EF /* TimerStoryBoard.storyboard in Resources */,
 				0A2BAA752204AFC3004074F3 /* Quicksand-BoldItalic.otf in Resources */,
 				0AA5286722027FF300CCFEE7 /* ConfirmationSVC.xib in Resources */,
 				0C7D5868222D8DA300D00CB0 /* NoteCell.xib in Resources */,
@@ -1279,6 +1216,7 @@
 				0A0818982214E6310021BDF6 /* FoodSearchSVC.xib in Resources */,
 				0CBE98AD2223835300D3C090 /* TitleTimeOverTextCell.xib in Resources */,
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
+				0A19B3BD2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib in Resources */,
 				0A1FEC6E220638A7006CED70 /* Routine3PartCell.xib in Resources */,
 				0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */,
 				0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */,
@@ -1294,7 +1232,6 @@
 				0C7D5866222C652100D00CB0 /* SymptomsMainSVC.xib in Resources */,
 				0CAD6319221DD50500E50E72 /* SeeMoreButtonSVC.xib in Resources */,
 				0AD7EB13221B4D23006F71C0 /* SelectedLabelsSVC.xib in Resources */,
-				0AF8E0C82209118900E1EC33 /* CoreyFrontendUI.storyboard in Resources */,
 				0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */,
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
@@ -1449,7 +1386,6 @@
 				500F74DD220CD08D00752C98 /* MeditationHistoryDBS.swift in Sources */,
 				0AEF7A60223314BC009A0292 /* GoalsDBS.swift in Sources */,
 				0AEF7A3E222DD55E009A0292 /* SymptomsVC.swift in Sources */,
-				0A1FEC462204C732006CED70 /* FinnTestingViewController.swift in Sources */,
 				0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */,
 				503A52482228A3BD00E5A009 /* SymptomsNoteDBT.swift in Sources */,
 				0A93F19B22145F150063A892 /* ModifyAbstractSVC.swift in Sources */,
@@ -1483,7 +1419,6 @@
 				50572C9A22139E51000C2E63 /* Omega3HistoryDBS.swift in Sources */,
 				50AB2ACF221F3879008C5BA5 /* SavedMedicationDBS.swift in Sources */,
 				0AD7EB212221E537006F71C0 /* TimerAbsractSVC.swift in Sources */,
-				501B3D0821FF7647003A7202 /* MeditationViewController.swift in Sources */,
 				0AD7EAF2221B0047006F71C0 /* CustomEntryTFI.swift in Sources */,
 				0A1FEC5F220529A9006CED70 /* ExerciseHistoryDBS.swift in Sources */,
 				0AD7EAFC221B1A74006F71C0 /* Omega3EditSVC.swift in Sources */,
@@ -1494,8 +1429,8 @@
 				0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */,
 				509646FC22223EA9006FFDBB /* SavedMedicationDBT.swift in Sources */,
 				0AD7EAF4221B0779006F71C0 /* VitaminDHistoryDBS.swift in Sources */,
-				0AD07F7D21FE3EA200C55831 /* AnalysisViewController.swift in Sources */,
 				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,
+				0A19B3BF2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift in Sources */,
 				0AD7EB17221C68B4006F71C0 /* VitaminDSupplementSVC.swift in Sources */,
 				0AEF7A29222AFA88009A0292 /* BadIngredientsCell.swift in Sources */,
 				0AEF7A34222C78B3009A0292 /* GoalsVC.swift in Sources */,
@@ -1527,7 +1462,6 @@
 				0AD94DE3220E17BD00B5C2BA /* GuidedCircleButton.swift in Sources */,
 				0A93F15C2213C62A0063A892 /* RecipesCircleButton.swift in Sources */,
 				0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */,
-				0AD07F7C21FE3EA200C55831 /* CirclesViewController.swift in Sources */,
 				0AD94DD1220DE7F200B5C2BA /* DeleteConfirmationSVC.swift in Sources */,
 				0AD7EB09221B3307006F71C0 /* VitaminDQuickAddSVC.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
