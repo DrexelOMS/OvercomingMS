@@ -33,7 +33,7 @@ class ExpandingCell : UITableViewCell {
         
         middleStackView.translatesAutoresizingMaskIntoConstraints = false
         middleStackView.axis = NSLayoutConstraint.Axis.vertical
-        middleStackView.distribution  = UIStackView.Distribution.equalSpacing
+        middleStackView.distribution = UIStackView.Distribution.equalSpacing
     }
     
     func addToMiddle(view: UIView) {
