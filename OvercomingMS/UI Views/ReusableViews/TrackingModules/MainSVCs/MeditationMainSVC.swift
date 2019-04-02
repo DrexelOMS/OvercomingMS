@@ -73,13 +73,14 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! Routine3PartCell
-        
+
         cell.labelLeft.text = meditationHistory.getTodaysMeditationItems()![indexPath.row].MeditationType
         let startTime = meditationHistory.getTodaysMeditationItems()![indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
         cell.labelRight.text =  "\(meditationHistory.getTodaysMeditationItems()![indexPath.row].minutes) \(ProgressBarConfig.lengthUOM)"
-        
+
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -16,6 +16,8 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     let button1 = AddCircleButton()
     
+    let cellName = "ExpandingCell"
+    
     override func customSetup() {
         totalsView.isHidden = true
     }
@@ -35,7 +37,10 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         tableView.dataSource = self
         
         //TODO make a new UI for this cell
-        tableView.register(UINib(nibName: medicationCellName, bundle: nil), forCellReuseIdentifier: medicationCellName)
+        tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
         
         reload()
     }
@@ -55,30 +60,36 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return savedMedications.getSavedMedicationItems()?.count ?? 0
+//        return savedMedications.getSavedMedicationItems()?.count ?? 0
+
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: medicationCellName, for: indexPath) as! MedicationCell
         
-        let item = savedMedications.getSavedMedicationItems()![indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! ExpandingCell
+    
+        //let item = savedMedications.getSavedMedicationItems()![indexPath.row]
+        let view = MedicationItemSVC()
+        //view.item = item
+        view.parentVC = parentVC
         
-        cell.item = item
-        cell.parentVC = parentVC
+        cell.clear()
+        cell.addToMiddle(view: view)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let medicationItemSVC = MedicationSelectedItemSVC()
-        medicationItemSVC.savedMedicationItem = savedMedications.getSavedMedicationItems()![indexPath.row]
-        medicationItemSVC.parentVC = parentVC
-        parentVC.pushSubView(newSubView: medicationItemSVC)
+//        let medicationItemSVC = MedicationSelectedItemSVC()
+//        medicationItemSVC.savedMedicationItem = savedMedications.getSavedMedicationItems()![indexPath.row]
+//        medicationItemSVC.parentVC = parentVC
+//        parentVC.pushSubView(newSubView: medicationItemSVC)
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return 80.0
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+//    {
+//        return 80.0
+//    }
 
 }

@@ -8,7 +8,13 @@
 
 import UIKit
 
-class MedicationCell : UITableViewCell {
+class MedicationItemSVC : CustomView {
+    
+    override var nibName: String {
+        get {
+            return "MedicationItemSVC"
+        }
+    }
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -37,15 +43,8 @@ class MedicationCell : UITableViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization Code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    override func customSetup() {
         
-        //configure the view for the selected state
     }
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
