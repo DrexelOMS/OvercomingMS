@@ -12,8 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MedicationNotTakenItemSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="WeekdaysLabel" destination="up5-4J-3X4" id="O5M-N1-1pD"/>
-                <outlet property="amountLabel" destination="ufx-Eb-gt9" id="VdG-Zf-Al9"/>
-                <outlet property="nameLabel" destination="BBA-VK-001" id="sTz-Bv-o6N"/>
+                <outlet property="amountLabel" destination="ufx-Eb-gt9" id="hCr-bA-22G"/>
+                <outlet property="nameLabel" destination="BBA-VK-001" id="MSB-T5-BD8"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

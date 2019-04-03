@@ -18,6 +18,8 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     let cellName = "ExpandingCell"
     
+    //TODO apply proper calculations to get the list of nonTracked med items for the day
+    //and tracked items for the day, and use count of tracked items + if (hasNontrackedItems} count += 1
     var hasNonTrackedItems = true
     var tableCount: Int {
         get {
@@ -78,13 +80,15 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
         if hasNonTrackedItems && indexPath.row == tableCount - 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! ExpandingCell
             
             cell.clear()
             cell.topLabel.text = "Not Taking Today"
+            
+            let item = savedMedications.getSavedMedicationItems()![indexPath.row - 1]
             let view = MedicationNotTakenItemSVC()
+            view.item = item
             cell.addToMiddle(view: view)
             
             cell.hideBottomView()
@@ -92,8 +96,9 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! ExpandingCell
-            
+        
             let item = savedMedications.getSavedMedicationItems()![indexPath.row]
+            
             let view = MedicationItemSVC()
             view.item = item
             view.parentVC = parentVC

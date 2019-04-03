@@ -18,7 +18,7 @@ class MedicationNotTakenItemSVC : CustomView {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
-    @IBOutlet weak var WeekdaysLabel: UILabel!
+    @IBOutlet private weak var WeekdaysLabel: UILabel!
     
     var parentVC : SlidingStackVC!
     let savedMedications = SavedMedicationDBS()
@@ -31,37 +31,23 @@ class MedicationNotTakenItemSVC : CustomView {
     }
     
     override func customSetup() {
-        
     }
     
     func updateStyle() {
-//        nameLabel.text = item.MedicationName
-//        amountLabel.text = "\(item.MedicationAmount) \(item.MedicationUOM)"
-//        doneCheckButton.IsDone = savedMedications.wasTaken(item: item)
-//        doneCheckButton.isUserInteractionEnabled = savedMedications.isTrackedToday(item: item)
-//        
-//        if doneCheckButton.IsDone {
-//            nameLabel.textColor = UIColor.lightGray
-//            amountLabel.textColor = UIColor.lightGray
-//            let attrString = NSAttributedString(string: nameLabel.text!, attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue])
-//            nameLabel.attributedText = attrString
-//
-//        }
-//        else {
-//            nameLabel.textColor = UIColor.black
-//            amountLabel.textColor = UIColor.black
-//            let attrString = NSAttributedString(string: nameLabel.text!)
-//            nameLabel.attributedText = attrString
-//        }
-//        
-//        if(!doneCheckButton.isUserInteractionEnabled){
-//            backgroundColor = UIColor.lightGray
-//            backgroundColor?.withAlphaComponent(0.5)
-//        }
-//        else {
-//            backgroundColor = UIColor.clear
-//            backgroundColor?.withAlphaComponent(1.0)
-//        }
+        nameLabel.text = item.MedicationName
+        amountLabel.text = "\(item.MedicationAmount) \(item.MedicationUOM)"
+        
+        let myString = NSMutableAttributedString(string: "SMTWRFS")
+        
+        var myRange = NSRange(location: 1, length: 1)
+        myString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.lightGray, range: myRange)
+        
+        myRange = NSRange(location: 3, length: 1)
+        myString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.lightGray, range: myRange)
+        
+        myRange = NSRange(location: 5, length: 1)
+        myString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.lightGray, range: myRange)
+        WeekdaysLabel.attributedText = myString
     }
     
 }
