@@ -41,6 +41,8 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         
         reload()
     }
@@ -60,32 +62,34 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return savedMedications.getSavedMedicationItems()?.count ?? 0
+        return savedMedications.getSavedMedicationItems()?.count ?? 0
 
-        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! ExpandingCell
     
-        //let item = savedMedications.getSavedMedicationItems()![indexPath.row]
+        let item = savedMedications.getSavedMedicationItems()![indexPath.row]
         let view = MedicationItemSVC()
-        //view.item = item
+        view.item = item
         view.parentVC = parentVC
         
         cell.clear()
         cell.addToMiddle(view: view)
+        cell.bottomView.isHidden = true
+        cell.bottomHeight.constant = 0
+        cell.topLabel.text =  OMSDateAccessor.getDateTime(date: item.TimeOfDay)
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let medicationItemSVC = MedicationSelectedItemSVC()
 //        medicationItemSVC.savedMedicationItem = savedMedications.getSavedMedicationItems()![indexPath.row]
 //        medicationItemSVC.parentVC = parentVC
 //        parentVC.pushSubView(newSubView: medicationItemSVC)
-    }
+//    }
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
 //    {

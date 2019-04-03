@@ -12,12 +12,17 @@ import Cartography
 class ExpandingCell : UITableViewCell {
     
     @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var bottomHeight: NSLayoutConstraint!
     
     var middleStackView: UIStackView!
     
     func clear() {
+        
+        bottomView.isHidden = false
+        
         if let view = middleStackView {
             view.removeFromSuperview()
         }

@@ -16,7 +16,6 @@ class MedicationItemSVC : CustomView {
         }
     }
     
-    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var doneCheckButton: DoneCheckButton!
@@ -27,7 +26,6 @@ class MedicationItemSVC : CustomView {
     var item: SavedMedicationDBT!
     {
         didSet {
-            timeLabel.text = OMSDateAccessor.getDateTime(date: item.TimeOfDay)
             nameLabel.text = item.MedicationName
             amountLabel.text = "\(item.MedicationAmount) \(item.MedicationUOM)"
             doneCheckButton.IsDone = savedMedications.wasTaken(item: item)
