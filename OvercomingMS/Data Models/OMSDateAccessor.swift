@@ -24,6 +24,30 @@ class OMSDateAccessor {
     private let realm = try! Realm()
     private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
     
+    var todaysDate : String { // this is to temporarily change the real world date
+        get {
+            if let today = defaults.object(forKey: "today") as? String {
+                initializeTodaysData(date: today)
+                return today
+            }
+            else {
+                defaults.set(OMSDateAccessor.getFormatedDate(date: Date()), forKey: "today")
+                let date = OMSDateAccessor.getFormatedDate(date: Date())
+                initializeTodaysData(date: date)
+                return date
+            }
+        }
+        set {
+            defaults.set(newValue, forKey: "today")
+        }
+    }
+    
+    var todaysFullDate : Date {
+        get {
+            return OMSDateAccessor.getFullDate(date: todaysDate)
+        }
+    }
+    
     static func getFormatedDate(date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
@@ -92,30 +116,6 @@ class OMSDateAccessor {
     func lessThanComparison(left: Date, right: Date) -> Bool {
         let order = Calendar.current.compare(left, to: right, toGranularity: .day)
         return order == .orderedAscending
-    }
-    
-    var todaysDate : String { // this is to temporarily change the real world date
-        get {
-            if let today = defaults.object(forKey: "today") as? String {
-                initializeTodaysData(date: today)
-                return today
-            }
-            else {
-                defaults.set(OMSDateAccessor.getFormatedDate(date: Date()), forKey: "today")
-                let date = OMSDateAccessor.getFormatedDate(date: Date())
-                initializeTodaysData(date: date)
-                return date
-            }
-        }
-        set {
-            defaults.set(newValue, forKey: "today")
-        }
-    }
-    
-    var todaysFullDate : Date {
-        get {
-            return OMSDateAccessor.getFullDate(date: todaysDate)
-        }
     }
     
     func progressDay() {
