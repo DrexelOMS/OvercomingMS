@@ -26,18 +26,7 @@ class MedicationItemSVC : CustomView {
     var item: SavedMedicationDBT!
     {
         didSet {
-            nameLabel.text = item.MedicationName
-            amountLabel.text = "\(item.MedicationAmount) \(item.MedicationUOM)"
-            doneCheckButton.IsDone = savedMedications.wasTaken(item: item)
-            doneCheckButton.isUserInteractionEnabled = savedMedications.isTrackedToday(item: item)
-            if(!doneCheckButton.isUserInteractionEnabled){
-                backgroundColor = UIColor.lightGray
-                backgroundColor?.withAlphaComponent(0.5)
-            }
-            else {
-                backgroundColor = UIColor.clear
-                backgroundColor?.withAlphaComponent(1.0)
-            }
+            updateStyle()
         }
     }
     
@@ -53,7 +42,38 @@ class MedicationItemSVC : CustomView {
         else {
             SavedMedicationDBS().removeTakenMedication(item: item)
         }
+        updateStyle()
         parentVC.reload()
+    }
+    
+    func updateStyle() {
+        nameLabel.text = item.MedicationName
+        amountLabel.text = "\(item.MedicationAmount) \(item.MedicationUOM)"
+        doneCheckButton.IsDone = savedMedications.wasTaken(item: item)
+        doneCheckButton.isUserInteractionEnabled = savedMedications.isTrackedToday(item: item)
+        
+        if doneCheckButton.IsDone {
+            nameLabel.textColor = UIColor.lightGray
+            amountLabel.textColor = UIColor.lightGray
+            let attrString = NSAttributedString(string: nameLabel.text!, attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue])
+            nameLabel.attributedText = attrString
+
+        }
+        else {
+            nameLabel.textColor = UIColor.black
+            amountLabel.textColor = UIColor.black
+            let attrString = NSAttributedString(string: nameLabel.text!)
+            nameLabel.attributedText = attrString
+        }
+        
+        if(!doneCheckButton.isUserInteractionEnabled){
+            backgroundColor = UIColor.lightGray
+            backgroundColor?.withAlphaComponent(0.5)
+        }
+        else {
+            backgroundColor = UIColor.clear
+            backgroundColor?.withAlphaComponent(1.0)
+        }
     }
     
 }
