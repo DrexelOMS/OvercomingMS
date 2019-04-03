@@ -18,6 +18,16 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     let cellName = "ExpandingCell"
     
+    var hasNonTrackedItems = true
+    var tableCount: Int {
+        get {
+            var count = savedMedications.getSavedMedicationItems()?.count ?? 0
+            //if has nonTrackedMeds
+            count += 1
+            return count
+        }
+    }
+    
     override func customSetup() {
         totalsView.isHidden = true
     }
@@ -62,26 +72,39 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return savedMedications.getSavedMedicationItems()?.count ?? 0
+        return tableCount
 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! ExpandingCell
-    
-        let item = savedMedications.getSavedMedicationItems()![indexPath.row]
-        let view = MedicationItemSVC()
-        view.item = item
-        view.parentVC = parentVC
         
-        cell.clear()
-        cell.addToMiddle(view: view)
-        cell.bottomView.isHidden = true
-        cell.bottomHeight.constant = 0
-        cell.topLabel.text =  OMSDateAccessor.getDateTime(date: item.TimeOfDay)
-        
-        return cell
+        if hasNonTrackedItems && indexPath.row == tableCount - 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! ExpandingCell
+            
+            cell.clear()
+            cell.topLabel.text = "Not Taking Today"
+            let view = MedicationNotTakenItemSVC()
+            cell.addToMiddle(view: view)
+            
+            cell.hideBottomView()
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! ExpandingCell
+            
+            let item = savedMedications.getSavedMedicationItems()![indexPath.row]
+            let view = MedicationItemSVC()
+            view.item = item
+            view.parentVC = parentVC
+            
+            cell.clear()
+            cell.addToMiddle(view: view)
+            cell.hideBottomView()
+            cell.topLabel.text =  OMSDateAccessor.getDateTime(date: item.TimeOfDay)
+            
+            return cell
+        }
     }
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

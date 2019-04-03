@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A030F7922555C8600857BC8 /* MedicationNotTakenItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A030F7822555C8600857BC8 /* MedicationNotTakenItemSVC.xib */; };
+		0A030F7B22555C9400857BC8 /* MedicationNotTakenItemSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A030F7A22555C9400857BC8 /* MedicationNotTakenItemSVC.swift */; };
 		0A0818912214647E0021BDF6 /* LengthTFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0818902214647E0021BDF6 /* LengthTFI.swift */; };
 		0A081893221473380021BDF6 /* ExerciseModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A081892221473380021BDF6 /* ExerciseModifyAbstractSVC.swift */; };
 		0A0818962214E6210021BDF6 /* FoodSearchSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0818952214E6210021BDF6 /* FoodSearchSVC.swift */; };
@@ -231,6 +233,8 @@
 
 /* Begin PBXFileReference section */
 		06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A030F7822555C8600857BC8 /* MedicationNotTakenItemSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicationNotTakenItemSVC.xib; sourceTree = "<group>"; };
+		0A030F7A22555C9400857BC8 /* MedicationNotTakenItemSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationNotTakenItemSVC.swift; sourceTree = "<group>"; };
 		0A0818902214647E0021BDF6 /* LengthTFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthTFI.swift; sourceTree = "<group>"; };
 		0A081892221473380021BDF6 /* ExerciseModifyAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModifyAbstractSVC.swift; sourceTree = "<group>"; };
 		0A0818952214E6210021BDF6 /* FoodSearchSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchSVC.swift; sourceTree = "<group>"; };
@@ -859,6 +863,8 @@
 			children = (
 				0AD7EB372223043A006F71C0 /* MedicationItemSVC.swift */,
 				0A19B3C42253F97100F4B02B /* MedicationItemSVC.xib */,
+				0A030F7A22555C9400857BC8 /* MedicationNotTakenItemSVC.swift */,
+				0A030F7822555C8600857BC8 /* MedicationNotTakenItemSVC.xib */,
 				0AD7EB382223043A006F71C0 /* MedicationMainSVC.swift */,
 			);
 			path = Medication;
@@ -1237,6 +1243,7 @@
 				0A08189A2214E7E80021BDF6 /* FoodSearchCell.xib in Resources */,
 				0C7D5866222C652100D00CB0 /* SymptomsMainSVC.xib in Resources */,
 				0CAD6319221DD50500E50E72 /* SeeMoreButtonSVC.xib in Resources */,
+				0A030F7922555C8600857BC8 /* MedicationNotTakenItemSVC.xib in Resources */,
 				0AD7EB13221B4D23006F71C0 /* SelectedLabelsSVC.xib in Resources */,
 				0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */,
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
@@ -1467,6 +1474,7 @@
 				0A0818912214647E0021BDF6 /* LengthTFI.swift in Sources */,
 				0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */,
 				0AEF7A6F223429BF009A0292 /* MeditationTimerSetupSVC.swift in Sources */,
+				0A030F7B22555C9400857BC8 /* MedicationNotTakenItemSVC.swift in Sources */,
 				0AD94DE3220E17BD00B5C2BA /* GuidedCircleButton.swift in Sources */,
 				0A93F15C2213C62A0063A892 /* RecipesCircleButton.swift in Sources */,
 				0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */,

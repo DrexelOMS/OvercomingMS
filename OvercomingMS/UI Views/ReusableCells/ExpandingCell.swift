@@ -14,11 +14,13 @@ class ExpandingCell : UITableViewCell {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var middleView: UIView!
-    @IBOutlet weak var bottomView: UIView!
-    @IBOutlet weak var bottomHeight: NSLayoutConstraint!
+    @IBOutlet private weak var bottomView: UIView!
+    @IBOutlet private weak var bottomHeight: NSLayoutConstraint!
     
     var middleStackView: UIStackView!
     
+    
+    //MUST call clear before doing anything to this cell
     func clear() {
         
         bottomView.isHidden = false
@@ -39,6 +41,11 @@ class ExpandingCell : UITableViewCell {
         middleStackView.translatesAutoresizingMaskIntoConstraints = false
         middleStackView.axis = NSLayoutConstraint.Axis.vertical
         middleStackView.distribution = UIStackView.Distribution.equalSpacing
+    }
+    
+    func hideBottomView() {
+        bottomView.isHidden = true
+        bottomHeight.constant = 0
     }
     
     func addToMiddle(view: UIView) {
