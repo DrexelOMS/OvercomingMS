@@ -94,7 +94,7 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPicker));
         
-        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+        toolbar.setItems([cancelButton,spaceButton,doneButton], animated: false)
         
         return toolbar
     }
