@@ -31,6 +31,9 @@ class MedicationNotTakenItemSVC : CustomView {
     }
     
     override func customSetup() {
+        self.contentView?.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewPressed(tapGestureRecognizer: )))
+        self.contentView?.addGestureRecognizer(tapGesture)
     }
     
     func updateStyle() {
@@ -38,6 +41,13 @@ class MedicationNotTakenItemSVC : CustomView {
         amountLabel.text = "\(item.MedicationAmount) \(item.MedicationUOM)"
         
         WeekdaysLabel.attributedText = MedicationRateModel(rateString: item.Frequency).attributedString()
+    }
+    
+    @objc private func viewPressed(tapGestureRecognizer: UITapGestureRecognizer) {
+        let medicationItemSVC = MedicationSelectedItemSVC()
+        medicationItemSVC.savedMedicationItem = item
+        medicationItemSVC.parentVC = parentVC
+        parentVC.pushSubView(newSubView: medicationItemSVC)
     }
     
 }

@@ -31,7 +31,9 @@ class MedicationItemSVC : CustomView {
     }
     
     override func customSetup() {
-        
+        self.contentView?.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewPressed(tapGestureRecognizer: )))
+        self.contentView?.addGestureRecognizer(tapGesture)
     }
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
@@ -74,6 +76,13 @@ class MedicationItemSVC : CustomView {
             backgroundColor = UIColor.clear
             backgroundColor?.withAlphaComponent(1.0)
         }
+    }
+    
+    @objc private func viewPressed(tapGestureRecognizer: UITapGestureRecognizer) {
+        let medicationItemSVC = MedicationSelectedItemSVC()
+        medicationItemSVC.savedMedicationItem = item
+        medicationItemSVC.parentVC = parentVC
+        parentVC.pushSubView(newSubView: medicationItemSVC)
     }
     
 }

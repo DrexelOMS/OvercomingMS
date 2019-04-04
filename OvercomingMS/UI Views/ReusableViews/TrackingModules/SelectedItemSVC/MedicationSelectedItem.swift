@@ -31,7 +31,7 @@ class MedicationSelectedItemSVC : SelectedItemSVC {
         topMainLabel.text = savedMedicationItem.MedicationName
         middleMainLabel.text = OMSDateAccessor.getDateTime(date: savedMedicationItem.TimeOfDay)
         middleFrequencyLabel.isHidden = false
-        middleFrequencyLabel.text = MedicationRateModel(rateString: savedMedicationItem.Frequency).formattedString()
+        middleFrequencyLabel.attributedText = MedicationRateModel(rateString: savedMedicationItem.Frequency).attributedString()
     }
     
     override func editButtonPressed() {

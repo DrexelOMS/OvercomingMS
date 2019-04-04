@@ -91,6 +91,7 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
             for i in savedMedications.getSavedMedicationItems().medicationsNotTracked {
                 let view = MedicationNotTakenItemSVC()
                 view.item = i
+                view.parentVC = parentVC
                 cell.addToMiddle(view: view)
             }
             
@@ -114,17 +115,5 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
             return cell
         }
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let medicationItemSVC = MedicationSelectedItemSVC()
-//        medicationItemSVC.savedMedicationItem = savedMedications.getSavedMedicationItems()![indexPath.row]
-//        medicationItemSVC.parentVC = parentVC
-//        parentVC.pushSubView(newSubView: medicationItemSVC)
-//    }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-//    {
-//        return 80.0
-//    }
 
 }
