@@ -29,12 +29,12 @@ class MedicationModifyAbstractSVC : ModifyAbstractSVC {
             dateTimeTFI.selectedStartTime = newValue
         }
     }
-    var selectedAmount : Int?  { // In minutes
+    var selectedNote : String?  { // In minutes
         get {
-            return amountTFI.selectedAmount
+            return noteTFI.selectedCustomEntry
         }
         set {
-            amountTFI.selectedAmount = newValue
+            noteTFI.selectedCustomEntry = newValue
         }
     }
     var selectedRate : String? {
@@ -50,7 +50,7 @@ class MedicationModifyAbstractSVC : ModifyAbstractSVC {
     
     var nameTFI = CustomEntryTFI(title: "Name")
     var dateTimeTFI = DateTimeTFI()
-    var amountTFI = AmountTFI(uom: "pills")
+    var noteTFI = CustomEntryTFI(title: "Note")
     var rateTFI = MedicationRateTFI()
     
     override func customSetup() {
@@ -59,7 +59,7 @@ class MedicationModifyAbstractSVC : ModifyAbstractSVC {
         
         textInputStackView.addArrangedSubview(nameTFI)
         textInputStackView.addArrangedSubview(dateTimeTFI)
-        textInputStackView.addArrangedSubview(amountTFI)
+        textInputStackView.addArrangedSubview(noteTFI)
         textInputStackView.addArrangedSubview(rateTFI)
         textInputStackView.translatesAutoresizingMaskIntoConstraints = false
         

@@ -14,14 +14,14 @@ class MedicationEditSVC : MedicationModifyAbstractSVC {
         didSet {
             selectedName = editingMedicationItem.MedicationName
             selectedStartTime = editingMedicationItem.TimeOfDay
-            selectedAmount = editingMedicationItem.MedicationAmount
+            selectedNote = editingMedicationItem.MedicationNote
             selectedRate = editingMedicationItem.Frequency
         }
     }
     
     override func ConfirmPressed() {
         
-        if let name = selectedName, let startTime = selectedStartTime, let amount = selectedAmount, let rate =  selectedRate  {
+        if let name = selectedName, let startTime = selectedStartTime, let note = selectedNote, let rate =  selectedRate  {
 
             if rate == "" {
                 return
@@ -32,8 +32,7 @@ class MedicationEditSVC : MedicationModifyAbstractSVC {
             let newItem = SavedMedicationDBT()
             newItem.MedicationName = name
             newItem.TimeOfDay = startTime
-            newItem.MedicationAmount = amount
-            newItem.MedicationUOM = "pills"
+            newItem.MedicationNote = note
             newItem.Frequency = rate
             
             savedMedications.updateSavedMedicationItem(oldItem: editingMedicationItem, newItem: newItem)

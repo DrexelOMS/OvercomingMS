@@ -17,7 +17,7 @@ class MedicationProgressBar: TrackingProgressBar, IUpdateProgressBar {
         
         var description = ""
         let amountRemaining = savedMedications.getTodaysTotalMedGoal() - savedMedications.getTrackingDay()!.MedicationTotal
-        let uom = "meds"
+        let uom = "sets of meds"
         if(amountRemaining <= 0 || savedMedications.getPercentageComplete() >= 100){
             description = "Daily goal reached!"
         }

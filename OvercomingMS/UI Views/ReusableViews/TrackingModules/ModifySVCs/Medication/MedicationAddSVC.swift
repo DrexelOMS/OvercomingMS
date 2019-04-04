@@ -12,7 +12,7 @@ class MedicationAddSVC : MedicationModifyAbstractSVC {
     
     override func ConfirmPressed() {
         
-        if let name = selectedName, let startTime = selectedStartTime, let amount = selectedAmount, let rate = selectedRate  {
+        if let name = selectedName, let startTime = selectedStartTime, let note = selectedNote, let rate = selectedRate  {
             
             if rate == "" {
                 return
@@ -20,7 +20,7 @@ class MedicationAddSVC : MedicationModifyAbstractSVC {
             
             print("Rate: " + rate)
             
-            savedMedications.addMedicationItem(medicationName: name, timeOfDay: startTime, medicationAmount: amount, medicationUOM: "pills", freq: rate, active: true)
+            savedMedications.addMedicationItem(medicationName: name, timeOfDay: startTime, medicationNote: note, freq: rate, active: true)
             
             parentVC.reload();
             parentVC.resetToDefaultView()
