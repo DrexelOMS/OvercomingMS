@@ -53,8 +53,9 @@ class SavedMedicationDBS: TrackingModulesDBS {
 
     //TODO: we need a better way to delete items
 //get all the saved medications
-    func getSavedMedicationItems() -> List<SavedMedicationDBT>? {
-        let savedMeds: List<SavedMedicationDBT> = List<SavedMedicationDBT>()
+    func getSavedMedicationItems() -> DisplayedMedicationItems {
+        let trackedMeds: List<SavedMedicationDBT> = List<SavedMedicationDBT>()
+        let untrackedMeds: List<SavedMedicationDBT> = List<SavedMedicationDBT>()
         let da = OMSDateAccessor()
         for med in realm.objects(SavedMedicationDBT.self) {
             if let deleteDate = med.DateDeleted {
@@ -65,9 +66,16 @@ class SavedMedicationDBS: TrackingModulesDBS {
             if da.lessThanComparison(left: globalCurrentFullDate, right: med.DateCreated) {
                 continue
             }
-            savedMeds.append(med)
+            
+            if isTrackedToday(item: med) {
+                trackedMeds.append(med)
+            }
+            else {
+                untrackedMeds.append(med)
+            }
+            
         }
-        return savedMeds
+        return DisplayedMedicationItems(trackedMeds: trackedMeds, untrackedMeds: untrackedMeds)
     }
 
     func updateSavedMedicationItem(oldItem: SavedMedicationDBT, newItem: SavedMedicationDBT) {
@@ -143,18 +151,9 @@ class SavedMedicationDBS: TrackingModulesDBS {
     
     //TODO: this is not correct?
     func getTodaysTotalMedGoal() -> Int {
-        var count = 0
+        let meds = getSavedMedicationItems()
 
-        if let meds = getSavedMedicationItems(){
-            let todaysLetter = OMSDateAccessor.getDayOfWeekLetter(globalCurrentDate)
-            for med in meds {
-                
-                if med.Frequency.contains(todaysLetter) {
-                    count += 1
-                }
-            }
-        }
-        return count
+        return meds.medicationsTracked.count
     }
     
     //TODO: this is not correct?

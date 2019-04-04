@@ -20,12 +20,15 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     //TODO apply proper calculations to get the list of nonTracked med items for the day
     //and tracked items for the day, and use count of tracked items + if (hasNontrackedItems} count += 1
-    var hasNonTrackedItems = true
+    var hasNonTrackedItems: Bool {
+        return savedMedications.getSavedMedicationItems().hasUntrackedMeds()
+    }
     var tableCount: Int {
         get {
-            var count = savedMedications.getSavedMedicationItems()?.count ?? 0
-            //if has nonTrackedMeds
-            count += 1
+            var count = savedMedications.getSavedMedicationItems().medicationsTracked.count
+            if hasNonTrackedItems {
+                count += 1
+            }
             return count
         }
     }
@@ -75,7 +78,6 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableCount
-
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,10 +88,11 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
             cell.clear()
             cell.topLabel.text = "Not Taking Today"
             
-            let item = savedMedications.getSavedMedicationItems()![indexPath.row - 1]
-            let view = MedicationNotTakenItemSVC()
-            view.item = item
-            cell.addToMiddle(view: view)
+            for i in savedMedications.getSavedMedicationItems().medicationsNotTracked {
+                let view = MedicationNotTakenItemSVC()
+                view.item = i
+                cell.addToMiddle(view: view)
+            }
             
             cell.hideBottomView()
             return cell
@@ -97,7 +100,7 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! ExpandingCell
         
-            let item = savedMedications.getSavedMedicationItems()![indexPath.row]
+            let item = savedMedications.getSavedMedicationItems().medicationsTracked[indexPath.row]
             
             let view = MedicationItemSVC()
             view.item = item
