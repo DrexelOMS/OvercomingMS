@@ -50,7 +50,7 @@ class MedicationItemSVC : CustomView {
     
     func updateStyle() {
         nameLabel.text = item.MedicationName
-        amountLabel.text = "\(item.MedicationAmount) \(item.MedicationUOM)"
+        amountLabel.text = "\(item.MedicationNote)"
         doneCheckButton.IsDone = savedMedications.wasTaken(item: item)
         doneCheckButton.isUserInteractionEnabled = savedMedications.isTrackedToday(item: item)
         

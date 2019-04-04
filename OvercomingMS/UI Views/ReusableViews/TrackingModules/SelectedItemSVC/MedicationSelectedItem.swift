@@ -23,11 +23,11 @@ class MedicationSelectedItemSVC : SelectedItemSVC {
         
         topSubLabel.text = "Name"
         middleSubLabel.text = "Time"
-        bottomSubLabel.text = "Amount"
+        bottomSubLabel.text = "Note"
     }
     
     override func reload() {
-        bottomMainLabel.text = "\(savedMedicationItem.MedicationAmount) \(savedMedicationItem.MedicationUOM)"
+        bottomMainLabel.text = "\(savedMedicationItem.MedicationNote)"
         topMainLabel.text = savedMedicationItem.MedicationName
         middleMainLabel.text = OMSDateAccessor.getDateTime(date: savedMedicationItem.TimeOfDay)
         middleFrequencyLabel.isHidden = false
@@ -46,7 +46,7 @@ class MedicationSelectedItemSVC : SelectedItemSVC {
     }
     
     func repeatItem() {
-        SavedMedicationDBS().addMedicationItem(medicationName: savedMedicationItem.MedicationName, timeOfDay: savedMedicationItem.TimeOfDay, medicationAmount: savedMedicationItem.MedicationAmount, medicationUOM: savedMedicationItem.MedicationUOM, freq: savedMedicationItem.Frequency, active: true)
+        SavedMedicationDBS().addMedicationItem(medicationName: savedMedicationItem.MedicationName, timeOfDay: savedMedicationItem.TimeOfDay, medicationNote: savedMedicationItem.MedicationNote, freq: savedMedicationItem.Frequency, active: true)
     }
     
     

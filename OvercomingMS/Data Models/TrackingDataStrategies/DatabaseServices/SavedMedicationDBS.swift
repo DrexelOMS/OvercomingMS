@@ -29,7 +29,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
         }
     }
     
-    func addMedicationItem(medicationName: String, timeOfDay: Date, medicationAmount: Int, medicationUOM: String, freq: String, active: Bool) {
+    func addMedicationItem(medicationName: String, timeOfDay: Date, medicationNote: String, freq: String, active: Bool) {
         let percent = getPercentageComplete()
         do {
             try realm.write() {
@@ -38,8 +38,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
                 item.MedicationName = medicationName
                 item.DateCreated = OMSDateAccessor.getFullDate(date: globalCurrentDate)
                 item.TimeOfDay = timeOfDay
-                item.MedicationAmount = medicationAmount
-                item.MedicationUOM = medicationUOM
+                item.MedicationNote = medicationNote
                 item.Frequency = freq
                 realm.add(item)
             }
@@ -84,8 +83,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
             try realm.write() {
                 oldItem.MedicationName = newItem.MedicationName
                 oldItem.TimeOfDay = newItem.TimeOfDay
-                oldItem.MedicationAmount = newItem.MedicationAmount
-                oldItem.MedicationUOM = newItem.MedicationUOM
+                oldItem.MedicationNote = newItem.MedicationNote
                 oldItem.Frequency = newItem.Frequency
             }
         } catch {

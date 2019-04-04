@@ -38,7 +38,7 @@ class MedicationNotTakenItemSVC : CustomView {
     
     func updateStyle() {
         nameLabel.text = item.MedicationName
-        amountLabel.text = "\(item.MedicationAmount) \(item.MedicationUOM)"
+        amountLabel.text = "\(item.MedicationNote)"
         
         WeekdaysLabel.attributedText = MedicationRateModel(rateString: item.Frequency).attributedString()
     }
