@@ -23,7 +23,6 @@ class SwipeDownVC : DismissableVC {
         pullBarSVC.colorTheme = theme.withAlphaComponent(0.6)
         view.backgroundColor = theme.withAlphaComponent(0.6)
         setupGestures()
-        
     }
     
     private func setupContentStackView() {
