@@ -13,6 +13,7 @@ import RealmSwift
 class SymptomsNoteDBT: Object {
     @objc dynamic var Note : String = ""
     @objc dynamic var DateCreated : Date = Date()
+    @objc dynamic var SymptomsRating: Int = 1 // rate from 1-5
     
     var parentDay = LinkingObjects(fromType: TrackingDayDBT.self, property: "symptomsNoteDT")
 

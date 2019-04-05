@@ -29,15 +29,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPr-64-u4P" userLabel="BorderTop">
-                    <rect key="frame" x="20" y="0.0" width="280" height="1"/>
-                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="AkI-si-Hby"/>
-                    </constraints>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ttt-pQ-ryf" userLabel="MainView">
-                    <rect key="frame" x="0.0" y="1" width="320" height="449"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
                     <userGuides>
                         <userLayoutGuide location="107" affinity="minX"/>
                         <userLayoutGuide location="123" affinity="minX"/>
@@ -187,13 +180,13 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f3w-FE-AYF">
-                            <rect key="frame" x="0.0" y="319" width="320" height="60"/>
+                            <rect key="frame" x="0.0" y="320" width="320" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="cab-Ad-t2M"/>
                             </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xjg-f0-uHe" customClass="SquareButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="399" width="320" height="50"/>
+                            <rect key="frame" x="0.0" y="400" width="320" height="50"/>
                             <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="5XO-w7-qqc"/>
@@ -217,13 +210,10 @@
             </subviews>
             <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Ttt-pQ-ryf" firstAttribute="top" secondItem="lPr-64-u4P" secondAttribute="bottom" id="3Wx-e9-NJ8"/>
-                <constraint firstAttribute="trailing" secondItem="lPr-64-u4P" secondAttribute="trailing" constant="20" id="6DR-dA-UCn"/>
-                <constraint firstItem="lPr-64-u4P" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="KGg-di-HJO"/>
+                <constraint firstItem="Ttt-pQ-ryf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="2EB-uz-Whd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ttt-pQ-ryf" secondAttribute="bottom" id="Lu3-hx-Jme"/>
                 <constraint firstItem="Ttt-pQ-ryf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NA2-FL-2vb"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ttt-pQ-ryf" secondAttribute="trailing" id="adB-OX-aOw"/>
-                <constraint firstItem="lPr-64-u4P" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="stx-RX-7Cx"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

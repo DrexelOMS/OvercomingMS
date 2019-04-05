@@ -187,8 +187,6 @@ class TrackingDayDBT: Object {
     
     //MARK: ---------------------- SYMPTOMS ------------------------------
     
-    @objc dynamic var SymptomsRating: Int = 1 // rate from 1-5
-    
     let symptomsNoteDT = List<SymptomsNoteDBT>()
     
     //MARK: ---------------------- SYMPTOMS ------------------------------

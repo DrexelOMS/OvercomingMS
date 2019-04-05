@@ -83,8 +83,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             case .Medication:
                 name = "Medication"
                 color = medicationBar.colorTheme
-            default:
-                break;
             }
             let message = "You Completed \(name). Great Work!"
             header.displayTrackingMessage(colorTheme: color, message: message)
@@ -318,7 +316,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         let vc = SymptomsVC()
         vc.modalPresentationStyle = .overCurrentContext
         vc.dismissalDelegate = self
-        vc.theme = UIColor(red: 130 / 255.0, green: 145 / 255.0, blue: 201 / 255.0, alpha: 1.0)
+        vc.theme = UIColor(red: 166 / 255.0, green: 69 / 255.0, blue: 210 / 255.0, alpha: 1.0)
         
         self.present(vc, animated: true, completion: nil)
     }
