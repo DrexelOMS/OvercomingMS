@@ -96,10 +96,10 @@
                             <rect key="frame" x="0.0" y="90" width="320" height="348"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VGO-Oe-ZrC">
-                                    <rect key="frame" x="20" y="20" width="280" height="298"/>
+                                    <rect key="frame" x="20" y="20" width="280" height="328"/>
                                     <subviews>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GYa-6d-7me">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="298"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="328"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableView>
                                     </subviews>
@@ -108,7 +108,7 @@
                             <constraints>
                                 <constraint firstItem="VGO-Oe-ZrC" firstAttribute="top" secondItem="a4S-L6-DDE" secondAttribute="top" constant="20" id="8Q4-HY-p9A"/>
                                 <constraint firstAttribute="trailing" secondItem="VGO-Oe-ZrC" secondAttribute="trailing" constant="20" id="BAp-BW-Awd"/>
-                                <constraint firstAttribute="bottom" secondItem="VGO-Oe-ZrC" secondAttribute="bottom" constant="30" id="PZQ-xD-qRs"/>
+                                <constraint firstAttribute="bottom" secondItem="VGO-Oe-ZrC" secondAttribute="bottom" id="PZQ-xD-qRs"/>
                                 <constraint firstItem="VGO-Oe-ZrC" firstAttribute="leading" secondItem="a4S-L6-DDE" secondAttribute="leading" constant="20" id="mQ5-CK-uPI"/>
                             </constraints>
                         </view>

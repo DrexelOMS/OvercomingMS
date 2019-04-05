@@ -10,43 +10,15 @@ import Foundation
 import RealmSwift
 
 class SymptomsNoteDBS: TrackingModulesDBS {
-  
-    /* I don't think we need this for symptoms???
-    func toggleFilledData() {
-        let date = globalCurrentDate
-        do {
-            try realm.write() {
-                if let day = getTrackingDay(date: date) {
-                    day.IsExerciseComplete = !day.IsExerciseComplete
-                }
-            }
-        } catch {
-            print("Error updating todays data : \(error)" )
-        }
-        
-    }*/
     
-    func rateTodaysSymptoms(rating: Int)
-    {
-        let date = globalCurrentDate
-        do {
-            try realm.write() {
-                if let day = getTrackingDay(date: date) {
-                    day.SymptomsRating = rating
-                }
-            }
-        } catch {
-            print("Error updating Symptoms Rating : \(error)" )
-        }
-    }
-    
-    func addNote(note: String, dateCreated: Date) {
+    func addNote(note: String, symptomsRating: Int, dateCreated: Date) {
         do {
             try realm.write() {
                 if let day = getTrackingDay(date: globalCurrentDate) {
                     let item = SymptomsNoteDBT()
                     item.Note = note
                     item.DateCreated = dateCreated
+                    item.SymptomsRating = symptomsRating
                     day.symptomsNoteDT.append(item)
                 }
             }
@@ -76,6 +48,7 @@ class SymptomsNoteDBS: TrackingModulesDBS {
             try realm.write() {
                 oldItem.Note = newItem.Note
                 oldItem.DateCreated = newItem.DateCreated
+                oldItem.SymptomsRating = newItem.SymptomsRating
             }
         } catch {
             print("Error update Symptom Notes: \(error)")
