@@ -13,7 +13,7 @@ protocol TFIDelegate: class {
     func OnTFIClosed(tfi: TFIAbstract, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions, keyboardHeight: CGFloat)
 }
 
-class TFIAbstract : CustomView, UITextFieldDelegate {
+class TFIAbstract : CustomView, UITextFieldDelegate, ToolBarDelegate {
     
     override var nibName: String {
         get {
@@ -29,11 +29,13 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     
     var parentVC: SlidingStackVC!
     var tfiDelegate: TFIDelegate?
+    let toolbar = ToolBar()
     var active: Bool = false
     
     override func customSetup() {
         textField.delegate = self
-        textField.inputAccessoryView = getToolBar()
+        toolbar.delegate = self
+        textField.inputAccessoryView = toolbar.getToolBar()
         
         NotificationCenter.default.addObserver(
             self,
@@ -65,7 +67,7 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
         fatalError("showtextFieldInput not implemented")
     }
     
-    @objc private func donePicker(){
+    internal func donePressed(){
         doneFunction()
     }
     
@@ -73,7 +75,7 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
         closePicker()
     }
     
-    @objc private func cancelPicker(){
+    internal func cancelPressed(){
         cancelFunction()
     }
     
@@ -83,20 +85,6 @@ class TFIAbstract : CustomView, UITextFieldDelegate {
     
     func closePicker() {
         parentVC.view.endEditing(true)
-    }
-    
-    private func getToolBar() -> UIToolbar{
-        
-        //ToolBar
-        let toolbar = UIToolbar();
-        toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donePicker));
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPicker));
-        
-        toolbar.setItems([cancelButton,spaceButton,doneButton], animated: false)
-        
-        return toolbar
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
