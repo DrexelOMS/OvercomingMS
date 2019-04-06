@@ -19,7 +19,7 @@ class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataS
     let defaultCellName = "NoteCell"
     
     let savedNotes = SymptomsNoteDBS()
-    
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: AddCircleButton!
     @IBOutlet weak var listButton: ListCircleButton!
@@ -75,7 +75,7 @@ class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataS
     }
     
     func addButtonPressed() {
-        savedNotes.addNote(note: "TestNote", symptomsRating: 1, dateCreated: Date())
+        parentVC.pushSubView(newSubView: NoteReviewSVC())
     }
     
     func listButtonPressed() {

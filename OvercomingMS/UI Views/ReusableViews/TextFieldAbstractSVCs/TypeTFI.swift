@@ -118,3 +118,19 @@ class MeditationTypeTFI: TypeTFIAbstract {
     }
     
 }
+
+class SeverityTFI: TypeTFIAbstract {
+    
+    override var title: String {
+        get {
+            return "Severity"
+        }
+    }
+    
+    override var choices: [String] {
+        get {
+            return ["1", "2", "3", "4", "5"]
+        }
+    }
+    
+}
