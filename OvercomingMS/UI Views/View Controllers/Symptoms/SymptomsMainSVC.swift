@@ -34,14 +34,23 @@ class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataS
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: defaultCellName, bundle: nil), forCellReuseIdentifier: defaultCellName)
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.separatorStyle = .none
         
         reload()
     }
     
     override func reload() {
         tableView.reloadData()
+        
+        let count = savedNotes.getTodaysNotes()?.count ?? 0
+        if count <= 0 {
+            tableView.setEmptyView(message: "No notes yet!")
+        }
+        else {
+            tableView.restore()
+            //This code is specific to tables that need dynamic cell height and do not need the separator line, like here and medication
+            tableView.rowHeight = UITableView.automaticDimension
+            tableView.separatorStyle = .none
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
