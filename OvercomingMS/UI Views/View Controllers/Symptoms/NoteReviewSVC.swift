@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NoteReviewSVC: SlidingAbstractSVC {
+class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate {
     
     override var nibName: String {
         get {
@@ -18,17 +18,20 @@ class NoteReviewSVC: SlidingAbstractSVC {
     
     var editingNote: SymptomsNoteDBT!
     
-    @IBOutlet weak var noteLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var noteTextField: UITextView!
     @IBOutlet weak var deleteCircleButton: DeleteCircleButton!
     @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
+    
+    let toolbar = ToolBar()
     
     convenience init(noteItem: SymptomsNoteDBT) {
         self.init()
         
         editingNote = noteItem
-        noteLabel.text = editingNote.Note
-        timeLabel.text = OMSDateAccessor.getDateTime(date: editingNote.DateCreated)
+        noteTextField.text = editingNote.Note
+        toolbar.delegate = self
+        noteTextField.inputAccessoryView = toolbar.getToolBar()
+        //timeLabel.text = OMSDateAccessor.getDateTime(date: editingNote.DateCreated)
     }
     
     override func customSetup() {
@@ -62,6 +65,14 @@ class NoteReviewSVC: SlidingAbstractSVC {
     
     func backPressed() {
         parentVC.resetToDefaultView()
+    }
+    
+    func donePressed() {
+        parentVC.view.endEditing(true)
+    }
+    
+    func cancelPressed() {
+        parentVC.view.endEditing(true)
     }
     
 }

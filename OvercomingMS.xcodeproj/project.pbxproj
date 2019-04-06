@@ -62,6 +62,7 @@
 		0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA712204AFC3004074F3 /* Quicksand-Light.otf */; };
 		0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA722204AFC3004074F3 /* Quicksand-Regular.otf */; };
 		0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BAA732204AFC3004074F3 /* Quicksand_Dash.otf */; };
+		0A341D732258F8E20066EC1D /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A341D722258F8E20066EC1D /* ToolBar.swift */; };
 		0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */; };
 		0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */; };
 		0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */; };
@@ -289,6 +290,7 @@
 		0A2BAA712204AFC3004074F3 /* Quicksand-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.otf"; sourceTree = "<group>"; };
 		0A2BAA722204AFC3004074F3 /* Quicksand-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.otf"; sourceTree = "<group>"; };
 		0A2BAA732204AFC3004074F3 /* Quicksand_Dash.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Quicksand_Dash.otf; sourceTree = "<group>"; };
+		0A341D722258F8E20066EC1D /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
 		0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingViewController.swift; sourceTree = "<group>"; };
 		0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationModuleVC.swift; sourceTree = "<group>"; };
 		0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDModuleVC.swift; sourceTree = "<group>"; };
@@ -737,6 +739,7 @@
 				0AD7EAF1221B0047006F71C0 /* CustomEntryTFI.swift */,
 				0A93F19022145EA30063A892 /* DateTimeTFI.swift */,
 				0A93F19122145EA30063A892 /* TFIAbstract.swift */,
+				0A341D722258F8E20066EC1D /* ToolBar.swift */,
 			);
 			path = TextFieldAbstractSVCs;
 			sourceTree = "<group>";
@@ -1507,6 +1510,7 @@
 				0AD7EAFA221B1A5A006F71C0 /* Omega3AddSVC.swift in Sources */,
 				0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */,
 				0AD94DCF220DE7CB00B5C2BA /* RepeatConfirmationSVC.swift in Sources */,
+				0A341D732258F8E20066EC1D /* ToolBar.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
 				0AEF7A6D22341EC0009A0292 /* TitleTimeOverTextCell.swift in Sources */,
 				0A93F15D2213C62A0063A892 /* SearchCircleButton.swift in Sources */,
