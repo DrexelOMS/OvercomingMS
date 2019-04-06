@@ -106,7 +106,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     }
     
     func backPressed() {
-        parentVC.resetToDefaultView()
+        parentVC.popSubView()
     }
     
     func confirmPressed() {
@@ -128,7 +128,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
                 savedNotes.addNote(note: note, symptomsRating: rating, dateCreated: date)
             }
             
-             parentVC.resetToDefaultView()
+             parentVC.popSubView()
         }
     }
     
