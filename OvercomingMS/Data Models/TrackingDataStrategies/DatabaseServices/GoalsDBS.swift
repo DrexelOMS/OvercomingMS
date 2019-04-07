@@ -22,7 +22,7 @@ class GoalsDBS {
     var meditationGoalToSet: Int?
     
     //TODO: This list must be sorted from earliest to latest
-    private var goals: [GoalsDBT] {
+    var goals: [GoalsDBT] {
         get {
             let results: Results<GoalsDBT> = realm.objects(GoalsDBT.self)
             let converted = results.reduce(List<GoalsDBT>()) { (list, element) -> List<GoalsDBT> in
