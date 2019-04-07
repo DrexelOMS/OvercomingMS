@@ -42,17 +42,92 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-wl-uUU" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="30" width="260" height="140"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3o-dP-hyb">
-                                            <rect key="frame" x="0.0" y="0.0" width="260" height="140"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i3o-dP-hyb">
+                                            <rect key="frame" x="10" y="10" width="240" height="120"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEO-Y6-0RM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discover" translatesAutoresizingMaskIntoConstraints="NO" id="39o-Jw-Tve">
+                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="120" id="1gf-lt-qg7"/>
+                                                                <constraint firstAttribute="width" constant="120" id="8qo-Rf-XRc"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="39o-Jw-Tve" firstAttribute="centerY" secondItem="dEO-Y6-0RM" secondAttribute="centerY" id="Ax3-3O-iGV"/>
+                                                        <constraint firstItem="39o-Jw-Tve" firstAttribute="centerX" secondItem="dEO-Y6-0RM" secondAttribute="centerX" id="vlu-H2-Xpv"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Y4-Og-L5J">
+                                                    <rect key="frame" x="120" y="0.0" width="120" height="120"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="OQC-sm-xVi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-5t-STe">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="16.5"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="DISCOVER THE">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.0" green="0.6705882352941176" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <font key="NSFont" size="16" name="Avenir-Black"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-Oz-Hfm">
+                                                                    <rect key="frame" x="0.0" y="16.5" width="120" height="50.5"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="OMS">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.0" green="0.6705882352941176" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <font key="NSFont" size="50" name="Avenir-Black"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-kA-aZ0">
+                                                                    <rect key="frame" x="0.0" y="67" width="120" height="53"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="DIET">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.0" green="0.6705882352941176" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <font key="NSFont" size="52" name="Avenir-Black"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="OQC-sm-xVi" firstAttribute="top" secondItem="6Y4-Og-L5J" secondAttribute="top" id="CeQ-0n-jok"/>
+                                                        <constraint firstItem="OQC-sm-xVi" firstAttribute="leading" secondItem="6Y4-Og-L5J" secondAttribute="leading" id="MZX-n6-Emz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="OQC-sm-xVi" secondAttribute="trailing" id="ZXc-qN-yns"/>
+                                                        <constraint firstAttribute="bottom" secondItem="OQC-sm-xVi" secondAttribute="bottom" id="jnW-Fs-XlQ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
                                         </stackView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="i3o-dP-hyb" secondAttribute="bottom" id="JkM-gm-2ft"/>
+                                        <constraint firstAttribute="bottom" secondItem="i3o-dP-hyb" secondAttribute="bottom" constant="10" id="JkM-gm-2ft"/>
                                         <constraint firstAttribute="height" constant="140" id="VC6-ci-1dv"/>
-                                        <constraint firstAttribute="trailing" secondItem="i3o-dP-hyb" secondAttribute="trailing" id="ZLv-Vo-LQE"/>
-                                        <constraint firstItem="i3o-dP-hyb" firstAttribute="top" secondItem="Zlc-wl-uUU" secondAttribute="top" id="kW9-gy-BC9"/>
-                                        <constraint firstItem="i3o-dP-hyb" firstAttribute="leading" secondItem="Zlc-wl-uUU" secondAttribute="leading" id="xB1-ix-zZU"/>
+                                        <constraint firstAttribute="trailing" secondItem="i3o-dP-hyb" secondAttribute="trailing" constant="10" id="ZLv-Vo-LQE"/>
+                                        <constraint firstItem="i3o-dP-hyb" firstAttribute="top" secondItem="Zlc-wl-uUU" secondAttribute="top" constant="10" id="kW9-gy-BC9"/>
+                                        <constraint firstItem="i3o-dP-hyb" firstAttribute="leading" secondItem="Zlc-wl-uUU" secondAttribute="leading" constant="10" id="xB1-ix-zZU"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dB4-0a-Eeb" userLabel="PaddingTop">
@@ -157,4 +232,7 @@
             <point key="canvasLocation" x="9.5999999999999996" y="133.13343328335833"/>
         </view>
     </objects>
+    <resources>
+        <image name="Discover" width="689" height="689"/>
+    </resources>
 </document>
