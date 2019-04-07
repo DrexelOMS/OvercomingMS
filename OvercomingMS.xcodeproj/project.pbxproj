@@ -199,6 +199,7 @@
 		0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
 		0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAFDD22163057004C1966 /* SearchBarButton.xib */; };
+		0C515547225942B800D9310D /* SavedCircleButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C515546225942B800D9310D /* SavedCircleButtton.swift */; };
 		0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */; };
 		0C7D5866222C652100D00CB0 /* SymptomsMainSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7D5865222C652100D00CB0 /* SymptomsMainSVC.xib */; };
 		0C7D5868222D8DA300D00CB0 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7D5867222D8DA300D00CB0 /* NoteCell.xib */; };
@@ -443,6 +444,7 @@
 		0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishCircleButton.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
 		0C2DAFDD22163057004C1966 /* SearchBarButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarButton.xib; sourceTree = "<group>"; };
+		0C515546225942B800D9310D /* SavedCircleButtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCircleButtton.swift; sourceTree = "<group>"; };
 		0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackConfirmButtonsSVC.xib; sourceTree = "<group>"; };
 		0C7D5865222C652100D00CB0 /* SymptomsMainSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SymptomsMainSVC.xib; sourceTree = "<group>"; };
 		0C7D5867222D8DA300D00CB0 /* NoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
@@ -613,20 +615,21 @@
 			isa = PBXGroup;
 			children = (
 				0A1FEC642206203F006CED70 /* AddCircleButton.swift */,
+				0AF8E0DE22092A5E00E1EC33 /* CancelCircleButton.swift */,
+				0AD94DD6220DEEB300B5C2BA /* DeleteCircleButton.swift */,
+				0AD94DD2220DEE8000B5C2BA /* EditCircleButton.swift */,
+				0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */,
+				0AD94DE2220E17BD00B5C2BA /* GuidedCircleButton.swift */,
 				0A030F8C2257F09600857BC8 /* ListCircleButton.swift */,
-				0A98DB0C221622E900F4800D /* SupplementCircleButton.swift */,
 				0AD7EB03221B2FD6006F71C0 /* OutsideCircleButton.swift */,
 				0A93F1592213C62A0063A892 /* RecipesCircleButton.swift */,
+				0C515546225942B800D9310D /* SavedCircleButtton.swift */,
 				0A93F15B2213C62A0063A892 /* ScanCircleButton.swift */,
 				0A93F15A2213C62A0063A892 /* SearchCircleButton.swift */,
-				0AD94DE2220E17BD00B5C2BA /* GuidedCircleButton.swift */,
+				0A98DB0C221622E900F4800D /* SupplementCircleButton.swift */,
 				0A1FEC662206204E006CED70 /* TimerCircleButton.swift */,
-				0AF8E0DE22092A5E00E1EC33 /* CancelCircleButton.swift */,
 				0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */,
-				0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */,
-				0AD94DD2220DEE8000B5C2BA /* EditCircleButton.swift */,
 				0AD94DD4220DEEA100B5C2BA /* RepeatCircleButton.swift */,
-				0AD94DD6220DEEB300B5C2BA /* DeleteCircleButton.swift */,
 			);
 			path = CircleButtonSVCs;
 			sourceTree = "<group>";
@@ -1498,6 +1501,7 @@
 				0A030FBC22580A1500857BC8 /* Omega3HistoryDBT.swift in Sources */,
 				0A98DB0F2216447800F4800D /* SearchBarButton.swift in Sources */,
 				0A030FAF22580A1500857BC8 /* Omega3HistoryDBS.swift in Sources */,
+				0C515547225942B800D9310D /* SavedCircleButtton.swift in Sources */,
 				0AD94DD3220DEE8000B5C2BA /* EditCircleButton.swift in Sources */,
 				0A0818912214647E0021BDF6 /* LengthTFI.swift in Sources */,
 				0A1FEC552204E7F8006CED70 /* QuickCompleteFoodVC.swift in Sources */,
