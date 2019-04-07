@@ -26,7 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error initialising new realm, \(error)")
         }
         
-        GoalsDBS().writeGoals()
+        let goals = GoalsDBS().goals
+        if goals.count <= 0 {
+            GoalsDBS().writeGoals()
+        }
         
         return true
     }
