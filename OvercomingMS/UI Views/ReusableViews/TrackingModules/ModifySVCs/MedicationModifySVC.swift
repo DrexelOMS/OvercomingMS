@@ -9,7 +9,7 @@
 import UIKit
 import Cartography
 
-class MedicationModifyAbstractSVC : ModifyAbstractSVC {
+class MedicationModifySVC : ModifyAbstractSVC {
     
     let savedMedications = SavedMedicationDBS()
     
@@ -53,6 +53,15 @@ class MedicationModifyAbstractSVC : ModifyAbstractSVC {
     var noteTFI = CustomEntryTFI(title: "Note")
     var rateTFI = MedicationRateTFI()
     
+    var editingMedicationItem : SavedMedicationDBT!{
+        didSet {
+            selectedName = editingMedicationItem.MedicationName
+            selectedStartTime = editingMedicationItem.TimeOfDay
+            selectedNote = editingMedicationItem.MedicationNote
+            selectedRate = editingMedicationItem.Frequency
+        }
+    }
+    
     override func customSetup() {
         //set the initial text and start time of the textField
         selectedStartTime = Date()
@@ -68,4 +77,29 @@ class MedicationModifyAbstractSVC : ModifyAbstractSVC {
         
     }
     
+    override func ConfirmPressed() {
+        
+        if let name = selectedName, let startTime = selectedStartTime, let note = selectedNote, let rate = selectedRate  {
+            
+            if rate == "" {
+                return
+            }
+            
+            if editingMedicationItem == nil {
+                savedMedications.addMedicationItem(medicationName: name, timeOfDay: startTime, medicationNote: note, freq: rate, active: true)
+            }
+            else {
+                let newItem = SavedMedicationDBT()
+                newItem.MedicationName = name
+                newItem.TimeOfDay = startTime
+                newItem.MedicationNote = note
+                newItem.Frequency = rate
+                
+                savedMedications.updateSavedMedicationItem(oldItem: editingMedicationItem, newItem: newItem)
+            }
+            parentVC.reload();
+            parentVC.resetToDefaultView()
+        }
+        
+    }
 }

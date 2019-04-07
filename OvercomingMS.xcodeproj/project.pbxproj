@@ -134,15 +134,13 @@
 		0AD7EB332223040F006F71C0 /* DoneCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB322223040F006F71C0 /* DoneCheckButton.swift */; };
 		0AD7EB3A2223043A006F71C0 /* MedicationItemSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB372223043A006F71C0 /* MedicationItemSVC.swift */; };
 		0AD7EB3B2223043A006F71C0 /* MedicationMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB382223043A006F71C0 /* MedicationMainSVC.swift */; };
-		0AD7EB3F22230464006F71C0 /* MedicationModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB3D22230464006F71C0 /* MedicationModifyAbstractSVC.swift */; };
-		0AD7EB4022230464006F71C0 /* MedicationAddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB3E22230464006F71C0 /* MedicationAddSVC.swift */; };
+		0AD7EB3F22230464006F71C0 /* MedicationModifySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB3D22230464006F71C0 /* MedicationModifySVC.swift */; };
 		0AD7EB42222341B3006F71C0 /* MedicationRateTFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB41222341B3006F71C0 /* MedicationRateTFI.swift */; };
 		0AD7EB4422234491006F71C0 /* MedRateButtonsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4322234491006F71C0 /* MedRateButtonsSVC.swift */; };
 		0AD7EB4622234524006F71C0 /* MedRateButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4522234524006F71C0 /* MedRateButtonsSVC.xib */; };
 		0AD7EB48222345A9006F71C0 /* ToggleLabeledCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */; };
 		0AD7EB4A22249DD0006F71C0 /* MedicationRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */; };
 		0AD7EB4C2224B9EC006F71C0 /* MedicationSelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4B2224B9EC006F71C0 /* MedicationSelectedItem.swift */; };
-		0AD7EB4E2224C057006F71C0 /* MedicationEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB4D2224C057006F71C0 /* MedicationEditSVC.swift */; };
 		0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */; };
 		0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */; };
 		0AD94DC8220CE46A00B5C2BA /* SelectedItemSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD94DC7220CE46A00B5C2BA /* SelectedItemSVC.xib */; };
@@ -368,15 +366,13 @@
 		0AD7EB322223040F006F71C0 /* DoneCheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneCheckButton.swift; sourceTree = "<group>"; };
 		0AD7EB372223043A006F71C0 /* MedicationItemSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationItemSVC.swift; sourceTree = "<group>"; };
 		0AD7EB382223043A006F71C0 /* MedicationMainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationMainSVC.swift; sourceTree = "<group>"; };
-		0AD7EB3D22230464006F71C0 /* MedicationModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationModifyAbstractSVC.swift; sourceTree = "<group>"; };
-		0AD7EB3E22230464006F71C0 /* MedicationAddSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationAddSVC.swift; sourceTree = "<group>"; };
+		0AD7EB3D22230464006F71C0 /* MedicationModifySVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationModifySVC.swift; sourceTree = "<group>"; };
 		0AD7EB41222341B3006F71C0 /* MedicationRateTFI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationRateTFI.swift; sourceTree = "<group>"; };
 		0AD7EB4322234491006F71C0 /* MedRateButtonsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedRateButtonsSVC.swift; sourceTree = "<group>"; };
 		0AD7EB4522234524006F71C0 /* MedRateButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedRateButtonsSVC.xib; sourceTree = "<group>"; };
 		0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleLabeledCircleButton.swift; sourceTree = "<group>"; };
 		0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationRateModel.swift; sourceTree = "<group>"; };
 		0AD7EB4B2224B9EC006F71C0 /* MedicationSelectedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationSelectedItem.swift; sourceTree = "<group>"; };
-		0AD7EB4D2224C057006F71C0 /* MedicationEditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationEditSVC.swift; sourceTree = "<group>"; };
 		0AD94DBB220A5B9500B5C2BA /* BackConfirmButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackConfirmButtonSVC.swift; sourceTree = "<group>"; };
 		0AD94DBD220A5BF700B5C2BA /* TwoSquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoSquareButtonSVC.xib; sourceTree = "<group>"; };
 		0AD94DC1220CA3BF00B5C2BA /* CancelConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationSVC.swift; sourceTree = "<group>"; };
@@ -845,21 +841,11 @@
 			path = Medication;
 			sourceTree = "<group>";
 		};
-		0AD7EB3C22230464006F71C0 /* Medication */ = {
-			isa = PBXGroup;
-			children = (
-				0AD7EB3E22230464006F71C0 /* MedicationAddSVC.swift */,
-				0AD7EB4D2224C057006F71C0 /* MedicationEditSVC.swift */,
-				0AD7EB3D22230464006F71C0 /* MedicationModifyAbstractSVC.swift */,
-			);
-			path = Medication;
-			sourceTree = "<group>";
-		};
 		0AD94DAD2209BBD600B5C2BA /* ModifySVCs */ = {
 			isa = PBXGroup;
 			children = (
-				0AD7EB3C22230464006F71C0 /* Medication */,
 				83985922222D758E00782A10 /* MeditationModifySVC.swift */,
+				0AD7EB3D22230464006F71C0 /* MedicationModifySVC.swift */,
 				0A081892221473380021BDF6 /* ExerciseModifySVC.swift */,
 				0AD7EAFD221B1A86006F71C0 /* Omega3ModifySVC.swift */,
 				0AD7EB0A221B3331006F71C0 /* VitaminDModifySVC.swift */,
@@ -1366,7 +1352,7 @@
 				0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */,
 				0A98DB0B221622A200F4800D /* Omega3MainSVC.swift in Sources */,
 				0AD94DBC220A5B9500B5C2BA /* BackConfirmButtonSVC.swift in Sources */,
-				0AD7EB3F22230464006F71C0 /* MedicationModifyAbstractSVC.swift in Sources */,
+				0AD7EB3F22230464006F71C0 /* MedicationModifySVC.swift in Sources */,
 				0AD07F7221FCFF8100C55831 /* TrackingProgressBar.swift in Sources */,
 				0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */,
 				0A0818962214E6210021BDF6 /* FoodSearchSVC.swift in Sources */,
@@ -1413,7 +1399,6 @@
 				0A19B3BF2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift in Sources */,
 				0AEF7A29222AFA88009A0292 /* BadIngredientsCell.swift in Sources */,
 				0AEF7A34222C78B3009A0292 /* GoalsVC.swift in Sources */,
-				0AD7EB4E2224C057006F71C0 /* MedicationEditSVC.swift in Sources */,
 				6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */,
 				83985923222D758E00782A10 /* MeditationModifySVC.swift in Sources */,
 				0A19B3BB2253BBF100F4B02B /* FoodSelectedSVC.swift in Sources */,
@@ -1428,7 +1413,6 @@
 				0AD94DC2220CA3BF00B5C2BA /* CancelConfirmationSVC.swift in Sources */,
 				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
 				0AF8E0DF22092A5E00E1EC33 /* CancelCircleButton.swift in Sources */,
-				0AD7EB4022230464006F71C0 /* MedicationAddSVC.swift in Sources */,
 				0AA5286E2202827000CCFEE7 /* SquareButtonSVC.swift in Sources */,
 				0AB66E5A223D6C5400DF6B67 /* MedicationProgressBar.swift in Sources */,
 				0AD94DDB220E0D7600B5C2BA /* MeditationModuleVC.swift in Sources */,
