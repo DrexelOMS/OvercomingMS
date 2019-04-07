@@ -31,7 +31,7 @@
 		0A030FBB22580A1500857BC8 /* SymptomsNoteDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A030FA722580A1500857BC8 /* SymptomsNoteDBT.swift */; };
 		0A030FBC22580A1500857BC8 /* Omega3HistoryDBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A030FA822580A1500857BC8 /* Omega3HistoryDBT.swift */; };
 		0A0818912214647E0021BDF6 /* LengthTFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0818902214647E0021BDF6 /* LengthTFI.swift */; };
-		0A081893221473380021BDF6 /* ExerciseModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A081892221473380021BDF6 /* ExerciseModifyAbstractSVC.swift */; };
+		0A081893221473380021BDF6 /* ExerciseModifySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A081892221473380021BDF6 /* ExerciseModifySVC.swift */; };
 		0A0818962214E6210021BDF6 /* FoodSearchSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0818952214E6210021BDF6 /* FoodSearchSVC.swift */; };
 		0A0818982214E6310021BDF6 /* FoodSearchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A0818972214E6310021BDF6 /* FoodSearchSVC.xib */; };
 		0A08189A2214E7E80021BDF6 /* FoodSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */; };
@@ -92,8 +92,6 @@
 		0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19122145EA30063A892 /* TFIAbstract.swift */; };
 		0A93F19A22145F150063A892 /* ModifyAbstractSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93F19622145F140063A892 /* ModifyAbstractSVC.xib */; };
 		0A93F19B22145F150063A892 /* ModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19722145F140063A892 /* ModifyAbstractSVC.swift */; };
-		0A93F19C22145F150063A892 /* ExerciseEditSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19822145F150063A892 /* ExerciseEditSVC.swift */; };
-		0A93F19D22145F150063A892 /* ExerciseAddSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19922145F150063A892 /* ExerciseAddSVC.swift */; };
 		0A98DB0B221622A200F4800D /* Omega3MainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0A221622A200F4800D /* Omega3MainSVC.swift */; };
 		0A98DB0D221622E900F4800D /* SupplementCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0C221622E900F4800D /* SupplementCircleButton.swift */; };
 		0A98DB0F2216447800F4800D /* SearchBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0E2216447800F4800D /* SearchBarButton.swift */; };
@@ -259,7 +257,7 @@
 		0A030FA722580A1500857BC8 /* SymptomsNoteDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymptomsNoteDBT.swift; sourceTree = "<group>"; };
 		0A030FA822580A1500857BC8 /* Omega3HistoryDBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3HistoryDBT.swift; sourceTree = "<group>"; };
 		0A0818902214647E0021BDF6 /* LengthTFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthTFI.swift; sourceTree = "<group>"; };
-		0A081892221473380021BDF6 /* ExerciseModifyAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModifyAbstractSVC.swift; sourceTree = "<group>"; };
+		0A081892221473380021BDF6 /* ExerciseModifySVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModifySVC.swift; sourceTree = "<group>"; };
 		0A0818952214E6210021BDF6 /* FoodSearchSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchSVC.swift; sourceTree = "<group>"; };
 		0A0818972214E6310021BDF6 /* FoodSearchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchSVC.xib; sourceTree = "<group>"; };
 		0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchCell.xib; sourceTree = "<group>"; };
@@ -327,8 +325,6 @@
 		0A93F19122145EA30063A892 /* TFIAbstract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFIAbstract.swift; sourceTree = "<group>"; };
 		0A93F19622145F140063A892 /* ModifyAbstractSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyAbstractSVC.xib; sourceTree = "<group>"; };
 		0A93F19722145F140063A892 /* ModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyAbstractSVC.swift; sourceTree = "<group>"; };
-		0A93F19822145F150063A892 /* ExerciseEditSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseEditSVC.swift; sourceTree = "<group>"; };
-		0A93F19922145F150063A892 /* ExerciseAddSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseAddSVC.swift; sourceTree = "<group>"; };
 		0A98DB0A221622A200F4800D /* Omega3MainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3MainSVC.swift; sourceTree = "<group>"; };
 		0A98DB0C221622E900F4800D /* SupplementCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementCircleButton.swift; sourceTree = "<group>"; };
 		0A98DB0E2216447800F4800D /* SearchBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarButton.swift; sourceTree = "<group>"; };
@@ -820,24 +816,6 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		0AD7EAF7221B19DA006F71C0 /* Exercise */ = {
-			isa = PBXGroup;
-			children = (
-				0A93F19922145F150063A892 /* ExerciseAddSVC.swift */,
-				0A93F19822145F150063A892 /* ExerciseEditSVC.swift */,
-				0A081892221473380021BDF6 /* ExerciseModifyAbstractSVC.swift */,
-			);
-			path = Exercise;
-			sourceTree = "<group>";
-		};
-		0AD7EAF8221B1A3E006F71C0 /* Omega3 */ = {
-			isa = PBXGroup;
-			children = (
-				0AD7EAFD221B1A86006F71C0 /* Omega3ModifySVC.swift */,
-			);
-			path = Omega3;
-			sourceTree = "<group>";
-		};
 		0AD7EB1F2220B5D6006F71C0 /* FoodSelected */ = {
 			isa = PBXGroup;
 			children = (
@@ -880,10 +858,10 @@
 		0AD94DAD2209BBD600B5C2BA /* ModifySVCs */ = {
 			isa = PBXGroup;
 			children = (
-				0AD7EAF8221B1A3E006F71C0 /* Omega3 */,
-				0AD7EAF7221B19DA006F71C0 /* Exercise */,
 				0AD7EB3C22230464006F71C0 /* Medication */,
 				83985922222D758E00782A10 /* MeditationModifySVC.swift */,
+				0A081892221473380021BDF6 /* ExerciseModifySVC.swift */,
+				0AD7EAFD221B1A86006F71C0 /* Omega3ModifySVC.swift */,
 				0AD7EB0A221B3331006F71C0 /* VitaminDModifySVC.swift */,
 				0A93F19722145F140063A892 /* ModifyAbstractSVC.swift */,
 				0A93F19622145F140063A892 /* ModifyAbstractSVC.xib */,
@@ -1480,7 +1458,6 @@
 				0A93F15E2213C62A0063A892 /* ScanCircleButton.swift in Sources */,
 				0AD7EB332223040F006F71C0 /* DoneCheckButton.swift in Sources */,
 				0A2BAA6A220336DD004074F3 /* CircleButtonSVC.swift in Sources */,
-				0A93F19C22145F150063A892 /* ExerciseEditSVC.swift in Sources */,
 				0AD7EB11221B4D0F006F71C0 /* SelectedLabelsSVC.swift in Sources */,
 				0A030FB922580A1500857BC8 /* MeditationHistoryDBT.swift in Sources */,
 				0A030FBA22580A1500857BC8 /* SavedMedicationDBT.swift in Sources */,
@@ -1523,7 +1500,6 @@
 				0A030FB122580A1500857BC8 /* MeditationHistoryDBS.swift in Sources */,
 				0AEF7A52223025F9009A0292 /* OMSRoundedBox.swift in Sources */,
 				0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */,
-				0A93F19D22145F150063A892 /* ExerciseAddSVC.swift in Sources */,
 				0A030FAD22580A1500857BC8 /* TrackingModulesDBS.swift in Sources */,
 				0AD7EB42222341B3006F71C0 /* MedicationRateTFI.swift in Sources */,
 				0A030FB322580A1500857BC8 /* DisplayedMedicationItems.swift in Sources */,
@@ -1532,7 +1508,7 @@
 				0A08189C2214E8CC0021BDF6 /* FoodSearchCell.swift in Sources */,
 				0AEF7A42222DD58D009A0292 /* NoteCell.swift in Sources */,
 				0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */,
-				0A081893221473380021BDF6 /* ExerciseModifyAbstractSVC.swift in Sources */,
+				0A081893221473380021BDF6 /* ExerciseModifySVC.swift in Sources */,
 				0AD7EB1E2220B2D9006F71C0 /* FoodRejectedSVC.swift in Sources */,
 				0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */,
 			);

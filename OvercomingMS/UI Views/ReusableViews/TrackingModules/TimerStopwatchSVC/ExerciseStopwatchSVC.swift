@@ -11,7 +11,7 @@ import UIKit
 class ExerciseStopwatchSVC : StopwatchAbstractSVC {
     
     override func pushFinishSVC(minutes: Int) {
-        parentVC.pushSubView(newSubView: ExerciseAddSVC(startTime: startTime, length: minutes))
+        parentVC.pushSubView(newSubView: ExerciseModifySVC(startTime: startTime, length: minutes))
     }
     
 }
