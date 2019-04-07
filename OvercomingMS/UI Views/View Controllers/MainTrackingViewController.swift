@@ -12,6 +12,7 @@ import RealmSwift
 class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingProgressBarDelegate {
     
     func finishedShowing(viewController: UIViewController) {
+        _ = omsDateFormatter.todaysDate
         loadCurrentDayUI()
     }
     
@@ -45,17 +46,18 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     private let omsDateFormatter = OMSDateAccessor()
     
-    
     //MARK: View Transition Initializers
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteModule(_:)), name: .didCompleteModule, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onTodaysDateChanged(_:)), name: .didTodaysDateChange, object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteModule(_:)), name: .didCompleteModule, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .didCompleteModule, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .didTodaysDateChange, object: nil)
     }
     
     @objc func onDidCompleteModule(_ notification:Notification) {
@@ -105,6 +107,13 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
 
     }
     
+    @objc func onTodaysDateChanged(_ notification:Notification) {
+        print("todays date changed")
+        //this will currently change the current date if you open the app and left off somewhere else, consider setting a bool and doing it on finished showing if currently hidden, or simply soft restart the app
+        globalCurrentFullDate = omsDateFormatter.todaysFullDate
+        loadCurrentDayUI()
+    }
+    
     func attemptMenuRestore() {
             header.stopRestoreThread()
             header.startRestoreThread()
@@ -152,6 +161,8 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     private func loadCurrentDayUI() {
         
+        _ = omsDateFormatter.todaysDate
+        
         if let currentTrackingDay = TrackingModulesDBS().getTrackingDay(date: globalCurrentDate) {
             updatePageUI(currentTrackingDay)
         }
@@ -162,7 +173,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         }
         
         attemptMenuRestore()
-        
     }
     
     private func updatePageUI(_ currentTrackingDay: TrackingDayDBT) {
@@ -300,8 +310,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     //TODO: this is a test button, normally the day would progress, and the ui is not automatically updated unless we check in the loadCurrentDayUI to check if todays date has changed
     //basically nothing can ever write using current day, they write using todays date
     @objc private func ProgressDayPressed(gesture: UIGestureRecognizer) {
-        omsDateFormatter.progressDay()
-        loadCurrentDayUI()
+//        omsDateFormatter.progressDay()
     }
     
     func goalPressed() {

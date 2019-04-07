@@ -65,6 +65,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         noteTextField.delegate = self
         
         noteTextField.inputAccessoryView = toolbar.getToolBar()
+
     }
     
     override func initialize(parentVC: SlidingStackVC) {

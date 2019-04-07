@@ -24,21 +24,51 @@ class OMSDateAccessor {
     private let realm = try! Realm()
     private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
     
-    var todaysDate : String { // this is to temporarily change the real world date
+    var lastSavedTodayDate : String {
         get {
-            if let today = defaults.object(forKey: "today") as? String {
-                initializeTodaysData(date: today)
-                return today
+            if let savedToday = defaults.object(forKey: "savedToday") as? String {
+                return savedToday
             }
             else {
-                defaults.set(OMSDateAccessor.getFormatedDate(date: Date()), forKey: "today")
                 let date = OMSDateAccessor.getFormatedDate(date: Date())
-                initializeTodaysData(date: date)
+                defaults.set(date, forKey: "savedToday")
                 return date
             }
         }
         set {
-            defaults.set(newValue, forKey: "today")
+            defaults.set(newValue, forKey: "savedToday")
+        }
+    }
+    
+//    NotificationCenter.default.post(name: .didTodaysDateChange, object: nil)
+    
+    var todaysDate : String { // this is to temporarily change the real world date
+        get {
+//            if let today = defaults.object(forKey: "today") as? String {
+//                initializeTodaysData(date: today)
+//                if today != lastSavedTodayDate {
+//                    lastSavedTodayDate = today
+//                    NotificationCenter.default.post(name: .didTodaysDateChange, object: nil)
+//                }
+//                return today
+//            }
+//            else {
+//                defaults.set(OMSDateAccessor.getFormatedDate(date: Date()), forKey: "today")
+//                let date = OMSDateAccessor.getFormatedDate(date: Date())
+//                initializeTodaysData(date: date)
+//                if date != lastSavedTodayDate {
+//                    lastSavedTodayDate = date
+//                    NotificationCenter.default.post(name: .didTodaysDateChange, object: nil)
+//                }
+//                return date
+//            }
+            let today = OMSDateAccessor.getFormatedDate(date: Date())
+            initializeTodaysData(date: today)
+            if today != lastSavedTodayDate {
+                lastSavedTodayDate = today
+                NotificationCenter.default.post(name: .didTodaysDateChange, object: nil)
+            }
+            return today
         }
     }
     
@@ -120,8 +150,7 @@ class OMSDateAccessor {
     
     func progressDay() {
         let tomorrow = todaysFullDate.addingTimeInterval(60*60*24)
-        todaysDate = OMSDateAccessor.getFormatedDate(date: tomorrow)
-
+        defaults.set(OMSDateAccessor.getFormatedDate(date: tomorrow), forKey: "today")
     }
     
     func createDay(date: String) {
