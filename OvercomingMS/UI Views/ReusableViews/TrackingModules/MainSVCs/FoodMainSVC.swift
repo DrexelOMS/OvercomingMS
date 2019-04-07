@@ -22,6 +22,7 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     let button1 = SearchCircleButton()
     let button2 = RecipesCircleButton()
     let button3 = ScanCircleButton()
+    let button4 = SavedCircleButton()
     
     @IBOutlet weak var buttonStackView: UIStackView!
     
@@ -36,9 +37,11 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
         button1.buttonAction = searchButtonPressed
         button2.buttonAction = recipesButtonPressed
         button3.buttonAction = scanButtonPressed
+        button4.buttonAction = savedButtonPressed
         
         buttonStackView.addArrangedSubview(button1)
         buttonStackView.addArrangedSubview(button2)
+        buttonStackView.addArrangedSubview(button4)
         buttonStackView.addArrangedSubview(button3)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -63,10 +66,15 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
         parentVC.present(barcodeScannerVC, animated: true, completion: nil)
     }
     
+    func savedButtonPressed() {
+        
+    }
+    
     override func updateColors() {
         button1.colorTheme = parentVC.theme
         button2.colorTheme = parentVC.theme
         button3.colorTheme = parentVC.theme
+        button4.colorTheme = parentVC.theme
     }
     
     func scanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {
