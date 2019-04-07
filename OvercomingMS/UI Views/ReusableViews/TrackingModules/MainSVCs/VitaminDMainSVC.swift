@@ -50,11 +50,13 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     }
     
     func addButtonPressed() {
-        parentVC.pushSubView(newSubView: VitaminDQuickAddSVC())
+        parentVC.pushSubView(newSubView: VitaminDModifySVC())
     }
     
     func supplementButtonPressed() {
-        parentVC.pushSubView(newSubView: VitaminDSupplementSVC())
+        let supplementPage = VitaminDModifySVC()
+        supplementPage.isSupplementPage = true
+        parentVC.pushSubView(newSubView: supplementPage)
     }
     
     func outsideButtonPressed() {

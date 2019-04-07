@@ -33,7 +33,7 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     }
     
     override func editButtonPressed() {
-        let editPage = VitaminDEditSVC()
+        let editPage = VitaminDModifySVC()
         editPage.editingVitamindDItem = vitaminDItem
         parentVC.pushSubView(newSubView: editPage)
     }

@@ -47,11 +47,13 @@ class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource
     }
     
     func addButtonPressed() {
-        parentVC.pushSubView(newSubView: Omega3AddSVC())
+        parentVC.pushSubView(newSubView: Omega3ModifySVC())
     }
     
     func supplementButtonPressed() {
-        parentVC.pushSubView(newSubView: Omega3SupplementSVC())
+        let page = Omega3ModifySVC()
+        page.isSupplementPage = true
+        parentVC.pushSubView(newSubView: page)
     }
     
     override func updateColors() {

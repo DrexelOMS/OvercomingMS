@@ -34,7 +34,7 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
     }
     
     override func editButtonPressed() {
-        let editPage = ExerciseEditSVC()
+        let editPage = ExerciseModifySVC()
         editPage.editingExerciseItem = exerciseItem
         parentVC.pushSubView(newSubView: editPage)
     }

@@ -69,7 +69,7 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func addButtonPressed() {
-        parentVC.pushSubView(newSubView: MedicationAddSVC())
+        parentVC.pushSubView(newSubView: MedicationModifySVC())
     }
     
     override func updateColors() {

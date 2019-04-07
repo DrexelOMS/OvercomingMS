@@ -35,7 +35,7 @@ class MedicationSelectedItemSVC : SelectedItemSVC {
     }
     
     override func editButtonPressed() {
-        let editPage = MedicationEditSVC()
+        let editPage = MedicationModifySVC()
         editPage.editingMedicationItem = savedMedicationItem
         parentVC.pushSubView(newSubView: editPage)
     }
