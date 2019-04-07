@@ -33,7 +33,7 @@ class Omega3SelectedItemSVC : SelectedItemSVC {
     }
     
     override func editButtonPressed() {
-        let editPage = Omega3EditSVC()
+        let editPage = Omega3ModifySVC()
         editPage.editingOmega3Item = omega3Item
         parentVC.pushSubView(newSubView: editPage)
     }

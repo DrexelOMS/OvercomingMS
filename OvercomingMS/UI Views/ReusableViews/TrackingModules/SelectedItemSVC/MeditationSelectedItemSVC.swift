@@ -32,7 +32,7 @@ class MeditationSelectedItemSVC: SelectedItemSVC {
     }
     
     override func editButtonPressed() {
-        let editPage = MeditationEditSVC()
+        let editPage = MeditationModifySVC()
         editPage.editingMeditationItem = meditationItem
         parentVC.pushSubView(newSubView: editPage)
     }
