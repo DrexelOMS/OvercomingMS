@@ -180,7 +180,6 @@
 		0AEF7A6F223429BF009A0292 /* MeditationTimerSetupSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6E223429BE009A0292 /* MeditationTimerSetupSVC.swift */; };
 		0AEF7A7122342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A7022342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift */; };
 		0AEF7A732234454B009A0292 /* MeditationTimerSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A722234454B009A0292 /* MeditationTimerSVC.swift */; };
-		0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
 		0AF8E0DB2209248700E1EC33 /* StopwatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */; };
 		0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */; };
@@ -413,7 +412,6 @@
 		0AEF7A6E223429BE009A0292 /* MeditationTimerSetupSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerSetupSVC.swift; sourceTree = "<group>"; };
 		0AEF7A7022342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidedMeditationTimerSetupSVC.swift; sourceTree = "<group>"; };
 		0AEF7A722234454B009A0292 /* MeditationTimerSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerSVC.swift; sourceTree = "<group>"; };
-		0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleProgressBar.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
 		0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchAbstractSVC.swift; sourceTree = "<group>"; };
 		0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStopwatchSVC.swift; sourceTree = "<group>"; };
@@ -741,7 +739,6 @@
 				0AB66E4F223D649F00DF6B67 /* ConcreteProgressBars */,
 				0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */,
 				0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */,
-				0AF8E0C92209128E00E1EC33 /* TrackingModuleProgressBar.swift */,
 			);
 			path = TrackingProgressBars;
 			sourceTree = "<group>";
@@ -1365,7 +1362,6 @@
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
 				0A08189E2214F82F0021BDF6 /* Food.swift in Sources */,
 				0AB66E58223D6C4900DF6B67 /* MeditationProgressBar.swift in Sources */,
-				0AF8E0CA2209128E00E1EC33 /* TrackingModuleProgressBar.swift in Sources */,
 				0A341D79225919DB0066EC1D /* SymptomsListSVC.swift in Sources */,
 				0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */,
 				0AEF7A6722341DBF009A0292 /* MeditationSetupSVC.swift in Sources */,
