@@ -192,6 +192,7 @@
 		0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
 		0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAFDD22163057004C1966 /* SearchBarButton.xib */; };
+		0C515549225C918C00D9310D /* FoodSearchNoResultsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C515548225C918C00D9310D /* FoodSearchNoResultsSVC.xib */; };
 		0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */; };
 		0C7D5866222C652100D00CB0 /* SymptomsMainSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7D5865222C652100D00CB0 /* SymptomsMainSVC.xib */; };
 		0C7D5868222D8DA300D00CB0 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7D5867222D8DA300D00CB0 /* NoteCell.xib */; };
@@ -429,6 +430,7 @@
 		0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishCircleButton.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
 		0C2DAFDD22163057004C1966 /* SearchBarButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarButton.xib; sourceTree = "<group>"; };
+		0C515548225C918C00D9310D /* FoodSearchNoResultsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchNoResultsSVC.xib; sourceTree = "<group>"; };
 		0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackConfirmButtonsSVC.xib; sourceTree = "<group>"; };
 		0C7D5865222C652100D00CB0 /* SymptomsMainSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SymptomsMainSVC.xib; sourceTree = "<group>"; };
 		0C7D5867222D8DA300D00CB0 /* NoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
@@ -863,6 +865,7 @@
 				0CAD6316221DAAEE00E50E72 /* FoodRejectedSVC.xib */,
 				0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */,
 				0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */,
+				0C515548225C918C00D9310D /* FoodSearchNoResultsSVC.xib */,
 			);
 			path = FoodSelected;
 			sourceTree = "<group>";
@@ -1236,6 +1239,7 @@
 				0A2BAA742204AFC3004074F3 /* SIL Open Font License.txt in Resources */,
 				0CB44DEA2223280F004D0580 /* MeditationSetupSVC.xib in Resources */,
 				0C7D586A222D942B00D00CB0 /* NoteReviewSVC.xib in Resources */,
+				0C515549225C918C00D9310D /* FoodSearchNoResultsSVC.xib in Resources */,
 				0A93F19222145EA30063A892 /* TFIAbstract.xib in Resources */,
 				0A0818982214E6310021BDF6 /* FoodSearchSVC.xib in Resources */,
 				0CBE98AD2223835300D3C090 /* TitleTimeOverTextCell.xib in Resources */,
