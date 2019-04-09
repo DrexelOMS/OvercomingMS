@@ -314,11 +314,13 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     }
     
     func goalPressed() {
-        let vc = GoalsVC()
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.dismissalDelegate = self
-        
-        self.present(vc, animated: true, completion: nil)
+        if globalCurrentDate == todaysDate {
+            let vc = GoalsVC()
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.dismissalDelegate = self
+            
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     func symptomsPressed() {

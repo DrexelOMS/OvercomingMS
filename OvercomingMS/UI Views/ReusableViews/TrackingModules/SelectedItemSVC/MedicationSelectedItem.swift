@@ -53,10 +53,12 @@ class MedicationSelectedItemSVC : SelectedItemSVC {
     
     
     override func deleteButtonPressed() {
-        let deletePage = ConfirmationFactory.DeleteConfirmation()
-        deletePage.methodToRunOnConfirm = deleteItem
-        deletePage.resetToDefault = true
-        parentVC.pushSubView(newSubView: deletePage)
+        if globalCurrentDate == OMSDateAccessor().todaysDate {
+            let deletePage = ConfirmationFactory.DeleteConfirmation()
+            deletePage.methodToRunOnConfirm = deleteItem
+            deletePage.resetToDefault = true
+            parentVC.pushSubView(newSubView: deletePage)
+        }
     }
     
     func deleteItem(){
