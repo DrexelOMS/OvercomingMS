@@ -96,6 +96,10 @@
 		0A98DB0B221622A200F4800D /* Omega3MainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0A221622A200F4800D /* Omega3MainSVC.swift */; };
 		0A98DB0D221622E900F4800D /* SupplementCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0C221622E900F4800D /* SupplementCircleButton.swift */; };
 		0A98DB0F2216447800F4800D /* SearchBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0E2216447800F4800D /* SearchBarButton.swift */; };
+		0A9926C0225CE0D3008DE456 /* TopImageSlidingStackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9926BF225CE0D3008DE456 /* TopImageSlidingStackVC.swift */; };
+		0A9926C2225CE3AA008DE456 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9926C1225CE3AA008DE456 /* SettingsVC.swift */; };
+		0A9926C4225CE472008DE456 /* TitleDecscriptionHeaderSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9926C3225CE472008DE456 /* TitleDecscriptionHeaderSVC.xib */; };
+		0A9926C6225CE484008DE456 /* TitleDescriptionHeaderSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9926C5225CE484008DE456 /* TitleDescriptionHeaderSVC.swift */; };
 		0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */; };
 		0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */; };
 		0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */; };
@@ -325,6 +329,10 @@
 		0A98DB0A221622A200F4800D /* Omega3MainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3MainSVC.swift; sourceTree = "<group>"; };
 		0A98DB0C221622E900F4800D /* SupplementCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementCircleButton.swift; sourceTree = "<group>"; };
 		0A98DB0E2216447800F4800D /* SearchBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarButton.swift; sourceTree = "<group>"; };
+		0A9926BF225CE0D3008DE456 /* TopImageSlidingStackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImageSlidingStackVC.swift; sourceTree = "<group>"; };
+		0A9926C1225CE3AA008DE456 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		0A9926C3225CE472008DE456 /* TitleDecscriptionHeaderSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleDecscriptionHeaderSVC.xib; sourceTree = "<group>"; };
+		0A9926C5225CE484008DE456 /* TitleDescriptionHeaderSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDescriptionHeaderSVC.swift; sourceTree = "<group>"; };
 		0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleAbstractVC.swift; sourceTree = "<group>"; };
 		0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleVC.swift; sourceTree = "<group>"; };
 		0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAbstractSVC.swift; sourceTree = "<group>"; };
@@ -737,6 +745,9 @@
 				0AEF7A30222C367F009A0292 /* Goals */,
 				0C7D5864222C63DA00D00CB0 /* Symptoms */,
 				0A9926BE225CE081008DE456 /* Settings */,
+				0A9926C3225CE472008DE456 /* TitleDecscriptionHeaderSVC.xib */,
+				0A9926C5225CE484008DE456 /* TitleDescriptionHeaderSVC.swift */,
+				0A9926BF225CE0D3008DE456 /* TopImageSlidingStackVC.swift */,
 			);
 			path = BottomViewsTrackingPage;
 			sourceTree = "<group>";
@@ -744,6 +755,7 @@
 		0A9926BE225CE081008DE456 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				0A9926C1225CE3AA008DE456 /* SettingsVC.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1210,6 +1222,7 @@
 				0AD7EB13221B4D23006F71C0 /* SelectedLabelsSVC.xib in Resources */,
 				0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */,
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
+				0A9926C4225CE472008DE456 /* TitleDecscriptionHeaderSVC.xib in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
 				0AD7EB4622234524006F71C0 /* MedRateButtonsSVC.xib in Resources */,
 				0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */,
@@ -1406,6 +1419,7 @@
 				83985923222D758E00782A10 /* MeditationModifySVC.swift in Sources */,
 				0A19B3BB2253BBF100F4B02B /* FoodSelectedSVC.swift in Sources */,
 				0AD7EB3A2223043A006F71C0 /* MedicationItemSVC.swift in Sources */,
+				0A9926C0225CE0D3008DE456 /* TopImageSlidingStackVC.swift in Sources */,
 				0A030FA922580A1500857BC8 /* FoodRatingDBS.swift in Sources */,
 				0A030FAC22580A1500857BC8 /* VitaminDHistoryDBS.swift in Sources */,
 				0AD7EB48222345A9006F71C0 /* ToggleLabeledCircleButton.swift in Sources */,
@@ -1435,6 +1449,7 @@
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
 				0AD94DD7220DEEB300B5C2BA /* DeleteCircleButton.swift in Sources */,
 				0AEF7A3A222CD774009A0292 /* GoalsMainSVC.swift in Sources */,
+				0A9926C2225CE3AA008DE456 /* SettingsVC.swift in Sources */,
 				0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */,
 				0A1FEC652206203F006CED70 /* AddCircleButton.swift in Sources */,
 				0AD7EB00221B1E7F006F71C0 /* Omega3SelectedItem.swift in Sources */,
@@ -1478,6 +1493,7 @@
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
 				0A030FB622580A1500857BC8 /* TrackingDayDBT.swift in Sources */,
 				0A030FAE22580A1500857BC8 /* SymptomsNoteDBS.swift in Sources */,
+				0A9926C6225CE484008DE456 /* TitleDescriptionHeaderSVC.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SlidingStackVC.swift in Sources */,
 				0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */,
 				0A93EA4922131C2D0063A892 /* (null) in Sources */,

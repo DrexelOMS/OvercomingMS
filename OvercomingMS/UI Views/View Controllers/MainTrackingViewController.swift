@@ -331,7 +331,11 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     }
     
     func settingsPressed() {
+        let vc = SettingsVC()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.dismissalDelegate = self
         
+        self.present(vc, animated: true, completion: nil)
     }
     
 }

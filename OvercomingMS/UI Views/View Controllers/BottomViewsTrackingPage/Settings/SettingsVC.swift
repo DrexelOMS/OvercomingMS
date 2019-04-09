@@ -1,14 +1,14 @@
 //
-//  GoalsSVC.swift
+//  SettingsVC.swift
 //  OvercomingMS
 //
-//  Created by Vincent Finn on 3/3/19.
+//  Created by Vincent Finn on 4/9/19.
 //  Copyright © 2019 DrexelOMS. All rights reserved.
 //
 
 import UIKit
 
-class GoalsVC : TopImageSlidingStackVC {
+class SettingsVC : TopImageSlidingStackVC {
     
     override var topImage: UIImage! {
         get {
@@ -19,7 +19,7 @@ class GoalsVC : TopImageSlidingStackVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initializeviewStack(defaultView: GoalsMainSVC())
+//        initializeviewStack(defaultView:)
     }
     
 }

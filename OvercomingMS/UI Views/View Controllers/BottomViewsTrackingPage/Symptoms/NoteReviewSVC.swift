@@ -180,7 +180,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         severityTFI.isHidden = false
         
         bottomConstraint.constant = 0
-        symptomsVC.toggleTopImage(isHidden: false)
+//        symptomsVC.toggleTopImage(isHidden: false)
     }
     
 }
