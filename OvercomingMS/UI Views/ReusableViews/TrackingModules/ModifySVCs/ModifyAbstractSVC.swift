@@ -17,6 +17,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
         }
     }
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var topPaddingConstraint: NSLayoutConstraint!
     @IBOutlet weak var topLabelViewHeight: NSLayoutConstraint!
     @IBOutlet weak var textInputStackBottom: NSLayoutConstraint!

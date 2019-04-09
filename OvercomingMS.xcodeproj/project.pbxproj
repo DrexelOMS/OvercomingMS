@@ -92,6 +92,7 @@
 		0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19122145EA30063A892 /* TFIAbstract.swift */; };
 		0A93F19A22145F150063A892 /* ModifyAbstractSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93F19622145F140063A892 /* ModifyAbstractSVC.xib */; };
 		0A93F19B22145F150063A892 /* ModifyAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93F19722145F140063A892 /* ModifyAbstractSVC.swift */; };
+		0A94DED2225D2C23005DD1A8 /* MeditationTimerModify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94DED1225D2C23005DD1A8 /* MeditationTimerModify.swift */; };
 		0A967490225CCBB2007C05AF /* ConfirmationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A96748F225CCBB2007C05AF /* ConfirmationFactory.swift */; };
 		0A98DB0B221622A200F4800D /* Omega3MainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0A221622A200F4800D /* Omega3MainSVC.swift */; };
 		0A98DB0D221622E900F4800D /* SupplementCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0C221622E900F4800D /* SupplementCircleButton.swift */; };
@@ -327,6 +328,7 @@
 		0A93F19122145EA30063A892 /* TFIAbstract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFIAbstract.swift; sourceTree = "<group>"; };
 		0A93F19622145F140063A892 /* ModifyAbstractSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyAbstractSVC.xib; sourceTree = "<group>"; };
 		0A93F19722145F140063A892 /* ModifyAbstractSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyAbstractSVC.swift; sourceTree = "<group>"; };
+		0A94DED1225D2C23005DD1A8 /* MeditationTimerModify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerModify.swift; sourceTree = "<group>"; };
 		0A96748F225CCBB2007C05AF /* ConfirmationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationFactory.swift; sourceTree = "<group>"; };
 		0A98DB0A221622A200F4800D /* Omega3MainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omega3MainSVC.swift; sourceTree = "<group>"; };
 		0A98DB0C221622E900F4800D /* SupplementCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementCircleButton.swift; sourceTree = "<group>"; };
@@ -882,6 +884,7 @@
 				0AD7EB0A221B3331006F71C0 /* VitaminDModifySVC.swift */,
 				0A93F19722145F140063A892 /* ModifyAbstractSVC.swift */,
 				0A93F19622145F140063A892 /* ModifyAbstractSVC.xib */,
+				0A94DED1225D2C23005DD1A8 /* MeditationTimerModify.swift */,
 			);
 			path = ModifySVCs;
 			sourceTree = "<group>";
@@ -1477,6 +1480,7 @@
 				0A341D732258F8E20066EC1D /* ToolBar.swift in Sources */,
 				0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */,
 				0AEF7A6D22341EC0009A0292 /* TitleTimeOverTextCell.swift in Sources */,
+				0A94DED2225D2C23005DD1A8 /* MeditationTimerModify.swift in Sources */,
 				0A93F15D2213C62A0063A892 /* SearchCircleButton.swift in Sources */,
 				0AD7EB0B221B3331006F71C0 /* VitaminDModifySVC.swift in Sources */,
 				0AD7EB04221B2FD6006F71C0 /* OutsideCircleButton.swift in Sources */,

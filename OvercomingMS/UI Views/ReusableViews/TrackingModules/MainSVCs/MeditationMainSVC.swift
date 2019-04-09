@@ -54,11 +54,11 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func timerButtonPressed() {
-        parentVC.pushSubView(newSubView: MeditationTimerSetupSVC())
+        parentVC.pushSubView(newSubView: MeditationTimerModifySVC())
     }
     
     func guidedButtonPressed() {
-        parentVC.pushSubView(newSubView: GuidededMeditationTimerSetupSVC())
+        parentVC.pushSubView(newSubView: MeditationTimerSetupSVC())
     }
     
     override func updateColors() {
