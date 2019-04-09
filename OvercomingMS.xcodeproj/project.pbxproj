@@ -100,6 +100,8 @@
 		0A9926C2225CE3AA008DE456 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9926C1225CE3AA008DE456 /* SettingsVC.swift */; };
 		0A9926C4225CE472008DE456 /* TitleDescriptionHeaderSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9926C3225CE472008DE456 /* TitleDescriptionHeaderSVC.xib */; };
 		0A9926C6225CE484008DE456 /* TitleDescriptionHeaderSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9926C5225CE484008DE456 /* TitleDescriptionHeaderSVC.swift */; };
+		0A9926C8225CEA5F008DE456 /* SettingsMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9926C7225CEA5F008DE456 /* SettingsMainSVC.swift */; };
+		0A9926CA225CEA77008DE456 /* SettingsMainSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9926C9225CEA77008DE456 /* SettingsMainSVC.xib */; };
 		0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */; };
 		0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */; };
 		0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */; };
@@ -333,6 +335,8 @@
 		0A9926C1225CE3AA008DE456 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		0A9926C3225CE472008DE456 /* TitleDescriptionHeaderSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleDescriptionHeaderSVC.xib; sourceTree = "<group>"; };
 		0A9926C5225CE484008DE456 /* TitleDescriptionHeaderSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDescriptionHeaderSVC.swift; sourceTree = "<group>"; };
+		0A9926C7225CEA5F008DE456 /* SettingsMainSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMainSVC.swift; sourceTree = "<group>"; };
+		0A9926C9225CEA77008DE456 /* SettingsMainSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsMainSVC.xib; sourceTree = "<group>"; };
 		0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleAbstractVC.swift; sourceTree = "<group>"; };
 		0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleVC.swift; sourceTree = "<group>"; };
 		0AA5284F22022F1700CCFEE7 /* MainAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAbstractSVC.swift; sourceTree = "<group>"; };
@@ -756,6 +760,8 @@
 			isa = PBXGroup;
 			children = (
 				0A9926C1225CE3AA008DE456 /* SettingsVC.swift */,
+				0A9926C7225CEA5F008DE456 /* SettingsMainSVC.swift */,
+				0A9926C9225CEA77008DE456 /* SettingsMainSVC.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1231,6 +1237,7 @@
 				0A341D7D22591A020066EC1D /* SymptomsListCell.xib in Resources */,
 				0A93F19A22145F150063A892 /* ModifyAbstractSVC.xib in Resources */,
 				0CAD6317221DAAEE00E50E72 /* FoodRejectedSVC.xib in Resources */,
+				0A9926CA225CEA77008DE456 /* SettingsMainSVC.xib in Resources */,
 				0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */,
 				0A341D81225922670066EC1D /* NoteSVC.xib in Resources */,
 				0A19B3C52253F97100F4B02B /* MedicationItemSVC.xib in Resources */,
@@ -1373,6 +1380,7 @@
 				0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */,
 				0A0818962214E6210021BDF6 /* FoodSearchSVC.swift in Sources */,
 				0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */,
+				0A9926C8225CEA5F008DE456 /* SettingsMainSVC.swift in Sources */,
 				0AD7EAF0221AFB47006F71C0 /* AmountTFI.swift in Sources */,
 				0AEF7A3E222DD55E009A0292 /* SymptomsVC.swift in Sources */,
 				0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */,

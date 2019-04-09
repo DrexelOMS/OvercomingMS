@@ -19,7 +19,7 @@ class SettingsVC : TopImageSlidingStackVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        initializeviewStack(defaultView:)
+        initializeviewStack(defaultView: SettingsMainSVC())
     }
     
 }
