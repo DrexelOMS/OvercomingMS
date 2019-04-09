@@ -186,8 +186,8 @@
 		0AF8E0E322092ACE00E1EC33 /* FinishCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
 		0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAFDD22163057004C1966 /* SearchBarButton.xib */; };
-		0C515549225C918C00D9310D /* FoodSearchNoResultsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C515548225C918C00D9310D /* FoodSearchNoResultsSVC.xib */; };
 		0C515547225942B800D9310D /* SavedCircleButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C515546225942B800D9310D /* SavedCircleButtton.swift */; };
+		0C515549225C918C00D9310D /* FoodSearchNoResultsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C515548225C918C00D9310D /* FoodSearchNoResultsSVC.xib */; };
 		0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */; };
 		0C7D5866222C652100D00CB0 /* SymptomsMainSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7D5865222C652100D00CB0 /* SymptomsMainSVC.xib */; };
 		0C7D5868222D8DA300D00CB0 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7D5867222D8DA300D00CB0 /* NoteCell.xib */; };
@@ -417,8 +417,8 @@
 		0AF8E0E222092ACE00E1EC33 /* FinishCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishCircleButton.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
 		0C2DAFDD22163057004C1966 /* SearchBarButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarButton.xib; sourceTree = "<group>"; };
-		0C515548225C918C00D9310D /* FoodSearchNoResultsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchNoResultsSVC.xib; sourceTree = "<group>"; };
 		0C515546225942B800D9310D /* SavedCircleButtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCircleButtton.swift; sourceTree = "<group>"; };
+		0C515548225C918C00D9310D /* FoodSearchNoResultsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchNoResultsSVC.xib; sourceTree = "<group>"; };
 		0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackConfirmButtonsSVC.xib; sourceTree = "<group>"; };
 		0C7D5865222C652100D00CB0 /* SymptomsMainSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SymptomsMainSVC.xib; sourceTree = "<group>"; };
 		0C7D5867222D8DA300D00CB0 /* NoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
@@ -731,6 +731,23 @@
 			path = TextFieldAbstractSVCs;
 			sourceTree = "<group>";
 		};
+		0A9926BD225CE04B008DE456 /* BottomViewsTrackingPage */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF7A30222C367F009A0292 /* Goals */,
+				0C7D5864222C63DA00D00CB0 /* Symptoms */,
+				0A9926BE225CE081008DE456 /* Settings */,
+			);
+			path = BottomViewsTrackingPage;
+			sourceTree = "<group>";
+		};
+		0A9926BE225CE081008DE456 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		0AA5284A2202188500CCFEE7 /* TrackingProgressBars */ = {
 			isa = PBXGroup;
 			children = (
@@ -867,14 +884,14 @@
 			path = SelectedItemSVC;
 			sourceTree = "<group>";
 		};
-		0AEF7A30222C367F009A0292 /* Goals And Settings */ = {
+		0AEF7A30222C367F009A0292 /* Goals */ = {
 			isa = PBXGroup;
 			children = (
 				0AEF7A33222C78B3009A0292 /* GoalsVC.swift */,
 				0AEF7A39222CD774009A0292 /* GoalsMainSVC.swift */,
 				0AEF7A3B222CD782009A0292 /* GoalsMainSVC.xib */,
 			);
-			path = "Goals And Settings";
+			path = Goals;
 			sourceTree = "<group>";
 		};
 		0AEF7A6522341C4A009A0292 /* MeditationSetup */ = {
@@ -1010,8 +1027,7 @@
 		618235EC21E44474001ED4DB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0C7D5864222C63DA00D00CB0 /* Symptoms */,
-				0AEF7A30222C367F009A0292 /* Goals And Settings */,
+				0A9926BD225CE04B008DE456 /* BottomViewsTrackingPage */,
 				0A1FEC592204F239006CED70 /* SharedUIVIewControllerSupers */,
 				0A1FEC502204E6F1006CED70 /* TrackingVCs */,
 				0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */,
