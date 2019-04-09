@@ -47,7 +47,7 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     }
     
     func addButtonPressed() {
-        parentVC.pushSubView(newSubView: ExerciseAddSVC())
+        parentVC.pushSubView(newSubView: ExerciseModifySVC())
     }
     
     func timerButtonPressed() {

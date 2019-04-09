@@ -18,6 +18,8 @@ class SymptomsVC : SlidingStackVC {
         initializeviewStack(defaultView: SymptomsMainSVC())
     }
     
+    let imageContainer = UIView()
+    
     override func addViewsBeforeMain() {
         let image = UIImage(named: "Symptons")
         let imageView = UIImageView(image: image)
@@ -26,17 +28,20 @@ class SymptomsVC : SlidingStackVC {
             view.height == 20
         }
         
-        let view = UIView()
-        view.addSubview(imageView)
-        constrain(view) { (view) in
+        imageContainer.addSubview(imageView)
+        constrain(imageContainer) { (view) in
             view.height == 30
         }
         
-        constrain(imageView, view) { (view, superView) in
+        constrain(imageView, imageContainer) { (view, superView) in
             view.centerY == superView.centerY
             view.centerX == superView.centerX
         }
-        contentStackView.addArrangedSubview(view)
+        contentStackView.addArrangedSubview(imageContainer)
+    }
+    
+    func toggleTopImage(isHidden: Bool){
+        imageContainer.isHidden = isHidden
     }
     
 }

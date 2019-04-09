@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -154,7 +153,7 @@
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="CQQ-yp-7Hz"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="CQQ-yp-7Hz"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="Lla-FA-L2y"/>
                         <constraint firstAttribute="trailing" secondItem="Qi2-7t-Ch6" secondAttribute="trailing" constant="10" id="i11-uy-Jjb"/>
                         <constraint firstItem="Qi2-7t-Ch6" firstAttribute="leading" secondItem="I5E-v9-Wxp" secondAttribute="leading" constant="10" id="oxK-wm-dSB"/>
@@ -166,12 +165,11 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="I5E-v9-Wxp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RGT-QO-kP3"/>
-                <constraint firstItem="I5E-v9-Wxp" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="YvT-69-hSN"/>
-                <constraint firstItem="I5E-v9-Wxp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fgi-7k-Esy"/>
+                <constraint firstItem="I5E-v9-Wxp" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="YvT-69-hSN"/>
+                <constraint firstItem="I5E-v9-Wxp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fgi-7k-Esy"/>
                 <constraint firstAttribute="bottom" secondItem="I5E-v9-Wxp" secondAttribute="bottom" id="tVr-ew-2Jz"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="150" y="395.07042253521126"/>
         </view>
     </objects>
