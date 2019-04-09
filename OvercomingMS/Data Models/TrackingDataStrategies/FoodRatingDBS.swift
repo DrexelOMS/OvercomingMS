@@ -27,6 +27,14 @@ class FoodRatingDBS : TrackingModulesDBS {
         
     }
     
+    func getRating() -> Int {
+        if let day = getTrackingDay(date: globalCurrentDate) {
+            let rating = day.FoodEatenRating
+            return rating
+        }
+        return 1
+    }
+    
     //must be 1-5
    func setRating(amount: Int) {
         
