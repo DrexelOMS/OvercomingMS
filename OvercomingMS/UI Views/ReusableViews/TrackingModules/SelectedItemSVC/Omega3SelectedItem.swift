@@ -39,7 +39,9 @@ class Omega3SelectedItemSVC : SelectedItemSVC {
     }
     
     override func repeatButtonPressed() {
-        let repeatPage = RepeatConfirmationSVC(methodToRunOnConfirm: repeatItem, resetToDefault: true)
+        let repeatPage = ConfirmationFactory.RepeatConfirmation()
+        repeatPage.methodToRunOnConfirm = repeatItem
+        repeatPage.resetToDefault = true
         parentVC.pushSubView(newSubView: repeatPage)
     }
     
@@ -52,7 +54,9 @@ class Omega3SelectedItemSVC : SelectedItemSVC {
     
     
     override func deleteButtonPressed() {
-        let deletePage = DeleteConfirmationSVC(methodToRunOnConfirm: deleteItem, resetToDefault: true)
+        let deletePage = ConfirmationFactory.DeleteConfirmation()
+        deletePage.methodToRunOnConfirm = deleteItem
+        deletePage.resetToDefault = true
         parentVC.pushSubView(newSubView: deletePage)
     }
     

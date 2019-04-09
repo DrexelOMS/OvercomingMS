@@ -99,7 +99,10 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     }
     
     func deletePressed() {
-        parentVC.pushSubView(newSubView: DeleteConfirmationSVC(methodToRunOnConfirm: deleteItem, resetToDefault: true))
+        let deletePage = ConfirmationFactory.DeleteConfirmation()
+        deletePage.methodToRunOnConfirm = deleteItem
+        deletePage.resetToDefault = true
+        parentVC.pushSubView(newSubView: deletePage)
     }
     
     func deleteItem() {
