@@ -104,6 +104,15 @@ class OMSRoundedBox: UIView {
         }
     }
     
+    func toggleSelected(isSelected: Bool) {
+        if isSelected {
+            backgroundColor = UIColor.gray
+        }
+        else {
+            backgroundColor = UIColor.white
+        }
+    }
+    
 }
 
 class RoundedBoxTemplate: OMSRoundedBox {
