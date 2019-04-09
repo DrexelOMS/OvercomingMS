@@ -73,10 +73,10 @@
 		0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */; };
 		0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */; };
 		0A93EA3F2210D1FC0063A892 /* FoodModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3E2210D1FC0063A892 /* FoodModuleVC.swift */; };
-		0A93EA4122122D840063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		0A93EA45221316490063A892 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		0A93EA472213165D0063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		0A93EA4922131C2D0063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0A93EA4122122D840063A892 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		0A93EA45221316490063A892 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0A93EA472213165D0063A892 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		0A93EA4922131C2D0063A892 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5622132BCF0063A892 /* PullBarSVC.swift */; };
 		0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93EA5722132BCF0063A892 /* PullBarSVC.xib */; };
 		0A93EA5B22132BF90063A892 /* Omega3ModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5A22132BF90063A892 /* Omega3ModuleVC.swift */; };
@@ -1220,7 +1220,7 @@
 				0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
 				0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */,
-				0A93EA45221316490063A892 /* (null) in Resources */,
+				0A93EA45221316490063A892 /* BuildFile in Resources */,
 				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
 				0A08189A2214E7E80021BDF6 /* FoodSearchCell.xib in Resources */,
@@ -1304,6 +1304,7 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -1318,6 +1319,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1404,7 +1406,7 @@
 				0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */,
 				0A93F19322145EA30063A892 /* TypeTFI.swift in Sources */,
 				0A030FB022580A1500857BC8 /* SavedMedicationDBS.swift in Sources */,
-				0A93EA472213165D0063A892 /* (null) in Sources */,
+				0A93EA472213165D0063A892 /* BuildFile in Sources */,
 				0AD94DCC220CEE9800B5C2BA /* ExerciseSelectedItem.swift in Sources */,
 				0A030FB222580A1500857BC8 /* FoodLogDBS.swift in Sources */,
 				0AEF7A732234454B009A0292 /* MeditationTimerSVC.swift in Sources */,
@@ -1495,7 +1497,7 @@
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
 				0AB66E54223D6C1300DF6B67 /* VitaminDProgressBar.swift in Sources */,
 				0AEF7A2F222B0268009A0292 /* FoodUnknownSVC.swift in Sources */,
-				0A93EA4122122D840063A892 /* (null) in Sources */,
+				0A93EA4122122D840063A892 /* BuildFile in Sources */,
 				0AD94DD5220DEEA100B5C2BA /* RepeatCircleButton.swift in Sources */,
 				0A030FB422580A1500857BC8 /* VitaminDHistoryDBT.swift in Sources */,
 				0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */,
@@ -1508,7 +1510,7 @@
 				0A9926C6225CE484008DE456 /* TitleDescriptionHeaderSVC.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SlidingStackVC.swift in Sources */,
 				0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */,
-				0A93EA4922131C2D0063A892 /* (null) in Sources */,
+				0A93EA4922131C2D0063A892 /* BuildFile in Sources */,
 				0A030FB122580A1500857BC8 /* MeditationHistoryDBS.swift in Sources */,
 				0AEF7A52223025F9009A0292 /* OMSRoundedBox.swift in Sources */,
 				0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */,
