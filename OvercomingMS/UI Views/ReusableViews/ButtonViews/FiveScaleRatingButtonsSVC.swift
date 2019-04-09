@@ -69,27 +69,22 @@ class FiveScaleRatingButtonsSVC : CustomView {
     
     @objc func rank1Click(_ sender:UITapGestureRecognizer){
         FoodRatingDBS().setRating(amount: 1)
-        print("test1")
         reload()
     }
     @objc func rank2Click(_ sender:UITapGestureRecognizer){
         FoodRatingDBS().setRating(amount: 2)
-        print("test2")
         reload()
     }
     @objc func rank3Click(_ sender:UITapGestureRecognizer){
         FoodRatingDBS().setRating(amount: 3)
-        print("test3")
         reload()
     }
     @objc func rank4Click(_ sender:UITapGestureRecognizer){
         FoodRatingDBS().setRating(amount: 4)
-        print("test4")
         reload()
     }
     @objc func rank5Click(_ sender:UITapGestureRecognizer){
         FoodRatingDBS().setRating(amount: 5)
-        print("test5")
         reload()
     }
 }
