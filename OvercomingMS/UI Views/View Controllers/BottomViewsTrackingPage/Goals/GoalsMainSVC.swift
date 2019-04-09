@@ -38,7 +38,7 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
     
     override func reload() {
         print("reloaded")
-        foodGoalLabel.text = "Food Goal: Not Read Yet"
+        foodGoalLabel.text = "Food Goal: Not Ready Yet"
         omega3GoalLabel.text = "Omega3 Goal: \(ProgressBarConfig.omega3Goal)"
         vitaminDGoalLabel.text = "VitaminD Goal: \(ProgressBarConfig.vitaminDGoal)"
         exerciseGoalLabel.text = "Exercise Goal: \(ProgressBarConfig.exerciseGoal)"

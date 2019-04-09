@@ -15,7 +15,12 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TitleDescriptionHeaderSVC" customModule="OvercomingMS" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="niz-R8-eXv" id="vHs-zU-o94"/>
+                <outlet property="titleLabel" destination="GMO-Le-kVs" id="rBg-ai-Gzo"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -30,13 +35,13 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0p-Eg-C4M" userLabel="TitleView">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symptoms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMO-Le-kVs">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMO-Le-kVs">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="XHK-3M-39h"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
-                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -50,7 +55,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdI-LO-a5i" userLabel="DescriptionView">
                                     <rect key="frame" x="0.0" y="28" width="374" height="43"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep track of anything that is bothering you by adding notes of how you feel!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niz-R8-eXv">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niz-R8-eXv">
                                             <rect key="frame" x="30" y="0.0" width="314" height="43"/>
                                             <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,7 +88,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="fvN-QA-XbS" secondAttribute="trailing" id="On2-OR-a55"/>
                 <constraint firstItem="fvN-QA-XbS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="P8U-pZ-GQM"/>

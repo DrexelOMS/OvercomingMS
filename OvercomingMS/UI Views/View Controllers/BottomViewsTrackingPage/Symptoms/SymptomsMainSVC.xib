@@ -7,14 +7,8 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Quicksand-Bold.otf">
-            <string>Quicksand-Bold</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SymptomsMainSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
@@ -31,66 +25,15 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XMI-J4-ZX3">
                     <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmU-Sl-ORZ" userLabel="TopView">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmU-Sl-ORZ" userLabel="TopView" customClass="TitleDescriptionHeaderSVC" customModule="OvercomingMS" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DEZ-vo-a5m">
-                                    <rect key="frame" x="20" y="0.0" width="280" height="80"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPN-x5-bjs" userLabel="TitleView">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symptoms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOt-KV-8Kn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="QCg-V5-Tx8"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
-                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="tOt-KV-8Kn" firstAttribute="leading" secondItem="sPN-x5-bjs" secondAttribute="leading" id="OlH-Uc-QYD"/>
-                                                <constraint firstAttribute="trailing" secondItem="tOt-KV-8Kn" secondAttribute="trailing" id="aQn-cA-Db5"/>
-                                                <constraint firstItem="tOt-KV-8Kn" firstAttribute="top" secondItem="sPN-x5-bjs" secondAttribute="top" id="kzb-E2-WNw"/>
-                                                <constraint firstAttribute="bottom" secondItem="tOt-KV-8Kn" secondAttribute="bottom" id="rhS-Ll-uK8"/>
-                                            </constraints>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9f-Ci-g4z" userLabel="DescriptionView">
-                                            <rect key="frame" x="0.0" y="28" width="280" height="43"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep track of anything that is bothering you by adding notes of how you feel!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnc-6H-by4">
-                                                    <rect key="frame" x="30" y="0.0" width="220" height="43"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="nnc-6H-by4" secondAttribute="trailing" constant="30" id="34U-iV-v71"/>
-                                                <constraint firstAttribute="bottom" secondItem="nnc-6H-by4" secondAttribute="bottom" id="MTL-gS-Dec"/>
-                                                <constraint firstItem="nnc-6H-by4" firstAttribute="leading" secondItem="U9f-Ci-g4z" secondAttribute="leading" constant="30" id="WUf-ua-qgU"/>
-                                                <constraint firstItem="nnc-6H-by4" firstAttribute="top" secondItem="U9f-Ci-g4z" secondAttribute="top" id="r4r-oS-4Re"/>
-                                            </constraints>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxt-fj-KxG" userLabel="line">
-                                            <rect key="frame" x="0.0" y="79" width="280" height="1"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="1" id="i3d-su-kzU"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
                             <constraints>
-                                <constraint firstItem="DEZ-vo-a5m" firstAttribute="leading" secondItem="EmU-Sl-ORZ" secondAttribute="leading" constant="20" id="2uK-Yf-g1h"/>
                                 <constraint firstAttribute="height" constant="80" id="FhU-S2-QQK"/>
-                                <constraint firstItem="DEZ-vo-a5m" firstAttribute="top" secondItem="EmU-Sl-ORZ" secondAttribute="top" id="SEC-KW-ia8"/>
-                                <constraint firstAttribute="trailing" secondItem="DEZ-vo-a5m" secondAttribute="trailing" constant="20" id="kb8-4X-7Ml"/>
-                                <constraint firstAttribute="bottom" secondItem="DEZ-vo-a5m" secondAttribute="bottom" id="qCw-jc-7YW"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Symptoms"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Keep track of anything that is bothering you by adding notes of how you feel!"/>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4S-L6-DDE" userLabel="MiddleView">
                             <rect key="frame" x="0.0" y="90" width="320" height="348"/>

@@ -98,7 +98,7 @@
 		0A98DB0F2216447800F4800D /* SearchBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98DB0E2216447800F4800D /* SearchBarButton.swift */; };
 		0A9926C0225CE0D3008DE456 /* TopImageSlidingStackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9926BF225CE0D3008DE456 /* TopImageSlidingStackVC.swift */; };
 		0A9926C2225CE3AA008DE456 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9926C1225CE3AA008DE456 /* SettingsVC.swift */; };
-		0A9926C4225CE472008DE456 /* TitleDecscriptionHeaderSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9926C3225CE472008DE456 /* TitleDecscriptionHeaderSVC.xib */; };
+		0A9926C4225CE472008DE456 /* TitleDescriptionHeaderSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9926C3225CE472008DE456 /* TitleDescriptionHeaderSVC.xib */; };
 		0A9926C6225CE484008DE456 /* TitleDescriptionHeaderSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9926C5225CE484008DE456 /* TitleDescriptionHeaderSVC.swift */; };
 		0AA5284C22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */; };
 		0AA5284E22022D1900CCFEE7 /* ExerciseModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */; };
@@ -331,7 +331,7 @@
 		0A98DB0E2216447800F4800D /* SearchBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarButton.swift; sourceTree = "<group>"; };
 		0A9926BF225CE0D3008DE456 /* TopImageSlidingStackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImageSlidingStackVC.swift; sourceTree = "<group>"; };
 		0A9926C1225CE3AA008DE456 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		0A9926C3225CE472008DE456 /* TitleDecscriptionHeaderSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleDecscriptionHeaderSVC.xib; sourceTree = "<group>"; };
+		0A9926C3225CE472008DE456 /* TitleDescriptionHeaderSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleDescriptionHeaderSVC.xib; sourceTree = "<group>"; };
 		0A9926C5225CE484008DE456 /* TitleDescriptionHeaderSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDescriptionHeaderSVC.swift; sourceTree = "<group>"; };
 		0AA5284B22022CFC00CCFEE7 /* TrackingModuleAbstractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleAbstractVC.swift; sourceTree = "<group>"; };
 		0AA5284D22022D1900CCFEE7 /* ExerciseModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleVC.swift; sourceTree = "<group>"; };
@@ -745,7 +745,7 @@
 				0AEF7A30222C367F009A0292 /* Goals */,
 				0C7D5864222C63DA00D00CB0 /* Symptoms */,
 				0A9926BE225CE081008DE456 /* Settings */,
-				0A9926C3225CE472008DE456 /* TitleDecscriptionHeaderSVC.xib */,
+				0A9926C3225CE472008DE456 /* TitleDescriptionHeaderSVC.xib */,
 				0A9926C5225CE484008DE456 /* TitleDescriptionHeaderSVC.swift */,
 				0A9926BF225CE0D3008DE456 /* TopImageSlidingStackVC.swift */,
 			);
@@ -1222,7 +1222,7 @@
 				0AD7EB13221B4D23006F71C0 /* SelectedLabelsSVC.xib in Resources */,
 				0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */,
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
-				0A9926C4225CE472008DE456 /* TitleDecscriptionHeaderSVC.xib in Resources */,
+				0A9926C4225CE472008DE456 /* TitleDescriptionHeaderSVC.xib in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
 				0AD7EB4622234524006F71C0 /* MedRateButtonsSVC.xib in Resources */,
 				0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */,
