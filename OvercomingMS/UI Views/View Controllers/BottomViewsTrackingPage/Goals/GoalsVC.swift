@@ -8,7 +8,13 @@
 
 import UIKit
 
-class GoalsVC : SlidingStackVC {
+class GoalsVC : TopImageSlidingStackVC {
+    
+    override var topImage: UIImage! {
+        get {
+            return UIImage(named: "Add")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

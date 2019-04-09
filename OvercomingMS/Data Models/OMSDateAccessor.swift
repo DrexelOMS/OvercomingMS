@@ -149,8 +149,8 @@ class OMSDateAccessor {
     }
     
     func progressDay() {
-        let tomorrow = todaysFullDate.addingTimeInterval(60*60*24)
-        defaults.set(OMSDateAccessor.getFormatedDate(date: tomorrow), forKey: "today")
+//        let tomorrow = todaysFullDate.addingTimeInterval(60*60*24)
+//        defaults.set(OMSDateAccessor.getFormatedDate(date: tomorrow), forKey: "today")
     }
     
     func createDay(date: String) {

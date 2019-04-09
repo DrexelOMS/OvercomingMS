@@ -1,28 +1,22 @@
 //
-//  SymptomsVC.swift
+//  TopImageSlidingStackVC.swift
 //  OvercomingMS
 //
-//  Created by Vincent Finn on 3/4/19.
+//  Created by Vincent Finn on 4/9/19.
 //  Copyright © 2019 DrexelOMS. All rights reserved.
 //
 
 import UIKit
 import Cartography
 
-class SymptomsVC : SlidingStackVC {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        initializeviewStack(defaultView: SymptomsMainSVC())
+class TopImageSlidingStackVC : SlidingStackVC {
+    let imageContainer = UIView()
+    var topImage : UIImage! {
+        get { return nil }
     }
     
-    let imageContainer = UIView()
-    
     override func addViewsBeforeMain() {
-        let image = UIImage(named: "Symptons")
-        let imageView = UIImageView(image: image)
+        let imageView = UIImageView(image: topImage)
         imageView.contentMode = .scaleAspectFit
         constrain(imageView) { (view) in
             view.height == 20
@@ -30,7 +24,7 @@ class SymptomsVC : SlidingStackVC {
         
         imageContainer.addSubview(imageView)
         constrain(imageContainer) { (view) in
-            view.height == 30
+            view.height == 40
         }
         
         constrain(imageView, imageContainer) { (view, superView) in

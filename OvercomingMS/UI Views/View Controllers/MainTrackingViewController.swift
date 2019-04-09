@@ -310,15 +310,17 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     //TODO: this is a test button, normally the day would progress, and the ui is not automatically updated unless we check in the loadCurrentDayUI to check if todays date has changed
     //basically nothing can ever write using current day, they write using todays date
     @objc private func ProgressDayPressed(gesture: UIGestureRecognizer) {
-//        omsDateFormatter.progressDay()
+        omsDateFormatter.progressDay()
     }
     
     func goalPressed() {
-        let vc = GoalsVC()
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.dismissalDelegate = self
-        
-        self.present(vc, animated: true, completion: nil)
+        if globalCurrentDate == todaysDate {
+            let vc = GoalsVC()
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.dismissalDelegate = self
+            
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     func symptomsPressed() {
@@ -331,7 +333,11 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     }
     
     func settingsPressed() {
+        let vc = SettingsVC()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.dismissalDelegate = self
         
+        self.present(vc, animated: true, completion: nil)
     }
     
 }

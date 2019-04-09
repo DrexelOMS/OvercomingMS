@@ -33,13 +33,15 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     }
     
     override func editButtonPressed() {
-        let editPage = VitaminDEditSVC()
+        let editPage = VitaminDModifySVC()
         editPage.editingVitamindDItem = vitaminDItem
         parentVC.pushSubView(newSubView: editPage)
     }
     
     override func repeatButtonPressed() {
-        let repeatPage = RepeatConfirmationSVC(methodToRunOnConfirm: repeatItem, resetToDefault: true)
+        let repeatPage = ConfirmationFactory.RepeatConfirmation()
+        repeatPage.methodToRunOnConfirm = repeatItem
+        repeatPage.resetToDefault = true
         parentVC.pushSubView(newSubView: repeatPage)
     }
     
@@ -49,7 +51,9 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     
     
     override func deleteButtonPressed() {
-        let deletePage = DeleteConfirmationSVC(methodToRunOnConfirm: deleteItem, resetToDefault: true)
+        let deletePage = ConfirmationFactory.DeleteConfirmation()
+        deletePage.methodToRunOnConfirm = deleteItem
+        deletePage.resetToDefault = true
         parentVC.pushSubView(newSubView: deletePage)
     }
     

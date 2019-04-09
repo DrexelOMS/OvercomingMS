@@ -35,13 +35,15 @@ class MedicationSelectedItemSVC : SelectedItemSVC {
     }
     
     override func editButtonPressed() {
-        let editPage = MedicationEditSVC()
+        let editPage = MedicationModifySVC()
         editPage.editingMedicationItem = savedMedicationItem
         parentVC.pushSubView(newSubView: editPage)
     }
     
     override func repeatButtonPressed() {
-        let repeatPage = RepeatConfirmationSVC(methodToRunOnConfirm: repeatItem, resetToDefault: true)
+        let repeatPage = ConfirmationFactory.RepeatConfirmation()
+        repeatPage.methodToRunOnConfirm = repeatItem
+        repeatPage.resetToDefault = true
         parentVC.pushSubView(newSubView: repeatPage)
     }
     
@@ -51,8 +53,12 @@ class MedicationSelectedItemSVC : SelectedItemSVC {
     
     
     override func deleteButtonPressed() {
-        let deletePage = DeleteConfirmationSVC(methodToRunOnConfirm: deleteItem, resetToDefault: true)
-        parentVC.pushSubView(newSubView: deletePage)
+        if globalCurrentDate == OMSDateAccessor().todaysDate {
+            let deletePage = ConfirmationFactory.DeleteConfirmation()
+            deletePage.methodToRunOnConfirm = deleteItem
+            deletePage.resetToDefault = true
+            parentVC.pushSubView(newSubView: deletePage)
+        }
     }
     
     func deleteItem(){

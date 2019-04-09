@@ -50,7 +50,7 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func addButtonPressed() {
-        parentVC.pushSubView(newSubView: MeditationAddSVC())
+        parentVC.pushSubView(newSubView: MeditationModifySVC())
     }
     
     func timerButtonPressed() {
