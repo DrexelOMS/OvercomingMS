@@ -64,6 +64,16 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     override func reload(){
         tableView.reloadData()
+        
+        
+        let count = savedMedications.getSavedMedicationItems().getTotalMedCount()
+        if count <= 0 {
+            tableView.setEmptyView(title: "No medications yet!", message: "Press the 'Add' button to begin.")
+        }
+        else {
+            tableView.restore()
+        }
+        
         //totalsCountLabel.text = String(meditationHistory.getTotalMinutes())
         //totalsTextLabel.text = "Minutes\nToday"
     }

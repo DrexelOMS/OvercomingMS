@@ -42,6 +42,15 @@ class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource
     
     override func reload(){
         tableView.reloadData()
+        
+        let count = omega3History.getTodaysOmega3Items()?.count ?? 0
+        if count <= 0 {
+            tableView.setEmptyView(title: "No Omega-3 items yet!", message: "Select a button below to begin.")
+        }
+        else {
+            tableView.restore()
+        }
+        
         totalsCountLabel.text = String(omega3History.getTotalGrams())
         totalsTextLabel.text = "Grams\nToday"
     }

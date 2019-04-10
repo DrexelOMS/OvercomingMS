@@ -59,11 +59,11 @@
                                                                 <rect key="frame" x="40" y="0.0" width="200" height="45"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1y-Q8-aCF">
-                                                                        <rect key="frame" x="18.5" y="14.5" width="143" height="16.5"/>
+                                                                        <rect key="frame" x="14.5" y="14" width="151" height="17"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="Today, Month ##, ####">
                                                                                 <attributes>
-                                                                                    <font key="NSFont" size="14" name="Quicksand-Bold"/>
+                                                                                    <font key="NSFont" metaFont="system" size="14"/>
                                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                 </attributes>
                                                                             </fragment>
@@ -71,7 +71,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H33-LW-Fg1" userLabel="DropdownView">
-                                                                        <rect key="frame" x="166.5" y="0.0" width="12" height="45"/>
+                                                                        <rect key="frame" x="170.5" y="0.0" width="12" height="45"/>
                                                                         <subviews>
                                                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5k8-Aq-5FZ">
                                                                                 <rect key="frame" x="1" y="17.5" width="10" height="10"/>

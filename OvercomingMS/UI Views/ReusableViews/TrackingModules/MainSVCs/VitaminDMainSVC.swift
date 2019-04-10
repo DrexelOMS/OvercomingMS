@@ -45,6 +45,15 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     
     override func reload(){
         tableView.reloadData()
+        
+        let count = vitaminDHistory.getTodaysVitaminDItems()?.count ?? 0
+        if count <= 0 {
+            tableView.setEmptyView(title: "No Vitamin D items yet!", message: "Select a button below to begin.")
+        }
+        else {
+            tableView.restore()
+        }
+        
         totalsCountLabel.text = String(vitaminDHistory.getTotalAmount())
         totalsTextLabel.text = "\(ProgressBarConfig.vitaminDUOM)\nToday"
     }

@@ -23,4 +23,7 @@ class DisplayedMedicationItems{
         return medicationsNotTracked.count > 0
     }
     
+    func getTotalMedCount() -> Int{
+        return medicationsTracked.count + medicationsNotTracked.count
+    }
 }

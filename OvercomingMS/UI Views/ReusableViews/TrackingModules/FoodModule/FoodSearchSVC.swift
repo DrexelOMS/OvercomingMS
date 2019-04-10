@@ -181,6 +181,15 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     override func reload(){
         tableView.reloadData()
+        
+        
+        let count = foodItemsArray.count
+        if count <= 0 {
+            tableView.setEmptyView(message: "No saved foods yet!")
+        }
+        else {
+            tableView.restore()
+        }
     }
     
     
