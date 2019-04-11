@@ -15,6 +15,7 @@
                 <outlet property="backConfirmButtons" destination="W8i-7f-xAc" id="iJo-dg-yXr"/>
                 <outlet property="textInputStackBottom" destination="Kcu-Cw-fPX" id="Tc9-EV-OjJ"/>
                 <outlet property="textInputStackView" destination="pwm-Jx-CmD" id="gwo-A7-2I4"/>
+                <outlet property="titleLabel" destination="HoM-YW-o2v" id="nnc-zH-EgG"/>
                 <outlet property="topLabelViewHeight" destination="abu-D5-vW4" id="0oc-xw-a2m"/>
                 <outlet property="topPaddingConstraint" destination="jH9-xR-acI" id="TWj-v8-vii"/>
             </connections>
@@ -38,7 +39,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pwm-Jx-CmD">
-                    <rect key="frame" x="40" y="96" width="240" height="219"/>
+                    <rect key="frame" x="40" y="126" width="240" height="189"/>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8i-7f-xAc" userLabel="BotButtons" customClass="BackConfirmButtonsSVC" customModule="OvercomingMS" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="390" width="320" height="60"/>
@@ -47,10 +48,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nG2-DQ-L2R" userLabel="TopLabel">
-                    <rect key="frame" x="40" y="41" width="240" height="30"/>
+                    <rect key="frame" x="40" y="41" width="240" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Changes?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoM-YW-o2v">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Changes?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoM-YW-o2v">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -60,7 +61,7 @@
                         <constraint firstItem="HoM-YW-o2v" firstAttribute="top" secondItem="nG2-DQ-L2R" secondAttribute="top" id="EHC-jv-GSR"/>
                         <constraint firstAttribute="trailing" secondItem="HoM-YW-o2v" secondAttribute="trailing" id="EaU-XA-Lyh"/>
                         <constraint firstAttribute="bottom" secondItem="HoM-YW-o2v" secondAttribute="bottom" id="PVs-3G-o1g"/>
-                        <constraint firstAttribute="height" constant="30" id="abu-D5-vW4"/>
+                        <constraint firstAttribute="height" constant="60" id="abu-D5-vW4"/>
                         <constraint firstItem="HoM-YW-o2v" firstAttribute="leading" secondItem="nG2-DQ-L2R" secondAttribute="leading" id="de0-OO-lcL"/>
                     </constraints>
                 </view>

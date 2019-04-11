@@ -26,9 +26,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error initialising new realm, \(error)")
         }
         
-        GoalsDBS().writeGoals()
+        _ = OMSDateAccessor().todaysDate
+        
+        let goals = GoalsDBS().goals
+        if goals.count <= 0 {
+            GoalsDBS().writeGoals()
+        }
         
         return true
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        _ = OMSDateAccessor().todaysDate
     }
     
 }

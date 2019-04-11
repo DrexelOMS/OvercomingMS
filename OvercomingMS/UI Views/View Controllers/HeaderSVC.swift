@@ -183,4 +183,5 @@ extension UIColor {
 
 extension Notification.Name {
     static let didCompleteModule = Notification.Name("didReceiveData")
+    static let didTodaysDateChange = Notification.Name("didTodaysDateChange")
 }

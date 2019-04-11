@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SymptomsMainSVC" customModule="OvercomingMS" customModuleProvider="target">
+            <connections>
+                <outlet property="addButton" destination="w2C-3X-ZMM" id="Fc5-n2-dey"/>
+                <outlet property="listButton" destination="WLF-CW-Vco" id="f37-3i-8CM"/>
+                <outlet property="tableView" destination="GYa-6d-7me" id="2Qu-1Y-qXN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XMI-J4-ZX3">
+                    <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmU-Sl-ORZ" userLabel="TopView" customClass="TitleDescriptionHeaderSVC" customModule="OvercomingMS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="FhU-S2-QQK"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Symptoms"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Keep track of anything that is bothering you by adding notes of how you feel!"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4S-L6-DDE" userLabel="MiddleView">
+                            <rect key="frame" x="0.0" y="90" width="320" height="348"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VGO-Oe-ZrC">
+                                    <rect key="frame" x="20" y="20" width="280" height="328"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GYa-6d-7me">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="328"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="VGO-Oe-ZrC" firstAttribute="top" secondItem="a4S-L6-DDE" secondAttribute="top" constant="20" id="8Q4-HY-p9A"/>
+                                <constraint firstAttribute="trailing" secondItem="VGO-Oe-ZrC" secondAttribute="trailing" constant="20" id="BAp-BW-Awd"/>
+                                <constraint firstAttribute="bottom" secondItem="VGO-Oe-ZrC" secondAttribute="bottom" id="PZQ-xD-qRs"/>
+                                <constraint firstItem="VGO-Oe-ZrC" firstAttribute="leading" secondItem="a4S-L6-DDE" secondAttribute="leading" constant="20" id="mQ5-CK-uPI"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkG-KW-tiR" userLabel="OuterView">
+                            <rect key="frame" x="0.0" y="448" width="320" height="100"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a4H-Jj-bDq">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2C-3X-ZMM" customClass="AddCircleButton" customModule="OvercomingMS" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="100"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLF-CW-Vco" customClass="ListCircleButton" customModule="OvercomingMS" customModuleProvider="target">
+                                            <rect key="frame" x="160" y="0.0" width="160" height="100"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="3uW-vL-BFo"/>
+                                <constraint firstItem="a4H-Jj-bDq" firstAttribute="top" secondItem="tkG-KW-tiR" secondAttribute="top" id="94a-s6-cHT"/>
+                                <constraint firstAttribute="bottom" secondItem="a4H-Jj-bDq" secondAttribute="bottom" id="TJL-lb-TJg"/>
+                                <constraint firstAttribute="trailing" secondItem="a4H-Jj-bDq" secondAttribute="trailing" id="ctU-o6-9CO"/>
+                                <constraint firstItem="a4H-Jj-bDq" firstAttribute="leading" secondItem="tkG-KW-tiR" secondAttribute="leading" id="hVK-4z-Xmo"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tkG-KW-tiR" firstAttribute="leading" secondItem="XMI-J4-ZX3" secondAttribute="leading" id="5t2-xt-hhr"/>
+                        <constraint firstItem="tkG-KW-tiR" firstAttribute="top" secondItem="a4S-L6-DDE" secondAttribute="bottom" constant="10" id="IMX-Th-pYt"/>
+                        <constraint firstAttribute="trailing" secondItem="tkG-KW-tiR" secondAttribute="trailing" id="Oal-gU-bwp"/>
+                        <constraint firstAttribute="bottom" secondItem="tkG-KW-tiR" secondAttribute="bottom" id="PmZ-yL-jvq"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XMI-J4-ZX3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7ER-Uw-aRV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XMI-J4-ZX3" secondAttribute="bottom" id="Asn-uF-A6O"/>
+                <constraint firstItem="XMI-J4-ZX3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QNH-x6-sMP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XMI-J4-ZX3" secondAttribute="trailing" id="RUW-Eg-gl4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="63.75" y="55.985915492957744"/>
+        </view>
+    </objects>
+</document>

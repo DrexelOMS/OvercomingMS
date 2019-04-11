@@ -13,6 +13,7 @@ target 'OvercomingMS' do
   pod 'Cartography'
   pod 'BarcodeScanner', '~> 4.1'
   pod 'PTPopupWebView'
+  pod 'UPCarouselFlowLayout'
   
   target 'OvercomingMSTests' do
     inherit! :search_paths

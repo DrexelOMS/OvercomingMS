@@ -11,6 +11,7 @@ PODS:
     - Realm (= 3.13.1)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.2.0)
+  - UPCarouselFlowLayout (1.1.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - RealmSwift
   - SVProgressHUD
   - SwiftyJSON
+  - UPCarouselFlowLayout
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -33,6 +35,7 @@ SPEC REPOS:
     - RealmSwift
     - SVProgressHUD
     - SwiftyJSON
+    - UPCarouselFlowLayout
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -44,7 +47,8 @@ SPEC CHECKSUMS:
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: 2a19c2542e1af8de201f02086387b5fabc3784a8
+PODFILE CHECKSUM: 5a2e3f04cf5c5b61a7cedffb0364c3d44a3e9e3f
 
 COCOAPODS: 1.5.3

@@ -79,7 +79,9 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func addButtonPressed() {
-        parentVC.pushSubView(newSubView: MedicationAddSVC())
+        if globalCurrentDate == OMSDateAccessor().todaysDate {
+            parentVC.pushSubView(newSubView: MedicationModifySVC())
+        }
     }
     
     override func updateColors() {
