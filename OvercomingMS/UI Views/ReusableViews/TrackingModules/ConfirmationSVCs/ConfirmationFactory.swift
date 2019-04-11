@@ -11,7 +11,7 @@ import UIKit
 class ConfirmationFactory {
     static func CancelConfirmation() -> ConfirmationSVC {
         let svc = ConfirmationSVC()
-        svc.topDescription.text = "Are you sure you want to cancel"
+        svc.topDescription.text = "Are you sure you want to cancel?"
         svc.bottomDescription.text = "All progress made during this session will be lost"
         return svc
     }
@@ -26,7 +26,7 @@ class ConfirmationFactory {
     static func DeleteConfirmation() -> ConfirmationSVC {
         let svc = ConfirmationSVC()
         svc.topDescription.text = "You are about to delete this item from today's achievements"
-        svc.bottomDescription.text = "you will not be able to undo this action"
+        svc.bottomDescription.text = "You will not be able to undo this action"
         return svc
     }
 }

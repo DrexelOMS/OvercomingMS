@@ -221,8 +221,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqb-Vo-Ctx" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                 <rect key="frame" x="95" y="0.0" width="90" height="100"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Symptons"/>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Symptons"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Symptoms"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Symptoms"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USw-ho-yen" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
@@ -284,6 +284,6 @@
         <image name="Forward" width="689" height="689"/>
         <image name="Goals" width="689" height="689"/>
         <image name="Settings" width="689" height="689"/>
-        <image name="Symptons" width="689" height="689"/>
+        <image name="Symptoms" width="16" height="16"/>
     </resources>
 </document>

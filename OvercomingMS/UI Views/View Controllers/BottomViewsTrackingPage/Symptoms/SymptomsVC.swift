@@ -12,7 +12,7 @@ class SymptomsVC : TopImageSlidingStackVC {
     
     override var topImage: UIImage! {
         get {
-            return UIImage(named: "Symptons")
+            return UIImage(named: "Symptoms")
         }
     }
     
