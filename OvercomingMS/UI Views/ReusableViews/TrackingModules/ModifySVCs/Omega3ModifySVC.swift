@@ -55,7 +55,7 @@ class Omega3ModifySVC : ModifyAbstractSVC {
         }
     }
     
-    var typeTFI = Omega3TypeTFI()
+    var typeTFI = TypeTFIFactory.Omega3TypeTFI()
     var dateTimeTFI = DateTimeTFI()
     var amountTFI = AmountTFI(uom: ProgressBarConfig.omega3UOM)
     

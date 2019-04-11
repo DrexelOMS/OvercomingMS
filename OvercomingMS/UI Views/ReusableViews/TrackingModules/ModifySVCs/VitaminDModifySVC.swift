@@ -55,7 +55,7 @@ class VitaminDModifySVC : ModifyAbstractSVC {
         }
     }
     
-    var vitaminDTypeTFI = VitaminDTypeTFI()
+    var vitaminDTypeTFI = TypeTFIFactory.VitaminDTypeTFI()
     var dateTimeTFI = DateTimeTFI()
     var amountTFI = AmountTFI(uom: ProgressBarConfig.vitaminDUOM)
     

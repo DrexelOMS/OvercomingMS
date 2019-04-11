@@ -9,13 +9,7 @@
 import UIKit
 import Cartography
 
-class MedicationRateTFI : TypeTFIAbstract {
-    
-    override var choices: [String] {
-        get {
-            return MedicationRateModel.options
-        }
-    }
+class MedicationRateTFI : TypeTFI {
     
     let medRateButtons = MedRateButtonsSVC()
     var rateModel: MedicationRateModel? {
@@ -51,12 +45,9 @@ class MedicationRateTFI : TypeTFIAbstract {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         medRateButtons.isHidden = true
-    }
-    
-    override var title : String {
-        get {
-            return "Rate"
-        }
+        
+        choices = MedicationRateModel.options
+        title = "Rate"
     }
     
     override func showTextFieldInput() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TFIDelegate {
     
@@ -47,11 +48,14 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         }
     }
     
-    @IBOutlet weak var timeTFI: DateTimeTFI!
-    @IBOutlet weak var severityTFI: SeverityTFI!
+    @IBOutlet weak var stackView: UIStackView!
+    var severityTFI = TypeTFIFactory.SeverityTypeTFI()
+    var timeTFI = DateTimeTFI()
+    let placeholderText = "Tap to edit"
     
     convenience init(noteItem: SymptomsNoteDBT) {
         self.init()
+
         
         editingNote = noteItem
         noteTextField.text = noteItem.Note
@@ -66,6 +70,16 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         
         noteTextField.inputAccessoryView = toolbar.getToolBar()
 
+        stackView.addArrangedSubview(timeTFI)
+        stackView.addArrangedSubview(severityTFI)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        constrain(timeTFI) { (view) in
+            view.height == 51
+        }
+        constrain(severityTFI) { (view) in
+            view.height == 51
+        }
     }
     
     override func initialize(parentVC: SlidingStackVC) {
@@ -83,7 +97,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         severityTFI.tfiDelegate = self
         
         if editingNote == nil {
-            noteTextField.text = "Tap to edit"
+            noteTextField.text = placeholderText
             noteTextField.textColor = UIColor.lightGray
         }
         
@@ -115,7 +129,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     
     func confirmPressed() {
         if let note = noteTextField.text, let rating = Int(selectedSeverity!), let date = selectedTime {
-            if note == "" {
+            if note == "" || note == placeholderText {
                 return
             }
             

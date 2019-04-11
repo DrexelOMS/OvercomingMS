@@ -31,7 +31,7 @@ class MeditationModifySVC : ModifyAbstractSVC {
         }
     }
     
-    var typeTFI = MeditationTypeTFI()
+    var typeTFI = TypeTFIFactory.MeditationTypeTFI()
     var dateTimeTFI = DateTimeTFI()
     var lengthTFI = LengthTFI()
     

@@ -10,7 +10,7 @@ import UIKit
 
 class CircleButtonFactory {
     
-    func AddButton() -> CircleButtonSVC {
+    static func AddButton() -> CircleButtonSVC {
         return CircleButtonSVC(image: UIImage(named: "Add")!, label: "Add")
     }
     

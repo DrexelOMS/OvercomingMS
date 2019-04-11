@@ -68,6 +68,7 @@
 		0A341D81225922670066EC1D /* NoteSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A341D80225922670066EC1D /* NoteSVC.xib */; };
 		0A3EB6F422594FF800D25AF5 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EB6F322594FF800D25AF5 /* TableViewExtensions.swift */; };
 		0A4CC87E225FE591004C97BC /* CircleButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC87D225FE591004C97BC /* CircleButtonFactory.swift */; };
+		0A4CC880225FEFA2004C97BC /* TypeTFIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC87F225FEFA2004C97BC /* TypeTFIFactory.swift */; };
 		0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */; };
 		0A93EA3B2210CD2F0063A892 /* MedicationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */; };
 		0A93EA3D2210CD480063A892 /* VitaminDModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */; };
@@ -283,6 +284,7 @@
 		0A341D80225922670066EC1D /* NoteSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteSVC.xib; sourceTree = "<group>"; };
 		0A3EB6F322594FF800D25AF5 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
 		0A4CC87D225FE591004C97BC /* CircleButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonFactory.swift; sourceTree = "<group>"; };
+		0A4CC87F225FEFA2004C97BC /* TypeTFIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTFIFactory.swift; sourceTree = "<group>"; };
 		0A7FC90F21F51CE300492E93 /* MainTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingViewController.swift; sourceTree = "<group>"; };
 		0A93EA3A2210CD2E0063A892 /* MedicationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationModuleVC.swift; sourceTree = "<group>"; };
 		0A93EA3C2210CD480063A892 /* VitaminDModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDModuleVC.swift; sourceTree = "<group>"; };
@@ -693,6 +695,7 @@
 			children = (
 				0A93F18E22145EA30063A892 /* TFIAbstract.xib */,
 				0A93F18F22145EA30063A892 /* TypeTFI.swift */,
+				0A4CC87F225FEFA2004C97BC /* TypeTFIFactory.swift */,
 				0AD7EB41222341B3006F71C0 /* MedicationRateTFI.swift */,
 				0A0818902214647E0021BDF6 /* LengthTFI.swift */,
 				0AD7EAEF221AFB47006F71C0 /* AmountTFI.swift */,
@@ -1374,6 +1377,7 @@
 				0AD7EAFE221B1A86006F71C0 /* Omega3ModifySVC.swift in Sources */,
 				0AEF7A44222DD59F009A0292 /* NoteReviewSVC.swift in Sources */,
 				0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */,
+				0A4CC880225FEFA2004C97BC /* TypeTFIFactory.swift in Sources */,
 				0AEF7A6922341E14009A0292 /* MeditationLevelButtonSVC.swift in Sources */,
 				0A7FC91021F51CE300492E93 /* MainTrackingViewController.swift in Sources */,
 				0AD7EB212221E537006F71C0 /* TimerAbsractSVC.swift in Sources */,

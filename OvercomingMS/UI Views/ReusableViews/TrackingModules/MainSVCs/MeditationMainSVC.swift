@@ -11,7 +11,7 @@ import RealmSwift
 
 class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
     
-    let button1 = CircleButtonFactory().AddButton()
+    let button1 = CircleButtonFactory.AddButton()
     let button2 = CircleButtonFactory.TimerButton()
     let button3 = CircleButtonFactory.GuidedButton()
     

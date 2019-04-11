@@ -38,7 +38,7 @@ class ExerciseModifySVC : ModifyAbstractSVC {
         }
     }
     
-    var typeTFI = ExerciseTypeTFI()
+    var typeTFI = TypeTFIFactory.ExerciseTypeTFI()
     var dateTimeTFI = DateTimeTFI()
     var lengthTFI = LengthTFI()
     
