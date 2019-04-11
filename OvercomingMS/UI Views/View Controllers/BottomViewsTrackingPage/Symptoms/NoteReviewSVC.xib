@@ -100,11 +100,15 @@
                                         <constraint firstItem="X1U-uU-7gf" firstAttribute="top" secondItem="Ylz-aE-xd7" secondAttribute="top" id="tZE-dB-vy4"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFQ-dY-D44" customClass="DeleteCircleButton" customModule="OvercomingMS" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFQ-dY-D44" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="348" width="280" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="Hue-Yu-lHT"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Delete"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Delete"/>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
                             <constraints>
@@ -140,4 +144,7 @@
             <point key="canvasLocation" x="63.75" y="55.985915492957744"/>
         </view>
     </objects>
+    <resources>
+        <image name="Delete" width="689" height="689"/>
+    </resources>
 </document>

@@ -36,15 +36,15 @@ class SelectedItemSVC : SlidingAbstractSVC {
     override func customSetup() {
         middleFrequencyLabel.isHidden = true
         
-        editButton = EditCircleButton()
+        editButton = CircleButtonFactory.EditButton()
         editButton.buttonAction = editButtonPressed
         buttonStackView.addArrangedSubview(editButton)
         
-        repeatButton = RepeatCircleButton()
+        repeatButton = CircleButtonFactory.RepeatButton()
         repeatButton.buttonAction = repeatButtonPressed
         buttonStackView.addArrangedSubview(repeatButton)
         
-        deleteButton = DeleteCircleButton()
+        deleteButton = CircleButtonFactory.DeleteButton()
         deleteButton.buttonAction = deleteButtonPressed
         buttonStackView.addArrangedSubview(deleteButton)
         

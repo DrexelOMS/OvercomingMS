@@ -20,7 +20,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     
     @IBOutlet weak var noteView: RoundedBoxShadowsTemplate!
     @IBOutlet weak var noteTextField: UITextView!
-    @IBOutlet weak var deleteCircleButton: DeleteCircleButton!
+    @IBOutlet weak var deleteCircleButton: CircleButtonSVC!
     @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
     //160 + 0 is the default 
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
