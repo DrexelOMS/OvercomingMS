@@ -54,16 +54,26 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         //TODO make a new UI for this cell
         tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
         
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 100
-        tableView.separatorStyle = .none
-        tableView.allowsSelection = false
-        
         reload()
     }
     
     override func reload(){
         tableView.reloadData()
+        
+        
+        let count = savedMedications.getSavedMedicationItems().getTotalMedCount()
+        if count <= 0 {
+            tableView.setEmptyView(title: "No medications yet!", message: "Press the 'Add' button to begin.")
+        }
+        else {
+            tableView.restore()
+        }
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+        
         //totalsCountLabel.text = String(meditationHistory.getTotalMinutes())
         //totalsTextLabel.text = "Minutes\nToday"
     }

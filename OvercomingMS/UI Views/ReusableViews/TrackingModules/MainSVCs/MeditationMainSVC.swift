@@ -45,6 +45,16 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     override func reload(){
         tableView.reloadData()
+        
+        
+        let count = meditationHistory.getTodaysMeditationItems()?.count ?? 0
+        if count <= 0 {
+            tableView.setEmptyView(title: "No meditation items yet!" , message: "Select a button below to begin.")
+        }
+        else {
+            tableView.restore()
+        }
+        
         totalsCountLabel.text = String(meditationHistory.getTotalMinutes())
         totalsTextLabel.text = "Minutes\nToday"
     }
