@@ -190,6 +190,8 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         else {
             tableView.restore()
         }
+        
+        tableView.separatorStyle = .none
     }
     
     

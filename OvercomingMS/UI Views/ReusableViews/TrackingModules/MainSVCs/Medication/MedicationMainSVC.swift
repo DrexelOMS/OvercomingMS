@@ -54,11 +54,6 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         //TODO make a new UI for this cell
         tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
         
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 100
-        tableView.separatorStyle = .none
-        tableView.allowsSelection = false
-        
         reload()
     }
     
@@ -73,6 +68,11 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         else {
             tableView.restore()
         }
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         
         //totalsCountLabel.text = String(meditationHistory.getTotalMinutes())
         //totalsTextLabel.text = "Minutes\nToday"
