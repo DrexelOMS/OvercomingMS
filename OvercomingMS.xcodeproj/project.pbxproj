@@ -440,16 +440,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A030F9122580A1500857BC8 /* TrackingDataStrategies */ = {
-			isa = PBXGroup;
-			children = (
-				0A030F9222580A1500857BC8 /* FoodRatingDBS.swift */,
-				0A030F9322580A1500857BC8 /* DatabaseServices */,
-			);
-			path = TrackingDataStrategies;
-			sourceTree = "<group>";
-		};
-		0A030F9322580A1500857BC8 /* DatabaseServices */ = {
+		0A030F9122580A1500857BC8 /* DatabaseServices */ = {
 			isa = PBXGroup;
 			children = (
 				0A030F9422580A1500857BC8 /* ExerciseHistoryDBS.swift */,
@@ -460,6 +451,7 @@
 				0A030F9922580A1500857BC8 /* Omega3HistoryDBS.swift */,
 				0A030F9A22580A1500857BC8 /* SavedMedicationDBS.swift */,
 				0A030F9B22580A1500857BC8 /* MeditationHistoryDBS.swift */,
+				0A030F9222580A1500857BC8 /* FoodRatingDBS.swift */,
 				0A030F9C22580A1500857BC8 /* FoodLogDBS.swift */,
 			);
 			path = DatabaseServices;
@@ -468,12 +460,13 @@
 		0A030F9D22580A1500857BC8 /* SimpleModels */ = {
 			isa = PBXGroup;
 			children = (
+				0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */,
 				0A030F9E22580A1500857BC8 /* DisplayedMedicationItems.swift */,
 			);
 			path = SimpleModels;
 			sourceTree = "<group>";
 		};
-		0A030F9F22580A1500857BC8 /* RealmDataModels */ = {
+		0A030F9F22580A1500857BC8 /* DatabaseTables */ = {
 			isa = PBXGroup;
 			children = (
 				0A030FA022580A1500857BC8 /* VitaminDHistoryDBT.swift */,
@@ -486,7 +479,7 @@
 				0A030FA722580A1500857BC8 /* SymptomsNoteDBT.swift */,
 				0A030FA822580A1500857BC8 /* Omega3HistoryDBT.swift */,
 			);
-			path = RealmDataModels;
+			path = DatabaseTables;
 			sourceTree = "<group>";
 		};
 		0A0818942214E5F90021BDF6 /* FoodModule */ = {
@@ -937,13 +930,12 @@
 			isa = PBXGroup;
 			children = (
 				0A1FEC562204EC93006CED70 /* Delegates */,
-				0A030F9F22580A1500857BC8 /* RealmDataModels */,
+				0A030F9F22580A1500857BC8 /* DatabaseTables */,
+				0A030F9122580A1500857BC8 /* DatabaseServices */,
 				0A030F9D22580A1500857BC8 /* SimpleModels */,
-				0A030F9122580A1500857BC8 /* TrackingDataStrategies */,
 				0AD07F8421FE53B900C55831 /* DesignConstants.swift */,
 				0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */,
 				0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */,
-				0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";

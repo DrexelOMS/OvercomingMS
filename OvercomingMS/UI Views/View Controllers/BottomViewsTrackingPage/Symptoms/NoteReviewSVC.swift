@@ -129,25 +129,26 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     }
     
     func confirmPressed() {
-        if let note = noteTextField.text, let rating = Int(selectedSeverity!), let date = selectedTime {
+        if let note = noteTextField.text, let rating = selectedSeverity, let date = selectedTime {
             if note == "" || note == placeholderText {
                 return
             }
-            
-            let savedNotes = SymptomsNoteDBS()
-            if let oldNote = editingNote {
-                let newItem = SymptomsNoteDBT()
-                newItem.DateCreated = date
-                newItem.Note = note
-                newItem.SymptomsRating = rating
+            if let ratingInt = Int(rating) {
+                let savedNotes = SymptomsNoteDBS()
+                if let oldNote = editingNote {
+                    let newItem = SymptomsNoteDBT()
+                    newItem.DateCreated = date
+                    newItem.Note = note
+                    newItem.SymptomsRating = ratingInt
+                    
+                    savedNotes.editNote(oldItem: oldNote, newItem: newItem)
+                }
+                else {
+                    savedNotes.addNote(note: note, symptomsRating: ratingInt, dateCreated: date)
+                }
                 
-                savedNotes.editNote(oldItem: oldNote, newItem: newItem)
+                 parentVC.popSubView()
             }
-            else {
-                savedNotes.addNote(note: note, symptomsRating: rating, dateCreated: date)
-            }
-            
-             parentVC.popSubView()
         }
     }
     

@@ -12,6 +12,7 @@ import Cartography
 class SlidingStackVC: SwipeDownVC, UIGestureRecognizerDelegate {
     
     var mainView : UIView = UIView()
+    var initialView: SlidingAbstractSVC!
     var topView : SlidingAbstractSVC {
         get {
             return viewStack[viewStack.count - 1]
@@ -29,6 +30,7 @@ class SlidingStackVC: SwipeDownVC, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         
         setupViews()
+        initializeviewStack(defaultView: initialView)
     }
     
     func addViewsBeforeMain() {
@@ -42,8 +44,9 @@ class SlidingStackVC: SwipeDownVC, UIGestureRecognizerDelegate {
     convenience init(initialView: SlidingAbstractSVC) {
         self.init()
         
-        initializeviewStack(defaultView: initialView)
+        self.initialView = initialView
     }
+
     //MARK: Methods
     
     func setupViews() {

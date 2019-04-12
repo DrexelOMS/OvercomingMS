@@ -12,7 +12,6 @@ import RealmSwift
 class ExerciseSelectedItemSVC : SelectedItemSVC {
     
     var exerciseItem : ExerciseHistoryDBT!
-        
     {
         didSet {
             reload()
