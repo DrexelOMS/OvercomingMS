@@ -99,6 +99,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         if editingNote == nil {
             noteTextField.text = placeholderText
             noteTextField.textColor = UIColor.lightGray
+            deleteCircleButton.isHidden = true
         }
         
     }
@@ -156,6 +157,14 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
             textView.text = nil
             textView.textColor = UIColor.black
         }
+        let averageKeyboardHeight = 216 + 60
+        //Yes I know, these are the 4 height constraints of the things below the note
+        var botHeight = 60 + 100 + 51 + 51
+        if editingNote == nil {
+            botHeight = 60 + 51 + 51
+        }
+        
+        bottomConstraint.constant = CGFloat(averageKeyboardHeight - botHeight)
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -163,6 +172,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
             textView.text = "Tap to edit"
             textView.textColor = UIColor.lightGray
         }
+        bottomConstraint.constant = 0
     }
     
     func donePressed() {
@@ -183,7 +193,11 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         else {
             severityTFI.isHidden = true
         }
-        bottomConstraint.constant = keyboardHeight - 160
+        var botHeight = 160
+        if editingNote == nil {
+            botHeight = 60
+        }
+        bottomConstraint.constant = keyboardHeight - CGFloat(botHeight)
 //        symptomsVC.toggleTopImage(isHidden: true)
     }
     
