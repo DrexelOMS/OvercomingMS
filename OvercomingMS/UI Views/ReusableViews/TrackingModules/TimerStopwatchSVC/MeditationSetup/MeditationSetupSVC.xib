@@ -60,11 +60,25 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sBI-Ip-Gan">
                                                     <rect key="frame" x="5" y="1" width="270" height="105.5"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tha-Xv-DMm" customClass="level1MedLevelButton" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tha-Xv-DMm" customClass="MeditationLevelButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="105.5"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Seed"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="length">
+                                                                    <integer key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="Seed"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dj3-Ke-3Ik" customClass="level2MedLevelButton" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dj3-Ke-3Ik" customClass="MeditationLevelButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                             <rect key="frame" x="145" y="0.0" width="125" height="105.5"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Sprout"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="length">
+                                                                    <integer key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="Sprout"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
                                                 </stackView>
@@ -82,11 +96,25 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="55x-oV-MTQ">
                                                     <rect key="frame" x="5" y="1" width="270" height="105.5"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EfD-0z-QJN" customClass="level3MedLevelButton" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EfD-0z-QJN" customClass="MeditationLevelButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="105.5"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Flower"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="length">
+                                                                    <integer key="value" value="30"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="Flower"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onv-ev-BvT" customClass="level4MedLevelButton" customModule="OvercomingMS" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onv-ev-BvT" customClass="MeditationLevelButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                             <rect key="frame" x="145" y="0.0" width="125" height="105.5"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Tree"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="length">
+                                                                    <integer key="value" value="45"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="Tree"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
                                                 </stackView>
@@ -141,4 +169,10 @@
             <point key="canvasLocation" x="63.75" y="55.985915492957744"/>
         </view>
     </objects>
+    <resources>
+        <image name="Flower" width="689" height="689"/>
+        <image name="Seed" width="689" height="689"/>
+        <image name="Sprout" width="689" height="689"/>
+        <image name="Tree" width="689" height="689"/>
+    </resources>
 </document>

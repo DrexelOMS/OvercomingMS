@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeditationTimerSVC : TimerAbstractSVC {
+class MeditationTimerSVC : TimerStopWatchAbstractSVC {
     
     private var totalTime = 0
     private var type = ""
@@ -30,27 +30,20 @@ class MeditationTimerSVC : TimerAbstractSVC {
         }
         return false
     }
-    
     override func changeSeconds() {
         if(!isDone()){
-            super.changeSeconds()
+            seconds -= 1
         }
     }
     
     override func finishButtonPressed() {
         super.finishButtonPressed()
         
-        if(seconds>0)
+        if(totalTime - seconds > 0)
         {
             let minutes = Int(ceil(Double(totalTime - seconds) / 60.0))
             pushFinishSVC(minutes: minutes)
         }
-        else
-        {
-            let minutes = Int(ceil(Double(totalTime)/60.0))
-            pushFinishSVC(minutes: minutes)
-        }
-        
     }
     
     

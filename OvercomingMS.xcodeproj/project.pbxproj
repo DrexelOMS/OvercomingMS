@@ -120,7 +120,6 @@
 		0AD7EB13221B4D23006F71C0 /* SelectedLabelsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD7EB12221B4D23006F71C0 /* SelectedLabelsSVC.xib */; };
 		0AD7EB1C2220B2A4006F71C0 /* FoodApprovedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB1B2220B2A4006F71C0 /* FoodApprovedSVC.swift */; };
 		0AD7EB1E2220B2D9006F71C0 /* FoodRejectedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB1D2220B2D9006F71C0 /* FoodRejectedSVC.swift */; };
-		0AD7EB212221E537006F71C0 /* TimerAbsractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB202221E537006F71C0 /* TimerAbsractSVC.swift */; };
 		0AD7EB232221F1E1006F71C0 /* SeeMoreButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB222221F1E1006F71C0 /* SeeMoreButtonSVC.swift */; };
 		0AD7EB332223040F006F71C0 /* DoneCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB322223040F006F71C0 /* DoneCheckButton.swift */; };
 		0AD7EB3A2223043A006F71C0 /* MedicationItemSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB372223043A006F71C0 /* MedicationItemSVC.swift */; };
@@ -154,15 +153,13 @@
 		0AEF7A52223025F9009A0292 /* OMSRoundedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A51223025F9009A0292 /* OMSRoundedBox.swift */; };
 		0AEF7A542231B487009A0292 /* SwipeDownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A532231B487009A0292 /* SwipeDownVC.swift */; };
 		0AEF7A6422340068009A0292 /* MeditationSelectedItemSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6322340068009A0292 /* MeditationSelectedItemSVC.swift */; };
-		0AEF7A6722341DBF009A0292 /* MeditationSetupSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6622341DBF009A0292 /* MeditationSetupSVC.swift */; };
+		0AEF7A6722341DBF009A0292 /* GuidedMeditationCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6622341DBF009A0292 /* GuidedMeditationCategories.swift */; };
 		0AEF7A6922341E14009A0292 /* MeditationLevelButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6822341E14009A0292 /* MeditationLevelButtonSVC.swift */; };
 		0AEF7A6B22341E51009A0292 /* MeditationLevelButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6A22341E51009A0292 /* MeditationLevelButtonSVC.xib */; };
 		0AEF7A6D22341EC0009A0292 /* TitleTimeOverTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6C22341EC0009A0292 /* TitleTimeOverTextCell.swift */; };
-		0AEF7A6F223429BF009A0292 /* MeditationTimerSetupSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A6E223429BE009A0292 /* MeditationTimerSetupSVC.swift */; };
 		0AEF7A7122342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A7022342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift */; };
 		0AEF7A732234454B009A0292 /* MeditationTimerSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A722234454B009A0292 /* MeditationTimerSVC.swift */; };
 		0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */; };
-		0AF8E0DB2209248700E1EC33 /* StopwatchAbstractSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */; };
 		0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */; };
 		0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
@@ -330,7 +327,6 @@
 		0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelectedSVC.swift; sourceTree = "<group>"; };
 		0AD7EB1B2220B2A4006F71C0 /* FoodApprovedSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApprovedSVC.swift; sourceTree = "<group>"; };
 		0AD7EB1D2220B2D9006F71C0 /* FoodRejectedSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRejectedSVC.swift; sourceTree = "<group>"; };
-		0AD7EB202221E537006F71C0 /* TimerAbsractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAbsractSVC.swift; sourceTree = "<group>"; };
 		0AD7EB222221F1E1006F71C0 /* SeeMoreButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreButtonSVC.swift; sourceTree = "<group>"; };
 		0AD7EB322223040F006F71C0 /* DoneCheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneCheckButton.swift; sourceTree = "<group>"; };
 		0AD7EB372223043A006F71C0 /* MedicationItemSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationItemSVC.swift; sourceTree = "<group>"; };
@@ -365,15 +361,13 @@
 		0AEF7A51223025F9009A0292 /* OMSRoundedBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMSRoundedBox.swift; sourceTree = "<group>"; };
 		0AEF7A532231B487009A0292 /* SwipeDownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDownVC.swift; sourceTree = "<group>"; };
 		0AEF7A6322340068009A0292 /* MeditationSelectedItemSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationSelectedItemSVC.swift; sourceTree = "<group>"; };
-		0AEF7A6622341DBF009A0292 /* MeditationSetupSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSetupSVC.swift; sourceTree = "<group>"; };
+		0AEF7A6622341DBF009A0292 /* GuidedMeditationCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationCategories.swift; sourceTree = "<group>"; };
 		0AEF7A6822341E14009A0292 /* MeditationLevelButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationLevelButtonSVC.swift; sourceTree = "<group>"; };
 		0AEF7A6A22341E51009A0292 /* MeditationLevelButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationLevelButtonSVC.xib; sourceTree = "<group>"; };
 		0AEF7A6C22341EC0009A0292 /* TitleTimeOverTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTimeOverTextCell.swift; sourceTree = "<group>"; };
-		0AEF7A6E223429BE009A0292 /* MeditationTimerSetupSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerSetupSVC.swift; sourceTree = "<group>"; };
 		0AEF7A7022342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidedMeditationTimerSetupSVC.swift; sourceTree = "<group>"; };
 		0AEF7A722234454B009A0292 /* MeditationTimerSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerSVC.swift; sourceTree = "<group>"; };
 		0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopWatchAbstractSVC.swift; sourceTree = "<group>"; };
-		0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchAbstractSVC.swift; sourceTree = "<group>"; };
 		0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStopwatchSVC.swift; sourceTree = "<group>"; };
 		0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPauseCircleButton.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
@@ -814,8 +808,7 @@
 		0AEF7A6522341C4A009A0292 /* MeditationSetup */ = {
 			isa = PBXGroup;
 			children = (
-				0AEF7A6622341DBF009A0292 /* MeditationSetupSVC.swift */,
-				0AEF7A6E223429BE009A0292 /* MeditationTimerSetupSVC.swift */,
+				0AEF7A6622341DBF009A0292 /* GuidedMeditationCategories.swift */,
 				0AEF7A7022342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift */,
 				0CB44DE92223280F004D0580 /* MeditationSetupSVC.xib */,
 				0AEF7A6822341E14009A0292 /* MeditationLevelButtonSVC.swift */,
@@ -832,8 +825,6 @@
 				0AEF7A6522341C4A009A0292 /* MeditationSetup */,
 				0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */,
 				0AF8E0D8220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift */,
-				0AF8E0DA2209248700E1EC33 /* StopwatchAbstractSVC.swift */,
-				0AD7EB202221E537006F71C0 /* TimerAbsractSVC.swift */,
 				0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */,
 				0AEF7A722234454B009A0292 /* MeditationTimerSVC.swift */,
 			);
@@ -1288,12 +1279,11 @@
 				0A08189E2214F82F0021BDF6 /* Food.swift in Sources */,
 				0A341D79225919DB0066EC1D /* SymptomsListSVC.swift in Sources */,
 				0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */,
-				0AEF7A6722341DBF009A0292 /* MeditationSetupSVC.swift in Sources */,
+				0AEF7A6722341DBF009A0292 /* GuidedMeditationCategories.swift in Sources */,
 				0A1FEC6C22063898006CED70 /* Routine3PartCell.swift in Sources */,
 				0A030FB722580A1500857BC8 /* GoalsDBT.swift in Sources */,
 				0A19B3C32253E97000F4B02B /* ExpandingCell.swift in Sources */,
 				0AD7EB3B2223043A006F71C0 /* MedicationMainSVC.swift in Sources */,
-				0AF8E0DB2209248700E1EC33 /* StopwatchAbstractSVC.swift in Sources */,
 				0AA5284C22022CFC00CCFEE7 /* TrackingModuleVC.swift in Sources */,
 				0A93F19322145EA30063A892 /* TypeTFI.swift in Sources */,
 				0A030FB022580A1500857BC8 /* SavedMedicationDBS.swift in Sources */,
@@ -1307,7 +1297,6 @@
 				0A4CC880225FEFA2004C97BC /* TypeTFIFactory.swift in Sources */,
 				0AEF7A6922341E14009A0292 /* MeditationLevelButtonSVC.swift in Sources */,
 				0A7FC91021F51CE300492E93 /* MainTrackingVC.swift in Sources */,
-				0AD7EB212221E537006F71C0 /* TimerAbsractSVC.swift in Sources */,
 				0AD7EAF2221B0047006F71C0 /* CustomEntryTFI.swift in Sources */,
 				0AEF7A48222ED4A5009A0292 /* BottomRoundCornersUIView.swift in Sources */,
 				0AD7EB4A22249DD0006F71C0 /* MedicationRateModel.swift in Sources */,
@@ -1336,7 +1325,6 @@
 				0A030FAF22580A1500857BC8 /* Omega3HistoryDBS.swift in Sources */,
 				0A0818912214647E0021BDF6 /* LengthTFI.swift in Sources */,
 				0A030FB822580A1500857BC8 /* FoodLogDBT.swift in Sources */,
-				0AEF7A6F223429BF009A0292 /* MeditationTimerSetupSVC.swift in Sources */,
 				0A030F7B22555C9400857BC8 /* MedicationNotTakenItemSVC.swift in Sources */,
 				0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
