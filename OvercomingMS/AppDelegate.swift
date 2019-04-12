@@ -26,6 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error initialising new realm, \(error)")
         }
         
+        //reset user defaults and realm
+        //        let defaults = UserDefaults.standard
+        //        let dictionary = defaults.dictionaryRepresentation()
+        //        dictionary.keys.forEach { key in
+        //            defaults.removeObject(forKey: key)
+        //        }
+        //        try! realm.write {
+        //            realm.deleteAll()
+        //        }
+        
         _ = OMSDateAccessor().todaysDate
         
         let goals = GoalsDBS().goals

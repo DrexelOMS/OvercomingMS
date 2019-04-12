@@ -11,8 +11,12 @@ import Cartography
 
 class TopImageSlidingStackVC : SlidingStackVC {
     let imageContainer = UIView()
-    var topImage : UIImage! {
-        get { return nil }
+    var topImage : UIImage!
+    
+    convenience init(topImage: UIImage, initialView: SlidingAbstractSVC) {
+        self.init(initialView: initialView)
+        
+        self.topImage = topImage
     }
     
     override func addViewsBeforeMain() {

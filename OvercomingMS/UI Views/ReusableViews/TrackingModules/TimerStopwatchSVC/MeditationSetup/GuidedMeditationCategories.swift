@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeditationTimerSetupAbstractSVC : SlidingAbstractSVC {
+class GuidedMeditationCategories : SlidingAbstractSVC {
     
     override var nibName: String {
         get {
@@ -28,7 +28,12 @@ class MeditationTimerSetupAbstractSVC : SlidingAbstractSVC {
     
     
     override func customSetup() {
-    
+        mainLabel.text = "Chose a level:"
+        
+        level1Button.buttonAction = pushTimerWithLength
+        level2Button.buttonAction = pushTimerWithLength
+        level3Button.buttonAction = pushTimerWithLength
+        level4Button.buttonAction = pushTimerWithLength
     }
     
     override func initialize(parentVC: SlidingStackVC) {

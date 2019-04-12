@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Tracking View Controller-->
+        <!--Main TrackingVC-->
         <scene sceneID="egX-PQ-snD">
             <objects>
-                <viewController id="I4j-2b-a75" customClass="MainTrackingViewController" customModule="OvercomingMS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="I4j-2b-a75" customClass="MainTrackingVC" customModule="OvercomingMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vmN-bR-mVr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
                                                                 <rect key="frame" x="40" y="0.0" width="200" height="45"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1y-Q8-aCF">
-                                                                        <rect key="frame" x="9" y="14.5" width="162.5" height="16.5"/>
+                                                                        <rect key="frame" x="18.5" y="14.5" width="143" height="16.5"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="Today, Month ##, ####">
                                                                                 <attributes>
@@ -71,7 +71,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H33-LW-Fg1" userLabel="DropdownView">
-                                                                        <rect key="frame" x="176.5" y="0.0" width="12" height="45"/>
+                                                                        <rect key="frame" x="166.5" y="0.0" width="12" height="45"/>
                                                                         <subviews>
                                                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5k8-Aq-5FZ">
                                                                                 <rect key="frame" x="1" y="17.5" width="10" height="10"/>
@@ -133,13 +133,14 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uG2-RS-f9c">
                                                         <rect key="frame" x="20" y="0.0" width="280" height="315"/>
                                                         <subviews>
-                                                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-EL-iHN" customClass="TrackingFoodBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-EL-iHN" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Food"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="progressBar" value="NO"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IO1-W9-0dD" customClass="Omega3ProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IO1-W9-0dD" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="54" width="280" height="44.5"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
@@ -148,7 +149,7 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Omega-3"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-va-Kq1" customClass="VitaminDProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-va-Kq1" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="108.5" width="280" height="44"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
@@ -157,7 +158,7 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Vitamin D"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYS-8V-zpv" customClass="ExerciseProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYS-8V-zpv" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="162.5" width="280" height="44"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Exercise"/>
@@ -166,7 +167,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQQ-l4-VC0" customClass="MeditationProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQQ-l4-VC0" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="216.5" width="280" height="44.5"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
@@ -175,7 +176,7 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Meditation"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-CW-Z5M" customClass="MedicationProgressBar" customModule="OvercomingMS" customModuleProvider="target">
+                                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-CW-Z5M" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="271" width="280" height="44"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
@@ -263,7 +264,7 @@
                         <outlet property="SymptomsButton" destination="vqb-Vo-Ctx" id="iLw-Re-wbX"/>
                         <outlet property="dateLog" destination="g1y-Q8-aCF" id="DEv-sP-kT2"/>
                         <outlet property="exerciseBar" destination="zYS-8V-zpv" id="SJW-KD-zNK"/>
-                        <outlet property="foodBar" destination="CHY-EL-iHN" id="1KE-Fi-WBF"/>
+                        <outlet property="foodBar" destination="CHY-EL-iHN" id="oxd-TP-LXh"/>
                         <outlet property="header" destination="pcW-NB-qsi" id="kmX-7a-hV3"/>
                         <outlet property="medicationBar" destination="a2N-CW-Z5M" id="eg5-xl-nsf"/>
                         <outlet property="meditationBar" destination="RQQ-l4-VC0" id="pi7-04-9cp"/>
@@ -284,6 +285,6 @@
         <image name="Forward" width="689" height="689"/>
         <image name="Goals" width="689" height="689"/>
         <image name="Settings" width="689" height="689"/>
-        <image name="Symptoms" width="16" height="16"/>
+        <image name="Symptoms" width="689" height="689"/>
     </resources>
 </document>

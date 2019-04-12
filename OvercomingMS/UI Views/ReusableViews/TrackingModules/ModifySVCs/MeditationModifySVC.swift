@@ -31,7 +31,7 @@ class MeditationModifySVC : ModifyAbstractSVC {
         }
     }
     
-    var typeTFI = MeditationTypeTFI()
+    var typeTFI = TypeTFIFactory.MeditationTypeTFI()
     var dateTimeTFI = DateTimeTFI()
     var lengthTFI = LengthTFI()
     
@@ -77,17 +77,18 @@ class MeditationModifySVC : ModifyAbstractSVC {
             
             let endTime = startTime.addingTimeInterval(TimeInterval(minutes * 60))
             
+            let newItem = MeditationHistoryDBT()
+            newItem.MeditationType = type
+            newItem.StartTime = startTime
+            newItem.EndTime = endTime
+            
             if editingMeditationItem == nil {
-                meditationHistory.addMeditationItem(routineType: type, startTime: startTime, endTime: endTime)
+                meditationHistory.addItem(item: newItem)
+                
                 parentVC.reload();
                 parentVC.resetToDefaultView()
             }
             else {
-                let newItem = MeditationHistoryDBT()
-                newItem.MeditationType = type
-                newItem.StartTime = startTime
-                newItem.EndTime = endTime
-                
                 meditationHistory.updateExerciseItem(oldItem: editingMeditationItem, newItem: newItem)
                 
                 parentVC.reload();

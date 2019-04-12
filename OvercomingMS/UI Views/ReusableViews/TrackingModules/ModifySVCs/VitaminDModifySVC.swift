@@ -55,7 +55,7 @@ class VitaminDModifySVC : ModifyAbstractSVC {
         }
     }
     
-    var vitaminDTypeTFI = VitaminDTypeTFI()
+    var vitaminDTypeTFI = TypeTFIFactory.VitaminDTypeTFI()
     var dateTimeTFI = DateTimeTFI()
     var amountTFI = AmountTFI(uom: ProgressBarConfig.vitaminDUOM)
     
@@ -88,19 +88,19 @@ class VitaminDModifySVC : ModifyAbstractSVC {
                 return;
             }
             
+            let newItem = VitaminDHistoryDBT()
+            newItem.VitaminDType = type
+            newItem.StartTime = startTime
+            newItem.Amount = amount
+            
             if editingVitamindDItem == nil {
                 if isSupplementPage {
                     saveSupplementQuery(name: type, amount: amount)
                 }
                 
-                vitaminDHistory.addVitaminDItem(vitaminDType: type, startTime: startTime, vitaminDAmount: amount)
+                vitaminDHistory.addItem(item: newItem)
             }
             else {
-                let newItem = VitaminDHistoryDBT()
-                newItem.VitaminDType = type
-                newItem.StartTime = startTime
-                newItem.Amount = amount
-                
                 vitaminDHistory.updateVitaminDItem(oldItem: editingVitamindDItem, newItem: newItem)
             }
             parentVC.reload();

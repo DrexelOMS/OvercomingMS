@@ -11,8 +11,8 @@ import RealmSwift
 
 class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
     
-    let button1 = AddCircleButton()
-    let button2 = SupplementCircleButton()
+    let button1 = CircleButtonFactory.AddButton()
+    let button2 = CircleButtonFactory.SupplementButton()
     
     let omega3History : Omega3HistoryDBS = Omega3HistoryDBS()
     

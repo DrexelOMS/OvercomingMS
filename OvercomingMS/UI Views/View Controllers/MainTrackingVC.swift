@@ -7,15 +7,13 @@
 //
 
 import UIKit
-import RealmSwift
 
-class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingProgressBarDelegate {
+class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDelegate {
     
     func finishedShowing(viewController: UIViewController) {
         _ = omsDateFormatter.todaysDate
         loadCurrentDayUI()
     }
-    
     
     //MARK: Class properties
     
@@ -27,12 +25,12 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     @IBOutlet weak var header: HeaderSVC!
     @IBOutlet weak var dateLog: UILabel!
-    @IBOutlet weak var foodBar: TrackingFoodBar!
-    @IBOutlet weak var omega3Bar: Omega3ProgressBar!
-    @IBOutlet weak var vitaminDBar: VitaminDProgressBar!
-    @IBOutlet weak var exerciseBar: ExerciseProgressBar!
-    @IBOutlet weak var meditationBar: MeditationProgressBar!
-    @IBOutlet weak var medicationBar: MedicationProgressBar!
+    @IBOutlet weak var foodBar: TrackingProgressBar!
+    @IBOutlet weak var omega3Bar: TrackingProgressBar!
+    @IBOutlet weak var vitaminDBar: TrackingProgressBar!
+    @IBOutlet weak var exerciseBar: TrackingProgressBar!
+    @IBOutlet weak var meditationBar: TrackingProgressBar!
+    @IBOutlet weak var medicationBar: TrackingProgressBar!
     
     @IBOutlet weak var previousButton: UIView!
     @IBOutlet weak var nextDay: UIView!
@@ -40,10 +38,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     @IBOutlet weak var GoalButton: CircleButtonSVC!
     @IBOutlet weak var SymptomsButton: CircleButtonSVC!
     @IBOutlet weak var SettingsButton: CircleButtonSVC!
-    
-    private let realm = try! Realm()
-    private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
-    
+
     private let omsDateFormatter = OMSDateAccessor()
     
     //MARK: View Transition Initializers
@@ -68,6 +63,9 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             var color = UIColor.black
             
             switch trackingModule {
+            case .Food:
+                name = "Food"
+                color = UIColor.gray
             case .Omega3:
                 name = "Omega 3"
                 color = omega3Bar.colorTheme
@@ -89,21 +87,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             let message = "You Completed \(name). Great Work!"
             header.displayTrackingMessage(colorTheme: color, message: message)
         }
-        
-//        // userInfo is the payload send by sender of notification
-//        if let userInfo = notification.userInfo {
-//            // Safely unwrap the name sent out by the notification sender
-//            if let userName = userInfo["Module"] as? String {
-//                let message = "You Completed \(userName). Great Work!"
-//                switch userName {
-//                case "VitaminD":
-//                    header.displayTrackingMessage(colorTheme: vitaminDBar.colorTheme, message: message)
-//                    break;
-//                default:
-//                    break;
-//                }
-//            }
-//        }
 
     }
     
@@ -122,16 +105,6 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     //TODO: Consider changing to view will appear, and initialize TodaysData should be handled everytime the app enters the foreground
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //reset user defaults and realm
-//        let defaults = UserDefaults.standard
-//        let dictionary = defaults.dictionaryRepresentation()
-//        dictionary.keys.forEach { key in
-//            defaults.removeObject(forKey: key)
-//        }
-//        try! realm.write {
-//            realm.deleteAll()
-//        }
         
         foodBar.delegate = self
         omega3Bar.delegate = self
@@ -163,14 +136,9 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         _ = omsDateFormatter.todaysDate
         
-        if let currentTrackingDay = TrackingModulesDBS().getTrackingDay(date: globalCurrentDate) {
-            updatePageUI(currentTrackingDay)
-        }
-        else{
-            print("Do something for days that were not tracked")
-            OMSDateAccessor().createDay(date: globalCurrentDate)
-            loadCurrentDayUI()
-        }
+        let currentTrackingDay = TrackingModulesDBS().getTrackingDay(date: globalCurrentDate)
+        updatePageUI(currentTrackingDay)
+        
         
         attemptMenuRestore()
     }
@@ -186,12 +154,12 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         //TODO make a way to get the proper description for each
         //FoodEatenRating is 1 - 5
-        foodBar.setRightLabel(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
-        omega3Bar.updateProgress()
-        vitaminDBar.updateProgress()
-        exerciseBar.updateProgress()
-        meditationBar.updateProgress()
-        medicationBar.updateProgress()
+        foodBar.update(trackingDBS: FoodRatingDBS(), hideBar: true)
+        omega3Bar.update(trackingDBS: Omega3HistoryDBS())
+        vitaminDBar.update(trackingDBS: VitaminDHistoryDBS())
+        exerciseBar.update(trackingDBS: ExerciseHistoryDBS())
+        meditationBar.update(trackingDBS: MeditationHistoryDBS())
+        medicationBar.update(trackingDBS: SavedMedicationDBS())
     }
     
     //MARK: Delegates
@@ -215,7 +183,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             SavedMedicationDBS().toggleFilledData()
             break
         case 5:
-            let vc = QuickCompleteFoodVC()
+            let vc = SlidingStackVC(initialView: FoodQuickCompleteSVC())
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
@@ -232,63 +200,39 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     func didPressLeftContainer(_ sender: TrackingProgressBar) {
         
+        var vc: SlidingStackVC
+        
         switch(sender.tag){
         case 0:
-            let vc = Omega3ModuleVC()
-            vc.theme = omega3Bar.colorTheme
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+            vc = TrackingModuleFactory.Omega3VC()
             break
         case 1:
-            //WriteVitaminDTrackingData().addData(amount: 5)
-            let vc = VitaminDModuleVC()
-            vc.theme = vitaminDBar.colorTheme
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+            vc = TrackingModuleFactory.VitaminDVC()
             break
         case 2:
-            let vc = ExerciseModuleVC()
-            vc.theme = exerciseBar.colorTheme
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+            vc = TrackingModuleFactory.ExerciseVC()
             break
         case 3:
-            let vc = MeditationModuleVC()
-            vc.theme = meditationBar.colorTheme
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+            vc = TrackingModuleFactory.MeditationVC()
             break
         case 4:
-            let vc = MedicationModuleVC()
-            vc.theme = medicationBar.colorTheme
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+            vc = TrackingModuleFactory.MedicationVC()
             break
         case 5:
-            let vc = FoodModuleVC()
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
-            
-            loadCurrentDayUI()
+            vc = SlidingStackVC(initialView: FoodMainSVC())
             break
         default:
             fatalError("Case Not Handled")
             break;
         }
         
-        loadCurrentDayUI()
+        vc.theme = sender.colorTheme
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.dismissalDelegate = self
+        
+        self.present(vc, animated: true, completion: nil)
+        
+        //loadCurrentDayUI()
         
     }
     
@@ -315,7 +259,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     func goalPressed() {
         if globalCurrentDate == todaysDate {
-            let vc = GoalsVC()
+            let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Goals")!, initialView: GoalsMainSVC())
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
@@ -324,7 +268,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     }
     
     func symptomsPressed() {
-        let vc = SymptomsVC()
+        let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Symptoms")!, initialView: SymptomsMainSVC())
         vc.modalPresentationStyle = .overCurrentContext
         vc.dismissalDelegate = self
         vc.theme = UIColor(red: 166 / 255.0, green: 69 / 255.0, blue: 210 / 255.0, alpha: 1.0)
@@ -333,7 +277,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     }
     
     func settingsPressed() {
-        let vc = SettingsVC()
+        let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: SettingsMainSVC())
         vc.modalPresentationStyle = .overCurrentContext
         vc.dismissalDelegate = self
         

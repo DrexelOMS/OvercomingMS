@@ -18,15 +18,16 @@ class CircleButtonSVC: CustomView {
     
     @IBInspectable var buttonImage: UIImage? {
         didSet {
-            let tintedImage = buttonImage?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-            button.setImage(tintedImage, for: .normal)
-            button.tintColor = colorTheme
-            button.imageEdgeInsets = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
+            if let image = buttonImage {
+                setButtonImage(image: image)
+            }
         }
     }
-    @IBInspectable var labelName: String = "Label" {
+    @IBInspectable var labelName: String? {
         didSet {
-            label.text = labelName
+            if let label = labelName {
+                self.label.text = label
+            }
         }
     }
     
@@ -37,10 +38,22 @@ class CircleButtonSVC: CustomView {
     
     var colorTheme : UIColor = UIColor.black {
         didSet {
-            //label.textColor = colorTheme
             button.setTitleColor(UIColor(rgb: 0x333333), for: .normal)
-            //button.tintColor = colorTheme
         }
+    }
+    
+    convenience init(image: UIImage, label: String) {
+        self.init()
+        
+        setButtonImage(image: image)
+        self.label.text = label
+    }
+    
+    private func setButtonImage(image: UIImage) {
+        let tintedImage = image.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+        button.setImage(tintedImage, for: .normal)
+        button.tintColor = colorTheme
+        button.imageEdgeInsets = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
     }
     
     override func customSetup() {

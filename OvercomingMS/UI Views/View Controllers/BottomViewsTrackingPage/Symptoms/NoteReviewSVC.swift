@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TFIDelegate {
     
@@ -20,13 +21,13 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     
     @IBOutlet weak var noteView: RoundedBoxShadowsTemplate!
     @IBOutlet weak var noteTextField: UITextView!
-    @IBOutlet weak var deleteCircleButton: DeleteCircleButton!
+    @IBOutlet weak var deleteCircleButton: CircleButtonSVC!
     @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
     //160 + 0 is the default 
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     let toolbar = ToolBar()
-    var symptomsVC: SymptomsVC!
+    var symptomsVC: TopImageSlidingStackVC!
     
     var selectedTime : Date? {
         get {
@@ -47,11 +48,14 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         }
     }
     
-    @IBOutlet weak var timeTFI: DateTimeTFI!
-    @IBOutlet weak var severityTFI: SeverityTFI!
+    @IBOutlet weak var stackView: UIStackView!
+    var severityTFI = TypeTFIFactory.SeverityTypeTFI()
+    var timeTFI = DateTimeTFI()
+    let placeholderText = "Tap to edit"
     
     convenience init(noteItem: SymptomsNoteDBT) {
         self.init()
+
         
         editingNote = noteItem
         noteTextField.text = noteItem.Note
@@ -66,12 +70,22 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         
         noteTextField.inputAccessoryView = toolbar.getToolBar()
 
+        stackView.addArrangedSubview(timeTFI)
+        stackView.addArrangedSubview(severityTFI)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        constrain(timeTFI) { (view) in
+            view.height == 51
+        }
+        constrain(severityTFI) { (view) in
+            view.height == 51
+        }
     }
     
     override func initialize(parentVC: SlidingStackVC) {
         super.initialize(parentVC: parentVC)
         
-        symptomsVC = parentVC as? SymptomsVC
+        symptomsVC = parentVC as? TopImageSlidingStackVC
         
         deleteCircleButton.buttonAction = deletePressed
         backConfirmButtons.leftButtonAction = backPressed
@@ -83,8 +97,9 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         severityTFI.tfiDelegate = self
         
         if editingNote == nil {
-            noteTextField.text = "Tap to edit"
+            noteTextField.text = placeholderText
             noteTextField.textColor = UIColor.lightGray
+            deleteCircleButton.isHidden = true
         }
         
     }
@@ -114,35 +129,43 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     }
     
     func confirmPressed() {
-        if let note = noteTextField.text, let rating = Int(selectedSeverity!), let date = selectedTime {
-            if note == "" {
+        if let note = noteTextField.text, let rating = selectedSeverity, let date = selectedTime {
+            if note == "" || note == placeholderText {
                 return
             }
-            
-            let savedNotes = SymptomsNoteDBS()
-            if let oldNote = editingNote {
-                let newItem = SymptomsNoteDBT()
-                newItem.DateCreated = date
-                newItem.Note = note
-                newItem.SymptomsRating = rating
+            if let ratingInt = Int(rating) {
+                let savedNotes = SymptomsNoteDBS()
+                if let oldNote = editingNote {
+                    let newItem = SymptomsNoteDBT()
+                    newItem.DateCreated = date
+                    newItem.Note = note
+                    newItem.SymptomsRating = ratingInt
+                    
+                    savedNotes.editNote(oldItem: oldNote, newItem: newItem)
+                }
+                else {
+                    savedNotes.addNote(note: note, symptomsRating: ratingInt, dateCreated: date)
+                }
                 
-                savedNotes.editNote(oldItem: oldNote, newItem: newItem)
+                 parentVC.popSubView()
             }
-            else {
-                savedNotes.addNote(note: note, symptomsRating: rating, dateCreated: date)
-            }
-            
-             parentVC.popSubView()
         }
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-//        symptomsVC.toggleTopImage(isHidden: true)
         
         if textView.textColor == UIColor.lightGray {
             textView.text = nil
             textView.textColor = UIColor.black
         }
+        let averageKeyboardHeight = 216 + 60
+        //Yes I know, these are the 4 height constraints of the things below the note
+        var botHeight = 60 + 100 + 51 + 51
+        if editingNote == nil {
+            botHeight = 60 + 51 + 51
+        }
+        
+        bottomConstraint.constant = CGFloat(averageKeyboardHeight - botHeight)
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -150,6 +173,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
             textView.text = "Tap to edit"
             textView.textColor = UIColor.lightGray
         }
+        bottomConstraint.constant = 0
     }
     
     func donePressed() {
@@ -170,7 +194,11 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         else {
             severityTFI.isHidden = true
         }
-        bottomConstraint.constant = keyboardHeight - 160
+        var botHeight = 160
+        if editingNote == nil {
+            botHeight = 60
+        }
+        bottomConstraint.constant = keyboardHeight - CGFloat(botHeight)
 //        symptomsVC.toggleTopImage(isHidden: true)
     }
     

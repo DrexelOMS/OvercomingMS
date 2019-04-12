@@ -12,7 +12,6 @@ import RealmSwift
 class ExerciseSelectedItemSVC : SelectedItemSVC {
     
     var exerciseItem : ExerciseHistoryDBT!
-        
     {
         didSet {
             reload()
@@ -47,12 +46,14 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
     }
     
     func repeatItem() {
-        let type = exerciseItem.RoutineType
+        let newItem = ExerciseHistoryDBT()
         let startTime = Date()
-        let endTime = startTime.addingTimeInterval(TimeInterval(exerciseItem.minutes * 60))
-        ExerciseHistoryDBS().addExerciseItem(routineType: type, startTime: startTime, endTime: endTime)
+        
+        newItem.RoutineType = exerciseItem.RoutineType
+        newItem.StartTime = startTime
+        newItem.EndTime = startTime.addingTimeInterval(TimeInterval(exerciseItem.minutes * 60))
+        ExerciseHistoryDBS().addItem(item: newItem)
     }
-    
     
     override func deleteButtonPressed() {
         let deletePage = ConfirmationFactory.DeleteConfirmation()
@@ -62,6 +63,6 @@ class ExerciseSelectedItemSVC : SelectedItemSVC {
     }
     
     func deleteItem(){
-       ExerciseHistoryDBS().deleteExerciseItem(item: exerciseItem)
+       ExerciseHistoryDBS().deleteItem(item: exerciseItem)
     }
 }

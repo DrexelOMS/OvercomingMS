@@ -55,7 +55,7 @@ class Omega3ModifySVC : ModifyAbstractSVC {
         }
     }
     
-    var typeTFI = Omega3TypeTFI()
+    var typeTFI = TypeTFIFactory.Omega3TypeTFI()
     var dateTimeTFI = DateTimeTFI()
     var amountTFI = AmountTFI(uom: ProgressBarConfig.omega3UOM)
     
@@ -88,19 +88,21 @@ class Omega3ModifySVC : ModifyAbstractSVC {
                 return;
             }
             
+            let newItem = Omega3HistoryDBT()
+            newItem.supplementName = type
+            newItem.StartTime = startTime
+            newItem.Amount = amount
+            
             if editingOmega3Item == nil {
                 if isSupplementPage {
                     saveSupplementQuery(name: type, amount: amount)
                 }
-                omega3History.addOmega3Item(supplementName: type, StartTime: startTime, Amount: amount)
+                
+                omega3History.addItem(item: newItem)
                 parentVC.reload();
                 parentVC.resetToDefaultView()
             }
             else {
-                let newItem = Omega3HistoryDBT()
-                newItem.supplementName = type
-                newItem.StartTime = startTime
-                newItem.Amount = amount
                 
                 omega3History.updateOmega3Item(oldItem: editingOmega3Item, newItem: newItem)
                 parentVC.reload();

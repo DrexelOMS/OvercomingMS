@@ -46,7 +46,11 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     }
     
     func repeatItem() {
-        VitaminDHistoryDBS().addVitaminDItem(vitaminDType: vitaminDItem.VitaminDType, startTime: Date(), vitaminDAmount: vitaminDItem.Amount)
+        let newItem = VitaminDHistoryDBT()
+        newItem.VitaminDType = vitaminDItem.VitaminDType
+        newItem.StartTime = Date()
+        newItem.Amount = vitaminDItem.Amount
+        VitaminDHistoryDBS().addItem(item: newItem)
     }
     
     
@@ -58,6 +62,6 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     }
     
     func deleteItem(){
-       VitaminDHistoryDBS().deleteVitaminDItem(item: vitaminDItem)
+       VitaminDHistoryDBS().deleteItem(item: vitaminDItem)
     }
 }

@@ -11,8 +11,8 @@ import RealmSwift
 
 class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
     
-    let button1 = AddCircleButton()
-    let button2 = TimerCircleButton()
+    let button1 = CircleButtonFactory.AddButton()
+    let button2 = CircleButtonFactory.TimerButton()
     
     let exerciseHistory : ExerciseHistoryDBS = ExerciseHistoryDBS()
     

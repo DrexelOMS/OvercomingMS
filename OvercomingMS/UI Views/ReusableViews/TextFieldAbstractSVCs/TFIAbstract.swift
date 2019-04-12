@@ -23,8 +23,6 @@ class TFIAbstract : CustomView, UITextFieldDelegate, ToolBarDelegate {
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var subLeftLabel: UILabel!
-    @IBOutlet weak var subRightLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     
     var parentVC: SlidingStackVC!

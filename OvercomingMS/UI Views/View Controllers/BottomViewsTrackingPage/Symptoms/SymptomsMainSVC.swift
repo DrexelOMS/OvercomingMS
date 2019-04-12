@@ -21,8 +21,8 @@ class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataS
     let savedNotes = SymptomsNoteDBS()
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var addButton: AddCircleButton!
-    @IBOutlet weak var listButton: ListCircleButton!
+    @IBOutlet weak var addButton: CircleButtonSVC!
+    @IBOutlet weak var listButton: CircleButtonSVC!
     
     
     override func customSetup() {

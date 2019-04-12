@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSource {
+class TypeTFI : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var typePicker = UIPickerView()
     
@@ -19,22 +19,20 @@ class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSourc
         }
     }
     
-    var choices : [String] {
-        get {
-            fatalError("choices not overriden")
-        }
-    }
+    var choices : [String] = []
+    var title : String = ""
     
-    var title : String {
-        get {
-            return "Type"
-        }
+    convenience init(choices: [String], title: String) {
+        self.init()
+        
+        self.choices = choices
+        self.title = title
+        label.text = title
+        tempSelectedType = choices[0]
     }
     
     override func customSetup() {
         super.customSetup()
-        label.text = title
-        tempSelectedType = choices[0]
     }
     
     override func showTextFieldInput() {
@@ -73,64 +71,11 @@ class TypeTFIAbstract : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSourc
     }
 }
 
-class ExerciseTypeTFI : TypeTFIAbstract {
-    
-    override var choices: [String] {
-        get {
-            return ["Exercise", "Run", "Bike", "Cardio", "Elliptical", "Lift", "Row", "Swim", "Other"]
-        }
-    }
-    
-}
-
-class Omega3TypeTFI : TypeTFIAbstract {
-    
-    override var title: String {
-        get {
-            return "Name"
-        }
-    }
-    
-    override var choices: [String] {
-        get {
-            return ["Flaxseed Oil", "Supplement"]
-        }
-    }
-    
-}
-
-class VitaminDTypeTFI : TypeTFIAbstract {
-    
-    override var choices: [String] {
-        get {
-            return ["Vitamin", "Other"]
-        }
-    }
-    
-}
-
-class MeditationTypeTFI: TypeTFIAbstract {
-    
-    override var choices: [String] {
-        get {
-            return ["Silent", "Guided"]
-        }
-    }
-    
-}
-
-class SeverityTFI: TypeTFIAbstract {
-    
-    override var title: String {
-        get {
-            return "Severity"
-        }
-    }
-    
-    override var choices: [String] {
-        get {
-            return ["1", "2", "3", "4", "5"]
-        }
+class SeverityTFI: TypeTFI {
+    override func customSetup() {
+        super.customSetup()
+        choices = ["1", "2", "3", "4", "5"]
+        title = "Severity"
     }
     
 }

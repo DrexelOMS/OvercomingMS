@@ -19,10 +19,10 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
         }
     }
     
-    let button1 = SearchCircleButton()
-    let button2 = RecipesCircleButton()
-    let button3 = ScanCircleButton()
-    let button4 = SavedCircleButton()
+    let button1 = CircleButtonFactory.SearchButton()
+    let button2 = CircleButtonFactory.RecipesButton()
+    let button3 = CircleButtonFactory.ScanButton()
+    let button4 = CircleButtonFactory.SavedButton()
     
     @IBOutlet weak var buttonStackView: UIStackView!
     

@@ -11,9 +11,9 @@ import RealmSwift
 
 class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
     
-    let button1 = AddCircleButton()
-    let button2 = TimerCircleButton()
-    let button3 = GuidedCircleButton()
+    let button1 = CircleButtonFactory.AddButton()
+    let button2 = CircleButtonFactory.TimerButton()
+    let button3 = CircleButtonFactory.GuidedButton()
     
     let meditationHistory : MeditationHistoryDBS = MeditationHistoryDBS()
     
@@ -68,7 +68,7 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func guidedButtonPressed() {
-        parentVC.pushSubView(newSubView: MeditationTimerSetupSVC())
+        parentVC.pushSubView(newSubView: GuidedMeditationCategories())
     }
     
     override func updateColors() {

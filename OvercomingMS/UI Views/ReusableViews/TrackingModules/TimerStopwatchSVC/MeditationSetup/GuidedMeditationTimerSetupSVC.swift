@@ -9,7 +9,7 @@
 import UIKit
 import Cartography
 
-class GuidededMeditationTimerSetupSVC: MeditationTimerSetupAbstractSVC, UITableViewDelegate, UITableViewDataSource {
+class GuidededMeditationTimerSetupSVC: GuidedMeditationCategories, UITableViewDelegate, UITableViewDataSource {
     
     let tableView = UITableView()
     let defaultCellName = "TitleTimeOverTextCell"

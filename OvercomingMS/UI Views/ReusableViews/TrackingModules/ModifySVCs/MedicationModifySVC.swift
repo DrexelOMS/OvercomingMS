@@ -85,16 +85,16 @@ class MedicationModifySVC : ModifyAbstractSVC {
                 return
             }
             
+            let newItem = SavedMedicationDBT()
+            newItem.MedicationName = name
+            newItem.TimeOfDay = startTime
+            newItem.MedicationNote = note
+            newItem.Frequency = rate
+            
             if editingMedicationItem == nil {
-                savedMedications.addMedicationItem(medicationName: name, timeOfDay: startTime, medicationNote: note, freq: rate, active: true)
+                savedMedications.addItem(item: newItem)
             }
             else {
-                let newItem = SavedMedicationDBT()
-                newItem.MedicationName = name
-                newItem.TimeOfDay = startTime
-                newItem.MedicationNote = note
-                newItem.Frequency = rate
-                
                 savedMedications.updateSavedMedicationItem(oldItem: editingMedicationItem, newItem: newItem)
             }
             parentVC.reload();

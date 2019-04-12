@@ -11,9 +11,9 @@ import RealmSwift
 
 class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
     
-    let button1 = AddCircleButton()
-    let button2 = SupplementCircleButton()
-    let button3 = OutsideCircleButton()
+    let button1 = CircleButtonFactory.AddButton()
+    let button2 = CircleButtonFactory.SupplementButton()
+    let button3 = CircleButtonFactory.OutsideButton()
     
     let vitaminDHistory : VitaminDHistoryDBS = VitaminDHistoryDBS()
     

@@ -61,11 +61,18 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a4H-Jj-bDq">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2C-3X-ZMM" customClass="AddCircleButton" customModule="OvercomingMS" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2C-3X-ZMM" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="100"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Add"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Add"/>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLF-CW-Vco" customClass="ListCircleButton" customModule="OvercomingMS" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLF-CW-Vco" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                             <rect key="frame" x="160" y="0.0" width="160" height="100"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="List"/>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                 </stackView>
@@ -98,4 +105,7 @@
             <point key="canvasLocation" x="63.75" y="55.985915492957744"/>
         </view>
     </objects>
+    <resources>
+        <image name="Add" width="689" height="689"/>
+    </resources>
 </document>

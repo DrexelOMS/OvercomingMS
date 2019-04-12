@@ -16,15 +16,17 @@ class MeditationLevelButtonSVC: CustomView {
         }
     }
     
-    var title: String {
-        get {
-            return "Seed"
+    @IBInspectable var title: String = ""
+    
+    @IBInspectable var length: Int = 15 {
+        didSet {
+            timeLabel.text = "\(length) min."
         }
     }
     
-    var length: Int {
-        get {
-            return 15;
+    @IBInspectable var image: UIImage? {
+        didSet {
+            imageView.image = image
         }
     }
     
@@ -38,8 +40,6 @@ class MeditationLevelButtonSVC: CustomView {
         buttonView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonPressed(tapGestureRecognizer: )))
         buttonView.addGestureRecognizer(tapGesture)
-        
-        timeLabel.text = "\(length) min."
     }
     
     @objc private func buttonPressed(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -49,88 +49,4 @@ class MeditationLevelButtonSVC: CustomView {
         buttonAction(length, title)
     }
     
-}
-
-class level1MedLevelButton: MeditationLevelButtonSVC {
-    
-    override var length: Int {
-        get {
-            return 5
-        }
-    }
-    
-    override var title: String {
-        get {
-            return "Seed"
-        }
-    }
-    
-    override func customSetup() {
-        super.customSetup()
-        
-        imageView.image = UIImage(named: title)
-    }
-}
-
-class level2MedLevelButton: MeditationLevelButtonSVC {
-    
-    override var length: Int {
-        get {
-            return 15
-        }
-    }
-    
-    override var title: String {
-        get {
-            return "Sprout"
-        }
-    }
-    
-    override func customSetup() {
-        super.customSetup()
-        
-        imageView.image = UIImage(named: title)
-    }
-}
-
-class level3MedLevelButton: MeditationLevelButtonSVC {
-    
-    override var length: Int {
-        get {
-            return 30
-        }
-    }
-    
-    override var title: String {
-        get {
-            return "Flower"
-        }
-    }
-    
-    override func customSetup() {
-        super.customSetup()
-        
-        imageView.image = UIImage(named: title)
-    }
-}
-
-class level4MedLevelButton: MeditationLevelButtonSVC {
-    
-    override var length: Int {
-        get {
-            return 45
-        }
-    }
-    
-    override var title: String {
-        get {
-            return "Tree"
-        }
-    }
-    
-    override func customSetup() {
-        super.customSetup()
-        
-        imageView.image = UIImage(named: title)
-    }
 }

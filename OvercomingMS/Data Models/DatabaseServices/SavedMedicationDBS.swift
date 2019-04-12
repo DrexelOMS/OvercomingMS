@@ -11,43 +11,37 @@ import RealmSwift
 
 class SavedMedicationDBS: TrackingModulesDBS {
     
+    override var module: Modules{
+        get {
+            return .Medication
+        }
+    }
+    
     //TODO: not currently correct
-    func toggleFilledData() {
+    override func toggleFilledData() {
         let percent = getPercentageComplete()
         let date = globalCurrentDate
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
-                    day.IsMedicationComplete = !day.IsMedicationComplete
-                }
+                let day = getTrackingDay(date: date)
+                day.IsMedicationComplete = !day.IsMedicationComplete
             }
         } catch {
             print("Error updating todays data : \(error)" )
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Medication)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
-    func addMedicationItem(medicationName: String, timeOfDay: Date, medicationNote: String, freq: String, active: Bool) {
+    override func addItem(item: Object) {
         let percent = getPercentageComplete()
         do {
             try realm.write() {
-                let item = SavedMedicationDBT()
-                
-                item.MedicationName = medicationName
-                item.DateCreated = OMSDateAccessor.getFullDate(date: globalCurrentDate)
-                item.TimeOfDay = timeOfDay
-                item.MedicationNote = medicationNote
-                item.Frequency = freq
-                realm.add(item)
+                realm.add(SavedMedicationDBT(value: item))
             }
         } catch {
             print("Error updating Medication data : \(error)" )
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Medication)
-        }
+        checkToNotify(oldPercent: percent)
     }
 
     //TODO: we need a better way to delete items
@@ -89,18 +83,13 @@ class SavedMedicationDBS: TrackingModulesDBS {
         } catch {
             print("Error update SavedMedication data: \(error)")
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Medication)
-        }
+        checkToNotify(oldPercent: percent)
     }
-
-//deleteSavedMedication() NOTE: do not copy the delete code, when you delete the medication, simply set active to true, and in the get all saved medications method, you need to go through all the medication items, making a new list, skipping any that have Active = false
     
-    func deleteSavedMedication(item: SavedMedicationDBT) {
+    override func deleteItem(item: Object) {
         do {
             try realm.write() {
-                //item.Active = false
-                item.DateDeleted = OMSDateAccessor.getFullDate(date: getTrackingDay()!.DateCreated) //more thought for tracking over time
+                SavedMedicationDBT(value: item).DateDeleted = OMSDateAccessor.getFullDate(date: getTrackingDay().DateCreated)
             }
         } catch {
             print("Error delete SavedMedication data: \(error)")
@@ -111,24 +100,20 @@ class SavedMedicationDBS: TrackingModulesDBS {
         let percent = getPercentageComplete()
         do {
             try realm.write() {
-               getTrackingDay()?.savedMedicationDT.append(item)
+               getTrackingDay().savedMedicationDT.append(item)
             }
         } catch {
             print("Error delete SavedMedication data: \(error)")
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Medication)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
     func removeTakenMedication(item: SavedMedicationDBT) {
         do {
             try realm.write() {
-                
-                if let index = getTrackingDay()?.savedMedicationDT.index(of: item){
-                    getTrackingDay()?.savedMedicationDT.remove(at: index)
+                if let index = getTrackingDay().savedMedicationDT.index(of: item) {
+                    getTrackingDay().savedMedicationDT.remove(at: index)
                 }
-
             }
         } catch {
             print("Error delete SavedMedication data: \(error)")
@@ -136,7 +121,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
     }
     
     func wasTaken(item: SavedMedicationDBT) -> Bool {
-        if getTrackingDay()?.savedMedicationDT.index(of: item) != nil{
+        if getTrackingDay().savedMedicationDT.index(of: item) != nil{
             return true
         }
         return false
@@ -147,16 +132,28 @@ class SavedMedicationDBS: TrackingModulesDBS {
     }
     
     
-    //TODO: this is not correct?
+    //Get the tracked meds goals
     func getTodaysTotalMedGoal() -> Int {
         let meds = getSavedMedicationItems()
 
         return meds.medicationsTracked.count
     }
     
-    //TODO: this is not correct?
-    func getPercentageComplete() -> Int {
-        return getTrackingDay()?.MedicationComputedPercentageComplete ?? 0
+    override func getPercentageComplete() -> Int {
+        return getTrackingDay().MedicationComputedPercentageComplete
+    }
+    
+    override func getTrackingDescription() -> String {
+        var description = ""
+        let amountRemaining = getTodaysTotalMedGoal() - getTrackingDay().MedicationTotal
+        let uom = "sets of meds"
+        if(amountRemaining <= 0 || getPercentageComplete() >= 100){
+            description = "Daily goal reached!"
+        }
+        else {
+            description = "\(amountRemaining) \(uom) left"
+        }
+        return description
     }
 
 

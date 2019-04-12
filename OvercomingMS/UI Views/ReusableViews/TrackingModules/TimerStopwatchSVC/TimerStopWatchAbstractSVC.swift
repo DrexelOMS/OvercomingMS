@@ -21,9 +21,9 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var buttonsStackView: UIStackView!
     
-    let cancelButton = CancelCircleButton()
+    let cancelButton = CircleButtonFactory.CancelButton()
     let startPauseButton = StartPauseCircleButton()
-    let finishButton = FinishCircleButton()
+    let finishButton = CircleButtonFactory.FinishButton()
     
     var seconds = 0
     var startTime = Date() //This is when you STARTED THE TIMER, not to be used as the countown length
