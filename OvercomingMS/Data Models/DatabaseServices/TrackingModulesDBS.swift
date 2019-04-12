@@ -70,10 +70,6 @@ class TrackingModulesDBS{
         fatalError("addItem not overriden")
     }
     
-//    func editItem(old: Object) {
-//        fatalError("editItem not overriden")
-//    }
-    
     func deleteItem(item: Object) {
         do {
             try realm.write() {

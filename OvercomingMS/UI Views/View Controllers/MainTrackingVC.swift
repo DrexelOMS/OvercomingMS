@@ -200,62 +200,39 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     
     func didPressLeftContainer(_ sender: TrackingProgressBar) {
         
+        var vc: SlidingStackVC
+        
         switch(sender.tag){
         case 0:
-            let vc = TrackingModuleFactory.Omega3VC()
-            vc.theme = omega3Bar.colorTheme
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+            vc = TrackingModuleFactory.Omega3VC()
             break
         case 1:
-            let vc = TrackingModuleFactory.VitaminDVC()
-            vc.theme = vitaminDBar.colorTheme
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+            vc = TrackingModuleFactory.VitaminDVC()
             break
         case 2:
-            let vc = TrackingModuleFactory.ExerciseVC()
-            vc.theme = exerciseBar.colorTheme
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+            vc = TrackingModuleFactory.ExerciseVC()
             break
         case 3:
-            let vc = TrackingModuleFactory.MeditationVC()
-            vc.theme = meditationBar.colorTheme
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+            vc = TrackingModuleFactory.MeditationVC()
             break
         case 4:
-            let vc = TrackingModuleFactory.MedicationVC()
-            vc.theme = medicationBar.colorTheme
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+            vc = TrackingModuleFactory.MedicationVC()
             break
         case 5:
-            let vc = SlidingStackVC(initialView: FoodMainSVC())
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
-            
-            loadCurrentDayUI()
+            vc = SlidingStackVC(initialView: FoodMainSVC())
             break
         default:
             fatalError("Case Not Handled")
             break;
         }
         
-        loadCurrentDayUI()
+        vc.theme = sender.colorTheme
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.dismissalDelegate = self
+        
+        self.present(vc, animated: true, completion: nil)
+        
+        //loadCurrentDayUI()
         
     }
     
