@@ -9,9 +9,26 @@
 import UIKit
 import Cartography
 
-class TrackingModuleAbstractVC: SlidingStackVC {
+class TrackingModuleVC: SlidingStackVC {
     
     let progressBar = TrackingProgressBar()
+    
+    private var trackingDBS: TrackingModulesDBS!
+    private var mainViewToSet: SlidingAbstractSVC!
+    
+    convenience init(title: String, trackingDBS: TrackingModulesDBS, mainViewToSet: SlidingAbstractSVC) {
+        self.init()
+        
+        progressBar.setTitle(title: title)
+        self.trackingDBS = trackingDBS
+        self.mainViewToSet = mainViewToSet
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        initializeviewStack(defaultView: mainViewToSet)
+    }
     
     override func addViewsBeforeMain() {
         let progressView = UIView()
@@ -29,6 +46,7 @@ class TrackingModuleAbstractVC: SlidingStackVC {
         }
         
         progressBar.colorTheme = theme
+        progressBar.toggleCheckMarkVisibility(isHidden: true)
         
         let lineSeparatorView = UIView()
         lineSeparatorView.backgroundColor = UIColor.lightGray
@@ -44,6 +62,10 @@ class TrackingModuleAbstractVC: SlidingStackVC {
         constrain(lineSeparatorView, progressBar) { (view, aboveView) in
             view.top == aboveView.bottom + 20
         }
+    }
+    
+    override func reload() {
+        progressBar.update(trackingDBS: trackingDBS)
     }
     
 }

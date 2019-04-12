@@ -15,7 +15,6 @@ class FoodModuleVC: SlidingStackVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         initializeviewStack(defaultView: FoodMainSVC())
     }
 

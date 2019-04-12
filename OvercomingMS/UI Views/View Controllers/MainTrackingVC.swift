@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingProgressBarDelegate {
+class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDelegate {
     
     func finishedShowing(viewController: UIViewController) {
         _ = omsDateFormatter.todaysDate
@@ -229,7 +229,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         switch(sender.tag){
         case 0:
-            let vc = Omega3ModuleVC()
+            let vc = TrackingModuleFactory.Omega3VC()
             vc.theme = omega3Bar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
@@ -237,8 +237,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             self.present(vc, animated: true, completion: nil)
             break
         case 1:
-            //WriteVitaminDTrackingData().addData(amount: 5)
-            let vc = VitaminDModuleVC()
+            let vc = TrackingModuleFactory.VitaminDVC()
             vc.theme = vitaminDBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
@@ -246,7 +245,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             self.present(vc, animated: true, completion: nil)
             break
         case 2:
-            let vc = ExerciseModuleVC()
+            let vc = TrackingModuleFactory.ExerciseVC()
             vc.theme = exerciseBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
@@ -254,7 +253,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             self.present(vc, animated: true, completion: nil)
             break
         case 3:
-            let vc = MeditationModuleVC()
+            let vc = TrackingModuleFactory.MeditationVC()
             vc.theme = meditationBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
@@ -262,7 +261,7 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
             self.present(vc, animated: true, completion: nil)
             break
         case 4:
-            let vc = MedicationModuleVC()
+            let vc = TrackingModuleFactory.MedicationVC()
             vc.theme = medicationBar.colorTheme
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
