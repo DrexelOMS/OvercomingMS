@@ -16,9 +16,8 @@ class MeditationHistoryDBS: TrackingModulesDBS {
         let date = globalCurrentDate
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
-                    day.IsMeditationComplete = !day.IsMeditationComplete
-                }
+                let day = getTrackingDay(date: date)
+                day.IsMeditationComplete = !day.IsMeditationComplete
             }
         } catch {
             print("Error updating todays data : \(error)" )
@@ -32,13 +31,12 @@ class MeditationHistoryDBS: TrackingModulesDBS {
         let percent = getPercentageComplete()
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    let item = MeditationHistoryDBT()
-                    item.MeditationType = routineType
-                    item.StartTime = startTime
-                    item.EndTime = endTime
-                    day.meditationHistoryDT.append(item)
-                }
+                let day = getTrackingDay(date: globalCurrentDate)
+                let item = MeditationHistoryDBT()
+                item.MeditationType = routineType
+                item.StartTime = startTime
+                item.EndTime = endTime
+                day.meditationHistoryDT.append(item)
             }
         } catch {
             print("Error updating Meditation data : \(error)" )
@@ -49,15 +47,28 @@ class MeditationHistoryDBS: TrackingModulesDBS {
     }
     
     func getTodaysMeditationItems() -> List<MeditationHistoryDBT>? {
-        return getTrackingDay()?.meditationHistoryDT
+        return getTrackingDay().meditationHistoryDT
     }
     
     func getTotalMinutes() -> Int {
-        return getTrackingDay()?.MeditationTimeTotal ?? 0
+        return getTrackingDay().MeditationTimeTotal
     }
     
-    func getPercentageComplete() -> Int {
-        return getTrackingDay()?.MeditationComputedPercentageComplete ?? 0
+    override func getPercentageComplete() -> Int {
+        return getTrackingDay().MeditationComputedPercentageComplete
+    }
+    
+    override func getTrackingDescription() -> String {
+        var description = ""
+        let amountRemaining = ProgressBarConfig.meditationGoal - getTotalMinutes()
+        let uom = ProgressBarConfig.lengthUOM
+        if(amountRemaining <= 0 || getPercentageComplete() >= 100){
+            description = "Daily goal reached!"
+        }
+        else {
+            description = "\(amountRemaining) \(uom) left"
+        }
+        return description
     }
     
     func deleteMeditationItem(item: MeditationHistoryDBT) {

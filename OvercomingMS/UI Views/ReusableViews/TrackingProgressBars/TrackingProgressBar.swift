@@ -20,7 +20,7 @@ protocol IUpdateProgressBar: class {
 }
 
 @IBDesignable
-class TrackingProgressBar: CustomView{
+class TrackingProgressBar: CustomView {
     
     override var nibName: String { return "TrackingProgressBar" }
     
@@ -38,6 +38,12 @@ class TrackingProgressBar: CustomView{
         didSet {
             linearProgressBar.barColor = barColor
             linearProgressBar.trackColor = barColor.withAlphaComponent(0.2)
+        }
+    }
+    
+    @IBInspectable var progressBar: Bool = true {
+        didSet {
+            linearProgressBar.isHidden = !progressBar
         }
     }
     
@@ -77,26 +83,13 @@ class TrackingProgressBar: CustomView{
         linearProgressBar.progressValue += CGFloat(value);
     }
     
-    func setProgressValue(value : Int){
+    private func setProgressValue(value : Int) {
         linearProgressBar.progressValue = CGFloat(value);
         setColorMode(completed: linearProgressBar.progressValue >= 100)
         
     }
     
-    
-    //TODO: Remove
-    func setDescription(amountRemaining: Int, uom: String){
-        var description = ""
-        if(amountRemaining <= 0){
-            description = "Daily goal reached!"
-        }
-        else {
-            description = "\(amountRemaining) \(uom) left"
-        }
-        rightLabel.text = description
-    }
-    
-    func setRightLabel(description: String) {
+    private func setRightLabel(description: String) {
         rightLabel.text = description
     }
     
@@ -148,6 +141,12 @@ class TrackingProgressBar: CustomView{
         delegate?.didPressCheckButton(self)
     }
     
+    func update(trackingDBS: TrackingModulesDBS, hideBar: Bool = false) {
+        if !hideBar {
+            setProgressValue(value: trackingDBS.getPercentageComplete())
+        }
+        setRightLabel(description: trackingDBS.getTrackingDescription())
+    }
 }
 
 @IBDesignable

@@ -12,11 +12,6 @@ import RealmSwift
 class VitaminDModuleVC: TrackingModuleAbstractVC {
     
     private let vitaminDHistory = VitaminDHistoryDBS()
-    private let progressBar = VitaminDProgressBar()
-    
-    override func getProgressBar() -> TrackingProgressBar {
-        return progressBar
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +24,7 @@ class VitaminDModuleVC: TrackingModuleAbstractVC {
     }
     
     override func reload() {
-        progressBar.updateProgress()
+        progressBar.update(trackingDBS: vitaminDHistory)
     }
 
 }

@@ -16,9 +16,8 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
         let date = globalCurrentDate
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
-                    day.IsVitaminDComplete = !day.IsVitaminDComplete
-                }
+                let day = getTrackingDay(date: date)
+                day.IsVitaminDComplete = !day.IsVitaminDComplete
             }
         } catch {
             print("Error updating todays data : \(error)" )
@@ -32,13 +31,12 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
         let percent = getPercentageComplete()
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    let item = VitaminDHistoryDBT()
-                    item.VitaminDType = vitaminDType
-                    item.StartTime = startTime
-                    item.Amount = vitaminDAmount
-                    day.vitaminDHistoryDT.append(item)
-                }
+                let day = getTrackingDay(date: globalCurrentDate)
+                let item = VitaminDHistoryDBT()
+                item.VitaminDType = vitaminDType
+                item.StartTime = startTime
+                item.Amount = vitaminDAmount
+                day.vitaminDHistoryDT.append(item)
             }
         } catch {
             print("Error updating Vitamin D data : \(error)" )
@@ -49,15 +47,28 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
     }
     
     func getTodaysVitaminDItems() -> List<VitaminDHistoryDBT>? {
-        return getTrackingDay()?.vitaminDHistoryDT
+        return getTrackingDay().vitaminDHistoryDT
     }
     
     func getTotalAmount() -> Int {
-        return getTrackingDay()?.VitaminDTotal ?? 0
+        return getTrackingDay().VitaminDTotal
     }
     
-    func getPercentageComplete() -> Int {
-        return getTrackingDay()?.VitaminDComputedPercentageComplete ?? 0
+    override func getPercentageComplete() -> Int {
+        return getTrackingDay().VitaminDComputedPercentageComplete
+    }
+    
+    override func getTrackingDescription() -> String {
+        var description = ""
+        let amountRemaining = ProgressBarConfig.vitaminDGoal - getTotalAmount()
+        let uom = ProgressBarConfig.vitaminDUOM
+        if(amountRemaining <= 0 || getPercentageComplete() >= 100){
+            description = "Daily goal reached!"
+        }
+        else {
+            description = "\(amountRemaining) \(uom) left"
+        }
+        return description
     }
     
     func deleteVitaminDItem(item: VitaminDHistoryDBT) {

@@ -27,12 +27,12 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
     
     @IBOutlet weak var header: HeaderSVC!
     @IBOutlet weak var dateLog: UILabel!
-    @IBOutlet weak var foodBar: TrackingFoodBar!
-    @IBOutlet weak var omega3Bar: Omega3ProgressBar!
-    @IBOutlet weak var vitaminDBar: VitaminDProgressBar!
-    @IBOutlet weak var exerciseBar: ExerciseProgressBar!
-    @IBOutlet weak var meditationBar: MeditationProgressBar!
-    @IBOutlet weak var medicationBar: MedicationProgressBar!
+    @IBOutlet weak var foodBar: TrackingProgressBar!
+    @IBOutlet weak var omega3Bar: TrackingProgressBar!
+    @IBOutlet weak var vitaminDBar: TrackingProgressBar!
+    @IBOutlet weak var exerciseBar: TrackingProgressBar!
+    @IBOutlet weak var meditationBar: TrackingProgressBar!
+    @IBOutlet weak var medicationBar: TrackingProgressBar!
     
     @IBOutlet weak var previousButton: UIView!
     @IBOutlet weak var nextDay: UIView!
@@ -163,14 +163,9 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         _ = omsDateFormatter.todaysDate
         
-        if let currentTrackingDay = TrackingModulesDBS().getTrackingDay(date: globalCurrentDate) {
-            updatePageUI(currentTrackingDay)
-        }
-        else{
-            print("Do something for days that were not tracked")
-            OMSDateAccessor().createDay(date: globalCurrentDate)
-            loadCurrentDayUI()
-        }
+        let currentTrackingDay = TrackingModulesDBS().getTrackingDay(date: globalCurrentDate)
+        updatePageUI(currentTrackingDay)
+        
         
         attemptMenuRestore()
     }
@@ -186,12 +181,12 @@ class MainTrackingViewController: UIViewController, DismissalDelegate, TrackingP
         
         //TODO make a way to get the proper description for each
         //FoodEatenRating is 1 - 5
-        foodBar.setRightLabel(description: ProgressBarConfig.getfoodDescription(rating: currentTrackingDay.FoodEatenRating))
-        omega3Bar.updateProgress()
-        vitaminDBar.updateProgress()
-        exerciseBar.updateProgress()
-        meditationBar.updateProgress()
-        medicationBar.updateProgress()
+        foodBar.update(trackingDBS: FoodRatingDBS(), hideBar: true)
+        omega3Bar.update(trackingDBS: Omega3HistoryDBS())
+        vitaminDBar.update(trackingDBS: VitaminDHistoryDBS())
+        exerciseBar.update(trackingDBS: ExerciseHistoryDBS())
+        meditationBar.update(trackingDBS: MeditationHistoryDBS())
+        medicationBar.update(trackingDBS: SavedMedicationDBS())
     }
     
     //MARK: Delegates

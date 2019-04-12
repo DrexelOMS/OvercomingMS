@@ -14,13 +14,12 @@ class SymptomsNoteDBS: TrackingModulesDBS {
     func addNote(note: String, symptomsRating: Int, dateCreated: Date) {
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    let item = SymptomsNoteDBT()
-                    item.Note = note
-                    item.DateCreated = dateCreated
-                    item.SymptomsRating = symptomsRating
-                    day.symptomsNoteDT.append(item)
-                }
+                let day = getTrackingDay(date: globalCurrentDate)
+                let item = SymptomsNoteDBT()
+                item.Note = note
+                item.DateCreated = dateCreated
+                item.SymptomsRating = symptomsRating
+                day.symptomsNoteDT.append(item)
             }
         } catch {
             print("Error updating Symptom Notes : \(error)" )
@@ -29,7 +28,7 @@ class SymptomsNoteDBS: TrackingModulesDBS {
     }
     
     func getTodaysNotes() -> List<SymptomsNoteDBT>? {
-        return getTrackingDay()?.symptomsNoteDT
+        return getTrackingDay().symptomsNoteDT
     }
     
     

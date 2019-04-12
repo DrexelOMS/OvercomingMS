@@ -11,7 +11,7 @@ import Cartography
 
 class TrackingModuleAbstractVC: SlidingStackVC {
     
-    //MARK: Attributes
+    let progressBar = TrackingProgressBar()
     
     override func addViewsBeforeMain() {
         let progressView = UIView()
@@ -19,8 +19,6 @@ class TrackingModuleAbstractVC: SlidingStackVC {
         constrain(progressView) { (view) in
             view.height == 60.0
         }
-        
-        let progressBar = getProgressBar()
         
         progressView.addSubview(progressBar)
         
@@ -46,10 +44,6 @@ class TrackingModuleAbstractVC: SlidingStackVC {
         constrain(lineSeparatorView, progressBar) { (view, aboveView) in
             view.top == aboveView.bottom + 20
         }
-    }
-    
-    func getProgressBar() -> TrackingProgressBar {
-        return TrackingProgressBar()
     }
     
 }

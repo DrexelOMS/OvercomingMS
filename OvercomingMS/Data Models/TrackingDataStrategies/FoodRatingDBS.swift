@@ -15,10 +15,9 @@ class FoodRatingDBS : TrackingModulesDBS {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    if day.FoodEatenRating != 5 {
-                        day.FoodEatenRating = 5
-                    }
+                let day = getTrackingDay(date: globalCurrentDate)
+                if day.FoodEatenRating != 5 {
+                    day.FoodEatenRating = 5
                 }
             }
         } catch {
@@ -28,11 +27,18 @@ class FoodRatingDBS : TrackingModulesDBS {
     }
     
     func getRating() -> Int {
-        if let day = getTrackingDay(date: globalCurrentDate) {
-            let rating = day.FoodEatenRating
-            return rating
-        }
-        return 1
+        let day = getTrackingDay(date: globalCurrentDate)
+        let rating = day.FoodEatenRating
+        return rating
+    }
+    
+     // food doesnt have a progress bar
+    override func getPercentageComplete() -> Int {
+        return 0
+    }
+    
+    override func getTrackingDescription() -> String {
+        return ProgressBarConfig.getfoodDescription(rating: getTrackingDay().FoodEatenRating)
     }
     
     //must be 1-5
@@ -40,16 +46,15 @@ class FoodRatingDBS : TrackingModulesDBS {
         
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    if amount < 1 {
-                        day.FoodEatenRating = 1
-                    }
-                    else if amount > 5{
-                        day.FoodEatenRating = 5
-                    }
-                    else {
-                        day.FoodEatenRating = amount
-                    }
+                let day = getTrackingDay(date: globalCurrentDate)
+                if amount < 1 {
+                    day.FoodEatenRating = 1
+                }
+                else if amount > 5{
+                    day.FoodEatenRating = 5
+                }
+                else {
+                    day.FoodEatenRating = amount
                 }
             }
         } catch {

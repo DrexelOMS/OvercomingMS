@@ -22,8 +22,14 @@ class TrackingModulesDBS{
     let realm = try! Realm()
     lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
     
-    func getTrackingDay(date: String = globalCurrentDate) -> TrackingDayDBT? {
-        return realm.object(ofType: TrackingDayDBT.self, forPrimaryKey: date)
+    func getTrackingDay(date: String = globalCurrentDate) -> TrackingDayDBT {
+        if let trackingDay = realm.object(ofType: TrackingDayDBT.self, forPrimaryKey: date) {
+            return trackingDay
+        }
+        else {
+            OMSDateAccessor().createDay(date: date)
+            return getTrackingDay(date: date)
+        }
     }
     
     func notify(module: Modules) {
@@ -31,4 +37,11 @@ class TrackingModulesDBS{
         NotificationCenter.default.post(name: .didCompleteModule, object: module)
     }
     
+    func getPercentageComplete() -> Int {
+        fatalError("getPercentageComplete not overriden")
+    }
+    
+    func getTrackingDescription() -> String {
+        fatalError("getTrackingDescription not overriden")
+    }
 }

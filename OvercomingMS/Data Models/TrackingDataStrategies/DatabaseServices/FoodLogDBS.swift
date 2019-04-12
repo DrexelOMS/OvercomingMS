@@ -23,25 +23,26 @@ class FoodLogDBS: TrackingModulesDBS{
     func addFoodItem(foodName: String, foodDescription: String, foodRecommendedLevel: Int, foodURL: String, dateCreated: Date, apiNumber: String) {
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    let item = FoodLogDBT()
-                    item.FoodName = foodName
-                    item.FoodDescription = foodDescription
-                    item.FoodRecommendedLevel = foodRecommendedLevel
-                    item.FoodUrl = foodURL
-                    item.DateCreated=dateCreated
-                    item.ApiNumber = apiNumber
-                    day.foodLogDT.append(item)
-                }
+                let day = getTrackingDay(date: globalCurrentDate)
+                let item = FoodLogDBT()
+                item.FoodName = foodName
+                item.FoodDescription = foodDescription
+                item.FoodRecommendedLevel = foodRecommendedLevel
+                item.FoodUrl = foodURL
+                item.DateCreated=dateCreated
+                item.ApiNumber = apiNumber
+                day.foodLogDT.append(item)
             }
-        } catch {
-            print("Error updating Food data : \(error)" )
         }
-        
+        catch {
+            print("Error updating food data : \(error)" )
+        }
     }
     
+
+    
     func getTodaysFoodItems() -> List<FoodLogDBT>? {
-        return getTrackingDay()?.foodLogDT
+        return getTrackingDay().foodLogDT
     }
 
     func getAllFoodItems() -> List<FoodLogDBT>? {

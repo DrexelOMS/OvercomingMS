@@ -16,9 +16,8 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
         let date = globalCurrentDate
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
-                    day.IsExerciseComplete = !day.IsExerciseComplete
-                }
+                let day = getTrackingDay(date: date)
+                day.IsExerciseComplete = !day.IsExerciseComplete
             }
         } catch {
             print("Error updating todays data : \(error)" )
@@ -32,13 +31,12 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
         let percent = getPercentageComplete()
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    let item = ExerciseHistoryDBT()
-                    item.RoutineType = routineType
-                    item.StartTime = startTime
-                    item.EndTime = endTime
-                    day.exerciseHistoryDT.append(item)
-                }
+                let day = getTrackingDay(date: globalCurrentDate)
+                let item = ExerciseHistoryDBT()
+                item.RoutineType = routineType
+                item.StartTime = startTime
+                item.EndTime = endTime
+                day.exerciseHistoryDT.append(item)
             }
         } catch {
             print("Error updating Exercise data : \(error)" )
@@ -49,15 +47,28 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
     }
     
     func getTodaysExerciseItems() -> List<ExerciseHistoryDBT>? {
-        return getTrackingDay()?.exerciseHistoryDT
+        return getTrackingDay().exerciseHistoryDT
     }
     
     func getTotalMinutes() -> Int {
-        return getTrackingDay()?.ExerciseTimeTotal ?? 0
+        return getTrackingDay().ExerciseTimeTotal
     }
     
-    func getPercentageComplete() -> Int {
-        return getTrackingDay()?.ExerciseComputedPercentageComplete ?? 0
+    override func getPercentageComplete() -> Int {
+        return getTrackingDay().ExerciseComputedPercentageComplete
+    }
+    
+    override func getTrackingDescription() -> String {
+        var description = ""
+        let amountRemaining = ProgressBarConfig.exerciseGoal - getTotalMinutes()
+        let uom = ProgressBarConfig.lengthUOM
+        if(amountRemaining <= 0 || getPercentageComplete() >= 100){
+            description = "Daily goal reached!"
+        }
+        else {
+            description = "\(amountRemaining) \(uom) left"
+        }
+        return description
     }
     
     func deleteExerciseItem(item: ExerciseHistoryDBT) {

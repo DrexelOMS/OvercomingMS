@@ -12,11 +12,6 @@ import RealmSwift
 class Omega3ModuleVC: TrackingModuleAbstractVC {
     
     private let omega3History = Omega3HistoryDBS()
-    let progressBar = Omega3ProgressBar()
-    
-    override func getProgressBar() -> TrackingProgressBar {
-        return progressBar
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +24,7 @@ class Omega3ModuleVC: TrackingModuleAbstractVC {
     }
     
     override func reload() {
-        progressBar.updateProgress()
+        progressBar.update(trackingDBS: omega3History)
     }
     
 }

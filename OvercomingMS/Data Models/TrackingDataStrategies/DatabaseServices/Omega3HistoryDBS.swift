@@ -16,9 +16,8 @@ class Omega3HistoryDBS: TrackingModulesDBS {
         let date = globalCurrentDate
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: date) {
-                    day.IsOmega3Complete = !day.IsOmega3Complete
-                }
+                let day = getTrackingDay(date: date)
+                day.IsOmega3Complete = !day.IsOmega3Complete
             }
         } catch {
             print("Error updating todays data : \(error)" )
@@ -32,13 +31,12 @@ class Omega3HistoryDBS: TrackingModulesDBS {
         let percent = getPercentageComplete()
         do {
             try realm.write() {
-                if let day = getTrackingDay(date: globalCurrentDate) {
-                    let item = Omega3HistoryDBT()
-                    item.supplementName = supplementName
-                    item.StartTime = StartTime
-                    item.Amount = Amount
-                    day.omega3HistoryDT.append(item)
-                }
+                let day = getTrackingDay(date: globalCurrentDate)
+                let item = Omega3HistoryDBT()
+                item.supplementName = supplementName
+                item.StartTime = StartTime
+                item.Amount = Amount
+                day.omega3HistoryDT.append(item)
             }
         } catch {
             print("Error updating Omega3 data : \(error)" )
@@ -49,15 +47,28 @@ class Omega3HistoryDBS: TrackingModulesDBS {
     }
     
     func getTodaysOmega3Items() -> List<Omega3HistoryDBT>? {
-        return getTrackingDay()?.omega3HistoryDT
+        return getTrackingDay().omega3HistoryDT
     }
     
     func getTotalGrams() -> Int {
-        return getTrackingDay()?.Omega3Total ?? 0
+        return getTrackingDay().Omega3Total
     }
     
-    func getPercentageComplete() -> Int {
-        return getTrackingDay()?.Omega3ComputedPercentageComplete ?? 0
+    override func getPercentageComplete() -> Int {
+        return getTrackingDay().Omega3ComputedPercentageComplete
+    }
+    
+    override func getTrackingDescription() -> String {
+        var description = ""
+        let amountRemaining = ProgressBarConfig.omega3Goal - getTotalGrams()
+        let uom = ProgressBarConfig.omega3UOM
+        if(amountRemaining <= 0 || getPercentageComplete() >= 100){
+            description = "Daily goal reached!"
+        }
+        else {
+            description = "\(amountRemaining) \(uom) left"
+        }
+        return description
     }
     
     func deleteOmega3Item(item: Omega3HistoryDBT) {

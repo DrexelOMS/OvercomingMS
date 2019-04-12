@@ -109,15 +109,9 @@
 		0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */; };
 		0AA5286E2202827000CCFEE7 /* SquareButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5286D2202827000CCFEE7 /* SquareButtonSVC.swift */; };
 		0AA528702202828300CCFEE7 /* SquareButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA5286F2202828300CCFEE7 /* SquareButtonSVC.xib */; };
-		0AB66E51223D65F300DF6B67 /* Omega3ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66E50223D65F300DF6B67 /* Omega3ProgressBar.swift */; };
-		0AB66E54223D6C1300DF6B67 /* VitaminDProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66E53223D6C1300DF6B67 /* VitaminDProgressBar.swift */; };
-		0AB66E56223D6C3D00DF6B67 /* ExerciseProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66E55223D6C3D00DF6B67 /* ExerciseProgressBar.swift */; };
-		0AB66E58223D6C4900DF6B67 /* MeditationProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66E57223D6C4900DF6B67 /* MeditationProgressBar.swift */; };
-		0AB66E5A223D6C5400DF6B67 /* MedicationProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66E59223D6C5400DF6B67 /* MedicationProgressBar.swift */; };
 		0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */; };
 		0AD07F7221FCFF8100C55831 /* TrackingProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */; };
 		0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8421FE53B900C55831 /* DesignConstants.swift */; };
-		0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */; };
 		0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8D21FE79C300C55831 /* CustomView.swift */; };
 		0AD07F9321FE94F200C55831 /* ProgressBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */; };
 		0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */; };
@@ -333,15 +327,9 @@
 		0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationSVC.swift; sourceTree = "<group>"; };
 		0AA5286D2202827000CCFEE7 /* SquareButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButtonSVC.swift; sourceTree = "<group>"; };
 		0AA5286F2202828300CCFEE7 /* SquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareButtonSVC.xib; sourceTree = "<group>"; };
-		0AB66E50223D65F300DF6B67 /* Omega3ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3ProgressBar.swift; sourceTree = "<group>"; };
-		0AB66E53223D6C1300DF6B67 /* VitaminDProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminDProgressBar.swift; sourceTree = "<group>"; };
-		0AB66E55223D6C3D00DF6B67 /* ExerciseProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseProgressBar.swift; sourceTree = "<group>"; };
-		0AB66E57223D6C4900DF6B67 /* MeditationProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationProgressBar.swift; sourceTree = "<group>"; };
-		0AB66E59223D6C5400DF6B67 /* MedicationProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationProgressBar.swift; sourceTree = "<group>"; };
 		0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingProgressBar.xib; sourceTree = "<group>"; };
 		0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingProgressBar.swift; sourceTree = "<group>"; };
 		0AD07F8421FE53B900C55831 /* DesignConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignConstants.swift; sourceTree = "<group>"; };
-		0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingFoodBar.swift; sourceTree = "<group>"; };
 		0AD07F8D21FE79C300C55831 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarConfig.swift; sourceTree = "<group>"; };
 		0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMSDateAccessor.swift; sourceTree = "<group>"; };
@@ -733,7 +721,6 @@
 		0AA5284A2202188500CCFEE7 /* TrackingProgressBars */ = {
 			isa = PBXGroup;
 			children = (
-				0AB66E4F223D649F00DF6B67 /* ConcreteProgressBars */,
 				0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */,
 				0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */,
 			);
@@ -759,19 +746,6 @@
 				0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */,
 			);
 			path = ButtonViews;
-			sourceTree = "<group>";
-		};
-		0AB66E4F223D649F00DF6B67 /* ConcreteProgressBars */ = {
-			isa = PBXGroup;
-			children = (
-				0AD07F8921FE6F2400C55831 /* TrackingFoodBar.swift */,
-				0AB66E50223D65F300DF6B67 /* Omega3ProgressBar.swift */,
-				0AB66E53223D6C1300DF6B67 /* VitaminDProgressBar.swift */,
-				0AB66E55223D6C3D00DF6B67 /* ExerciseProgressBar.swift */,
-				0AB66E57223D6C4900DF6B67 /* MeditationProgressBar.swift */,
-				0AB66E59223D6C5400DF6B67 /* MedicationProgressBar.swift */,
-			);
-			path = ConcreteProgressBars;
 			sourceTree = "<group>";
 		};
 		0AD07F8621FE596F00C55831 /* ReusableViews */ = {
@@ -1358,7 +1332,6 @@
 				0A967490225CCBB2007C05AF /* ConfirmationFactory.swift in Sources */,
 				0AD07F8E21FE79C300C55831 /* CustomView.swift in Sources */,
 				0A08189E2214F82F0021BDF6 /* Food.swift in Sources */,
-				0AB66E58223D6C4900DF6B67 /* MeditationProgressBar.swift in Sources */,
 				0A341D79225919DB0066EC1D /* SymptomsListSVC.swift in Sources */,
 				0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */,
 				0AEF7A6722341DBF009A0292 /* MeditationSetupSVC.swift in Sources */,
@@ -1405,9 +1378,7 @@
 				0AD94DCA220CEE5B00B5C2BA /* SelectedItemSVC.swift in Sources */,
 				0AD7EB4C2224B9EC006F71C0 /* MedicationSelectedItem.swift in Sources */,
 				0AD7EB0F221B463A006F71C0 /* VitaminDSelectedItem.swift in Sources */,
-				0AD07F8A21FE6F2400C55831 /* TrackingFoodBar.swift in Sources */,
 				0AA5286E2202827000CCFEE7 /* SquareButtonSVC.swift in Sources */,
-				0AB66E5A223D6C5400DF6B67 /* MedicationProgressBar.swift in Sources */,
 				0AD94DDB220E0D7600B5C2BA /* MeditationModuleVC.swift in Sources */,
 				0A030FBC22580A1500857BC8 /* Omega3HistoryDBT.swift in Sources */,
 				0A98DB0F2216447800F4800D /* SearchBarButton.swift in Sources */,
@@ -1441,19 +1412,16 @@
 				0AD7EB0B221B3331006F71C0 /* VitaminDModifySVC.swift in Sources */,
 				0A93EA3F2210D1FC0063A892 /* FoodModuleVC.swift in Sources */,
 				0AD7EB06221B3007006F71C0 /* VitaminDMainSVC.swift in Sources */,
-				0AB66E51223D65F300DF6B67 /* Omega3ProgressBar.swift in Sources */,
 				0A030FBB22580A1500857BC8 /* SymptomsNoteDBT.swift in Sources */,
 				0AD7EB232221F1E1006F71C0 /* SeeMoreButtonSVC.swift in Sources */,
 				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
 				0AEF7A542231B487009A0292 /* SwipeDownVC.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
-				0AB66E54223D6C1300DF6B67 /* VitaminDProgressBar.swift in Sources */,
 				0AEF7A2F222B0268009A0292 /* FoodUnknownSVC.swift in Sources */,
 				0A93EA4122122D840063A892 /* (null) in Sources */,
 				0A030FB422580A1500857BC8 /* VitaminDHistoryDBT.swift in Sources */,
 				0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */,
-				0AB66E56223D6C3D00DF6B67 /* ExerciseProgressBar.swift in Sources */,
 				0AEF7A6422340068009A0292 /* MeditationSelectedItemSVC.swift in Sources */,
 				0A341D7F2259225A0066EC1D /* NoteSVC.swift in Sources */,
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,

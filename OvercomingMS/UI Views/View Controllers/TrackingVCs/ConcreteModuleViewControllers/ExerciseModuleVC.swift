@@ -12,11 +12,6 @@ import RealmSwift
 class ExerciseModuleVC: TrackingModuleAbstractVC {
     
     private let exerciseHistory = ExerciseHistoryDBS()
-    private let progressBar = ExerciseProgressBar()
-    
-    override func getProgressBar() -> TrackingProgressBar {
-        return progressBar
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +24,7 @@ class ExerciseModuleVC: TrackingModuleAbstractVC {
     }
     
     override func reload() {
-        progressBar.updateProgress()
+        progressBar.update(trackingDBS: exerciseHistory)
     }
 
 }
