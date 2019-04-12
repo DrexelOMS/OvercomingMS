@@ -63,7 +63,6 @@ class OMSDateAccessor {
 //                return date
 //            }
             let today = OMSDateAccessor.getFormatedDate(date: Date())
-            initializeTodaysData(date: today)
             if today != lastSavedTodayDate {
                 lastSavedTodayDate = today
                 NotificationCenter.default.post(name: .didTodaysDateChange, object: nil)
@@ -151,24 +150,6 @@ class OMSDateAccessor {
     func progressDay() {
 //        let tomorrow = todaysFullDate.addingTimeInterval(60*60*24)
 //        defaults.set(OMSDateAccessor.getFormatedDate(date: tomorrow), forKey: "today")
-    }
-    
-    func createDay(date: String) {
-        initializeTodaysData(date: date)
-    }
-    
-    private func initializeTodaysData(date : String) {
-        if TrackingModulesDBS().getTrackingDay(date: date) == nil {
-            do {
-                try realm.write(){
-                    let todaysTrackingData = TrackingDayDBT()
-                    todaysTrackingData.DateCreated = date
-                    realm.add(todaysTrackingData)
-                }
-            } catch {
-                print("Error saving TrackingDay: \(error)")
-            }
-        }
     }
     
 }

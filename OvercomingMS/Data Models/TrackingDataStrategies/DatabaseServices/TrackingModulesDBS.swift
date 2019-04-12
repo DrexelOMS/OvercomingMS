@@ -27,11 +27,23 @@ class TrackingModulesDBS{
             return trackingDay
         }
         else {
-            OMSDateAccessor().createDay(date: date)
+            initializeTodaysData(date: date)
             return getTrackingDay(date: date)
         }
     }
     
+    private func initializeTodaysData(date : String) {
+        do {
+            try realm.write(){
+                let todaysTrackingData = TrackingDayDBT()
+                todaysTrackingData.DateCreated = date
+                realm.add(todaysTrackingData)
+            }
+        } catch {
+            print("Error saving TrackingDay: \(error)")
+        }
+    }
+
     func notify(module: Modules) {
         //NotificationCenter.default.post(name: .didCompleteModule, object: module, userInfo: ["Module": module])
         NotificationCenter.default.post(name: .didCompleteModule, object: module)
