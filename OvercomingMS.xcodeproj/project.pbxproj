@@ -443,10 +443,10 @@
 		0A030F9122580A1500857BC8 /* DatabaseServices */ = {
 			isa = PBXGroup;
 			children = (
+				0A030F9722580A1500857BC8 /* TrackingModulesDBS.swift */,
 				0A030F9422580A1500857BC8 /* ExerciseHistoryDBS.swift */,
 				0A030F9522580A1500857BC8 /* GoalsDBS.swift */,
 				0A030F9622580A1500857BC8 /* VitaminDHistoryDBS.swift */,
-				0A030F9722580A1500857BC8 /* TrackingModulesDBS.swift */,
 				0A030F9822580A1500857BC8 /* SymptomsNoteDBS.swift */,
 				0A030F9922580A1500857BC8 /* Omega3HistoryDBS.swift */,
 				0A030F9A22580A1500857BC8 /* SavedMedicationDBS.swift */,
@@ -469,9 +469,9 @@
 		0A030F9F22580A1500857BC8 /* DatabaseTables */ = {
 			isa = PBXGroup;
 			children = (
+				0A030FA222580A1500857BC8 /* TrackingDayDBT.swift */,
 				0A030FA022580A1500857BC8 /* VitaminDHistoryDBT.swift */,
 				0A030FA122580A1500857BC8 /* ExerciseHistoryDBT.swift */,
-				0A030FA222580A1500857BC8 /* TrackingDayDBT.swift */,
 				0A030FA322580A1500857BC8 /* GoalsDBT.swift */,
 				0A030FA422580A1500857BC8 /* FoodLogDBT.swift */,
 				0A030FA522580A1500857BC8 /* MeditationHistoryDBT.swift */,
