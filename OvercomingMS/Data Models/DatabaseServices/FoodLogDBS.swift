@@ -17,13 +17,18 @@
 import Foundation
 import RealmSwift
 
-class FoodLogDBS: TrackingModulesDBS{
+class FoodLogDBS {
     
+    let realm = try! Realm()
+    var day : TrackingDayDBT {
+        get {
+            return TrackingModulesDBS().getTrackingDay(date: globalCurrentDate)
+        }
+    }
     
     func addFoodItem(foodName: String, foodDescription: String, foodRecommendedLevel: Int, foodURL: String, dateCreated: Date, apiNumber: String) {
         do {
             try realm.write() {
-                let day = getTrackingDay(date: globalCurrentDate)
                 let item = FoodLogDBT()
                 item.FoodName = foodName
                 item.FoodDescription = foodDescription
@@ -42,7 +47,7 @@ class FoodLogDBS: TrackingModulesDBS{
 
     
     func getTodaysFoodItems() -> List<FoodLogDBT>? {
-        return getTrackingDay().foodLogDT
+        return day.foodLogDT
     }
 
     func getAllFoodItems() -> List<FoodLogDBT>? {
