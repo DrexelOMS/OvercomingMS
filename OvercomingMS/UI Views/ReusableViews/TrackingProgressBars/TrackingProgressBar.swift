@@ -15,10 +15,6 @@ protocol TrackingProgressBarDelegate : class {
     func didPressLeftContainer(_ sender: TrackingProgressBar)
 }
 
-protocol IUpdateProgressBar: class {
-    func updateProgress()
-}
-
 @IBDesignable
 class TrackingProgressBar: CustomView {
     
