@@ -11,24 +11,26 @@ import RealmSwift
 
 class FoodRatingDBS : TrackingModulesDBS {
     
-    func toggleFilledData() {
-        
+    override var module: Modules {
+        get {
+            return .Food
+        }
+    }
+    
+    override func toggleFilledData() {
         do {
             try realm.write() {
-                let day = getTrackingDay(date: globalCurrentDate)
-                if day.FoodEatenRating != 5 {
-                    day.FoodEatenRating = 5
+                if getTrackingDay().FoodEatenRating != 5 {
+                    getTrackingDay().FoodEatenRating = 5
                 }
             }
         } catch {
             print("Error updating todays data : \(error)" )
         }
-        
     }
     
     func getRating() -> Int {
-        let day = getTrackingDay(date: globalCurrentDate)
-        let rating = day.FoodEatenRating
+        let rating = getTrackingDay().FoodEatenRating
         return rating
     }
     
@@ -46,15 +48,14 @@ class FoodRatingDBS : TrackingModulesDBS {
         
         do {
             try realm.write() {
-                let day = getTrackingDay(date: globalCurrentDate)
                 if amount < 1 {
-                    day.FoodEatenRating = 1
+                    getTrackingDay().FoodEatenRating = 1
                 }
                 else if amount > 5{
-                    day.FoodEatenRating = 5
+                    getTrackingDay().FoodEatenRating = 5
                 }
                 else {
-                    day.FoodEatenRating = amount
+                    getTrackingDay().FoodEatenRating = amount
                 }
             }
         } catch {

@@ -445,14 +445,14 @@
 			children = (
 				0A030F9722580A1500857BC8 /* TrackingModulesDBS.swift */,
 				0A030F9422580A1500857BC8 /* ExerciseHistoryDBS.swift */,
-				0A030F9522580A1500857BC8 /* GoalsDBS.swift */,
 				0A030F9622580A1500857BC8 /* VitaminDHistoryDBS.swift */,
-				0A030F9822580A1500857BC8 /* SymptomsNoteDBS.swift */,
 				0A030F9922580A1500857BC8 /* Omega3HistoryDBS.swift */,
 				0A030F9A22580A1500857BC8 /* SavedMedicationDBS.swift */,
 				0A030F9B22580A1500857BC8 /* MeditationHistoryDBS.swift */,
 				0A030F9222580A1500857BC8 /* FoodRatingDBS.swift */,
 				0A030F9C22580A1500857BC8 /* FoodLogDBS.swift */,
+				0A030F9522580A1500857BC8 /* GoalsDBS.swift */,
+				0A030F9822580A1500857BC8 /* SymptomsNoteDBS.swift */,
 			);
 			path = DatabaseServices;
 			sourceTree = "<group>";

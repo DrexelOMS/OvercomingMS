@@ -48,7 +48,13 @@ class MedicationSelectedItemSVC : SelectedItemSVC {
     }
     
     func repeatItem() {
-        SavedMedicationDBS().addMedicationItem(medicationName: savedMedicationItem.MedicationName, timeOfDay: savedMedicationItem.TimeOfDay, medicationNote: savedMedicationItem.MedicationNote, freq: savedMedicationItem.Frequency, active: true)
+        let newItem = SavedMedicationDBT()
+        newItem.MedicationName = savedMedicationItem.MedicationName
+        newItem.TimeOfDay = savedMedicationItem.TimeOfDay
+        newItem.DateCreated = Date()
+        newItem.MedicationNote = savedMedicationItem.MedicationNote
+        newItem.Frequency = savedMedicationItem.Frequency
+        SavedMedicationDBS().addItem(item: newItem)
     }
     
     
@@ -62,6 +68,6 @@ class MedicationSelectedItemSVC : SelectedItemSVC {
     }
     
     func deleteItem(){
-       SavedMedicationDBS().deleteSavedMedication(item: savedMedicationItem)
+       SavedMedicationDBS().deleteItem(item: savedMedicationItem)
     }
 }

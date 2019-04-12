@@ -11,7 +11,12 @@ import RealmSwift
 
 class MeditationHistoryDBS: TrackingModulesDBS {
     
-    func toggleFilledData() {
+    override var module: Modules {
+        get {
+            return .Meditation
+        }
+    }
+    override func toggleFilledData() {
         let percent = getPercentageComplete()
         let date = globalCurrentDate
         do {
@@ -22,28 +27,19 @@ class MeditationHistoryDBS: TrackingModulesDBS {
         } catch {
             print("Error updating todays data : \(error)" )
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Meditation)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
-    func addMeditationItem(routineType: String, startTime: Date, endTime: Date) {
+    override func addItem(item: Object) {
         let percent = getPercentageComplete()
         do {
             try realm.write() {
-                let day = getTrackingDay(date: globalCurrentDate)
-                let item = MeditationHistoryDBT()
-                item.MeditationType = routineType
-                item.StartTime = startTime
-                item.EndTime = endTime
-                day.meditationHistoryDT.append(item)
+                getTrackingDay().meditationHistoryDT.append(MeditationHistoryDBT(value: item))
             }
         } catch {
             print("Error updating Meditation data : \(error)" )
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Meditation)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
     func getTodaysMeditationItems() -> List<MeditationHistoryDBT>? {
@@ -71,16 +67,6 @@ class MeditationHistoryDBS: TrackingModulesDBS {
         return description
     }
     
-    func deleteMeditationItem(item: MeditationHistoryDBT) {
-        do {
-            try realm.write() {
-                realm.delete(item)
-            }
-        } catch {
-            print("Error update Meditation data: \(error)")
-        }
-    }
-    
     func updateExerciseItem(oldItem: MeditationHistoryDBT, newItem: MeditationHistoryDBT) {
         let percent = getPercentageComplete()
         do {
@@ -92,9 +78,7 @@ class MeditationHistoryDBS: TrackingModulesDBS {
         } catch {
             print("Error update Meditation data: \(error)")
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Meditation)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
 }

@@ -81,19 +81,18 @@ class ExerciseModifySVC : ModifyAbstractSVC {
                 return;
             }
             
+            let newItem = ExerciseHistoryDBT()
+            newItem.RoutineType = type
+            newItem.StartTime = startTime
+            newItem.EndTime = startTime.addingTimeInterval(TimeInterval(minutes * 60))
+            
             if editingExerciseItem == nil {
-                let endTime = startTime.addingTimeInterval(TimeInterval(minutes * 60))
-                exerciseHistory.addExerciseItem(routineType: type, startTime: startTime, endTime: endTime)
-                parentVC.reload();
+                exerciseHistory.addItem(item: newItem)
                 
+                parentVC.reload();
                 parentVC.resetToDefaultView()
             }
             else {
-                let newItem = ExerciseHistoryDBT()
-                newItem.RoutineType = type
-                newItem.StartTime = startTime
-                newItem.EndTime = startTime.addingTimeInterval(TimeInterval(minutes * 60))
-                
                 exerciseHistory.updateExerciseItem(oldItem: editingExerciseItem, newItem: newItem)
                 
                 parentVC.reload();

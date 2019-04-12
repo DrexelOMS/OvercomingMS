@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RealmSwift
 
 var globalCurrentFullDate : Date = OMSDateAccessor().todaysFullDate
 
@@ -20,10 +19,7 @@ var globalCurrentDate : String {// this is for going to previus dates
 class OMSDateAccessor {
     
     private let defaults = UserDefaults.standard
-    
-    private let realm = try! Realm()
-    private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
-    
+  
     var lastSavedTodayDate : String {
         get {
             if let savedToday = defaults.object(forKey: "savedToday") as? String {

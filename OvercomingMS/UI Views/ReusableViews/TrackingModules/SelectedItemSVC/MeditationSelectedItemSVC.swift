@@ -45,10 +45,12 @@ class MeditationSelectedItemSVC: SelectedItemSVC {
     }
     
     func repeatItem() {
-        let type = meditationItem.MeditationType
+        let newItem = MeditationHistoryDBT()
+        newItem.MeditationType = meditationItem.MeditationType
         let startTime = Date()
-        let endTime = startTime.addingTimeInterval(TimeInterval(meditationItem.minutes * 60))
-        MeditationHistoryDBS().addMeditationItem(routineType: type, startTime: startTime, endTime: endTime)
+        newItem.StartTime = startTime
+        newItem.EndTime = startTime.addingTimeInterval(TimeInterval(meditationItem.minutes * 60))
+        MeditationHistoryDBS().addItem(item: newItem)
     }
     
     
@@ -60,7 +62,7 @@ class MeditationSelectedItemSVC: SelectedItemSVC {
     }
     
     func deleteItem(){
-        MeditationHistoryDBS().deleteMeditationItem(item: meditationItem)
+        MeditationHistoryDBS().deleteItem(item: meditationItem)
     }
 }
 

@@ -10,7 +10,8 @@ import Foundation
 import RealmSwift
 
 enum Modules {
-    case Omega3,
+    case Food,
+    Omega3,
     VitaminD,
     Exercise,
     Meditation,
@@ -20,8 +21,13 @@ enum Modules {
 class TrackingModulesDBS{
     
     let realm = try! Realm()
-    lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
     
+    var module : Modules {
+        get {
+            fatalError("forgot to Override Module")
+        }
+    }
+
     func getTrackingDay(date: String = globalCurrentDate) -> TrackingDayDBT {
         if let trackingDay = realm.object(ofType: TrackingDayDBT.self, forPrimaryKey: date) {
             return trackingDay
@@ -43,10 +49,39 @@ class TrackingModulesDBS{
             print("Error saving TrackingDay: \(error)")
         }
     }
-
-    func notify(module: Modules) {
-        //NotificationCenter.default.post(name: .didCompleteModule, object: module, userInfo: ["Module": module])
+    
+    func checkToNotify(oldPercent: Int) {
+        if oldPercent < 100 && getPercentageComplete() >= 100 {
+            notify(module: module)
+        }
+    }
+    
+    private func notify(module: Modules) {
         NotificationCenter.default.post(name: .didCompleteModule, object: module)
+    }
+    
+    //MARK: Abstract Methods
+    
+    func toggleFilledData() {
+        fatalError("toggleFilledData not overriden")
+    }
+    
+    func addItem(item: Object) {
+        fatalError("addItem not overriden")
+    }
+    
+//    func editItem(old: Object) {
+//        fatalError("editItem not overriden")
+//    }
+    
+    func deleteItem(item: Object) {
+        do {
+            try realm.write() {
+                realm.delete(item)
+            }
+        } catch {
+            print("Error deleting data: \(error)")
+        }
     }
     
     func getPercentageComplete() -> Int {

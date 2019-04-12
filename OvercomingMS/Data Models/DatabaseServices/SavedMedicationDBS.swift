@@ -11,8 +11,14 @@ import RealmSwift
 
 class SavedMedicationDBS: TrackingModulesDBS {
     
+    override var module: Modules{
+        get {
+            return .Medication
+        }
+    }
+    
     //TODO: not currently correct
-    func toggleFilledData() {
+    override func toggleFilledData() {
         let percent = getPercentageComplete()
         let date = globalCurrentDate
         do {
@@ -23,30 +29,19 @@ class SavedMedicationDBS: TrackingModulesDBS {
         } catch {
             print("Error updating todays data : \(error)" )
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Medication)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
-    func addMedicationItem(medicationName: String, timeOfDay: Date, medicationNote: String, freq: String, active: Bool) {
+    override func addItem(item: Object) {
         let percent = getPercentageComplete()
         do {
             try realm.write() {
-                let item = SavedMedicationDBT()
-                
-                item.MedicationName = medicationName
-                item.DateCreated = OMSDateAccessor.getFullDate(date: globalCurrentDate)
-                item.TimeOfDay = timeOfDay
-                item.MedicationNote = medicationNote
-                item.Frequency = freq
-                realm.add(item)
+                realm.add(SavedMedicationDBT(value: item))
             }
         } catch {
             print("Error updating Medication data : \(error)" )
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Medication)
-        }
+        checkToNotify(oldPercent: percent)
     }
 
     //TODO: we need a better way to delete items
@@ -88,15 +83,13 @@ class SavedMedicationDBS: TrackingModulesDBS {
         } catch {
             print("Error update SavedMedication data: \(error)")
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Medication)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
-    func deleteSavedMedication(item: SavedMedicationDBT) {
+    override func deleteItem(item: Object) {
         do {
             try realm.write() {
-                item.DateDeleted = OMSDateAccessor.getFullDate(date: getTrackingDay().DateCreated)
+                SavedMedicationDBT(value: item).DateDeleted = OMSDateAccessor.getFullDate(date: getTrackingDay().DateCreated)
             }
         } catch {
             print("Error delete SavedMedication data: \(error)")
@@ -112,9 +105,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
         } catch {
             print("Error delete SavedMedication data: \(error)")
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Medication)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
     func removeTakenMedication(item: SavedMedicationDBT) {
@@ -141,7 +132,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
     }
     
     
-    //TODO: this is not correct?
+    //Get the tracked meds goals
     func getTodaysTotalMedGoal() -> Int {
         let meds = getSavedMedicationItems()
 

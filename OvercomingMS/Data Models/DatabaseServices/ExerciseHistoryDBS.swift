@@ -11,39 +11,34 @@ import RealmSwift
 
 class ExerciseHistoryDBS: TrackingModulesDBS {
     
-    func toggleFilledData() {
+    override var module: Modules {
+        get {
+            return .Exercise
+        }
+    }
+    
+    override func toggleFilledData() {
         let percent = getPercentageComplete()
-        let date = globalCurrentDate
         do {
             try realm.write() {
-                let day = getTrackingDay(date: date)
-                day.IsExerciseComplete = !day.IsExerciseComplete
+                getTrackingDay().IsExerciseComplete = !getTrackingDay().IsExerciseComplete
             }
         } catch {
             print("Error updating todays data : \(error)" )
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Exercise)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
-    func addExerciseItem(routineType: String, startTime: Date, endTime: Date) {
+    override func addItem(item: Object) {
         let percent = getPercentageComplete()
         do {
             try realm.write() {
-                let day = getTrackingDay(date: globalCurrentDate)
-                let item = ExerciseHistoryDBT()
-                item.RoutineType = routineType
-                item.StartTime = startTime
-                item.EndTime = endTime
-                day.exerciseHistoryDT.append(item)
+                getTrackingDay().exerciseHistoryDT.append(ExerciseHistoryDBT(value: item))
             }
         } catch {
             print("Error updating Exercise data : \(error)" )
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Exercise)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
     func getTodaysExerciseItems() -> List<ExerciseHistoryDBT>? {
@@ -71,16 +66,6 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
         return description
     }
     
-    func deleteExerciseItem(item: ExerciseHistoryDBT) {
-        do {
-            try realm.write() {
-                realm.delete(item)
-            }
-        } catch {
-            print("Error update Exercise data: \(error)")
-        }
-    }
-    
     func updateExerciseItem(oldItem: ExerciseHistoryDBT, newItem: ExerciseHistoryDBT) {
         let percent = getPercentageComplete()
         do {
@@ -92,9 +77,7 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
         } catch {
             print("Error update Exercise data: \(error)")
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Exercise)
-        }
+        checkToNotify(oldPercent: percent)
     }
 
 }

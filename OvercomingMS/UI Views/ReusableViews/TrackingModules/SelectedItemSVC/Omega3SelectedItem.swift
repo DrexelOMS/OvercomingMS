@@ -46,10 +46,11 @@ class Omega3SelectedItemSVC : SelectedItemSVC {
     }
     
     func repeatItem() {
-        let type = omega3Item.supplementName
-        let startTime = Date()
-        let amount = omega3Item.Amount
-        Omega3HistoryDBS().addOmega3Item(supplementName: type, StartTime: startTime, Amount: amount)
+        let newItem = Omega3HistoryDBT()
+        newItem.supplementName = omega3Item.supplementName
+        newItem.StartTime = Date()
+        newItem.Amount = omega3Item.Amount
+        Omega3HistoryDBS().addItem(item: newItem)
     }
     
     
@@ -61,6 +62,6 @@ class Omega3SelectedItemSVC : SelectedItemSVC {
     }
     
     func deleteItem(){
-       Omega3HistoryDBS().deleteOmega3Item(item: omega3Item)
+       Omega3HistoryDBS().deleteItem(item: omega3Item)
     }
 }

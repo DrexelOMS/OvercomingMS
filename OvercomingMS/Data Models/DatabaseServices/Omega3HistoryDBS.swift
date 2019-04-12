@@ -11,39 +11,34 @@ import RealmSwift
 
 class Omega3HistoryDBS: TrackingModulesDBS {
     
-    func toggleFilledData() {
+    override var module: Modules {
+        get {
+            return .Omega3
+        }
+    }
+    
+    override func toggleFilledData() {
         let percent = getPercentageComplete()
-        let date = globalCurrentDate
         do {
             try realm.write() {
-                let day = getTrackingDay(date: date)
-                day.IsOmega3Complete = !day.IsOmega3Complete
+                getTrackingDay().IsOmega3Complete = !getTrackingDay().IsOmega3Complete
             }
         } catch {
             print("Error updating todays data : \(error)" )
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Omega3)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
-    func addOmega3Item(supplementName: String, StartTime: Date, Amount: Int) {
+    override func addItem(item: Object) {
         let percent = getPercentageComplete()
         do {
             try realm.write() {
-                let day = getTrackingDay(date: globalCurrentDate)
-                let item = Omega3HistoryDBT()
-                item.supplementName = supplementName
-                item.StartTime = StartTime
-                item.Amount = Amount
-                day.omega3HistoryDT.append(item)
+                getTrackingDay().omega3HistoryDT.append(Omega3HistoryDBT(value: item))
             }
         } catch {
             print("Error updating Omega3 data : \(error)" )
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Omega3)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
     func getTodaysOmega3Items() -> List<Omega3HistoryDBT>? {
@@ -71,16 +66,6 @@ class Omega3HistoryDBS: TrackingModulesDBS {
         return description
     }
     
-    func deleteOmega3Item(item: Omega3HistoryDBT) {
-        do {
-            try realm.write() {
-                realm.delete(item)
-            }
-        } catch {
-            print("Error update Omega3 data: \(error)")
-        }
-    }
-    
     func updateOmega3Item(oldItem: Omega3HistoryDBT, newItem: Omega3HistoryDBT) {
         let percent = getPercentageComplete()
         do {
@@ -92,9 +77,7 @@ class Omega3HistoryDBS: TrackingModulesDBS {
         } catch {
             print("Error update Omega3 data: \(error)")
         }
-        if percent < 100 && getPercentageComplete() >= 100 {
-            notify(module: .Omega3)
-        }
+        checkToNotify(oldPercent: percent)
     }
     
 }

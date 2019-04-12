@@ -9,12 +9,18 @@
 import Foundation
 import RealmSwift
 
-class SymptomsNoteDBS: TrackingModulesDBS {
+class SymptomsNoteDBS {
+    
+    let realm = try! Realm()
+    var day : TrackingDayDBT {
+        get {
+            return TrackingModulesDBS().getTrackingDay(date: globalCurrentDate)
+        }
+    }
     
     func addNote(note: String, symptomsRating: Int, dateCreated: Date) {
         do {
             try realm.write() {
-                let day = getTrackingDay(date: globalCurrentDate)
                 let item = SymptomsNoteDBT()
                 item.Note = note
                 item.DateCreated = dateCreated
@@ -28,7 +34,7 @@ class SymptomsNoteDBS: TrackingModulesDBS {
     }
     
     func getTodaysNotes() -> List<SymptomsNoteDBT>? {
-        return getTrackingDay().symptomsNoteDT
+        return day.symptomsNoteDT
     }
     
     

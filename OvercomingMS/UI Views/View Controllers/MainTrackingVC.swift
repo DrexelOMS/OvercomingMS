@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDelegate {
     
@@ -15,7 +14,6 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         _ = omsDateFormatter.todaysDate
         loadCurrentDayUI()
     }
-    
     
     //MARK: Class properties
     
@@ -40,10 +38,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     @IBOutlet weak var GoalButton: CircleButtonSVC!
     @IBOutlet weak var SymptomsButton: CircleButtonSVC!
     @IBOutlet weak var SettingsButton: CircleButtonSVC!
-    
-    private let realm = try! Realm()
-    private lazy var trackingDays: Results<TrackingDayDBT> = { self.realm.objects(TrackingDayDBT.self) }()
-    
+
     private let omsDateFormatter = OMSDateAccessor()
     
     //MARK: View Transition Initializers
@@ -68,6 +63,9 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
             var color = UIColor.black
             
             switch trackingModule {
+            case .Food:
+                name = "Food"
+                color = UIColor.gray
             case .Omega3:
                 name = "Omega 3"
                 color = omega3Bar.colorTheme
@@ -89,21 +87,6 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
             let message = "You Completed \(name). Great Work!"
             header.displayTrackingMessage(colorTheme: color, message: message)
         }
-        
-//        // userInfo is the payload send by sender of notification
-//        if let userInfo = notification.userInfo {
-//            // Safely unwrap the name sent out by the notification sender
-//            if let userName = userInfo["Module"] as? String {
-//                let message = "You Completed \(userName). Great Work!"
-//                switch userName {
-//                case "VitaminD":
-//                    header.displayTrackingMessage(colorTheme: vitaminDBar.colorTheme, message: message)
-//                    break;
-//                default:
-//                    break;
-//                }
-//            }
-//        }
 
     }
     
@@ -122,16 +105,6 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     //TODO: Consider changing to view will appear, and initialize TodaysData should be handled everytime the app enters the foreground
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //reset user defaults and realm
-//        let defaults = UserDefaults.standard
-//        let dictionary = defaults.dictionaryRepresentation()
-//        dictionary.keys.forEach { key in
-//            defaults.removeObject(forKey: key)
-//        }
-//        try! realm.write {
-//            realm.deleteAll()
-//        }
         
         foodBar.delegate = self
         omega3Bar.delegate = self
