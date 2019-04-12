@@ -210,7 +210,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
             SavedMedicationDBS().toggleFilledData()
             break
         case 5:
-            let vc = QuickCompleteFoodVC()
+            let vc = SlidingStackVC(initialView: FoodQuickCompleteSVC())
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
@@ -269,7 +269,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
             self.present(vc, animated: true, completion: nil)
             break
         case 5:
-            let vc = FoodModuleVC()
+            let vc = SlidingStackVC(initialView: FoodMainSVC())
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
@@ -309,7 +309,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     
     func goalPressed() {
         if globalCurrentDate == todaysDate {
-            let vc = GoalsVC()
+            let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Goals")!, initialView: GoalsMainSVC())
             vc.modalPresentationStyle = .overCurrentContext
             vc.dismissalDelegate = self
             
@@ -318,7 +318,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     }
     
     func symptomsPressed() {
-        let vc = SymptomsVC()
+        let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Symptoms")!, initialView: SymptomsMainSVC())
         vc.modalPresentationStyle = .overCurrentContext
         vc.dismissalDelegate = self
         vc.theme = UIColor(red: 166 / 255.0, green: 69 / 255.0, blue: 210 / 255.0, alpha: 1.0)
@@ -327,7 +327,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     }
     
     func settingsPressed() {
-        let vc = SettingsVC()
+        let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: SettingsMainSVC())
         vc.modalPresentationStyle = .overCurrentContext
         vc.dismissalDelegate = self
         

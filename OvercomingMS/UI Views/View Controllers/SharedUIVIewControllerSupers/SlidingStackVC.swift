@@ -39,6 +39,11 @@ class SlidingStackVC: SwipeDownVC, UIGestureRecognizerDelegate {
         
     }
     
+    convenience init(initialView: SlidingAbstractSVC) {
+        self.init()
+        
+        initializeviewStack(defaultView: initialView)
+    }
     //MARK: Methods
     
     func setupViews() {
@@ -52,8 +57,9 @@ class SlidingStackVC: SwipeDownVC, UIGestureRecognizerDelegate {
         contentStackView.addArrangedSubview(mainView)
         addViewsAfterMain()
     }
+
     
-    func initializeviewStack(defaultView: SlidingAbstractSVC) {
+    private func initializeviewStack(defaultView: SlidingAbstractSVC) {
         
         viewStack = [SlidingAbstractSVC]()
         viewStack.append(defaultView)

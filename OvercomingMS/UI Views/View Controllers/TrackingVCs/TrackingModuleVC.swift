@@ -14,20 +14,12 @@ class TrackingModuleVC: SlidingStackVC {
     let progressBar = TrackingProgressBar()
     
     private var trackingDBS: TrackingModulesDBS!
-    private var mainViewToSet: SlidingAbstractSVC!
     
     convenience init(title: String, trackingDBS: TrackingModulesDBS, mainViewToSet: SlidingAbstractSVC) {
-        self.init()
+        self.init(initialView: mainViewToSet)
         
         progressBar.setTitle(title: title)
         self.trackingDBS = trackingDBS
-        self.mainViewToSet = mainViewToSet
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        initializeviewStack(defaultView: mainViewToSet)
     }
     
     override func addViewsBeforeMain() {

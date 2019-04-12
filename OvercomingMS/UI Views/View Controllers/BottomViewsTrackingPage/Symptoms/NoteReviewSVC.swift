@@ -27,7 +27,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     let toolbar = ToolBar()
-    var symptomsVC: SymptomsVC!
+    var symptomsVC: TopImageSlidingStackVC!
     
     var selectedTime : Date? {
         get {
@@ -85,7 +85,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     override func initialize(parentVC: SlidingStackVC) {
         super.initialize(parentVC: parentVC)
         
-        symptomsVC = parentVC as? SymptomsVC
+        symptomsVC = parentVC as? TopImageSlidingStackVC
         
         deleteCircleButton.buttonAction = deletePressed
         backConfirmButtons.leftButtonAction = backPressed
@@ -151,7 +151,6 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-//        symptomsVC.toggleTopImage(isHidden: true)
         
         if textView.textColor == UIColor.lightGray {
             textView.text = nil
