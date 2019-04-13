@@ -175,7 +175,7 @@ class TrackingDayDBT: Object {
     
     //MARK: ---------------------- HELPERS -------------------------------
     
-    @objc var IsDayComplete: Bool = false
+    @objc dynamic var IsDayComplete: Bool = false
     
     override static func primaryKey() -> String? {
         return "DateCreated"

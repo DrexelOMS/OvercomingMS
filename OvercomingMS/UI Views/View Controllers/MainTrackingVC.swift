@@ -174,6 +174,8 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         meditationBar.update(trackingDBS: MeditationHistoryDBS())
         medicationBar.update(trackingDBS: SavedMedicationDBS())
         
+        header.perfectDaysLabel.text = "\(TrackingModulesDBS().getTotalPerfectDays()) perfect days"
+        
 //        medicationBar.setEnabled(enabled: false)
     }
     

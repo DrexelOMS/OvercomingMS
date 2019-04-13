@@ -22,6 +22,7 @@ class TrackingModulesDBS{
     
     let realm = try! Realm()
     let QUICK_COMPLETE = "Quick Complete"
+    let defaults = UserDefaults.standard
     
     var module : Modules {
         get {
@@ -77,6 +78,7 @@ class TrackingModulesDBS{
     //make sure to update the complete status of the module when the user changes goals
     func updateCompleteStatus() {
         let day = getTrackingDay()
+        let savedIsDayComplete = day.IsDayComplete
         do {
             try realm.write() {
                 day.IsDayComplete = day.FoodEatenRating >= ProgressBarConfig.foodRatingGoals && day.IsOmega3Complete && day.IsVitaminDComplete && day.IsExerciseComplete && day.IsMeditationComplete && day.IsMedicationComplete
@@ -92,6 +94,22 @@ class TrackingModulesDBS{
         } catch {
             print("Error updating complete status data: \(error)")
         }
+        
+        print(day.IsDayComplete)
+        let isDayComplete = day.IsDayComplete
+        if savedIsDayComplete != isDayComplete {
+            let totalDays = getTotalPerfectDays()
+            if isDayComplete {
+                defaults.set(totalDays + 1, forKey: "TotalPerfectDays")
+            }
+            else {
+                defaults.set(totalDays - 1, forKey: "TotalPerfectDays")
+            }
+        }
+    }
+    
+    func getTotalPerfectDays() -> Int {
+        return defaults.object(forKey: "TotalPerfectDays") as? Int ?? 0
     }
     
     func deleteItem(item: Object) {
