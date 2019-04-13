@@ -92,9 +92,14 @@ class SavedMedicationDBS: TrackingModulesDBS {
     }
     
     override func deleteItem(item: Object) {
+        fatalError("Use deleteSavedMedication(item: SavedMedicationDBT) instead")
+    }
+    
+    // ALERT - YOU SHOULD USE THIS INSTEAD OF DELETEITEM FOR MEDS, IT CREATES A DELETED DATE
+    func deleteSavedMedication(item: SavedMedicationDBT) {
         do {
             try realm.write() {
-                SavedMedicationDBT(value: item).DateDeleted = OMSDateAccessor.getFullDate(date: getTrackingDay().DateCreated)
+                item.DateDeleted = OMSDateAccessor.getFullDate(date: getTrackingDay().DateCreated)
             }
         } catch {
             print("Error delete SavedMedication data: \(error)")
