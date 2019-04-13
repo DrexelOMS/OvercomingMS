@@ -40,7 +40,7 @@ class FoodRatingDBS : TrackingModulesDBS {
     
     //must be 1-5
    func setRating(amount: Int) {
-        
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                 if amount < 1 {
@@ -56,6 +56,7 @@ class FoodRatingDBS : TrackingModulesDBS {
         } catch {
             print("Error updating todays data : \(error)" )
         }
+        checkToNotify(oldPercent: percent)
     }
     
 }
