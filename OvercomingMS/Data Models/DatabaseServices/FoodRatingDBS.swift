@@ -17,16 +17,8 @@ class FoodRatingDBS : TrackingModulesDBS {
         }
     }
     
-    override func toggleFilledData() {
-        do {
-            try realm.write() {
-                if getTrackingDay().FoodEatenRating != 5 {
-                    getTrackingDay().FoodEatenRating = 5
-                }
-            }
-        } catch {
-            print("Error updating todays data : \(error)" )
-        }
+    override func addQuickCompleteItem() {
+        setRating(amount: ProgressBarConfig.foodRatingGoals)
     }
     
     func getRating() -> Int {
@@ -36,6 +28,9 @@ class FoodRatingDBS : TrackingModulesDBS {
     
      // food doesnt have a progress bar
     override func getPercentageComplete() -> Int {
+        if getRating() >= ProgressBarConfig.foodRatingGoals {
+            return 100
+        }
         return 0
     }
     
@@ -45,7 +40,7 @@ class FoodRatingDBS : TrackingModulesDBS {
     
     //must be 1-5
    func setRating(amount: Int) {
-        
+        let percent = getPercentageComplete()
         do {
             try realm.write() {
                 if amount < 1 {
@@ -61,6 +56,7 @@ class FoodRatingDBS : TrackingModulesDBS {
         } catch {
             print("Error updating todays data : \(error)" )
         }
+        checkToNotify(oldPercent: percent)
     }
     
 }

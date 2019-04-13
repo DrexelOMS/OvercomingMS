@@ -42,8 +42,8 @@ class HeaderSVC: CustomView {
     
     override func customSetup() {
         //displayTrackingMessage(colorTheme: UIColor.blue, message: "test")
-        daysInARow.text = "2 days in a row"
-        perfectDaysLabel.text = "100 perfect days"
+        daysInARow.text = "# days in a row"
+        perfectDaysLabel.text = "0 perfect days"
         startMotivationStartThread()
     }
     

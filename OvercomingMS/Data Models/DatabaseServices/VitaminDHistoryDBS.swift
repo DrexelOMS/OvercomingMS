@@ -17,16 +17,30 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
         }
     }
     
-    override func toggleFilledData() {
-        let percent = getPercentageComplete()
+    override func updateCompleteStatus() {
         do {
             try realm.write() {
-                getTrackingDay().IsVitaminDComplete = !getTrackingDay().IsVitaminDComplete
+                getTrackingDay().IsVitaminDComplete = getPercentageComplete() >= 100
             }
         } catch {
-            print("Error updating todays data : \(error)" )
+            print("Error updating VitaminD data : \(error)" )
         }
-        checkToNotify(oldPercent: percent)
+        
+        super.updateCompleteStatus()
+    }
+    
+    override func addQuickCompleteItem() {
+        let remaining = ProgressBarConfig.vitaminDGoal - getTrackingDay().VitaminDTotal
+        if remaining > 0 {
+            let quickItem = VitaminDHistoryDBT()
+            let startTime = Date()
+            
+            quickItem.VitaminDType = QUICK_COMPLETE
+            quickItem.StartTime = startTime
+            quickItem.Amount = remaining
+            
+            addItem(item: quickItem)
+        }
     }
     
     override func addItem(item: Object) {

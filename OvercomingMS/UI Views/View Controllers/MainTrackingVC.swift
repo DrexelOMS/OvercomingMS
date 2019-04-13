@@ -167,12 +167,14 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         //TODO make a way to get the proper description for each
         //FoodEatenRating is 1 - 5
-        foodBar.update(trackingDBS: FoodRatingDBS(), hideBar: true)
+        foodBar.update(trackingDBS: FoodRatingDBS())
         omega3Bar.update(trackingDBS: Omega3HistoryDBS())
         vitaminDBar.update(trackingDBS: VitaminDHistoryDBS())
         exerciseBar.update(trackingDBS: ExerciseHistoryDBS())
         meditationBar.update(trackingDBS: MeditationHistoryDBS())
         medicationBar.update(trackingDBS: SavedMedicationDBS())
+        
+        header.perfectDaysLabel.text = "\(TrackingModulesDBS().getTotalPerfectDays()) perfect days"
         
 //        medicationBar.setEnabled(enabled: false)
     }
@@ -183,26 +185,22 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         switch(sender.tag){
         case 0:
-            Omega3HistoryDBS().toggleFilledData()
+            Omega3HistoryDBS().addQuickCompleteItem()
             break
         case 1:
-            VitaminDHistoryDBS().toggleFilledData()
+            VitaminDHistoryDBS().addQuickCompleteItem()
             break
         case 2:
-            ExerciseHistoryDBS().toggleFilledData()
+            ExerciseHistoryDBS().addQuickCompleteItem()
             break
         case 3:
-            MeditationHistoryDBS().toggleFilledData()
+            MeditationHistoryDBS().addQuickCompleteItem()
             break
         case 4:
-            SavedMedicationDBS().toggleFilledData()
+            SavedMedicationDBS().addQuickCompleteItem()
             break
         case 5:
-            let vc = SlidingStackVC(initialView: FoodQuickCompleteSVC())
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+            FoodRatingDBS().addQuickCompleteItem()
             break
         default:
             fatalError("Case Not Handled")

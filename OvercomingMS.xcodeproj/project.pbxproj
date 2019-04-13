@@ -136,13 +136,10 @@
 		0AD94DCA220CEE5B00B5C2BA /* SelectedItemSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DC9220CEE5B00B5C2BA /* SelectedItemSVC.swift */; };
 		0AD94DCC220CEE9800B5C2BA /* ExerciseSelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DCB220CEE9800B5C2BA /* ExerciseSelectedItem.swift */; };
 		0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD94DE0220E178E00B5C2BA /* MeditationMainSVC.swift */; };
-		0AEC55622262244C00B7B75E /* TrackingDayAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC55612262244C00B7B75E /* TrackingDayAnalyzer.swift */; };
 		0AEF7A29222AFA88009A0292 /* BadIngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */; };
 		0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */; };
 		0AEF7A2D222B01FC009A0292 /* FoodUnknownSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2C222B01FC009A0292 /* FoodUnknownSVC.xib */; };
 		0AEF7A2F222B0268009A0292 /* FoodUnknownSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2E222B0268009A0292 /* FoodUnknownSVC.swift */; };
-		0AEF7A36222C7EDB009A0292 /* FoodQuickCompleteSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A35222C7EDB009A0292 /* FoodQuickCompleteSVC.xib */; };
-		0AEF7A38222C7F37009A0292 /* FoodQuickCompleteSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A37222C7F37009A0292 /* FoodQuickCompleteSVC.swift */; };
 		0AEF7A3A222CD774009A0292 /* GoalsMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A39222CD774009A0292 /* GoalsMainSVC.swift */; };
 		0AEF7A3C222CD782009A0292 /* GoalsMainSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A3B222CD782009A0292 /* GoalsMainSVC.xib */; };
 		0AEF7A40222DD571009A0292 /* SymptomsMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A3F222DD571009A0292 /* SymptomsMainSVC.swift */; };
@@ -345,13 +342,10 @@
 		0AD94DC9220CEE5B00B5C2BA /* SelectedItemSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemSVC.swift; sourceTree = "<group>"; };
 		0AD94DCB220CEE9800B5C2BA /* ExerciseSelectedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSelectedItem.swift; sourceTree = "<group>"; };
 		0AD94DE0220E178E00B5C2BA /* MeditationMainSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationMainSVC.swift; sourceTree = "<group>"; };
-		0AEC55612262244C00B7B75E /* TrackingDayAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDayAnalyzer.swift; sourceTree = "<group>"; };
 		0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadIngredientsCell.swift; sourceTree = "<group>"; };
 		0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadIngredientsCell.xib; sourceTree = "<group>"; };
 		0AEF7A2C222B01FC009A0292 /* FoodUnknownSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodUnknownSVC.xib; sourceTree = "<group>"; };
 		0AEF7A2E222B0268009A0292 /* FoodUnknownSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodUnknownSVC.swift; sourceTree = "<group>"; };
-		0AEF7A35222C7EDB009A0292 /* FoodQuickCompleteSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodQuickCompleteSVC.xib; sourceTree = "<group>"; };
-		0AEF7A37222C7F37009A0292 /* FoodQuickCompleteSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuickCompleteSVC.swift; sourceTree = "<group>"; };
 		0AEF7A39222CD774009A0292 /* GoalsMainSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsMainSVC.swift; sourceTree = "<group>"; };
 		0AEF7A3B222CD782009A0292 /* GoalsMainSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalsMainSVC.xib; sourceTree = "<group>"; };
 		0AEF7A3F222DD571009A0292 /* SymptomsMainSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsMainSVC.swift; sourceTree = "<group>"; };
@@ -496,20 +490,10 @@
 		0A1FEC502204E6F1006CED70 /* TrackingVCs */ = {
 			isa = PBXGroup;
 			children = (
-				0A1FEC512204E733006CED70 /* QuickCompleteVCs */,
 				0AA5284B22022CFC00CCFEE7 /* TrackingModuleVC.swift */,
 				0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */,
 			);
 			path = TrackingVCs;
-			sourceTree = "<group>";
-		};
-		0A1FEC512204E733006CED70 /* QuickCompleteVCs */ = {
-			isa = PBXGroup;
-			children = (
-				0AEF7A35222C7EDB009A0292 /* FoodQuickCompleteSVC.xib */,
-				0AEF7A37222C7F37009A0292 /* FoodQuickCompleteSVC.swift */,
-			);
-			path = QuickCompleteVCs;
 			sourceTree = "<group>";
 		};
 		0A1FEC562204EC93006CED70 /* Delegates */ = {
@@ -929,7 +913,6 @@
 				0AD07F8421FE53B900C55831 /* DesignConstants.swift */,
 				0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */,
 				0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */,
-				0AEC55612262244C00B7B75E /* TrackingDayAnalyzer.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -1081,7 +1064,6 @@
 				0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */,
 				0CAD6315221D9C7700E50E72 /* FoodApprovedSVC.xib in Resources */,
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
-				0AEF7A36222C7EDB009A0292 /* FoodQuickCompleteSVC.xib in Resources */,
 				0A19B3C12253E94800F4B02B /* ExpandingCell.xib in Resources */,
 				0A93F1582213C5B40063A892 /* FoodMainSVC.xib in Resources */,
 				0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */,
@@ -1296,7 +1278,6 @@
 				0AEF7A732234454B009A0292 /* MeditationTimerSVC.swift in Sources */,
 				0AD7EAFE221B1A86006F71C0 /* Omega3ModifySVC.swift in Sources */,
 				0AEF7A44222DD59F009A0292 /* NoteReviewSVC.swift in Sources */,
-				0AEC55622262244C00B7B75E /* TrackingDayAnalyzer.swift in Sources */,
 				0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */,
 				0A4CC880225FEFA2004C97BC /* TypeTFIFactory.swift in Sources */,
 				0AEF7A6922341E14009A0292 /* MeditationLevelButtonSVC.swift in Sources */,
@@ -1304,7 +1285,6 @@
 				0AD7EAF2221B0047006F71C0 /* CustomEntryTFI.swift in Sources */,
 				0AEF7A48222ED4A5009A0292 /* BottomRoundCornersUIView.swift in Sources */,
 				0AD7EB4A22249DD0006F71C0 /* MedicationRateModel.swift in Sources */,
-				0AEF7A38222C7F37009A0292 /* FoodQuickCompleteSVC.swift in Sources */,
 				0A030FAB22580A1500857BC8 /* GoalsDBS.swift in Sources */,
 				0A030FB522580A1500857BC8 /* ExerciseHistoryDBT.swift in Sources */,
 				0AD07F9C21FEAB5700C55831 /* OMSDateAccessor.swift in Sources */,

@@ -153,7 +153,6 @@
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="CQQ-yp-7Hz"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="Lla-FA-L2y"/>
                         <constraint firstAttribute="trailing" secondItem="Qi2-7t-Ch6" secondAttribute="trailing" constant="10" id="i11-uy-Jjb"/>
                         <constraint firstItem="Qi2-7t-Ch6" firstAttribute="leading" secondItem="I5E-v9-Wxp" secondAttribute="leading" constant="10" id="oxK-wm-dSB"/>

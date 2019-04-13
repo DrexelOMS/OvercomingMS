@@ -17,19 +17,24 @@ class SavedMedicationDBS: TrackingModulesDBS {
         }
     }
     
-    //TODO: not currently correct
-    override func toggleFilledData() {
-        let percent = getPercentageComplete()
-        let date = globalCurrentDate
+    override func updateCompleteStatus() {
         do {
             try realm.write() {
-                let day = getTrackingDay(date: date)
-                day.IsMedicationComplete = !day.IsMedicationComplete
+                getTrackingDay().IsMedicationComplete = getPercentageComplete() >= 100
             }
         } catch {
-            print("Error updating todays data : \(error)" )
+            print("Error updating Meditation data : \(error)" )
         }
-        checkToNotify(oldPercent: percent)
+        
+        super.updateCompleteStatus()
+    }
+    
+    override func addQuickCompleteItem() {
+        for med in getSavedMedicationItems().medicationsTracked {
+            if !wasTaken(item: med) {
+                addTakenMedication(item: med)
+            }
+        }
     }
     
     override func addItem(item: Object) {
@@ -87,13 +92,19 @@ class SavedMedicationDBS: TrackingModulesDBS {
     }
     
     override func deleteItem(item: Object) {
+        fatalError("Use deleteSavedMedication(item: SavedMedicationDBT) instead")
+    }
+    
+    // ALERT - YOU SHOULD USE THIS INSTEAD OF DELETEITEM FOR MEDS, IT CREATES A DELETED DATE
+    func deleteSavedMedication(item: SavedMedicationDBT) {
         do {
             try realm.write() {
-                SavedMedicationDBT(value: item).DateDeleted = OMSDateAccessor.getFullDate(date: getTrackingDay().DateCreated)
+                item.DateDeleted = OMSDateAccessor.getFullDate(date: getTrackingDay().DateCreated)
             }
         } catch {
             print("Error delete SavedMedication data: \(error)")
         }
+        updateCompleteStatus()
     }
     
     func addTakenMedication(item: SavedMedicationDBT) {
@@ -118,6 +129,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
         } catch {
             print("Error delete SavedMedication data: \(error)")
         }
+        updateCompleteStatus()
     }
     
     func wasTaken(item: SavedMedicationDBT) -> Bool {
