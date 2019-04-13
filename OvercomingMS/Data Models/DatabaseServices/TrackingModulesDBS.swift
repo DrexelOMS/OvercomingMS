@@ -21,6 +21,7 @@ enum Modules {
 class TrackingModulesDBS{
     
     let realm = try! Realm()
+    let QUICK_COMPLETE = "Quick Complete"
     
     var module : Modules {
         get {
@@ -51,6 +52,7 @@ class TrackingModulesDBS{
     }
     
     func checkToNotify(oldPercent: Int) {
+        updateCompleteStatus()
         if oldPercent < 100 && getPercentageComplete() >= 100 {
             notify(module: module)
         }
@@ -60,14 +62,8 @@ class TrackingModulesDBS{
         NotificationCenter.default.post(name: .didCompleteModule, object: module)
     }
     
-    //MARK: Abstract Methods
-    
-    func toggleFilledData() {
-        fatalError("toggleFilledData not overriden")
-    }
-    
-    func addItem(item: Object) {
-        fatalError("addItem not overriden")
+    func updateCompleteStatus() {
+        //TODO check each status to see if your day is complete
     }
     
     func deleteItem(item: Object) {
@@ -78,6 +74,17 @@ class TrackingModulesDBS{
         } catch {
             print("Error deleting data: \(error)")
         }
+        updateCompleteStatus()
+    }
+    
+    //MARK: Abstract Methods
+    
+    func addQuickCompleteItem() {
+        fatalError("toggleFilledData not overriden")
+    }
+    
+    func addItem(item: Object) {
+        fatalError("addItem not overriden")
     }
     
     func getPercentageComplete() -> Int {

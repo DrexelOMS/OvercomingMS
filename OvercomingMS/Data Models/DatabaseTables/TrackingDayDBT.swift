@@ -25,17 +25,12 @@ class TrackingDayDBT: Object {
     @objc dynamic var IsExerciseComplete: Bool = false //This should be read only
     var ExerciseComputedPercentageComplete : Int {
         get {
-            if IsExerciseComplete {
+            let percentage = Int(Float(ExerciseTimeTotal) / Float(ProgressBarConfig.exerciseGoal) * 100)
+            if percentage > 100 {
                 return 100
             }
             else {
-                let percentage = Int(Float(ExerciseTimeTotal) / Float(ProgressBarConfig.exerciseGoal) * 100)
-                if percentage > 100 {
-                    return 100
-                }
-                else {
-                    return percentage
-                }
+                return percentage
             }
         }
     }
@@ -55,17 +50,12 @@ class TrackingDayDBT: Object {
     @objc dynamic var IsMeditationComplete: Bool = false
     var MeditationComputedPercentageComplete : Int {
         get {
-            if IsMeditationComplete {
+            let percentage = Int(Float(MeditationTimeTotal) / Float(ProgressBarConfig.meditationGoal) * 100)
+            if percentage > 100 {
                 return 100
             }
             else {
-                let percentage = Int(Float(MeditationTimeTotal) / Float(ProgressBarConfig.meditationGoal) * 100)
-                if percentage > 100 {
-                    return 100
-                }
-                else {
-                    return percentage
-                }
+                return percentage
             }
         }
     }
@@ -89,21 +79,16 @@ class TrackingDayDBT: Object {
     @objc dynamic var IsMedicationComplete: Bool = false
     var MedicationComputedPercentageComplete : Int {
         get {
-            if IsMedicationComplete {
+            let todaysTotalMeds : Float = Float(SavedMedicationDBS().getTodaysTotalMedGoal())
+            if todaysTotalMeds <= 0 {
+                return 100
+            }
+            let percentage = Int(Float(MedicationTotal) / Float(todaysTotalMeds) * 100)
+            if percentage > 100 {
                 return 100
             }
             else {
-                let todaysTotalMeds : Float = Float(SavedMedicationDBS().getTodaysTotalMedGoal())
-                if todaysTotalMeds <= 0 {
-                    return 100
-                }
-                let percentage = Int(Float(MedicationTotal) / Float(todaysTotalMeds) * 100)
-                if percentage > 100 {
-                    return 100
-                }
-                else {
-                    return percentage
-                }
+                return percentage
             }
         }
     }
@@ -127,17 +112,12 @@ class TrackingDayDBT: Object {
     @objc dynamic var IsOmega3Complete: Bool = false
     var Omega3ComputedPercentageComplete : Int {
         get {
-            if IsOmega3Complete {
+            let percentage = Int(Float(Omega3Total) / Float(ProgressBarConfig.omega3Goal) * 100)
+            if percentage > 100 {
                 return 100
             }
             else {
-                let percentage = Int(Float(Omega3Total) / Float(ProgressBarConfig.omega3Goal) * 100)
-                if percentage > 100 {
-                    return 100
-                }
-                else {
-                    return percentage
-                }
+                return percentage
             }
         }
     }
@@ -158,17 +138,12 @@ class TrackingDayDBT: Object {
     @objc dynamic var IsVitaminDComplete: Bool = false //This should be read only
     var VitaminDComputedPercentageComplete : Int {
         get {
-            if IsVitaminDComplete {
+            let percentage = Int(Float(VitaminDTotal) / Float(ProgressBarConfig.vitaminDGoal) * 100)
+            if percentage > 100 {
                 return 100
             }
             else {
-                let percentage = Int(Float(VitaminDTotal) / Float(ProgressBarConfig.vitaminDGoal) * 100)
-                if percentage > 100 {
-                    return 100
-                }
-                else {
-                    return percentage
-                }
+                return percentage
             }
         }
     }

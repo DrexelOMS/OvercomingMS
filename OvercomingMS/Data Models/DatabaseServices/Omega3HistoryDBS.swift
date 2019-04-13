@@ -17,16 +17,30 @@ class Omega3HistoryDBS: TrackingModulesDBS {
         }
     }
     
-    override func toggleFilledData() {
-        let percent = getPercentageComplete()
+    override func updateCompleteStatus() {
         do {
             try realm.write() {
-                getTrackingDay().IsOmega3Complete = !getTrackingDay().IsOmega3Complete
+                getTrackingDay().IsOmega3Complete = getPercentageComplete() >= 100
             }
         } catch {
-            print("Error updating todays data : \(error)" )
+            print("Error updating Omega3 data : \(error)" )
         }
-        checkToNotify(oldPercent: percent)
+        
+        super.updateCompleteStatus()
+    }
+    
+    override func addQuickCompleteItem() {
+        let remaining = ProgressBarConfig.omega3Goal - getTrackingDay().Omega3Total
+        if remaining > 0 {
+            let quickItem = Omega3HistoryDBT()
+            let startTime = Date()
+            
+            quickItem.supplementName = QUICK_COMPLETE
+            quickItem.StartTime = startTime
+            quickItem.Amount = remaining
+            
+            addItem(item: quickItem)
+        }
     }
     
     override func addItem(item: Object) {

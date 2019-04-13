@@ -17,7 +17,7 @@ class FoodRatingDBS : TrackingModulesDBS {
         }
     }
     
-    override func toggleFilledData() {
+    override func addQuickCompleteItem() {
         do {
             try realm.write() {
                 if getTrackingDay().FoodEatenRating != 5 {
