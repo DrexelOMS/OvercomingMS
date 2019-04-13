@@ -24,6 +24,8 @@ class MedicationSelectedItemSVC : SelectedItemSVC {
         topSubLabel.text = "Name"
         middleSubLabel.text = "Time"
         bottomSubLabel.text = "Note"
+        
+        deleteButton.setEnabled(enabled: globalCurrentDate == OMSDateAccessor().todaysDate)
     }
     
     override func reload() {

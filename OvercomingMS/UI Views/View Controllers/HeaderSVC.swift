@@ -91,6 +91,16 @@ class HeaderSVC: CustomView {
         showMessageLabel()
     }
     
+    func displayPreviousDateMessage() {
+        messageLabel.text = "You are editing a past day"
+        messageLabel.textColor = UIColor.white
+        messageLabel.textAlignment = .center
+        
+        mainView.fillColor = UIColor.gray
+        setLabelColors(colored: true)
+        showMessageLabel()
+    }
+    
     func startRestoreThread() {
         messageUpdateThread = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.restore), userInfo: nil, repeats: false)
     }
@@ -139,7 +149,6 @@ class HeaderSVC: CustomView {
     
     func stopMotivationThread() {
         motivationUpdateThread?.invalidate()
-        //hideMotivationMessage()
     }
     
     private func hideMessageLabel() {

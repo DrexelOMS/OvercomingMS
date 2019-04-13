@@ -97,9 +97,23 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         loadCurrentDayUI()
     }
     
+    var isPastDay = false
+    
     func attemptMenuRestore() {
-            header.stopRestoreThread()
+        if isPastDay {
+            isPastDay = false
+            header.restore()
+        }
+        header.stopRestoreThread()
+        if globalCurrentDate == todaysDate {
             header.startRestoreThread()
+            GoalButton.setEnabled(enabled: true)
+        }
+        else {
+            isPastDay = true
+            header.displayPreviousDateMessage()
+            GoalButton.setEnabled(enabled: false)
+        }
     }
     
     //TODO: Consider changing to view will appear, and initialize TodaysData should be handled everytime the app enters the foreground
@@ -138,7 +152,6 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         let currentTrackingDay = TrackingModulesDBS().getTrackingDay(date: globalCurrentDate)
         updatePageUI(currentTrackingDay)
-        
         
         attemptMenuRestore()
     }
