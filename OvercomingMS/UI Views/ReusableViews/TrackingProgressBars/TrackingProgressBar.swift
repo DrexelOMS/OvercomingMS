@@ -118,6 +118,15 @@ class TrackingProgressBar: CustomView {
         return Title
     }
     
+    func setEnabled(enabled: Bool) {
+        if enabled {
+            roundedView.backgroundColor = UIColor.white
+        }
+        else {
+            roundedView.backgroundColor = UIColor.lightGray
+        }
+    }
+    
     func toggleCheckMarkVisibility(isHidden: Bool) {
         self.rightContainerView.isHidden = isHidden
         if isHidden {

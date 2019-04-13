@@ -173,6 +173,8 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         exerciseBar.update(trackingDBS: ExerciseHistoryDBS())
         meditationBar.update(trackingDBS: MeditationHistoryDBS())
         medicationBar.update(trackingDBS: SavedMedicationDBS())
+        
+//        medicationBar.setEnabled(enabled: false)
     }
     
     //MARK: Delegates
