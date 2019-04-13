@@ -193,6 +193,14 @@ class TrackingDayDBT: Object {
     
     let foodLogDT = List<FoodLogDBT>()
     
+    //MARK: ---------------------- HELPERS -------------------------------
+    
+    var isDayComplete: Bool {
+        get {
+            return false
+        }
+    }
+    
     override static func primaryKey() -> String? {
         return "DateCreated"
     }
