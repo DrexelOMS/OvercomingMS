@@ -19,6 +19,11 @@ class TrackingDayDBT: Object {
     //and update newer entries to use the new conversion of total
     
     @objc dynamic var FoodEatenRating: Int = 1 // Lets define the food scale as 1-5
+    var IsFoodComplete: Bool {
+        get {
+            return FoodEatenRating >= ProgressBarConfig.foodRatingGoals
+        }
+    }
     
     //MARK: ------------------------------ EXERCISE ------------------------------
     
@@ -170,11 +175,7 @@ class TrackingDayDBT: Object {
     
     //MARK: ---------------------- HELPERS -------------------------------
     
-    var isDayComplete: Bool {
-        get {
-            return false
-        }
-    }
+    @objc var IsDayComplete: Bool = false
     
     override static func primaryKey() -> String? {
         return "DateCreated"

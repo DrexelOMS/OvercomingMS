@@ -39,6 +39,7 @@ class TrackingModulesDBS{
         }
     }
     
+    // only to be used by getTrackingDay
     private func initializeTodaysData(date : String) {
         do {
             try realm.write(){
@@ -49,6 +50,7 @@ class TrackingModulesDBS{
         } catch {
             print("Error saving TrackingDay: \(error)")
         }
+        updateAllStatus()
     }
     
     func checkToNotify(oldPercent: Int) {
@@ -62,8 +64,34 @@ class TrackingModulesDBS{
         NotificationCenter.default.post(name: .didCompleteModule, object: module)
     }
     
+    func updateAllStatus() {
+        FoodRatingDBS().updateCompleteStatus()
+        Omega3HistoryDBS().updateCompleteStatus()
+        VitaminDHistoryDBS().updateCompleteStatus()
+        ExerciseHistoryDBS().updateCompleteStatus()
+        MeditationHistoryDBS().updateCompleteStatus()
+        SavedMedicationDBS().updateCompleteStatus()
+    }
+    
+    //TODO: there will be a bug when the user changes their goals
+    //make sure to update the complete status of the module when the user changes goals
     func updateCompleteStatus() {
-        //TODO check each status to see if your day is complete
+        let day = getTrackingDay()
+        do {
+            try realm.write() {
+                day.IsDayComplete = day.FoodEatenRating >= ProgressBarConfig.foodRatingGoals && day.IsOmega3Complete && day.IsVitaminDComplete && day.IsExerciseComplete && day.IsMeditationComplete && day.IsMedicationComplete
+                
+                print("Food Complete: \(day.IsFoodComplete)")
+                print("Omega3 Complete: \(day.IsOmega3Complete)")
+                print("VitaminD Complete: \(day.IsVitaminDComplete)")
+                print("Exercise Complete: \(day.IsExerciseComplete)")
+                print("Meditation Complete: \(day.IsMeditationComplete)")
+                print("Medication Complete: \(day.IsMedicationComplete)")
+                print("Day Complete: \(day.IsDayComplete)")
+            }
+        } catch {
+            print("Error deleting data: \(error)")
+        }
     }
     
     func deleteItem(item: Object) {
