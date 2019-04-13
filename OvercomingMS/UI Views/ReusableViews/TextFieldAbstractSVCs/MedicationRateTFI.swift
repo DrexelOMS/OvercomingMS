@@ -48,6 +48,8 @@ class MedicationRateTFI : TypeTFI {
         
         choices = MedicationRateModel.options
         title = "Rate"
+        label.text = title
+        tempSelectedType = choices[0]
     }
     
     override func showTextFieldInput() {
