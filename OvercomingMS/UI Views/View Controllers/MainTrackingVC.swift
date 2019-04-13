@@ -198,11 +198,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
             SavedMedicationDBS().addQuickCompleteItem()
             break
         case 5:
-            let vc = SlidingStackVC(initialView: FoodQuickCompleteSVC())
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+            FoodRatingDBS().addQuickCompleteItem()
             break
         default:
             fatalError("Case Not Handled")

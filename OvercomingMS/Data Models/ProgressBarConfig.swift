@@ -23,6 +23,16 @@ class ProgressBarConfig {
         }
         return foodDescriptions[rating - 1]
     }
+    static var foodRatingGoals: Int {
+        get {
+            return GoalsDBS().mostRecentGoals.FoodRatingGoal
+        }
+        set {
+            let goalsDBS = GoalsDBS()
+            goalsDBS.foodRatingGoalToSet = newValue
+            goalsDBS.writeGoals()
+        }
+    }
     
     static var omega3Goal : Int {
         get {
