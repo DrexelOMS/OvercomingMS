@@ -94,8 +94,7 @@ class TrackingModulesDBS{
         } catch {
             print("Error updating complete status data: \(error)")
         }
-        
-        print(day.IsDayComplete)
+ 
         let isDayComplete = day.IsDayComplete
         if savedIsDayComplete != isDayComplete {
             let totalDays = getTotalPerfectDays()
