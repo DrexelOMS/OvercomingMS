@@ -144,6 +144,7 @@
 		0AEC555C226154A800B7B75E /* SettingsBoxSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC555B226154A800B7B75E /* SettingsBoxSVC.xib */; };
 		0AEC555E2261550D00B7B75E /* SettingsModifySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC555D2261550D00B7B75E /* SettingsModifySVC.swift */; };
 		0AEC55602261559600B7B75E /* SettingsModifySVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC555F2261559600B7B75E /* SettingsModifySVC.xib */; };
+		0AEC55622262244C00B7B75E /* TrackingDayAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC55612262244C00B7B75E /* TrackingDayAnalyzer.swift */; };
 		0AEF7A29222AFA88009A0292 /* BadIngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */; };
 		0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */; };
 		0AEF7A2D222B01FC009A0292 /* FoodUnknownSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2C222B01FC009A0292 /* FoodUnknownSVC.xib */; };
@@ -360,6 +361,7 @@
 		0AEC555B226154A800B7B75E /* SettingsBoxSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsBoxSVC.xib; sourceTree = "<group>"; };
 		0AEC555D2261550D00B7B75E /* SettingsModifySVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModifySVC.swift; sourceTree = "<group>"; };
 		0AEC555F2261559600B7B75E /* SettingsModifySVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsModifySVC.xib; sourceTree = "<group>"; };
+		0AEC55612262244C00B7B75E /* TrackingDayAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDayAnalyzer.swift; sourceTree = "<group>"; };
 		0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadIngredientsCell.swift; sourceTree = "<group>"; };
 		0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadIngredientsCell.xib; sourceTree = "<group>"; };
 		0AEF7A2C222B01FC009A0292 /* FoodUnknownSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodUnknownSVC.xib; sourceTree = "<group>"; };
@@ -951,6 +953,7 @@
 				0AD07F8421FE53B900C55831 /* DesignConstants.swift */,
 				0AD07F9221FE94F200C55831 /* ProgressBarConfig.swift */,
 				0AD07F9B21FEAB5700C55831 /* OMSDateAccessor.swift */,
+				0AEC55612262244C00B7B75E /* TrackingDayAnalyzer.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -1323,6 +1326,7 @@
 				0AEF7A732234454B009A0292 /* MeditationTimerSVC.swift in Sources */,
 				0AD7EAFE221B1A86006F71C0 /* Omega3ModifySVC.swift in Sources */,
 				0AEF7A44222DD59F009A0292 /* NoteReviewSVC.swift in Sources */,
+				0AEC55622262244C00B7B75E /* TrackingDayAnalyzer.swift in Sources */,
 				0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */,
 				0A4CC880225FEFA2004C97BC /* TypeTFIFactory.swift in Sources */,
 				0AEF7A6922341E14009A0292 /* MeditationLevelButtonSVC.swift in Sources */,

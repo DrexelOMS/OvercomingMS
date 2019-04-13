@@ -60,6 +60,16 @@ class CircleButtonSVC: CustomView {
         
     }
     
+    func setEnabled(enabled: Bool) {
+        button.isEnabled = enabled
+//        if enabled {
+//            button.backgroundColor = UIColor.white
+//        }
+//        else {
+//            
+//        }
+    }
+    
     @IBAction func buttonPressed(_ sender: UIButton) {
         guard let buttonAction = buttonAction else {
             fatalError("ButtonAction not set")

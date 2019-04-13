@@ -35,6 +35,8 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     
     override func customSetup() {
         totalsView.isHidden = true
+        
+        button1.setEnabled(enabled: globalCurrentDate == OMSDateAccessor().todaysDate)
     }
     
     //must be called by 
