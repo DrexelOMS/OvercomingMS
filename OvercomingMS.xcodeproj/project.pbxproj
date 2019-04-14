@@ -164,6 +164,7 @@
 		0AF8E0DD220924B600E1EC33 /* ExerciseStopwatchSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */; };
 		0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */; };
 		0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */; };
+		0C19F0702262885A00D080AE /* SettingsTrackingSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C19F06F2262885A00D080AE /* SettingsTrackingSVC.xib */; };
 		0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAFDD22163057004C1966 /* SearchBarButton.xib */; };
 		0C515549225C918C00D9310D /* FoodSearchNoResultsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C515548225C918C00D9310D /* FoodSearchNoResultsSVC.xib */; };
 		0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */; };
@@ -373,6 +374,7 @@
 		0AF8E0DC220924B600E1EC33 /* ExerciseStopwatchSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStopwatchSVC.swift; sourceTree = "<group>"; };
 		0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPauseCircleButton.swift; sourceTree = "<group>"; };
 		0C103947220909C500AFEFF4 /* TimerStopWatchSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStopWatchSVC.xib; sourceTree = "<group>"; };
+		0C19F06F2262885A00D080AE /* SettingsTrackingSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTrackingSVC.xib; sourceTree = "<group>"; };
 		0C2DAFDD22163057004C1966 /* SearchBarButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarButton.xib; sourceTree = "<group>"; };
 		0C515548225C918C00D9310D /* FoodSearchNoResultsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchNoResultsSVC.xib; sourceTree = "<group>"; };
 		0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackConfirmButtonsSVC.xib; sourceTree = "<group>"; };
@@ -670,6 +672,7 @@
 			children = (
 				0A9926C7225CEA5F008DE456 /* SettingsMainSVC.swift */,
 				0A9926C9225CEA77008DE456 /* SettingsMainSVC.xib */,
+				0C19F06F2262885A00D080AE /* SettingsTrackingSVC.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1102,6 +1105,7 @@
 				0CBE98AD2223835300D3C090 /* TitleTimeOverTextCell.xib in Resources */,
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
 				0A19B3BD2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib in Resources */,
+				0C19F0702262885A00D080AE /* SettingsTrackingSVC.xib in Resources */,
 				0A1FEC6E220638A7006CED70 /* Routine3PartCell.xib in Resources */,
 				0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */,
 				0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */,
