@@ -29,17 +29,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxO-oJ-K4d">
                     <rect key="frame" x="20" y="0.0" width="280" height="419"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="LTX-QJ-MGv">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="LTX-QJ-MGv">
                             <rect key="frame" x="0.0" y="0.0" width="280" height="419"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Qv-pA-b7d">
-                                    <rect key="frame" x="0.0" y="0.0" width="280" height="64"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Qv-pA-b7d" userLabel="TitleView">
+                                    <rect key="frame" x="0.0" y="0.0" width="280" height="55"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="c9j-KH-OkK">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="64"/>
+                                            <rect key="frame" x="20" y="0.0" width="240" height="55"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STL-D7-smV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="32"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="27.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Settings">
                                                             <attributes>
@@ -51,7 +51,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4P-Ws-9vj">
-                                                    <rect key="frame" x="0.0" y="32" width="280" height="32"/>
+                                                    <rect key="frame" x="0.0" y="27.5" width="240" height="27.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Tracking On/Off">
                                                             <attributes>
@@ -67,36 +67,37 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="c9j-KH-OkK" secondAttribute="trailing" id="ZGv-Aq-rKg"/>
-                                        <constraint firstItem="c9j-KH-OkK" firstAttribute="leading" secondItem="2Qv-pA-b7d" secondAttribute="leading" id="u9t-lo-I4p"/>
+                                        <constraint firstAttribute="height" constant="55" id="Uko-AU-AYE"/>
+                                        <constraint firstAttribute="trailing" secondItem="c9j-KH-OkK" secondAttribute="trailing" constant="20" id="ZGv-Aq-rKg"/>
+                                        <constraint firstItem="c9j-KH-OkK" firstAttribute="leading" secondItem="2Qv-pA-b7d" secondAttribute="leading" constant="20" id="u9t-lo-I4p"/>
                                         <constraint firstAttribute="bottom" secondItem="c9j-KH-OkK" secondAttribute="bottom" id="w55-uC-HWZ"/>
                                         <constraint firstItem="c9j-KH-OkK" firstAttribute="top" secondItem="2Qv-pA-b7d" secondAttribute="top" id="yrJ-gi-JTl"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZD-bL-pg2">
-                                    <rect key="frame" x="0.0" y="114" width="280" height="305"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZD-bL-pg2" userLabel="SwitchView">
+                                    <rect key="frame" x="0.0" y="105" width="280" height="314"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="De5-yi-GcV">
-                                            <rect key="frame" x="20" y="0.0" width="240" height="275"/>
+                                            <rect key="frame" x="20" y="0.0" width="240" height="284"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMo-gJ-g0v" userLabel="Food">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="35"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="36.5"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6LG-rL-4c6" userLabel="BorderBottom">
-                                                            <rect key="frame" x="0.0" y="34" width="240" height="1"/>
+                                                            <rect key="frame" x="0.0" y="35.5" width="240" height="1"/>
                                                             <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="Uaz-zR-1k6"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gUr-ya-BWp">
-                                                            <rect key="frame" x="5" y="0.0" width="230" height="31"/>
+                                                            <rect key="frame" x="5" y="0.0" width="230" height="32.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2B-ue-iD3">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="32.5"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1g-Y8-Ia1" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="9.5" width="12" height="12"/>
+                                                                            <rect key="frame" x="0.0" y="10.5" width="12" height="12"/>
                                                                             <color key="backgroundColor" red="0.4823529411764706" green="0.43137254901960786" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="12" id="TqG-VZ-RDA"/>
@@ -112,7 +113,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anb-p4-L84">
-                                                                    <rect key="frame" x="22" y="0.0" width="149" height="31"/>
+                                                                    <rect key="frame" x="22" y="0.0" width="149" height="32.5"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Food">
                                                                             <attributes>
@@ -124,7 +125,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6h7-lb-ZZe">
-                                                                    <rect key="frame" x="181" y="0.0" width="51" height="31"/>
+                                                                    <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
@@ -147,23 +148,23 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52T-OR-lNb" userLabel="Omega-3">
-                                                    <rect key="frame" x="0.0" y="48" width="240" height="35"/>
+                                                    <rect key="frame" x="0.0" y="49.5" width="240" height="36.5"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryT-Og-yer" userLabel="BorderBottom">
-                                                            <rect key="frame" x="0.0" y="34" width="240" height="1"/>
+                                                            <rect key="frame" x="0.0" y="35.5" width="240" height="1"/>
                                                             <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="HZq-eV-nMy"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BO1-f3-1EW">
-                                                            <rect key="frame" x="5" y="0.0" width="230" height="31"/>
+                                                            <rect key="frame" x="5" y="0.0" width="230" height="32.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-m7-drN">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="32.5"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDU-nm-rmk" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="9.5" width="12" height="12"/>
+                                                                            <rect key="frame" x="0.0" y="10.5" width="12" height="12"/>
                                                                             <color key="backgroundColor" red="0.0078431372549019607" green="0.63529411764705879" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="12" id="3M0-wm-pkS"/>
@@ -179,7 +180,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETi-Hc-hKh">
-                                                                    <rect key="frame" x="22" y="0.0" width="149" height="31"/>
+                                                                    <rect key="frame" x="22" y="0.0" width="149" height="32.5"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Omega-3">
                                                                             <attributes>
@@ -191,7 +192,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ylu-IZ-55M">
-                                                                    <rect key="frame" x="181" y="0.0" width="51" height="31"/>
+                                                                    <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
@@ -214,23 +215,23 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbH-WZ-9yG" userLabel="Vitamin D">
-                                                    <rect key="frame" x="0.0" y="96" width="240" height="35"/>
+                                                    <rect key="frame" x="0.0" y="99" width="240" height="36.5"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XU6-z3-CpL" userLabel="BorderBottom">
-                                                            <rect key="frame" x="0.0" y="34" width="240" height="1"/>
+                                                            <rect key="frame" x="0.0" y="35.5" width="240" height="1"/>
                                                             <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="O6A-df-cgr"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GWE-zY-1iJ">
-                                                            <rect key="frame" x="5" y="0.0" width="230" height="31"/>
+                                                            <rect key="frame" x="5" y="0.0" width="230" height="32.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OyG-xk-ysJ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="32.5"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXr-tM-4ui" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="9.5" width="12" height="12"/>
+                                                                            <rect key="frame" x="0.0" y="10.5" width="12" height="12"/>
                                                                             <color key="backgroundColor" red="1" green="0.64313725490196072" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="12" id="K4M-Gf-WVc"/>
@@ -246,7 +247,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upq-2A-8vI">
-                                                                    <rect key="frame" x="22" y="0.0" width="149" height="31"/>
+                                                                    <rect key="frame" x="22" y="0.0" width="149" height="32.5"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Vitamin D">
                                                                             <attributes>
@@ -258,7 +259,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-am-sEW">
-                                                                    <rect key="frame" x="181" y="0.0" width="51" height="31"/>
+                                                                    <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
@@ -281,23 +282,23 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUo-fv-7Wg" userLabel="Exercise">
-                                                    <rect key="frame" x="0.0" y="144" width="240" height="35"/>
+                                                    <rect key="frame" x="0.0" y="148.5" width="240" height="36.5"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtO-w2-W05" userLabel="BorderBottom">
-                                                            <rect key="frame" x="0.0" y="34" width="240" height="1"/>
+                                                            <rect key="frame" x="0.0" y="35.5" width="240" height="1"/>
                                                             <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="GV0-Vz-lFd"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c6L-9a-edX">
-                                                            <rect key="frame" x="5" y="0.0" width="230" height="31"/>
+                                                            <rect key="frame" x="5" y="0.0" width="230" height="32.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTf-nO-egG">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="32.5"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dK-Vj-0s8" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="9.5" width="12" height="12"/>
+                                                                            <rect key="frame" x="0.0" y="10.5" width="12" height="12"/>
                                                                             <color key="backgroundColor" red="0.34901960784313724" green="0.53725490196078429" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="12" id="G0G-Sm-OsH"/>
@@ -313,7 +314,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KV-j2-ehf">
-                                                                    <rect key="frame" x="22" y="0.0" width="149" height="31"/>
+                                                                    <rect key="frame" x="22" y="0.0" width="149" height="32.5"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Exercise">
                                                                             <attributes>
@@ -325,7 +326,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNj-MI-n0a">
-                                                                    <rect key="frame" x="181" y="0.0" width="51" height="31"/>
+                                                                    <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
@@ -348,23 +349,23 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1U1-jM-pnx" userLabel="Meditation">
-                                                    <rect key="frame" x="0.0" y="192" width="240" height="35"/>
+                                                    <rect key="frame" x="0.0" y="198" width="240" height="36.5"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-dv-AQL" userLabel="BorderBottom">
-                                                            <rect key="frame" x="0.0" y="34" width="240" height="1"/>
+                                                            <rect key="frame" x="0.0" y="35.5" width="240" height="1"/>
                                                             <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="kVN-w9-AQm"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="F5l-NH-PYD">
-                                                            <rect key="frame" x="5" y="0.0" width="230" height="31"/>
+                                                            <rect key="frame" x="5" y="0.0" width="230" height="32.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeF-6P-J36">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="32.5"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWK-TQ-Ro3" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="9.5" width="12" height="12"/>
+                                                                            <rect key="frame" x="0.0" y="10.5" width="12" height="12"/>
                                                                             <color key="backgroundColor" red="0.40000000000000002" green="0.59607843137254901" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="12" id="G2l-SO-5t6"/>
@@ -380,7 +381,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICh-tC-BJT">
-                                                                    <rect key="frame" x="22" y="0.0" width="149" height="31"/>
+                                                                    <rect key="frame" x="22" y="0.0" width="149" height="32.5"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Meditation">
                                                                             <attributes>
@@ -392,7 +393,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ULQ-7l-Ra0">
-                                                                    <rect key="frame" x="181" y="0.0" width="51" height="31"/>
+                                                                    <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
@@ -415,23 +416,23 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a04-t5-Dcy" userLabel="Medication">
-                                                    <rect key="frame" x="0.0" y="240" width="240" height="35"/>
+                                                    <rect key="frame" x="0.0" y="247.5" width="240" height="36.5"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cut-Oj-Fno" userLabel="BorderBottom">
-                                                            <rect key="frame" x="0.0" y="34" width="240" height="1"/>
+                                                            <rect key="frame" x="0.0" y="35.5" width="240" height="1"/>
                                                             <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="j38-TX-Dsd"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uRj-7Z-JVp">
-                                                            <rect key="frame" x="5" y="0.0" width="230" height="31"/>
+                                                            <rect key="frame" x="5" y="0.0" width="230" height="32.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHa-EO-Whz">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="32.5"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6GN-M9-xbc" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="9.5" width="12" height="12"/>
+                                                                            <rect key="frame" x="0.0" y="10.5" width="12" height="12"/>
                                                                             <color key="backgroundColor" red="0.46274509803921571" green="0.67843137254901964" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="12" id="dc4-KL-4Br"/>
@@ -447,7 +448,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZp-8y-6N0">
-                                                                    <rect key="frame" x="22" y="0.0" width="149" height="31"/>
+                                                                    <rect key="frame" x="22" y="0.0" width="149" height="32.5"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Medication">
                                                                             <attributes>
@@ -459,7 +460,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Crb-hB-DRF">
-                                                                    <rect key="frame" x="181" y="0.0" width="51" height="31"/>
+                                                                    <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
