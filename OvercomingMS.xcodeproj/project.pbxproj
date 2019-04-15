@@ -142,9 +142,6 @@
 		0AEC55582261536300B7B75E /* GoalsModifySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC55572261536300B7B75E /* GoalsModifySVC.swift */; };
 		0AEC555A2261547700B7B75E /* SettingsBoxSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC55592261547700B7B75E /* SettingsBoxSVC.swift */; };
 		0AEC555C226154A800B7B75E /* SettingsBoxSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC555B226154A800B7B75E /* SettingsBoxSVC.xib */; };
-		0AEC555E2261550D00B7B75E /* SettingsModifySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC555D2261550D00B7B75E /* SettingsModifySVC.swift */; };
-		0AEC55602261559600B7B75E /* SettingsModifySVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC555F2261559600B7B75E /* SettingsModifySVC.xib */; };
-		0AEC55622262244C00B7B75E /* TrackingDayAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC55612262244C00B7B75E /* TrackingDayAnalyzer.swift */; };
 		0AEF7A29222AFA88009A0292 /* BadIngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */; };
 		0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */; };
 		0AEF7A2D222B01FC009A0292 /* FoodUnknownSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2C222B01FC009A0292 /* FoodUnknownSVC.xib */; };
@@ -364,9 +361,6 @@
 		0AEC55572261536300B7B75E /* GoalsModifySVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsModifySVC.swift; sourceTree = "<group>"; };
 		0AEC55592261547700B7B75E /* SettingsBoxSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBoxSVC.swift; sourceTree = "<group>"; };
 		0AEC555B226154A800B7B75E /* SettingsBoxSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsBoxSVC.xib; sourceTree = "<group>"; };
-		0AEC555D2261550D00B7B75E /* SettingsModifySVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModifySVC.swift; sourceTree = "<group>"; };
-		0AEC555F2261559600B7B75E /* SettingsModifySVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsModifySVC.xib; sourceTree = "<group>"; };
-		0AEC55612262244C00B7B75E /* TrackingDayAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDayAnalyzer.swift; sourceTree = "<group>"; };
 		0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadIngredientsCell.swift; sourceTree = "<group>"; };
 		0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadIngredientsCell.xib; sourceTree = "<group>"; };
 		0AEF7A2C222B01FC009A0292 /* FoodUnknownSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodUnknownSVC.xib; sourceTree = "<group>"; };
@@ -688,8 +682,6 @@
 				0A9926C9225CEA77008DE456 /* SettingsMainSVC.xib */,
 				0AEC55592261547700B7B75E /* SettingsBoxSVC.swift */,
 				0AEC555B226154A800B7B75E /* SettingsBoxSVC.xib */,
-				0AEC555D2261550D00B7B75E /* SettingsModifySVC.swift */,
-				0AEC555F2261559600B7B75E /* SettingsModifySVC.xib */,
 				0C19F077226343C400D080AE /* ProfileViews */,
 				0C19F073226342FC00D080AE /* ReminderViews */,
 				0C19F0742263433B00D080AE /* TrackingViews */,
@@ -1174,7 +1166,6 @@
 				0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */,
 				0C9910852219C2F00008A727 /* FoodSelectedSVC.xib in Resources */,
 				0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */,
-				0AEC55602261559600B7B75E /* SettingsModifySVC.xib in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
 				0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */,
 				0A93EA45221316490063A892 /* (null) in Resources */,
@@ -1355,7 +1346,6 @@
 				0A341D79225919DB0066EC1D /* SymptomsListSVC.swift in Sources */,
 				0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */,
 				0AEF7A6722341DBF009A0292 /* GuidedMeditationCategories.swift in Sources */,
-				0AEC555E2261550D00B7B75E /* SettingsModifySVC.swift in Sources */,
 				0A1FEC6C22063898006CED70 /* Routine3PartCell.swift in Sources */,
 				0A030FB722580A1500857BC8 /* GoalsDBT.swift in Sources */,
 				0A19B3C32253E97000F4B02B /* ExpandingCell.swift in Sources */,
