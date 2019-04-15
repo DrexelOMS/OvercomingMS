@@ -70,12 +70,3 @@ class TypeTFI : TFIAbstract, UIPickerViewDelegate, UIPickerViewDataSource {
         closePicker()
     }
 }
-
-class SeverityTFI: TypeTFI {
-    override func customSetup() {
-        super.customSetup()
-        choices = ["1", "2", "3", "4", "5"]
-        title = "Severity"
-    }
-    
-}

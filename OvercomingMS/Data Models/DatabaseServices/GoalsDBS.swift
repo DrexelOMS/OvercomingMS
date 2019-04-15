@@ -122,6 +122,8 @@ class GoalsDBS {
         } catch {
             print("Error updating goal : \(error)" )
         }
+        
+        TrackingModulesDBS().updateAllStatus()
     }
 
     

@@ -17,16 +17,30 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
         }
     }
     
-    override func toggleFilledData() {
-        let percent = getPercentageComplete()
+    override func updateCompleteStatus() {
         do {
             try realm.write() {
-                getTrackingDay().IsExerciseComplete = !getTrackingDay().IsExerciseComplete
+                getTrackingDay().IsExerciseComplete = getPercentageComplete() >= 100
             }
         } catch {
-            print("Error updating todays data : \(error)" )
+            print("Error updating Exercise data : \(error)" )
         }
-        checkToNotify(oldPercent: percent)
+        
+        super.updateCompleteStatus()
+    }
+    
+    override func addQuickCompleteItem() {
+        let remaining = ProgressBarConfig.exerciseGoal - getTrackingDay().ExerciseTimeTotal
+        if remaining > 0 {
+            let quickItem = ExerciseHistoryDBT()
+            let startTime = Date()
+            
+            quickItem.RoutineType = QUICK_COMPLETE
+            quickItem.StartTime = startTime
+            quickItem.EndTime = startTime.addingTimeInterval(TimeInterval(remaining * 60))
+            
+            addItem(item: quickItem)
+        }
     }
     
     override func addItem(item: Object) {

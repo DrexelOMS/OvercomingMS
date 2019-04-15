@@ -38,18 +38,20 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
     
     override func reload() {
         print("reloaded")
-        foodGoalLabel.text = "Food Goal: Not Ready Yet"
+        foodGoalLabel.text = "Food Goal: \(ProgressBarConfig.foodRatingGoals)"
         omega3GoalLabel.text = "Omega3 Goal: \(ProgressBarConfig.omega3Goal)"
         vitaminDGoalLabel.text = "VitaminD Goal: \(ProgressBarConfig.vitaminDGoal)"
         exerciseGoalLabel.text = "Exercise Goal: \(ProgressBarConfig.exerciseGoal)"
         meditationGoalLabel.text = "Meditation Goal: \(ProgressBarConfig.meditationGoal)"
     }
     
+    // Whatever happens, we must prevent user from setting a goal to 0
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         endEditing(true)
         
         switch textField {
         case foodGoalTextField:
+            ProgressBarConfig.foodRatingGoals = Int(textField.text ?? "") ?? ProgressBarConfig.foodRatingGoals
             break
         case omega3GoalTextField:
             ProgressBarConfig.omega3Goal = Int(textField.text ?? "") ?? ProgressBarConfig.omega3Goal

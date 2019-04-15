@@ -21,6 +21,8 @@ enum Modules {
 class TrackingModulesDBS{
     
     let realm = try! Realm()
+    let QUICK_COMPLETE = "Quick Complete"
+    let defaults = UserDefaults.standard
     
     var module : Modules {
         get {
@@ -38,6 +40,7 @@ class TrackingModulesDBS{
         }
     }
     
+    // only to be used by getTrackingDay
     private func initializeTodaysData(date : String) {
         do {
             try realm.write(){
@@ -48,9 +51,11 @@ class TrackingModulesDBS{
         } catch {
             print("Error saving TrackingDay: \(error)")
         }
+        updateAllStatus()
     }
     
     func checkToNotify(oldPercent: Int) {
+        updateCompleteStatus()
         if oldPercent < 100 && getPercentageComplete() >= 100 {
             notify(module: module)
         }
@@ -60,14 +65,50 @@ class TrackingModulesDBS{
         NotificationCenter.default.post(name: .didCompleteModule, object: module)
     }
     
-    //MARK: Abstract Methods
-    
-    func toggleFilledData() {
-        fatalError("toggleFilledData not overriden")
+    func updateAllStatus() {
+        FoodRatingDBS().updateCompleteStatus()
+        Omega3HistoryDBS().updateCompleteStatus()
+        VitaminDHistoryDBS().updateCompleteStatus()
+        ExerciseHistoryDBS().updateCompleteStatus()
+        MeditationHistoryDBS().updateCompleteStatus()
+        SavedMedicationDBS().updateCompleteStatus()
     }
     
-    func addItem(item: Object) {
-        fatalError("addItem not overriden")
+    //TODO: there will be a bug when the user changes their goals
+    //make sure to update the complete status of the module when the user changes goals
+    func updateCompleteStatus() {
+        let day = getTrackingDay()
+        let savedIsDayComplete = day.IsDayComplete
+        do {
+            try realm.write() {
+                day.IsDayComplete = day.FoodEatenRating >= ProgressBarConfig.foodRatingGoals && day.IsOmega3Complete && day.IsVitaminDComplete && day.IsExerciseComplete && day.IsMeditationComplete && day.IsMedicationComplete
+                
+//                print("Food Complete: \(day.IsFoodComplete)")
+//                print("Omega3 Complete: \(day.IsOmega3Complete)")
+//                print("VitaminD Complete: \(day.IsVitaminDComplete)")
+//                print("Exercise Complete: \(day.IsExerciseComplete)")
+//                print("Meditation Complete: \(day.IsMeditationComplete)")
+//                print("Medication Complete: \(day.IsMedicationComplete)")
+//                print("Day Complete: \(day.IsDayComplete)")
+            }
+        } catch {
+            print("Error updating complete status data: \(error)")
+        }
+ 
+        let isDayComplete = day.IsDayComplete
+        if savedIsDayComplete != isDayComplete {
+            let totalDays = getTotalPerfectDays()
+            if isDayComplete {
+                defaults.set(totalDays + 1, forKey: "TotalPerfectDays")
+            }
+            else {
+                defaults.set(totalDays - 1, forKey: "TotalPerfectDays")
+            }
+        }
+    }
+    
+    func getTotalPerfectDays() -> Int {
+        return defaults.object(forKey: "TotalPerfectDays") as? Int ?? 0
     }
     
     func deleteItem(item: Object) {
@@ -78,6 +119,17 @@ class TrackingModulesDBS{
         } catch {
             print("Error deleting data: \(error)")
         }
+        updateCompleteStatus()
+    }
+    
+    //MARK: Abstract Methods
+    
+    func addQuickCompleteItem() {
+        fatalError("toggleFilledData not overriden")
+    }
+    
+    func addItem(item: Object) {
+        fatalError("addItem not overriden")
     }
     
     func getPercentageComplete() -> Int {

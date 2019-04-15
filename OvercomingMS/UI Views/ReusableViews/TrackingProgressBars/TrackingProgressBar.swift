@@ -37,9 +37,10 @@ class TrackingProgressBar: CustomView {
         }
     }
     
-    @IBInspectable var progressBar: Bool = true {
+    //TODO rename to hasProgressBar, this is being set on the main storyboard
+    @IBInspectable var hasProgressBar: Bool = true {
         didSet {
-            linearProgressBar.isHidden = !progressBar
+            linearProgressBar.isHidden = !hasProgressBar
         }
     }
     
@@ -146,11 +147,13 @@ class TrackingProgressBar: CustomView {
         delegate?.didPressCheckButton(self)
     }
     
-    func update(trackingDBS: TrackingModulesDBS, hideBar: Bool = false) {
-        if !hideBar {
+    func update(trackingDBS: TrackingModulesDBS) {
+        if hasProgressBar {
             setProgressValue(value: trackingDBS.getPercentageComplete())
         }
         setRightLabel(description: trackingDBS.getTrackingDescription())
+        
+        checkButton.isEnabled = trackingDBS.getPercentageComplete() < 100
     }
 }
 

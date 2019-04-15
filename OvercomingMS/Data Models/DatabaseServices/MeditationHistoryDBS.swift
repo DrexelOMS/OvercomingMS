@@ -16,18 +16,31 @@ class MeditationHistoryDBS: TrackingModulesDBS {
             return .Meditation
         }
     }
-    override func toggleFilledData() {
-        let percent = getPercentageComplete()
-        let date = globalCurrentDate
+
+    override func updateCompleteStatus() {
         do {
             try realm.write() {
-                let day = getTrackingDay(date: date)
-                day.IsMeditationComplete = !day.IsMeditationComplete
+                getTrackingDay().IsMeditationComplete = getPercentageComplete() >= 100
             }
         } catch {
-            print("Error updating todays data : \(error)" )
+            print("Error updating Meditation data : \(error)" )
         }
-        checkToNotify(oldPercent: percent)
+        
+        super.updateCompleteStatus()
+    }
+    
+    override func addQuickCompleteItem() {
+        let remaining = ProgressBarConfig.meditationGoal - getTrackingDay().MeditationTimeTotal
+        if remaining > 0 {
+            let quickItem = MeditationHistoryDBT()
+            let startTime = Date()
+            
+            quickItem.MeditationType = QUICK_COMPLETE
+            quickItem.StartTime = startTime
+            quickItem.EndTime = startTime.addingTimeInterval(TimeInterval(remaining * 60))
+            
+            addItem(item: quickItem)
+        }
     }
     
     override func addItem(item: Object) {

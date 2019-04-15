@@ -70,6 +70,6 @@ class MedicationSelectedItemSVC : SelectedItemSVC {
     }
     
     func deleteItem(){
-       SavedMedicationDBS().deleteItem(item: savedMedicationItem)
+       SavedMedicationDBS().deleteSavedMedication(item: savedMedicationItem)
     }
 }
