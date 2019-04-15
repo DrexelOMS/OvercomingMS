@@ -170,6 +170,7 @@
 		0C19F079226343F700D080AE /* SettingsProfileSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C19F078226343F700D080AE /* SettingsProfileSVC.xib */; };
 		0C19F07C2263654100D080AE /* SettingsTutorialsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C19F07B2263654100D080AE /* SettingsTutorialsSVC.xib */; };
 		0C19F07E22636BA000D080AE /* TutorialButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C19F07D22636BA000D080AE /* TutorialButtonSVC.xib */; };
+		0C19F0802264DF1300D080AE /* ReminderAddViewSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C19F07F2264DF1300D080AE /* ReminderAddViewSVC.xib */; };
 		0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAFDD22163057004C1966 /* SearchBarButton.xib */; };
 		0C515549225C918C00D9310D /* FoodSearchNoResultsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C515548225C918C00D9310D /* FoodSearchNoResultsSVC.xib */; };
 		0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */; };
@@ -385,6 +386,7 @@
 		0C19F078226343F700D080AE /* SettingsProfileSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsProfileSVC.xib; sourceTree = "<group>"; };
 		0C19F07B2263654100D080AE /* SettingsTutorialsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTutorialsSVC.xib; sourceTree = "<group>"; };
 		0C19F07D22636BA000D080AE /* TutorialButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialButtonSVC.xib; sourceTree = "<group>"; };
+		0C19F07F2264DF1300D080AE /* ReminderAddViewSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderAddViewSVC.xib; sourceTree = "<group>"; };
 		0C2DAFDD22163057004C1966 /* SearchBarButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarButton.xib; sourceTree = "<group>"; };
 		0C515548225C918C00D9310D /* FoodSearchNoResultsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchNoResultsSVC.xib; sourceTree = "<group>"; };
 		0C5C2A3822157AE30066F669 /* BackConfirmButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackConfirmButtonsSVC.xib; sourceTree = "<group>"; };
@@ -854,6 +856,7 @@
 			children = (
 				0C19F0712263388E00D080AE /* SettingsRemindersSVC.xib */,
 				0C19F075226343AB00D080AE /* ReminderScrollViewSVC.xib */,
+				0C19F07F2264DF1300D080AE /* ReminderAddViewSVC.xib */,
 			);
 			path = ReminderViews;
 			sourceTree = "<group>";
@@ -1185,6 +1188,7 @@
 				0A93F19A22145F150063A892 /* ModifyAbstractSVC.xib in Resources */,
 				0CAD6317221DAAEE00E50E72 /* FoodRejectedSVC.xib in Resources */,
 				0C19F07E22636BA000D080AE /* TutorialButtonSVC.xib in Resources */,
+				0C19F0802264DF1300D080AE /* ReminderAddViewSVC.xib in Resources */,
 				0A9926CA225CEA77008DE456 /* SettingsMainSVC.xib in Resources */,
 				0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */,
 				0A341D81225922670066EC1D /* NoteSVC.xib in Resources */,

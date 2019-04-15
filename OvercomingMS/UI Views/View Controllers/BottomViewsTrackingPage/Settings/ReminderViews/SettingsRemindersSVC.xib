@@ -28,19 +28,19 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIy-ej-qqo">
-                    <rect key="frame" x="35" y="0.0" width="250" height="419"/>
+                    <rect key="frame" x="40" y="0.0" width="240" height="419"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="aWX-dy-1VD">
-                            <rect key="frame" x="0.0" y="0.0" width="250" height="419"/>
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="419"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBh-1b-oZb" userLabel="TitleView">
-                                    <rect key="frame" x="0.0" y="0.0" width="250" height="55"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="55"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7F5-6Q-eJ8">
-                                            <rect key="frame" x="5" y="0.0" width="240" height="55"/>
+                                            <rect key="frame" x="5" y="0.0" width="230" height="55"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHZ-q2-2mu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="27.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="230" height="27.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Settings">
                                                             <attributes>
@@ -52,7 +52,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuJ-Ff-z1p">
-                                                    <rect key="frame" x="0.0" y="27.5" width="240" height="27.5"/>
+                                                    <rect key="frame" x="0.0" y="27.5" width="230" height="27.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Reminders">
                                                             <attributes>
@@ -77,7 +77,7 @@
                                     </constraints>
                                 </view>
                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tsk-5B-cah">
-                                    <rect key="frame" x="0.0" y="105" width="250" height="314"/>
+                                    <rect key="frame" x="0.0" y="105" width="240" height="314"/>
                                 </scrollView>
                             </subviews>
                         </stackView>
@@ -94,12 +94,12 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="BL2-to-30N" firstAttribute="top" secondItem="aIy-ej-qqo" secondAttribute="bottom" id="JSI-I8-6jJ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aIy-ej-qqo" secondAttribute="trailing" constant="35" id="TX9-71-y6X"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aIy-ej-qqo" secondAttribute="trailing" constant="40" id="TX9-71-y6X"/>
                 <constraint firstItem="BL2-to-30N" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="btw-ZD-wvv"/>
                 <constraint firstItem="BL2-to-30N" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bz8-LP-JYX"/>
                 <constraint firstItem="aIy-ej-qqo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="f54-fj-hU5"/>
                 <constraint firstItem="BL2-to-30N" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="lPv-Ox-f1Z"/>
-                <constraint firstItem="aIy-ej-qqo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="35" id="onA-fh-xMg"/>
+                <constraint firstItem="aIy-ej-qqo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="onA-fh-xMg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
