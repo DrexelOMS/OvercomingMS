@@ -31,6 +31,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     var low = 1
     var high = 60
     var inc = 1
+    var Module: Modules = .Exercise
     
     var pageSize: CGSize {
         let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
@@ -75,7 +76,13 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     }
     
     func confirmPressed(){
-        ProgressBarConfig.exerciseGoal = items[currentPage]
+        switch Module {
+        case .Exercise:
+            ProgressBarConfig.exerciseGoal = items[currentPage]
+        break
+        default:
+            break
+        }
         parentVC.resetToDefaultView()
     }
     

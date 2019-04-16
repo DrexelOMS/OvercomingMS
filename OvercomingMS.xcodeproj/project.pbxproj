@@ -68,6 +68,7 @@
 		0A3EB6F422594FF800D25AF5 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EB6F322594FF800D25AF5 /* TableViewExtensions.swift */; };
 		0A43120222665BB200E8F72E /* GoalsPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A43120122665BB200E8F72E /* GoalsPickerCell.swift */; };
 		0A43120422665BBE00E8F72E /* GoalsPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A43120322665BBE00E8F72E /* GoalsPickerCell.xib */; };
+		0A43120622668B8300E8F72E /* GoalsModifyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A43120522668B8300E8F72E /* GoalsModifyFactory.swift */; };
 		0A4CC87E225FE591004C97BC /* CircleButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC87D225FE591004C97BC /* CircleButtonFactory.swift */; };
 		0A4CC880225FEFA2004C97BC /* TypeTFIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC87F225FEFA2004C97BC /* TypeTFIFactory.swift */; };
 		0A4CC882226021F8004C97BC /* TrackingModuleVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */; };
@@ -279,6 +280,7 @@
 		0A3EB6F322594FF800D25AF5 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
 		0A43120122665BB200E8F72E /* GoalsPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPickerCell.swift; sourceTree = "<group>"; };
 		0A43120322665BBE00E8F72E /* GoalsPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalsPickerCell.xib; sourceTree = "<group>"; };
+		0A43120522668B8300E8F72E /* GoalsModifyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsModifyFactory.swift; sourceTree = "<group>"; };
 		0A4CC87D225FE591004C97BC /* CircleButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonFactory.swift; sourceTree = "<group>"; };
 		0A4CC87F225FEFA2004C97BC /* TypeTFIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTFIFactory.swift; sourceTree = "<group>"; };
 		0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleVCFactory.swift; sourceTree = "<group>"; };
@@ -826,6 +828,7 @@
 				0AEC55502261487100B7B75E /* GoalsBoxSVC.swift */,
 				0AEC55522261488000B7B75E /* GoalsBoxSVC.xib */,
 				0AEC55572261536300B7B75E /* GoalsModifySVC.swift */,
+				0A43120522668B8300E8F72E /* GoalsModifyFactory.swift */,
 				0AEC55552261534B00B7B75E /* GoalsModifySVC.xib */,
 				0A43120122665BB200E8F72E /* GoalsPickerCell.swift */,
 				0A43120322665BBE00E8F72E /* GoalsPickerCell.xib */,
@@ -1401,6 +1404,7 @@
 				0A030FAF22580A1500857BC8 /* Omega3HistoryDBS.swift in Sources */,
 				0A0818912214647E0021BDF6 /* LengthTFI.swift in Sources */,
 				0A030FB822580A1500857BC8 /* FoodLogDBT.swift in Sources */,
+				0A43120622668B8300E8F72E /* GoalsModifyFactory.swift in Sources */,
 				0A030F7B22555C9400857BC8 /* MedicationNotTakenItemSVC.swift in Sources */,
 				0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,

@@ -75,7 +75,7 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
     }
     
     @IBAction func testButtonPressed(_ sender: Any) {
-        parentVC.pushSubView(newSubView: GoalsModifySVC())
+        parentVC.pushSubView(newSubView: GoalsModifyFactory.ExerciseGoalsModifySVC())
     }
     
 }
