@@ -65,7 +65,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
             switch trackingModule {
             case .Food:
                 name = "Food"
-                color = UIColor.gray
+                color = foodBar.colorTheme
             case .Omega3:
                 name = "Omega 3"
                 color = omega3Bar.colorTheme

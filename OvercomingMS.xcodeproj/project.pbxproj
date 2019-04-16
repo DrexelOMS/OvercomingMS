@@ -1625,7 +1625,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AN6TNSK79R;
+				DEVELOPMENT_TEAM = 6DFVZ3T3WS;
 				INFOPLIST_FILE = OvercomingMS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1635,7 +1635,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Realm/core",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.overcomingms.oms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1648,7 +1648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AN6TNSK79R;
+				DEVELOPMENT_TEAM = 6DFVZ3T3WS;
 				INFOPLIST_FILE = OvercomingMS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1658,7 +1658,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Realm/core",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.overcomingms.oms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
