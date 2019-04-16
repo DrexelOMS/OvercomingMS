@@ -138,6 +138,9 @@
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Food"/>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hasProgressBar" value="NO"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                                                        <color key="value" red="0.42352941176470588" green="0.29803921568627451" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IO1-W9-0dD" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">

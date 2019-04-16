@@ -82,8 +82,6 @@ class TrackingProgressBar: CustomView {
     
     private func setProgressValue(value : Int) {
         linearProgressBar.progressValue = CGFloat(value);
-        setColorMode(completed: linearProgressBar.progressValue >= 100)
-        
     }
     
     private func setRightLabel(description: String) {
@@ -148,12 +146,17 @@ class TrackingProgressBar: CustomView {
     }
     
     func update(trackingDBS: TrackingModulesDBS) {
-        if hasProgressBar {
-            setProgressValue(value: trackingDBS.getPercentageComplete())
-        }
+        setColorMode(completed: trackingDBS.getPercentageComplete() >= 100)
         setRightLabel(description: trackingDBS.getTrackingDescription())
         
         checkButton.isEnabled = trackingDBS.getPercentageComplete() < 100
+        
+        if hasProgressBar {
+            setProgressValue(value: trackingDBS.getPercentageComplete())
+        }
+        else {
+            linearProgressBar.isHidden = true
+        }
     }
 }
 
