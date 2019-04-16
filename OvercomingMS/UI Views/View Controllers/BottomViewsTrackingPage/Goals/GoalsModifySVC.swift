@@ -19,34 +19,23 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     }
     
     @IBOutlet weak var backButton: SquareButtonSVC!
-    @IBOutlet weak var myView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    var items = ["1", "2", "3"]
+    var items = ["1", "2", "3", "4", "5"]
     
     override func customSetup() {
         backButton.backButtonAction = backPressed
         
-        //collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "testCell")
+        setupLayout()
         
-        let layout = UPCarouselFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: 60, height: 60)
-        
-        let myCollectionView:UICollectionView = UICollectionView(frame: self.myView.frame, collectionViewLayout: layout)
-        myCollectionView.dataSource = self
-        myCollectionView.delegate = self
-        myCollectionView.register(UINib(nibName: "testCell", bundle: nil), forCellWithReuseIdentifier: "testCell")
-        myCollectionView.backgroundColor = UIColor.white
-        self.myView.addSubview(myCollectionView)
-        
-        constrain(myCollectionView, myView) { (view, superView) in
-            view.top == superView.top
-            view.right == superView.right
-            view.bottom == superView.bottom
-            view.left == superView.left
-        }
-        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(UINib(nibName: "testCell", bundle: nil), forCellWithReuseIdentifier: "testCell")
+    }
+    
+    func setupLayout() {
+        let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
+        layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 30)
     }
     
     func backPressed() {
