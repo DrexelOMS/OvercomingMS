@@ -167,16 +167,15 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         //TODO make a way to get the proper description for each
         //FoodEatenRating is 1 - 5
-        foodBar.update(trackingDBS: FoodRatingDBS())
-        omega3Bar.update(trackingDBS: Omega3HistoryDBS())
+        foodBar.update(trackingDBS: FoodRatingDBS(), isTracked: false)
+        omega3Bar.update(trackingDBS: Omega3HistoryDBS(), isTracked: false)
         vitaminDBar.update(trackingDBS: VitaminDHistoryDBS())
         exerciseBar.update(trackingDBS: ExerciseHistoryDBS())
         meditationBar.update(trackingDBS: MeditationHistoryDBS())
         medicationBar.update(trackingDBS: SavedMedicationDBS())
         
         header.perfectDaysLabel.text = "\(TrackingModulesDBS().getTotalPerfectDays()) perfect days"
-        
-//        medicationBar.setEnabled(enabled: false)
+    
     }
     
     //MARK: Delegates
