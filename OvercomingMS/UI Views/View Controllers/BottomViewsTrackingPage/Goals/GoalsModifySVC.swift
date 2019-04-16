@@ -55,7 +55,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.fixed(spacing: 10)
         
-        
+        collectionView.showsHorizontalScrollIndicator = false
     }
     
     func backPressed() {
