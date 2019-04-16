@@ -20,10 +20,17 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     
     @IBOutlet weak var backButton: SquareButtonSVC!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var currentGoalLabel: UILabel!
+    @IBOutlet weak var goalUnitLabel: UILabel!
     
     var items = [String]()
     
     var currentPage: Int = 0
+    var low = 1
+    var high = 60
+    var inc = 1
     
     var pageSize: CGSize {
         let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
@@ -46,7 +53,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "GoalsPickerCell", bundle: nil), forCellWithReuseIdentifier: "GoalsPickerCell")
         
-        for i in 1...60 {
+        for i in stride(from: low, to: high, by: inc) {
             items.append(String(i))
         }
     }
@@ -77,6 +84,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize.width : self.pageSize.height
         let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
+        currentGoalLabel.text = items[currentPage]
     }
     
     @IBAction func testPressed(_ sender: Any) {
