@@ -18,14 +18,14 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         }
     }
     
-    @IBOutlet weak var backButton: SquareButtonSVC!
+    @IBOutlet weak var backButton: BackConfirmButtonsSVC!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var currentGoalLabel: UILabel!
     @IBOutlet weak var goalUnitLabel: UILabel!
     
-    var items = [String]()
+    var items = [Int]()
     
     var currentPage: Int = 0
     var low = 1
@@ -44,7 +44,9 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     }
     
     override func customSetup() {
-        backButton.backButtonAction = backPressed
+        
+        backButton.leftButtonAction = backPressed
+        backButton.rightButtonAction = confirmPressed
         
         setupLayout()
         
@@ -54,7 +56,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         collectionView.register(UINib(nibName: "GoalsPickerCell", bundle: nil), forCellWithReuseIdentifier: "GoalsPickerCell")
         
         for i in stride(from: low, to: high, by: inc) {
-            items.append(String(i))
+            items.append(i)
         }
     }
     
@@ -66,7 +68,15 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     }
     
     func backPressed() {
-        parentVC.popSubView()
+        let cancelPage = ConfirmationFactory.GoalsConfirmation()
+        cancelPage.methodToRunOnConfirm = {}
+        cancelPage.resetToDefault = true
+        parentVC.pushSubView(newSubView: cancelPage)
+    }
+    
+    func confirmPressed(){
+        ProgressBarConfig.exerciseGoal = items[currentPage]
+        parentVC.resetToDefaultView()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -75,7 +85,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoalsPickerCell", for: indexPath) as! GoalsPickerCell
-        myCell.label.text = items[indexPath.row]
+        myCell.label.text = String(items[indexPath.row])
         return myCell
     }
     
@@ -84,7 +94,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize.width : self.pageSize.height
         let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
-        currentGoalLabel.text = items[currentPage]
+        currentGoalLabel.text = String(items[currentPage])
     }
     
     @IBAction func testPressed(_ sender: Any) {

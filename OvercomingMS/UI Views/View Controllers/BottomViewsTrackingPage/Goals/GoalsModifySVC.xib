@@ -31,34 +31,11 @@
                         <constraint firstAttribute="height" constant="100" id="9zg-V6-eTr"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tyn-TN-jmN" customClass="SquareButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="793" width="414" height="50"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tyn-TN-jmN" customClass="BackConfirmButtonsSVC" customModule="OvercomingMS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="783" width="414" height="60"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="dnj-SN-wlQ"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IS3-7k-yfW">
-                    <rect key="frame" x="50" y="693" width="314" height="100"/>
-                    <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Wp0-Sd-TST">
-                            <rect key="frame" x="0.0" y="0.0" width="314" height="100"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bfj-QX-ts4" customClass="UPCarouselFlowLayout" customModule="UPCarouselFlowLayout">
-                                <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                        </collectionView>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="Wp0-Sd-TST" secondAttribute="trailing" id="2fL-U7-oA0"/>
-                        <constraint firstAttribute="bottom" secondItem="Wp0-Sd-TST" secondAttribute="bottom" id="6Dz-nU-IHg"/>
-                        <constraint firstAttribute="height" constant="100" id="72L-gH-VSN"/>
-                        <constraint firstItem="Wp0-Sd-TST" firstAttribute="top" secondItem="IS3-7k-yfW" secondAttribute="top" id="Gtu-nG-0II"/>
-                        <constraint firstItem="Wp0-Sd-TST" firstAttribute="leading" secondItem="IS3-7k-yfW" secondAttribute="leading" id="HpO-0n-c2Z"/>
+                        <constraint firstAttribute="height" constant="60" id="dnj-SN-wlQ"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daily Goal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYF-7A-Nug">
@@ -75,8 +52,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBa-YV-l3W">
-                    <rect key="frame" x="186" y="233" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is your daily goal for tracking type?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBa-YV-l3W">
+                    <rect key="frame" x="51" y="216" width="312" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,6 +73,29 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IS3-7k-yfW">
+                    <rect key="frame" x="51" y="634" width="314" height="100"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Wp0-Sd-TST">
+                            <rect key="frame" x="0.0" y="0.0" width="314" height="100"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bfj-QX-ts4" customClass="UPCarouselFlowLayout" customModule="UPCarouselFlowLayout">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Wp0-Sd-TST" firstAttribute="leading" secondItem="IS3-7k-yfW" secondAttribute="leading" id="3uU-Xb-u9C"/>
+                        <constraint firstAttribute="height" constant="100" id="72L-gH-VSN"/>
+                        <constraint firstAttribute="trailing" secondItem="Wp0-Sd-TST" secondAttribute="trailing" id="9Ub-ce-tpG"/>
+                        <constraint firstAttribute="bottom" secondItem="Wp0-Sd-TST" secondAttribute="bottom" id="vqI-9b-pRw"/>
+                        <constraint firstItem="Wp0-Sd-TST" firstAttribute="top" secondItem="IS3-7k-yfW" secondAttribute="top" id="ype-G0-Ne8"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
