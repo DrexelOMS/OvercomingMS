@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoalsModifySVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="Tyn-TN-jmN" id="sCA-oo-7HF"/>
+                <outlet property="myView" destination="IS3-7k-yfW" id="8X3-eX-SXl"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
