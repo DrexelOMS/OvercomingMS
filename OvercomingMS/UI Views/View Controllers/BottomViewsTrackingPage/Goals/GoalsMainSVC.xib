@@ -42,65 +42,72 @@
                     <rect key="frame" x="20" y="80" width="335" height="567"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QqH-zL-5DH">
-                            <rect key="frame" x="0.0" y="0.0" width="335" height="56.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="51.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Bo-lt-OV0">
-                            <rect key="frame" x="0.0" y="56.5" width="335" height="57"/>
+                            <rect key="frame" x="0.0" y="51.5" width="335" height="51.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5k-uf-Get">
-                            <rect key="frame" x="0.0" y="113.5" width="335" height="56.5"/>
+                            <rect key="frame" x="0.0" y="103" width="335" height="51.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gt0-8a-JeW">
-                            <rect key="frame" x="0.0" y="170" width="335" height="57"/>
+                            <rect key="frame" x="0.0" y="154.5" width="335" height="51.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RD-gW-X0J">
-                            <rect key="frame" x="0.0" y="227" width="335" height="56.5"/>
+                            <rect key="frame" x="0.0" y="206" width="335" height="51.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z7e-YB-2Ph">
-                            <rect key="frame" x="0.0" y="283.5" width="335" height="56.5"/>
+                            <rect key="frame" x="0.0" y="257.5" width="335" height="52"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdD-Mw-Mqe">
-                            <rect key="frame" x="0.0" y="340" width="335" height="57"/>
+                            <rect key="frame" x="0.0" y="309.5" width="335" height="51.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fD6-q7-9bY">
-                            <rect key="frame" x="0.0" y="397" width="335" height="56.5"/>
+                            <rect key="frame" x="0.0" y="361" width="335" height="51.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEY-c8-OgL">
-                            <rect key="frame" x="0.0" y="453.5" width="335" height="57"/>
+                            <rect key="frame" x="0.0" y="412.5" width="335" height="51.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpH-eW-iSM">
-                            <rect key="frame" x="0.0" y="510.5" width="335" height="56.5"/>
+                            <rect key="frame" x="0.0" y="464" width="335" height="51.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bA-lG-i6i">
+                            <rect key="frame" x="0.0" y="515.5" width="335" height="51.5"/>
+                            <state key="normal" title="Horizontal Test Page"/>
+                            <connections>
+                                <action selector="testButtonPressed:" destination="-1" eventType="touchUpInside" id="7hL-Wz-fVc"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </stackView>
             </subviews>

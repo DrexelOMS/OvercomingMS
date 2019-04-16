@@ -16,8 +16,14 @@ class GoalsModifySVC: SlidingAbstractSVC {
         }
     }
     
+    @IBOutlet weak var backButton: SquareButtonSVC!
+    
     override func customSetup() {
-        
+        backButton.backButtonAction = backPressed
+    }
+    
+    func backPressed() {
+        parentVC.popSubView()
     }
     
 }
