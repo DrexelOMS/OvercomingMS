@@ -167,8 +167,8 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         //TODO make a way to get the proper description for each
         //FoodEatenRating is 1 - 5
-        foodBar.update(trackingDBS: FoodRatingDBS(), isTracked: false)
-        omega3Bar.update(trackingDBS: Omega3HistoryDBS(), isTracked: false)
+        foodBar.update(trackingDBS: FoodRatingDBS())
+        omega3Bar.update(trackingDBS: Omega3HistoryDBS())
         vitaminDBar.update(trackingDBS: VitaminDHistoryDBS())
         exerciseBar.update(trackingDBS: ExerciseHistoryDBS())
         meditationBar.update(trackingDBS: MeditationHistoryDBS())
