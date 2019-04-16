@@ -44,7 +44,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         collectionView.dataSource = self
         
         collectionView.delegate = self
-        collectionView.register(UINib(nibName: "testCell", bundle: nil), forCellWithReuseIdentifier: "testCell")
+        collectionView.register(UINib(nibName: "GoalsPickerCell", bundle: nil), forCellWithReuseIdentifier: "GoalsPickerCell")
         
         for i in 1...60 {
             items.append(String(i))
@@ -67,7 +67,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "testCell", for: indexPath) as! testCell
+        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoalsPickerCell", for: indexPath) as! GoalsPickerCell
         myCell.label.text = items[indexPath.row]
         return myCell
     }

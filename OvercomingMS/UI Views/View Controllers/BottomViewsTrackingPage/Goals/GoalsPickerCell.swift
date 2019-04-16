@@ -8,7 +8,7 @@
 
 import UIKit
 
-class testCell : UICollectionViewCell {
+class GoalsPickerCell : UICollectionViewCell {
     
     @IBOutlet weak var label: UILabel!
     

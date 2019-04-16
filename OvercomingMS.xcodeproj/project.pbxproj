@@ -66,8 +66,8 @@
 		0A341D7F2259225A0066EC1D /* NoteSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A341D7E2259225A0066EC1D /* NoteSVC.swift */; };
 		0A341D81225922670066EC1D /* NoteSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A341D80225922670066EC1D /* NoteSVC.xib */; };
 		0A3EB6F422594FF800D25AF5 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EB6F322594FF800D25AF5 /* TableViewExtensions.swift */; };
-		0A43120222665BB200E8F72E /* testCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A43120122665BB200E8F72E /* testCell.swift */; };
-		0A43120422665BBE00E8F72E /* testCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A43120322665BBE00E8F72E /* testCell.xib */; };
+		0A43120222665BB200E8F72E /* GoalsPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A43120122665BB200E8F72E /* GoalsPickerCell.swift */; };
+		0A43120422665BBE00E8F72E /* GoalsPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A43120322665BBE00E8F72E /* GoalsPickerCell.xib */; };
 		0A4CC87E225FE591004C97BC /* CircleButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC87D225FE591004C97BC /* CircleButtonFactory.swift */; };
 		0A4CC880225FEFA2004C97BC /* TypeTFIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC87F225FEFA2004C97BC /* TypeTFIFactory.swift */; };
 		0A4CC882226021F8004C97BC /* TrackingModuleVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */; };
@@ -277,8 +277,8 @@
 		0A341D7E2259225A0066EC1D /* NoteSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSVC.swift; sourceTree = "<group>"; };
 		0A341D80225922670066EC1D /* NoteSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteSVC.xib; sourceTree = "<group>"; };
 		0A3EB6F322594FF800D25AF5 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
-		0A43120122665BB200E8F72E /* testCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCell.swift; sourceTree = "<group>"; };
-		0A43120322665BBE00E8F72E /* testCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testCell.xib; sourceTree = "<group>"; };
+		0A43120122665BB200E8F72E /* GoalsPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPickerCell.swift; sourceTree = "<group>"; };
+		0A43120322665BBE00E8F72E /* GoalsPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalsPickerCell.xib; sourceTree = "<group>"; };
 		0A4CC87D225FE591004C97BC /* CircleButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonFactory.swift; sourceTree = "<group>"; };
 		0A4CC87F225FEFA2004C97BC /* TypeTFIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTFIFactory.swift; sourceTree = "<group>"; };
 		0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleVCFactory.swift; sourceTree = "<group>"; };
@@ -827,8 +827,8 @@
 				0AEC55522261488000B7B75E /* GoalsBoxSVC.xib */,
 				0AEC55572261536300B7B75E /* GoalsModifySVC.swift */,
 				0AEC55552261534B00B7B75E /* GoalsModifySVC.xib */,
-				0A43120122665BB200E8F72E /* testCell.swift */,
-				0A43120322665BBE00E8F72E /* testCell.xib */,
+				0A43120122665BB200E8F72E /* GoalsPickerCell.swift */,
+				0A43120322665BBE00E8F72E /* GoalsPickerCell.xib */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
@@ -1171,7 +1171,7 @@
 				0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */,
 				0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */,
 				0C9910852219C2F00008A727 /* FoodSelectedSVC.xib in Resources */,
-				0A43120422665BBE00E8F72E /* testCell.xib in Resources */,
+				0A43120422665BBE00E8F72E /* GoalsPickerCell.xib in Resources */,
 				0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
 				0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */,
@@ -1360,7 +1360,7 @@
 				0AA5284C22022CFC00CCFEE7 /* TrackingModuleVC.swift in Sources */,
 				0A93F19322145EA30063A892 /* TypeTFI.swift in Sources */,
 				0A030FB022580A1500857BC8 /* SavedMedicationDBS.swift in Sources */,
-				0A43120222665BB200E8F72E /* testCell.swift in Sources */,
+				0A43120222665BB200E8F72E /* GoalsPickerCell.swift in Sources */,
 				0A93EA472213165D0063A892 /* (null) in Sources */,
 				0AEC55582261536300B7B75E /* GoalsModifySVC.swift in Sources */,
 				0AD94DCC220CEE9800B5C2BA /* ExerciseSelectedItem.swift in Sources */,
