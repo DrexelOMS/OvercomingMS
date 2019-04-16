@@ -21,7 +21,20 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     @IBOutlet weak var backButton: SquareButtonSVC!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var items = ["1", "2", "3", "4", "5"]
+    var items = [String]()
+    
+    var currentPage: Int = 0
+    
+    var pageSize: CGSize {
+        let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
+        var pageSize = layout.itemSize
+        if layout.scrollDirection == .horizontal {
+            pageSize.width += layout.minimumLineSpacing
+        } else {
+            pageSize.height += layout.minimumLineSpacing
+        }
+        return pageSize
+    }
     
     override func customSetup() {
         backButton.backButtonAction = backPressed
@@ -29,13 +42,20 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         setupLayout()
         
         collectionView.dataSource = self
+        
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "testCell", bundle: nil), forCellWithReuseIdentifier: "testCell")
+        
+        for i in 1...60 {
+            items.append(String(i))
+        }
     }
     
     func setupLayout() {
         let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
-        layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 30)
+        layout.spacingMode = UPCarouselFlowLayoutSpacingMode.fixed(spacing: 10)
+        
+        
     }
     
     func backPressed() {
@@ -50,6 +70,17 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "testCell", for: indexPath) as! testCell
         myCell.label.text = items[indexPath.row]
         return myCell
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
+        let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize.width : self.pageSize.height
+        let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
+        currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
+    }
+    
+    @IBAction func testPressed(_ sender: Any) {
+        print(items[currentPage])
     }
     
 }

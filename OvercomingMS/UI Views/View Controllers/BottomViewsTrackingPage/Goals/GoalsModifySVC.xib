@@ -57,14 +57,27 @@
                         <constraint firstItem="Wp0-Sd-TST" firstAttribute="leading" secondItem="IS3-7k-yfW" secondAttribute="leading" id="HpO-0n-c2Z"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxb-aA-NTz">
+                    <rect key="frame" x="50" y="663" width="314" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="7FO-44-71w"/>
+                    </constraints>
+                    <state key="normal" title="Print Selected"/>
+                    <connections>
+                        <action selector="testPressed:" destination="-1" eventType="touchUpInside" id="wSq-KU-1Sf"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="IS3-7k-yfW" firstAttribute="top" secondItem="nxb-aA-NTz" secondAttribute="bottom" id="41a-dE-QmY"/>
                 <constraint firstAttribute="bottom" secondItem="Tyn-TN-jmN" secondAttribute="bottom" id="GVr-XZ-M1E"/>
                 <constraint firstItem="Tyn-TN-jmN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HQw-D4-DsU"/>
+                <constraint firstAttribute="trailing" secondItem="nxb-aA-NTz" secondAttribute="trailing" constant="50" id="Oxc-Aq-JP4"/>
                 <constraint firstItem="IS3-7k-yfW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="PZo-hz-L2Y"/>
                 <constraint firstItem="SgN-eL-aJX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QTV-uO-KOX"/>
                 <constraint firstAttribute="trailing" secondItem="IS3-7k-yfW" secondAttribute="trailing" constant="50" id="W9v-lY-K2d"/>
+                <constraint firstItem="nxb-aA-NTz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="WZ2-ky-JIQ"/>
                 <constraint firstItem="Tyn-TN-jmN" firstAttribute="top" secondItem="IS3-7k-yfW" secondAttribute="bottom" id="ZQo-hq-BSK"/>
                 <constraint firstAttribute="trailing" secondItem="Tyn-TN-jmN" secondAttribute="trailing" id="hEz-7H-RwD"/>
                 <constraint firstItem="SgN-eL-aJX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hZV-YW-g3C"/>
