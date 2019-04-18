@@ -68,4 +68,24 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
         svc.reload()
     }
     
+    @IBAction func reset(_ sender: Any) {
+        let svc = ConfirmationSVC()
+        svc.topDescription.text = "You are reseting all daily goals to OMS recommended goals"
+        svc.bottomDescription.text = "Is this correct?"
+        svc.methodToRunOnConfirm = resetGoalsToDefault
+        parentVC.pushSubView(newSubView: svc)
+    }
+    
+    func resetGoalsToDefault() {
+        let defaultGoals = GoalsDBT()
+        
+        ProgressBarConfig.foodRatingGoals = defaultGoals.FoodRatingGoal
+        ProgressBarConfig.omega3Goal = defaultGoals.Omega3Goal
+        ProgressBarConfig.vitaminDGoal = defaultGoals.VitaminDGoal
+        ProgressBarConfig.exerciseGoal = defaultGoals.ExerciseGoal
+        ProgressBarConfig.meditationGoal = defaultGoals.MeditationGoal
+        
+        reload()
+    }
+    
 }
