@@ -29,4 +29,11 @@ class ConfirmationFactory {
         svc.bottomDescription.text = "You will not be able to undo this action"
         return svc
     }
+    
+    static func GoalsConfirmation() -> ConfirmationSVC {
+        let svc = ConfirmationSVC()
+        svc.topDescription.text = "You haven't saved your new goal yet!"
+        svc.bottomDescription.text = "Are you sure you want to leave this page without saving?"
+        return svc
+    }
 }
