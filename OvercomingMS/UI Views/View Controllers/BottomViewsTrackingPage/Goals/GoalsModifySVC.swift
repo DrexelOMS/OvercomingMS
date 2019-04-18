@@ -44,6 +44,13 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         return pageSize
     }
     
+    convenience init(low: Int, high: Int) {
+        self.init()
+        
+        self.low = low
+        self.high = high
+    }
+    
     override func customSetup() {
         
         backButton.leftButtonAction = backPressed
@@ -56,10 +63,6 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "GoalsPickerCell", bundle: nil), forCellWithReuseIdentifier: "GoalsPickerCell")
         
-        for i in stride(from: low, to: high, by: inc) {
-            items.append(i)
-        }
-        
     }
     
     func setupLayout() {
@@ -67,6 +70,14 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.fixed(spacing: -5)
         
         collectionView.showsHorizontalScrollIndicator = false
+    }
+    
+    override func initialize(parentVC: SlidingStackVC) {
+        super.initialize(parentVC: parentVC)
+        
+        for i in stride(from: low, to: high + 1, by: inc) {
+            items.append(i)
+        }
     }
     
     override func reload() {
@@ -83,6 +94,9 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     
     func confirmPressed(){
         switch Module {
+        case .Food:
+            ProgressBarConfig.foodRatingGoals = items[currentPage]
+            break
         case .Omega3:
             ProgressBarConfig.omega3Goal = items[currentPage]
             break

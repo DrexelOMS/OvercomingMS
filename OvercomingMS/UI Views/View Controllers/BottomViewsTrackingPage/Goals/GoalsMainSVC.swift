@@ -31,44 +31,17 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
     }
     
     override func reload() {
-        foodButton.goalDescription = "\(ProgressBarConfig.foodDescriptions[ProgressBarConfig.foodRatingGoals]) (\(ProgressBarConfig.foodRatingGoals)/5)"
+        foodButton.goalDescription = "\(ProgressBarConfig.getfoodDescription(rating: ProgressBarConfig.foodRatingGoals)) (\(ProgressBarConfig.foodRatingGoals)/5)"
         omega3Button.goalDescription = "\(ProgressBarConfig.omega3Goal) \(ProgressBarConfig.omega3UOM)"
         vitaminDButton.goalDescription = "\(ProgressBarConfig.vitaminDGoal) \(ProgressBarConfig.vitaminDUOM)"
         exerciseButton.goalDescription = "\(ProgressBarConfig.exerciseGoal) \(ProgressBarConfig.lengthUOM)"
         meditationButton.goalDescription = "\(ProgressBarConfig.meditationGoal) \(ProgressBarConfig.lengthUOM)"
     }
     
-    // Whatever happens, we must prevent user from setting a goal to 0
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        endEditing(true)
-//
-//        switch textField {
-//        case foodGoalTextField:
-//            ProgressBarConfig.foodRatingGoals = Int(textField.text ?? "") ?? ProgressBarConfig.foodRatingGoals
-//            break
-//        case omega3GoalTextField:
-//            ProgressBarConfig.omega3Goal = Int(textField.text ?? "") ?? ProgressBarConfig.omega3Goal
-//            break
-//        case vitaminDGoalTextField:
-//            ProgressBarConfig.vitaminDGoal = Int(textField.text ?? "") ?? ProgressBarConfig.vitaminDGoal
-//            break
-//        case exerciseGoalTextField:
-//            ProgressBarConfig.exerciseGoal = Int(textField.text ?? "") ?? ProgressBarConfig.exerciseGoal
-//            break
-//        case meditationGoalTextField:
-//            ProgressBarConfig.meditationGoal = Int(textField.text ?? "") ?? ProgressBarConfig.meditationGoal
-//            break
-//        default:
-//            break
-//        }
-//
-//        reload()
-//
-//        return true
-//    }
-    
     func foodPressed() {
-        
+        let svc = GoalsModifyFactory.FoodGoalsModifySVC()
+        parentVC.pushSubView(newSubView: svc)
+        svc.reload()
     }
     
     func omega3Pressed() {

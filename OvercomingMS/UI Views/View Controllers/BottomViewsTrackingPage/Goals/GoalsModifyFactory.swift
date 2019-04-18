@@ -10,6 +10,20 @@ import UIKit
 
 class GoalsModifyFactory {
     
+    static func FoodGoalsModifySVC() -> GoalsModifySVC {
+        let svc = GoalsModifySVC(low: 2, high: 5)
+        
+        //Initialize Variables
+        svc.header.titleText = "Food"
+        svc.header.descriptionText = "What is your daily goal for Food"
+        svc.currentGoalLabel.text = String(ProgressBarConfig.foodRatingGoals)
+        svc.goalUnitLabel.text = "\(ProgressBarConfig.foodRatingGoals)/5"
+        svc.Module = .Food
+        svc.goal = ProgressBarConfig.foodRatingGoals
+        
+        return svc
+    }
+    
     static func Omega3GoalsModifySVC() -> GoalsModifySVC {
         let svc = GoalsModifySVC()
         

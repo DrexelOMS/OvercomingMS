@@ -44,6 +44,9 @@
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Food"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="pretty good (3/5)"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
+                                            <color key="value" red="0.42352941176470588" green="0.29803921568627451" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
@@ -62,6 +65,9 @@
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Omega 3"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="18 grams"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
+                                            <color key="value" red="0.0078431372550000003" green="0.63529411759999999" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
@@ -80,6 +86,9 @@
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Vitamin D"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="10 klUs"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
+                                            <color key="value" red="1" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
@@ -98,6 +107,9 @@
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Exercise"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="30 min."/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
+                                            <color key="value" red="0.34901960780000002" green="0.53725490200000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
@@ -116,6 +128,9 @@
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Meditation"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="30 min."/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
+                                            <color key="value" red="0.40000000000000002" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
