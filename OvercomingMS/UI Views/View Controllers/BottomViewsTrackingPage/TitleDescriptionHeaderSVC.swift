@@ -16,8 +16,8 @@ class TitleDescriptionHeaderSVC : SlidingAbstractSVC {
         }
     }
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
     
     @IBInspectable var titleText: String {
         get {

@@ -72,19 +72,27 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
     }
     
     func omega3Pressed() {
-        
+        let svc = GoalsModifyFactory.Omega3GoalsModifySVC()
+        parentVC.pushSubView(newSubView: svc)
+        svc.reload()
     }
     
     func vitaminDPressed() {
-        
+        let svc = GoalsModifyFactory.VitaminDGoalsModifySVC()
+        parentVC.pushSubView(newSubView: svc)
+        svc.reload()
     }
     
     func exercisePressed() {
-        parentVC.pushSubView(newSubView: GoalsModifyFactory.ExerciseGoalsModifySVC())
+        let svc = GoalsModifyFactory.ExerciseGoalsModifySVC()
+        parentVC.pushSubView(newSubView: svc)
+        svc.reload()
     }
     
     func meditationPressed() {
-        
+        let svc = GoalsModifyFactory.MeditationGoalsModifySVC()
+        parentVC.pushSubView(newSubView: svc)
+        svc.reload()
     }
     
 }

@@ -20,18 +20,18 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     
     @IBOutlet weak var backButton: BackConfirmButtonsSVC!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var header: TitleDescriptionHeaderSVC!
     @IBOutlet weak var currentGoalLabel: UILabel!
     @IBOutlet weak var goalUnitLabel: UILabel!
     
-    var items = [Int]()
-    
-    var currentPage: Int = 0
     var low = 1
-    var high = 444
+    var high = 120
     var inc = 1
+    var goal: Int = 1
     var Module: Modules = .Exercise
+    
+    private var items = [Int]()
+    private var currentPage: Int = 0
     
     var pageSize: CGSize {
         let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
@@ -59,6 +59,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         for i in stride(from: low, to: high, by: inc) {
             items.append(i)
         }
+        
     }
     
     func setupLayout() {
@@ -66,6 +67,11 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.fixed(spacing: -5)
         
         collectionView.showsHorizontalScrollIndicator = false
+    }
+    
+    override func reload() {
+        currentPage = items.index(of: goal)!
+        collectionView.scrollToItem(at: IndexPath(item: currentPage, section: 0), at: .centeredHorizontally, animated: true)
     }
     
     func backPressed() {
@@ -77,9 +83,18 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     
     func confirmPressed(){
         switch Module {
+        case .Omega3:
+            ProgressBarConfig.omega3Goal = items[currentPage]
+            break
+        case .VitaminD:
+            ProgressBarConfig.vitaminDGoal = items[currentPage]
+            break
         case .Exercise:
             ProgressBarConfig.exerciseGoal = items[currentPage]
         break
+        case .Meditation:
+            ProgressBarConfig.meditationGoal = items[currentPage]
+            break
         default:
             break
         }
@@ -102,10 +117,6 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
         currentGoalLabel.text = String(items[currentPage])
-    }
-    
-    @IBAction func testPressed(_ sender: Any) {
-        print(items[currentPage])
     }
     
 }
