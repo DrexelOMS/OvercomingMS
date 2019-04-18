@@ -37,6 +37,13 @@ class TitleDescriptionHeaderSVC : SlidingAbstractSVC {
         }
     }
     
+    @IBOutlet weak var line: UIView!
+    @IBInspectable var showLine: Bool = true {
+        didSet {
+            line.isHidden = !showLine
+        }
+    }
+    
     override func customSetup() {
         
     }

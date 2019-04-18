@@ -29,7 +29,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     
     var currentPage: Int = 0
     var low = 1
-    var high = 60
+    var high = 444
     var inc = 1
     var Module: Modules = .Exercise
     
@@ -63,7 +63,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     
     func setupLayout() {
         let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
-        layout.spacingMode = UPCarouselFlowLayoutSpacingMode.fixed(spacing: 10)
+        layout.spacingMode = UPCarouselFlowLayoutSpacingMode.fixed(spacing: -5)
         
         collectionView.showsHorizontalScrollIndicator = false
     }
@@ -92,7 +92,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoalsPickerCell", for: indexPath) as! GoalsPickerCell
-        myCell.label.text = String(items[indexPath.row])
+        myCell.setLabelText(String(items[indexPath.row]))
         return myCell
     }
     

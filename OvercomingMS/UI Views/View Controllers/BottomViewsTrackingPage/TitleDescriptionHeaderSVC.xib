@@ -18,6 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TitleDescriptionHeaderSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="descriptionLabel" destination="niz-R8-eXv" id="vHs-zU-o94"/>
+                <outlet property="line" destination="RTP-Kk-d4q" id="DGa-f0-BKW"/>
                 <outlet property="titleLabel" destination="GMO-Le-kVs" id="rBg-ai-Gzo"/>
             </connections>
         </placeholder>
@@ -56,14 +57,13 @@
                                     <rect key="frame" x="0.0" y="28" width="374" height="43"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niz-R8-eXv">
-                                            <rect key="frame" x="30" y="0.0" width="314" height="43"/>
+                                            <rect key="frame" x="30" y="0.0" width="314" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="niz-R8-eXv" secondAttribute="bottom" id="37e-wt-8KS"/>
                                         <constraint firstItem="niz-R8-eXv" firstAttribute="leading" secondItem="QdI-LO-a5i" secondAttribute="leading" constant="30" id="5iG-xx-CaI"/>
                                         <constraint firstAttribute="trailing" secondItem="niz-R8-eXv" secondAttribute="trailing" constant="30" id="BvX-w9-7F4"/>
                                         <constraint firstItem="niz-R8-eXv" firstAttribute="top" secondItem="QdI-LO-a5i" secondAttribute="top" id="wBN-cf-ooa"/>

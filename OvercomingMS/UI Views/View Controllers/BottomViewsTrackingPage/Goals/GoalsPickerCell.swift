@@ -12,5 +12,10 @@ class GoalsPickerCell : UICollectionViewCell {
     
     @IBOutlet weak var label: UILabel!
     
+    func setLabelText(_ text: String) {
+        let kerning = label.kerning
+        label.text = text;
+        label.kerning = kerning
+    }
 }
 
