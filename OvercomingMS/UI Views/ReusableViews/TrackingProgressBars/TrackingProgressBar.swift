@@ -63,6 +63,18 @@ class TrackingProgressBar: CustomView {
     
     var originalBackground: UIColor = UIColor.white
     
+    private var isTracked = true {
+        didSet {
+            if isTracked {
+                roundedView.backgroundColor = colorTheme
+            }
+            else {
+                roundedView.backgroundColor = UIColor.lightGray
+            }
+            checkButton.isEnabled = isTracked
+        }
+    }
+    
     override func customSetup() {
         //set the default progress bar to full
         linearProgressBar.progressValue = 100
@@ -90,7 +102,12 @@ class TrackingProgressBar: CustomView {
     
     private func setColorMode(completed: Bool) {
         if(completed) {
-            roundedView.backgroundColor = colorTheme
+            if isTracked {
+                roundedView.backgroundColor = colorTheme
+            }
+            else {
+                roundedView.backgroundColor = UIColor.lightGray
+            }
             leftLabel.textColor = UIColor.white
             rightLabel.textColor = UIColor.white
             checkButton.setImage(UIImage(named: "QuickCompleteReversed"), for: .normal)
@@ -117,15 +134,6 @@ class TrackingProgressBar: CustomView {
         return Title
     }
     
-    func setEnabled(enabled: Bool) {
-        if enabled {
-            roundedView.backgroundColor = UIColor.white
-        }
-        else {
-            roundedView.backgroundColor = UIColor.lightGray
-        }
-    }
-    
     func toggleCheckMarkVisibility(isHidden: Bool) {
         self.rightContainerView.isHidden = isHidden
         if isHidden {
@@ -138,24 +146,39 @@ class TrackingProgressBar: CustomView {
     }
     
     @objc private func leftContainerPressed(tapGestureRecognizer: UITapGestureRecognizer){
-        delegate?.didPressLeftContainer(self)
+        if isTracked {
+            delegate?.didPressLeftContainer(self)
+        }
     }
     
     @IBAction private func checkButtonPressed(_ sender: UIButton) {
-        delegate?.didPressCheckButton(self)
+        if isTracked {
+            delegate?.didPressCheckButton(self)
+        }
     }
     
-    func update(trackingDBS: TrackingModulesDBS) {
-        setColorMode(completed: trackingDBS.getPercentageComplete() >= 100)
-        setRightLabel(description: trackingDBS.getTrackingDescription())
-        
-        checkButton.isEnabled = trackingDBS.getPercentageComplete() < 100
-        
-        if hasProgressBar {
-            setProgressValue(value: trackingDBS.getPercentageComplete())
+    func update(trackingDBS: TrackingModulesDBS, isTracked: Bool = true) {
+        self.isTracked = isTracked
+        if isTracked {
+            setColorMode(completed: trackingDBS.getPercentageComplete() >= 100)
+            setRightLabel(description: trackingDBS.getTrackingDescription())
+            
+            checkButton.isEnabled = trackingDBS.getPercentageComplete() < 100
+            
+            if hasProgressBar {
+                setProgressValue(value: trackingDBS.getPercentageComplete())
+            }
+            else {
+                linearProgressBar.isHidden = true
+            }
         }
         else {
-            linearProgressBar.isHidden = true
+            setRightLabel(description: "")
+            setColorMode(completed: true)
+            
+            if !hasProgressBar {
+                linearProgressBar.isHidden = true
+            }
         }
     }
 }

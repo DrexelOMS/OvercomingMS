@@ -175,8 +175,22 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         medicationBar.update(trackingDBS: SavedMedicationDBS())
         
         header.perfectDaysLabel.text = "\(TrackingModulesDBS().getTotalPerfectDays()) perfect days"
+        setHeaderStreak()
+    
+    }
+    
+    private func setHeaderStreak() {
+        var count = 0
+        let trackingDBS = TrackingModulesDBS()
+        var date = globalCurrentDate
+        while(trackingDBS.getTrackingDay(date: date).IsDayComplete) {
+            count += 1
+            
+            let previousDay = OMSDateAccessor.getFullDate(date: date).addingTimeInterval(-60*60*24)
+            date = OMSDateAccessor.getFormatedDate(date: previousDay)
+        }
         
-//        medicationBar.setEnabled(enabled: false)
+        header.daysInARow.text = "\(count) days in a row"
     }
     
     //MARK: Delegates
