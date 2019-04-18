@@ -40,12 +40,23 @@ class GoalsBoxSVC : CustomView {
         }
     }
     
-    @IBOutlet weak var circleView: OMSRoundedBox!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var roundedBoxView: RoundedBoxShadowsTemplate!
+    @IBOutlet private weak var circleView: OMSRoundedBox!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var roundedBoxView: RoundedBoxShadowsTemplate!
+    
+    var buttonAction : (() -> ())?
     
     override func customSetup() {
-        
+        roundedBoxView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonTapped(tapGestureRecognizer: )))
+        roundedBoxView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func buttonTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        guard let buttonAction = buttonAction else {
+            fatalError("ButtonAction not set")
+        }
+        buttonAction()
     }
 }
