@@ -36,6 +36,10 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="4NW-k9-7Ak"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Food"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="3/5"/>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
                             <constraints>
@@ -52,6 +56,10 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="AY0-kb-p7f"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Omega 3"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="18 grams"/>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
                             <constraints>
@@ -68,6 +76,10 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="9d8-RG-VQK"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Vitamin D"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="10 klUs"/>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
                             <constraints>
@@ -84,6 +96,10 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="FqB-mP-tuN"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Exercise"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="30 min."/>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
                             <constraints>
@@ -100,6 +116,10 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="qBi-TQ-IUW"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Meditation"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="30 min."/>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
                             <constraints>
