@@ -106,6 +106,10 @@
 		0AA5286B2202809700CCFEE7 /* ConfirmationSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */; };
 		0AA5286E2202827000CCFEE7 /* SquareButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5286D2202827000CCFEE7 /* SquareButtonSVC.swift */; };
 		0AA528702202828300CCFEE7 /* SquareButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA5286F2202828300CCFEE7 /* SquareButtonSVC.xib */; };
+		0AACE78622694403001803DA /* OutsideSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AACE78222694403001803DA /* OutsideSVC.xib */; };
+		0AACE78722694403001803DA /* OutsideSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACE78322694403001803DA /* OutsideSVC.swift */; };
+		0AACE78822694403001803DA /* OutsideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AACE78422694403001803DA /* OutsideCell.xib */; };
+		0AACE78922694403001803DA /* OutsideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACE78522694403001803DA /* OutsideCell.swift */; };
 		0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */; };
 		0AD07F7221FCFF8100C55831 /* TrackingProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */; };
 		0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD07F8421FE53B900C55831 /* DesignConstants.swift */; };
@@ -326,6 +330,10 @@
 		0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationSVC.swift; sourceTree = "<group>"; };
 		0AA5286D2202827000CCFEE7 /* SquareButtonSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButtonSVC.swift; sourceTree = "<group>"; };
 		0AA5286F2202828300CCFEE7 /* SquareButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareButtonSVC.xib; sourceTree = "<group>"; };
+		0AACE78222694403001803DA /* OutsideSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OutsideSVC.xib; sourceTree = "<group>"; };
+		0AACE78322694403001803DA /* OutsideSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutsideSVC.swift; sourceTree = "<group>"; };
+		0AACE78422694403001803DA /* OutsideCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OutsideCell.xib; sourceTree = "<group>"; };
+		0AACE78522694403001803DA /* OutsideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutsideCell.swift; sourceTree = "<group>"; };
 		0AD07F6D21FCFBBF00C55831 /* TrackingProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingProgressBar.xib; sourceTree = "<group>"; };
 		0AD07F7121FCFF8100C55831 /* TrackingProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingProgressBar.swift; sourceTree = "<group>"; };
 		0AD07F8421FE53B900C55831 /* DesignConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignConstants.swift; sourceTree = "<group>"; };
@@ -561,6 +569,7 @@
 		0A2BA61822029259004074F3 /* TrackingModules */ = {
 			isa = PBXGroup;
 			children = (
+				0AACE781226943E0001803DA /* VitaminD */,
 				0A0818942214E5F90021BDF6 /* FoodModule */,
 				0A2BA61922029262004074F3 /* ConfirmationSVCs */,
 				0AD94DC6220CE44200B5C2BA /* SelectedItemSVC */,
@@ -724,6 +733,17 @@
 				0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */,
 			);
 			path = ButtonViews;
+			sourceTree = "<group>";
+		};
+		0AACE781226943E0001803DA /* VitaminD */ = {
+			isa = PBXGroup;
+			children = (
+				0AACE78522694403001803DA /* OutsideCell.swift */,
+				0AACE78422694403001803DA /* OutsideCell.xib */,
+				0AACE78322694403001803DA /* OutsideSVC.swift */,
+				0AACE78222694403001803DA /* OutsideSVC.xib */,
+			);
+			path = VitaminD;
 			sourceTree = "<group>";
 		};
 		0AD07F8621FE596F00C55831 /* ReusableViews */ = {
@@ -1175,6 +1195,7 @@
 				0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */,
 				0C9910852219C2F00008A727 /* FoodSelectedSVC.xib in Resources */,
 				0A43120422665BBE00E8F72E /* GoalsPickerCell.xib in Resources */,
+				0AACE78822694403001803DA /* OutsideCell.xib in Resources */,
 				0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
 				0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */,
@@ -1193,6 +1214,7 @@
 				0A2BAA68220336A5004074F3 /* CircleButtonSVC.xib in Resources */,
 				0A9926C4225CE472008DE456 /* TitleDescriptionHeaderSVC.xib in Resources */,
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
+				0AACE78622694403001803DA /* OutsideSVC.xib in Resources */,
 				0AD7EB4622234524006F71C0 /* MedRateButtonsSVC.xib in Resources */,
 				0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */,
 				0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */,
@@ -1408,6 +1430,7 @@
 				0A030F7B22555C9400857BC8 /* MedicationNotTakenItemSVC.swift in Sources */,
 				0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
+				0AACE78722694403001803DA /* OutsideSVC.swift in Sources */,
 				0AEF7A3A222CD774009A0292 /* GoalsMainSVC.swift in Sources */,
 				0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */,
 				0AD7EB00221B1E7F006F71C0 /* Omega3SelectedItem.swift in Sources */,
@@ -1431,6 +1454,7 @@
 				0A030FBB22580A1500857BC8 /* SymptomsNoteDBT.swift in Sources */,
 				0AD7EB232221F1E1006F71C0 /* SeeMoreButtonSVC.swift in Sources */,
 				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
+				0AACE78922694403001803DA /* OutsideCell.swift in Sources */,
 				0AEF7A542231B487009A0292 /* SwipeDownVC.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,

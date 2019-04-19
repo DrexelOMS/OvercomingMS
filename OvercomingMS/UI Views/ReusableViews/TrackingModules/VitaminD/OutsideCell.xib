@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OutsideCell" id="K1B-la-Mb9" customClass="OutsideCell" customModule="OvercomingMS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K1B-la-Mb9" id="XNa-1Q-BFL">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pDa-HQ-zMt">
+                        <rect key="frame" x="10" y="0.0" width="394" height="100.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discover" translatesAutoresizingMaskIntoConstraints="NO" id="3PQ-t6-Ezm">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="100.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="kHD-xw-JBT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpc-aJ-Jes">
+                                <rect key="frame" x="88" y="0.0" width="306" height="100.5"/>
+                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Cpc-aJ-Jes" secondAttribute="bottom" id="G0d-hw-QiU"/>
+                            <constraint firstItem="Cpc-aJ-Jes" firstAttribute="top" secondItem="pDa-HQ-zMt" secondAttribute="top" id="Q4T-7Q-dVH"/>
+                            <constraint firstAttribute="height" constant="100" id="R29-KA-HbU"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="pDa-HQ-zMt" secondAttribute="bottom" id="6r5-IW-7B1"/>
+                    <constraint firstItem="pDa-HQ-zMt" firstAttribute="leading" secondItem="XNa-1Q-BFL" secondAttribute="leading" constant="10" id="i2K-4Y-tHd"/>
+                    <constraint firstAttribute="trailing" secondItem="pDa-HQ-zMt" secondAttribute="trailing" constant="10" id="nVv-kO-b22"/>
+                    <constraint firstItem="pDa-HQ-zMt" firstAttribute="top" secondItem="XNa-1Q-BFL" secondAttribute="top" id="u6T-Em-vl1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Discover" width="689" height="689"/>
+    </resources>
+</document>
