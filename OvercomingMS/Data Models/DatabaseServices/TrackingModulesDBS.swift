@@ -81,15 +81,7 @@ class TrackingModulesDBS{
         let savedIsDayComplete = day.IsDayComplete
         do {
             try realm.write() {
-                day.IsDayComplete = day.FoodEatenRating >= ProgressBarConfig.foodRatingGoals && day.IsOmega3Complete && day.IsVitaminDComplete && day.IsExerciseComplete && day.IsMeditationComplete && day.IsMedicationComplete
-                
-//                print("Food Complete: \(day.IsFoodComplete)")
-//                print("Omega3 Complete: \(day.IsOmega3Complete)")
-//                print("VitaminD Complete: \(day.IsVitaminDComplete)")
-//                print("Exercise Complete: \(day.IsExerciseComplete)")
-//                print("Meditation Complete: \(day.IsMeditationComplete)")
-//                print("Medication Complete: \(day.IsMedicationComplete)")
-//                print("Day Complete: \(day.IsDayComplete)")
+                day.IsDayComplete = day.IsFoodComplete && day.IsOmega3Complete && day.IsVitaminDComplete && day.IsExerciseComplete && day.IsMeditationComplete && day.IsMedicationComplete
             }
         } catch {
             print("Error updating complete status data: \(error)")

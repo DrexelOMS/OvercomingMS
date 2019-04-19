@@ -28,7 +28,7 @@ class FoodRatingDBS : TrackingModulesDBS {
     
      // food doesnt have a progress bar
     override func getPercentageComplete() -> Int {
-        if getRating() >= ProgressBarConfig.foodRatingGoals {
+        if getTrackingDay().IsFoodComplete {
             return 100
         }
         return 0
