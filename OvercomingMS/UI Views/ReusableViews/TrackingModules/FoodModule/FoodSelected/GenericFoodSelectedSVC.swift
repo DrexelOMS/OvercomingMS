@@ -1,18 +1,18 @@
 //
-//  FoodUnknown.swift
+//  GenericFoodSelectedSVC.swift
 //  OvercomingMS
 //
-//  Created by Vincent Finn on 3/2/19.
+//  Created by Vincent Finn on 4/19/19.
 //  Copyright © 2019 DrexelOMS. All rights reserved.
 //
 
 import UIKit
 
-class FoodUnknownSVC : CustomView {
+class GenericFoodSelectedSVC : CustomView {
     
     override var nibName: String {
         get {
-            return "FoodUnknownSVC"
+            return "GenericFoodSelectedSVC"
         }
     }
     

@@ -29,10 +29,10 @@ class FoodSelectedSVC : SlidingAbstractSVC {
         
         self.food = food
         if (unknown) {
-            constrainView(view: FoodUnknownSVC())
+            constrainView(view: GenericFoodSelectedSVC())
         }
         else {
-            constrainView(view: FoodApprovedSVC())
+            constrainView(view: GenericFoodSelectedSVC())
         }
 
         setLabel(name: food.Name, description: food.Brand)
@@ -44,7 +44,7 @@ class FoodSelectedSVC : SlidingAbstractSVC {
         self.food = food
         //initialize
         if(ingredients == [""] && types == [""]){
-            constrainView(view: FoodUnknownSVC())
+            constrainView(view: GenericFoodSelectedSVC())
         }
         else{
             print(ingredients)

@@ -6,18 +6,18 @@
 //  Copyright © 2019 DrexelOMS. All rights reserved.
 //
 
-import UIKit
-
-class FoodApprovedSVC: CustomView {
-    
-    override var nibName: String {
-        get {
-            return "FoodApprovedSVC"
-        }
-    }
-    
-    override func customSetup() {
-        
-    }
-    
-}
+//import UIKit
+//
+//class FoodApprovedSVC: CustomView {
+//    
+//    override var nibName: String {
+//        get {
+//            return "FoodApprovedSVC"
+//        }
+//    }
+//    
+//    override func customSetup() {
+//        
+//    }
+//    
+//}

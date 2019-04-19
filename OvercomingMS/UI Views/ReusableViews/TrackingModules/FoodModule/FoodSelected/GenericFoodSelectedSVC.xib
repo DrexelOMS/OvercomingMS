@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GenericFoodSelectedSVC" customModule="OvercomingMS" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="323"/>
@@ -27,28 +27,15 @@
                     <rect key="frame" x="30" y="21" width="270" height="302"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Um4-gA-6aw" userLabel="ResultDescriptionView">
-                            <rect key="frame" x="0.0" y="0.0" width="270" height="117.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="270" height="40"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="aM2-Zc-2DT">
-                                    <rect key="frame" x="0.0" y="0.0" width="270" height="117.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="270" height="40"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGA-08-sy1">
-                                            <rect key="frame" x="0.0" y="0.0" width="270" height="56"/>
-                                            <attributedString key="attributedText">
-                                                <fragment content="We couldn’t find what you were looking for…">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Quicksand-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYN-WV-P5I">
-                                            <rect key="frame" x="0.0" y="68" width="270" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="270" height="40"/>
                                             <attributedString key="attributedText">
-                                                <fragment content="Try editing your search, or check the nutrition label to make sure the food isn’t in one of these categories:">
+                                                <fragment content="In general, you should avoid the following types of food">
                                                     <attributes>
                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <font key="NSFont" size="12" name="Avenir-Book"/>
@@ -61,28 +48,28 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="aM2-Zc-2DT" secondAttribute="bottom" id="1Pp-fs-NkN"/>
+                                <constraint firstAttribute="height" constant="40" id="5SW-SF-bPZ"/>
                                 <constraint firstItem="aM2-Zc-2DT" firstAttribute="top" secondItem="Um4-gA-6aw" secondAttribute="top" id="Buz-4n-TOU"/>
                                 <constraint firstAttribute="trailing" secondItem="aM2-Zc-2DT" secondAttribute="trailing" id="ZQg-XF-kls"/>
                                 <constraint firstItem="aM2-Zc-2DT" firstAttribute="leading" secondItem="Um4-gA-6aw" secondAttribute="leading" id="cH3-fu-Cgg"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSo-q0-b6g" userLabel="CategoryView">
-                            <rect key="frame" x="0.0" y="147.5" width="270" height="154.5"/>
+                            <rect key="frame" x="0.0" y="70" width="270" height="232"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HOV-vR-cKL">
-                                    <rect key="frame" x="0.0" y="0.0" width="270" height="154.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="270" height="232"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lag-Ls-vQU" userLabel="LeftView">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="154.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="232"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CUN-rt-B9J">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="154.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="232"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXA-Au-sy8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="31"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="50.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Baked Foods">
                                                                     <attributes>
@@ -95,11 +82,11 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KF5-9c-j3K">
-                                                            <rect key="frame" x="0.0" y="41" width="130" height="31.5"/>
+                                                            <rect key="frame" x="0.0" y="60.5" width="130" height="50.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Dairy">
                                                                     <attributes>
-                                                                        <color key="NSColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="NSColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <font key="NSFont" size="18" name="Avenir-Heavy"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
@@ -108,11 +95,11 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGb-hv-9QV">
-                                                            <rect key="frame" x="0.0" y="82.5" width="130" height="31"/>
+                                                            <rect key="frame" x="0.0" y="121" width="130" height="50.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Egg Yokes">
                                                                     <attributes>
-                                                                        <color key="NSColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="NSColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <font key="NSFont" size="18" name="Avenir-Heavy"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
@@ -121,11 +108,11 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yw9-pa-cTT">
-                                                            <rect key="frame" x="0.0" y="123.5" width="130" height="31"/>
+                                                            <rect key="frame" x="0.0" y="181.5" width="130" height="50.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Fast Food">
                                                                     <attributes>
-                                                                        <color key="NSColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="NSColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <font key="NSFont" size="18" name="Avenir-Heavy"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
@@ -136,7 +123,6 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="CUN-rt-B9J" firstAttribute="top" secondItem="Lag-Ls-vQU" secondAttribute="top" id="FlE-7k-9GP"/>
                                                 <constraint firstItem="CUN-rt-B9J" firstAttribute="leading" secondItem="Lag-Ls-vQU" secondAttribute="leading" id="Fmm-1j-ShA"/>
@@ -145,17 +131,17 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rqx-V1-HZm" userLabel="RightView">
-                                            <rect key="frame" x="140" y="0.0" width="130" height="154.5"/>
+                                            <rect key="frame" x="140" y="0.0" width="130" height="232"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="isv-hy-mLD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="154.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="232"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yB-7K-nxy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="31"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="50.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Fats">
                                                                     <attributes>
-                                                                        <color key="NSColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="NSColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <font key="NSFont" size="18" name="Avenir-Heavy"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
@@ -164,11 +150,11 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tm0-dd-7Ag">
-                                                            <rect key="frame" x="0.0" y="41" width="130" height="31.5"/>
+                                                            <rect key="frame" x="0.0" y="60.5" width="130" height="50.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Fried Foods">
                                                                     <attributes>
-                                                                        <color key="NSColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="NSColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <font key="NSFont" size="18" name="Avenir-Heavy"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
@@ -177,11 +163,11 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qy-bB-4Jz">
-                                                            <rect key="frame" x="0.0" y="82.5" width="130" height="31"/>
+                                                            <rect key="frame" x="0.0" y="121" width="130" height="50.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Meats">
                                                                     <attributes>
-                                                                        <color key="NSColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="NSColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <font key="NSFont" size="18" name="Avenir-Heavy"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
@@ -190,11 +176,11 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p58-6H-28m">
-                                                            <rect key="frame" x="0.0" y="123.5" width="130" height="31"/>
+                                                            <rect key="frame" x="0.0" y="181.5" width="130" height="50.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Snacks">
                                                                     <attributes>
-                                                                        <color key="NSColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="NSColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <font key="NSFont" size="18" name="Avenir-Heavy"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
@@ -205,7 +191,6 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="isv-hy-mLD" firstAttribute="leading" secondItem="Rqx-V1-HZm" secondAttribute="leading" id="NUW-cK-XEl"/>
                                                 <constraint firstAttribute="trailing" secondItem="isv-hy-mLD" secondAttribute="trailing" id="Zuj-dD-jZs"/>
@@ -216,7 +201,6 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="HOV-vR-cKL" secondAttribute="bottom" id="C2X-ig-Z2q"/>
                                 <constraint firstItem="HOV-vR-cKL" firstAttribute="leading" secondItem="fSo-q0-b6g" secondAttribute="leading" id="Inm-MQ-GXY"/>
@@ -227,7 +211,6 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="9oj-9m-R8A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="6tG-9u-eOv"/>
                 <constraint firstItem="FP2-Hv-hMN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="E58-i9-AUS"/>
