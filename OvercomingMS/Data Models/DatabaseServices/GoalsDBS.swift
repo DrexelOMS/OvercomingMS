@@ -42,14 +42,15 @@ class GoalsDBS {
             //cant get goals since we are in a write statement
             let currentDate = globalCurrentFullDate
             let da = OMSDateAccessor()
+            let allGoals = goals
             
-            var goalsToReturn: GoalsDBT = goals[goals.count - 1]
-            for goals in goals.reversed() {
-                let date = OMSDateAccessor.getFullDate(date: goals.DateModified)
+            var goalsToReturn: GoalsDBT = allGoals[allGoals.count - 1]
+            for dayGoals in allGoals.reversed() {
+                let date = OMSDateAccessor.getFullDate(date: dayGoals.DateModified)
                 if da.greaterThanEqualComparison(left: currentDate, right: date) {
-                    return goals
+                    return dayGoals
                 }
-                goalsToReturn = goals
+                goalsToReturn = dayGoals
             }
             return goalsToReturn
         }
@@ -57,7 +58,7 @@ class GoalsDBS {
     
     //MARK: set todays goals
     //Usage is to set the goal variables, then call writeGoals()
-    
+    //Note: this is intended to support changing goals after the most recent goal, not before
     func writeGoals() {
         let date = globalCurrentDate
         do {

@@ -16,6 +16,8 @@ class SettingsTrackingSVC : SlidingAbstractSVC {
         }
     }
     
+    let activeTracking = ActiveTrackingDBS()
+    
     @IBOutlet weak var backButton: SquareButtonSVC!
     
     @IBOutlet weak var foodToggle: UISwitch!
@@ -28,12 +30,13 @@ class SettingsTrackingSVC : SlidingAbstractSVC {
     override func customSetup() {
         backButton.backButtonAction = backPressed
         
-        foodToggle.isOn = true
-        omega3Toggle.isOn = true
-        vitaminDToggle.isOn = false
-        exerciseToggle.isOn = true
-        meditationToggle.isOn = true
-        medicationToggle.isOn = false
+        let mostRecent = activeTracking.mostRecentActiveTracking
+        foodToggle.isOn = mostRecent.IsFoodActive
+        omega3Toggle.isOn = mostRecent.IsOmega3Active
+        vitaminDToggle.isOn = mostRecent.IsVitaminDActive
+        exerciseToggle.isOn = mostRecent.IsExerciseActive
+        meditationToggle.isOn = mostRecent.IsMeditationActive
+        medicationToggle.isOn = mostRecent.IsMedicationActive
     }
     
     func backPressed() {
@@ -41,26 +44,32 @@ class SettingsTrackingSVC : SlidingAbstractSVC {
     }
     
     @IBAction func foodToggled(_ sender: Any) {
-        print("food")
+        activeTracking.foodIsActive = foodToggle.isOn
+        activeTracking.writeActiveItems()
     }
     
     @IBAction func omega3Toggled(_ sender: Any) {
-        print("omega3")
+        activeTracking.omega3IsActive = omega3Toggle.isOn
+        activeTracking.writeActiveItems()
     }
     
     @IBAction func vitaminDToggled(_ sender: Any) {
-        print("vit")
+        activeTracking.vitaminDIsActive = vitaminDToggle.isOn
+        activeTracking.writeActiveItems()
     }
     
     @IBAction func exerciseToggled(_ sender: Any) {
-        print("exercise")
+        activeTracking.exerciseIsActive = exerciseToggle.isOn
+        activeTracking.writeActiveItems()
     }
     
     @IBAction func meditationToggled(_ sender: Any) {
-        print("meditation")
+        activeTracking.meditationIsActive = meditationToggle.isOn
+        activeTracking.writeActiveItems()
     }
     
     @IBAction func medicationToggled(_ sender: Any) {
-        print(medicationToggle.isOn)
+        activeTracking.medicationIsActive = medicationToggle.isOn
+        activeTracking.writeActiveItems()
     }
 }

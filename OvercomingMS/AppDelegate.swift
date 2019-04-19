@@ -43,6 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             GoalsDBS().writeGoals()
         }
         
+        _ = ActiveTrackingDBS()
+        
         return true
     }
     
