@@ -89,6 +89,7 @@ class ActiveTrackingDBS {
         catch {
             print("Error updating food data : \(error)" )
         }
+        
         TrackingModulesDBS().updateAllStatus()
     }
     
