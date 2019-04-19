@@ -15,63 +15,77 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
             return "GoalsMainSVC"
         }
     }
-    
-    @IBOutlet weak var foodGoalLabel: UILabel!
-    @IBOutlet weak var omega3GoalLabel: UILabel!
-    @IBOutlet weak var vitaminDGoalLabel: UILabel!
-    @IBOutlet weak var exerciseGoalLabel: UILabel!
-    @IBOutlet weak var meditationGoalLabel: UILabel!
-    
-    @IBOutlet weak var foodGoalTextField: UITextField!
-    @IBOutlet weak var omega3GoalTextField: UITextField!
-    @IBOutlet weak var vitaminDGoalTextField: UITextField!
-    @IBOutlet weak var exerciseGoalTextField: UITextField!
-    @IBOutlet weak var meditationGoalTextField: UITextField!
+
+    @IBOutlet weak var foodButton: GoalsBoxSVC!
+    @IBOutlet weak var omega3Button: GoalsBoxSVC!
+    @IBOutlet weak var vitaminDButton: GoalsBoxSVC!
+    @IBOutlet weak var exerciseButton: GoalsBoxSVC!
+    @IBOutlet weak var meditationButton: GoalsBoxSVC!
     
     override func customSetup() {
-        foodGoalTextField.delegate = self
-        omega3GoalTextField.delegate = self
-        vitaminDGoalTextField.delegate = self
-        exerciseGoalTextField.delegate = self
-        meditationGoalTextField.delegate = self
+        foodButton.buttonAction = foodPressed
+        omega3Button.buttonAction = omega3Pressed
+        vitaminDButton.buttonAction = vitaminDPressed
+        exerciseButton.buttonAction = exercisePressed
+        meditationButton.buttonAction = meditationPressed
     }
     
     override func reload() {
-        print("reloaded")
-        foodGoalLabel.text = "Food Goal: \(ProgressBarConfig.foodRatingGoals)"
-        omega3GoalLabel.text = "Omega3 Goal: \(ProgressBarConfig.omega3Goal)"
-        vitaminDGoalLabel.text = "VitaminD Goal: \(ProgressBarConfig.vitaminDGoal)"
-        exerciseGoalLabel.text = "Exercise Goal: \(ProgressBarConfig.exerciseGoal)"
-        meditationGoalLabel.text = "Meditation Goal: \(ProgressBarConfig.meditationGoal)"
+        foodButton.goalDescription = "\(ProgressBarConfig.getfoodDescription(rating: ProgressBarConfig.foodRatingGoals)) (\(ProgressBarConfig.foodRatingGoals)/5)"
+        omega3Button.goalDescription = "\(ProgressBarConfig.omega3Goal) \(ProgressBarConfig.omega3UOM)"
+        vitaminDButton.goalDescription = "\(ProgressBarConfig.vitaminDGoal) \(ProgressBarConfig.vitaminDUOM)"
+        exerciseButton.goalDescription = "\(ProgressBarConfig.exerciseGoal) \(ProgressBarConfig.lengthUOM)"
+        meditationButton.goalDescription = "\(ProgressBarConfig.meditationGoal) \(ProgressBarConfig.lengthUOM)"
     }
     
-    // Whatever happens, we must prevent user from setting a goal to 0
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        endEditing(true)
+    func foodPressed() {
+        let svc = GoalsModifyFactory.FoodGoalsModifySVC()
+        parentVC.pushSubView(newSubView: svc)
+        svc.reload()
+    }
+    
+    func omega3Pressed() {
+        let svc = GoalsModifyFactory.Omega3GoalsModifySVC()
+        parentVC.pushSubView(newSubView: svc)
+        svc.reload()
+    }
+    
+    func vitaminDPressed() {
+        let svc = GoalsModifyFactory.VitaminDGoalsModifySVC()
+        parentVC.pushSubView(newSubView: svc)
+        svc.reload()
+    }
+    
+    func exercisePressed() {
+        let svc = GoalsModifyFactory.ExerciseGoalsModifySVC()
+        parentVC.pushSubView(newSubView: svc)
+        svc.reload()
+    }
+    
+    func meditationPressed() {
+        let svc = GoalsModifyFactory.MeditationGoalsModifySVC()
+        parentVC.pushSubView(newSubView: svc)
+        svc.reload()
+    }
+    
+    @IBAction func reset(_ sender: Any) {
+        let svc = ConfirmationSVC()
+        svc.topDescription.text = "You are reseting all daily goals to OMS recommended goals"
+        svc.bottomDescription.text = "Is this correct?"
+        svc.methodToRunOnConfirm = resetGoalsToDefault
+        parentVC.pushSubView(newSubView: svc)
+    }
+    
+    func resetGoalsToDefault() {
+        let defaultGoals = GoalsDBT()
         
-        switch textField {
-        case foodGoalTextField:
-            ProgressBarConfig.foodRatingGoals = Int(textField.text ?? "") ?? ProgressBarConfig.foodRatingGoals
-            break
-        case omega3GoalTextField:
-            ProgressBarConfig.omega3Goal = Int(textField.text ?? "") ?? ProgressBarConfig.omega3Goal
-            break
-        case vitaminDGoalTextField:
-            ProgressBarConfig.vitaminDGoal = Int(textField.text ?? "") ?? ProgressBarConfig.vitaminDGoal
-            break
-        case exerciseGoalTextField:
-            ProgressBarConfig.exerciseGoal = Int(textField.text ?? "") ?? ProgressBarConfig.exerciseGoal
-            break
-        case meditationGoalTextField:
-            ProgressBarConfig.meditationGoal = Int(textField.text ?? "") ?? ProgressBarConfig.meditationGoal
-            break
-        default:
-            break
-        }
+        ProgressBarConfig.foodRatingGoals = defaultGoals.FoodRatingGoal
+        ProgressBarConfig.omega3Goal = defaultGoals.Omega3Goal
+        ProgressBarConfig.vitaminDGoal = defaultGoals.VitaminDGoal
+        ProgressBarConfig.exerciseGoal = defaultGoals.ExerciseGoal
+        ProgressBarConfig.meditationGoal = defaultGoals.MeditationGoal
         
         reload()
-        
-        return true
     }
     
 }

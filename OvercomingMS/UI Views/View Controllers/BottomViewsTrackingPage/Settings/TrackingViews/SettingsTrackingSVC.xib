@@ -10,7 +10,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsTrackingSVC" customModule="OvercomingMS" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="B37-F0-fAT" id="0tA-CL-DlK"/>
+                <outlet property="exerciseToggle" destination="oNj-MI-n0a" id="UoG-JI-Fd5"/>
+                <outlet property="foodToggle" destination="6h7-lb-ZZe" id="G8c-vw-NfT"/>
+                <outlet property="medicationToggle" destination="Crb-hB-DRF" id="ua5-ah-6I8"/>
+                <outlet property="meditationToggle" destination="ULQ-7l-Ra0" id="lKe-YY-6N6"/>
+                <outlet property="omega3Toggle" destination="ylu-IZ-55M" id="doH-SP-hqJ"/>
+                <outlet property="vitaminDToggle" destination="3Jf-am-sEW" id="Lwu-uz-Iuh"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="469"/>
@@ -96,13 +106,18 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2B-ue-iD3">
                                                                     <rect key="frame" x="0.0" y="0.0" width="12" height="32.5"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1g-Y8-Ia1" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1g-Y8-Ia1" customClass="OMSRoundedBox" customModule="OvercomingMS" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="10.5" width="12" height="12"/>
                                                                             <color key="backgroundColor" red="0.4823529411764706" green="0.43137254901960786" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="12" id="TqG-VZ-RDA"/>
                                                                                 <constraint firstAttribute="height" constant="12" id="dBw-qW-niY"/>
                                                                             </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="6"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,13 +141,18 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6h7-lb-ZZe">
                                                                     <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
+                                                                    <connections>
+                                                                        <action selector="foodToggled:" destination="-1" eventType="valueChanged" id="hEK-Fa-mVo"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="k2B-ue-iD3" firstAttribute="centerY" secondItem="gUr-ya-BWp" secondAttribute="centerY" id="63U-TU-4Sx"/>
                                                                 <constraint firstItem="k2B-ue-iD3" firstAttribute="leading" secondItem="gUr-ya-BWp" secondAttribute="leading" id="JUe-NY-hNf"/>
+                                                                <constraint firstAttribute="trailing" secondItem="6h7-lb-ZZe" secondAttribute="trailing" id="S1k-p7-cbV"/>
                                                                 <constraint firstItem="k2B-ue-iD3" firstAttribute="centerY" secondItem="gUr-ya-BWp" secondAttribute="centerY" id="mog-8R-Gdb"/>
                                                                 <constraint firstItem="k2B-ue-iD3" firstAttribute="centerY" secondItem="gUr-ya-BWp" secondAttribute="centerY" id="qvR-qN-G1p"/>
+                                                                <constraint firstItem="6h7-lb-ZZe" firstAttribute="centerY" secondItem="gUr-ya-BWp" secondAttribute="centerY" id="r9S-mm-9iI"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
@@ -163,13 +183,18 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-m7-drN">
                                                                     <rect key="frame" x="0.0" y="0.0" width="12" height="32.5"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDU-nm-rmk" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDU-nm-rmk" customClass="OMSRoundedBox" customModule="OvercomingMS" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="10.5" width="12" height="12"/>
                                                                             <color key="backgroundColor" red="0.0078431372549019607" green="0.63529411764705879" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="12" id="3M0-wm-pkS"/>
                                                                                 <constraint firstAttribute="width" constant="12" id="ndt-OW-PO0"/>
                                                                             </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="6"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -193,13 +218,18 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ylu-IZ-55M">
                                                                     <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
+                                                                    <connections>
+                                                                        <action selector="omega3Toggled:" destination="-1" eventType="valueChanged" id="Led-FR-aLh"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="2fh-m7-drN" firstAttribute="centerY" secondItem="BO1-f3-1EW" secondAttribute="centerY" id="1nJ-qv-RiH"/>
                                                                 <constraint firstItem="2fh-m7-drN" firstAttribute="centerY" secondItem="BO1-f3-1EW" secondAttribute="centerY" id="1y8-ew-kbA"/>
+                                                                <constraint firstAttribute="trailing" secondItem="ylu-IZ-55M" secondAttribute="trailing" id="4BA-aI-bY2"/>
                                                                 <constraint firstItem="2fh-m7-drN" firstAttribute="leading" secondItem="BO1-f3-1EW" secondAttribute="leading" id="QI9-4X-Oe0"/>
                                                                 <constraint firstItem="2fh-m7-drN" firstAttribute="centerY" secondItem="BO1-f3-1EW" secondAttribute="centerY" id="bLi-vl-GU0"/>
+                                                                <constraint firstItem="ylu-IZ-55M" firstAttribute="centerY" secondItem="BO1-f3-1EW" secondAttribute="centerY" id="vw0-cX-D2n"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
@@ -230,13 +260,18 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OyG-xk-ysJ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="12" height="32.5"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXr-tM-4ui" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXr-tM-4ui" customClass="OMSRoundedBox" customModule="OvercomingMS" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="10.5" width="12" height="12"/>
                                                                             <color key="backgroundColor" red="1" green="0.64313725490196072" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="12" id="K4M-Gf-WVc"/>
                                                                                 <constraint firstAttribute="width" constant="12" id="W2T-lx-eD4"/>
                                                                             </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="6"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -260,11 +295,16 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-am-sEW">
                                                                     <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
+                                                                    <connections>
+                                                                        <action selector="vitaminDToggled:" destination="-1" eventType="valueChanged" id="CfP-9M-d6I"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="OyG-xk-ysJ" firstAttribute="leading" secondItem="GWE-zY-1iJ" secondAttribute="leading" id="25G-op-fU1"/>
+                                                                <constraint firstAttribute="trailing" secondItem="3Jf-am-sEW" secondAttribute="trailing" id="3cT-ea-Kb8"/>
                                                                 <constraint firstItem="OyG-xk-ysJ" firstAttribute="centerY" secondItem="GWE-zY-1iJ" secondAttribute="centerY" id="HjG-T8-kDj"/>
+                                                                <constraint firstItem="3Jf-am-sEW" firstAttribute="centerY" secondItem="GWE-zY-1iJ" secondAttribute="centerY" id="nHy-0V-hLW"/>
                                                                 <constraint firstItem="OyG-xk-ysJ" firstAttribute="centerY" secondItem="GWE-zY-1iJ" secondAttribute="centerY" id="o2h-DA-LzF"/>
                                                                 <constraint firstItem="OyG-xk-ysJ" firstAttribute="centerY" secondItem="GWE-zY-1iJ" secondAttribute="centerY" id="w9T-F1-khL"/>
                                                             </constraints>
@@ -297,13 +337,18 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTf-nO-egG">
                                                                     <rect key="frame" x="0.0" y="0.0" width="12" height="32.5"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dK-Vj-0s8" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dK-Vj-0s8" customClass="OMSRoundedBox" customModule="OvercomingMS" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="10.5" width="12" height="12"/>
                                                                             <color key="backgroundColor" red="0.34901960784313724" green="0.53725490196078429" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="12" id="G0G-Sm-OsH"/>
                                                                                 <constraint firstAttribute="width" constant="12" id="gXL-d2-7xK"/>
                                                                             </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="6"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -327,6 +372,9 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNj-MI-n0a">
                                                                     <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
+                                                                    <connections>
+                                                                        <action selector="exerciseToggled:" destination="-1" eventType="valueChanged" id="Cun-gZ-XVa"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
@@ -334,6 +382,8 @@
                                                                 <constraint firstItem="mTf-nO-egG" firstAttribute="leading" secondItem="c6L-9a-edX" secondAttribute="leading" id="BqP-tV-VI8"/>
                                                                 <constraint firstItem="mTf-nO-egG" firstAttribute="centerY" secondItem="c6L-9a-edX" secondAttribute="centerY" id="KS0-Vb-7wH"/>
                                                                 <constraint firstItem="mTf-nO-egG" firstAttribute="centerY" secondItem="c6L-9a-edX" secondAttribute="centerY" id="Sla-dg-PvJ"/>
+                                                                <constraint firstItem="oNj-MI-n0a" firstAttribute="centerY" secondItem="c6L-9a-edX" secondAttribute="centerY" id="ell-gq-dJt"/>
+                                                                <constraint firstAttribute="trailing" secondItem="oNj-MI-n0a" secondAttribute="trailing" id="jbD-QV-Wyx"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
@@ -364,13 +414,18 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeF-6P-J36">
                                                                     <rect key="frame" x="0.0" y="0.0" width="12" height="32.5"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWK-TQ-Ro3" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWK-TQ-Ro3" customClass="OMSRoundedBox" customModule="OvercomingMS" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="10.5" width="12" height="12"/>
                                                                             <color key="backgroundColor" red="0.40000000000000002" green="0.59607843137254901" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="12" id="G2l-SO-5t6"/>
                                                                                 <constraint firstAttribute="width" constant="12" id="XjF-ao-Dck"/>
                                                                             </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="6"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -394,11 +449,16 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ULQ-7l-Ra0">
                                                                     <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
+                                                                    <connections>
+                                                                        <action selector="meditationToggled:" destination="-1" eventType="valueChanged" id="Gu2-iT-a4M"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="xeF-6P-J36" firstAttribute="centerY" secondItem="F5l-NH-PYD" secondAttribute="centerY" id="4U6-iJ-Jfh"/>
+                                                                <constraint firstAttribute="trailing" secondItem="ULQ-7l-Ra0" secondAttribute="trailing" id="6wx-AP-0tC"/>
                                                                 <constraint firstItem="xeF-6P-J36" firstAttribute="centerY" secondItem="F5l-NH-PYD" secondAttribute="centerY" id="9oh-K3-uIx"/>
+                                                                <constraint firstItem="ULQ-7l-Ra0" firstAttribute="centerY" secondItem="F5l-NH-PYD" secondAttribute="centerY" id="JdC-8h-Ao0"/>
                                                                 <constraint firstItem="xeF-6P-J36" firstAttribute="leading" secondItem="F5l-NH-PYD" secondAttribute="leading" id="iaS-OI-c4Y"/>
                                                                 <constraint firstItem="xeF-6P-J36" firstAttribute="centerY" secondItem="F5l-NH-PYD" secondAttribute="centerY" id="y46-5r-mmi"/>
                                                             </constraints>
@@ -431,13 +491,18 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHa-EO-Whz">
                                                                     <rect key="frame" x="0.0" y="0.0" width="12" height="32.5"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6GN-M9-xbc" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6GN-M9-xbc" customClass="OMSRoundedBox" customModule="OvercomingMS" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="10.5" width="12" height="12"/>
                                                                             <color key="backgroundColor" red="0.46274509803921571" green="0.67843137254901964" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="12" id="dc4-KL-4Br"/>
                                                                                 <constraint firstAttribute="height" constant="12" id="mod-cc-WRF"/>
                                                                             </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="6"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -461,6 +526,9 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Crb-hB-DRF">
                                                                     <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
+                                                                    <connections>
+                                                                        <action selector="medicationToggled:" destination="-1" eventType="valueChanged" id="Qpa-c4-05Y"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
@@ -468,6 +536,8 @@
                                                                 <constraint firstItem="GHa-EO-Whz" firstAttribute="leading" secondItem="uRj-7Z-JVp" secondAttribute="leading" id="jWh-pX-Oc9"/>
                                                                 <constraint firstItem="GHa-EO-Whz" firstAttribute="centerY" secondItem="uRj-7Z-JVp" secondAttribute="centerY" id="rOa-Z7-Bro"/>
                                                                 <constraint firstItem="GHa-EO-Whz" firstAttribute="centerY" secondItem="uRj-7Z-JVp" secondAttribute="centerY" id="tbZ-x2-0bp"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Crb-hB-DRF" secondAttribute="trailing" id="ucx-o0-pzA"/>
+                                                                <constraint firstItem="Crb-hB-DRF" firstAttribute="centerY" secondItem="uRj-7Z-JVp" secondAttribute="centerY" id="vCw-Zf-pcL"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>

@@ -21,7 +21,7 @@ class TrackingDayDBT: Object {
     @objc dynamic var FoodEatenRating: Int = 1 // Lets define the food scale as 1-5
     var IsFoodComplete: Bool {
         get {
-            return FoodEatenRating >= ProgressBarConfig.foodRatingGoals
+            return FoodEatenRating >= ProgressBarConfig.foodRatingGoals || !ActiveTrackingDBS().mostRecentActiveTracking.IsFoodActive
         }
     }
     
@@ -30,6 +30,9 @@ class TrackingDayDBT: Object {
     @objc dynamic var IsExerciseComplete: Bool = false //This should be read only
     var ExerciseComputedPercentageComplete : Int {
         get {
+            if !ActiveTrackingDBS().mostRecentActiveTracking.IsExerciseActive {
+                return 100
+            }
             let percentage = Int(Float(ExerciseTimeTotal) / Float(ProgressBarConfig.exerciseGoal) * 100)
             if percentage > 100 {
                 return 100
@@ -55,6 +58,9 @@ class TrackingDayDBT: Object {
     @objc dynamic var IsMeditationComplete: Bool = false
     var MeditationComputedPercentageComplete : Int {
         get {
+            if !ActiveTrackingDBS().mostRecentActiveTracking.IsMeditationActive {
+                return 100
+            }
             let percentage = Int(Float(MeditationTimeTotal) / Float(ProgressBarConfig.meditationGoal) * 100)
             if percentage > 100 {
                 return 100
@@ -84,6 +90,9 @@ class TrackingDayDBT: Object {
     @objc dynamic var IsMedicationComplete: Bool = false
     var MedicationComputedPercentageComplete : Int {
         get {
+            if !ActiveTrackingDBS().mostRecentActiveTracking.IsMedicationActive {
+                return 100
+            }
             let todaysTotalMeds : Float = Float(SavedMedicationDBS().getTodaysTotalMedGoal())
             if todaysTotalMeds <= 0 {
                 return 100
@@ -117,6 +126,9 @@ class TrackingDayDBT: Object {
     @objc dynamic var IsOmega3Complete: Bool = false
     var Omega3ComputedPercentageComplete : Int {
         get {
+            if !ActiveTrackingDBS().mostRecentActiveTracking.IsOmega3Active {
+                return 100
+            }
             let percentage = Int(Float(Omega3Total) / Float(ProgressBarConfig.omega3Goal) * 100)
             if percentage > 100 {
                 return 100
@@ -143,6 +155,9 @@ class TrackingDayDBT: Object {
     @objc dynamic var IsVitaminDComplete: Bool = false //This should be read only
     var VitaminDComputedPercentageComplete : Int {
         get {
+            if !ActiveTrackingDBS().mostRecentActiveTracking.IsVitaminDActive {
+                return 100
+            }
             let percentage = Int(Float(VitaminDTotal) / Float(ProgressBarConfig.vitaminDGoal) * 100)
             if percentage > 100 {
                 return 100

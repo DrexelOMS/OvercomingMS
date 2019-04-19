@@ -167,15 +167,41 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         //TODO make a way to get the proper description for each
         //FoodEatenRating is 1 - 5
-        foodBar.update(trackingDBS: FoodRatingDBS())
-        omega3Bar.update(trackingDBS: Omega3HistoryDBS())
-        vitaminDBar.update(trackingDBS: VitaminDHistoryDBS())
-        exerciseBar.update(trackingDBS: ExerciseHistoryDBS())
-        meditationBar.update(trackingDBS: MeditationHistoryDBS())
-        medicationBar.update(trackingDBS: SavedMedicationDBS())
+        let activeTracking = ActiveTrackingDBS()
+        let recentItems = activeTracking.mostRecentActiveTracking
+        foodBar.update(trackingDBS: FoodRatingDBS(), isTracked: recentItems.IsFoodActive)
+        omega3Bar.update(trackingDBS: Omega3HistoryDBS(), isTracked: recentItems.IsOmega3Active)
+        vitaminDBar.update(trackingDBS: VitaminDHistoryDBS(), isTracked: recentItems.IsVitaminDActive)
+        exerciseBar.update(trackingDBS: ExerciseHistoryDBS(), isTracked: recentItems.IsExerciseActive)
+        meditationBar.update(trackingDBS: MeditationHistoryDBS(), isTracked: recentItems.IsMeditationActive)
+        medicationBar.update(trackingDBS: SavedMedicationDBS(), isTracked: recentItems.IsMedicationActive)
         
         header.perfectDaysLabel.text = "\(TrackingModulesDBS().getTotalPerfectDays()) perfect days"
+        setHeaderStreak()
     
+    }
+    
+    private func setHeaderStreak() {
+        var count = 0
+        let trackingDBS = TrackingModulesDBS()
+        var date = globalCurrentDate
+        
+        //Start counting from yesterday
+        let previousDay = OMSDateAccessor.getFullDate(date: date).addingTimeInterval(-60*60*24)
+        date = OMSDateAccessor.getFormatedDate(date: previousDay)
+        while(trackingDBS.getTrackingDay(date: date).IsDayComplete) {
+            count += 1
+            
+            let previousDay = OMSDateAccessor.getFullDate(date: date).addingTimeInterval(-60*60*24)
+            date = OMSDateAccessor.getFormatedDate(date: previousDay)
+        }
+        
+        //add 1 if they actually completed today
+        if(trackingDBS.getTrackingDay(date: globalCurrentDate).IsDayComplete) {
+            count += 1
+        }
+        
+        header.daysInARow.text = "\(count) days in a row"
     }
     
     //MARK: Delegates

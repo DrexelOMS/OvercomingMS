@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OutsideSVC" customModule="OvercomingMS" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="bBY-qo-bs0" id="Pf9-2d-hi4"/>
+                <outlet property="tableView" destination="5JL-y4-3mr" id="Cbd-I1-G98"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outside" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leu-2B-jYz" userLabel="OutsideLabel">
+                    <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="9qt-d6-Kbd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5JL-y4-3mr">
+                    <rect key="frame" x="0.0" y="164" width="414" height="514"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBY-qo-bs0" userLabel="BackButton" customClass="SquareButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="698" width="414" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="jYT-sw-NGy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="leu-2B-jYz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5Bq-Fn-qYX"/>
+                <constraint firstItem="bBY-qo-bs0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dvs-gu-cVa"/>
+                <constraint firstItem="leu-2B-jYz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Kxo-jY-IXD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bBY-qo-bs0" secondAttribute="trailing" id="Wfi-l6-O2C"/>
+                <constraint firstItem="bBY-qo-bs0" firstAttribute="top" secondItem="5JL-y4-3mr" secondAttribute="bottom" constant="20" id="ZG6-Xd-SqV"/>
+                <constraint firstItem="5JL-y4-3mr" firstAttribute="top" secondItem="leu-2B-jYz" secondAttribute="bottom" constant="20" id="ZKo-89-wRJ"/>
+                <constraint firstItem="5JL-y4-3mr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="cvA-Iw-uOL"/>
+                <constraint firstAttribute="bottom" secondItem="bBY-qo-bs0" secondAttribute="bottom" id="dHp-j2-PTh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="leu-2B-jYz" secondAttribute="trailing" id="khf-mY-xBQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5JL-y4-3mr" secondAttribute="trailing" id="usU-WO-pcE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="156.02678571428569"/>
+        </view>
+    </objects>
+</document>

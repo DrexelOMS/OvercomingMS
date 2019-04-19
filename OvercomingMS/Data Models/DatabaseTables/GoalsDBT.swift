@@ -10,14 +10,15 @@ import Foundation
 import RealmSwift
 
 class GoalsDBT: Object {
-    @objc dynamic var FoodRatingGoal : Int = 3 // 3 / 5 stars
-    @objc dynamic var Omega3Goal : Int = 100
-    @objc dynamic var VitaminDGoal : Int = 100
+    @objc dynamic var FoodRatingGoal : Int = 4 // 3 / 5 stars
+    @objc dynamic var Omega3Goal : Int = 20
+    @objc dynamic var VitaminDGoal : Int = 10
     @objc dynamic var ExerciseGoal : Int = 30
-    @objc dynamic var MeditationGoal : Int = 30
+    @objc dynamic var MeditationGoal : Int = 15
     @objc dynamic var DateModified: String = ""
     
     override static func primaryKey() -> String? {
         return "DateModified"
     }
+
 }

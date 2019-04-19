@@ -69,8 +69,7 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     }
     
     func outsideButtonPressed() {
-        //parentVC.pushSubView(newSubView: Omega3SupplementSVC())
-        print("Out")
+        parentVC.pushSubView(newSubView: OutsideSVC())
     }
     
     override func updateColors() {
