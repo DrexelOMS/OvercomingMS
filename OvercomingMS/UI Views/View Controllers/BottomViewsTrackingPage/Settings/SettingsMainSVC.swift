@@ -15,8 +15,20 @@ class SettingsMainSVC : SlidingAbstractSVC {
             return "SettingsMainSVC"
         }
     }
+    @IBOutlet weak var profileView: RoundedBoxShadowsTemplate!
+    @IBOutlet weak var trackingView: SettingsBoxSVC!
+    @IBOutlet weak var remindersView: RoundedBoxShadowsTemplate!
+    @IBOutlet weak var tutorialsView: RoundedBoxShadowsTemplate!
     
     override func customSetup() {
+        profileView.backgroundColor = UIColor.gray
+        remindersView.backgroundColor = UIColor.gray
+        tutorialsView.backgroundColor = UIColor.gray
         
+        trackingView.buttonAction = trackingPressed
+    }
+    
+    func trackingPressed() {
+        parentVC.pushSubView(newSubView: SettingsTrackingSVC())
     }
 }
