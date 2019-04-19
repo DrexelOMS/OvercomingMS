@@ -41,7 +41,6 @@ class OMSDateAccessor {
     var todaysDate : String { // this is to temporarily change the real world date
         get {
 //            if let today = defaults.object(forKey: "today") as? String {
-//                initializeTodaysData(date: today)
 //                if today != lastSavedTodayDate {
 //                    lastSavedTodayDate = today
 //                    NotificationCenter.default.post(name: .didTodaysDateChange, object: nil)
@@ -51,7 +50,6 @@ class OMSDateAccessor {
 //            else {
 //                defaults.set(OMSDateAccessor.getFormatedDate(date: Date()), forKey: "today")
 //                let date = OMSDateAccessor.getFormatedDate(date: Date())
-//                initializeTodaysData(date: date)
 //                if date != lastSavedTodayDate {
 //                    lastSavedTodayDate = date
 //                    NotificationCenter.default.post(name: .didTodaysDateChange, object: nil)
@@ -146,6 +144,7 @@ class OMSDateAccessor {
     func progressDay() {
 //        let tomorrow = todaysFullDate.addingTimeInterval(60*60*24)
 //        defaults.set(OMSDateAccessor.getFormatedDate(date: tomorrow), forKey: "today")
+//        _ = OMSDateAccessor().todaysDate
     }
     
 }
