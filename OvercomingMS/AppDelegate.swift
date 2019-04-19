@@ -38,10 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //First Time initilizers must occur in order
         _ = OMSDateAccessor().todaysDate
+        
+        if ActiveTrackingDBS().activeTracking.count <= 0 {
+            ActiveTrackingDBS().writeFirstDay()
+        }
     
         let goals = GoalsDBS().goals
         if goals.count <= 0 {
-            ActiveTrackingDBS().writeFirstDay()
             GoalsDBS().writeFirstDay()
         }
         

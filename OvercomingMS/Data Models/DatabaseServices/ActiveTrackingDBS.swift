@@ -20,7 +20,7 @@ class ActiveTrackingDBS {
     var meditationIsActive: Bool?
     var medicationIsActive: Bool?
     
-    private var activeTracking: [ActiveTrackingDBT] {
+    var activeTracking: [ActiveTrackingDBT] {
         get {
             let results: Results<ActiveTrackingDBT> = realm.objects(ActiveTrackingDBT.self)
             let converted = results.reduce(List<ActiveTrackingDBT>()) { (list, element) -> List<ActiveTrackingDBT> in
