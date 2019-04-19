@@ -29,11 +29,23 @@ class SwipeDownVC : DismissableVC {
         let contentView = UIView()
         contentView.backgroundColor = DesignConstants.DEFAULT_BACKGROUND_COLOR
         self.view.addSubview(contentView)
-        constrain(contentView, self.view.safeAreaLayoutGuide) { (view, superView) in
-            view.top == superView.top
-            view.right == superView.right
-            view.bottom == superView.bottom
-            view.left == superView.left
+        if #available(iOS 11.0, *) {
+            constrain(contentView, self.view.safeAreaLayoutGuide) { (view, superView) in
+                view.top == superView.top
+                view.right == superView.right
+                view.bottom == superView.bottom
+                view.left == superView.left
+            }
+        } else {
+            NSLayoutConstraint.activate([
+                contentView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 0),
+                bottomLayoutGuide.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0)
+                ])
+            
+            constrain(contentView, self.view) { (view, superView) in
+                view.right == superView.right
+                view.left == superView.left
+            }
         }
         
         contentView.addSubview(contentStackView)
