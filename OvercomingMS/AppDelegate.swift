@@ -36,14 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //            realm.deleteAll()
         //        }
         
+        //First Time initilizers must occur in order
         _ = OMSDateAccessor().todaysDate
-        
+        _ = ActiveTrackingDBS()
+    
         let goals = GoalsDBS().goals
         if goals.count <= 0 {
             GoalsDBS().writeGoals()
         }
-        
-        _ = ActiveTrackingDBS()
         
         return true
     }
