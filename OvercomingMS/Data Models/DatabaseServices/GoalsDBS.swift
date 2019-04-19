@@ -64,37 +64,8 @@ class GoalsDBS {
         do {
             try realm.write() {
                 
-                // First time setting goals
-                if goals.count <= 0 {
-                    
-                    let item = GoalsDBT()
-                    
-                    if let foodG = foodRatingGoalToSet {
-                        item.FoodRatingGoal = foodG
-                    }
-                    
-                    if let omega3G = omega3GoalToSet {
-                        item.Omega3Goal = omega3G
-                    }
-                    
-                    if let vitaminDG = vitaminDGoalToSet {
-                        item.VitaminDGoal = vitaminDG
-                    }
-                    
-                    if let exerciseG = exerciseGoalToSet {
-                        item.ExerciseGoal = exerciseG
-                    }
-                    
-                    if let meditationG = meditationGoalToSet {
-                        item.MeditationGoal = meditationG
-                    }
-                    
-                    item.DateModified = date
-                    
-                    realm.add(item)
-                }
                 // on a date that has not had its goals set
-                else if mostRecentGoals.DateModified != date {
+                if mostRecentGoals.DateModified != date {
                     
                     let item = GoalsDBT()
                     let goals = mostRecentGoals
@@ -126,6 +97,37 @@ class GoalsDBS {
         
         TrackingModulesDBS().updateAllStatus()
     }
-
     
+    //set the first goal to the previous day
+    func writeFirstDay() {
+        do {
+            try realm.write() {
+                let item = GoalsDBT()
+                if let foodG = foodRatingGoalToSet {
+                    item.FoodRatingGoal = foodG
+                }
+                if let omega3G = omega3GoalToSet {
+                    item.Omega3Goal = omega3G
+                }
+                if let vitaminDG = vitaminDGoalToSet {
+                    item.VitaminDGoal = vitaminDG
+                }
+                if let exerciseG = exerciseGoalToSet {
+                    item.ExerciseGoal = exerciseG
+                }
+                if let meditationG = meditationGoalToSet {
+                    item.MeditationGoal = meditationG
+                }
+                
+                let date = globalCurrentFullDate.addingTimeInterval(-1 * 60 * 60 * 24) //set to yesterday
+                item.DateModified = OMSDateAccessor.getFormatedDate(date: date)
+                
+                realm.add(item)
+            }
+        }
+        catch {
+            print("Error updating food data : \(error)" )
+        }
+    }
+
 }

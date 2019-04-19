@@ -20,12 +20,6 @@ class ActiveTrackingDBS {
     var meditationIsActive: Bool?
     var medicationIsActive: Bool?
     
-    init() {
-        if activeTracking.count <= 0 {
-            initialize()
-        }
-    }
-    
     private var activeTracking: [ActiveTrackingDBT] {
         get {
             let results: Results<ActiveTrackingDBT> = realm.objects(ActiveTrackingDBT.self)
@@ -87,22 +81,24 @@ class ActiveTrackingDBS {
             }
         }
         catch {
-            print("Error updating food data : \(error)" )
+            print("Error updating activeTracking data : \(error)" )
         }
         
         TrackingModulesDBS().updateAllStatus()
     }
     
-    private func initialize() {
+    //set the first goal to the previous day
+    func writeFirstDay() {
         do {
             try realm.write() {
                 let item = ActiveTrackingDBT()
-                item.DateModified = globalCurrentDate
+                let date = globalCurrentFullDate.addingTimeInterval(-1 * 60 * 60 * 24) //set to yesterday
+                item.DateModified = OMSDateAccessor.getFormatedDate(date: date)
                 realm.add(item)
             }
         }
         catch {
-            print("Error updating food data : \(error)" )
+            print("Error updating activeTracking data : \(error)" )
         }
     }
 
