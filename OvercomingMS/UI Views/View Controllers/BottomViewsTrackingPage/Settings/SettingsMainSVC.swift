@@ -21,9 +21,9 @@ class SettingsMainSVC : SlidingAbstractSVC {
     @IBOutlet weak var tutorialsView: RoundedBoxShadowsTemplate!
     
     override func customSetup() {
-        profileView.backgroundColor = UIColor.gray
-        remindersView.backgroundColor = UIColor.gray
-        tutorialsView.backgroundColor = UIColor.gray
+        profileView.backgroundColor = UIColor.lightGray
+        remindersView.backgroundColor = UIColor.lightGray
+        tutorialsView.backgroundColor = UIColor.lightGray
         
         trackingView.buttonAction = trackingPressed
     }

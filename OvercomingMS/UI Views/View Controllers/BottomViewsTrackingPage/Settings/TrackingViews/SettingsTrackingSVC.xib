@@ -13,6 +13,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsTrackingSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="B37-F0-fAT" id="0tA-CL-DlK"/>
+                <outlet property="exerciseToggle" destination="oNj-MI-n0a" id="UoG-JI-Fd5"/>
+                <outlet property="foodToggle" destination="6h7-lb-ZZe" id="G8c-vw-NfT"/>
+                <outlet property="medicationToggle" destination="Crb-hB-DRF" id="ua5-ah-6I8"/>
+                <outlet property="meditationToggle" destination="ULQ-7l-Ra0" id="lKe-YY-6N6"/>
+                <outlet property="omega3Toggle" destination="ylu-IZ-55M" id="doH-SP-hqJ"/>
+                <outlet property="vitaminDToggle" destination="3Jf-am-sEW" id="Lwu-uz-Iuh"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -130,6 +136,9 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6h7-lb-ZZe">
                                                                     <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
+                                                                    <connections>
+                                                                        <action selector="foodToggled:" destination="-1" eventType="valueChanged" id="hEK-Fa-mVo"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
@@ -197,6 +206,9 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ylu-IZ-55M">
                                                                     <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
+                                                                    <connections>
+                                                                        <action selector="omega3Toggled:" destination="-1" eventType="valueChanged" id="Led-FR-aLh"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
@@ -264,6 +276,9 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-am-sEW">
                                                                     <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
+                                                                    <connections>
+                                                                        <action selector="vitaminDToggled:" destination="-1" eventType="valueChanged" id="CfP-9M-d6I"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
@@ -331,6 +346,9 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNj-MI-n0a">
                                                                     <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
+                                                                    <connections>
+                                                                        <action selector="exerciseToggled:" destination="-1" eventType="valueChanged" id="Cun-gZ-XVa"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
@@ -398,6 +416,9 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ULQ-7l-Ra0">
                                                                     <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
+                                                                    <connections>
+                                                                        <action selector="meditationToggled:" destination="-1" eventType="valueChanged" id="Gu2-iT-a4M"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
@@ -465,6 +486,9 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Crb-hB-DRF">
                                                                     <rect key="frame" x="181" y="0.0" width="51" height="32.5"/>
+                                                                    <connections>
+                                                                        <action selector="medicationToggled:" destination="-1" eventType="valueChanged" id="Qpa-c4-05Y"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <constraints>
