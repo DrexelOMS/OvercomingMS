@@ -9,7 +9,6 @@
 import UIKit
 import RealmSwift
 import BarcodeScanner
-import PTPopupWebView
 
 class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, BarcodeScannerDismissalDelegate {
     
@@ -52,9 +51,9 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     }
     
     func recipesButtonPressed() {
-        let popupvc = PTPopupWebViewController()
-        popupvc.popupView.URL(string: "https://overcomingms.org/recovery-program/recipes/")
-        popupvc.show()
+        //let popupvc = PTPopupWebViewController()
+        //popupvc.popupView.URL(string: "https://overcomingms.org/recovery-program/recipes/")
+        //popupvc.show()
     }
     
     func scanButtonPressed() {

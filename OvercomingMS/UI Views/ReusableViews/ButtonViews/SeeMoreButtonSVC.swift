@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PTPopupWebView
 
 class SeeMoreButtonSVC : CustomView {
     
@@ -26,9 +25,9 @@ class SeeMoreButtonSVC : CustomView {
     }
     
     @objc func buttonTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        let popupvc = PTPopupWebViewController()
-        popupvc.popupView.URL(string: url)
-        popupvc.show()
+//        let popupvc = PTPopupWebViewController()
+//        popupvc.popupView.URL(string: url)
+//        popupvc.show()
     }
     
 }
