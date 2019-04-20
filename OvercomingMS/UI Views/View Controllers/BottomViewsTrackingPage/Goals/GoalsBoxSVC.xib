@@ -43,7 +43,6 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="eV1-vo-HeT" firstAttribute="centerX" secondItem="46Y-4c-Nqd" secondAttribute="centerX" id="2ZO-Yu-4rc"/>
                                 <constraint firstItem="eV1-vo-HeT" firstAttribute="centerY" secondItem="46Y-4c-Nqd" secondAttribute="centerY" id="65g-a7-BWf"/>
