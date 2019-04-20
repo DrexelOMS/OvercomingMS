@@ -12,6 +12,9 @@ import RealmSwift
 class TrackingDayDBT: Object {
     let primaryKey = "Primary-Key"
     @objc dynamic var DateCreated: String = ""
+    
+    @objc dynamic var IsDayComplete: Bool = false
+    
     @objc dynamic var FollowProgramStreak: Int = 0
     
     //We save both percentage complete and their total so if we ever change the requirement
@@ -189,8 +192,6 @@ class TrackingDayDBT: Object {
     let foodLogDT = List<FoodLogDBT>()
     
     //MARK: ---------------------- HELPERS -------------------------------
-    
-    @objc dynamic var IsDayComplete: Bool = false
     
     override static func primaryKey() -> String? {
         return "DateCreated"
