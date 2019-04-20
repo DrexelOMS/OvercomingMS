@@ -12,7 +12,7 @@ target 'OvercomingMS' do
   pod 'LinearProgressBar', '~> 1.0.1'
   pod 'Cartography'
   pod 'BarcodeScanner', '~> 4.1'
-  pod 'WKWebViewController', '~> 1.3'
+  pod 'TOWebViewController'
   pod 'UPCarouselFlowLayout'
   pod 'JTAppleCalendar', '~> 7.1'
   
