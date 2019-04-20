@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PTPopupWebView
+import TOWebViewController
 
 class SeeMoreButtonSVC : CustomView {
     
@@ -16,6 +16,8 @@ class SeeMoreButtonSVC : CustomView {
             return "SeeMoreButtonSVC"
         }
     }
+    
+    var parentVC: UIViewController!
     
     var url = "https://overcomingms.org"
     
@@ -26,9 +28,10 @@ class SeeMoreButtonSVC : CustomView {
     }
     
     @objc func buttonTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        let popupvc = PTPopupWebViewController()
-        popupvc.popupView.URL(string: url)
-        popupvc.show()
+        let webViewController = TOWebViewController(urlString: url)
+        let navigation = UINavigationController.init(rootViewController: webViewController)
+        
+        parentVC.present(navigation, animated: true, completion: nil)
     }
     
 }

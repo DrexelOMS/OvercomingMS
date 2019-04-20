@@ -24,5 +24,11 @@ class MainAbstractSVC: SlidingAbstractSVC {
     @IBOutlet weak var internetPopupButton: SeeMoreButtonSVC!
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var buttonStackView : UIStackView!
+    
+    override func initialize(parentVC: SlidingStackVC) {
+        super.initialize(parentVC: parentVC)
+        
+        internetPopupButton.parentVC = parentVC
+    }
 
 }
