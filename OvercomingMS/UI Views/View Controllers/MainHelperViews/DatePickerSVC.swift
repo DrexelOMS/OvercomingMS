@@ -18,6 +18,7 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
     }
     
     @IBOutlet weak var datePicker: JTAppleCalendarView!
+    let tracking = TrackingModulesDBS()
     
     override func customSetup() {
         datePicker.ibCalendarDelegate = self
@@ -42,11 +43,16 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
     }
     
     func handleCellTextColor(cell: DateCell, cellState: CellState) {
+        cell.completeLabel.text = ""
         if cellState.dateBelongsTo != .thisMonth ||
             OMSDateAccessor().greaterThanComparison(left: cellState.date, right: OMSDateAccessor().todaysFullDate) {
             cell.numberLabel.textColor = UIColor.gray
             cell.isUserInteractionEnabled = false
             return
+        }
+        
+        if tracking.getTrackingDay(date: OMSDateAccessor.getFormatedDate(date: cellState.date)).IsDayComplete {
+            cell.completeLabel.text = "*"
         }
         
         cell.numberLabel.textColor = UIColor.black
