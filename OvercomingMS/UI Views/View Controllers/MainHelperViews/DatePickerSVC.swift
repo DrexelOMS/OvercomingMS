@@ -26,7 +26,7 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
         datePicker.register(UINib(nibName: "DateCell", bundle: nil), forCellWithReuseIdentifier: "DateCell")
         datePicker.register(UINib(nibName: "DateHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "DateHeader")
         
-        datePicker.scrollingMode = .stopAtEachCalendarFrame
+        //datePicker.scrollingMode = .stopAtEachCalendarFrame
         datePicker.showsHorizontalScrollIndicator = false
         
     }
