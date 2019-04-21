@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class OMSRoundedBox: UIView {
     
 //    override init(frame: CGRect) {

@@ -24,28 +24,36 @@ class TrackingModulesDBS{
     let QUICK_COMPLETE = "Quick Complete"
     let defaults = UserDefaults.standard
     
+    private var editingDate = globalCurrentDate
+    
+    convenience init(editingDate: String) {
+        self.init()
+        
+        self.editingDate = editingDate
+    }
+    
     var module : Modules {
         get {
             fatalError("forgot to Override Module")
         }
     }
 
-    func getTrackingDay(date: String = globalCurrentDate) -> TrackingDayDBT {
-        if let trackingDay = realm.object(ofType: TrackingDayDBT.self, forPrimaryKey: date) {
+    func getTrackingDay() -> TrackingDayDBT {
+        if let trackingDay = realm.object(ofType: TrackingDayDBT.self, forPrimaryKey: editingDate) {
             return trackingDay
         }
         else {
-            initializeTodaysData(date: date)
-            return getTrackingDay(date: date)
+            initializeTodaysData()
+            return getTrackingDay()
         }
     }
     
     // only to be used by getTrackingDay
-    private func initializeTodaysData(date : String) {
+    private func initializeTodaysData() {
         do {
             try realm.write(){
                 let todaysTrackingData = TrackingDayDBT()
-                todaysTrackingData.DateCreated = date
+                todaysTrackingData.DateCreated = editingDate
                 realm.add(todaysTrackingData)
             }
         } catch {
@@ -66,12 +74,12 @@ class TrackingModulesDBS{
     }
     
     func updateAllStatus() {
-        FoodRatingDBS().updateCompleteStatus()
-        Omega3HistoryDBS().updateCompleteStatus()
-        VitaminDHistoryDBS().updateCompleteStatus()
-        ExerciseHistoryDBS().updateCompleteStatus()
-        MeditationHistoryDBS().updateCompleteStatus()
-        SavedMedicationDBS().updateCompleteStatus()
+        FoodRatingDBS(editingDate: editingDate).updateCompleteStatus()
+        Omega3HistoryDBS(editingDate: editingDate).updateCompleteStatus()
+        VitaminDHistoryDBS(editingDate: editingDate).updateCompleteStatus()
+        ExerciseHistoryDBS(editingDate: editingDate).updateCompleteStatus()
+        MeditationHistoryDBS(editingDate: editingDate).updateCompleteStatus()
+        SavedMedicationDBS(editingDate: editingDate).updateCompleteStatus()
     }
     
     //TODO: there will be a bug when the user changes their goals

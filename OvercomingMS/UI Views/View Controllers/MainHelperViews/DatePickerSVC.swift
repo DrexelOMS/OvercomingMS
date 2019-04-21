@@ -18,7 +18,6 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
     }
     
     @IBOutlet weak var datePicker: JTAppleCalendarView!
-    let tracking = TrackingModulesDBS()
     
     override func customSetup() {
         datePicker.ibCalendarDelegate = self
@@ -27,8 +26,9 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
         datePicker.register(UINib(nibName: "DateCell", bundle: nil), forCellWithReuseIdentifier: "DateCell")
         datePicker.register(UINib(nibName: "DateHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "DateHeader")
         
-        //datePicker.scrollingMode = .stopAtEachCalendarFrame
+        datePicker.scrollingMode = .stopAtEachCalendarFrame
         datePicker.showsHorizontalScrollIndicator = false
+        datePicker.scrollDirection = .horizontal
         
         datePicker.scrollToDate(Date(), animateScroll: false)
         
@@ -51,7 +51,7 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
             return
         }
         
-        if tracking.getTrackingDay(date: OMSDateAccessor.getFormatedDate(date: cellState.date)).IsDayComplete {
+        if TrackingModulesDBS(editingDate: OMSDateAccessor.getFormatedDate(date: cellState.date)).getTrackingDay().IsDayComplete {
             cell.completeLabel.text = "*"
         }
         
