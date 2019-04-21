@@ -29,6 +29,8 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
         //datePicker.scrollingMode = .stopAtEachCalendarFrame
         datePicker.showsHorizontalScrollIndicator = false
         
+        datePicker.scrollToDate(Date(), animateScroll: false)
+        
     }
     
     //MARK: Cell Styling
