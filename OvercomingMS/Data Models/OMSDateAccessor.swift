@@ -40,23 +40,7 @@ class OMSDateAccessor {
     
     var todaysDate : String { // this is to temporarily change the real world date
         get {
-            if let today = defaults.object(forKey: "today") as? String {
-                if today != lastSavedTodayDate {
-                    lastSavedTodayDate = today
-                    NotificationCenter.default.post(name: .didTodaysDateChange, object: nil)
-                }
-                return today
-            }
-            else {
-                defaults.set(OMSDateAccessor.getFormatedDate(date: Date()), forKey: "today")
-                let date = OMSDateAccessor.getFormatedDate(date: Date())
-                if date != lastSavedTodayDate {
-                    lastSavedTodayDate = date
-                    NotificationCenter.default.post(name: .didTodaysDateChange, object: nil)
-                }
-                return date
-            }
-            let today = OMSDateAccessor.getFormatedDate(date: Date())
+             let today = OMSDateAccessor.getFormatedDate(date: Date())
             if today != lastSavedTodayDate {
                 lastSavedTodayDate = today
                 NotificationCenter.default.post(name: .didTodaysDateChange, object: nil)
