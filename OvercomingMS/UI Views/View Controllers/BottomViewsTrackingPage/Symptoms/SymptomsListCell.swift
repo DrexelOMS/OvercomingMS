@@ -35,6 +35,7 @@ class SymptomsListCell: UITableViewCell {
         middleStackView.translatesAutoresizingMaskIntoConstraints = false
         middleStackView.axis = NSLayoutConstraint.Axis.vertical
         middleStackView.distribution = UIStackView.Distribution.equalSpacing
+        middleStackView.spacing = 20
     }
     
     func addToMiddle(view: UIView) {
