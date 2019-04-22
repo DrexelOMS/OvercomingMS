@@ -12,14 +12,15 @@ import RealmSwift
 class SymptomsList {
     
     //list of lists of symptom note DBTs sorted by date sorted by date
-    var symptomsDays: [[SymptomsNoteDBT]] = [[]]
+    var symptomsDays: [[SymptomsNoteDBT]] = []
     
     init(){
         let sortedList = SymptomsNoteDBS().getAllNotesSortedByDate()
         var date = ""
         for note in sortedList {
-            let noteDate = note.DayCreated
-            if noteDate != date && date != "" {
+            let noteDate = note.DateCreated
+
+            if noteDate != date {
                 symptomsDays.append([])
             }
             date = noteDate
@@ -38,9 +39,7 @@ class SymptomsList {
     }
     
     func getTitleForIndex(index: Int) -> String {
-        return symptomsDays[index][0].DayCreated
+        return symptomsDays[index][0].DateCreated
     }
-    
-    
-    
+
 }
