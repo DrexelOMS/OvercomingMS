@@ -26,7 +26,7 @@ class NoteSVC: CustomView {
     
     func setNote(note: SymptomsNoteDBT){
         noteLabel.text = note.Note
-        timeLabel.text = OMSDateAccessor.getDateTime(date: note.DateCreated)
+        timeLabel.text = OMSDateAccessor.getDateTime(date: note.TimeOfDay)
         
         let attributedStringColor = [NSAttributedString.Key.foregroundColor : UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)];
         let myString = NSMutableAttributedString(string: "1 2 3 4 5", attributes: attributedStringColor)

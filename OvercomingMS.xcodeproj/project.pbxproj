@@ -66,6 +66,7 @@
 		0A341D7F2259225A0066EC1D /* NoteSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A341D7E2259225A0066EC1D /* NoteSVC.swift */; };
 		0A341D81225922670066EC1D /* NoteSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A341D80225922670066EC1D /* NoteSVC.xib */; };
 		0A3EB6F422594FF800D25AF5 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EB6F322594FF800D25AF5 /* TableViewExtensions.swift */; };
+		0A3FD13D226D5DCF00162117 /* SymptomsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FD13C226D5DCF00162117 /* SymptomsList.swift */; };
 		0A43120222665BB200E8F72E /* GoalsPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A43120122665BB200E8F72E /* GoalsPickerCell.swift */; };
 		0A43120422665BBE00E8F72E /* GoalsPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A43120322665BBE00E8F72E /* GoalsPickerCell.xib */; };
 		0A43120622668B8300E8F72E /* GoalsModifyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A43120522668B8300E8F72E /* GoalsModifyFactory.swift */; };
@@ -290,6 +291,7 @@
 		0A341D7E2259225A0066EC1D /* NoteSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSVC.swift; sourceTree = "<group>"; };
 		0A341D80225922670066EC1D /* NoteSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteSVC.xib; sourceTree = "<group>"; };
 		0A3EB6F322594FF800D25AF5 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
+		0A3FD13C226D5DCF00162117 /* SymptomsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsList.swift; sourceTree = "<group>"; };
 		0A43120122665BB200E8F72E /* GoalsPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPickerCell.swift; sourceTree = "<group>"; };
 		0A43120322665BBE00E8F72E /* GoalsPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalsPickerCell.xib; sourceTree = "<group>"; };
 		0A43120522668B8300E8F72E /* GoalsModifyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsModifyFactory.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 			children = (
 				0AD7EB4922249DD0006F71C0 /* MedicationRateModel.swift */,
 				0A030F9E22580A1500857BC8 /* DisplayedMedicationItems.swift */,
+				0A3FD13C226D5DCF00162117 /* SymptomsList.swift */,
 			);
 			path = SimpleModels;
 			sourceTree = "<group>";
@@ -1504,6 +1507,7 @@
 				0A030FB422580A1500857BC8 /* VitaminDHistoryDBT.swift in Sources */,
 				0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */,
 				0AEF7A6422340068009A0292 /* MeditationSelectedItemSVC.swift in Sources */,
+				0A3FD13D226D5DCF00162117 /* SymptomsList.swift in Sources */,
 				0A341D7F2259225A0066EC1D /* NoteSVC.swift in Sources */,
 				0A1FEC5D2204F830006CED70 /* SlidingAbstractSVC.swift in Sources */,
 				0A030FB622580A1500857BC8 /* TrackingDayDBT.swift in Sources */,

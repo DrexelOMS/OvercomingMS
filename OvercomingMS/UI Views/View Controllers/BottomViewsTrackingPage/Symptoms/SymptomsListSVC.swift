@@ -18,7 +18,7 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
     
     let defaultCellName = "SymptomsListCell"
     
-    let savedNotes = SymptomsNoteDBS()
+    var savedNotes: SymptomsList!
     
     @IBOutlet weak var backButton: SquareButtonSVC!
     @IBOutlet weak var tableView: UITableView!
@@ -32,37 +32,48 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         
+        savedNotes = SymptomsList()
+        
         reload()
     }
     
     override func reload() {
         tableView.reloadData()
+        
+        let count = savedNotes.getCount()
+        if count <= 0 {
+            tableView.setEmptyView(message: "No notes yet!")
+        }
+        else {
+            tableView.restore()
+            //This code is specific to tables that need dynamic cell height and do not need the separator line, like here and medication
+            tableView.rowHeight = UITableView.automaticDimension
+            tableView.separatorStyle = .none
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return savedNotes.getTodaysNotes()?.count ?? 0
+        return savedNotes.getCount()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! SymptomsListCell
         
         cell.clear()
-        cell.dateLabel.text = "Today"
+        cell.dateLabel.text = savedNotes.getTitleForIndex(index: indexPath.row)
         
-        if let notes = savedNotes.getTodaysNotes() {
-            for i in notes {
-                let noteSVC = NoteSVC()
-                noteSVC.setNote(note: i)
-                cell.addToMiddle(view: noteSVC)
-            }
+        for note in savedNotes.getNotesForIndex(index: indexPath.row) {
+            let noteSVC = NoteSVC()
+            noteSVC.setNote(note: note)
+            cell.addToMiddle(view: noteSVC)
         }
 
         return cell
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        parentVC.pushSubView(newSubView: NoteReviewSVC(noteItem: savedNotes.getTodaysNotes()![indexPath.row]))
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        parentVC.pushSubView(newSubView: NoteReviewSVC(noteItem: savedNotes![indexPath.row]))
+//    }
 
     func backButtonPressed(){
         parentVC.popSubView()

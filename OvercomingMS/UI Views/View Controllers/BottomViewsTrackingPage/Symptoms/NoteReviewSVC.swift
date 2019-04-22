@@ -59,7 +59,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         
         editingNote = noteItem
         noteTextField.text = noteItem.Note
-        selectedTime = noteItem.DateCreated
+        selectedTime = noteItem.TimeOfDay
         selectedSeverity = String(noteItem.SymptomsRating)
         //timeLabel.text = OMSDateAccessor.getDateTime(date: editingNote.DateCreated)
     }
@@ -129,7 +129,7 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     }
     
     func confirmPressed() {
-        if let note = noteTextField.text, let rating = selectedSeverity, let date = selectedTime {
+        if let note = noteTextField.text, let rating = selectedSeverity, let time = selectedTime {
             if note == "" || note == placeholderText {
                 return
             }
@@ -137,14 +137,15 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
                 let savedNotes = SymptomsNoteDBS()
                 if let oldNote = editingNote {
                     let newItem = SymptomsNoteDBT()
-                    newItem.DateCreated = date
+                    newItem.TimeOfDay = time
+                    newItem.DateCreated = globalCurrentDate
                     newItem.Note = note
                     newItem.SymptomsRating = ratingInt
                     
                     savedNotes.editNote(oldItem: oldNote, newItem: newItem)
                 }
                 else {
-                    savedNotes.addNote(note: note, symptomsRating: ratingInt, dateCreated: date)
+                    savedNotes.addNote(note: note, symptomsRating: ratingInt, timeOfDay: time, dateCreated: globalCurrentDate)
                 }
                 
                  parentVC.popSubView()

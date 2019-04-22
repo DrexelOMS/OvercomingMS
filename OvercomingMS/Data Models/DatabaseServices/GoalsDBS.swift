@@ -29,7 +29,7 @@ class GoalsDBS {
                 list.append(element)
                 return list
             }
-            let sortedList = converted.sorted(by: { $0.DateModified < $1.DateModified })
+            let sortedList = converted.sorted(by: { OMSDateAccessor().lessThanComparison(left: OMSDateAccessor.getFullDate(date: $0.DateModified), right: OMSDateAccessor.getFullDate(date: $1.DateModified)) })
             return sortedList
         }
     }

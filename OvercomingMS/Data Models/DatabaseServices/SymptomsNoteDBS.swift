@@ -18,11 +18,12 @@ class SymptomsNoteDBS {
         }
     }
     
-    func addNote(note: String, symptomsRating: Int, dateCreated: Date) {
+    func addNote(note: String, symptomsRating: Int, timeOfDay: Date, dateCreated: String) {
         do {
             try realm.write() {
                 let item = SymptomsNoteDBT()
                 item.Note = note
+                item.TimeOfDay = timeOfDay
                 item.DateCreated = dateCreated
                 item.SymptomsRating = symptomsRating
                 day.symptomsNoteDT.append(item)
@@ -33,8 +34,20 @@ class SymptomsNoteDBS {
         
     }
     
-    func getTodaysNotes() -> List<SymptomsNoteDBT>? {
-        return day.symptomsNoteDT
+    func getTodaysNotes() -> [SymptomsNoteDBT] {
+        let notes = day.symptomsNoteDT
+        let sortedList = notes.sorted(by: { $0.TimeOfDay < $1.TimeOfDay })
+        return sortedList
+    }
+    
+    func getAllNotesSortedByDate() -> [SymptomsNoteDBT] {
+        let results: Results<SymptomsNoteDBT> = realm.objects(SymptomsNoteDBT.self)
+        let converted = results.reduce(List<SymptomsNoteDBT>()) { (list, element) -> List<SymptomsNoteDBT> in
+            list.append(element)
+            return list
+        }
+        let sortedList = converted.sorted(by: { OMSDateAccessor().greaterThanComparison(left: OMSDateAccessor.getFullDate(date: $0.DateCreated), right: OMSDateAccessor.getFullDate(date: $1.DateCreated)) })
+        return sortedList
     }
     
     
@@ -52,7 +65,7 @@ class SymptomsNoteDBS {
         do {
             try realm.write() {
                 oldItem.Note = newItem.Note
-                oldItem.DateCreated = newItem.DateCreated
+                oldItem.TimeOfDay = newItem.TimeOfDay
                 oldItem.SymptomsRating = newItem.SymptomsRating
             }
         } catch {

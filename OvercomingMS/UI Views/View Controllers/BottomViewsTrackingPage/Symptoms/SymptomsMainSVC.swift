@@ -26,8 +26,6 @@ class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataS
     
     
     override func customSetup() {
-        listButton.isHidden = true
-        
         addButton.buttonAction = addButtonPressed
         listButton.buttonAction = listButtonPressed
         
@@ -41,7 +39,7 @@ class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataS
     override func reload() {
         tableView.reloadData()
         
-        let count = savedNotes.getTodaysNotes()?.count ?? 0
+        let count = savedNotes.getTodaysNotes().count
         if count <= 0 {
             tableView.setEmptyView(message: "No notes yet!")
         }
@@ -54,20 +52,20 @@ class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return savedNotes.getTodaysNotes()?.count ?? 0
+        return savedNotes.getTodaysNotes().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! NoteCell
         
-        let note = savedNotes.getTodaysNotes()![indexPath.row]
+        let note = savedNotes.getTodaysNotes()[indexPath.row]
         cell.noteSVC.setNote(note: note)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        parentVC.pushSubView(newSubView: NoteReviewSVC(noteItem: savedNotes.getTodaysNotes()![indexPath.row]))
+        parentVC.pushSubView(newSubView: NoteReviewSVC(noteItem: savedNotes.getTodaysNotes()[indexPath.row]))
     }
     
     func addButtonPressed() {
