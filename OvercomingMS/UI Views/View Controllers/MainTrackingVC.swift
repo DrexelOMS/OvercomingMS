@@ -150,7 +150,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         _ = omsDateFormatter.todaysDate
         
-        let currentTrackingDay = TrackingModulesDBS().getTrackingDay(date: globalCurrentDate)
+        let currentTrackingDay = TrackingModulesDBS(editingDate: globalCurrentDate).getTrackingDay()
         updatePageUI(currentTrackingDay)
         
         attemptMenuRestore()
@@ -183,13 +183,12 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     
     private func setHeaderStreak() {
         var count = 0
-        let trackingDBS = TrackingModulesDBS()
         var date = globalCurrentDate
         
         //Start counting from yesterday
         let previousDay = OMSDateAccessor.getFullDate(date: date).addingTimeInterval(-60*60*24)
         date = OMSDateAccessor.getFormatedDate(date: previousDay)
-        while(trackingDBS.getTrackingDay(date: date).IsDayComplete) {
+        while(TrackingModulesDBS(editingDate: date).getTrackingDay().IsDayComplete) {
             count += 1
             
             let previousDay = OMSDateAccessor.getFullDate(date: date).addingTimeInterval(-60*60*24)
@@ -197,7 +196,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         }
         
         //add 1 if they actually completed today
-        if(trackingDBS.getTrackingDay(date: globalCurrentDate).IsDayComplete) {
+        if(TrackingModulesDBS(editingDate: globalCurrentDate).getTrackingDay().IsDayComplete) {
             count += 1
         }
         
@@ -292,7 +291,13 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     //TODO: this is a test button, normally the day would progress, and the ui is not automatically updated unless we check in the loadCurrentDayUI to check if todays date has changed
     //basically nothing can ever write using current day, they write using todays date
     @objc private func ProgressDayPressed(gesture: UIGestureRecognizer) {
-        omsDateFormatter.progressDay()
+        //omsDateFormatter.progressDay()
+        let vc = SlidingStackVC(initialView: DatePickerSVC())
+        
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.dismissalDelegate = self
+        
+        self.present(vc, animated: true, completion: nil)
     }
     
     func goalPressed() {

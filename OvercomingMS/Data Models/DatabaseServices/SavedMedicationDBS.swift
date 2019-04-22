@@ -18,9 +18,11 @@ class SavedMedicationDBS: TrackingModulesDBS {
     }
     
     override func updateCompleteStatus() {
+        let day = getTrackingDay()
         do {
             try realm.write() {
-                getTrackingDay().IsMedicationComplete = getPercentageComplete() >= 100
+                day.IsMedicationComplete = getPercentageComplete() >= 100
+                
             }
         } catch {
             print("Error updating Meditation data : \(error)" )

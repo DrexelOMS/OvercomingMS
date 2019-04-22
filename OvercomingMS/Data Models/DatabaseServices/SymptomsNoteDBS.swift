@@ -14,7 +14,7 @@ class SymptomsNoteDBS {
     let realm = try! Realm()
     var day : TrackingDayDBT {
         get {
-            return TrackingModulesDBS().getTrackingDay(date: globalCurrentDate)
+            return TrackingModulesDBS(editingDate: globalCurrentDate).getTrackingDay()
         }
     }
     
