@@ -109,6 +109,31 @@ class SwipeDownVC : DismissableVC {
         initialFrameHeight = Float(view.bounds.height)
 
     }
+    
+    var topHeight: Float = 20
+    var bottomHeight: Float = 0
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        var topSafeArea: CGFloat
+        var bottomSafeArea: CGFloat
+        
+        if #available(iOS 11.0, *) {
+            topSafeArea = view.safeAreaInsets.top
+            bottomSafeArea = view.safeAreaInsets.bottom
+        } else {
+            topSafeArea = topLayoutGuide.length
+            bottomSafeArea = bottomLayoutGuide.length
+        }
+        
+        if topSafeArea != 0 {
+            topHeight = Float(topSafeArea)
+        }
+        if bottomSafeArea != 0 {
+            bottomHeight = Float(bottomSafeArea)
+        }
+    }
 
     //TODO: repair to take the changing safe area
     @objc func draggedView(_ sender: UIPanGestureRecognizer) {
@@ -119,11 +144,11 @@ class SwipeDownVC : DismissableVC {
         }
         else if sender.state == UIGestureRecognizer.State.changed {
             if touchPoint.y - initialTouchPoint.y > 0{
-                self.view.frame = CGRect(x: 0, y: touchPoint.y - initialTouchPoint.y + 20, width: CGFloat(initialFrameWidth), height: CGFloat(initialFrameHeight - 20))
+                self.view.frame = CGRect(x: 0, y: touchPoint.y - initialTouchPoint.y + CGFloat(topHeight), width: CGFloat(initialFrameWidth), height: CGFloat(initialFrameHeight - (topHeight + bottomHeight)))
             }
         }
         else if sender.state == UIGestureRecognizer.State.ended {
-            if touchPoint.y - initialTouchPoint.y + 20 > CGFloat(swipeDownYThreshold) {
+            if touchPoint.y - initialTouchPoint.y + CGFloat(topHeight) > CGFloat(swipeDownYThreshold) {
                 dismiss()
             }
             else {
