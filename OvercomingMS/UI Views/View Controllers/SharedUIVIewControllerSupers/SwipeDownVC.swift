@@ -16,14 +16,14 @@ class SwipeDownVC : DismissableVC {
     
     var theme : UIColor = UIColor.gray
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupContentStackView()
-        pullBarSVC.colorTheme = theme.withAlphaComponent(0.6)
-        view.backgroundColor = theme.withAlphaComponent(0.6)
-        setupGestures()
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        setupContentStackView()
+//        pullBarSVC.colorTheme = theme.withAlphaComponent(0.6)
+//        view.backgroundColor = theme.withAlphaComponent(0.6)
+//        setupGestures()
+//    }
     
     private func setupContentStackView() {
         let contentView = UIView()
@@ -59,70 +59,78 @@ class SwipeDownVC : DismissableVC {
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    private func setupGestures() {
-        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(gesture:)))
-        swipeDown.direction = UISwipeGestureRecognizer.Direction.down
-        view.addGestureRecognizer(swipeDown)
-        
-        pullBarSVC.isUserInteractionEnabled = true
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pullBarTapped(gesture: )))
-        pullBarSVC.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
-        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-            if swipeGesture.direction == UISwipeGestureRecognizer.Direction.down {
-                dismiss()
-            }
-        }
-    }
+//    private func setupGestures() {
+//        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(gesture:)))
+//        swipeDown.direction = UISwipeGestureRecognizer.Direction.down
+//        view.addGestureRecognizer(swipeDown)
+//
+//        pullBarSVC.isUserInteractionEnabled = true
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pullBarTapped(gesture: )))
+//        pullBarSVC.addGestureRecognizer(tapGesture)
+//    }
+//
+//    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+//        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+//            if swipeGesture.direction == UISwipeGestureRecognizer.Direction.down {
+//                dismiss()
+//            }
+//        }
+//    }
     
     @objc func pullBarTapped(gesture: UITapGestureRecognizer) {
         self.dismiss()
     }
     
-    //    private var panGesture = UIPanGestureRecognizer()
-    //
-    //    private var swipeDownYThreshold = 100
-    //    private var restoreToFullAnimationTime = 0.3
-    //
-    //    private var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
-    //    private var initialFrameWidth : Float = 0.0
-    //    private var initialFrameHeight : Float = 0.0
-    //
-    //    override func viewDidLoad() {
-    //        super.viewDidLoad()
-    //
-    //        panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.draggedView(_:)))
-    //        view.isUserInteractionEnabled = true
-    //        view.addGestureRecognizer(panGesture)
-    //
-    //        initialFrameWidth = Float(view.bounds.width)
-    //        initialFrameHeight = Float(view.bounds.height)
-    //
-    //    }
-    //
-    //    //TODO: repair to take the changing safe area
-    //    @objc func draggedView(_ sender: UIPanGestureRecognizer) {
-    //
-    //        let touchPoint = sender.location(in: self.view?.window)
-    //        if sender.state == UIGestureRecognizer.State.began {
-    //            initialTouchPoint = touchPoint
-    //        }
-    //        else if sender.state == UIGestureRecognizer.State.changed {
-    //            if touchPoint.y - initialTouchPoint.y > 0 {
-    //                self.view.frame = CGRect(x: 0, y: touchPoint.y - initialTouchPoint.y, width: CGFloat(initialFrameWidth), height: CGFloat(initialFrameHeight))
-    //            }
-    //        }
-    //        else if sender.state == UIGestureRecognizer.State.ended {
-    //            if touchPoint.y - initialTouchPoint.y > CGFloat(swipeDownYThreshold) {
-    //                dismiss()
-    //            }
-    //            else {
-    //                UIView.animate(withDuration: restoreToFullAnimationTime) {
-    //                    self.view.frame = CGRect(x: 0, y: 0, width: CGFloat(self.initialFrameWidth), height: CGFloat(self.initialFrameHeight))
-    //                }
-    //            }
-    //        }
-    //    }
+    private var panGesture = UIPanGestureRecognizer()
+
+    private var swipeDownYThreshold = 100
+    private var restoreToFullAnimationTime = 0.3
+
+    private var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
+    private var initialFrameWidth : Float = 0.0
+    private var initialFrameHeight : Float = 0.0
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setupContentStackView()
+        pullBarSVC.colorTheme = theme.withAlphaComponent(0.6)
+        view.backgroundColor = theme.withAlphaComponent(0.6)
+
+        pullBarSVC.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pullBarTapped(gesture: )))
+        pullBarSVC.addGestureRecognizer(tapGesture)
+        
+        panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.draggedView(_:)))
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(panGesture)
+
+        initialFrameWidth = Float(view.bounds.width)
+        initialFrameHeight = Float(view.bounds.height)
+
+    }
+
+    //TODO: repair to take the changing safe area
+    @objc func draggedView(_ sender: UIPanGestureRecognizer) {
+
+        let touchPoint = sender.location(in: self.view?.window)
+        if sender.state == UIGestureRecognizer.State.began {
+            initialTouchPoint = touchPoint
+        }
+        else if sender.state == UIGestureRecognizer.State.changed {
+            if touchPoint.y - initialTouchPoint.y > 0{
+                self.view.frame = CGRect(x: 0, y: touchPoint.y - initialTouchPoint.y + 20, width: CGFloat(initialFrameWidth), height: CGFloat(initialFrameHeight - 20))
+            }
+        }
+        else if sender.state == UIGestureRecognizer.State.ended {
+            if touchPoint.y - initialTouchPoint.y + 20 > CGFloat(swipeDownYThreshold) {
+                dismiss()
+            }
+            else {
+                UIView.animate(withDuration: restoreToFullAnimationTime) {
+                    self.view.frame = CGRect(x: 0, y: 0, width: CGFloat(self.initialFrameWidth), height: CGFloat(self.initialFrameHeight))
+                }
+            }
+        }
+    }
 }
