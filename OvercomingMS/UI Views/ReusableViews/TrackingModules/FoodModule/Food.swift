@@ -6,7 +6,7 @@
 //  Copyright © 2019 DrexelOMS. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum RecommendedLevel {case Good, Caution, Bad}
 
@@ -112,7 +112,7 @@ class Food {
         return RecommendedLevel.Good
     }
     
-    func getFoodFromID(id: String, parentVC:SlidingStackVC)->Void{
+    func getFoodFromID(id: String, parentVC:SlidingStackVC) -> Void {
         let barcodeSearch = "https://world.openfoodfacts.org/api/v0/product/"+id+".json"
         var foodinfo: Food = Food(id: "",name: "",categories: "",satfats: 0,ingredients: "", brand: "")
         //let barcodeSearch = "https://world.openfoodfacts.org/api/v0/product/3181232127608.json"
@@ -122,8 +122,28 @@ class Food {
         //fetching the data from the url
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             
+            if(data == nil){
+                let message = "There was a problem connecting to the food database. Please check your network connection and try again";
+                let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                    switch action.style{
+                    case .default:
+                        print("default")
+                        
+                    case .cancel:
+                        print("cancel")
+                        
+                    case .destructive:
+                        print("destructive")
+                        
+                        
+                    }}))
+                parentVC.present(alert, animated: true, completion: nil)
+                return
+            }
+            
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                
+
                 //printing the json in console
                 //print(jsonObj!.value(forKey: "products")!)
                 

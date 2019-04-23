@@ -85,7 +85,7 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     
     func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
         controller.dismiss(animated: true, completion: nil)
-        //actually initialize the food object. swift is dumb
+//        //actually initialize the food object. swift is dumb
 //        let foodinfo: Food = Food()
 //        foodinfo.getFoodFromID(id: "3181232127608", parentVC: self.parentVC)
     }
@@ -96,7 +96,6 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
             //actually initialize the food object. swift is dumb
             let foodinfo: Food = Food()
             foodinfo.getFoodFromID(id: code, parentVC: self.parentVC)
-            
         }
     }
 

@@ -40,13 +40,6 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         tableView.register(UINib(nibName: foodCellName, bundle: nil), forCellReuseIdentifier: foodCellName)
         
         searchBarButton.SearchButton.addTarget(self, action: #selector(getJsonFromUrl), for: .touchUpInside)
-        
-        do{
-            try getJsonFromUrl();
-        }
-        catch{
-        print("There was a problem connecting to the food database. Please check your network connection")
-        }
     }
     
     override func updateColors() {
@@ -69,7 +62,6 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             if(data == nil){
                 let message = "There was a problem connecting to the food database. Please check your network connection and try again";
-                print(message)
                 let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                     switch action.style{
