@@ -148,6 +148,10 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
                     //print(self.foodItemsArray);
                     //self.showNames()
                     self.reload()
+                    let count = self.foodItemsArray.count
+                    if count <= 0 {
+                        self.tableView.setEmptyView(message: "No matching food items were found")
+                    }
                 })
             }
         }).resume()
