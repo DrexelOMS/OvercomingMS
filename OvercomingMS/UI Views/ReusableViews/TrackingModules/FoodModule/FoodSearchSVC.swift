@@ -40,8 +40,6 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         tableView.register(UINib(nibName: foodCellName, bundle: nil), forCellReuseIdentifier: foodCellName)
         
         searchBarButton.SearchButton.addTarget(self, action: #selector(getJsonFromUrl), for: .touchUpInside)
-        
-        getJsonFromUrl();
     }
     
     override func updateColors() {
@@ -62,7 +60,25 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         
         //fetching the data from the url
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
-            
+            if(data == nil){
+                let message = "There was a problem connecting to the food database. Please check your network connection and try again";
+                let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                    switch action.style{
+                    case .default:
+                        print("default")
+                        
+                    case .cancel:
+                        print("cancel")
+                        
+                    case .destructive:
+                        print("destructive")
+                        
+                        
+                    }}))
+                self.parentVC.present(alert, animated: true, completion: nil)
+                return
+            }
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                 
                 //printing the json in console
@@ -124,6 +140,10 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
                     //print(self.foodItemsArray);
                     //self.showNames()
                     self.reload()
+                    let count = self.foodItemsArray.count
+                    if count <= 0 {
+                        self.tableView.setEmptyView(message: "No matching food items were found")
+                    }
                 })
             }
         }).resume()
