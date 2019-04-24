@@ -95,6 +95,7 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
         let section = sections[indexPath.section]
         let note = section.notes[indexPath.row]
         cell.noteSVC.setNote(note: note)
+        cell.noteSVC.theme = parentVC.theme
 
         return cell
     }

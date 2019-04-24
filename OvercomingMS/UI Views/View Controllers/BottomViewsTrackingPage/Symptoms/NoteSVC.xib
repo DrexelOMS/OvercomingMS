@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="noteLabel" destination="KXY-qR-L5z" id="iIM-xN-QXZ"/>
                 <outlet property="ratingLabel" destination="bll-OP-5wN" id="6UR-i0-hkG"/>
+                <outlet property="roundBox" destination="lZE-Gl-7KY" id="PI9-oU-ZFq"/>
                 <outlet property="timeLabel" destination="9sm-n8-T0M" id="PLd-mW-p6K"/>
             </connections>
         </placeholder>

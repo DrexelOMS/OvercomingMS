@@ -60,7 +60,7 @@ class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataS
         
         let note = savedNotes.getTodaysNotes()[indexPath.row]
         cell.noteSVC.setNote(note: note)
-        
+        cell.noteSVC.theme = parentVC.theme
         return cell
     }
     
