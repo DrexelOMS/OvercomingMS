@@ -8,6 +8,20 @@
 
 import UIKit
 
+struct SymptomsSection : Comparable {
+    
+    static func < (lhs: SymptomsSection, rhs: SymptomsSection) -> Bool {
+        return OMSDateAccessor.getFullDate(date: lhs.Date) < OMSDateAccessor.getFullDate(date: rhs.Date)
+    }
+    
+    static func == (lhs: SymptomsSection, rhs: SymptomsSection) -> Bool {
+        return lhs.Date == rhs.Date
+    }
+    
+    var Date : String
+    var notes : [SymptomsNoteDBT]
+}
+
 class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSource {
     
     override var nibName: String {
@@ -16,9 +30,9 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
         }
     }
     
-    let defaultCellName = "SymptomsListCell"
+    let defaultCellName = "NoteCell"
     
-    var savedNotes: SymptomsList!
+    var sections = [SymptomsSection]()
     
     @IBOutlet weak var backButton: SquareButtonSVC!
     @IBOutlet weak var tableView: UITableView!
@@ -29,10 +43,12 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: defaultCellName, bundle: nil), forCellReuseIdentifier: defaultCellName)
+        tableView.register(SymptomsTableHeader.self, forHeaderFooterViewReuseIdentifier: SymptomsTableHeader.reuseIdentifer)
+        
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         
-        savedNotes = SymptomsList()
+        sections = SymptomsList().getSections()
         
         reload()
     }
@@ -40,7 +56,7 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
     override func reload() {
         tableView.reloadData()
         
-        let count = savedNotes.getCount()
+        let count = sections.count
         if count <= 0 {
             tableView.setEmptyView(message: "No notes yet!")
         }
@@ -52,28 +68,42 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
         }
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: SymptomsTableHeader.reuseIdentifer) as! SymptomsTableHeader
+        
+        header.customLabel.text = sections[section].Date
+
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return savedNotes.getCount()
+        let section = sections[section]
+        return section.notes.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! SymptomsListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! NoteCell
         
-        cell.clear()
-        cell.dateLabel.text = savedNotes.getTitleForIndex(index: indexPath.row)
-        
-        for note in savedNotes.getNotesForIndex(index: indexPath.row) {
-            let noteSVC = NoteSVC()
-            noteSVC.setNote(note: note)
-            cell.addToMiddle(view: noteSVC)
-        }
+        let section = sections[indexPath.section]
+        let note = section.notes[indexPath.row]
+        cell.noteSVC.setNote(note: note)
 
         return cell
     }
 
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        parentVC.pushSubView(newSubView: NoteReviewSVC(noteItem: savedNotes![indexPath.row]))
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = sections[indexPath.section]
+        let note = section.notes[indexPath.row]
+        parentVC.pushSubView(newSubView: NoteReviewSVC(noteItem: note))
+    }
 
     func backButtonPressed(){
         parentVC.popSubView()

@@ -61,8 +61,6 @@
 		0A341D732258F8E20066EC1D /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A341D722258F8E20066EC1D /* ToolBar.swift */; };
 		0A341D77225919C80066EC1D /* SymptomsListSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A341D76225919C80066EC1D /* SymptomsListSVC.xib */; };
 		0A341D79225919DB0066EC1D /* SymptomsListSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A341D78225919DB0066EC1D /* SymptomsListSVC.swift */; };
-		0A341D7B225919F50066EC1D /* SymptomsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A341D7A225919F50066EC1D /* SymptomsListCell.swift */; };
-		0A341D7D22591A020066EC1D /* SymptomsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A341D7C22591A010066EC1D /* SymptomsListCell.xib */; };
 		0A341D7F2259225A0066EC1D /* NoteSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A341D7E2259225A0066EC1D /* NoteSVC.swift */; };
 		0A341D81225922670066EC1D /* NoteSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A341D80225922670066EC1D /* NoteSVC.xib */; };
 		0A3EB6F422594FF800D25AF5 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EB6F322594FF800D25AF5 /* TableViewExtensions.swift */; };
@@ -73,6 +71,7 @@
 		0A4CC87E225FE591004C97BC /* CircleButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC87D225FE591004C97BC /* CircleButtonFactory.swift */; };
 		0A4CC880225FEFA2004C97BC /* TypeTFIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC87F225FEFA2004C97BC /* TypeTFIFactory.swift */; };
 		0A4CC882226021F8004C97BC /* TrackingModuleVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */; };
+		0A59C991226FF6B900FC66B5 /* SymptomsTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A59C990226FF6B800FC66B5 /* SymptomsTableHeader.swift */; };
 		0A7FC91021F51CE300492E93 /* MainTrackingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */; };
 		0A93EA4122122D840063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0A93EA45221316490063A892 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -286,8 +285,6 @@
 		0A341D722258F8E20066EC1D /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
 		0A341D76225919C80066EC1D /* SymptomsListSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SymptomsListSVC.xib; sourceTree = "<group>"; };
 		0A341D78225919DB0066EC1D /* SymptomsListSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsListSVC.swift; sourceTree = "<group>"; };
-		0A341D7A225919F50066EC1D /* SymptomsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsListCell.swift; sourceTree = "<group>"; };
-		0A341D7C22591A010066EC1D /* SymptomsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SymptomsListCell.xib; sourceTree = "<group>"; };
 		0A341D7E2259225A0066EC1D /* NoteSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSVC.swift; sourceTree = "<group>"; };
 		0A341D80225922670066EC1D /* NoteSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteSVC.xib; sourceTree = "<group>"; };
 		0A3EB6F322594FF800D25AF5 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
@@ -298,6 +295,7 @@
 		0A4CC87D225FE591004C97BC /* CircleButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonFactory.swift; sourceTree = "<group>"; };
 		0A4CC87F225FEFA2004C97BC /* TypeTFIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTFIFactory.swift; sourceTree = "<group>"; };
 		0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleVCFactory.swift; sourceTree = "<group>"; };
+		0A59C990226FF6B800FC66B5 /* SymptomsTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsTableHeader.swift; sourceTree = "<group>"; };
 		0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingVC.swift; sourceTree = "<group>"; };
 		0A93EA4A22132AC50063A892 /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
 		0A93EA4B22132AC50063A892 /* Avenir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Light.ttf"; sourceTree = "<group>"; };
@@ -960,14 +958,13 @@
 				0C7D5865222C652100D00CB0 /* SymptomsMainSVC.xib */,
 				0AEF7A41222DD58D009A0292 /* NoteCell.swift */,
 				0C7D5867222D8DA300D00CB0 /* NoteCell.xib */,
+				0A59C990226FF6B800FC66B5 /* SymptomsTableHeader.swift */,
 				0A341D7E2259225A0066EC1D /* NoteSVC.swift */,
 				0A341D80225922670066EC1D /* NoteSVC.xib */,
 				0AEF7A43222DD59F009A0292 /* NoteReviewSVC.swift */,
 				0C7D5869222D942B00D00CB0 /* NoteReviewSVC.xib */,
 				0A341D78225919DB0066EC1D /* SymptomsListSVC.swift */,
 				0A341D76225919C80066EC1D /* SymptomsListSVC.xib */,
-				0A341D7A225919F50066EC1D /* SymptomsListCell.swift */,
-				0A341D7C22591A010066EC1D /* SymptomsListCell.xib */,
 			);
 			path = Symptoms;
 			sourceTree = "<group>";
@@ -1256,7 +1253,6 @@
 				0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */,
 				0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */,
 				0AEF7A4E223024D5009A0292 /* HeaderSVC.xib in Resources */,
-				0A341D7D22591A020066EC1D /* SymptomsListCell.xib in Resources */,
 				0A93F19A22145F150063A892 /* ModifyAbstractSVC.xib in Resources */,
 				0CAD6317221DAAEE00E50E72 /* FoodRejectedSVC.xib in Resources */,
 				0C19F07E22636BA000D080AE /* TutorialButtonSVC.xib in Resources */,
@@ -1421,6 +1417,7 @@
 				0A030FB722580A1500857BC8 /* GoalsDBT.swift in Sources */,
 				0A19B3C32253E97000F4B02B /* ExpandingCell.swift in Sources */,
 				0AF0C5412269F7500003DD73 /* ActiveTrackingDBT.swift in Sources */,
+				0A59C991226FF6B900FC66B5 /* SymptomsTableHeader.swift in Sources */,
 				0AD7EB3B2223043A006F71C0 /* MedicationMainSVC.swift in Sources */,
 				0AA5284C22022CFC00CCFEE7 /* TrackingModuleVC.swift in Sources */,
 				0A93F19322145EA30063A892 /* TypeTFI.swift in Sources */,
@@ -1456,7 +1453,6 @@
 				0A030FA922580A1500857BC8 /* FoodRatingDBS.swift in Sources */,
 				0A030FAC22580A1500857BC8 /* VitaminDHistoryDBS.swift in Sources */,
 				0AD7EB48222345A9006F71C0 /* ToggleLabeledCircleButton.swift in Sources */,
-				0A341D7B225919F50066EC1D /* SymptomsListCell.swift in Sources */,
 				0AD94DCA220CEE5B00B5C2BA /* SelectedItemSVC.swift in Sources */,
 				0AD7EB4C2224B9EC006F71C0 /* MedicationSelectedItem.swift in Sources */,
 				0AD7EB0F221B463A006F71C0 /* VitaminDSelectedItem.swift in Sources */,
