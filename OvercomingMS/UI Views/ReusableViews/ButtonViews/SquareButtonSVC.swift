@@ -47,6 +47,10 @@ class SquareButtonSVC: CustomView {
             fatalError("ButtonAction not set")
         }
         backButtonAction()
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
         buttonView.backgroundColor = colorTheme.withAlphaComponent(0.6)
     }
     

@@ -71,12 +71,12 @@ class CircleButtonSVC: CustomView, ButtonDelegate {
         buttonAction()
     }
     
-    func isHighlighted(highlighted: Bool) {
+    func isHighlighted(highlighted: Bool, sender: CustomButton) {
         if highlighted {
-            button.backgroundColor = UIColor.gray
+            sender.backgroundColor = UIColor.gray
         }
         else {
-            button.backgroundColor = UIColor.white
+            sender.backgroundColor = UIColor.white
         }
     }
     

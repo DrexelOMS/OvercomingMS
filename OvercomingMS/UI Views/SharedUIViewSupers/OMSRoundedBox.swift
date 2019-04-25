@@ -163,4 +163,16 @@ class RoundedBoxShadowsTemplate: OMSRoundedBox {
         shadowOpacity = 0.18
     }
     
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+        setup()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        shadowOffset = CGSize(width: 0, height: 0)
+        shadowRadius = 2
+        shadowOpacity = 0.12
+    }
+    
 }

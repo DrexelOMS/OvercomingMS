@@ -20,6 +20,7 @@ class SeeMoreButtonSVC : CustomView {
     var parentVC: UIViewController!
     
     var url = "https://overcomingms.org"
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     override func customSetup() {
         self.isUserInteractionEnabled = true

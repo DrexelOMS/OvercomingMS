@@ -50,5 +50,15 @@ class MedicationNotTakenItemSVC : CustomView {
         parentVC.pushSubView(newSubView: medicationItemSVC)
     }
     
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+        contentView?.backgroundColor = UIColor.white
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        contentView?.backgroundColor = UIColor.gray
+    }
+    
 }
 
