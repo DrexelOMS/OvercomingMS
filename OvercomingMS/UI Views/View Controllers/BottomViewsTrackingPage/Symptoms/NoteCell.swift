@@ -12,4 +12,16 @@ class NoteCell: UITableViewCell {
     
     @IBOutlet weak var noteSVC: NoteSVC!
     
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        
+    }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        if highlighted {
+            noteSVC.roundBox.backgroundColor = noteSVC.theme.withAlphaComponent(0.6)
+        } else {
+            noteSVC.roundBox.backgroundColor = noteSVC.theme
+        }
+    }
+    
 }

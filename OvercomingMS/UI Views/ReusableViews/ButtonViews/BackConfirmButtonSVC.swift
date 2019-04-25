@@ -9,10 +9,10 @@
 import UIKit
 import Cartography
 
-class BackConfirmButtonsSVC : CustomView {
+class BackConfirmButtonsSVC : CustomView, ButtonDelegate {
     
-    @IBOutlet weak var LeftButton: UIView!
-    @IBOutlet weak var RightButton: UIView!
+    @IBOutlet weak var LeftButton: CustomButton!
+    @IBOutlet weak var RightButton: CustomButton!
     
     var leftButtonAction : (() -> ())?
     var rightButtonAction : (() -> ())?
@@ -35,6 +35,9 @@ class BackConfirmButtonsSVC : CustomView {
     override func customSetup() {
         
         setColors()
+        
+        LeftButton.aggregator = self
+        RightButton.aggregator = self
         
         let tintedImage = backIcon.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         backIcon.image = tintedImage
@@ -71,4 +74,19 @@ class BackConfirmButtonsSVC : CustomView {
         }
         rightButtonAction()
     }
+    
+    func isHighlighted(highlighted: Bool, sender: CustomButton) {
+        if highlighted {
+            if sender == LeftButton {
+                sender.backgroundColor = colorTheme.withAlphaComponent(0.8)
+            }
+            else if sender == RightButton {
+                sender.backgroundColor = colorTheme.withAlphaComponent(0.8)
+            }
+        }
+        else {
+            setColors()
+        }
+    }
+    
 }

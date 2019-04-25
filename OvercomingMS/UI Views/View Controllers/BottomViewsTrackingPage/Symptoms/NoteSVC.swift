@@ -19,6 +19,13 @@ class NoteSVC: CustomView {
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var roundBox: RoundedBoxShadowsTemplate!
+    
+    var theme: UIColor! {
+        didSet {
+            roundBox.backgroundColor = theme
+        }
+    }
     
     override func customSetup() {
         
