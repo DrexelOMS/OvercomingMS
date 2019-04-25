@@ -75,7 +75,7 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: SymptomsTableHeader.reuseIdentifer) as! SymptomsTableHeader
         
-        header.customLabel.text = sections[section].Date
+        header.customLabel.text = OMSDateAccessor.getStyledDate(date: sections[section].Date)
 
         return header
     }
