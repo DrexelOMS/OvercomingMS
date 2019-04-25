@@ -18,18 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OMSLogoTest" translatesAutoresizingMaskIntoConstraints="NO" id="oCL-xd-lul">
-                                <rect key="frame" x="20" y="276" width="280" height="16"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OMSLogoTest" translatesAutoresizingMaskIntoConstraints="NO" id="cUh-to-mIt">
+                                <rect key="frame" x="20" y="209.5" width="280" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cUh-to-mIt" secondAttribute="height" multiplier="15:8" id="jgs-lC-JGZ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oCL-xd-lul" secondAttribute="bottom" constant="243" id="CWJ-OX-z4e"/>
-                            <constraint firstItem="oCL-xd-lul" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ic5-uj-SYh"/>
-                            <constraint firstItem="oCL-xd-lul" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="M9h-Z4-KXR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oCL-xd-lul" secondAttribute="trailing" constant="20" id="XpG-nf-ywk"/>
-                            <constraint firstItem="oCL-xd-lul" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jsp-os-vr4"/>
-                            <constraint firstItem="oCL-xd-lul" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="qGM-AO-mHy"/>
+                            <constraint firstItem="cUh-to-mIt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5tY-Sq-FTD"/>
+                            <constraint firstItem="cUh-to-mIt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fbT-jK-C44"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cUh-to-mIt" secondAttribute="trailing" constant="20" id="ns1-HG-5Hz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="OMSLogoTest" width="170" height="51.5"/>
+        <image name="OMSLogoTest" width="170" height="47"/>
     </resources>
 </document>
