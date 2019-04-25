@@ -156,6 +156,8 @@
 		0AEC55582261536300B7B75E /* GoalsModifySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC55572261536300B7B75E /* GoalsModifySVC.swift */; };
 		0AEC555A2261547700B7B75E /* SettingsBoxSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC55592261547700B7B75E /* SettingsBoxSVC.swift */; };
 		0AEC555C226154A800B7B75E /* SettingsBoxSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC555B226154A800B7B75E /* SettingsBoxSVC.xib */; };
+		0AEC93E42272487C009FCDC5 /* TrackingToggleSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC93E32272487C009FCDC5 /* TrackingToggleSVC.xib */; };
+		0AEC93E622724898009FCDC5 /* TrackingToggleSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC93E522724898009FCDC5 /* TrackingToggleSVC.swift */; };
 		0AEF7A29222AFA88009A0292 /* BadIngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */; };
 		0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */; };
 		0AEF7A3A222CD774009A0292 /* GoalsMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A39222CD774009A0292 /* GoalsMainSVC.swift */; };
@@ -391,6 +393,8 @@
 		0AEC55572261536300B7B75E /* GoalsModifySVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsModifySVC.swift; sourceTree = "<group>"; };
 		0AEC55592261547700B7B75E /* SettingsBoxSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBoxSVC.swift; sourceTree = "<group>"; };
 		0AEC555B226154A800B7B75E /* SettingsBoxSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsBoxSVC.xib; sourceTree = "<group>"; };
+		0AEC93E32272487C009FCDC5 /* TrackingToggleSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingToggleSVC.xib; sourceTree = "<group>"; };
+		0AEC93E522724898009FCDC5 /* TrackingToggleSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingToggleSVC.swift; sourceTree = "<group>"; };
 		0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadIngredientsCell.swift; sourceTree = "<group>"; };
 		0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadIngredientsCell.xib; sourceTree = "<group>"; };
 		0AEF7A39222CD774009A0292 /* GoalsMainSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsMainSVC.swift; sourceTree = "<group>"; };
@@ -933,6 +937,8 @@
 			children = (
 				0C19F06F2262885A00D080AE /* SettingsTrackingSVC.xib */,
 				0AF0C53E22694D3E0003DD73 /* SettingsTrackingSVC.swift */,
+				0AEC93E32272487C009FCDC5 /* TrackingToggleSVC.xib */,
+				0AEC93E522724898009FCDC5 /* TrackingToggleSVC.swift */,
 			);
 			path = TrackingViews;
 			sourceTree = "<group>";
@@ -1262,6 +1268,7 @@
 				0C19F0802264DF1300D080AE /* ReminderAddViewSVC.xib in Resources */,
 				0A9926CA225CEA77008DE456 /* SettingsMainSVC.xib in Resources */,
 				0A2BAA782204AFC3004074F3 /* Quicksand-Italic.otf in Resources */,
+				0AEC93E42272487C009FCDC5 /* TrackingToggleSVC.xib in Resources */,
 				0A341D81225922670066EC1D /* NoteSVC.xib in Resources */,
 				0A19B3C52253F97100F4B02B /* MedicationItemSVC.xib in Resources */,
 			);
@@ -1528,6 +1535,7 @@
 				0AEF7A42222DD58D009A0292 /* NoteCell.swift in Sources */,
 				0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */,
 				0A59C99522710ECA00FC66B5 /* CustomButton.swift in Sources */,
+				0AEC93E622724898009FCDC5 /* TrackingToggleSVC.swift in Sources */,
 				0A081893221473380021BDF6 /* ExerciseModifySVC.swift in Sources */,
 				0AD7EB1E2220B2D9006F71C0 /* FoodRejectedSVC.swift in Sources */,
 				0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */,

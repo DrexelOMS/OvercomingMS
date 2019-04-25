@@ -20,56 +20,63 @@ class SettingsTrackingSVC : SlidingAbstractSVC {
     
     @IBOutlet weak var backButton: SquareButtonSVC!
     
-    @IBOutlet weak var foodToggle: UISwitch!
-    @IBOutlet weak var omega3Toggle: UISwitch!
-    @IBOutlet weak var vitaminDToggle: UISwitch!
-    @IBOutlet weak var exerciseToggle: UISwitch!
-    @IBOutlet weak var meditationToggle: UISwitch!
-    @IBOutlet weak var medicationToggle: UISwitch!
+
+    @IBOutlet weak var foodToggle: TrackingToggleSVC!
+    @IBOutlet weak var omega3Toggle: TrackingToggleSVC!
+    @IBOutlet weak var vitaminDToggle: TrackingToggleSVC!
+    @IBOutlet weak var exerciseToggle: TrackingToggleSVC!
+    @IBOutlet weak var meditationToggle: TrackingToggleSVC!
+    @IBOutlet weak var medicationToggle: TrackingToggleSVC!
     
     override func customSetup() {
         backButton.backButtonAction = backPressed
         
         let mostRecent = activeTracking.mostRecentActiveTracking
-        foodToggle.isOn = mostRecent.IsFoodActive
-        omega3Toggle.isOn = mostRecent.IsOmega3Active
-        vitaminDToggle.isOn = mostRecent.IsVitaminDActive
-        exerciseToggle.isOn = mostRecent.IsExerciseActive
-        meditationToggle.isOn = mostRecent.IsMeditationActive
-        medicationToggle.isOn = mostRecent.IsMedicationActive
+        foodToggle.setToggle(isEnabled: mostRecent.IsFoodActive)
+        foodToggle.toggleAction = foodToggled
+        omega3Toggle.setToggle(isEnabled: mostRecent.IsOmega3Active)
+        omega3Toggle.toggleAction = omega3Toggled
+        vitaminDToggle.setToggle(isEnabled: mostRecent.IsVitaminDActive)
+        vitaminDToggle.toggleAction = vitaminDToggled
+        exerciseToggle.setToggle(isEnabled: mostRecent.IsExerciseActive)
+        exerciseToggle.toggleAction = exerciseToggled
+        meditationToggle.setToggle(isEnabled: mostRecent.IsMeditationActive)
+        meditationToggle.toggleAction = meditationToggled
+        medicationToggle.setToggle(isEnabled: mostRecent.IsMedicationActive)
+        medicationToggle.toggleAction = medicationToggled
     }
     
     func backPressed() {
         parentVC.popSubView()
     }
     
-    @IBAction func foodToggled(_ sender: Any) {
-        activeTracking.foodIsActive = foodToggle.isOn
+    func foodToggled(isOn: Bool) {
+        activeTracking.foodIsActive = isOn
         activeTracking.writeActiveItems()
     }
     
-    @IBAction func omega3Toggled(_ sender: Any) {
-        activeTracking.omega3IsActive = omega3Toggle.isOn
+    func omega3Toggled(isOn: Bool) {
+        activeTracking.omega3IsActive = isOn
         activeTracking.writeActiveItems()
     }
     
-    @IBAction func vitaminDToggled(_ sender: Any) {
-        activeTracking.vitaminDIsActive = vitaminDToggle.isOn
+    func vitaminDToggled(isOn: Bool) {
+        activeTracking.vitaminDIsActive = isOn
         activeTracking.writeActiveItems()
     }
     
-    @IBAction func exerciseToggled(_ sender: Any) {
-        activeTracking.exerciseIsActive = exerciseToggle.isOn
+    func exerciseToggled(isOn: Bool) {
+        activeTracking.exerciseIsActive = isOn
         activeTracking.writeActiveItems()
     }
     
-    @IBAction func meditationToggled(_ sender: Any) {
-        activeTracking.meditationIsActive = meditationToggle.isOn
+    func meditationToggled(isOn: Bool) {
+        activeTracking.meditationIsActive = isOn
         activeTracking.writeActiveItems()
     }
     
-    @IBAction func medicationToggled(_ sender: Any) {
-        activeTracking.medicationIsActive = medicationToggle.isOn
+    func medicationToggled(isOn: Bool) {
+        activeTracking.medicationIsActive = isOn
         activeTracking.writeActiveItems()
     }
 }
