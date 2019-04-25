@@ -72,6 +72,7 @@
 		0A4CC880225FEFA2004C97BC /* TypeTFIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC87F225FEFA2004C97BC /* TypeTFIFactory.swift */; };
 		0A4CC882226021F8004C97BC /* TrackingModuleVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */; };
 		0A59C991226FF6B900FC66B5 /* SymptomsTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A59C990226FF6B800FC66B5 /* SymptomsTableHeader.swift */; };
+		0A59C99522710ECA00FC66B5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A59C99422710ECA00FC66B5 /* CustomButton.swift */; };
 		0A7FC91021F51CE300492E93 /* MainTrackingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */; };
 		0A93EA4122122D840063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0A93EA45221316490063A892 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -296,6 +297,7 @@
 		0A4CC87F225FEFA2004C97BC /* TypeTFIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTFIFactory.swift; sourceTree = "<group>"; };
 		0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleVCFactory.swift; sourceTree = "<group>"; };
 		0A59C990226FF6B800FC66B5 /* SymptomsTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsTableHeader.swift; sourceTree = "<group>"; };
+		0A59C99422710ECA00FC66B5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingVC.swift; sourceTree = "<group>"; };
 		0A93EA4A22132AC50063A892 /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
 		0A93EA4B22132AC50063A892 /* Avenir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Light.ttf"; sourceTree = "<group>"; };
@@ -797,6 +799,7 @@
 			children = (
 				0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */,
 				0AEF7A47222ED4A4009A0292 /* BottomRoundCornersUIView.swift */,
+				0A59C99422710ECA00FC66B5 /* CustomButton.swift */,
 				0AA5285A2202623B00CCFEE7 /* RoundButton.swift */,
 				0AD7EB322223040F006F71C0 /* DoneCheckButton.swift */,
 				0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */,
@@ -1524,6 +1527,7 @@
 				0A08189C2214E8CC0021BDF6 /* FoodSearchCell.swift in Sources */,
 				0AEF7A42222DD58D009A0292 /* NoteCell.swift in Sources */,
 				0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */,
+				0A59C99522710ECA00FC66B5 /* CustomButton.swift in Sources */,
 				0A081893221473380021BDF6 /* ExerciseModifySVC.swift in Sources */,
 				0AD7EB1E2220B2D9006F71C0 /* FoodRejectedSVC.swift in Sources */,
 				0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */,

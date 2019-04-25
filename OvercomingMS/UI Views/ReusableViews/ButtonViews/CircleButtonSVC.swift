@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CircleButtonSVC: CustomView {
+class CircleButtonSVC: CustomView, ButtonDelegate {
     
     override var nibName: String {
         get {
@@ -31,7 +31,7 @@ class CircleButtonSVC: CustomView {
         }
     }
     
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var button: CustomButton!
     @IBOutlet weak var label: UILabel!
     
     var buttonAction : (() -> ())?
@@ -57,17 +57,11 @@ class CircleButtonSVC: CustomView {
     }
     
     override func customSetup() {
-        
+        button.aggregator = self
     }
     
     func setEnabled(enabled: Bool) {
         button.isEnabled = enabled
-//        if enabled {
-//            button.backgroundColor = UIColor.white
-//        }
-//        else {
-//            
-//        }
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -76,4 +70,14 @@ class CircleButtonSVC: CustomView {
         }
         buttonAction()
     }
+    
+    func isHighlighted(highlighted: Bool) {
+        if highlighted {
+            button.backgroundColor = UIColor.gray
+        }
+        else {
+            button.backgroundColor = UIColor.white
+        }
+    }
+    
 }

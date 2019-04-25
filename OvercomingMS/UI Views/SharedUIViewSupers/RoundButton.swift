@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class RoundButton: UIButton {
+class RoundButton: CustomButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
