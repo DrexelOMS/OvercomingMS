@@ -28,34 +28,28 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <rect key="frame" x="0.0" y="0.0" width="379" height="103"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3f-MW-4O7" userLabel="TopView" customClass="BottomRoundCornersUIView" customModule="OvercomingMS" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                    <rect key="frame" x="0.0" y="0.0" width="379" height="103"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="R33-gT-yIq">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                            <rect key="frame" x="0.0" y="0.0" width="379" height="99"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G67-31-Pug" userLabel="Navigation">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="379" height="51.5"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="pk0-cZ-Rur">
-                                            <rect key="frame" x="20" y="8" width="335" height="31.5"/>
+                                            <rect key="frame" x="20" y="8" width="339" height="43.5"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLc-MV-ro5" userLabel="Circles">
-                                                    <rect key="frame" x="0.0" y="0.0" width="114.5" height="31.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="115.5" height="43.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2b-ms-EXl">
-                                                            <rect key="frame" x="33" y="0.0" width="48.5" height="16.5"/>
-                                                            <attributedString key="attributedText">
-                                                                <fragment content="Circles">
-                                                                    <attributes>
-                                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <font key="NSFont" size="14" name="Quicksand-Bold"/>
-                                                                    </attributes>
-                                                                </fragment>
-                                                            </attributedString>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2b-ms-EXl">
+                                                            <rect key="frame" x="58" y="0.0" width="0.0" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="14"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -65,10 +59,10 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agl-mY-bAX" userLabel="Tracking">
-                                                    <rect key="frame" x="110.5" y="0.0" width="114" height="31.5"/>
+                                                    <rect key="frame" x="111.5" y="0.0" width="116" height="43.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracking" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DK8-wN-Om8">
-                                                            <rect key="frame" x="14.5" y="0.0" width="85.5" height="26.5"/>
+                                                            <rect key="frame" x="15.5" y="0.0" width="85.5" height="36.5"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -81,10 +75,10 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3o-fx-0cd" userLabel="Analysis">
-                                                    <rect key="frame" x="220.5" y="0.0" width="114.5" height="31.5"/>
+                                                    <rect key="frame" x="223.5" y="0.0" width="115.5" height="43.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiq-oz-Wd1">
-                                                            <rect key="frame" x="32.5" y="0.0" width="49.5" height="16.5"/>
+                                                            <rect key="frame" x="33" y="0.0" width="49.5" height="16.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="History">
                                                                     <attributes>
@@ -113,20 +107,20 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-LM-M8R" userLabel="BorderBottom">
-                                    <rect key="frame" x="0.0" y="39.5" width="375" height="0.5"/>
+                                    <rect key="frame" x="0.0" y="51.5" width="379" height="0.5"/>
                                     <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="0.5" id="uE8-tK-H3W"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-Nr-BpB" userLabel="GoalMessageView">
-                                    <rect key="frame" x="0.0" y="40" width="375" height="36"/>
+                                    <rect key="frame" x="0.0" y="52" width="379" height="47"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jPd-Wf-4q2">
-                                            <rect key="frame" x="20" y="4" width="335" height="28"/>
+                                            <rect key="frame" x="20" y="5.5" width="339" height="36"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-XR-GJa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="28"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="36"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="## days in a row!">
                                                             <attributes>
@@ -139,7 +133,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx3-aO-bU4">
-                                                    <rect key="frame" x="175" y="0.0" width="160" height="28"/>
+                                                    <rect key="frame" x="177" y="0.0" width="162" height="36"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="## perfect days!">
                                                             <attributes>
@@ -183,7 +177,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="52" y="325.63718140929535"/>
+            <point key="canvasLocation" x="48.799999999999997" y="340.47976011994007"/>
         </view>
     </objects>
 </document>
