@@ -34,12 +34,6 @@ class OMSRoundedBox: UIView {
         }
     }
     
-//    @IBInspectable var quarterRound: Bool {
-//        get {
-//            return
-//        }
-//    }
-    
     /// The radius of the view's rounded corners
     @IBInspectable var cornerRadius: CGFloat {
         get {
@@ -108,6 +102,17 @@ class OMSRoundedBox: UIView {
         set {
             layer.shadowOpacity = newValue
             layer.masksToBounds = false
+        }
+    }
+    
+    private var myIsPill = false
+    @IBInspectable public var isPill: Bool {
+        get {
+            return myIsPill
+        }
+        set {
+            myIsPill = isPill
+            cornerRadius = frame.height / 2
         }
     }
     

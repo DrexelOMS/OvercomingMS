@@ -40,7 +40,7 @@ class TrackingProgressBar: CustomView {
     //TODO rename to hasProgressBar, this is being set on the main storyboard
     @IBInspectable var hasProgressBar: Bool = true {
         didSet {
-            linearProgressBar.isHidden = !hasProgressBar
+            progressBarContainer.isHidden = !hasProgressBar
         }
     }
     
@@ -60,6 +60,7 @@ class TrackingProgressBar: CustomView {
     @IBOutlet private weak var rightLabel: UILabel!
     @IBOutlet weak var linearProgressBar: LinearProgressBar!
     @IBOutlet weak var checkButton: UIButton!
+    @IBOutlet weak var progressBarContainer: OMSRoundedBox!
     
     var originalBackground: UIColor = UIColor.white
     
@@ -111,14 +112,14 @@ class TrackingProgressBar: CustomView {
             leftLabel.textColor = UIColor.white
             rightLabel.textColor = UIColor.white
             checkButton.setImage(UIImage(named: "QuickCompleteReversed"), for: .normal)
-            linearProgressBar.isHidden = true
+            progressBarContainer.isHidden = true
         }
         else {
             roundedView.backgroundColor = originalBackground
             leftLabel.textColor = UIColor.black
             rightLabel.textColor = UIColor.black
             checkButton.setImage(UIImage(named: "QuickComplete"), for: .normal)
-            linearProgressBar.isHidden = false
+            progressBarContainer.isHidden = false
         }
     }
     
@@ -169,7 +170,7 @@ class TrackingProgressBar: CustomView {
                 setProgressValue(value: trackingDBS.getPercentageComplete())
             }
             else {
-                linearProgressBar.isHidden = true
+                progressBarContainer.isHidden = true
             }
         }
         else {
@@ -177,9 +178,14 @@ class TrackingProgressBar: CustomView {
             setColorMode(completed: true)
             
             if !hasProgressBar {
-                linearProgressBar.isHidden = true
+                progressBarContainer.isHidden = true
             }
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        linearProgressBar.barThickness = linearProgressBar.frame.height
     }
 }
 
