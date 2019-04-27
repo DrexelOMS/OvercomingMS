@@ -23,11 +23,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="280" height="87"/>
+            <rect key="frame" x="0.0" y="0.0" width="280" height="65"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-WZ-0p8" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="11" width="280" height="65"/>
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="65"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5E-v9-Wxp" userLabel="RoundedView" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="280" height="65"/>
@@ -187,7 +187,7 @@
                 <constraint firstAttribute="bottom" secondItem="zzc-WZ-0p8" secondAttribute="bottom" priority="999" id="qbN-3D-KV2"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="136.875" y="263.55633802816902"/>
+            <point key="canvasLocation" x="136.875" y="284.68309859154931"/>
         </view>
     </objects>
     <resources>

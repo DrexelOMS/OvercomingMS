@@ -34,6 +34,12 @@ class OMSRoundedBox: UIView {
         }
     }
     
+//    @IBInspectable var quarterRound: Bool {
+//        get {
+//            return
+//        }
+//    }
+    
     /// The radius of the view's rounded corners
     @IBInspectable var cornerRadius: CGFloat {
         get {
@@ -133,7 +139,7 @@ class RoundedBoxTemplate: OMSRoundedBox {
     }
     
     func setup(){
-        cornerRadius = 15
+        cornerRadius = frame.height / 4
         maskToBounds = true
     }
     
@@ -156,7 +162,7 @@ class RoundedBoxShadowsTemplate: OMSRoundedBox {
     }
     
     func setup(){
-        cornerRadius = 15
+        cornerRadius = frame.height / 4
         shadowColor = UIColor.black
         shadowOffset = CGSize(width: 2, height: 2)
         shadowRadius = 3

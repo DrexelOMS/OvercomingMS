@@ -129,6 +129,11 @@
                                         <constraint firstItem="i3o-dP-hyb" firstAttribute="top" secondItem="Zlc-wl-uUU" secondAttribute="top" constant="10" id="kW9-gy-BC9"/>
                                         <constraint firstItem="i3o-dP-hyb" firstAttribute="leading" secondItem="Zlc-wl-uUU" secondAttribute="leading" constant="10" id="xB1-ix-zZU"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dB4-0a-Eeb" userLabel="PaddingTop">
                                     <rect key="frame" x="0.0" y="170" width="260" height="30"/>
