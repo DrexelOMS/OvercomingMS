@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I4j-2b-a75">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,33 +20,33 @@
             <objects>
                 <viewController id="I4j-2b-a75" customClass="MainTrackingVC" customModule="OvercomingMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vmN-bR-mVr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Aa-cs-GRV" userLabel="MainView">
-                                <rect key="frame" x="0.0" y="20" width="320" height="440"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="710"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcW-NB-qsi" customClass="HeaderSVC" customModule="OvercomingMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="CJM-Mn-957"/>
+                                        </constraints>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DWO-Z2-Tem">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                                        <rect key="frame" x="0.0" y="80" width="414" height="630"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcW-NB-qsi" customClass="HeaderSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="0Sx-nx-CPs"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4m-or-7q3" userLabel="DateView">
-                                                <rect key="frame" x="0.0" y="80" width="320" height="44.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPm-LC-hKP">
-                                                        <rect key="frame" x="20" y="0.0" width="280" height="44.5"/>
+                                                        <rect key="frame" x="20" y="0.0" width="374" height="83"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQV-r2-tiw" userLabel="LeftButtonView">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="44.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="83"/>
                                                                 <subviews>
                                                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d19-Be-BUR">
-                                                                        <rect key="frame" x="12.5" y="15" width="15" height="14.5"/>
+                                                                        <rect key="frame" x="6.3333333333333339" y="27.666666666666657" width="27.333333333333329" height="27.666666666666671"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="d19-Be-BUR" secondAttribute="height" multiplier="1:1" id="qdP-GQ-nAn"/>
                                                                         </constraints>
@@ -61,22 +61,22 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzs-21-drx" userLabel="CenterDateView">
-                                                                <rect key="frame" x="40" y="0.0" width="200" height="44.5"/>
+                                                                <rect key="frame" x="40" y="0.0" width="294" height="83"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysy-9U-xKt">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="44.5"/>
+                                                                        <rect key="frame" x="17.333333333333343" y="0.0" width="259.33333333333326" height="83"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, Month ##, ####" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="g1y-Q8-aCF">
-                                                                                <rect key="frame" x="0.0" y="11" width="180" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="20.666666666666661" width="232" height="41.333333333333343"/>
                                                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H33-LW-Fg1" userLabel="DropdownView">
-                                                                                <rect key="frame" x="185" y="0.0" width="10" height="44.5"/>
+                                                                                <rect key="frame" x="237" y="0.0" width="17.333333333333343" height="83"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5k8-Aq-5FZ">
-                                                                                        <rect key="frame" x="0.5" y="17.5" width="9" height="9"/>
+                                                                                        <rect key="frame" x="0.33333333333337123" y="33" width="16.666666666666668" height="16.666666666666671"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="width" secondItem="5k8-Aq-5FZ" secondAttribute="height" multiplier="1:1" id="t5Q-gh-cEL"/>
                                                                                         </constraints>
@@ -110,10 +110,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQ9-e7-rdh" userLabel="RightButtonView">
-                                                                <rect key="frame" x="240" y="0.0" width="40" height="44.5"/>
+                                                                <rect key="frame" x="334" y="0.0" width="40" height="83"/>
                                                                 <subviews>
                                                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niz-LX-zix">
-                                                                        <rect key="frame" x="12.5" y="15" width="15" height="14.5"/>
+                                                                        <rect key="frame" x="6.3333333333333126" y="27.666666666666657" width="27.333333333333329" height="27.666666666666671"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="niz-LX-zix" secondAttribute="height" multiplier="1:1" id="fxj-vn-sta"/>
                                                                         </constraints>
@@ -139,13 +139,13 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x1-2z-34U" userLabel="TrackingView">
-                                                <rect key="frame" x="0.0" y="124.5" width="320" height="315.5"/>
+                                                <rect key="frame" x="0.0" y="83" width="414" height="547"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uG2-RS-f9c">
-                                                        <rect key="frame" x="20" y="0.0" width="280" height="315.5"/>
+                                                        <rect key="frame" x="20" y="0.0" width="374" height="547"/>
                                                         <subviews>
                                                             <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-EL-iHN" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="82.666666666666671"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Food"/>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hasProgressBar" value="NO"/>
@@ -155,7 +155,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IO1-W9-0dD" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="54" width="280" height="44.5"/>
+                                                                <rect key="frame" x="0.0" y="92.666666666666686" width="374" height="83"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.0078431372550000003" green="0.63529411759999999" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -164,7 +164,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-va-Kq1" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="108.5" width="280" height="44"/>
+                                                                <rect key="frame" x="0.0" y="185.66666666666669" width="374" height="82.666666666666686"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="1" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -173,7 +173,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYS-8V-zpv" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="162.5" width="280" height="44.5"/>
+                                                                <rect key="frame" x="0.0" y="278.33333333333331" width="374" height="83"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Exercise"/>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
@@ -182,7 +182,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQQ-l4-VC0" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="217" width="280" height="44"/>
+                                                                <rect key="frame" x="0.0" y="371.33333333333337" width="374" height="82.666666666666686"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.40000000000000002" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -191,7 +191,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-CW-Z5M" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="271" width="280" height="44.5"/>
+                                                                <rect key="frame" x="0.0" y="464" width="374" height="83"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.46274509800000002" green="0.67843137249999996" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -217,34 +217,37 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="DWO-Z2-Tem" firstAttribute="top" secondItem="0Aa-cs-GRV" secondAttribute="top" id="994-Tf-eiE"/>
+                                    <constraint firstItem="pcW-NB-qsi" firstAttribute="top" secondItem="0Aa-cs-GRV" secondAttribute="top" id="Wgh-1R-Eks"/>
+                                    <constraint firstAttribute="trailing" secondItem="pcW-NB-qsi" secondAttribute="trailing" id="bgP-Xy-AFO"/>
+                                    <constraint firstItem="pcW-NB-qsi" firstAttribute="leading" secondItem="0Aa-cs-GRV" secondAttribute="leading" id="dAH-pm-v4p"/>
                                     <constraint firstAttribute="trailing" secondItem="DWO-Z2-Tem" secondAttribute="trailing" id="daj-eM-iwM"/>
                                     <constraint firstItem="DWO-Z2-Tem" firstAttribute="leading" secondItem="0Aa-cs-GRV" secondAttribute="leading" id="dzM-IO-YMw"/>
+                                    <constraint firstItem="DWO-Z2-Tem" firstAttribute="top" secondItem="pcW-NB-qsi" secondAttribute="bottom" id="sBa-5c-jFq"/>
                                     <constraint firstAttribute="bottom" secondItem="DWO-Z2-Tem" secondAttribute="bottom" id="tKf-Dj-1hC"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRf-zh-af2" userLabel="ButtonView">
-                                <rect key="frame" x="0.0" y="468" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IwL-Wh-fNr">
-                                        <rect key="frame" x="20" y="0.0" width="280" height="100"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="100"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqo-wA-Hr4" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="121.33333333333333" height="100"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Goals"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Goals"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqb-Vo-Ctx" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                                <rect key="frame" x="95" y="0.0" width="90" height="100"/>
+                                                <rect key="frame" x="126.33333333333334" y="0.0" width="121.33333333333334" height="100"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Symptoms"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Symptoms"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USw-ho-yen" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                                <rect key="frame" x="190" y="0.0" width="90" height="100"/>
+                                                <rect key="frame" x="252.66666666666671" y="0.0" width="121.33333333333334" height="100"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Settings"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Settings"/>
@@ -298,11 +301,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back" width="689" height="689"/>
-        <image name="Dropdown" width="689" height="689"/>
-        <image name="Forward" width="689" height="689"/>
-        <image name="Goals" width="689" height="689"/>
-        <image name="Settings" width="689" height="689"/>
-        <image name="Symptoms" width="689" height="689"/>
+        <image name="Back" width="689.33331298828125" height="689.33331298828125"/>
+        <image name="Dropdown" width="689.33331298828125" height="689.33331298828125"/>
+        <image name="Forward" width="689.33331298828125" height="689.33331298828125"/>
+        <image name="Goals" width="689.33331298828125" height="689.33331298828125"/>
+        <image name="Settings" width="689.33331298828125" height="689.33331298828125"/>
+        <image name="Symptoms" width="689.33331298828125" height="689.33331298828125"/>
     </resources>
 </document>
