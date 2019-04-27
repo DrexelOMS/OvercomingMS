@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.otf">
+            <string>Quicksand-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main TrackingVC-->
         <scene sceneID="egX-PQ-snD">
@@ -59,26 +64,19 @@
                                                                 <rect key="frame" x="40" y="0.0" width="200" height="44.5"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysy-9U-xKt">
-                                                                        <rect key="frame" x="10" y="0.0" width="180" height="44.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="44.5"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="g1y-Q8-aCF">
-                                                                                <rect key="frame" x="0.0" y="11" width="158" height="22"/>
-                                                                                <attributedString key="attributedText">
-                                                                                    <fragment content="Today, Month ##, ####">
-                                                                                        <attributes>
-                                                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                                            <font key="NSFont" size="18" name="Quicksand-Bold"/>
-                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                                        </attributes>
-                                                                                    </fragment>
-                                                                                </attributedString>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, Month ##, ####" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="g1y-Q8-aCF">
+                                                                                <rect key="frame" x="0.0" y="11" width="180" height="22"/>
+                                                                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
+                                                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H33-LW-Fg1" userLabel="DropdownView">
-                                                                                <rect key="frame" x="163" y="0.0" width="12" height="44.5"/>
+                                                                                <rect key="frame" x="185" y="0.0" width="10" height="44.5"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5k8-Aq-5FZ">
-                                                                                        <rect key="frame" x="0.5" y="16.5" width="11" height="11"/>
+                                                                                        <rect key="frame" x="0.5" y="17.5" width="9" height="9"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="width" secondItem="5k8-Aq-5FZ" secondAttribute="height" multiplier="1:1" id="t5Q-gh-cEL"/>
                                                                                         </constraints>
@@ -93,9 +91,9 @@
                                                                             </view>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstItem="g1y-Q8-aCF" firstAttribute="leading" secondItem="ysy-9U-xKt" secondAttribute="leading" id="F8F-u1-ZFe"/>
+                                                                            <constraint firstItem="g1y-Q8-aCF" firstAttribute="leading" secondItem="ysy-9U-xKt" secondAttribute="leading" id="10f-ul-S9v"/>
                                                                             <constraint firstAttribute="trailing" secondItem="H33-LW-Fg1" secondAttribute="trailing" constant="5" id="G8J-9O-o9z"/>
-                                                                            <constraint firstItem="5k8-Aq-5FZ" firstAttribute="height" secondItem="g1y-Q8-aCF" secondAttribute="height" multiplier="1:2" id="VrP-aK-jOp"/>
+                                                                            <constraint firstItem="5k8-Aq-5FZ" firstAttribute="height" secondItem="g1y-Q8-aCF" secondAttribute="height" multiplier="1:2.5" id="VrP-aK-jOp"/>
                                                                             <constraint firstItem="g1y-Q8-aCF" firstAttribute="centerY" secondItem="ysy-9U-xKt" secondAttribute="centerY" id="cTb-zq-9dE"/>
                                                                             <constraint firstAttribute="bottom" secondItem="H33-LW-Fg1" secondAttribute="bottom" id="cfS-ag-eNp"/>
                                                                             <constraint firstItem="H33-LW-Fg1" firstAttribute="top" secondItem="ysy-9U-xKt" secondAttribute="top" id="qQ9-jn-1jO"/>
@@ -105,9 +103,9 @@
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="ysy-9U-xKt" firstAttribute="leading" secondItem="yzs-21-drx" secondAttribute="leading" constant="10" id="DGa-bW-E5D"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="ysy-9U-xKt" secondAttribute="trailing" constant="10" id="QvZ-zL-aaI"/>
+                                                                    <constraint firstItem="ysy-9U-xKt" firstAttribute="centerX" secondItem="yzs-21-drx" secondAttribute="centerX" id="09D-0q-A1b"/>
                                                                     <constraint firstItem="ysy-9U-xKt" firstAttribute="top" secondItem="yzs-21-drx" secondAttribute="top" id="Sfh-cR-Kje"/>
+                                                                    <constraint firstItem="ysy-9U-xKt" firstAttribute="width" relation="lessThanOrEqual" secondItem="yzs-21-drx" secondAttribute="width" id="dDQ-A7-ep5"/>
                                                                     <constraint firstAttribute="bottom" secondItem="ysy-9U-xKt" secondAttribute="bottom" id="tCG-RR-KVg"/>
                                                                 </constraints>
                                                             </view>
@@ -281,6 +279,7 @@
                         <outlet property="GoalButton" destination="aqo-wA-Hr4" id="7tK-E1-ak0"/>
                         <outlet property="SettingsButton" destination="USw-ho-yen" id="kvK-dc-7v5"/>
                         <outlet property="SymptomsButton" destination="vqb-Vo-Ctx" id="iLw-Re-wbX"/>
+                        <outlet property="centerDateView" destination="yzs-21-drx" id="QJu-BN-mog"/>
                         <outlet property="dateLog" destination="g1y-Q8-aCF" id="DEv-sP-kT2"/>
                         <outlet property="exerciseBar" destination="zYS-8V-zpv" id="SJW-KD-zNK"/>
                         <outlet property="foodBar" destination="CHY-EL-iHN" id="oxd-TP-LXh"/>
