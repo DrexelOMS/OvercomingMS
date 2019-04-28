@@ -105,6 +105,17 @@ class OMSRoundedBox: UIView {
         }
     }
     
+    private var myIsPill = false
+    @IBInspectable public var isPill: Bool {
+        get {
+            return myIsPill
+        }
+        set {
+            myIsPill = isPill
+            cornerRadius = frame.height / 2
+        }
+    }
+    
     func toggleSelected(isSelected: Bool) {
         if isSelected {
             backgroundColor = UIColor.gray
@@ -133,7 +144,7 @@ class RoundedBoxTemplate: OMSRoundedBox {
     }
     
     func setup(){
-        cornerRadius = 15
+        cornerRadius = frame.height / 4
         maskToBounds = true
     }
     
@@ -156,7 +167,7 @@ class RoundedBoxShadowsTemplate: OMSRoundedBox {
     }
     
     func setup(){
-        cornerRadius = 15
+        cornerRadius = frame.height / 4
         shadowColor = UIColor.black
         shadowOffset = CGSize(width: 2, height: 2)
         shadowRadius = 3

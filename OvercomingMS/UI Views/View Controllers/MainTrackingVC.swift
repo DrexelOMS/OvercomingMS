@@ -32,6 +32,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     @IBOutlet weak var meditationBar: TrackingProgressBar!
     @IBOutlet weak var medicationBar: TrackingProgressBar!
     
+    @IBOutlet weak var centerDateView: UIView!
     @IBOutlet weak var previousButton: UIView!
     @IBOutlet weak var nextDay: UIView!
     
@@ -131,9 +132,9 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         let previusGesture = UITapGestureRecognizer(target: self, action: #selector(previousDate(gesture: )))
         previousButton.addGestureRecognizer(previusGesture)
         
-        dateLog.isUserInteractionEnabled = true
+        centerDateView.isUserInteractionEnabled = true
         let progressGesture = UITapGestureRecognizer(target: self, action: #selector(ProgressDayPressed(gesture: )))
-        dateLog.addGestureRecognizer(progressGesture)
+        centerDateView.addGestureRecognizer(progressGesture)
         
         nextDay.isUserInteractionEnabled = true
         let nextGesture = UITapGestureRecognizer(target: self, action: #selector(nextDate(gesture: )))
