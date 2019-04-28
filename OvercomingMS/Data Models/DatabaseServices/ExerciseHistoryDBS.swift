@@ -55,8 +55,10 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
         checkToNotify(oldPercent: percent)
     }
     
-    func getTodaysExerciseItems() -> List<ExerciseHistoryDBT>? {
-        return getTrackingDay().exerciseHistoryDT
+    func getTodaysExerciseItems() -> [ExerciseHistoryDBT] {
+        let converted = getTrackingDay().exerciseHistoryDT
+        let sortedList = converted.sorted(by: { $0.StartTime < $1.StartTime })
+        return sortedList
     }
     
     func getTotalMinutes() -> Int {

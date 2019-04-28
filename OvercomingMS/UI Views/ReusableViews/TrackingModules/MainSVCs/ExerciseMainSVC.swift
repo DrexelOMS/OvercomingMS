@@ -44,7 +44,7 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
         
         
-        let count = exerciseHistory.getTodaysExerciseItems()?.count ?? 0
+        let count = exerciseHistory.getTodaysExerciseItems().count
         if count <= 0 {
             tableView.setEmptyView(title: "No exercise items yet!", message: "Select a button below to begin.")
         }
@@ -72,13 +72,13 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     //MARK: TableView Delegate Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exerciseHistory.getTodaysExerciseItems()?.count ?? 0
+        return exerciseHistory.getTodaysExerciseItems().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellName, for: indexPath) as! Routine3PartCell
         
-        let items = exerciseHistory.getTodaysExerciseItems()!
+        let items = exerciseHistory.getTodaysExerciseItems()
         
         cell.labelLeft.text = items[indexPath.row].RoutineType
         let startTime = items[indexPath.row].StartTime
@@ -90,7 +90,7 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let exerciseItemSVC = ExerciseSelectedItemSVC()
-        exerciseItemSVC.exerciseItem = exerciseHistory.getTodaysExerciseItems()![indexPath.row]
+        exerciseItemSVC.exerciseItem = exerciseHistory.getTodaysExerciseItems()[indexPath.row]
         exerciseItemSVC.parentVC = parentVC
         parentVC.pushSubView(newSubView: exerciseItemSVC)
     }
