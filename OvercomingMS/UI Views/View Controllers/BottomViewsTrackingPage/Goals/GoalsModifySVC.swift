@@ -82,7 +82,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     
     override func reload() {
         currentPage = items.index(of: goal)!
-        collectionView.scrollToItem(at: IndexPath(item: currentPage, section: 0), at: .centeredHorizontally, animated: true)
+        collectionView.scrollToItem(at: IndexPath(item: currentPage, section: 0), at: .centeredHorizontally, animated: false)
     }
     
     func backPressed() {
