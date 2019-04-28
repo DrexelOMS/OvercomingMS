@@ -75,10 +75,10 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         constrain(timeTFI) { (view) in
-            view.height == 51
+            view.height >= 51
         }
         constrain(severityTFI) { (view) in
-            view.height == 51
+            view.height >= 51
         }
     }
     
