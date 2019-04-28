@@ -15,6 +15,7 @@
                 <outlet property="leftContainerView" destination="LMb-nR-B7u" id="mkM-yu-6qq"/>
                 <outlet property="leftLabel" destination="ZgR-vj-Qt3" id="VAI-Mp-g7Q"/>
                 <outlet property="linearProgressBar" destination="Q1G-Wh-S9S" id="ePP-Sl-1to"/>
+                <outlet property="paddingView" destination="SHR-2l-H3k" id="iOt-Ki-Nbu"/>
                 <outlet property="progressBarContainer" destination="lHp-20-YqD" id="X8W-q7-xwO"/>
                 <outlet property="rightContainerView" destination="DD8-0L-vXd" id="qQW-Jh-Ih9"/>
                 <outlet property="rightLabel" destination="cy3-n8-ccr" id="siq-FB-PSD"/>
