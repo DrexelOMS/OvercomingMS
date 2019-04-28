@@ -55,8 +55,10 @@ class Omega3HistoryDBS: TrackingModulesDBS {
         checkToNotify(oldPercent: percent)
     }
     
-    func getTodaysOmega3Items() -> List<Omega3HistoryDBT>? {
-        return getTrackingDay().omega3HistoryDT
+    func getTodaysOmega3Items() -> [Omega3HistoryDBT]? {
+        let converted = getTrackingDay().omega3HistoryDT
+        let sortedList = converted.sorted(by: { $0.StartTime < $1.StartTime })
+        return sortedList
     }
     
     func getTotalGrams() -> Int {

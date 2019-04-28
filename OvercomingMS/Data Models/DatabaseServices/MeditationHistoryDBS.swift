@@ -55,8 +55,10 @@ class MeditationHistoryDBS: TrackingModulesDBS {
         checkToNotify(oldPercent: percent)
     }
     
-    func getTodaysMeditationItems() -> List<MeditationHistoryDBT>? {
-        return getTrackingDay().meditationHistoryDT
+    func getTodaysMeditationItems() -> [MeditationHistoryDBT]? {
+        let converted = getTrackingDay().meditationHistoryDT
+        let sortedList = converted.sorted(by: { $0.StartTime < $1.StartTime })
+        return sortedList
     }
     
     func getTotalMinutes() -> Int {

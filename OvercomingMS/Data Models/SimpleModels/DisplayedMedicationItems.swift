@@ -11,12 +11,14 @@ import RealmSwift
 
 class DisplayedMedicationItems{
     
-    var medicationsTracked: List<SavedMedicationDBT>
-    var medicationsNotTracked: List<SavedMedicationDBT>
+    var medicationsTracked: [SavedMedicationDBT]
+    var medicationsNotTracked: [SavedMedicationDBT]
     
     init(trackedMeds: List<SavedMedicationDBT>, untrackedMeds: List<SavedMedicationDBT>){
-        medicationsTracked = trackedMeds
-        medicationsNotTracked = untrackedMeds
+        let sortedTracked = trackedMeds.sorted(by: { $0.TimeOfDay < $1.TimeOfDay })
+        medicationsTracked = sortedTracked
+        let sortedUntracked = untrackedMeds.sorted(by: { $0.TimeOfDay < $1.TimeOfDay })
+        medicationsNotTracked = sortedUntracked
     }
     
     func hasUntrackedMeds() -> Bool {

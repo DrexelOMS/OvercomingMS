@@ -55,8 +55,10 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
         checkToNotify(oldPercent: percent)
     }
     
-    func getTodaysVitaminDItems() -> List<VitaminDHistoryDBT>? {
-        return getTrackingDay().vitaminDHistoryDT
+    func getTodaysVitaminDItems() -> [VitaminDHistoryDBT]? {
+        let converted = getTrackingDay().vitaminDHistoryDT
+        let sortedList = converted.sorted(by: { $0.StartTime < $1.StartTime })
+        return sortedList
     }
     
     func getTotalAmount() -> Int {
