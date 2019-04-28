@@ -55,6 +55,7 @@ class SlidingStackVC: SwipeDownVC, UIGestureRecognizerDelegate {
         constrain(pullBarSVC) { (view) in
             view.height == 30.0
         }
+    
         
         addViewsBeforeMain()
         contentStackView.addArrangedSubview(mainView)

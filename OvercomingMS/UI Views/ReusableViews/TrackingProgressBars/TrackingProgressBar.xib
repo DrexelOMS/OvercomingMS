@@ -15,7 +15,7 @@
                 <outlet property="leftContainerView" destination="LMb-nR-B7u" id="mkM-yu-6qq"/>
                 <outlet property="leftLabel" destination="ZgR-vj-Qt3" id="VAI-Mp-g7Q"/>
                 <outlet property="linearProgressBar" destination="Q1G-Wh-S9S" id="ePP-Sl-1to"/>
-                <outlet property="paddingView" destination="U95-cu-BC7" id="qUU-3g-1oB"/>
+                <outlet property="paddingView" destination="SHR-2l-H3k" id="iOt-Ki-Nbu"/>
                 <outlet property="progressBarContainer" destination="lHp-20-YqD" id="X8W-q7-xwO"/>
                 <outlet property="rightContainerView" destination="DD8-0L-vXd" id="qQW-Jh-Ih9"/>
                 <outlet property="rightLabel" destination="cy3-n8-ccr" id="siq-FB-PSD"/>
@@ -25,32 +25,32 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="280" height="62"/>
+            <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <userGuides>
-                <userLayoutGuide location="33" affinity="minY"/>
+                <userLayoutGuide location="37" affinity="minY"/>
             </userGuides>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-WZ-0p8" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="280" height="62"/>
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
                     <userGuides>
-                        <userLayoutGuide location="24" affinity="minY"/>
+                        <userLayoutGuide location="29" affinity="minY"/>
                     </userGuides>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5E-v9-Wxp" userLabel="RoundedView" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="280" height="62"/>
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
                             <userGuides>
                                 <userLayoutGuide location="43" affinity="minY"/>
                             </userGuides>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qi2-7t-Ch6">
-                                    <rect key="frame" x="10" y="0.0" width="260" height="62"/>
+                                    <rect key="frame" x="10" y="0.0" width="260" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMb-nR-B7u" userLabel="leftContainerView">
-                                            <rect key="frame" x="0.0" y="0.0" width="205" height="62"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="205" height="50"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-tc-HaU">
-                                                    <rect key="frame" x="0.0" y="11" width="205" height="40"/>
+                                                    <rect key="frame" x="0.0" y="7.5" width="205" height="35"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-Bv-8c1">
                                                             <rect key="frame" x="0.0" y="0.0" width="205" height="23.5"/>
@@ -101,23 +101,25 @@
                                                                 <constraint firstItem="ZgR-vj-Qt3" firstAttribute="top" secondItem="i9C-Bv-8c1" secondAttribute="top" id="qEe-jg-ig0"/>
                                                             </constraints>
                                                         </stackView>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U95-cu-BC7" userLabel="PaddingView">
-                                                            <rect key="frame" x="0.0" y="18" width="205" height="7.5"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHR-2l-H3k" userLabel="paddingView">
+                                                            <rect key="frame" x="0.0" y="18" width="205" height="5.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" priority="994" constant="5" id="Gw5-2H-dmi"/>
-                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="10" id="Uwh-y1-ueJ"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="10" id="V58-Pa-KBS"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="5" id="fSu-gs-bTM"/>
+                                                                <constraint firstAttribute="height" priority="998" constant="5" id="zv1-3P-vjY"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHp-20-YqD" customClass="OMSRoundedBox" customModule="OvercomingMS" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="25.5" width="205" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="23.5" width="205" height="11.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1G-Wh-S9S" userLabel="BottomProgressBar" customClass="LinearProgressBar" customModule="LinearProgressBar">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="205" height="14.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="205" height="11.5"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="6ma-rk-3qs"/>
-                                                                        <constraint firstAttribute="height" priority="996" constant="10" id="bsM-ea-3P9"/>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="3K1-qf-sWE"/>
+                                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="KGB-Ee-nLm"/>
+                                                                        <constraint firstAttribute="height" priority="998" constant="10" id="mkv-Cl-RCo"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="color" keyPath="barColor">
@@ -130,7 +132,7 @@
                                                                             <real key="value" value="75"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="barThickness">
-                                                                            <real key="value" value="16"/>
+                                                                            <real key="value" value="10"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="barPadding">
                                                                             <real key="value" value="0.0"/>
@@ -163,10 +165,10 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DD8-0L-vXd" userLabel="rightContainerView">
-                                            <rect key="frame" x="215" y="0.0" width="45" height="62"/>
+                                            <rect key="frame" x="215" y="0.0" width="45" height="50"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rJ-fM-xng" userLabel="Check">
-                                                    <rect key="frame" x="2.5" y="11" width="40" height="40"/>
+                                                    <rect key="frame" x="2.5" y="5" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="2rJ-fM-xng" secondAttribute="height" multiplier="1:1" id="IWl-f9-rW2"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="mdn-3c-dGz"/>
@@ -202,26 +204,27 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="I5E-v9-Wxp" firstAttribute="top" secondItem="zzc-WZ-0p8" secondAttribute="top" id="8vu-YB-gNY"/>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="65" id="GJ8-Ci-oXr"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="65" id="A4S-99-Fzd"/>
                         <constraint firstItem="I5E-v9-Wxp" firstAttribute="leading" secondItem="zzc-WZ-0p8" secondAttribute="leading" id="MeK-Tj-0YO"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="OjN-sG-q6r"/>
                         <constraint firstAttribute="height" priority="998" constant="45" id="a4S-17-jQM"/>
-                        <constraint firstItem="Q1G-Wh-S9S" firstAttribute="height" secondItem="zzc-WZ-0p8" secondAttribute="height" multiplier="2.1:9" priority="997" id="afL-hB-4GX"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="o67-fc-d0V"/>
                         <constraint firstAttribute="trailing" secondItem="I5E-v9-Wxp" secondAttribute="trailing" id="tQO-gX-UAQ"/>
                         <constraint firstAttribute="bottom" secondItem="I5E-v9-Wxp" secondAttribute="bottom" id="vz7-IO-ogr"/>
-                        <constraint firstItem="U95-cu-BC7" firstAttribute="height" secondItem="zzc-WZ-0p8" secondAttribute="height" multiplier="1.1:9" priority="995" id="wJ4-Dy-W7i"/>
                     </constraints>
                 </view>
             </subviews>
             <constraints>
+                <constraint firstItem="SHR-2l-H3k" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1:9" priority="999" id="3fh-qB-w6a"/>
                 <constraint firstItem="zzc-WZ-0p8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Dyr-p2-Pi6"/>
                 <constraint firstItem="zzc-WZ-0p8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="S1d-w3-vBx"/>
+                <constraint firstItem="zzc-WZ-0p8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="999" id="Wl4-gc-wcS"/>
+                <constraint firstAttribute="bottom" secondItem="zzc-WZ-0p8" secondAttribute="bottom" priority="999" id="aWR-Bu-Nmd"/>
                 <constraint firstAttribute="trailing" secondItem="zzc-WZ-0p8" secondAttribute="trailing" id="il4-3g-IJS"/>
-                <constraint firstItem="zzc-WZ-0p8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="999" id="kDb-rz-NE9"/>
-                <constraint firstAttribute="bottom" secondItem="zzc-WZ-0p8" secondAttribute="bottom" priority="999" id="qbN-3D-KV2"/>
+                <constraint firstItem="Q1G-Wh-S9S" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="2:9" priority="999" id="nwn-2M-5kI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="138.75" y="277.81690140845069"/>
+            <point key="canvasLocation" x="151.875" y="216.5492957746479"/>
         </view>
     </objects>
     <resources>

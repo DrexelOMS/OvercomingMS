@@ -179,7 +179,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         header.perfectDaysLabel.text = "\(TrackingModulesDBS().getTotalPerfectDays()) perfect days"
         setHeaderStreak()
-    
+
     }
     
     private func setHeaderStreak() {
@@ -267,6 +267,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         vc.theme = sender.colorTheme
         vc.modalPresentationStyle = .overCurrentContext
         vc.dismissalDelegate = self
+        moduleProgressButtonHeight = Int(foodBar.frame.height)
         
         self.present(vc, animated: true, completion: nil)
         

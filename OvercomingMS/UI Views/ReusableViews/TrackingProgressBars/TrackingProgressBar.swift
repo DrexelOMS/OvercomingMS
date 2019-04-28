@@ -69,10 +69,10 @@ class TrackingProgressBar: CustomView {
     private var isTracked = true {
         didSet {
             if isTracked {
-                roundedView.backgroundColor = colorTheme
+                shadowedRoundedView.backgroundColor = colorTheme
             }
             else {
-                roundedView.backgroundColor = UIColor.lightGray
+                shadowedRoundedView.backgroundColor = UIColor.lightGray
             }
             checkButton.isEnabled = isTracked
         }
@@ -106,10 +106,10 @@ class TrackingProgressBar: CustomView {
     private func setColorMode(completed: Bool) {
         if(completed) {
             if isTracked {
-                roundedView.backgroundColor = colorTheme
+                shadowedRoundedView.backgroundColor = colorTheme
             }
             else {
-                roundedView.backgroundColor = UIColor.lightGray
+                shadowedRoundedView.backgroundColor = UIColor.lightGray
             }
             leftLabel.textColor = UIColor.white
             rightLabel.textColor = UIColor.white
@@ -118,7 +118,7 @@ class TrackingProgressBar: CustomView {
             paddingView.isHidden = true
         }
         else {
-            roundedView.backgroundColor = originalBackground
+            shadowedRoundedView.backgroundColor = originalBackground
             leftLabel.textColor = UIColor.black
             rightLabel.textColor = UIColor.black
             checkButton.setImage(UIImage(named: "QuickComplete"), for: .normal)
@@ -143,10 +143,11 @@ class TrackingProgressBar: CustomView {
         self.rightContainerView.isHidden = isHidden
         if isHidden {
             shadowedRoundedView.shadowOpacity = 0
+            shadowedRoundedView.clickable = false
             
             originalBackground = UIColor(rgb: 0xF8F8F8)
             shadowedRoundedView.backgroundColor = originalBackground
-            roundedView.backgroundColor = originalBackground
+            shadowedRoundedView.backgroundColor = originalBackground
         }
     }
     
@@ -187,11 +188,22 @@ class TrackingProgressBar: CustomView {
                 paddingView.isHidden = true
             }
         }
+        
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        linearProgressBar.barThickness = linearProgressBar.bounds.height
+        
+        var compBarThickness = frame.height * 2 / 9
+        if compBarThickness > 16 {
+            compBarThickness = 16
+        }
+        else if compBarThickness < 10 {
+            compBarThickness = 10
+        }
+        
+        progressBarContainer.cornerRadius = compBarThickness / 2
+        linearProgressBar.barThickness = compBarThickness
     }
 }
 

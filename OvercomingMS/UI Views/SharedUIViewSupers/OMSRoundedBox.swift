@@ -116,6 +116,8 @@ class OMSRoundedBox: UIView {
         }
     }
     
+    var clickable: Bool?
+    
     func toggleSelected(isSelected: Bool) {
         if isSelected {
             backgroundColor = UIColor.gray
@@ -176,14 +178,19 @@ class RoundedBoxShadowsTemplate: OMSRoundedBox {
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
-        setup()
+        if clickable ?? true {
+            setup()
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        shadowOffset = CGSize(width: 0, height: 0)
-        shadowRadius = 2
-        shadowOpacity = 0.12
+        
+        if clickable ?? true {
+            shadowOffset = CGSize(width: 0, height: 0)
+            shadowRadius = 2
+            shadowOpacity = 0.12
+        }
     }
     
 }
