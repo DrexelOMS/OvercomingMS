@@ -15,6 +15,7 @@
                 <outlet property="leftContainerView" destination="LMb-nR-B7u" id="mkM-yu-6qq"/>
                 <outlet property="leftLabel" destination="ZgR-vj-Qt3" id="VAI-Mp-g7Q"/>
                 <outlet property="linearProgressBar" destination="Q1G-Wh-S9S" id="ePP-Sl-1to"/>
+                <outlet property="paddingView" destination="U95-cu-BC7" id="qUU-3g-1oB"/>
                 <outlet property="progressBarContainer" destination="lHp-20-YqD" id="X8W-q7-xwO"/>
                 <outlet property="rightContainerView" destination="DD8-0L-vXd" id="qQW-Jh-Ih9"/>
                 <outlet property="rightLabel" destination="cy3-n8-ccr" id="siq-FB-PSD"/>
@@ -27,13 +28,13 @@
             <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <userGuides>
-                <userLayoutGuide location="37" affinity="minY"/>
+                <userLayoutGuide location="33" affinity="minY"/>
             </userGuides>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-WZ-0p8" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
                     <userGuides>
-                        <userLayoutGuide location="29" affinity="minY"/>
+                        <userLayoutGuide location="26" affinity="minY"/>
                     </userGuides>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5E-v9-Wxp" userLabel="RoundedView" customClass="RoundedBoxTemplate" customModule="OvercomingMS" customModuleProvider="target">
@@ -48,8 +49,8 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMb-nR-B7u" userLabel="leftContainerView">
                                             <rect key="frame" x="0.0" y="0.0" width="210" height="45"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-tc-HaU">
-                                                    <rect key="frame" x="0.0" y="6" width="210" height="33"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-tc-HaU">
+                                                    <rect key="frame" x="0.0" y="5" width="210" height="35"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-Bv-8c1">
                                                             <rect key="frame" x="0.0" y="0.0" width="210" height="23.5"/>
@@ -100,8 +101,16 @@
                                                                 <constraint firstItem="ZgR-vj-Qt3" firstAttribute="top" secondItem="i9C-Bv-8c1" secondAttribute="top" id="qEe-jg-ig0"/>
                                                             </constraints>
                                                         </stackView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U95-cu-BC7" userLabel="PaddingView">
+                                                            <rect key="frame" x="0.0" y="18" width="210" height="7"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" priority="800" constant="5" id="Gw5-2H-dmi"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="10" id="Uwh-y1-ueJ"/>
+                                                            </constraints>
+                                                        </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHp-20-YqD" customClass="OMSRoundedBox" customModule="OvercomingMS" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="23" width="210" height="10"/>
+                                                            <rect key="frame" x="0.0" y="25" width="210" height="10"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1G-Wh-S9S" userLabel="BottomProgressBar" customClass="LinearProgressBar" customModule="LinearProgressBar">
                                                                     <rect key="frame" x="0.0" y="0.0" width="210" height="10"/>
@@ -144,6 +153,9 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="lHp-20-YqD" firstAttribute="height" secondItem="U95-cu-BC7" secondAttribute="height" multiplier="1.5:1" priority="801" id="Q2Y-H2-uvP"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -211,7 +223,7 @@
                 <constraint firstAttribute="bottom" secondItem="zzc-WZ-0p8" secondAttribute="bottom" priority="999" id="qbN-3D-KV2"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="138.75" y="281.51408450704224"/>
+            <point key="canvasLocation" x="138.75" y="275.17605633802816"/>
         </view>
     </objects>
     <resources>

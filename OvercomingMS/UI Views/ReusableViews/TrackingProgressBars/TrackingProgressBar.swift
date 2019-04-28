@@ -41,6 +41,7 @@ class TrackingProgressBar: CustomView {
     @IBInspectable var hasProgressBar: Bool = true {
         didSet {
             progressBarContainer.isHidden = !hasProgressBar
+            paddingView.isHidden = !hasProgressBar
         }
     }
     
@@ -61,6 +62,7 @@ class TrackingProgressBar: CustomView {
     @IBOutlet weak var linearProgressBar: LinearProgressBar!
     @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var progressBarContainer: OMSRoundedBox!
+    @IBOutlet weak var paddingView: UIView!
     
     var originalBackground: UIColor = UIColor.white
     
@@ -113,6 +115,7 @@ class TrackingProgressBar: CustomView {
             rightLabel.textColor = UIColor.white
             checkButton.setImage(UIImage(named: "QuickCompleteReversed"), for: .normal)
             progressBarContainer.isHidden = true
+            paddingView.isHidden = true
         }
         else {
             roundedView.backgroundColor = originalBackground
@@ -120,6 +123,7 @@ class TrackingProgressBar: CustomView {
             rightLabel.textColor = UIColor.black
             checkButton.setImage(UIImage(named: "QuickComplete"), for: .normal)
             progressBarContainer.isHidden = false
+            paddingView.isHidden = false
         }
     }
     
@@ -171,6 +175,7 @@ class TrackingProgressBar: CustomView {
             }
             else {
                 progressBarContainer.isHidden = true
+                paddingView.isHidden = true
             }
         }
         else {
@@ -179,13 +184,14 @@ class TrackingProgressBar: CustomView {
             
             if !hasProgressBar {
                 progressBarContainer.isHidden = true
+                paddingView.isHidden = true
             }
         }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        linearProgressBar.barThickness = linearProgressBar.frame.height
+        linearProgressBar.barThickness = linearProgressBar.bounds.height
     }
 }
 
