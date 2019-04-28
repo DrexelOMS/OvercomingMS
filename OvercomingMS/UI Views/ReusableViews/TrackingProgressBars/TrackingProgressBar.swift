@@ -204,6 +204,16 @@ class TrackingProgressBar: CustomView {
         
         progressBarContainer.cornerRadius = compBarThickness / 2
         linearProgressBar.barThickness = compBarThickness
+        
+        var viewHeight = frame.height
+        if viewHeight > 65 {
+            viewHeight = 65
+        }
+        else if viewHeight < 45 {
+            viewHeight = 45
+        }
+        shadowedRoundedView.cornerRadius = viewHeight / 4
+        roundedView.cornerRadius = viewHeight / 4
     }
 }
 
