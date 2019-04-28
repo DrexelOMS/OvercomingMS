@@ -102,7 +102,7 @@
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHR-2l-H3k" userLabel="paddingView">
                                                             <rect key="frame" x="0.0" y="18" width="205" height="5.5"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="10" id="V58-Pa-KBS"/>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="5" id="fSu-gs-bTM"/>
