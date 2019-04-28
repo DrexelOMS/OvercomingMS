@@ -139,6 +139,7 @@ class TrackingProgressBar: CustomView {
         self.rightContainerView.isHidden = isHidden
         if isHidden {
             shadowedRoundedView.shadowOpacity = 0
+            shadowedRoundedView.clickable = false
             
             originalBackground = UIColor(rgb: 0xF8F8F8)
             shadowedRoundedView.backgroundColor = originalBackground
@@ -191,9 +192,12 @@ class TrackingProgressBar: CustomView {
         if compBarThickness > 16 {
             compBarThickness = 16
         }
-        if compBarThickness < 10 {
+        else if compBarThickness < 10 {
             compBarThickness = 10
         }
+        
+        progressBarContainer.cornerRadius = compBarThickness / 2
+        linearProgressBar.barThickness = compBarThickness
     }
 }
 

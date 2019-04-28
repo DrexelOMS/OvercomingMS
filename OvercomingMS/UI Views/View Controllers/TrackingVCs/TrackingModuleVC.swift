@@ -9,6 +9,8 @@
 import UIKit
 import Cartography
 
+var moduleProgressButtonHeight: Int?
+
 class TrackingModuleVC: SlidingStackVC {
     
     let progressBar = TrackingProgressBar()
@@ -25,8 +27,19 @@ class TrackingModuleVC: SlidingStackVC {
     override func addViewsBeforeMain() {
         let progressView = UIView()
         contentStackView.addArrangedSubview(progressView)
-        constrain(progressView) { (view) in
-            view.height == 60.0
+        
+        var height = 45
+        if let tempHeight = moduleProgressButtonHeight {
+            if tempHeight > 65 {
+                height = 65
+            }
+            else if tempHeight < 45 {
+                height = 45
+            }
+        }
+        
+        constrain(progressBar) { (view) in
+            view.height == CGFloat(height)
         }
         
         progressView.addSubview(progressBar)
@@ -35,7 +48,6 @@ class TrackingModuleVC: SlidingStackVC {
             view.top == superView.top
             view.right == superView.right - 20
             view.left == superView.left + 20
-            view.bottom == superView.bottom
         }
         
         progressBar.colorTheme = theme
@@ -53,7 +65,7 @@ class TrackingModuleVC: SlidingStackVC {
             view.left == superView.left + 20
         }
         constrain(lineSeparatorView, progressBar) { (view, aboveView) in
-            view.top == aboveView.bottom + 20
+            view.top == aboveView.bottom + 10
         }
     }
     
