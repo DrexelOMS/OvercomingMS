@@ -52,24 +52,14 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-tc-HaU">
                                                     <rect key="frame" x="0.0" y="7.5" width="205" height="35"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-Bv-8c1">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-Bv-8c1">
                                                             <rect key="frame" x="0.0" y="0.0" width="205" height="23.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-vj-Qt3">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="23.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-vj-Qt3">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="91" height="23.5"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="125" id="MfJ-bw-ckI"/>
-                                                                    </constraints>
-                                                                    <attributedString key="attributedText">
-                                                                        <fragment content="Label">
-                                                                            <attributes>
-                                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                                <font key="NSFont" size="20" name="Quicksand-Bold"/>
-                                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
+                                                                    <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
+                                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="kerning">
@@ -77,19 +67,17 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-n8-ccr">
-                                                                    <rect key="frame" x="125" y="0.0" width="80" height="23.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-n8-ccr">
+                                                                    <rect key="frame" x="91" y="0.0" width="114" height="23.5"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <attributedString key="attributedText">
-                                                                        <fragment content="Label">
-                                                                            <attributes>
-                                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.75107020547945202" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                <font key="NSFont" size="14" name="Avenir-Medium"/>
-                                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.75107020547945202" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="kerning">
+                                                                            <real key="value" value="-1"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
@@ -98,6 +86,7 @@
                                                                 <constraint firstItem="cy3-n8-ccr" firstAttribute="top" secondItem="i9C-Bv-8c1" secondAttribute="top" id="NlX-bc-hRI"/>
                                                                 <constraint firstAttribute="trailing" secondItem="cy3-n8-ccr" secondAttribute="trailing" id="QXx-cM-ms9"/>
                                                                 <constraint firstAttribute="bottom" secondItem="ZgR-vj-Qt3" secondAttribute="bottom" id="Y10-nk-uOL"/>
+                                                                <constraint firstItem="cy3-n8-ccr" firstAttribute="width" secondItem="ZgR-vj-Qt3" secondAttribute="width" multiplier="1.25:1" id="mYj-TN-fAp"/>
                                                                 <constraint firstItem="ZgR-vj-Qt3" firstAttribute="top" secondItem="i9C-Bv-8c1" secondAttribute="top" id="qEe-jg-ig0"/>
                                                             </constraints>
                                                         </stackView>

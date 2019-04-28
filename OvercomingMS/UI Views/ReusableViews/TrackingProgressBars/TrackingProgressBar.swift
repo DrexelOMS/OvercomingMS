@@ -214,6 +214,13 @@ class TrackingProgressBar: CustomView {
         }
         shadowedRoundedView.cornerRadius = viewHeight / 4
         roundedView.cornerRadius = viewHeight / 4
+        
+        let bigFontSize = compBarThickness + 7
+        let smallFontSize = compBarThickness + 3
+        
+        leftLabel.font = UIFont(name: leftLabel.font.fontName, size: bigFontSize)
+        rightLabel.font = UIFont(name: rightLabel.font.fontName, size: smallFontSize)
+        
     }
 }
 
