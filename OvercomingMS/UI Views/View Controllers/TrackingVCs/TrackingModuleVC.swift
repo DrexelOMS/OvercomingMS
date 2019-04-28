@@ -35,6 +35,7 @@ class TrackingModuleVC: SlidingStackVC {
             view.top == superView.top
             view.right == superView.right - 20
             view.left == superView.left + 20
+            view.bottom == superView.bottom
         }
         
         progressBar.colorTheme = theme

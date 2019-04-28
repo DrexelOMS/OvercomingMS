@@ -187,8 +187,6 @@ class TrackingProgressBar: CustomView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        print("View Frame: \(frame)")
-        print("Shadow Frame: \(shadowedRoundedView.frame)")
         var compBarThickness = frame.height * 2 / 9
         if compBarThickness > 16 {
             compBarThickness = 16
@@ -196,10 +194,6 @@ class TrackingProgressBar: CustomView {
         if compBarThickness < 10 {
             compBarThickness = 10
         }
-        
-        progressBarContainer.cornerRadius = compBarThickness / 2
-        linearProgressBar.barThickness = compBarThickness
-        print("Computed Bar Thickness \(compBarThickness)")
     }
 }
 
