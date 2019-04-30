@@ -28,14 +28,8 @@ class FoodSelectedSVC : SlidingAbstractSVC {
         self.init()
         
         self.food = food
-        if (unknown) {
-            constrainView(view: GenericFoodSelectedSVC())
-        }
-        else {
-            constrainView(view: GenericFoodSelectedSVC())
-        }
-
-        setLabel(name: food.Name, description: food.Brand)
+        constrainView(view: GenericFoodSelectedSVC())
+        setLabel(name: "Unknown Item", description: "We couldn't find information on that item")
     }
     
     convenience init(food: Food, ingredients: [String], types: [String]){
@@ -45,15 +39,13 @@ class FoodSelectedSVC : SlidingAbstractSVC {
         //initialize
         if(ingredients == [""] && types == [""]){
             constrainView(view: GenericFoodSelectedSVC())
+            setLabel(name: "Unknown Item", description: "We couldn't find information on that item")
         }
         else{
-            print(ingredients)
-            print(types)
             let allBadStuff = ingredients + types
             constrainView(view: FoodRejectedSVC(_badLabels: allBadStuff))
+            setLabel(name: food.Name, description: food.Brand)
         }
-        
-        setLabel(name: food.Name, description: food.Brand)
     }
     private func constrainView(view: UIView){
         

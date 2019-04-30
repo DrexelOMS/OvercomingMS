@@ -229,7 +229,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         let food = foodItemsArray[indexPath.row]
         
         cell.nameLabel.text = food.Name
-        cell.descriptionLabel.text = ""//food.Id
+        cell.descriptionLabel.text = food.Brand
         cell.setRecommendedStatus(isGood: food.isFoodGood(food: food))
         
         return cell
