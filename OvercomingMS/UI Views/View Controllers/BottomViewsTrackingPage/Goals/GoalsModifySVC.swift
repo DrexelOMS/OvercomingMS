@@ -95,7 +95,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     func confirmPressed(){
         switch Module {
         case .Food:
-            ProgressBarConfig.foodRatingGoals = items[currentPage]
+            ProgressBarConfig.foodRatingGoal = items[currentPage]
             break
         case .Omega3:
             ProgressBarConfig.omega3Goal = items[currentPage]

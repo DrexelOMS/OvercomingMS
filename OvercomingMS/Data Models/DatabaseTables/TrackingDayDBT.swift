@@ -24,7 +24,7 @@ class TrackingDayDBT: Object {
     @objc dynamic var FoodEatenRating: Int = 1 // Lets define the food scale as 1-5
     var IsFoodComplete: Bool {
         get {
-            return FoodEatenRating >= ProgressBarConfig.foodRatingGoals || !ActiveTrackingDBS().mostRecentActiveTracking.IsFoodActive
+            return FoodEatenRating >= ProgressBarConfig.foodRatingGoal || !ActiveTrackingDBS().mostRecentActiveTracking.IsFoodActive
         }
     }
     

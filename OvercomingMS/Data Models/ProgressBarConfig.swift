@@ -23,7 +23,7 @@ class ProgressBarConfig {
         }
         return foodDescriptions[rating - 1]
     }
-    static var foodRatingGoals: Int {
+    static var foodRatingGoal: Int {
         get {
             return GoalsDBS().mostRecentGoals.FoodRatingGoal
         }
@@ -81,10 +81,6 @@ class ProgressBarConfig {
     }
     
     static let lengthUOM = "min."
-    
-    static func calculateKLUs(minutes: Int) -> Int {
-        return minutes * 5
-    }
 
 }
 
