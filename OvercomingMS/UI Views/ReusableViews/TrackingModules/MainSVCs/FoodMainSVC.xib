@@ -147,11 +147,14 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zyd-id-BhM">
                                             <rect key="frame" x="0.0" y="0.0" width="260" height="157"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BvF-5W-FZ2" userLabel="LabelView">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvF-5W-FZ2" userLabel="LabelView">
                                                     <rect key="frame" x="0.0" y="0.0" width="260" height="71"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZb-RY-0lO">
-                                                            <rect key="frame" x="0.0" y="29" width="260" height="42"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZb-RY-0lO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="71"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="70" id="U7b-Nk-gmV"/>
+                                                            </constraints>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="How well have you followed the OMS diet today?">
                                                                     <attributes>
@@ -170,7 +173,7 @@
                                                         <constraint firstItem="HZb-RY-0lO" firstAttribute="leading" secondItem="BvF-5W-FZ2" secondAttribute="leading" id="Lm9-AB-Fi8"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVt-xa-zUJ" userLabel="RatingView" customClass="FiveScaleRatingButtonsSVC" customModule="OvercomingMS" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVt-xa-zUJ" userLabel="RatingView" customClass="FiveScaleRatingButtonsSVC" customModule="OvercomingMS" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="91" width="260" height="66"/>
                                                 </view>
                                             </subviews>

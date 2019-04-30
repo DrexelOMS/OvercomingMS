@@ -41,7 +41,7 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
         
         buttonStackView.addArrangedSubview(button1)
         buttonStackView.addArrangedSubview(button2)
-        buttonStackView.addArrangedSubview(button4)
+        //buttonStackView.addArrangedSubview(button4)
         buttonStackView.addArrangedSubview(button3)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
         
