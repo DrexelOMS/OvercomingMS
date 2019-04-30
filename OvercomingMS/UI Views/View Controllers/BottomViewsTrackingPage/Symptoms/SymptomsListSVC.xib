@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.otf">
+            <string>Quicksand-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SymptomsListSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
@@ -21,8 +26,33 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="793"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXD-Bh-KRM">
+                    <rect key="frame" x="0.0" y="44" width="414" height="20"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symtpoms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGA-qp-Edg">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="yiY-NA-XWc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="uGA-qp-Edg" firstAttribute="top" secondItem="sXD-Bh-KRM" secondAttribute="top" id="Vrh-qY-VSd"/>
+                        <constraint firstAttribute="trailing" secondItem="uGA-qp-Edg" secondAttribute="trailing" id="eZR-Mj-Fl6"/>
+                        <constraint firstItem="uGA-qp-Edg" firstAttribute="leading" secondItem="sXD-Bh-KRM" secondAttribute="leading" id="fih-Jg-V63"/>
+                        <constraint firstAttribute="bottom" secondItem="uGA-qp-Edg" secondAttribute="bottom" id="mvq-6x-56G"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Symptoms"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value=" "/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="showLine" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="sCQ-cE-XAB">
-                    <rect key="frame" x="20" y="10" width="374" height="679"/>
+                    <rect key="frame" x="20" y="72" width="374" height="617"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,16 +72,19 @@
                 </view>
             </subviews>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sXD-Bh-KRM" secondAttribute="trailing" id="7Af-if-0on"/>
                 <constraint firstItem="NdH-w8-jcW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9fG-JF-fer"/>
                 <constraint firstItem="NJZ-hd-QRL" firstAttribute="top" secondItem="NdH-w8-jcW" secondAttribute="bottom" id="BQE-6w-TrM"/>
+                <constraint firstItem="sXD-Bh-KRM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CMm-ID-7vk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NJZ-hd-QRL" secondAttribute="trailing" id="Cvi-3t-Voq"/>
+                <constraint firstItem="sXD-Bh-KRM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="EnK-dK-b8A"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NJZ-hd-QRL" secondAttribute="bottom" id="JDe-aI-fvD"/>
                 <constraint firstItem="NdH-w8-jcW" firstAttribute="top" secondItem="sCQ-cE-XAB" secondAttribute="bottom" id="Jj7-P0-v73"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sCQ-cE-XAB" secondAttribute="trailing" constant="20" id="Tbx-D9-jXx"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NdH-w8-jcW" secondAttribute="trailing" id="Wut-uG-972"/>
                 <constraint firstItem="NJZ-hd-QRL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dNQ-M9-NNp"/>
                 <constraint firstItem="sCQ-cE-XAB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="fH0-rR-AJx"/>
-                <constraint firstItem="sCQ-cE-XAB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="wv7-g6-OCL"/>
+                <constraint firstItem="sCQ-cE-XAB" firstAttribute="top" secondItem="sXD-Bh-KRM" secondAttribute="bottom" constant="8" symbolic="YES" id="wv7-g6-OCL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
