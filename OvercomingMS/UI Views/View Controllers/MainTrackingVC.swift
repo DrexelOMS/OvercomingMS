@@ -35,6 +35,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     @IBOutlet weak var centerDateView: UIView!
     @IBOutlet weak var previousButton: UIView!
     @IBOutlet weak var nextDay: UIView!
+    @IBOutlet weak var rightArrowButton: UIButton!
     
     @IBOutlet weak var GoalButton: CircleButtonSVC!
     @IBOutlet weak var SymptomsButton: CircleButtonSVC!
@@ -160,9 +161,12 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     private func updatePageUI(_ currentTrackingDay: TrackingDayDBT) {
         if globalCurrentDate == todaysDate {
             dateLog.text = "Today, \(OMSDateAccessor.getStyledDate(date: currentTrackingDay.DateCreated))"
+            rightArrowButton.isEnabled = false
         }
         else {
             dateLog.text = OMSDateAccessor.getStyledDate(date: currentTrackingDay.DateCreated)
+            rightArrowButton.isEnabled = true
+
         }
         //dateLog.text = currentTrackingDay.DateCreated
         
