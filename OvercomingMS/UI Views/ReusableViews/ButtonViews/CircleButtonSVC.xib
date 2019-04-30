@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,14 +26,14 @@
             </userGuides>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uJd-PL-ujI" userLabel="Stack Button Label View">
-                    <rect key="frame" x="20" y="7" width="40" height="66.5"/>
+                    <rect key="frame" x="17.5" y="4" width="45" height="72.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJt-ul-1yn" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="40" id="5CL-Da-vPA"/>
-                                <constraint firstAttribute="height" constant="40" id="5LW-ol-6v0"/>
+                                <constraint firstAttribute="width" constant="45" id="5CL-Da-vPA"/>
+                                <constraint firstAttribute="height" constant="45" id="5LW-ol-6v0"/>
                             </constraints>
                             <state key="normal" title="B">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,12 +43,12 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAz-6H-cPV">
-                            <rect key="frame" x="1" y="50" width="38" height="16.5"/>
+                            <rect key="frame" x="2.5" y="55" width="40.5" height="17.5"/>
                             <attributedString key="attributedText">
                                 <fragment content="Label">
                                     <attributes>
                                         <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" size="14" name="Quicksand-Bold"/>
+                                        <font key="NSFont" size="15" name="Quicksand-Bold"/>
                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                     </attributes>
                                 </fragment>

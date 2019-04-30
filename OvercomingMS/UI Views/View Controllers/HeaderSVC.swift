@@ -172,6 +172,25 @@ class HeaderSVC: CustomView {
         restore()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        var mainHeight = frame.height
+        if mainHeight > 100 {
+            mainHeight = 100
+        }
+        else if mainHeight < 80 {
+            mainHeight = 80
+        }
+        
+        let padding: CGFloat = 30
+        let fontSize = mainHeight / 2 - padding
+        
+        trackingLabel.font = UIFont(name:trackingLabel.font.fontName, size: fontSize + 8)
+        daysInARow.font = UIFont(name:daysInARow.font.fontName, size: fontSize + 2)
+        perfectDaysLabel.font = UIFont(name:perfectDaysLabel.font.fontName, size: fontSize + 2)
+    }
+    
 }
 
 extension UIColor {
