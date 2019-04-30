@@ -288,6 +288,7 @@
                         <outlet property="exerciseBar" destination="zYS-8V-zpv" id="SJW-KD-zNK"/>
                         <outlet property="foodBar" destination="CHY-EL-iHN" id="oxd-TP-LXh"/>
                         <outlet property="header" destination="pcW-NB-qsi" id="kmX-7a-hV3"/>
+                        <outlet property="leftArrowButton" destination="d19-Be-BUR" id="OQF-9F-hxl"/>
                         <outlet property="medicationBar" destination="a2N-CW-Z5M" id="eg5-xl-nsf"/>
                         <outlet property="meditationBar" destination="RQQ-l4-VC0" id="pi7-04-9cp"/>
                         <outlet property="nextDay" destination="UQ9-e7-rdh" id="MWx-4A-nuz"/>

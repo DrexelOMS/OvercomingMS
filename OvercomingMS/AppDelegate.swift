@@ -48,6 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             GoalsDBS().writeFirstDay()
         }
         
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "FirstOpenDate") == nil {
+            defaults.set(Date().addingTimeInterval(-60*60*24), forKey: "FirstOpenDate")
+        }
+        
         return true
     }
     
