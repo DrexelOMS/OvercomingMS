@@ -18,6 +18,7 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
     }
     
     @IBOutlet weak var datePicker: JTAppleCalendarView!
+    var startDate: Date!
     
     override func customSetup() {
         datePicker.ibCalendarDelegate = self
@@ -44,7 +45,7 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
     
     func handleCellTextColor(cell: DateCell, cellState: CellState) {
         cell.completeLabel.text = ""
-        if cellState.dateBelongsTo != .thisMonth ||
+        if  OMSDateAccessor().lessThanComparison(left: cellState.date, right: startDate) ||
             OMSDateAccessor().greaterThanComparison(left: cellState.date, right: OMSDateAccessor().todaysFullDate) {
             cell.numberLabel.textColor = UIColor.gray
             cell.isUserInteractionEnabled = false
@@ -62,11 +63,10 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
     //MARK: Calendar Delegates
     
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy MM dd"
-        let startDate = formatter.date(from: "2019 01 01")!
-        let endDate = Date()
-        return ConfigurationParameters(startDate: startDate, endDate: endDate, hasStrictBoundaries: true)
+        let date = UserDefaults.standard.object(forKey: "FirstOpenDate") as! Date
+        startDate = date
+
+        return ConfigurationParameters(startDate: startDate, endDate: OMSDateAccessor().todaysFullDate, hasStrictBoundaries: true)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
