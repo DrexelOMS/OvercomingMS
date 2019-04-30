@@ -65,7 +65,7 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         
         let count = savedMedications.getSavedMedicationItems().getTotalMedCount()
         if count <= 0 {
-            tableView.setEmptyView(title: "No medications yet!", message: "Press the 'Add' button to begin.")
+            tableView.setEmptyView(title: "No entries yet!", message: "")
         }
         else {
             tableView.restore()

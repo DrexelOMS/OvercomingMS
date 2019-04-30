@@ -142,7 +142,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
                     self.reload()
                     let count = self.foodItemsArray.count
                     if count <= 0 {
-                        self.tableView.setEmptyView(message: "No matching food items were found")
+                        self.tableView.setEmptyView(title: "No matching food items were found", message: "")
                     }
                 })
             }
@@ -205,7 +205,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         
         let count = foodItemsArray.count
         if count <= 0 {
-            tableView.setEmptyView(message: "No saved foods yet!")
+            tableView.setEmptyView(title: "Enter a food type", message: "Check if it violates the OMS plan")
         }
         else {
             tableView.restore()

@@ -41,7 +41,7 @@ class SymptomsMainSVC: SlidingAbstractSVC, UITableViewDelegate, UITableViewDataS
         
         let count = savedNotes.getTodaysNotes().count
         if count <= 0 {
-            tableView.setEmptyView(message: "No notes yet!")
+            tableView.setEmptyView(title: "No notes yet!", message: "")
         }
         else {
             tableView.restore()

@@ -45,7 +45,7 @@ class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource
         
         let count = omega3History.getTodaysOmega3Items()?.count ?? 0
         if count <= 0 {
-            tableView.setEmptyView(title: "No Omega-3 items yet!", message: "Select a button below to begin.")
+            tableView.setEmptyView(title: "No entries yet!", message: "")
         }
         else {
             tableView.restore()
