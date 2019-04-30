@@ -10,6 +10,7 @@ import UIKit
 
 class SearchBarButton: CustomView, UITextFieldDelegate{
     
+    @IBOutlet var viewBox: UIView!
     @IBOutlet weak var SettingsButton: UIButton!
     @IBOutlet weak var SearchButton: UIButton!
     @IBOutlet weak var SearchTextField: UITextField!
@@ -18,17 +19,28 @@ class SearchBarButton: CustomView, UITextFieldDelegate{
             return "SearchBarButton"
         }
     }
-    
+    let test = UIView()
+
     override func customSetup() {
         SearchTextField.delegate = self
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+//        self.frame.size.height += 250;
+//        self.frame.size.width = 1000;
+        test.backgroundColor = DesignConstants.DEFAULT_BACKGROUND_COLOR
+        test.frame = CGRect(x: -100, y: 0, width: 500, height: 250)
+        self.contentView?.addSubview(test)
+        self.contentView?.sendSubviewToBack(test)
+
         moveTextField(textField, moveDistance: -250, up: true)
+
     }
     
     // Finish Editing The Text Field
     func textFieldDidEndEditing(_ textField: UITextField) {
+        //self.frame.size.height -= 250;
+        test.removeFromSuperview()
         moveTextField(textField, moveDistance: -250, up: false)
     }
     

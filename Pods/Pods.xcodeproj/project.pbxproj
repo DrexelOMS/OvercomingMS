@@ -237,7 +237,6 @@
 		AA03B4ABD473B924762C47689923E9F5 /* RLMSyncManager.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 082C4CB86C04C61CF59559753212D5BA /* RLMSyncManager.h */; };
 		AAFC479EBA820791E8B300E5B5EB5532 /* sync_metadata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A94686E165A79D6F4C431F30D85006 /* sync_metadata.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.14.1\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		AB24B48E43C70C568D1D2AC9463FC184 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = C42781DD1B724C797B2809509E1B7AF5 /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ABB80107F3DDDE6A06376591EE4172C3 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33C27C720B83C969B314F82DE83653 /* SwiftyJSON.swift */; };
 		AC9A046B2FEB65BBB6E246398C6F5BDB /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A6795BD67C30860382BF24562902356B /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADD79470DBA0F33493B6E4F773186D93 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09091D90F9A59DF44AD3B132F92CCE /* MessageViewController.swift */; };
 		AF9193D885D836E70D17733D2D35185D /* ConstraintGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D086BEEED58C46DCC2E5517429CB8BD /* ConstraintGroup.swift */; };
@@ -2777,7 +2776,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D44C6427F73ACD1E22DE500AD0CB501 /* SwiftyJSON-dummy.m in Sources */,
-				ABB80107F3DDDE6A06376591EE4172C3 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
