@@ -50,7 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let defaults = UserDefaults.standard
         if defaults.object(forKey: "FirstOpenDate") == nil {
-            defaults.set(Date().addingTimeInterval(-60*60*24), forKey: "FirstOpenDate")
+            // let the user go back 7 days before they first installed the app
+            defaults.set(Date().addingTimeInterval(-60*60*24*7), forKey: "FirstOpenDate")
         }
         
         return true

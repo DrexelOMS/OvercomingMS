@@ -88,7 +88,7 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
     func calendar(_ calendar: JTAppleCalendarView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTAppleCollectionReusableView {
         
         let header = calendar.dequeueReusableJTAppleSupplementaryView(withReuseIdentifier: "DateHeader", for: indexPath) as! DateHeader
-        header.monthLabel.text = OMSDateAccessor.getStyledDate(date: OMSDateAccessor.getFormatedDate(date: range.start))
+        header.monthLabel.text = OMSDateAccessor.getMonthDate(date: OMSDateAccessor.getFormatedDate(date: range.start))
         return header
     }
     
@@ -96,6 +96,12 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         globalCurrentFullDate = date
+        
+        parentVC.dismiss()
+    }
+    
+    @IBAction func backToTodayPressed(_ sender: Any) {
+        globalCurrentFullDate = OMSDateAccessor().todaysFullDate
         
         parentVC.dismiss()
     }
