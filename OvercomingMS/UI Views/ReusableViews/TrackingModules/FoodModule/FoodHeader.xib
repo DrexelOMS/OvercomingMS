@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.otf">
+            <string>Quicksand-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodHeader" customModule="OvercomingMS" customModuleProvider="target">
+            <connections>
+                <outlet property="leftLabel" destination="f2h-VI-UXQ" id="aPQ-Hs-8P3"/>
+                <outlet property="rightLabel" destination="AbC-fK-qP6" id="aVn-lC-6zs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="u5z-fO-EeA">
+                    <rect key="frame" x="0.0" y="36" width="414" height="23.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" lineBreakMode="tailTruncation" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="f2h-VI-UXQ">
+                            <rect key="frame" x="0.0" y="0.0" width="138" height="23.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="kerning">
+                                    <real key="value" value="-1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How well have you eaten today?" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="AbC-fK-qP6">
+                            <rect key="frame" x="138" y="0.0" width="276" height="23.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="kerning">
+                                    <real key="value" value="-1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="AbC-fK-qP6" secondAttribute="bottom" id="AlK-uk-MmC"/>
+                        <constraint firstItem="AbC-fK-qP6" firstAttribute="top" secondItem="u5z-fO-EeA" secondAttribute="top" id="FVo-hW-Gf0"/>
+                        <constraint firstItem="f2h-VI-UXQ" firstAttribute="top" secondItem="u5z-fO-EeA" secondAttribute="top" id="Ftd-u3-SHM"/>
+                        <constraint firstAttribute="bottom" secondItem="f2h-VI-UXQ" secondAttribute="bottom" id="JHY-2a-lC7"/>
+                        <constraint firstItem="f2h-VI-UXQ" firstAttribute="leading" secondItem="u5z-fO-EeA" secondAttribute="leading" id="K5T-D5-6Ye"/>
+                        <constraint firstItem="AbC-fK-qP6" firstAttribute="width" secondItem="f2h-VI-UXQ" secondAttribute="width" multiplier="2:1" id="iGZ-Eu-sNX"/>
+                        <constraint firstAttribute="trailing" secondItem="AbC-fK-qP6" secondAttribute="trailing" id="kUf-ky-8vM"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="u5z-fO-EeA" secondAttribute="trailing" id="Hkh-Hq-wdn"/>
+                <constraint firstItem="u5z-fO-EeA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Jc7-bt-QAb"/>
+                <constraint firstItem="u5z-fO-EeA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hUF-wy-HiG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="173.91304347826087" y="175.78125"/>
+        </view>
+    </objects>
+</document>

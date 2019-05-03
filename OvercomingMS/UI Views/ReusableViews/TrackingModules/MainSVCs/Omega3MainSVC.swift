@@ -35,6 +35,7 @@ class Omega3MainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource
         tableView.dataSource = self
         tableView.register(UINib(nibName: defaultCellName, bundle: nil), forCellReuseIdentifier: defaultCellName)
         
+        internetPopupButton.descriptionLabel.text = "Click here to learn more about this step"
         internetPopupButton.url = "https://overcomingms.org/recovery-program/diet/"
         
         reload()

@@ -73,6 +73,9 @@
 		0A4CC882226021F8004C97BC /* TrackingModuleVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */; };
 		0A59C991226FF6B900FC66B5 /* SymptomsTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A59C990226FF6B800FC66B5 /* SymptomsTableHeader.swift */; };
 		0A59C99522710ECA00FC66B5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A59C99422710ECA00FC66B5 /* CustomButton.swift */; };
+		0A67C888227C7284001D2E0C /* FoodModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C887227C7284001D2E0C /* FoodModuleVC.swift */; };
+		0A67C88A227C7518001D2E0C /* FoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C889227C7518001D2E0C /* FoodHeader.swift */; };
+		0A67C88C227C7529001D2E0C /* FoodHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67C88B227C7529001D2E0C /* FoodHeader.xib */; };
 		0A7FC91021F51CE300492E93 /* MainTrackingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */; };
 		0A93EA4122122D840063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0A93EA45221316490063A892 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -298,6 +301,9 @@
 		0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleVCFactory.swift; sourceTree = "<group>"; };
 		0A59C990226FF6B800FC66B5 /* SymptomsTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsTableHeader.swift; sourceTree = "<group>"; };
 		0A59C99422710ECA00FC66B5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		0A67C887227C7284001D2E0C /* FoodModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModuleVC.swift; sourceTree = "<group>"; };
+		0A67C889227C7518001D2E0C /* FoodHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHeader.swift; sourceTree = "<group>"; };
+		0A67C88B227C7529001D2E0C /* FoodHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodHeader.xib; sourceTree = "<group>"; };
 		0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingVC.swift; sourceTree = "<group>"; };
 		0A93EA4A22132AC50063A892 /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
 		0A93EA4B22132AC50063A892 /* Avenir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Light.ttf"; sourceTree = "<group>"; };
@@ -544,6 +550,8 @@
 				0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */,
 				0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */,
 				0A08189D2214F82F0021BDF6 /* Food.swift */,
+				0A67C88B227C7529001D2E0C /* FoodHeader.xib */,
+				0A67C889227C7518001D2E0C /* FoodHeader.swift */,
 			);
 			path = FoodModule;
 			sourceTree = "<group>";
@@ -553,6 +561,7 @@
 			children = (
 				0AA5284B22022CFC00CCFEE7 /* TrackingModuleVC.swift */,
 				0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */,
+				0A67C887227C7284001D2E0C /* FoodModuleVC.swift */,
 			);
 			path = TrackingVCs;
 			sourceTree = "<group>";
@@ -1237,6 +1246,7 @@
 				0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */,
 				0A93EA45221316490063A892 /* (null) in Resources */,
 				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
+				0A67C88C227C7529001D2E0C /* FoodHeader.xib in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
 				0A08189A2214E7E80021BDF6 /* FoodSearchCell.xib in Resources */,
 				0C7D5866222C652100D00CB0 /* SymptomsMainSVC.xib in Resources */,
@@ -1433,9 +1443,11 @@
 				0AEF7A732234454B009A0292 /* MeditationTimerSVC.swift in Sources */,
 				0AD7EAFE221B1A86006F71C0 /* Omega3ModifySVC.swift in Sources */,
 				0AEF7A44222DD59F009A0292 /* NoteReviewSVC.swift in Sources */,
+				0A67C888227C7284001D2E0C /* FoodModuleVC.swift in Sources */,
 				0AF8E0D9220923E900E1EC33 /* TimerStopWatchAbstractSVC.swift in Sources */,
 				0AC4B8DE226CF62100D8361F /* DateCell.swift in Sources */,
 				0A4CC880225FEFA2004C97BC /* TypeTFIFactory.swift in Sources */,
+				0A67C88A227C7518001D2E0C /* FoodHeader.swift in Sources */,
 				0AEF7A6922341E14009A0292 /* MeditationLevelButtonSVC.swift in Sources */,
 				0A7FC91021F51CE300492E93 /* MainTrackingVC.swift in Sources */,
 				0AD7EAF2221B0047006F71C0 /* CustomEntryTFI.swift in Sources */,

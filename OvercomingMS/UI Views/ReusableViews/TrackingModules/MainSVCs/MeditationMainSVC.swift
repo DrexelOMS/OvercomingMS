@@ -34,6 +34,7 @@ class MeditationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         buttonStackView.addArrangedSubview(button3)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
         
+        internetPopupButton.descriptionLabel.text = "Click here to learn more about this step"
         internetPopupButton.url = "https://overcomingms.org/recovery-program/meditation/"
 
         tableView.delegate = self

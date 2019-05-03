@@ -263,7 +263,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
             vc = TrackingModuleFactory.MedicationVC()
             break
         case 5:
-            vc = SlidingStackVC(initialView: FoodMainSVC())
+            vc = FoodModuleVC(initialView: FoodMainSVC())
             break
         default:
             fatalError("Case Not Handled")

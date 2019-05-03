@@ -34,6 +34,7 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         buttonStackView.addArrangedSubview(button3)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
         
+        internetPopupButton.descriptionLabel.text = "Click here to learn more about this step"
         internetPopupButton.url = "https://overcomingms.org/recovery-program/sunlight-vitamin-d/"
 
         tableView.delegate = self
