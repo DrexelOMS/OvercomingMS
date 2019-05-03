@@ -100,4 +100,10 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
         parentVC.dismiss()
     }
     
+    @IBAction func backToTodayPressed(_ sender: Any) {
+        globalCurrentFullDate = OMSDateAccessor().todaysFullDate
+        
+        parentVC.dismiss()
+    }
+    
 }

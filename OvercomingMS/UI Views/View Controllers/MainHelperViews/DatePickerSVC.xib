@@ -19,11 +19,24 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="858"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7j6-4k-r8f">
-                    <rect key="frame" x="0.0" y="214" width="414" height="430"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7j6-4k-r8f" userLabel="CenteredVIew">
+                    <rect key="frame" x="0.0" y="378" width="414" height="480"/>
                     <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mh-2v-4az">
+                            <rect key="frame" x="150" y="0.0" width="114" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="lz0-Fw-OcB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Back to Today">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="backToTodayPressed:" destination="-1" eventType="touchUpInside" id="0Bs-xL-XGm"/>
+                            </connections>
+                        </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHD-cJ-0mo" userLabel="Picker Container">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                            <rect key="frame" x="0.0" y="50" width="414" height="350"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbV-tF-7ml" userLabel="topBorder (Hidden)">
                                     <rect key="frame" x="0.0" y="-0.5" width="414" height="1"/>
@@ -86,7 +99,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEA-td-zv6" userLabel="legendContainer">
-                            <rect key="frame" x="0.0" y="350" width="414" height="80"/>
+                            <rect key="frame" x="0.0" y="400" width="414" height="80"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="si9-wX-ges">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -108,22 +121,23 @@ Day</string>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="kHD-cJ-0mo" firstAttribute="top" secondItem="5mh-2v-4az" secondAttribute="bottom" constant="10" id="0us-cb-ZOe"/>
                         <constraint firstItem="rEA-td-zv6" firstAttribute="top" secondItem="kHD-cJ-0mo" secondAttribute="bottom" id="AvX-4U-Kz2"/>
+                        <constraint firstItem="5mh-2v-4az" firstAttribute="top" secondItem="7j6-4k-r8f" secondAttribute="top" id="E05-3m-FNK"/>
+                        <constraint firstItem="5mh-2v-4az" firstAttribute="centerX" secondItem="7j6-4k-r8f" secondAttribute="centerX" id="EBr-sZ-jXp"/>
                         <constraint firstAttribute="bottom" secondItem="rEA-td-zv6" secondAttribute="bottom" id="GRN-cA-VeB"/>
                         <constraint firstItem="rEA-td-zv6" firstAttribute="leading" secondItem="7j6-4k-r8f" secondAttribute="leading" id="Ggx-Qe-DrZ"/>
                         <constraint firstItem="kHD-cJ-0mo" firstAttribute="leading" secondItem="7j6-4k-r8f" secondAttribute="leading" id="RjX-hq-IuA"/>
                         <constraint firstAttribute="trailing" secondItem="rEA-td-zv6" secondAttribute="trailing" id="Yec-dh-Bx9"/>
-                        <constraint firstItem="kHD-cJ-0mo" firstAttribute="top" secondItem="7j6-4k-r8f" secondAttribute="top" id="iEQ-Zi-BGc"/>
                         <constraint firstAttribute="trailing" secondItem="kHD-cJ-0mo" secondAttribute="trailing" id="tC9-3z-jpf"/>
                     </constraints>
                 </view>
             </subviews>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="7j6-4k-r8f" secondAttribute="bottom" id="0Vn-s3-Ug0"/>
                 <constraint firstItem="7j6-4k-r8f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5ac-XD-Xpy"/>
                 <constraint firstAttribute="trailing" secondItem="7j6-4k-r8f" secondAttribute="trailing" id="Arc-t4-Fjl"/>
-                <constraint firstItem="7j6-4k-r8f" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="trb-PM-ogh"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="47.826086956521742" y="48.214285714285715"/>
