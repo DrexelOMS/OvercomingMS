@@ -104,6 +104,6 @@
         </view>
     </objects>
     <resources>
-        <image name="QuickCompleteReversed" width="682.5" height="682.5"/>
+        <image name="QuickCompleteReversed" width="45" height="45"/>
     </resources>
 </document>
