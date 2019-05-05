@@ -278,7 +278,6 @@
 		C4F18D7273E4C704663260FBA8C65265 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC67A226322EF02657E338E30A8A8C7 /* UIKit.framework */; };
 		C68326F85BA1576B4F26E56E356A4A60 /* RLMSyncSubscription.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 2EB3AAA09CB8DC081AA9F14F0BCA2B3B /* RLMSyncSubscription.h */; };
 		C6CDBFEEFFAD3AB5661A7BAC127B7308 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD8681A1053E04545FC8749017AF994 /* Foundation.framework */; };
-		C701587914FF4D4A74F8FCB734CD23D9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583EFDC006D393A58F84F621F3AC7752 /* SwiftyJSON.swift */; };
 		C7D061152B94586D1336A71ACF87AE1A /* TOWebViewControllerLocalizable.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5400CB75EB29ECB2250220A315C361E9 /* TOWebViewControllerLocalizable.bundle */; };
 		C7EB290383678C3F6324B32CD2732F94 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A8142F11D44A0382A57C65765F179 /* AVFoundation.framework */; };
 		C8090ADD2B63AB1650BB1EF7B5D1D1E0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684B5D6FFFEA3FC2325936FDFA15C08C /* QuartzCore.framework */; };
@@ -2856,7 +2855,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DD8938FC8DA9861ACE6B8B8E12E881 /* SwiftyJSON-dummy.m in Sources */,
-				C701587914FF4D4A74F8FCB734CD23D9 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
