@@ -42,6 +42,8 @@ class MeditationModifySVC : ModifyAbstractSVC {
             selectedStartTime = editingMeditationItem.StartTime
             
             selectedLength = editingMeditationItem.minutes
+            
+            titleLabel.text = "Confirm changes?"
         }
     }
     

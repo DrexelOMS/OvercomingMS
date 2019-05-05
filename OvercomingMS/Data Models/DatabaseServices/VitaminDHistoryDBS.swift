@@ -74,7 +74,7 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
         let amountRemaining = ProgressBarConfig.vitaminDGoal - getTotalAmount()
         let uom = ProgressBarConfig.vitaminDUOM
         if(amountRemaining <= 0 || getPercentageComplete() >= 100){
-            description = "Daily goal reached!"
+            description = "Goal reached!"
         }
         else {
             description = "\(amountRemaining) \(uom) left"

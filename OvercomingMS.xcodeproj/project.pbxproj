@@ -76,11 +76,13 @@
 		0A67C888227C7284001D2E0C /* FoodModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C887227C7284001D2E0C /* FoodModuleVC.swift */; };
 		0A67C88A227C7518001D2E0C /* FoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C889227C7518001D2E0C /* FoodHeader.swift */; };
 		0A67C88C227C7529001D2E0C /* FoodHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67C88B227C7529001D2E0C /* FoodHeader.xib */; };
+		0A6937F5227E69E3006DE6BF /* FoodApprovedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6937F4227E69E3006DE6BF /* FoodApprovedSVC.xib */; };
+		0A6937F7227E69F5006DE6BF /* FoodApprovedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6937F6227E69F5006DE6BF /* FoodApprovedSVC.swift */; };
 		0A7FC91021F51CE300492E93 /* MainTrackingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */; };
-		0A93EA4122122D840063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		0A93EA45221316490063A892 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		0A93EA472213165D0063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		0A93EA4922131C2D0063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0A93EA4122122D840063A892 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		0A93EA45221316490063A892 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0A93EA472213165D0063A892 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		0A93EA4922131C2D0063A892 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5622132BCF0063A892 /* PullBarSVC.swift */; };
 		0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93EA5722132BCF0063A892 /* PullBarSVC.xib */; };
 		0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */; };
@@ -304,6 +306,8 @@
 		0A67C887227C7284001D2E0C /* FoodModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModuleVC.swift; sourceTree = "<group>"; };
 		0A67C889227C7518001D2E0C /* FoodHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHeader.swift; sourceTree = "<group>"; };
 		0A67C88B227C7529001D2E0C /* FoodHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodHeader.xib; sourceTree = "<group>"; };
+		0A6937F4227E69E3006DE6BF /* FoodApprovedSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodApprovedSVC.xib; sourceTree = "<group>"; };
+		0A6937F6227E69F5006DE6BF /* FoodApprovedSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApprovedSVC.swift; sourceTree = "<group>"; };
 		0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingVC.swift; sourceTree = "<group>"; };
 		0A93EA4A22132AC50063A892 /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
 		0A93EA4B22132AC50063A892 /* Avenir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Light.ttf"; sourceTree = "<group>"; };
@@ -616,6 +620,7 @@
 			children = (
 				0AA5286622027FF300CCFEE7 /* ConfirmationSVC.xib */,
 				0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */,
+				0A030F7822555C8600857BC8 /* MedicationNotTakenItemSVC.xib */,
 				0A96748F225CCBB2007C05AF /* ConfirmationFactory.swift */,
 			);
 			path = ConfirmationSVCs;
@@ -828,6 +833,8 @@
 		0AD7EB1F2220B5D6006F71C0 /* FoodSelected */ = {
 			isa = PBXGroup;
 			children = (
+				0A6937F6227E69F5006DE6BF /* FoodApprovedSVC.swift */,
+				0A6937F4227E69E3006DE6BF /* FoodApprovedSVC.xib */,
 				0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */,
 				0C9910842219C2F00008A727 /* FoodSelectedSVC.xib */,
 				0AD7EB1D2220B2D9006F71C0 /* FoodRejectedSVC.swift */,
@@ -846,7 +853,6 @@
 				0AD7EB372223043A006F71C0 /* MedicationItemSVC.swift */,
 				0A19B3C42253F97100F4B02B /* MedicationItemSVC.xib */,
 				0A030F7A22555C9400857BC8 /* MedicationNotTakenItemSVC.swift */,
-				0A030F7822555C8600857BC8 /* MedicationNotTakenItemSVC.xib */,
 				0AD7EB382223043A006F71C0 /* MedicationMainSVC.swift */,
 			);
 			path = Medication;
@@ -1210,6 +1216,7 @@
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
 				0A19B3C12253E94800F4B02B /* ExpandingCell.xib in Resources */,
 				0AEC55532261488000B7B75E /* GoalsBoxSVC.xib in Resources */,
+				0A6937F5227E69E3006DE6BF /* FoodApprovedSVC.xib in Resources */,
 				0A93F1582213C5B40063A892 /* FoodMainSVC.xib in Resources */,
 				0AC4B8DC226CF60E00D8361F /* DateCell.xib in Resources */,
 				0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */,
@@ -1244,7 +1251,7 @@
 				0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
 				0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */,
-				0A93EA45221316490063A892 /* (null) in Resources */,
+				0A93EA45221316490063A892 /* BuildFile in Resources */,
 				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
 				0A67C88C227C7529001D2E0C /* FoodHeader.xib in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
@@ -1330,6 +1337,7 @@
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/LinearProgressBar/LinearProgressBar.framework",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -1346,6 +1354,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LinearProgressBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -1436,7 +1445,7 @@
 				0A93F19322145EA30063A892 /* TypeTFI.swift in Sources */,
 				0A030FB022580A1500857BC8 /* SavedMedicationDBS.swift in Sources */,
 				0A43120222665BB200E8F72E /* GoalsPickerCell.swift in Sources */,
-				0A93EA472213165D0063A892 /* (null) in Sources */,
+				0A93EA472213165D0063A892 /* BuildFile in Sources */,
 				0AEC55582261536300B7B75E /* GoalsModifySVC.swift in Sources */,
 				0AD94DCC220CEE9800B5C2BA /* ExerciseSelectedItem.swift in Sources */,
 				0A030FB222580A1500857BC8 /* FoodLogDBS.swift in Sources */,
@@ -1509,11 +1518,12 @@
 				0A030FBB22580A1500857BC8 /* SymptomsNoteDBT.swift in Sources */,
 				0AD7EB232221F1E1006F71C0 /* SeeMoreButtonSVC.swift in Sources */,
 				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
+				0A6937F7227E69F5006DE6BF /* FoodApprovedSVC.swift in Sources */,
 				0AACE78922694403001803DA /* OutsideCell.swift in Sources */,
 				0AEF7A542231B487009A0292 /* SwipeDownVC.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
-				0A93EA4122122D840063A892 /* (null) in Sources */,
+				0A93EA4122122D840063A892 /* BuildFile in Sources */,
 				0A030FB422580A1500857BC8 /* VitaminDHistoryDBT.swift in Sources */,
 				0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */,
 				0AEF7A6422340068009A0292 /* MeditationSelectedItemSVC.swift in Sources */,
@@ -1525,7 +1535,7 @@
 				0A9926C6225CE484008DE456 /* TitleDescriptionHeaderSVC.swift in Sources */,
 				0A4CC882226021F8004C97BC /* TrackingModuleVCFactory.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SlidingStackVC.swift in Sources */,
-				0A93EA4922131C2D0063A892 /* (null) in Sources */,
+				0A93EA4922131C2D0063A892 /* BuildFile in Sources */,
 				0AF0C5432269F7D80003DD73 /* ActiveTrackingDBS.swift in Sources */,
 				0A030FB122580A1500857BC8 /* MeditationHistoryDBS.swift in Sources */,
 				0AEF7A52223025F9009A0292 /* OMSRoundedBox.swift in Sources */,

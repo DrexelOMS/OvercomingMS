@@ -162,7 +162,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
         let amountRemaining = getTodaysTotalMedGoal() - getTrackingDay().MedicationTotal
         let uom = "sets of meds"
         if(amountRemaining <= 0 || getPercentageComplete() >= 100){
-            description = "Daily goal reached!"
+            description = "Goal reached!"
         }
         else {
             description = "\(amountRemaining) \(uom) left"

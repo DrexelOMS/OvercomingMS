@@ -26,6 +26,8 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     
     @IBOutlet weak var buttonStackView: UIStackView!
     
+    @IBOutlet weak var ratingView: FiveScaleRatingButtonsSVC!
+    
     override func customSetup() {
         
     }
@@ -77,6 +79,8 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
         button2.colorTheme = parentVC.theme
         button3.colorTheme = parentVC.theme
         button4.colorTheme = parentVC.theme
+        ratingView.colorTheme = parentVC.theme
+        ratingView.reload()
     }
     
     func scanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {

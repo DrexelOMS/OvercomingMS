@@ -59,6 +59,7 @@ class MedicationItemSVC : CustomView {
             amountLabel.textColor = UIColor.lightGray
             let attrString = NSAttributedString(string: nameLabel.text!, attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue])
             nameLabel.attributedText = attrString
+//            expandingCell.backgroundColor = UIColor.gray
 
         }
         else {
@@ -66,6 +67,7 @@ class MedicationItemSVC : CustomView {
             amountLabel.textColor = UIColor.black
             let attrString = NSAttributedString(string: nameLabel.text!)
             nameLabel.attributedText = attrString
+//            expandingCell.backgroundColor = UIColor.white
         }
         
         if(!doneCheckButton.isUserInteractionEnabled){

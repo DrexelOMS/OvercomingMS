@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodMainSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="buttonStackView" destination="6rE-Xy-cCh" id="87m-ZY-Y3p"/>
+                <outlet property="ratingView" destination="gVt-xa-zUJ" id="7gF-oF-ZyL"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

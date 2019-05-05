@@ -15,6 +15,14 @@ class FiveScaleRatingButtonsSVC : CustomView {
     @IBOutlet weak var rating2: RoundedBoxShadowsTemplate!
     @IBOutlet weak var rating1: RoundedBoxShadowsTemplate!
     
+    @IBOutlet weak var rating1Image: UIImageView!
+    @IBOutlet weak var rating2Image: UIImageView!
+    @IBOutlet weak var rating3Image: UIImageView!
+    @IBOutlet weak var rating4Image: UIImageView!
+    @IBOutlet weak var rating5Image: UIImageView!
+    
+    var colorTheme: UIColor = UIColor.brown
+    
     override var nibName: String {
         get {
             return "FiveScaleRatingButtonsSVC"
@@ -39,27 +47,37 @@ class FiveScaleRatingButtonsSVC : CustomView {
     
     func reload() {
         let rating = FoodRatingDBS().getRating()
-        rating1.toggleSelected(isSelected: false)
-        rating2.toggleSelected(isSelected: false)
-        rating3.toggleSelected(isSelected: false)
-        rating4.toggleSelected(isSelected: false)
-        rating5.toggleSelected(isSelected: false)
+        rating1.backgroundColor = UIColor.white
+        rating1Image.image = UIImage(named: "Distressed")
+        rating2.backgroundColor = UIColor.white
+        rating2Image.image = UIImage(named: "Sad")
+        rating3.backgroundColor = UIColor.white
+        rating3Image.image = UIImage(named: "Meh")
+        rating4.backgroundColor = UIColor.white
+        rating4Image.image = UIImage(named: "Happy")
+        rating5.backgroundColor = UIColor.white
+        rating5Image.image = UIImage(named: "Excited")
 
         switch rating {
         case 1:
-            rating1.toggleSelected(isSelected: true)
+            rating1.backgroundColor = colorTheme
+            rating1Image.image = UIImage(named: "Distressed_white")
             break
         case 2:
-            rating2.toggleSelected(isSelected: true)
+            rating2.backgroundColor = colorTheme
+            rating2Image.image = UIImage(named: "Sad_white")
             break
         case 3:
-            rating3.toggleSelected(isSelected: true)
+            rating3.backgroundColor = colorTheme
+            rating3Image.image = UIImage(named: "Meh_white")
             break
         case 4:
-            rating4.toggleSelected(isSelected: true)
+            rating4.backgroundColor = colorTheme
+            rating4Image.image = UIImage(named: "Happy_white")
             break
         case 5:
-            rating5.toggleSelected(isSelected: true)
+            rating5.backgroundColor = colorTheme
+            rating5Image.image = UIImage(named: "Excited_white")
             break
         default:
             break

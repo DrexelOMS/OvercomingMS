@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Distressed Icon.png",
+      "filename" : "Distressed.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Distressed Icon@2x.png",
+      "filename" : "Distressed@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Distressed Icon@3x.png",
+      "filename" : "Distressed@3x.png",
       "scale" : "3x"
     }
   ],

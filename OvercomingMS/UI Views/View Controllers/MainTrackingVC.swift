@@ -183,7 +183,13 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         meditationBar.update(trackingDBS: MeditationHistoryDBS(), isTracked: recentItems.IsMeditationActive)
         medicationBar.update(trackingDBS: SavedMedicationDBS(), isTracked: recentItems.IsMedicationActive)
         
-        header.perfectDaysLabel.text = "\(TrackingModulesDBS().getTotalPerfectDays()) perfect days"
+        let streak = TrackingModulesDBS().getTotalPerfectDays()
+        var plural = ""
+        if streak > 1 {
+            plural = "s"
+        }
+        
+        header.perfectDaysLabel.text = "\(TrackingModulesDBS().getTotalPerfectDays()) great day\(plural)!"
         setHeaderStreak()
 
     }
@@ -207,7 +213,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
             count += 1
         }
         
-        header.daysInARow.text = "\(count) days in a row"
+        header.daysInARow.text = "\(count) in a row!"
     }
     
     //MARK: Delegates

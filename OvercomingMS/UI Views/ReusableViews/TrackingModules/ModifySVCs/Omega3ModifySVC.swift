@@ -21,6 +21,7 @@ class Omega3ModifySVC : ModifyAbstractSVC {
                 if let amount = defaults.value(forKey: OMEGA3_SUPPLEMENT_AMOUNT_UD) as? Int {
                     selectedAmount = amount
                 }
+                titleLabel.text = "Add Supplement"
             }
         }
     }
@@ -64,6 +65,7 @@ class Omega3ModifySVC : ModifyAbstractSVC {
             selectedType = editingOmega3Item.supplementName
             selectedStartTime = editingOmega3Item.StartTime
             selectedAmount = editingOmega3Item.Amount
+            titleLabel.text = "Confirm changes?"
         }
     }
     

@@ -50,9 +50,11 @@ class CircleButtonSVC: CustomView, ButtonDelegate {
     }
     
     private func setButtonImage(image: UIImage) {
-        let tintedImage = image.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-        button.setImage(tintedImage, for: .normal)
-        button.tintColor = colorTheme
+//        let tintedImage = image.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+//        button.setImage(tintedImage, for: .normal)
+//        button.tintColor = colorTheme
+        
+        button.setImage(image, for: .normal)
         button.imageEdgeInsets = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
     }
     

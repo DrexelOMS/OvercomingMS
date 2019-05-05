@@ -205,7 +205,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         
         let count = foodItemsArray.count
         if count <= 0 {
-            tableView.setEmptyView(title: "Enter a food type", message: "Check if it violates the OMS plan")
+            tableView.setEmptyView(title: "Search for a food", message: "This function is still in beta")
         }
         else {
             tableView.restore()
@@ -246,10 +246,10 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         var badTypes = [""]
         print(food.isFoodGood(food: food))
         if food.isFoodGood(food: food)==RecommendedLevel.Good{
-            parentVC.pushSubView(newSubView: FoodSelectedSVC(food: food, unknown: false))
+            parentVC.pushSubView(newSubView: FoodSelectedSVC(food: food, ingredients: [""], types: [""]))
         }
         else if food.isFoodGood(food: food) == RecommendedLevel.Caution{
-            parentVC.pushSubView(newSubView: FoodSelectedSVC(food: food, unknown: true))
+            parentVC.pushSubView(newSubView: FoodSelectedSVC(food: food, ingredients: [""], types: [""]))
         }
         else{
             

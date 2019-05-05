@@ -16,7 +16,7 @@ class HeaderSVC: CustomView {
         }
     }
     
-    let motivationalMessages = ["Keep Going", "Great Work", "You Can Do It"]
+    let motivationalMessages = ["Great job!", "Great Work", "You Can Do It"]
     
     @IBOutlet weak var daysInARow: UILabel!
     @IBOutlet weak var perfectDaysLabel: UILabel!
@@ -42,8 +42,8 @@ class HeaderSVC: CustomView {
     
     override func customSetup() {
         //displayTrackingMessage(colorTheme: UIColor.blue, message: "test")
-        daysInARow.text = "0 days in a row"
-        perfectDaysLabel.text = "0 perfect days"
+        daysInARow.text = "0 in a row!"
+        perfectDaysLabel.text = "0 great days!"
         
         messageLabel.adjustsFontSizeToFitWidth = true
         startMotivationStartThread()
@@ -94,7 +94,7 @@ class HeaderSVC: CustomView {
     }
     
     func displayPreviousDateMessage() {
-        messageLabel.text = "You are editing a past day"
+        messageLabel.text = "You are editing a past day!"
         messageLabel.textColor = UIColor.white
         messageLabel.textAlignment = .center
         

@@ -59,12 +59,14 @@ class MedicationModifySVC : ModifyAbstractSVC {
             selectedStartTime = editingMedicationItem.TimeOfDay
             selectedNote = editingMedicationItem.MedicationNote
             selectedRate = editingMedicationItem.Frequency
+            titleLabel.text = "Confirm changes?"
         }
     }
     
     override func customSetup() {
         //set the initial text and start time of the textField
         selectedStartTime = Date()
+        titleLabel.text = "Add Medication"
         
         textInputStackView.addArrangedSubview(nameTFI)
         textInputStackView.addArrangedSubview(dateTimeTFI)

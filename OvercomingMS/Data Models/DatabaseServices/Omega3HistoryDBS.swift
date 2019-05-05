@@ -74,10 +74,10 @@ class Omega3HistoryDBS: TrackingModulesDBS {
         let amountRemaining = ProgressBarConfig.omega3Goal - getTotalGrams()
         let uom = ProgressBarConfig.omega3UOM
         if(amountRemaining <= 0 || getPercentageComplete() >= 100){
-            description = "Daily goal reached!"
+            description = "Goal reached!"
         }
         else {
-            description = "\(amountRemaining) \(uom) left"
+            description = "\(amountRemaining) grams left"
         }
         return description
     }
