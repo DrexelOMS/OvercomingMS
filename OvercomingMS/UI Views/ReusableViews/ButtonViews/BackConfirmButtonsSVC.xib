@@ -16,6 +16,7 @@
                 <outlet property="RightButton" destination="Kkc-85-hw3" id="S8Z-7L-MbT"/>
                 <outlet property="backIcon" destination="L2V-KG-Sxl" id="ikr-2L-zW6"/>
                 <outlet property="confirmIcon" destination="3cO-P1-lI9" id="Sel-nz-PX7"/>
+                <outlet property="mainView" destination="iN0-l3-epB" id="7J7-QM-YYh"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,49 +24,60 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1qz-l5-45D">
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1qz-l5-45D">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4B-nF-Ucn" userLabel="BackButton" customClass="CustomButton" customModule="OvercomingMS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="159" height="60"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdt-Cw-wN7">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="60"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SY6-cv-mBq">
-                                    <rect key="frame" x="42" y="22" width="75.5" height="16"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4B-nF-Ucn" userLabel="BackButton" customClass="CustomButton" customModule="OvercomingMS" customModuleProvider="target">
+                                    <rect key="frame" x="1" y="1" width="158" height="58"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="L2V-KG-Sxl">
-                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="16" id="Wzb-VI-mLd"/>
-                                                <constraint firstAttribute="width" constant="16" id="Xj6-MK-rac"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh3-iL-nen">
-                                            <rect key="frame" x="31" y="0.0" width="44.5" height="16"/>
-                                            <attributedString key="attributedText">
-                                                <fragment content="Back">
-                                                    <attributes>
-                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="20" name="Avenir-Heavy"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SY6-cv-mBq">
+                                            <rect key="frame" x="41.5" y="21" width="75.5" height="16"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="L2V-KG-Sxl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="Wzb-VI-mLd"/>
+                                                        <constraint firstAttribute="width" constant="16" id="Xj6-MK-rac"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh3-iL-nen">
+                                                    <rect key="frame" x="31" y="0.0" width="44.5" height="16"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Back">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
-                                </stackView>
+                                    <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="SY6-cv-mBq" firstAttribute="centerY" secondItem="l4B-nF-Ucn" secondAttribute="centerY" id="hSg-Yt-KjB"/>
+                                        <constraint firstItem="SY6-cv-mBq" firstAttribute="centerX" secondItem="l4B-nF-Ucn" secondAttribute="centerX" id="nBe-al-xAW"/>
+                                    </constraints>
+                                </view>
                             </subviews>
-                            <color key="backgroundColor" red="0.79607843140000001" green="0.90196078430000004" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="SY6-cv-mBq" firstAttribute="centerY" secondItem="l4B-nF-Ucn" secondAttribute="centerY" id="hSg-Yt-KjB"/>
-                                <constraint firstItem="SY6-cv-mBq" firstAttribute="centerX" secondItem="l4B-nF-Ucn" secondAttribute="centerX" id="nBe-al-xAW"/>
+                                <constraint firstItem="l4B-nF-Ucn" firstAttribute="top" secondItem="fdt-Cw-wN7" secondAttribute="top" constant="1" id="JzQ-L5-zIe"/>
+                                <constraint firstAttribute="trailing" secondItem="l4B-nF-Ucn" secondAttribute="trailing" constant="1" id="Mxd-JW-jft"/>
+                                <constraint firstAttribute="bottom" secondItem="l4B-nF-Ucn" secondAttribute="bottom" constant="1" id="nP5-Z2-p7j"/>
+                                <constraint firstItem="l4B-nF-Ucn" firstAttribute="leading" secondItem="fdt-Cw-wN7" secondAttribute="leading" constant="1" id="u57-bz-vxC"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kkc-85-hw3" userLabel="ConfirmButton" customClass="CustomButton" customModule="OvercomingMS" customModuleProvider="target">
-                            <rect key="frame" x="161" y="0.0" width="159" height="60"/>
+                            <rect key="frame" x="160" y="0.0" width="160" height="60"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pcY-n6-0Q9">
-                                    <rect key="frame" x="26.5" y="22" width="106" height="16"/>
+                                    <rect key="frame" x="27" y="22" width="106" height="16"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHG-Ev-efl">
                                             <rect key="frame" x="0.0" y="0.0" width="75" height="16"/>
@@ -90,7 +102,6 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" red="0.24705882352941178" green="0.38039215686274508" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="pcY-n6-0Q9" firstAttribute="centerX" secondItem="Kkc-85-hw3" secondAttribute="centerX" id="Dit-LF-0hf"/>
                                 <constraint firstItem="pcY-n6-0Q9" firstAttribute="centerY" secondItem="Kkc-85-hw3" secondAttribute="centerY" id="qS9-8M-7vz"/>
@@ -99,7 +110,7 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.0078431372550000003" green="0.63529411759999999" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="1qz-l5-45D" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Lgf-G5-HVz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1qz-l5-45D" secondAttribute="trailing" id="U39-e2-roP"/>
@@ -112,7 +123,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Back" width="689" height="689"/>
-        <image name="Confirm" width="689" height="689"/>
+        <image name="Back" width="45" height="45"/>
+        <image name="Confirm" width="45" height="45"/>
     </resources>
 </document>
