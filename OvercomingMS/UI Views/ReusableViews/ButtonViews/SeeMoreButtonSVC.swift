@@ -36,4 +36,14 @@ class SeeMoreButtonSVC : CustomView {
         parentVC.present(navigation, animated: true, completion: nil)
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        DispatchQueue.main.async {
+//            let rate = 1 - ((60 - self.frame.height)) / 22
+//            let fontSize = 12  + (6) * rate
+//            print(fontSize)
+//            self.descriptionLabel.font = UIFont(name: self.descriptionLabel!.font.fontName, size: fontSize)
+        }
+    }
+    
 }
