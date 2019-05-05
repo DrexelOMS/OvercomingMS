@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FiveScaleRatingButtonsSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="rating1" destination="A0M-oT-0lO" id="bn9-4l-0Ws"/>
+                <outlet property="rating1Image" destination="PN4-4A-jds" id="jyC-pF-C2m"/>
                 <outlet property="rating2" destination="j6h-ic-BzX" id="Rxy-wv-w7h"/>
+                <outlet property="rating2Image" destination="yR9-en-fqe" id="Bsc-7X-UKb"/>
                 <outlet property="rating3" destination="ZBF-pN-wof" id="3iR-xa-gkv"/>
+                <outlet property="rating3Image" destination="Vzr-6e-E6b" id="8aE-h4-4ga"/>
                 <outlet property="rating4" destination="t10-q4-hxM" id="INH-Yj-hjO"/>
+                <outlet property="rating4Image" destination="0xE-sa-nlz" id="ecQ-xO-4xl"/>
                 <outlet property="rating5" destination="V8V-vd-3qv" id="bFm-TI-TSI"/>
+                <outlet property="rating5Image" destination="hK8-Eb-5KM" id="YUs-uA-jPj"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -301,10 +306,10 @@
         </view>
     </objects>
     <resources>
-        <image name="Distressed" width="689" height="689"/>
-        <image name="Excited" width="689" height="689"/>
-        <image name="Happy" width="689" height="689"/>
-        <image name="Meh" width="689" height="689"/>
-        <image name="Sad" width="689" height="689"/>
+        <image name="Distressed" width="45" height="45"/>
+        <image name="Excited" width="45" height="45"/>
+        <image name="Happy" width="45" height="45"/>
+        <image name="Meh" width="45" height="45"/>
+        <image name="Sad" width="45" height="45"/>
     </resources>
 </document>
