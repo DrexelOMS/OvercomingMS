@@ -71,6 +71,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLF-CW-Vco" customClass="CircleButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
                                             <rect key="frame" x="160" y="0.0" width="160" height="100"/>
                                             <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="symptom list"/>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="List"/>
                                             </userDefinedRuntimeAttributes>
                                         </view>
@@ -106,6 +107,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Add" width="689" height="689"/>
+        <image name="Add" width="45" height="45"/>
+        <image name="symptom list" width="145" height="116.5"/>
     </resources>
 </document>

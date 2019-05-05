@@ -15,6 +15,7 @@ target 'OvercomingMS' do
   pod 'TOWebViewController'
   pod 'UPCarouselFlowLayout'
   pod 'JTAppleCalendar', '~> 7.1'
+  pod 'Player', '~> 0.13'
   
   target 'OvercomingMSTests' do
     inherit! :search_paths

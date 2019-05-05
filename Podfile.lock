@@ -4,6 +4,7 @@ PODS:
   - Cartography (3.1.0)
   - JTAppleCalendar (7.1.7)
   - LinearProgressBar (1.0.1)
+  - Player (0.13.1)
   - Realm (3.14.1):
     - Realm/Headers (= 3.14.1)
   - Realm/Headers (3.14.1)
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - Cartography
   - JTAppleCalendar (~> 7.1)
   - LinearProgressBar (~> 1.0.1)
+  - Player (~> 0.13)
   - RealmSwift
   - SVProgressHUD
   - SwiftyJSON
@@ -35,6 +37,7 @@ SPEC REPOS:
     - Cartography
     - JTAppleCalendar
     - LinearProgressBar
+    - Player
     - Realm
     - RealmSwift
     - SVProgressHUD
@@ -48,6 +51,7 @@ SPEC CHECKSUMS:
   Cartography: 1988b7578871a56c036e7af17195cb2190edf18c
   JTAppleCalendar: 96da4d8388fa6dc82d6a60d41ef36a015e167e2f
   LinearProgressBar: f6a74dbabed229dbb1a7978089e2e4317a3a0ee0
+  Player: 29186e0d557898b0ebdab42d2e1b47e615838156
   Realm: e12c9c2387d05c5bba3a9c394838f5870e85763b
   RealmSwift: a82eab9b04c3e1616082c7e17aa300740847769c
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
@@ -55,6 +59,6 @@ SPEC CHECKSUMS:
   TOWebViewController: 953a24619d32f7aa1d9d4098a74885a9236f7348
   UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: cbe1456ace03643550f9f50cc6759562c5c9aae1
+PODFILE CHECKSUM: 032f8b66aeaf66ecd1219955b5929e45093b80b7
 
 COCOAPODS: 1.5.3
