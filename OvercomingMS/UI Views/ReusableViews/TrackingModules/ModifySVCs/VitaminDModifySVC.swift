@@ -21,6 +21,7 @@ class VitaminDModifySVC : ModifyAbstractSVC {
                 if let amount = defaults.value(forKey: VITAMIND_SUPPLEMENT_AMOUNT_UD) as? Int {
                     selectedAmount = amount
                 }
+                titleLabel.text = "Add Supplement"
             }
         }
     }
@@ -64,6 +65,7 @@ class VitaminDModifySVC : ModifyAbstractSVC {
             selectedType = editingVitamindDItem.VitaminDType
             selectedStartTime = editingVitamindDItem.StartTime
             selectedAmount = editingVitamindDItem.Amount
+            titleLabel.text = "Confirm changes?"
         }
     }
     

@@ -15,7 +15,7 @@ class StartPauseCircleButton : CircleButtonSVC {
     }
     
     func setStartMode() {
-        buttonImage = UIImage(named: "Play-Resume")
+        buttonImage = UIImage(named: "Play")
         label.text = "Start"
     }
     
@@ -25,7 +25,7 @@ class StartPauseCircleButton : CircleButtonSVC {
     }
     
     func setResumeMode() {
-        buttonImage = UIImage(named: "Play-Resume")
+        buttonImage = UIImage(named: "Play")
         label.text = "Resume"
     }
 }

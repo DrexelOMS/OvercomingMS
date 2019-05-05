@@ -49,6 +49,7 @@ class ExerciseModifySVC : ModifyAbstractSVC {
             selectedStartTime = editingExerciseItem.StartTime
             
             selectedLength = editingExerciseItem.minutes
+            titleLabel.text = "Confirm changes?"
         }
     }
     

@@ -27,10 +27,10 @@
             </userGuides>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-zo-gfa">
-                    <rect key="frame" x="0.0" y="20" width="320" height="438"/>
+                    <rect key="frame" x="0.0" y="50" width="320" height="408"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-Ju-4Vj">
-                            <rect key="frame" x="20" y="0.0" width="280" height="438"/>
+                            <rect key="frame" x="20" y="0.0" width="280" height="408"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjQ-4D-czE" userLabel="LabelView">
                                     <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -68,10 +68,10 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDu-S9-dhl">
-                                    <rect key="frame" x="0.0" y="80" width="280" height="288"/>
+                                    <rect key="frame" x="0.0" y="80" width="280" height="258"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifI-jM-CKr" userLabel="ReferenceView">
-                                    <rect key="frame" x="0.0" y="398" width="280" height="40"/>
+                                    <rect key="frame" x="0.0" y="368" width="280" height="40"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0g-ob-rF2" userLabel="FoodView">
                                             <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
