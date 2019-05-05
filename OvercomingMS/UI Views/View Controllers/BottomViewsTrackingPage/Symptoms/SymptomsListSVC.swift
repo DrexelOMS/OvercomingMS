@@ -53,6 +53,10 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
         reload()
     }
     
+    override func updateColors() {
+        backButton.colorTheme = parentVC.theme
+    }
+    
     override func reload() {
         tableView.reloadData()
         
