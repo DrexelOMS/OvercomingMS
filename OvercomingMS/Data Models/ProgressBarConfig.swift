@@ -13,7 +13,7 @@ enum TrackingMode { case food, omega3, vitaminD, exercise, meditation, medicatio
 class ProgressBarConfig {
     
     //TODO: make food goal setable and usable?
-    static var foodDescriptions : [String] = ["Awful.", "Not great.", "Okay.", "Pretty good.", "Great!"]
+    static var foodDescriptions : [String] = ["Eat well Today!", "Not great.", "Okay.", "Pretty good.", "Great!"]
     static func getfoodDescription(rating: Int) -> String {
         if(rating - 1 < 0){
             return foodDescriptions[0]
