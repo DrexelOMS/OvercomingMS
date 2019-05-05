@@ -39,10 +39,10 @@ class SeeMoreButtonSVC : CustomView {
     override func layoutSubviews() {
         super.layoutSubviews()
         DispatchQueue.main.async {
-//            let rate = 1 - ((60 - self.frame.height)) / 22
-//            let fontSize = 12  + (6) * rate
-//            print(fontSize)
-//            self.descriptionLabel.font = UIFont(name: self.descriptionLabel!.font.fontName, size: fontSize)
+            let rate = 1 - ((60 - self.frame.height)) / 22
+            let fontSize = 12  + (4) * rate
+            print(fontSize)
+            self.descriptionLabel.font = UIFont(name: self.descriptionLabel!.font.fontName, size: fontSize)
         }
     }
     
