@@ -616,6 +616,7 @@
 			children = (
 				0AA5286622027FF300CCFEE7 /* ConfirmationSVC.xib */,
 				0AA5286A2202809700CCFEE7 /* ConfirmationSVC.swift */,
+				0A030F7822555C8600857BC8 /* MedicationNotTakenItemSVC.xib */,
 				0A96748F225CCBB2007C05AF /* ConfirmationFactory.swift */,
 			);
 			path = ConfirmationSVCs;
@@ -846,7 +847,6 @@
 				0AD7EB372223043A006F71C0 /* MedicationItemSVC.swift */,
 				0A19B3C42253F97100F4B02B /* MedicationItemSVC.xib */,
 				0A030F7A22555C9400857BC8 /* MedicationNotTakenItemSVC.swift */,
-				0A030F7822555C8600857BC8 /* MedicationNotTakenItemSVC.xib */,
 				0AD7EB382223043A006F71C0 /* MedicationMainSVC.swift */,
 			);
 			path = Medication;

@@ -12,21 +12,21 @@ class ConfirmationFactory {
     static func CancelConfirmation() -> ConfirmationSVC {
         let svc = ConfirmationSVC()
         svc.topDescription.text = "Are you sure you want to cancel?"
-        svc.bottomDescription.text = "All progress made during this session will be lost"
+        svc.bottomDescription.text = "All progress during this session will be lost."
         return svc
     }
     
     static func RepeatConfirmation() -> ConfirmationSVC {
         let svc = ConfirmationSVC()
-        svc.topDescription.text = "You are about to repeat this entry from today's achievements"
-        svc.bottomDescription.text = "This new entry will contain all the same data but with the curent time"
+        svc.topDescription.text = "Are you sure you want to repeat this entry?"
+        svc.bottomDescription.text = "This copy will be saved in your entry list."
         return svc
     }
     
     static func DeleteConfirmation() -> ConfirmationSVC {
         let svc = ConfirmationSVC()
-        svc.topDescription.text = "You are about to delete this item from today's achievements"
-        svc.bottomDescription.text = "You will not be able to undo this action"
+        svc.topDescription.text = "Are you sure you want to delete?"
+        svc.bottomDescription.text = "You won’t be able to recover this entry."
         return svc
     }
     

@@ -205,7 +205,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         
         let count = foodItemsArray.count
         if count <= 0 {
-            tableView.setEmptyView(title: "Enter a food type", message: "Check if it violates the OMS plan")
+            tableView.setEmptyView(title: "Search for a food", message: "This function is still in beta")
         }
         else {
             tableView.restore()
