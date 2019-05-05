@@ -17,23 +17,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oj-9m-R8A" userLabel="BorderTop">
-                    <rect key="frame" x="20" y="0.0" width="280" height="1"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
                     <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="akr-eK-0uf"/>
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FP2-Hv-hMN">
-                    <rect key="frame" x="30" y="21" width="270" height="302"/>
+                    <rect key="frame" x="0.0" y="21" width="320" height="302"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Um4-gA-6aw" userLabel="ResultDescriptionView">
-                            <rect key="frame" x="0.0" y="0.0" width="270" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="aM2-Zc-2DT">
-                                    <rect key="frame" x="0.0" y="0.0" width="270" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYN-WV-P5I">
-                                            <rect key="frame" x="0.0" y="0.0" width="270" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Check the nutrition label to make sure the food isn’t in one of these categories:">
                                                     <attributes>
@@ -62,19 +62,19 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSo-q0-b6g" userLabel="CategoryView">
-                            <rect key="frame" x="0.0" y="50" width="270" height="252"/>
+                            <rect key="frame" x="0.0" y="50" width="320" height="252"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HOV-vR-cKL">
-                                    <rect key="frame" x="0.0" y="0.0" width="270" height="252"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lag-Ls-vQU" userLabel="LeftView">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="252"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="155" height="252"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CUN-rt-B9J">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="252"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="252"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXA-Au-sy8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="55.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="155" height="55.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Baked Foods">
                                                                     <attributes>
@@ -87,7 +87,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KF5-9c-j3K">
-                                                            <rect key="frame" x="0.0" y="65.5" width="130" height="55.5"/>
+                                                            <rect key="frame" x="0.0" y="65.5" width="155" height="55.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Dairy">
                                                                     <attributes>
@@ -100,7 +100,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGb-hv-9QV">
-                                                            <rect key="frame" x="0.0" y="131" width="130" height="55.5"/>
+                                                            <rect key="frame" x="0.0" y="131" width="155" height="55.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Egg Yokes">
                                                                     <attributes>
@@ -113,7 +113,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yw9-pa-cTT">
-                                                            <rect key="frame" x="0.0" y="196.5" width="130" height="55.5"/>
+                                                            <rect key="frame" x="0.0" y="196.5" width="155" height="55.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Fast Food">
                                                                     <attributes>
@@ -136,13 +136,13 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rqx-V1-HZm" userLabel="RightView">
-                                            <rect key="frame" x="140" y="0.0" width="130" height="252"/>
+                                            <rect key="frame" x="165" y="0.0" width="155" height="252"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="isv-hy-mLD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="252"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="252"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yB-7K-nxy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="55.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="155" height="55.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Fats">
                                                                     <attributes>
@@ -155,7 +155,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tm0-dd-7Ag">
-                                                            <rect key="frame" x="0.0" y="65.5" width="130" height="55.5"/>
+                                                            <rect key="frame" x="0.0" y="65.5" width="155" height="55.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Fried Foods">
                                                                     <attributes>
@@ -168,7 +168,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qy-bB-4Jz">
-                                                            <rect key="frame" x="0.0" y="131" width="130" height="55.5"/>
+                                                            <rect key="frame" x="0.0" y="131" width="155" height="55.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Meats">
                                                                     <attributes>
@@ -181,7 +181,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p58-6H-28m">
-                                                            <rect key="frame" x="0.0" y="196.5" width="130" height="55.5"/>
+                                                            <rect key="frame" x="0.0" y="196.5" width="155" height="55.5"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Junk Foods">
                                                                     <attributes>
@@ -217,12 +217,12 @@
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstItem="9oj-9m-R8A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="6tG-9u-eOv"/>
-                <constraint firstItem="FP2-Hv-hMN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="E58-i9-AUS"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FP2-Hv-hMN" secondAttribute="trailing" constant="20" id="G6G-gI-PwZ"/>
+                <constraint firstItem="9oj-9m-R8A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6tG-9u-eOv"/>
+                <constraint firstItem="FP2-Hv-hMN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="E58-i9-AUS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FP2-Hv-hMN" secondAttribute="trailing" id="G6G-gI-PwZ"/>
                 <constraint firstAttribute="bottom" secondItem="FP2-Hv-hMN" secondAttribute="bottom" id="N87-PI-ufw"/>
                 <constraint firstItem="9oj-9m-R8A" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cVm-eI-xuW"/>
-                <constraint firstAttribute="trailing" secondItem="9oj-9m-R8A" secondAttribute="trailing" constant="20" id="dl0-Pz-0AJ"/>
+                <constraint firstAttribute="trailing" secondItem="9oj-9m-R8A" secondAttribute="trailing" id="dl0-Pz-0AJ"/>
                 <constraint firstItem="FP2-Hv-hMN" firstAttribute="top" secondItem="9oj-9m-R8A" secondAttribute="bottom" constant="20" id="kYw-B4-pCC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
