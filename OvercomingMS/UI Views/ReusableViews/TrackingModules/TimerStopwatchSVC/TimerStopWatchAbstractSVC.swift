@@ -62,7 +62,7 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     
     private func stopTimer() {
         startPauseButton.setResumeMode()
-        descriptionLabel.text = "Taking a break"
+        descriptionLabel.text = "Workout paused."
         
         timer.invalidate()
         isTimerRunning = false
@@ -70,7 +70,7 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     
     private func resumeTimer() {
         startPauseButton.setPauseMode()
-        descriptionLabel.text = "In Progress"
+        descriptionLabel.text = "Keep going!"
         
         runTimer()
         isTimerRunning = true

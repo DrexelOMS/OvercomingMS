@@ -16,10 +16,10 @@ class GoalsModifyFactory {
         //Initialize Variables
         svc.header.titleText = "Food"
         svc.header.descriptionText = "What is your daily goal for Food"
-        svc.currentGoalLabel.text = String(ProgressBarConfig.foodRatingGoals)
-        svc.goalUnitLabel.text = "\(ProgressBarConfig.foodRatingGoals)/5"
+        svc.currentGoalLabel.text = String(ProgressBarConfig.foodRatingGoal)
+        svc.goalUnitLabel.text = "\(ProgressBarConfig.foodRatingGoal)/5"
         svc.Module = .Food
-        svc.goal = ProgressBarConfig.foodRatingGoals
+        svc.goal = ProgressBarConfig.foodRatingGoal
         
         return svc
     }

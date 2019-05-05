@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,41 +22,29 @@
                         <rect key="frame" x="10" y="10" width="355" height="79.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hhy-n1-3D6">
-                                <rect key="frame" x="20" y="0.0" width="265" height="79.5"/>
+                                <rect key="frame" x="20" y="0.0" width="315" height="79.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBE-sF-qoa">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qi-4K-ehn">
-                                        <rect key="frame" x="0.0" y="40" width="265" height="39.5"/>
+                                        <rect key="frame" x="0.0" y="40" width="315" height="39.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX8-hp-6QZ">
-                                <rect key="frame" x="285" y="15" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="29B-T6-Djc"/>
-                                    <constraint firstAttribute="width" constant="50" id="fuK-0c-yn1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Hhy-n1-3D6" firstAttribute="top" secondItem="ojc-GV-gz1" secondAttribute="top" id="3bR-UO-riX"/>
                             <constraint firstAttribute="bottom" secondItem="Hhy-n1-3D6" secondAttribute="bottom" id="3ct-ut-ycw"/>
-                            <constraint firstItem="SX8-hp-6QZ" firstAttribute="centerY" secondItem="ojc-GV-gz1" secondAttribute="centerY" id="7t5-CH-Qmd"/>
                             <constraint firstItem="Hhy-n1-3D6" firstAttribute="leading" secondItem="ojc-GV-gz1" secondAttribute="leading" constant="20" id="9kp-On-9co"/>
-                            <constraint firstAttribute="trailing" secondItem="SX8-hp-6QZ" secondAttribute="trailing" constant="20" id="KSD-zp-2cD"/>
-                            <constraint firstItem="SX8-hp-6QZ" firstAttribute="leading" secondItem="Hhy-n1-3D6" secondAttribute="trailing" id="gfh-yk-oIJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Hhy-n1-3D6" secondAttribute="trailing" constant="20" id="CCz-qa-pie"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -71,7 +59,6 @@
             <connections>
                 <outlet property="descriptionLabel" destination="5qi-4K-ehn" id="aBg-5W-9ck"/>
                 <outlet property="nameLabel" destination="KBE-sF-qoa" id="Ka5-GP-zYL"/>
-                <outlet property="recommendedLabel" destination="SX8-hp-6QZ" id="k4j-zJ-4b0"/>
             </connections>
             <point key="canvasLocation" x="128.80000000000001" y="28.335832083958024"/>
         </tableViewCell>

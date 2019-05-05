@@ -11,13 +11,13 @@ import UIKit
 class TypeTFIFactory {
     static func ExerciseTypeTFI() -> TypeTFI {
         return TypeTFI(
-            choices: ["Exercise", "Run", "Bike", "Cardio", "Elliptical", "Lift", "Row", "Swim", "Other"],
+            choices: ["General Exercise", "Walk", "Run", "Cycle", "Swim", "Yoga / Pilates", "List", "Row", "Sports", "Other"],
             title: "Type")
     }
     
     static func Omega3TypeTFI() -> TypeTFI {
         return TypeTFI(
-            choices: ["Flaxseed Oil", "Supplement"],
+            choices: ["Flaxseed Oil", "Fish Oil", "Krill Oil", "Mussel Oil", "Mammalian Oil", "ALA Oil", "Algae Oil", "Other"],
             title: "Name")
     }
     
@@ -28,7 +28,7 @@ class TypeTFIFactory {
     }
     
     static func MeditationTypeTFI() -> TypeTFI {
-        return TypeTFI(choices: ["Silent", "Guided"], title: "Type")
+        return TypeTFI(choices: ["Silent", "Guided", "Other"], title: "Type")
     }
     
     static func SeverityTypeTFI() -> TypeTFI {

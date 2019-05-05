@@ -13,7 +13,7 @@ enum TrackingMode { case food, omega3, vitaminD, exercise, meditation, medicatio
 class ProgressBarConfig {
     
     //TODO: make food goal setable and usable?
-    static var foodDescriptions : [String] = ["Aweful.", "Not great.", "Alright.", "Pretty good.", "Perfect!"]
+    static var foodDescriptions : [String] = ["Awful.", "Not great.", "Okay.", "Pretty good.", "Great!"]
     static func getfoodDescription(rating: Int) -> String {
         if(rating - 1 < 0){
             return foodDescriptions[0]
@@ -23,7 +23,7 @@ class ProgressBarConfig {
         }
         return foodDescriptions[rating - 1]
     }
-    static var foodRatingGoals: Int {
+    static var foodRatingGoal: Int {
         get {
             return GoalsDBS().mostRecentGoals.FoodRatingGoal
         }
@@ -44,7 +44,7 @@ class ProgressBarConfig {
             goalsDBS.writeGoals()
         }
     }
-    static let omega3UOM = "g."
+    static let omega3UOM = "g"
     
     static var vitaminDGoal : Int {
         get {
@@ -80,11 +80,7 @@ class ProgressBarConfig {
         }
     }
     
-    static let lengthUOM = "min."
-    
-    static func calculateKLUs(minutes: Int) -> Int {
-        return minutes * 5
-    }
+    static let lengthUOM = "min"
 
 }
 
