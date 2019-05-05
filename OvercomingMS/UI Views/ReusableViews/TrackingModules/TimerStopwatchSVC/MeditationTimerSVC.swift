@@ -13,6 +13,18 @@ class MeditationTimerSVC : TimerStopWatchAbstractSVC {
     private var totalTime = 0
     private var type = ""
     
+    override var pauseMessage: String {
+        get {
+            return "Session paused"
+        }
+    }
+    
+    override var resumeMessage: String {
+        get {
+            return "Meditation in progress"
+        }
+    }
+    
     //allow instantiation with start length in seconds
     convenience init(startingSeconds: Int, meditationType: String) {
         self.init()
@@ -21,6 +33,7 @@ class MeditationTimerSVC : TimerStopWatchAbstractSVC {
         totalTime = startingSeconds
         timerLabel.text = timeString(time: Double(seconds))
         type = meditationType
+        descriptionLabel.text = "Press Start"
     }
     
     func isDone() -> Bool{
