@@ -14,7 +14,7 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     let medicationCellName = "MedicationCell"
     let savedMedications = SavedMedicationDBS()
     
-    let button1 = CircleButtonFactory.AddButton()
+    let button1 = CircleButtonFactory.AddMedicationButton()
     
     let cellName = "ExpandingCell"
     

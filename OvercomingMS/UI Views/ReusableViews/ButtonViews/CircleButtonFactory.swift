@@ -66,4 +66,8 @@ class CircleButtonFactory {
         return CircleButtonSVC(image: UIImage(named: "Repeat")!, label: "Repeat")
     }
     
+    static func AddMedicationButton() -> CircleButtonSVC {
+        return CircleButtonSVC(image: UIImage(named: "MedAdd")!, label: "Add")
+    }
+    
 }

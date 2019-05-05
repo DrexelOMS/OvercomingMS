@@ -22,10 +22,10 @@ class DoneCheckButton: UIButton {
     
     private func setDone(done: Bool){
         if done {
-            setImage(UIImage(named: "Cancel"), for: .normal)
+            setImage(UIImage(named: "MedOn"), for: .normal)
         }
         else {
-            setImage(UIImage(named: "QuickComplete"), for: .normal)
+            setImage(UIImage(named: "MedOff"), for: .normal)
         }
     }
     
