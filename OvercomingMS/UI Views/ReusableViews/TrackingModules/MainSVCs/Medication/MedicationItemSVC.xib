@@ -64,10 +64,10 @@
                             <rect key="frame" x="344" y="0.0" width="40" height="70"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZh-4i-g6e" customClass="DoneCheckButton" customModule="OvercomingMS" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="15" width="40" height="40"/>
+                                    <rect key="frame" x="-2.5" y="12.5" width="45" height="45"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="Gjp-CC-em4"/>
-                                        <constraint firstAttribute="width" constant="40" id="hD2-Qe-3x6"/>
+                                        <constraint firstAttribute="height" constant="45" id="Gjp-CC-em4"/>
+                                        <constraint firstAttribute="width" constant="45" id="hD2-Qe-3x6"/>
                                     </constraints>
                                     <state key="normal" image="QuickCompleteReversed"/>
                                     <connections>

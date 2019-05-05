@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 import RealmSwift
 
 class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSource {
@@ -34,8 +35,10 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
     }
     
     override func customSetup() {
-        totalsView.isHidden = true
-        
+        topStackView.isHidden = true
+        constrain(topStackView) { (view) in
+            view.height == 0
+        }
         button1.setEnabled(enabled: globalCurrentDate == OMSDateAccessor().todaysDate)
     }
     

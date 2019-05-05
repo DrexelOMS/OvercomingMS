@@ -20,6 +20,7 @@
                 <outlet property="buttonStackView" destination="eyX-rE-Fma" id="F9A-bV-2N5"/>
                 <outlet property="internetPopupButton" destination="UeA-7A-NxG" id="5zS-Zq-Wbh"/>
                 <outlet property="tableView" destination="bfj-aj-J4I" id="yKR-1W-7Jv"/>
+                <outlet property="topStackView" destination="LJX-K7-Gqx" id="i5Z-o2-RNV"/>
                 <outlet property="totalsCountLabel" destination="bXC-Bw-61b" id="uVf-P7-LYs"/>
                 <outlet property="totalsTextLabel" destination="DHZ-Fv-UcE" id="BcE-qL-fJb"/>
                 <outlet property="totalsView" destination="cbi-At-eNK" id="vwu-yp-WxH"/>
