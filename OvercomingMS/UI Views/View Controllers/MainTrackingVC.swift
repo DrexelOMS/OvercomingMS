@@ -35,6 +35,8 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     @IBOutlet weak var centerDateView: UIView!
     @IBOutlet weak var previousButton: UIView!
     @IBOutlet weak var nextDay: UIView!
+    @IBOutlet weak var rightArrowButton: UIButton!
+    @IBOutlet weak var leftArrowButton: UIButton!
     
     @IBOutlet weak var GoalButton: CircleButtonSVC!
     @IBOutlet weak var SymptomsButton: CircleButtonSVC!
@@ -160,10 +162,14 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     private func updatePageUI(_ currentTrackingDay: TrackingDayDBT) {
         if globalCurrentDate == todaysDate {
             dateLog.text = "Today, \(OMSDateAccessor.getStyledDate(date: currentTrackingDay.DateCreated))"
+            rightArrowButton.isEnabled = false
         }
         else {
             dateLog.text = OMSDateAccessor.getStyledDate(date: currentTrackingDay.DateCreated)
+            rightArrowButton.isEnabled = true
         }
+        let date = UserDefaults.standard.object(forKey: "FirstOpenDate") as! Date
+        leftArrowButton.isEnabled = !OMSDateAccessor().lessThanEqualComparison(left: globalCurrentFullDate, right: date)
         //dateLog.text = currentTrackingDay.DateCreated
         
         //TODO make a way to get the proper description for each
@@ -257,7 +263,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
             vc = TrackingModuleFactory.MedicationVC()
             break
         case 5:
-            vc = SlidingStackVC(initialView: FoodMainSVC())
+            vc = FoodModuleVC(initialView: FoodMainSVC())
             break
         default:
             fatalError("Case Not Handled")
@@ -278,6 +284,10 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     //MARK: IBActions
 
     @objc private func previousDate(gesture: UIGestureRecognizer) {
+        let date = UserDefaults.standard.object(forKey: "FirstOpenDate") as! Date
+        if OMSDateAccessor().lessThanEqualComparison(left: globalCurrentFullDate, right: date) {
+            return
+        }
         globalCurrentFullDate = globalCurrentFullDate.addingTimeInterval(-60*60*24)
         loadCurrentDayUI()
     }

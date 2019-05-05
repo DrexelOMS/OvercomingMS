@@ -33,15 +33,6 @@ class FoodSearchCell : UITableViewCell{
     }
     
     func setRecommendedStatus(isGood: RecommendedLevel) {
-        if isGood == .Good {
-            recommendedLabel.text = ""
-        }
-        else if isGood == .Caution {
-            recommendedLabel.text = ""
-        }
-        else {
-            recommendedLabel.text = ""
-        }
         
     }
     

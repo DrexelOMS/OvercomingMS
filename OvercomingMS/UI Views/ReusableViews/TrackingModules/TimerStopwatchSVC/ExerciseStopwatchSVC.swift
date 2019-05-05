@@ -16,7 +16,7 @@ class ExerciseStopwatchSVC : TimerStopWatchAbstractSVC {
     override func customSetup() {
         super.customSetup()
         
-        descriptionLabel.text = "Get Ready To Start."
+        descriptionLabel.text = "Get Ready To Start!"
     }
     
     override func finishButtonPressed() {

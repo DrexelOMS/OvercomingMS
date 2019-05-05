@@ -35,6 +35,7 @@ class ExerciseMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         tableView.register(UINib(nibName: defaultCellName, bundle: nil), forCellReuseIdentifier: defaultCellName)
         
+        internetPopupButton.descriptionLabel.text = "See some of the different exercises we recommend here!"
         internetPopupButton.url = "https://overcomingms.org/recovery-program/exercise/"
         
         reload()

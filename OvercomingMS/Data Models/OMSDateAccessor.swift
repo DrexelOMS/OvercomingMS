@@ -85,6 +85,14 @@ class OMSDateAccessor {
         return formatter.string(from: trueDate)
     }
     
+    static func getMonthDate(date: String) -> String {
+        let trueDate = getFullDate(date: date)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM yyyy"
+        formatter.timeZone = TimeZone(secondsFromGMT: TimeZone.current.secondsFromGMT())
+        return formatter.string(from: trueDate)
+    }
+    
     static func getDayOfWeekLetter(_ today: String) -> Character {
         let formatter  = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"

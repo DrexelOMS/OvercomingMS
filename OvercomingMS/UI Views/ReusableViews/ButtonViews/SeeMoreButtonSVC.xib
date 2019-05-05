@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SeeMoreButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundImage" destination="tGP-mx-WbQ" id="Dg7-kl-bLb"/>
+                <outlet property="descriptionLabel" destination="ube-G7-rU8" id="SfN-Wy-0kW"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

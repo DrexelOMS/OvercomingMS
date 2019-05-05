@@ -18,7 +18,7 @@ class FoodRatingDBS : TrackingModulesDBS {
     }
     
     override func addQuickCompleteItem() {
-        setRating(amount: ProgressBarConfig.foodRatingGoals)
+        setRating(amount: ProgressBarConfig.foodRatingGoal)
     }
     
     func getRating() -> Int {

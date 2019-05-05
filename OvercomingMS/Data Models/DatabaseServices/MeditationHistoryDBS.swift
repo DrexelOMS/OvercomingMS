@@ -74,7 +74,7 @@ class MeditationHistoryDBS: TrackingModulesDBS {
         let amountRemaining = ProgressBarConfig.meditationGoal - getTotalMinutes()
         let uom = ProgressBarConfig.lengthUOM
         if(amountRemaining <= 0 || getPercentageComplete() >= 100){
-            description = "Daily goal reached!"
+            description = "Goal reached!"
         }
         else {
             description = "\(amountRemaining) \(uom) left"

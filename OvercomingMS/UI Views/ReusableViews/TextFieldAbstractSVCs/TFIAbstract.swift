@@ -24,6 +24,7 @@ class TFIAbstract : CustomView, UITextFieldDelegate, ToolBarDelegate {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var dataEntryView: UIView!
     
     var parentVC: SlidingStackVC!
     var tfiDelegate: TFIDelegate?
@@ -34,6 +35,10 @@ class TFIAbstract : CustomView, UITextFieldDelegate, ToolBarDelegate {
         textField.delegate = self
         toolbar.delegate = self
         textField.inputAccessoryView = toolbar.getToolBar()
+        
+        dataEntryView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(tapGestureRecognizer: )))
+        dataEntryView.addGestureRecognizer(tapGesture)
         
         NotificationCenter.default.addObserver(
             self,
@@ -53,6 +58,10 @@ class TFIAbstract : CustomView, UITextFieldDelegate, ToolBarDelegate {
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+    
+    @objc func viewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        textField.becomeFirstResponder()
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {

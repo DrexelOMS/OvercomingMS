@@ -153,7 +153,7 @@
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
                                                                         <color key="value" red="0.0078431372550000003" green="0.63529411759999999" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Omega-3"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="Title" value="Omega 3"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-va-Kq1" customClass="TrackingProgressBar" customModule="OvercomingMS" customModuleProvider="target">
@@ -288,11 +288,13 @@
                         <outlet property="exerciseBar" destination="zYS-8V-zpv" id="SJW-KD-zNK"/>
                         <outlet property="foodBar" destination="CHY-EL-iHN" id="oxd-TP-LXh"/>
                         <outlet property="header" destination="pcW-NB-qsi" id="kmX-7a-hV3"/>
+                        <outlet property="leftArrowButton" destination="d19-Be-BUR" id="OQF-9F-hxl"/>
                         <outlet property="medicationBar" destination="a2N-CW-Z5M" id="eg5-xl-nsf"/>
                         <outlet property="meditationBar" destination="RQQ-l4-VC0" id="pi7-04-9cp"/>
                         <outlet property="nextDay" destination="UQ9-e7-rdh" id="MWx-4A-nuz"/>
                         <outlet property="omega3Bar" destination="IO1-W9-0dD" id="AE0-xY-Zbs"/>
                         <outlet property="previousButton" destination="vQV-r2-tiw" id="kXY-th-crv"/>
+                        <outlet property="rightArrowButton" destination="niz-LX-zix" id="6OF-6s-1Rc"/>
                         <outlet property="vitaminDBar" destination="Vl3-va-Kq1" id="yMZ-U8-3hr"/>
                     </connections>
                 </viewController>
@@ -302,11 +304,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back" width="689.33331298828125" height="689.33331298828125"/>
-        <image name="Dropdown" width="689.33331298828125" height="689.33331298828125"/>
-        <image name="Forward" width="689.33331298828125" height="689.33331298828125"/>
-        <image name="Goals" width="689.33331298828125" height="689.33331298828125"/>
-        <image name="Settings" width="689.33331298828125" height="689.33331298828125"/>
-        <image name="Symptoms" width="689.33331298828125" height="689.33331298828125"/>
+        <image name="Back" width="45" height="45"/>
+        <image name="Dropdown" width="45" height="45"/>
+        <image name="Forward" width="45" height="45"/>
+        <image name="Goals" width="45" height="45"/>
+        <image name="Settings" width="45" height="45"/>
+        <image name="Symptoms" width="45" height="45"/>
     </resources>
 </document>

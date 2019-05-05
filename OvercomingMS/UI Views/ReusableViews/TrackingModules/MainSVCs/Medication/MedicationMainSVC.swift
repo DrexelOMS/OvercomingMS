@@ -48,6 +48,7 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         buttonStackView.addArrangedSubview(button1)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
         
+        internetPopupButton.descriptionLabel.text = "Click here to learn more about this step"
         internetPopupButton.url = "https://overcomingms.org/recovery-program/drug-therapies/"
 
         tableView.delegate = self
@@ -65,7 +66,7 @@ class MedicationMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSo
         
         let count = savedMedications.getSavedMedicationItems().getTotalMedCount()
         if count <= 0 {
-            tableView.setEmptyView(title: "No entries yet!", message: "")
+            tableView.setEmptyView(title: "You haven’t added any medications yet!", message: "Press the “Add Medication” button to begin!")
         }
         else {
             tableView.restore()

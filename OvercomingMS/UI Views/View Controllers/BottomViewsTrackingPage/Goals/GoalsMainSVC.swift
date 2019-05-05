@@ -31,7 +31,7 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
     }
     
     override func reload() {
-        foodButton.goalDescription = "\(ProgressBarConfig.getfoodDescription(rating: ProgressBarConfig.foodRatingGoals)) (\(ProgressBarConfig.foodRatingGoals)/5)"
+        foodButton.goalDescription = "\(ProgressBarConfig.getfoodDescription(rating: ProgressBarConfig.foodRatingGoal)) (\(ProgressBarConfig.foodRatingGoal)/5)"
         omega3Button.goalDescription = "\(ProgressBarConfig.omega3Goal) \(ProgressBarConfig.omega3UOM)"
         vitaminDButton.goalDescription = "\(ProgressBarConfig.vitaminDGoal) \(ProgressBarConfig.vitaminDUOM)"
         exerciseButton.goalDescription = "\(ProgressBarConfig.exerciseGoal) \(ProgressBarConfig.lengthUOM)"
@@ -79,7 +79,7 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
     func resetGoalsToDefault() {
         let defaultGoals = GoalsDBT()
         
-        ProgressBarConfig.foodRatingGoals = defaultGoals.FoodRatingGoal
+        ProgressBarConfig.foodRatingGoal = defaultGoals.FoodRatingGoal
         ProgressBarConfig.omega3Goal = defaultGoals.Omega3Goal
         ProgressBarConfig.vitaminDGoal = defaultGoals.VitaminDGoal
         ProgressBarConfig.exerciseGoal = defaultGoals.ExerciseGoal
