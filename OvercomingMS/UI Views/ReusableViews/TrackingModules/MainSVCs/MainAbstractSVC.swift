@@ -31,4 +31,11 @@ class MainAbstractSVC: SlidingAbstractSVC {
         internetPopupButton.parentVC = parentVC
     }
 
+    override func didLayoutSubviews(){
+        //if were at 72, be 80 font
+        // up to 150 be 120 font
+        // proportional inbetween
+
+        
+    }
 }
