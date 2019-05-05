@@ -246,10 +246,10 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         var badTypes = [""]
         print(food.isFoodGood(food: food))
         if food.isFoodGood(food: food)==RecommendedLevel.Good{
-            parentVC.pushSubView(newSubView: FoodSelectedSVC(food: food, unknown: false))
+            parentVC.pushSubView(newSubView: FoodSelectedSVC(food: food, ingredients: [""], types: [""]))
         }
         else if food.isFoodGood(food: food) == RecommendedLevel.Caution{
-            parentVC.pushSubView(newSubView: FoodSelectedSVC(food: food, unknown: true))
+            parentVC.pushSubView(newSubView: FoodSelectedSVC(food: food, ingredients: [""], types: [""]))
         }
         else{
             

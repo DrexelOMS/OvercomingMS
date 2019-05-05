@@ -39,7 +39,7 @@ class FoodSelectedSVC : SlidingAbstractSVC {
         //initialize
         if(ingredients == [""] && types == [""]){
             constrainView(view: GenericFoodSelectedSVC())
-            setLabel(name: "Unknown Item", description: "We couldn’t find what you were looking for…")
+            setLabel(name: food.Name, description: food.Brand)
         }
         else{
             let allBadStuff = ingredients + types

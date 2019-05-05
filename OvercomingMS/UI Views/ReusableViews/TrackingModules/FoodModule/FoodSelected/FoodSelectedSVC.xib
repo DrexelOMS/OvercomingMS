@@ -75,70 +75,61 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDu-S9-dhl">
-                                    <rect key="frame" x="0.0" y="80" width="280" height="223"/>
+                                    <rect key="frame" x="0.0" y="80" width="280" height="278"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifI-jM-CKr" userLabel="ReferenceView">
-                                    <rect key="frame" x="0.0" y="333" width="280" height="95"/>
+                                    <rect key="frame" x="0.0" y="388" width="280" height="40"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="66h-1P-dhh">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="95"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0g-ob-rF2" userLabel="FoodView">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0g-ob-rF2" userLabel="FoodView">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WzZ-Pz-UcT">
                                                     <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WzZ-Pz-UcT">
-                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgA-UT-Dxl">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="230" height="40"/>
-                                                                    <attributedString key="attributedText">
-                                                                        <fragment content="Learn more about this food in the OpenFoodFacts database!">
-                                                                            <attributes>
-                                                                                <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <font key="NSFont" size="14" name="Quicksand-Bold"/>
-                                                                                <real key="NSKern" value="0.0"/>
-                                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="16.300000000000001" maximumLineHeight="16.300000000000001" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-bG-kgK" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
-                                                                    <rect key="frame" x="240" y="0.0" width="40" height="40"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="40" id="Qga-up-W6F"/>
-                                                                        <constraint firstAttribute="height" constant="40" id="ame-Ta-O9k"/>
-                                                                    </constraints>
-                                                                    <state key="normal" title="I">
-                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </state>
-                                                                    <connections>
-                                                                        <action selector="learnMoreButtonPressed:" destination="-1" eventType="touchUpInside" id="skt-SI-mOe"/>
-                                                                    </connections>
-                                                                </button>
-                                                            </subviews>
-                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgA-UT-Dxl">
+                                                            <rect key="frame" x="0.0" y="0.0" width="230" height="40"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Learn more about this food in the OpenFoodFacts database!">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" size="14" name="Quicksand-Bold"/>
+                                                                        <real key="NSKern" value="0.0"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="16.300000000000001" maximumLineHeight="16.300000000000001" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-bG-kgK" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
+                                                            <rect key="frame" x="240" y="0.0" width="40" height="40"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="Qga-up-W6F"/>
+                                                                <constraint firstAttribute="height" constant="40" id="ame-Ta-O9k"/>
+                                                            </constraints>
+                                                            <state key="normal" title="I">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="learnMoreButtonPressed:" destination="-1" eventType="touchUpInside" id="skt-SI-mOe"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="WzZ-Pz-UcT" secondAttribute="trailing" id="VL5-oN-iga"/>
-                                                        <constraint firstItem="WzZ-Pz-UcT" firstAttribute="top" secondItem="x0g-ob-rF2" secondAttribute="top" id="dex-3T-hOT"/>
-                                                        <constraint firstAttribute="bottom" secondItem="WzZ-Pz-UcT" secondAttribute="bottom" id="hgA-Ik-meb"/>
-                                                        <constraint firstItem="WzZ-Pz-UcT" firstAttribute="leading" secondItem="x0g-ob-rF2" secondAttribute="leading" id="qHt-R8-oO3"/>
-                                                    </constraints>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEl-Mz-sEy" userLabel="SaveView">
-                                                    <rect key="frame" x="0.0" y="55" width="280" height="40"/>
-                                                </view>
+                                                </stackView>
                                             </subviews>
-                                        </stackView>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="WzZ-Pz-UcT" secondAttribute="bottom" id="4bK-mk-ldq"/>
+                                                <constraint firstItem="WzZ-Pz-UcT" firstAttribute="leading" secondItem="x0g-ob-rF2" secondAttribute="leading" id="7Ni-Si-Fij"/>
+                                                <constraint firstItem="WzZ-Pz-UcT" firstAttribute="top" secondItem="x0g-ob-rF2" secondAttribute="top" id="Hby-gk-CCN"/>
+                                                <constraint firstAttribute="trailing" secondItem="WzZ-Pz-UcT" secondAttribute="trailing" id="xnv-Ht-U3l"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="66h-1P-dhh" secondAttribute="trailing" id="3uG-BR-FF9"/>
-                                        <constraint firstItem="66h-1P-dhh" firstAttribute="leading" secondItem="ifI-jM-CKr" secondAttribute="leading" id="OK3-5N-89n"/>
-                                        <constraint firstAttribute="height" constant="95" id="amk-AQ-0CX"/>
-                                        <constraint firstItem="66h-1P-dhh" firstAttribute="top" secondItem="ifI-jM-CKr" secondAttribute="top" id="nTs-62-LM4"/>
-                                        <constraint firstAttribute="bottom" secondItem="66h-1P-dhh" secondAttribute="bottom" id="x0A-wE-2Pu"/>
+                                        <constraint firstAttribute="trailing" secondItem="x0g-ob-rF2" secondAttribute="trailing" id="ME3-bU-vRt"/>
+                                        <constraint firstAttribute="bottom" secondItem="x0g-ob-rF2" secondAttribute="bottom" id="R9M-am-hW7"/>
+                                        <constraint firstItem="x0g-ob-rF2" firstAttribute="leading" secondItem="ifI-jM-CKr" secondAttribute="leading" id="bqv-jC-QIJ"/>
+                                        <constraint firstItem="x0g-ob-rF2" firstAttribute="top" secondItem="ifI-jM-CKr" secondAttribute="top" id="lKX-IA-i5L"/>
                                     </constraints>
                                 </view>
                             </subviews>

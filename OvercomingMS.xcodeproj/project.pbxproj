@@ -76,6 +76,8 @@
 		0A67C888227C7284001D2E0C /* FoodModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C887227C7284001D2E0C /* FoodModuleVC.swift */; };
 		0A67C88A227C7518001D2E0C /* FoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C889227C7518001D2E0C /* FoodHeader.swift */; };
 		0A67C88C227C7529001D2E0C /* FoodHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67C88B227C7529001D2E0C /* FoodHeader.xib */; };
+		0A6937F5227E69E3006DE6BF /* FoodApprovedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6937F4227E69E3006DE6BF /* FoodApprovedSVC.xib */; };
+		0A6937F7227E69F5006DE6BF /* FoodApprovedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6937F6227E69F5006DE6BF /* FoodApprovedSVC.swift */; };
 		0A7FC91021F51CE300492E93 /* MainTrackingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */; };
 		0A93EA4122122D840063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0A93EA45221316490063A892 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -304,6 +306,8 @@
 		0A67C887227C7284001D2E0C /* FoodModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModuleVC.swift; sourceTree = "<group>"; };
 		0A67C889227C7518001D2E0C /* FoodHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHeader.swift; sourceTree = "<group>"; };
 		0A67C88B227C7529001D2E0C /* FoodHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodHeader.xib; sourceTree = "<group>"; };
+		0A6937F4227E69E3006DE6BF /* FoodApprovedSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodApprovedSVC.xib; sourceTree = "<group>"; };
+		0A6937F6227E69F5006DE6BF /* FoodApprovedSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApprovedSVC.swift; sourceTree = "<group>"; };
 		0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingVC.swift; sourceTree = "<group>"; };
 		0A93EA4A22132AC50063A892 /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
 		0A93EA4B22132AC50063A892 /* Avenir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Light.ttf"; sourceTree = "<group>"; };
@@ -829,6 +833,8 @@
 		0AD7EB1F2220B5D6006F71C0 /* FoodSelected */ = {
 			isa = PBXGroup;
 			children = (
+				0A6937F6227E69F5006DE6BF /* FoodApprovedSVC.swift */,
+				0A6937F4227E69E3006DE6BF /* FoodApprovedSVC.xib */,
 				0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */,
 				0C9910842219C2F00008A727 /* FoodSelectedSVC.xib */,
 				0AD7EB1D2220B2D9006F71C0 /* FoodRejectedSVC.swift */,
@@ -1210,6 +1216,7 @@
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
 				0A19B3C12253E94800F4B02B /* ExpandingCell.xib in Resources */,
 				0AEC55532261488000B7B75E /* GoalsBoxSVC.xib in Resources */,
+				0A6937F5227E69E3006DE6BF /* FoodApprovedSVC.xib in Resources */,
 				0A93F1582213C5B40063A892 /* FoodMainSVC.xib in Resources */,
 				0AC4B8DC226CF60E00D8361F /* DateCell.xib in Resources */,
 				0A2BAA772204AFC3004074F3 /* Quicksand-LightItalic.otf in Resources */,
@@ -1509,6 +1516,7 @@
 				0A030FBB22580A1500857BC8 /* SymptomsNoteDBT.swift in Sources */,
 				0AD7EB232221F1E1006F71C0 /* SeeMoreButtonSVC.swift in Sources */,
 				0A93F19522145EA30063A892 /* TFIAbstract.swift in Sources */,
+				0A6937F7227E69F5006DE6BF /* FoodApprovedSVC.swift in Sources */,
 				0AACE78922694403001803DA /* OutsideCell.swift in Sources */,
 				0AEF7A542231B487009A0292 /* SwipeDownVC.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
