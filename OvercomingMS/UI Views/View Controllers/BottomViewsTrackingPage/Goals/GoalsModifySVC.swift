@@ -125,7 +125,12 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoalsPickerCell", for: indexPath) as! GoalsPickerCell
-        myCell.setLabelText(String(items[indexPath.row]))
+        if Module == .Food {
+            myCell.setImage(UIImage(named: imageNames[indexPath.row])!)
+        }
+        else {
+            myCell.setLabelText(String(items[indexPath.row]))
+        }
         return myCell
     }
     
