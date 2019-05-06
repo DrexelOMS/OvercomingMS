@@ -18,6 +18,7 @@ class BackConfirmButtonsSVC : CustomView, ButtonDelegate {
     var rightButtonAction : (() -> ())?
     @IBOutlet weak var backIcon: UIImageView!
     @IBOutlet weak var confirmIcon: UIImageView!
+    @IBOutlet var mainView: UIView!
     
     var colorTheme: UIColor = UIColor.gray
     {
@@ -41,7 +42,7 @@ class BackConfirmButtonsSVC : CustomView, ButtonDelegate {
         
         let tintedImage = backIcon.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         backIcon.image = tintedImage
-        backIcon.tintColor = UIColor.white
+        backIcon.tintColor = UIColor(red: 51, green: 51, blue: 51)
         
         let tintedImage2 = confirmIcon.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         confirmIcon.image = tintedImage2
@@ -57,8 +58,8 @@ class BackConfirmButtonsSVC : CustomView, ButtonDelegate {
     }
     
     private func setColors(){
-        LeftButton.backgroundColor = colorTheme.withAlphaComponent(0.6)
-        RightButton.backgroundColor = colorTheme
+        LeftButton.backgroundColor = UIColor(red: 237, green: 237, blue: 237)
+        mainView.backgroundColor = colorTheme
     }
     
     @objc private func leftButtonPressed(tapGestureRecognizer: UITapGestureRecognizer){
@@ -78,10 +79,10 @@ class BackConfirmButtonsSVC : CustomView, ButtonDelegate {
     func isHighlighted(highlighted: Bool, sender: CustomButton) {
         if highlighted {
             if sender == LeftButton {
-                sender.backgroundColor = colorTheme.withAlphaComponent(0.8)
+                sender.backgroundColor = UIColor(red: 248, green: 248, blue: 248)
             }
             else if sender == RightButton {
-                sender.backgroundColor = colorTheme.withAlphaComponent(0.8)
+                mainView.backgroundColor = colorTheme.withAlphaComponent(0.6)
             }
         }
         else {

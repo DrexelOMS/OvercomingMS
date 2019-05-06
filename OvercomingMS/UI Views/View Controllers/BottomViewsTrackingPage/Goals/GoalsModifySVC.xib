@@ -22,8 +22,10 @@
                 <outlet property="backButton" destination="Tyn-TN-jmN" id="sCA-oo-7HF"/>
                 <outlet property="collectionView" destination="Wp0-Sd-TST" id="QlR-9v-1CS"/>
                 <outlet property="currentGoalLabel" destination="RDJ-EM-nth" id="JTp-Xl-a7p"/>
+                <outlet property="goalContainer" destination="cHs-DT-sNR" id="wCS-OI-z9j"/>
                 <outlet property="goalUnitLabel" destination="Wgr-Hm-V3e" id="wO3-co-7n5"/>
                 <outlet property="header" destination="5wt-yW-Qei" id="sAY-tT-J7P"/>
+                <outlet property="omsRecommendedGoal" destination="oxI-7C-gfd" id="XpD-aY-q35"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -79,12 +81,23 @@
                                                 <constraint firstItem="HbI-a9-jNT" firstAttribute="top" secondItem="LYF-7A-Nug" secondAttribute="bottom" id="zpf-t2-Rzm"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-EM-nth">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHs-DT-sNR" userLabel="GoalContainer">
                                             <rect key="frame" x="0.0" y="48" width="200" height="94"/>
-                                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="80"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-EM-nth">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="94"/>
+                                                    <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="80"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RDJ-EM-nth" firstAttribute="top" secondItem="cHs-DT-sNR" secondAttribute="top" id="58Q-Uu-lCu"/>
+                                                <constraint firstItem="RDJ-EM-nth" firstAttribute="leading" secondItem="cHs-DT-sNR" secondAttribute="leading" id="cNg-sy-GQp"/>
+                                                <constraint firstAttribute="bottom" secondItem="RDJ-EM-nth" secondAttribute="bottom" id="gd8-7N-MhC"/>
+                                                <constraint firstAttribute="trailing" secondItem="RDJ-EM-nth" secondAttribute="trailing" id="ifV-B9-JIg"/>
+                                            </constraints>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgr-Hm-V3e">
                                             <rect key="frame" x="0.0" y="150" width="200" height="20"/>
                                             <constraints>

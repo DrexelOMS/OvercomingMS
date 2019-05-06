@@ -16,10 +16,11 @@ class GoalsModifyFactory {
         //Initialize Variables
         svc.header.titleText = "Food"
         svc.header.descriptionText = "What is your daily goal for Food"
-        svc.currentGoalLabel.text = String(ProgressBarConfig.foodRatingGoal)
-        svc.goalUnitLabel.text = "\(ProgressBarConfig.foodRatingGoal)/5"
+        svc.setImageViewGoal(index: ProgressBarConfig.foodRatingGoal - 2)
+        svc.goalUnitLabel.text = "\(ProgressBarConfig.getfoodDescription(rating: ProgressBarConfig.foodRatingGoal))"
         svc.Module = .Food
         svc.goal = ProgressBarConfig.foodRatingGoal
+        svc.omsRecommendedGoal.text = "OMS recommended goal = Pretty good!"
         
         return svc
     }
@@ -34,6 +35,7 @@ class GoalsModifyFactory {
         svc.goalUnitLabel.text = "grams"
         svc.Module = .Omega3
         svc.goal = ProgressBarConfig.omega3Goal
+        svc.omsRecommendedGoal.text = "OMS recommended goal = " + String(GoalsDBT().Omega3Goal) + " \(ProgressBarConfig.omega3UOM)"
         
         return svc
     }
@@ -45,9 +47,10 @@ class GoalsModifyFactory {
         svc.header.titleText = "Vitamin D"
         svc.header.descriptionText = "What is your daily goal for Vitamin D"
         svc.currentGoalLabel.text = String(ProgressBarConfig.vitaminDGoal)
-        svc.goalUnitLabel.text = "ulKs"
+        svc.goalUnitLabel.text = ProgressBarConfig.vitaminDUOM
         svc.Module = .VitaminD
         svc.goal = ProgressBarConfig.vitaminDGoal
+        svc.omsRecommendedGoal.text = "OMS recommended goal = " + String(GoalsDBT().VitaminDGoal) + " \(ProgressBarConfig.vitaminDUOM)"
         
         return svc
     }
@@ -62,6 +65,7 @@ class GoalsModifyFactory {
         svc.goalUnitLabel.text = "Minutes"
         svc.Module = .Exercise
         svc.goal = ProgressBarConfig.exerciseGoal
+        svc.omsRecommendedGoal.text = "OMS recommended goal = " + String(GoalsDBT().ExerciseGoal) + " \(ProgressBarConfig.lengthUOM)"
         
         return svc
     }
@@ -76,6 +80,7 @@ class GoalsModifyFactory {
         svc.goalUnitLabel.text = "Minutes"
         svc.Module = .Meditation
         svc.goal = ProgressBarConfig.meditationGoal
+        svc.omsRecommendedGoal.text = "OMS recommended goal = " + String(GoalsDBT().MeditationGoal) + " \(ProgressBarConfig.lengthUOM)"
         
         return svc
     }

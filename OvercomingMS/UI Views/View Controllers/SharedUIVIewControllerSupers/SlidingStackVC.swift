@@ -33,6 +33,12 @@ class SlidingStackVC: SwipeDownVC, UIGestureRecognizerDelegate {
         initializeviewStack(defaultView: initialView)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        topView.didLayoutSubviews()
+    }
+    
     func addViewsBeforeMain() {
         
     }

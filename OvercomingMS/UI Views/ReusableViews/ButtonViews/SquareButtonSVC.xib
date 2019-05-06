@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SquareButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="backIcon" destination="JN1-Ew-3k5" id="jFA-Lk-3zJ"/>
+                <outlet property="borderTop" destination="HCH-LG-iEk" id="1KY-iy-nZK"/>
                 <outlet property="buttonView" destination="PdY-G2-lsZ" id="Yt7-Ti-CSu"/>
             </connections>
         </placeholder>
@@ -52,7 +53,7 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="J5e-p1-oXk" firstAttribute="centerY" secondItem="PdY-G2-lsZ" secondAttribute="centerY" id="5AO-R0-gCy"/>
                         <constraint firstItem="JN1-Ew-3k5" firstAttribute="centerY" secondItem="PdY-G2-lsZ" secondAttribute="centerY" id="Bzy-Px-QDV"/>
@@ -76,6 +77,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Back" width="689" height="689"/>
+        <image name="Back" width="45" height="45"/>
     </resources>
 </document>

@@ -18,6 +18,7 @@ class MainAbstractSVC: SlidingAbstractSVC {
     
     var defaultCellName : String = "Routine3PartCell"
     
+    @IBOutlet weak var topStackView: UIStackView!
     @IBOutlet weak var totalsView: UIView!
     @IBOutlet weak var totalsCountLabel : UILabel!
     @IBOutlet weak var totalsTextLabel: UILabel!
@@ -31,4 +32,18 @@ class MainAbstractSVC: SlidingAbstractSVC {
         internetPopupButton.parentVC = parentVC
     }
 
+    override func didLayoutSubviews(){
+        // minimum font size 80, max font size 120
+        // minimum height = 72, max height = 150
+        let rate = 1 - ((150 - totalsCountLabel.frame.height)) / 78
+
+        let bigFontSize = 80  + (30) * rate
+        let smallFontSize = 28  + (12) * rate
+        
+        DispatchQueue.main.async {
+            self.totalsCountLabel.font = UIFont(name: self.totalsCountLabel!.font.fontName, size: bigFontSize)
+            self.totalsTextLabel.font = UIFont(name: self.totalsTextLabel!.font.fontName, size: smallFontSize)
+        }
+    }
+        
 }
