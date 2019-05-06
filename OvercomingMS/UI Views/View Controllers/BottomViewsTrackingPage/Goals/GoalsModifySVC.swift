@@ -23,6 +23,10 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     @IBOutlet weak var header: TitleDescriptionHeaderSVC!
     @IBOutlet weak var currentGoalLabel: UILabel!
     @IBOutlet weak var goalUnitLabel: UILabel!
+    @IBOutlet weak var goalContainer: UIView!
+    @IBOutlet weak var omsRecommendedGoal: UILabel!
+    
+    let imageNames = ["Sad", "Meh", "Happy", "Excited"]
     
     var low = 1
     var high = 120
@@ -125,12 +129,32 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         return myCell
     }
     
+    func setImageViewGoal(index: Int) {
+        for subUIView in goalContainer.subviews as [UIView] {
+            subUIView.removeFromSuperview()
+        }
+        let imageView = UIImageView(image: UIImage(named: imageNames[index]))
+        goalContainer.addSubview(imageView)
+        constrain(imageView, goalContainer) { (view, superView) in
+            view.top == superView.top
+            view.bottom == superView.bottom
+            view.centerX == superView.centerX
+            view.height == view.width
+        }
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
         let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize.width : self.pageSize.height
         let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
-        currentGoalLabel.text = String(items[currentPage])
+        if (Module == .Food) {
+            goalUnitLabel.text = ProgressBarConfig.foodDescriptions[currentPage + 1]
+            setImageViewGoal(index: currentPage)
+        }
+        else {
+            currentGoalLabel.text = String(items[currentPage])
+        }
     }
     
 }
