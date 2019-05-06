@@ -155,14 +155,15 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RT5-3f-oDR">
                             <rect key="frame" x="265" y="0.0" width="100" height="100"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eme-zC-AV3" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eme-zC-AV3" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
                                     <rect key="frame" x="25" y="25" width="50" height="50"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="AdT-a8-xiG"/>
                                         <constraint firstAttribute="height" constant="50" id="bpa-JV-D0q"/>
                                     </constraints>
-                                    <state key="normal" title="Reset">
+                                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                    <state key="normal" image="Repeat">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
@@ -205,4 +206,7 @@
             <point key="canvasLocation" x="138.40000000000001" y="141.67916041979012"/>
         </view>
     </objects>
+    <resources>
+        <image name="Repeat" width="45" height="45"/>
+    </resources>
 </document>
