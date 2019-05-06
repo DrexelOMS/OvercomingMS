@@ -45,20 +45,14 @@ class SettingsMainSVC : SlidingAbstractSVC {
     }
     func tutorialsPressed() {
 
-        guard let path = Bundle.main.path(forResource: "Demo_Video", ofType:"mp4") else {
-            debugPrint("video.m4v not found")
-            return
+        let tutorial = SettingsTutorialsSVC()
+        tutorial.parentVC = self.parentVC
+        
+        parentVC.pushSubView(newSubView: tutorial)
+        let deadlineTime = DispatchTime.now() + 0.5 //wait for slide to complete
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            tutorial.play()
         }
-        let player = AVPlayer(url: URL(fileURLWithPath: path))
-        let playerController = AVPlayerViewController()
-        playerController.player = player
-        
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = self.parentVC.view.bounds
-        parentVC.view.layer.addSublayer(playerLayer)
-        player.play()
-        
-        //parentVC.pushSubView(newSubView: SettingsTutorialsSVC())
     }
     
     func presentSwitchDate() {

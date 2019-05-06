@@ -968,8 +968,8 @@
 			isa = PBXGroup;
 			children = (
 				0C19F07B2263654100D080AE /* SettingsTutorialsSVC.xib */,
-				0C19F07D22636BA000D080AE /* TutorialButtonSVC.xib */,
 				D071C38F227F71B1009C7428 /* SettingsTutorialsSVC.swift */,
+				0C19F07D22636BA000D080AE /* TutorialButtonSVC.xib */,
 			);
 			path = TutorialViews;
 			sourceTree = "<group>";
