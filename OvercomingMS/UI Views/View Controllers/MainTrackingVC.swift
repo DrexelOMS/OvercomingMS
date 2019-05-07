@@ -150,11 +150,11 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         DispatchQueue.main.async {
 
-            let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: WelcomePageSVC())
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
-            
-            self.present(vc, animated: true, completion: nil)
+//            let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: WelcomePageSVC())
+//            vc.modalPresentationStyle = .overCurrentContext
+//            vc.dismissalDelegate = self
+//            
+//            self.present(vc, animated: true, completion: nil)
         }
         
     }
