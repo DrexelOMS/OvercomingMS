@@ -28,7 +28,7 @@ class SettingsMainSVC : SlidingAbstractSVC {
         remindersView.backgroundColor = UIColor.lightGray
         tutorialsView.title = "Tutorials"
         tutorialsView.buttonAction = tutorialsPressed
-        tutorialsView.roundedView.backgroundColor = UIColor.white
+        tutorialsView.roundedView.backgroundColor = UIColor.lightGray
         
         if globalCurrentDate != OMSDateAccessor().todaysDate {
             trackingView.buttonAction = presentSwitchDate
@@ -46,14 +46,14 @@ class SettingsMainSVC : SlidingAbstractSVC {
     }
     func tutorialsPressed() {
 
-        let tutorial = SettingsTutorialsSVC()
-        tutorial.parentVC = self.parentVC
-        
-        parentVC.pushSubView(newSubView: tutorial)
-        let deadlineTime = DispatchTime.now() + 0.5 //wait for slide to complete
-        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
-            tutorial.play()
-        }
+//        let tutorial = SettingsTutorialsSVC()
+//        tutorial.parentVC = self.parentVC
+//
+//        parentVC.pushSubView(newSubView: tutorial)
+//        let deadlineTime = DispatchTime.now() + 0.5 //wait for slide to complete
+//        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+//            tutorial.play()
+//        }
     }
     
     func presentSwitchDate() {
