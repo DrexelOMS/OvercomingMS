@@ -278,7 +278,6 @@
 		C4F18D7273E4C704663260FBA8C65265 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC67A226322EF02657E338E30A8A8C7 /* UIKit.framework */; };
 		C68326F85BA1576B4F26E56E356A4A60 /* RLMSyncSubscription.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 2EB3AAA09CB8DC081AA9F14F0BCA2B3B /* RLMSyncSubscription.h */; };
 		C6CDBFEEFFAD3AB5661A7BAC127B7308 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD8681A1053E04545FC8749017AF994 /* Foundation.framework */; };
-		C701587914FF4D4A74F8FCB734CD23D9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583EFDC006D393A58F84F621F3AC7752 /* SwiftyJSON.swift */; };
 		C7D061152B94586D1336A71ACF87AE1A /* TOWebViewControllerLocalizable.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5400CB75EB29ECB2250220A315C361E9 /* TOWebViewControllerLocalizable.bundle */; };
 		C7EB290383678C3F6324B32CD2732F94 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A8142F11D44A0382A57C65765F179 /* AVFoundation.framework */; };
 		C8090ADD2B63AB1650BB1EF7B5D1D1E0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684B5D6FFFEA3FC2325936FDFA15C08C /* QuartzCore.framework */; };
@@ -293,6 +292,7 @@
 		CEA797BC1D8A25371315A11575C42C97 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2093ED4D5D1721A26BA87831A808D70D /* fr.lproj */; };
 		CF4904E2EC23249E6396C9CDE5CF5858 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875AB546A2CBEB85231737B85B39E3B5 /* Player.swift */; };
 		CFDE80C521CD8313AA440E0FC7B82FBB /* JTAppleCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E75E064B830F9C6D19380C01C69AF7 /* JTAppleCalendarLayout.swift */; };
+		D071C393227F7E8A009C7428 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583EFDC006D393A58F84F621F3AC7752 /* SwiftyJSON.swift */; };
 		D1B55151AE05392B4A05522DED127897 /* UserInteractionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30B8B40E8E1CF606FA296D12DFD8D21 /* UserInteractionFunctions.swift */; };
 		D20FEA1C4077819D7D764AF1B758A72F /* RLMAccessor.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = E75210980F1956B3C2E5C05B55B14A53 /* RLMAccessor.h */; };
 		D2D64801E5EC703DC7416B4CE40E138D /* RLMConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = B59CE90F4997EA9A93E0790766591BA6 /* RLMConstants.h */; };
@@ -2856,7 +2856,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DD8938FC8DA9861ACE6B8B8E12E881 /* SwiftyJSON-dummy.m in Sources */,
-				C701587914FF4D4A74F8FCB734CD23D9 /* SwiftyJSON.swift in Sources */,
+				D071C393227F7E8A009C7428 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -79,10 +79,10 @@
 		0A6937F5227E69E3006DE6BF /* FoodApprovedSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6937F4227E69E3006DE6BF /* FoodApprovedSVC.xib */; };
 		0A6937F7227E69F5006DE6BF /* FoodApprovedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6937F6227E69F5006DE6BF /* FoodApprovedSVC.swift */; };
 		0A7FC91021F51CE300492E93 /* MainTrackingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */; };
-		0A93EA4122122D840063A892 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		0A93EA45221316490063A892 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		0A93EA472213165D0063A892 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		0A93EA4922131C2D0063A892 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		0A93EA4122122D840063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0A93EA45221316490063A892 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		0A93EA472213165D0063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0A93EA4922131C2D0063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5622132BCF0063A892 /* PullBarSVC.swift */; };
 		0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A93EA5722132BCF0063A892 /* PullBarSVC.xib */; };
 		0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */; };
@@ -215,6 +215,14 @@
 		6129746421DF017F00B9846C /* OvercomingMSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746321DF017F00B9846C /* OvercomingMSTests.swift */; };
 		6129746F21DF017F00B9846C /* OvercomingMSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746E21DF017F00B9846C /* OvercomingMSUITests.swift */; };
 		83985923222D758E00782A10 /* MeditationModifySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985922222D758E00782A10 /* MeditationModifySVC.swift */; };
+		D069C2712280F39D009BB49D /* WelcomePageSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2702280F39D009BB49D /* WelcomePageSVC.swift */; };
+		D069C2732280F892009BB49D /* ContinueButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2722280F892009BB49D /* ContinueButtonSVC.swift */; };
+		D069C2752280F8A4009BB49D /* ContinueButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */; };
+		D069C2772280FD93009BB49D /* WelcomeTutorialSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D069C2762280FD93009BB49D /* WelcomeTutorialSVC.xib */; };
+		D069C2792280FDAA009BB49D /* WelcomeTutorialSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2782280FDAA009BB49D /* WelcomeTutorialSVC.swift */; };
+		D071C390227F71B1009C7428 /* SettingsTutorialsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071C38F227F71B1009C7428 /* SettingsTutorialsSVC.swift */; };
+		D071C392227F72FE009C7428 /* Demo_Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D071C391227F72FE009C7428 /* Demo_Video.mp4 */; };
+		D0ED4F672280F346006153B0 /* WelcomePageSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0ED4F662280F346006153B0 /* WelcomePageSVC.xib */; };
 		DD500F23445D0A98AC159E98 /* Pods_OvercomingMSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613999C2BAE695AFE369D7B7 /* Pods_OvercomingMSUITests.framework */; };
 		E52344C266EF89DAB14C6AA3 /* Pods_OvercomingMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFED95C83375718D7DCA1211 /* Pods_OvercomingMS.framework */; };
 /* End PBXBuildFile section */
@@ -466,7 +474,15 @@
 		89CF61DE31F50EFE76BD85FE /* Pods-OvercomingMSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0433A9C40E2CDD4C4FE48DD /* Pods-OvercomingMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.release.xcconfig"; sourceTree = "<group>"; };
 		A16E3BBC1D5B0C0744651350 /* Pods-OvercomingMSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D069C2702280F39D009BB49D /* WelcomePageSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageSVC.swift; sourceTree = "<group>"; };
+		D069C2722280F892009BB49D /* ContinueButtonSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueButtonSVC.swift; sourceTree = "<group>"; };
+		D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContinueButtonSVC.xib; sourceTree = "<group>"; };
+		D069C2762280FD93009BB49D /* WelcomeTutorialSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeTutorialSVC.xib; sourceTree = "<group>"; };
+		D069C2782280FDAA009BB49D /* WelcomeTutorialSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeTutorialSVC.swift; sourceTree = "<group>"; };
+		D071C38F227F71B1009C7428 /* SettingsTutorialsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTutorialsSVC.swift; sourceTree = "<group>"; };
+		D071C391227F72FE009C7428 /* Demo_Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Demo_Video.mp4; sourceTree = "<group>"; };
 		D0C278635D38E9B87EB94008 /* Pods-OvercomingMSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D0ED4F662280F346006153B0 /* WelcomePageSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomePageSVC.xib; sourceTree = "<group>"; };
 		DFED95C83375718D7DCA1211 /* Pods_OvercomingMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -754,6 +770,8 @@
 			children = (
 				0AA5286D2202827000CCFEE7 /* SquareButtonSVC.swift */,
 				0AA5286F2202828300CCFEE7 /* SquareButtonSVC.xib */,
+				D069C2722280F892009BB49D /* ContinueButtonSVC.swift */,
+				D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */,
 				0AF8E0E022092AA900E1EC33 /* StartPauseCircleButton.swift */,
 				0A4CC87D225FE591004C97BC /* CircleButtonFactory.swift */,
 				0A2BAA69220336DD004074F3 /* CircleButtonSVC.swift */,
@@ -964,7 +982,12 @@
 			isa = PBXGroup;
 			children = (
 				0C19F07B2263654100D080AE /* SettingsTutorialsSVC.xib */,
+				D071C38F227F71B1009C7428 /* SettingsTutorialsSVC.swift */,
 				0C19F07D22636BA000D080AE /* TutorialButtonSVC.xib */,
+				D069C2762280FD93009BB49D /* WelcomeTutorialSVC.xib */,
+				D069C2782280FDAA009BB49D /* WelcomeTutorialSVC.swift */,
+				D0ED4F662280F346006153B0 /* WelcomePageSVC.xib */,
+				D069C2702280F39D009BB49D /* WelcomePageSVC.swift */,
 			);
 			path = TutorialViews;
 			sourceTree = "<group>";
@@ -990,6 +1013,7 @@
 		6129744221DF017E00B9846C = {
 			isa = PBXGroup;
 			children = (
+				D071C391227F72FE009C7428 /* Demo_Video.mp4 */,
 				6129744D21DF017E00B9846C /* OvercomingMS */,
 				6129746221DF017F00B9846C /* OvercomingMSTests */,
 				6129746D21DF017F00B9846C /* OvercomingMSUITests */,
@@ -1211,6 +1235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D071C392227F72FE009C7428 /* Demo_Video.mp4 in Resources */,
 				0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */,
 				0C19F07C2263654100D080AE /* SettingsTutorialsSVC.xib in Resources */,
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
@@ -1241,7 +1266,9 @@
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
 				0A19B3BD2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib in Resources */,
 				0C19F0702262885A00D080AE /* SettingsTrackingSVC.xib in Resources */,
+				D069C2752280F8A4009BB49D /* ContinueButtonSVC.xib in Resources */,
 				0A1FEC6E220638A7006CED70 /* Routine3PartCell.xib in Resources */,
+				D0ED4F672280F346006153B0 /* WelcomePageSVC.xib in Resources */,
 				0A2BAA792204AFC3004074F3 /* Quicksand-Light.otf in Resources */,
 				0A2BAA762204AFC3004074F3 /* Quicksand-Bold.otf in Resources */,
 				0C9910852219C2F00008A727 /* FoodSelectedSVC.xib in Resources */,
@@ -1251,7 +1278,7 @@
 				0C103948220909C500AFEFF4 /* TimerStopWatchSVC.xib in Resources */,
 				0AD07F6E21FCFBBF00C55831 /* TrackingProgressBar.xib in Resources */,
 				0C2DAFDE22163057004C1966 /* SearchBarButton.xib in Resources */,
-				0A93EA45221316490063A892 /* BuildFile in Resources */,
+				0A93EA45221316490063A892 /* (null) in Resources */,
 				0A2BAA7A2204AFC3004074F3 /* Quicksand-Regular.otf in Resources */,
 				0A67C88C227C7529001D2E0C /* FoodHeader.xib in Resources */,
 				6129745621DF017F00B9846C /* Assets.xcassets in Resources */,
@@ -1281,6 +1308,7 @@
 				0AEC93E42272487C009FCDC5 /* TrackingToggleSVC.xib in Resources */,
 				0A341D81225922670066EC1D /* NoteSVC.xib in Resources */,
 				0A19B3C52253F97100F4B02B /* MedicationItemSVC.xib in Resources */,
+				D069C2772280FD93009BB49D /* WelcomeTutorialSVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1427,6 +1455,7 @@
 				0AD07F8521FE53B900C55831 /* DesignConstants.swift in Sources */,
 				0A9926C8225CEA5F008DE456 /* SettingsMainSVC.swift in Sources */,
 				0AD7EAF0221AFB47006F71C0 /* AmountTFI.swift in Sources */,
+				D069C2732280F892009BB49D /* ContinueButtonSVC.swift in Sources */,
 				0A93F19B22145F150063A892 /* ModifyAbstractSVC.swift in Sources */,
 				0AD7EB4422234491006F71C0 /* MedRateButtonsSVC.swift in Sources */,
 				0A967490225CCBB2007C05AF /* ConfirmationFactory.swift in Sources */,
@@ -1435,6 +1464,7 @@
 				0A341D79225919DB0066EC1D /* SymptomsListSVC.swift in Sources */,
 				0AA5285B2202623B00CCFEE7 /* RoundButton.swift in Sources */,
 				0AEF7A6722341DBF009A0292 /* GuidedMeditationCategories.swift in Sources */,
+				D071C390227F71B1009C7428 /* SettingsTutorialsSVC.swift in Sources */,
 				0A1FEC6C22063898006CED70 /* Routine3PartCell.swift in Sources */,
 				0A030FB722580A1500857BC8 /* GoalsDBT.swift in Sources */,
 				0A19B3C32253E97000F4B02B /* ExpandingCell.swift in Sources */,
@@ -1445,7 +1475,7 @@
 				0A93F19322145EA30063A892 /* TypeTFI.swift in Sources */,
 				0A030FB022580A1500857BC8 /* SavedMedicationDBS.swift in Sources */,
 				0A43120222665BB200E8F72E /* GoalsPickerCell.swift in Sources */,
-				0A93EA472213165D0063A892 /* BuildFile in Sources */,
+				0A93EA472213165D0063A892 /* (null) in Sources */,
 				0AEC55582261536300B7B75E /* GoalsModifySVC.swift in Sources */,
 				0AD94DCC220CEE9800B5C2BA /* ExerciseSelectedItem.swift in Sources */,
 				0A030FB222580A1500857BC8 /* FoodLogDBS.swift in Sources */,
@@ -1480,6 +1510,7 @@
 				0AD94DCA220CEE5B00B5C2BA /* SelectedItemSVC.swift in Sources */,
 				0AD7EB4C2224B9EC006F71C0 /* MedicationSelectedItem.swift in Sources */,
 				0AD7EB0F221B463A006F71C0 /* VitaminDSelectedItem.swift in Sources */,
+				D069C2712280F39D009BB49D /* WelcomePageSVC.swift in Sources */,
 				0AEC55512261487100B7B75E /* GoalsBoxSVC.swift in Sources */,
 				0AEC555A2261547700B7B75E /* SettingsBoxSVC.swift in Sources */,
 				0AA5286E2202827000CCFEE7 /* SquareButtonSVC.swift in Sources */,
@@ -1523,7 +1554,7 @@
 				0AEF7A542231B487009A0292 /* SwipeDownVC.swift in Sources */,
 				0A1FEC582204ECBF006CED70 /* Dismissable.swift in Sources */,
 				0AF8E0E122092AA900E1EC33 /* StartPauseCircleButton.swift in Sources */,
-				0A93EA4122122D840063A892 /* BuildFile in Sources */,
+				0A93EA4122122D840063A892 /* (null) in Sources */,
 				0A030FB422580A1500857BC8 /* VitaminDHistoryDBT.swift in Sources */,
 				0A93F1572213C5B40063A892 /* FoodMainSVC.swift in Sources */,
 				0AEF7A6422340068009A0292 /* MeditationSelectedItemSVC.swift in Sources */,
@@ -1535,7 +1566,7 @@
 				0A9926C6225CE484008DE456 /* TitleDescriptionHeaderSVC.swift in Sources */,
 				0A4CC882226021F8004C97BC /* TrackingModuleVCFactory.swift in Sources */,
 				0A1FEC482204C74A006CED70 /* SlidingStackVC.swift in Sources */,
-				0A93EA4922131C2D0063A892 /* BuildFile in Sources */,
+				0A93EA4922131C2D0063A892 /* (null) in Sources */,
 				0AF0C5432269F7D80003DD73 /* ActiveTrackingDBS.swift in Sources */,
 				0A030FB122580A1500857BC8 /* MeditationHistoryDBS.swift in Sources */,
 				0AEF7A52223025F9009A0292 /* OMSRoundedBox.swift in Sources */,
@@ -1550,6 +1581,7 @@
 				0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */,
 				0A59C99522710ECA00FC66B5 /* CustomButton.swift in Sources */,
 				0AEC93E622724898009FCDC5 /* TrackingToggleSVC.swift in Sources */,
+				D069C2792280FDAA009BB49D /* WelcomeTutorialSVC.swift in Sources */,
 				0A081893221473380021BDF6 /* ExerciseModifySVC.swift in Sources */,
 				0AD7EB1E2220B2D9006F71C0 /* FoodRejectedSVC.swift in Sources */,
 				0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */,
