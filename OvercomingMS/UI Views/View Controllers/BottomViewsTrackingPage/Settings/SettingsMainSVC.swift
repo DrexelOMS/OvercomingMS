@@ -17,6 +17,7 @@ class SettingsMainSVC : SlidingAbstractSVC {
             return "SettingsMainSVC"
         }
     }
+    
     @IBOutlet weak var profileView: RoundedBoxShadowsTemplate!
     @IBOutlet weak var trackingView: SettingsBoxSVC!
     @IBOutlet weak var remindersView: RoundedBoxShadowsTemplate!
