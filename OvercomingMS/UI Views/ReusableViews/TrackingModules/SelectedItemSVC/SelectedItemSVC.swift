@@ -16,6 +16,7 @@ class SelectedItemSVC : SlidingAbstractSVC {
         }
     }
     
+    @IBOutlet weak var middleStackView: UIStackView!
     @IBOutlet weak var topSubLabel: UILabel!
     @IBOutlet weak var topMainLabel: UILabel!
     @IBOutlet weak var middleSubLabel: UILabel!
@@ -71,5 +72,30 @@ class SelectedItemSVC : SlidingAbstractSVC {
     
     func deleteButtonPressed(){
         fatalError("Override Delete Button Pressed")
+    }
+    
+    override func didLayoutSubviews(){
+        // minimum font size 80, max font size 120
+        // minimum height = 72, max height = 150
+        DispatchQueue.main.async {
+            print(self.middleStackView.frame.height)
+        }
+        let rate = 1 - ((90 - middleStackView.frame.height)) / 20
+
+        let bigFontSize = 24  + (10) * rate
+        let smallFontSize = 18  + (8) * rate
+        let miniFontSize = 14 + (6) * rate
+
+        DispatchQueue.main.async {
+            self.topMainLabel.font = UIFont(name: self.topMainLabel!.font.fontName, size: bigFontSize)
+            self.topSubLabel.font = UIFont(name: self.topSubLabel!.font.fontName, size: smallFontSize)
+            
+            self.middleMainLabel.font = UIFont(name: self.middleMainLabel!.font.fontName, size: bigFontSize)
+            self.middleSubLabel.font = UIFont(name: self.middleSubLabel!.font.fontName, size: smallFontSize)
+            self.middleFrequencyLabel.font = UIFont(name: self.middleFrequencyLabel!.font.fontName, size: miniFontSize)
+            
+            self.bottomMainLabel.font = UIFont(name: self.bottomMainLabel!.font.fontName, size: bigFontSize)
+            self.bottomSubLabel.font = UIFont(name: self.bottomSubLabel!.font.fontName, size: smallFontSize)
+        }
     }
 }
