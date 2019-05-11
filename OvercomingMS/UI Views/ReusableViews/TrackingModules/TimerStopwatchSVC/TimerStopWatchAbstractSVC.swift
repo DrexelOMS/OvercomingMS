@@ -27,14 +27,15 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
             return "Keep going!"
         }
     }
-    
-    @IBOutlet weak var SubDescriptionLabel: UILabel!
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var SubDescriptionLabel: UILabel!
     @IBOutlet weak var buttonsStackView: UIStackView!
     
+    @IBOutlet weak var timerHeight: NSLayoutConstraint!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     let cancelButton = CircleButtonFactory.CancelButton()
     let startPauseButton = StartPauseCircleButton()
     let finishButton = CircleButtonFactory.FinishButton()
@@ -135,6 +136,30 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
         
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
         
+    }
+    
+    override func didLayoutSubviews(){
+        // minimum font size 80, max font size 120
+        // minimum height = 72, max height = 150
+        DispatchQueue.main.async {
+            print(self.frame.height)
+        }
+        let rate = 1 - ((712 - frame.height)) / 250
+        
+        let bigFontSize = 60  + (26) * rate
+        let smallFontSize = 24  + (8) * rate
+        let miniFontSize = 16 + (6) * rate
+        let constraintConstant = 0 + (60) * rate
+        let timerHeightConstant = 155 + (65) * rate
+
+        DispatchQueue.main.async {
+            self.timerLabel.font = UIFont(name: self.timerLabel!.font.fontName, size: bigFontSize)
+            self.descriptionLabel.font = UIFont(name: self.descriptionLabel!.font.fontName, size: smallFontSize)
+            self.SubDescriptionLabel.font = UIFont(name: self.SubDescriptionLabel!.font.fontName, size: miniFontSize)
+            
+            self.topConstraint.constant = constraintConstant
+            self.timerHeight.constant = timerHeightConstant
+        }
     }
     
 }

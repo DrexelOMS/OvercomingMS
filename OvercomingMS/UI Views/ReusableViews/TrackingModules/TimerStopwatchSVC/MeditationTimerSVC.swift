@@ -22,7 +22,7 @@ class MeditationTimerSVC : TimerStopWatchAbstractSVC {
     
     override var resumeMessage: String {
         get {
-            return "Meditation in progress"
+            return "Currently Playing"
         }
     }
     
