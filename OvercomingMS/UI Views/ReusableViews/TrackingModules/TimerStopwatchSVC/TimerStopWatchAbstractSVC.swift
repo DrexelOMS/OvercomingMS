@@ -28,6 +28,8 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
         }
     }
     
+    @IBOutlet weak var SubDescriptionLabel: UILabel!
+    @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
