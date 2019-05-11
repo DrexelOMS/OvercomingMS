@@ -64,4 +64,19 @@ class MeditationTimerSVC : TimerStopWatchAbstractSVC {
         parentVC.pushSubView(newSubView: MeditationModifySVC(type: type, startTime: startTime, length: minutes))
     }
     
+    override func timeString(time: TimeInterval) -> String {
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        
+        if hours == 0 {
+            if minutes < 10 {
+                return String(format:"%01i:%02i", minutes, seconds)
+            }
+            else {
+                return String(format:"%02i:%02i", minutes, seconds)
+            }
+        }
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+    }
 }
