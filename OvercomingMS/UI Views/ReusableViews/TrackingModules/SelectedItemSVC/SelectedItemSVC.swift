@@ -77,9 +77,9 @@ class SelectedItemSVC : SlidingAbstractSVC {
     override func didLayoutSubviews(){
         // minimum font size 80, max font size 120
         // minimum height = 72, max height = 150
-        DispatchQueue.main.async {
-            print(self.middleStackView.frame.height)
-        }
+//        DispatchQueue.main.async {
+//            print(self.middleStackView.frame.height)
+//        }
         let rate = 1 - ((90 - middleStackView.frame.height)) / 20
 
         let bigFontSize = 24  + (10) * rate
