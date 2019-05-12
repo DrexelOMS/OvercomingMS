@@ -141,10 +141,8 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     override func didLayoutSubviews(){
         // minimum font size 80, max font size 120
         // minimum height = 72, max height = 150
-        DispatchQueue.main.async {
-            print(self.frame.height)
-        }
-        let rate = 1 - ((712 - frame.height)) / 250
+        var rate = 1 - ((712 - frame.height)) / 250
+        rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
         
         let bigFontSize = 60  + (26) * rate
         let smallFontSize = 24  + (8) * rate

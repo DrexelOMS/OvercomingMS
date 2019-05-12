@@ -154,7 +154,8 @@ class TFIAbstract : CustomView, UITextFieldDelegate, ToolBarDelegate {
                     height = 150
                 }
                 
-                let rate = 1 - (150 - height) / 80
+                var rate = 1 - (150 - height) / 80
+                rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
                 
                 let fontSize = 24 + (6) * rate
                 

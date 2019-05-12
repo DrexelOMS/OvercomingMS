@@ -35,8 +35,9 @@ class MainAbstractSVC: SlidingAbstractSVC {
     override func didLayoutSubviews(){
         // minimum font size 80, max font size 120
         // minimum height = 72, max height = 150
-        let rate = 1 - ((150 - totalsCountLabel.frame.height)) / 78
-
+        var rate = 1 - ((150 - totalsCountLabel.frame.height)) / 78
+        rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+        
         let bigFontSize = 80  + (30) * rate
         let smallFontSize = 28  + (12) * rate
         
