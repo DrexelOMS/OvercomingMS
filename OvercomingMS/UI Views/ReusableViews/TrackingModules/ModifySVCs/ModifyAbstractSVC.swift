@@ -32,6 +32,8 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     var originalTopLabelContraint: CGFloat!
     var originalTopPaddingContraint: CGFloat!
     
+    private var keyboardOpen = false
+    
     override func initialize(parentVC: SlidingStackVC) {
         super.initialize(parentVC: parentVC)
         
@@ -65,6 +67,8 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
                 view.isHidden = true
             }
         }
+        titleLabel.isHidden = true
+        keyboardOpen = true
     }
     
     private func showOtherStackViews(_ tfi: TFIAbstract) {
@@ -73,6 +77,8 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
                 view.isHidden = false
             }
         }
+        titleLabel.isHidden = false
+        keyboardOpen = false
     }
     
     func OnTFIOpened(tfi: TFIAbstract, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions, keyboardHeight: CGFloat) {
@@ -108,19 +114,21 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     }
     
     override func didLayoutSubviews() {
-        DispatchQueue.main.async {
-            var rate = 1 - (712 - self.frame.height) / 250
-            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
-            
-            let fontSize = 24 + (6) * rate
-            let topValue = self.topValueDefualt + (40) * rate
-            let topPadding = self.topPaddingDefault + (10) * rate
-            let labelHeightConstraint = 60 + (20) * rate
-            
-            self.titleLabel.font = UIFont(name: self.titleLabel.font.fontName, size: fontSize)
-            self.topPaddingConstraint.constant = topValue
-            self.stackViewPaddingTop.constant = topPadding
-            self.topLabelViewHeight.constant = labelHeightConstraint
+        if !keyboardOpen {
+            DispatchQueue.main.async {
+                var rate = 1 - (712 - self.frame.height) / 250
+                rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+                
+                let fontSize = 24 + (6) * rate
+                let topValue = self.topValueDefualt + (40) * rate
+                let topPadding = self.topPaddingDefault + (10) * rate
+                let labelHeightConstraint = 60 + (20) * rate
+                
+                self.titleLabel.font = UIFont(name: self.titleLabel.font.fontName, size: fontSize)
+                self.topPaddingConstraint.constant = topValue
+                self.stackViewPaddingTop.constant = topPadding
+                self.topLabelViewHeight.constant = labelHeightConstraint
+            }
         }
     }
     
