@@ -52,4 +52,15 @@ class GuidedMeditationCategories : SlidingAbstractSVC {
         parentVC.pushSubView(newSubView: MeditationTimerSVC(startingSeconds: length * 60, meditationType: type))
     }
     
+    override func didLayoutSubviews() {
+        DispatchQueue.main.async {
+            var rate = 1 - (712 - self.frame.height) / 250
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let fontSize = 20 + (8) * rate
+            
+            self.mainLabel.font = UIFont(name: self.mainLabel.font.fontName, size: fontSize)
+        }
+    }
+    
 }

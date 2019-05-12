@@ -30,6 +30,18 @@ class MeditationTimerModifySVC: ModifyAbstractSVC {
         
     }
     
+    override var topValueDefualt: CGFloat {
+        get {
+            return 80
+        }
+    }
+    
+    override var topPaddingDefault: CGFloat {
+        get {
+            return 40
+        }
+    }
+    
     override func ConfirmPressed() {
         
         if let length = selectedLength {

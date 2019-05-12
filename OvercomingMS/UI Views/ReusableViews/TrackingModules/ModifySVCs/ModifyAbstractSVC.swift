@@ -23,6 +23,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
     @IBOutlet weak var textInputStackBottom: NSLayoutConstraint!
     @IBOutlet weak var textInputStackView: UIStackView!
     @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
+    @IBOutlet weak var labelHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var stackViewPaddingTop: NSLayoutConstraint!
     @IBOutlet weak var stackViewPaddingBottom: NSLayoutConstraint!
@@ -94,18 +95,32 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
         
     }
     
+    var topValueDefualt: CGFloat {
+        get {
+            return 40
+        }
+    }
+    
+    var topPaddingDefault: CGFloat {
+        get {
+            return 25
+        }
+    }
+    
     override func didLayoutSubviews() {
         DispatchQueue.main.async {
             var rate = 1 - (712 - self.frame.height) / 250
             rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
             
-            let fontSize = 24 + (10) * rate
-            let topValue = 40 + (40) * rate
-            let topPadding = 25 + (10) * rate
+            let fontSize = 24 + (6) * rate
+            let topValue = self.topValueDefualt + (40) * rate
+            let topPadding = self.topPaddingDefault + (10) * rate
+            let labelHeightConstraint = 60 + (20) * rate
             
             self.titleLabel.font = UIFont(name: self.titleLabel.font.fontName, size: fontSize)
             self.topPaddingConstraint.constant = topValue
             self.stackViewPaddingTop.constant = topPadding
+            self.topLabelViewHeight.constant = labelHeightConstraint
         }
     }
     
