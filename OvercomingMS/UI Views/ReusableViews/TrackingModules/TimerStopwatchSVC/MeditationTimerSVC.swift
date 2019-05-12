@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 class MeditationTimerSVC : TimerStopWatchAbstractSVC {
     
@@ -21,7 +22,7 @@ class MeditationTimerSVC : TimerStopWatchAbstractSVC {
     
     override var resumeMessage: String {
         get {
-            return "Meditation in progress"
+            return "Currently Playing"
         }
     }
     
@@ -34,6 +35,15 @@ class MeditationTimerSVC : TimerStopWatchAbstractSVC {
         timerLabel.text = timeString(time: Double(seconds))
         type = meditationType
         descriptionLabel.text = "Press Start"
+        
+        middleView.removeFromSuperview()
+        
+        let minutes = Int(ceil(Double(totalTime) / 60.0))
+        var medType = type
+        if medType != "Silent" {
+            medType = "Guided"
+        }
+        SubDescriptionLabel.text = "\(minutes) minutes of \(medType) Meditation"
     }
     
     func isDone() -> Bool{
