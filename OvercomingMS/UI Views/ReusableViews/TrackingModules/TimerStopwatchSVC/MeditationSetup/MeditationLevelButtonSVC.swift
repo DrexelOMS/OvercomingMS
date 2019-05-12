@@ -34,6 +34,7 @@ class MeditationLevelButtonSVC: CustomView {
     @IBOutlet weak var buttonView: RoundedBoxShadowsTemplate!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var stackView: UIStackView!
     
     
     override func customSetup() {
@@ -47,6 +48,17 @@ class MeditationLevelButtonSVC: CustomView {
             fatalError("ButtonAction not set")
         }
         buttonAction(length, title)
+    }
+    
+    override func layoutSubviews() {
+        DispatchQueue.main.async {
+            var rate = 1 - (150 - self.stackView.frame.height) / 50
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let fontSize = 16 + (6) * rate
+            
+            self.timeLabel.font = UIFont(name: self.timeLabel.font.fontName, size: fontSize)
+        }
     }
     
 }

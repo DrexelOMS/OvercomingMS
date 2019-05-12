@@ -20,6 +20,7 @@ class GuidedMeditationCategories : SlidingAbstractSVC {
     @IBOutlet weak var defaultMainView: UIView!
     @IBOutlet weak var backButton: SquareButtonSVC!
     @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var mainLabelTopConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var level1Button: MeditationLevelButtonSVC!
     @IBOutlet weak var level2Button: MeditationLevelButtonSVC!
@@ -58,8 +59,10 @@ class GuidedMeditationCategories : SlidingAbstractSVC {
             rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
             
             let fontSize = 20 + (8) * rate
+            let topLabelConstant = 50 + (50) * rate
             
             self.mainLabel.font = UIFont(name: self.mainLabel.font.fontName, size: fontSize)
+            self.mainLabelTopConstraint.constant = topLabelConstant
         }
     }
     
