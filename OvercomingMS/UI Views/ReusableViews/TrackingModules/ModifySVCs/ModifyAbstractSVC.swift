@@ -102,12 +102,10 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
             let fontSize = 24 + (10) * rate
             let topValue = 40 + (40) * rate
             let topPadding = 25 + (10) * rate
-            let bottomPadding = 75 + (10) * rate
             
             self.titleLabel.font = UIFont(name: self.titleLabel.font.fontName, size: fontSize)
             self.topPaddingConstraint.constant = topValue
             self.stackViewPaddingTop.constant = topPadding
-            self.stackViewPaddingBottom.constant = bottomPadding
         }
     }
     
