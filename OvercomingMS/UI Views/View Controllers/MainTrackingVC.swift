@@ -148,13 +148,19 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         loadCurrentDayUI()
         
-        DispatchQueue.main.async {
+        let defaults = UserDefaults.standard
 
-//            let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: WelcomePageSVC())
-//            vc.modalPresentationStyle = .overCurrentContext
-//            vc.dismissalDelegate = self
-//            
-//            self.present(vc, animated: true, completion: nil)
+        if defaults.object(forKey: "PlayedTutorialVideo") as? Bool != true {
+            defaults.set(true, forKey: "PlayedTutorialVideo")
+            
+            DispatchQueue.main.async {
+                
+                let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: WelcomePageSVC())
+                vc.modalPresentationStyle = .overCurrentContext
+                vc.dismissalDelegate = self
+                
+                self.present(vc, animated: true, completion: nil)
+            }
         }
         
     }
