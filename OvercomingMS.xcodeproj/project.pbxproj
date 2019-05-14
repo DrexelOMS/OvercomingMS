@@ -218,8 +218,6 @@
 		D069C2712280F39D009BB49D /* WelcomePageSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2702280F39D009BB49D /* WelcomePageSVC.swift */; };
 		D069C2732280F892009BB49D /* ContinueButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2722280F892009BB49D /* ContinueButtonSVC.swift */; };
 		D069C2752280F8A4009BB49D /* ContinueButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */; };
-		D069C2772280FD93009BB49D /* WelcomeTutorialSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D069C2762280FD93009BB49D /* WelcomeTutorialSVC.xib */; };
-		D069C2792280FDAA009BB49D /* WelcomeTutorialSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2782280FDAA009BB49D /* WelcomeTutorialSVC.swift */; };
 		D071C390227F71B1009C7428 /* SettingsTutorialsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071C38F227F71B1009C7428 /* SettingsTutorialsSVC.swift */; };
 		D071C392227F72FE009C7428 /* Demo_Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D071C391227F72FE009C7428 /* Demo_Video.mp4 */; };
 		D0ED4F672280F346006153B0 /* WelcomePageSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0ED4F662280F346006153B0 /* WelcomePageSVC.xib */; };
@@ -477,8 +475,6 @@
 		D069C2702280F39D009BB49D /* WelcomePageSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageSVC.swift; sourceTree = "<group>"; };
 		D069C2722280F892009BB49D /* ContinueButtonSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueButtonSVC.swift; sourceTree = "<group>"; };
 		D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContinueButtonSVC.xib; sourceTree = "<group>"; };
-		D069C2762280FD93009BB49D /* WelcomeTutorialSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeTutorialSVC.xib; sourceTree = "<group>"; };
-		D069C2782280FDAA009BB49D /* WelcomeTutorialSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeTutorialSVC.swift; sourceTree = "<group>"; };
 		D071C38F227F71B1009C7428 /* SettingsTutorialsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTutorialsSVC.swift; sourceTree = "<group>"; };
 		D071C391227F72FE009C7428 /* Demo_Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Demo_Video.mp4; sourceTree = "<group>"; };
 		D0C278635D38E9B87EB94008 /* Pods-OvercomingMSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -984,8 +980,6 @@
 				0C19F07B2263654100D080AE /* SettingsTutorialsSVC.xib */,
 				D071C38F227F71B1009C7428 /* SettingsTutorialsSVC.swift */,
 				0C19F07D22636BA000D080AE /* TutorialButtonSVC.xib */,
-				D069C2762280FD93009BB49D /* WelcomeTutorialSVC.xib */,
-				D069C2782280FDAA009BB49D /* WelcomeTutorialSVC.swift */,
 				D0ED4F662280F346006153B0 /* WelcomePageSVC.xib */,
 				D069C2702280F39D009BB49D /* WelcomePageSVC.swift */,
 			);
@@ -1308,7 +1302,6 @@
 				0AEC93E42272487C009FCDC5 /* TrackingToggleSVC.xib in Resources */,
 				0A341D81225922670066EC1D /* NoteSVC.xib in Resources */,
 				0A19B3C52253F97100F4B02B /* MedicationItemSVC.xib in Resources */,
-				D069C2772280FD93009BB49D /* WelcomeTutorialSVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1581,7 +1574,6 @@
 				0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */,
 				0A59C99522710ECA00FC66B5 /* CustomButton.swift in Sources */,
 				0AEC93E622724898009FCDC5 /* TrackingToggleSVC.swift in Sources */,
-				D069C2792280FDAA009BB49D /* WelcomeTutorialSVC.swift in Sources */,
 				0A081893221473380021BDF6 /* ExerciseModifySVC.swift in Sources */,
 				0AD7EB1E2220B2D9006F71C0 /* FoodRejectedSVC.swift in Sources */,
 				0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */,

@@ -18,17 +18,22 @@ class SettingsTutorialsSVC : SlidingAbstractSVC {
         }
     }
     
+    convenience init(isOnboarding: Bool) {
+        self.init()
+        
+        self.isOnboarding = isOnboarding
+    }
+    
     @IBOutlet weak var backButton: SquareButtonSVC!
     
     var avPlayer: AVPlayer!
     var playerLayer = AVPlayerLayer()
     var player = AVPlayer()
+    
+    private var isOnboarding = false
 
     override func customSetup() {
-
         backButton.backButtonAction = backPressed
-        
-        
     }
     
     func play(){
@@ -49,7 +54,12 @@ class SettingsTutorialsSVC : SlidingAbstractSVC {
     func backPressed() {
         player.pause()
         playerLayer.removeFromSuperlayer()
-        parentVC.popSubView()
+        if isOnboarding {
+            parentVC.dismiss()
+        }
+        else {
+            parentVC.popSubView()
+        }
     }
     
     
