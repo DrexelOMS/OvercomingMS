@@ -12,7 +12,6 @@ import Cartography
 //--Usage
 //just inherit this class and override nibName and customSetup
 
-@IBDesignable
 class CustomView: UIView {
     
     var nibName: String {fatalError("nibName not overriden")}//{ return "TrackingProgressBar" }
