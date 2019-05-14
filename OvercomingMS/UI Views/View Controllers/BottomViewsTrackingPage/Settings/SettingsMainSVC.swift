@@ -18,14 +18,14 @@ class SettingsMainSVC : SlidingAbstractSVC {
         }
     }
     
-    @IBOutlet weak var profileView: RoundedBoxShadowsTemplate!
+    @IBOutlet weak var profileView: SettingsBoxSVC!
     @IBOutlet weak var trackingView: SettingsBoxSVC!
-    @IBOutlet weak var remindersView: RoundedBoxShadowsTemplate!
+    @IBOutlet weak var remindersView: SettingsBoxSVC!
     @IBOutlet weak var tutorialsView: SettingsBoxSVC!
     
     override func customSetup() {
-        profileView.backgroundColor = UIColor.white
-        remindersView.backgroundColor = UIColor.white
+        profileView.removeFromSuperview()
+        remindersView.removeFromSuperview()
         tutorialsView.title = "Tutorials"
         tutorialsView.buttonAction = tutorialsPressed
         tutorialsView.roundedView.backgroundColor = UIColor.white
