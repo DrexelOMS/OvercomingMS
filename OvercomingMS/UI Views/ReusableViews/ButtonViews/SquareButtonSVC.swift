@@ -22,10 +22,22 @@ class SquareButtonSVC: CustomView {
         }
     }
     
+    @IBInspectable var isContinueButton: Bool = false {
+        didSet {
+            if isContinueButton {
+                label.text = "Continue"
+                backIcon.isHidden = true
+                forwardIcon.isHidden = false
+            }
+        }
+    }
+    
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var borderTop: UIView!
     @IBOutlet weak var buttonView: UIView!
     var backButtonAction : (() -> ())?
     @IBOutlet weak var backIcon: UIImageView!
+    @IBOutlet weak var forwardIcon: UIImageView!
     
     override func customSetup() {
         setColors()
@@ -33,6 +45,8 @@ class SquareButtonSVC: CustomView {
         let tintedImage = backIcon.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         backIcon.image = tintedImage
         backIcon.tintColor = UIColor(red: 51, green: 51, blue: 51)
+        
+        forwardIcon.isHidden = true
         
         buttonView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonPressed(tapGestureRecognizer: )))

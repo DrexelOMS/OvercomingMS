@@ -22,6 +22,9 @@ class SettingsTutorialsSVC : SlidingAbstractSVC {
         self.init()
         
         self.isOnboarding = isOnboarding
+        if isOnboarding {
+            backButton.isContinueButton = true
+        }
     }
     
     @IBOutlet weak var backButton: SquareButtonSVC!
