@@ -157,6 +157,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
                 
                 let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: WelcomePageSVC())
                 vc.modalPresentationStyle = .overCurrentContext
+                vc.theme = UIColor(red: 2, green: 162, blue: 182)
                 vc.dismissalDelegate = self
                 
                 self.present(vc, animated: true, completion: nil)
