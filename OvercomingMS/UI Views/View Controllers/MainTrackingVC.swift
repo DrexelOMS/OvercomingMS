@@ -150,7 +150,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         let defaults = UserDefaults.standard
 
-        if defaults.object(forKey: "PlayedTutorialVideo") as? Bool != true {
+        if defaults.object(forKey: "PlayedTutorialVideo") as? Bool != true || true {
             defaults.set(true, forKey: "PlayedTutorialVideo")
             
             DispatchQueue.main.async {
