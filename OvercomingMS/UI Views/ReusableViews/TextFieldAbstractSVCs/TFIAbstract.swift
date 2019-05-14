@@ -139,4 +139,29 @@ class TFIAbstract : CustomView, UITextFieldDelegate, ToolBarDelegate {
         }
     }
     
+    var loadedOnce = false
+    
+    override func layoutSubviews() {
+        if !loadedOnce {
+            loadedOnce = true
+            DispatchQueue.main.async {
+                
+                var height = self.frame.height
+                if height < 70 {
+                    height = 70
+                }
+                else if height > 150 {
+                    height = 150
+                }
+                
+                var rate = 1 - (150 - height) / 80
+                rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+                
+                let fontSize = 24 + (6) * rate
+                
+                self.label.font = UIFont(name: self.label.font.fontName, size: fontSize)
+                self.textField.font = UIFont(name: self.textField.font!.fontName, size: fontSize)
+            }
+        }
+    }
 }

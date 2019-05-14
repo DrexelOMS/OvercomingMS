@@ -59,8 +59,9 @@ class ConfirmationSVC: SlidingAbstractSVC {
     override func didLayoutSubviews() {
         DispatchQueue.main.async {
             print(self.frame.height)
-            let rate = 1 - ((712 - self.frame.height)) / (712 - 462)
-            print(rate)
+            var rate = 1 - ((712 - self.frame.height)) / (712 - 462)
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
             let bigFontSize = 24  + (10) * rate
             let smallFontSize = 18  + (8) * rate
             self.topDescription.font = UIFont(name: self.topDescription!.font.fontName, size: bigFontSize)
