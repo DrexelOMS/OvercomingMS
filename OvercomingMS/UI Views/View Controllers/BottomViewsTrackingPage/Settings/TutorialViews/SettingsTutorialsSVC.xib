@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsTutorialsSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="lSY-Lf-QGH" id="SEk-T8-ITc"/>
+                <outlet property="playerView" destination="mcL-nU-8bN" id="8f8-aE-bN0"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
