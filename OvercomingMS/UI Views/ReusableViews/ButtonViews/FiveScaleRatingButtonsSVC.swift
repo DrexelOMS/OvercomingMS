@@ -21,6 +21,13 @@ class FiveScaleRatingButtonsSVC : CustomView {
     @IBOutlet weak var rating4Image: UIImageView!
     @IBOutlet weak var rating5Image: UIImageView!
     
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var label4: UILabel!
+    @IBOutlet weak var label5: UILabel!
+    
     var colorTheme: UIColor = UIColor.brown
     
     override var nibName: String {
@@ -104,5 +111,20 @@ class FiveScaleRatingButtonsSVC : CustomView {
     @objc func rank5Click(_ sender:UITapGestureRecognizer){
         FoodRatingDBS().setRating(amount: 5)
         reload()
+    }
+    
+    override func layoutSubviews() {
+        DispatchQueue.main.async {
+            var rate = 1 - ((80 - self.mainView.frame.height)) / 14
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let fontSize = 14  + (6) * rate
+            let font  = UIFont(name: self.label1!.font.fontName, size: fontSize)
+            self.label1.font = font
+            self.label2.font = font
+            self.label3.font = font
+            self.label4.font = font
+            self.label5.font = font
+        }
     }
 }

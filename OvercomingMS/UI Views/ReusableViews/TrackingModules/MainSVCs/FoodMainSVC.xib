@@ -14,6 +14,9 @@
             <connections>
                 <outlet property="buttonStackView" destination="6rE-Xy-cCh" id="87m-ZY-Y3p"/>
                 <outlet property="imageContainer" destination="Zlc-wl-uUU" id="Eeg-mk-iLd"/>
+                <outlet property="labelContainer" destination="BvF-5W-FZ2" id="bCu-eQ-oSt"/>
+                <outlet property="ratingArea" destination="qeb-Tq-JEi" id="Zgk-2E-nBt"/>
+                <outlet property="ratingLabel" destination="HZb-RY-0lO" id="TEY-fz-d34"/>
                 <outlet property="ratingView" destination="8BT-HF-2X5" id="gvU-jI-VLP"/>
             </connections>
         </placeholder>
@@ -164,16 +167,13 @@
                                     <rect key="frame" x="0.0" y="220" width="260" height="137"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zyd-id-BhM">
-                                            <rect key="frame" x="0.0" y="-16.5" width="260" height="170"/>
+                                            <rect key="frame" x="0.0" y="-7.5" width="260" height="152"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvF-5W-FZ2" userLabel="LabelView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="70"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="66"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZb-RY-0lO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="70"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="70" id="U7b-Nk-gmV"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="66"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="How well have you followed the OMS diet today?">
                                                                     <attributes>
@@ -190,23 +190,33 @@
                                                         <constraint firstAttribute="trailing" secondItem="HZb-RY-0lO" secondAttribute="trailing" id="4tQ-fV-pqs"/>
                                                         <constraint firstItem="HZb-RY-0lO" firstAttribute="leading" secondItem="BvF-5W-FZ2" secondAttribute="leading" id="Lm9-AB-Fi8"/>
                                                         <constraint firstItem="HZb-RY-0lO" firstAttribute="top" secondItem="BvF-5W-FZ2" secondAttribute="top" id="UIw-uB-ru4"/>
+                                                        <constraint firstAttribute="height" priority="997" constant="66" id="alJ-lP-34m"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="cKF-1p-dHq"/>
                                                         <constraint firstAttribute="bottom" secondItem="HZb-RY-0lO" secondAttribute="bottom" id="eXO-FV-nm4"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="jmd-uY-F5g"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BT-HF-2X5" customClass="FiveScaleRatingButtonsSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="90" width="260" height="80"/>
+                                                    <rect key="frame" x="0.0" y="86" width="260" height="66"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="3VJ-Pe-3ey"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="0pA-nC-Kyw"/>
+                                                        <constraint firstAttribute="height" priority="997" constant="66" id="3VJ-Pe-3ey"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="YzH-1B-a6Z"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8BT-HF-2X5" firstAttribute="height" secondItem="BvF-5W-FZ2" secondAttribute="height" id="RkZ-h3-fEN"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="Zyd-id-BhM" firstAttribute="top" secondItem="qeb-Tq-JEi" secondAttribute="top" priority="999" id="33P-nJ-XmH"/>
                                         <constraint firstAttribute="height" priority="999" constant="140" id="5MD-T6-KcG"/>
                                         <constraint firstItem="Zyd-id-BhM" firstAttribute="leading" secondItem="qeb-Tq-JEi" secondAttribute="leading" id="AYA-Da-tmC"/>
                                         <constraint firstAttribute="trailing" secondItem="Zyd-id-BhM" secondAttribute="trailing" id="HxU-he-ec4"/>
-                                        <constraint firstItem="Zyd-id-BhM" firstAttribute="centerY" secondItem="qeb-Tq-JEi" secondAttribute="centerY" id="peA-ZX-TEs"/>
+                                        <constraint firstItem="Zyd-id-BhM" firstAttribute="centerY" secondItem="qeb-Tq-JEi" secondAttribute="centerY" id="jCe-f5-4HH"/>
+                                        <constraint firstAttribute="bottom" secondItem="Zyd-id-BhM" secondAttribute="bottom" priority="999" id="qlf-nS-7fK"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3FJ-t3-Obg" userLabel="PaddingBottom">

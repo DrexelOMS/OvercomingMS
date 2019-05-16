@@ -27,6 +27,9 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     @IBOutlet weak var buttonStackView: UIStackView!
     @IBOutlet weak var imageContainer: RoundedBoxShadowsTemplate!
     
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var ratingArea: UIView!
+    @IBOutlet weak var labelContainer: UIView!
     @IBOutlet weak var ratingView: FiveScaleRatingButtonsSVC!
     
     override func customSetup() {
@@ -110,6 +113,20 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
             //actually initialize the food object. swift is dumb
             let foodinfo: Food = Food()
             foodinfo.getFoodFromID(id: code, parentVC: self.parentVC)
+        }
+    }
+    
+    override func layoutSubviews() {
+        DispatchQueue.main.async {
+            print(self.ratingArea.frame.height)
+            print(self.labelContainer.frame.height)
+            print(self.ratingView.frame.height)
+            
+            var rate = 1 - ((80 - self.labelContainer.frame.height)) / 14
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let fontSize = 14  + (6) * rate
+            self.ratingLabel.font  = UIFont(name: self.ratingLabel!.font.fontName, size: fontSize)
         }
     }
 
