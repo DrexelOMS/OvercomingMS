@@ -70,10 +70,6 @@ class SettingsTutorialsSVC : SlidingAbstractSVC, PlayerDelegate, PlayerPlaybackD
     
     var player : Player!
     
-    var avPlayer: AVPlayer!
-    var playerLayer = AVPlayerLayer()
-//    var player = AVPlayer()
-    
     private var isOnboarding = false
 
     override func customSetup() {
@@ -85,18 +81,6 @@ class SettingsTutorialsSVC : SlidingAbstractSVC, PlayerDelegate, PlayerPlaybackD
     }
     
     func play(){
-//        guard let path = Bundle.main.path(forResource: "Demo_Video", ofType:"mp4") else {
-//            debugPrint("video.m4v not found")
-//            return
-//        }
-//        player = AVPlayer(url: URL(fileURLWithPath: path))
-//        let playerController = AVPlayerViewController()
-//        playerController.player = player
-//
-//        playerLayer = AVPlayerLayer(player: player)
-//        playerLayer.frame = self.parentVC.view.bounds
-//        parentVC.view.layer.addSublayer(playerLayer)
-//        player.play()
         player = Player()
         player.playerDelegate = self
         player.playbackDelegate = self
@@ -113,8 +97,8 @@ class SettingsTutorialsSVC : SlidingAbstractSVC, PlayerDelegate, PlayerPlaybackD
     }
     
     func backPressed() {
-//        player.pause()
-//        playerLayer.removeFromSuperlayer()
+        player.pause()
+
         if isOnboarding {
             parentVC.dismiss()
         }

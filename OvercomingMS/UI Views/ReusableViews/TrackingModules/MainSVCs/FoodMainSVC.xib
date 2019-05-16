@@ -14,6 +14,9 @@
             <connections>
                 <outlet property="buttonStackView" destination="6rE-Xy-cCh" id="87m-ZY-Y3p"/>
                 <outlet property="imageContainer" destination="Zlc-wl-uUU" id="Eeg-mk-iLd"/>
+                <outlet property="labelContainer" destination="BvF-5W-FZ2" id="bCu-eQ-oSt"/>
+                <outlet property="ratingArea" destination="qeb-Tq-JEi" id="Zgk-2E-nBt"/>
+                <outlet property="ratingLabel" destination="HZb-RY-0lO" id="TEY-fz-d34"/>
                 <outlet property="ratingView" destination="8BT-HF-2X5" id="gvU-jI-VLP"/>
             </connections>
         </placeholder>
@@ -27,7 +30,6 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bX7-oC-9H9" userLabel="BorderTop">
                             <rect key="frame" x="0.0" y="0.0" width="280" height="1"/>
-                            <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="9qJ-Uk-nWT"/>
                             </constraints>
@@ -56,14 +58,14 @@
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discover" translatesAutoresizingMaskIntoConstraints="NO" id="39o-Jw-Tve">
                                                                     <rect key="frame" x="0.0" y="10" width="120" height="120"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="120" id="1gf-lt-qg7"/>
-                                                                        <constraint firstAttribute="width" constant="120" id="8qo-Rf-XRc"/>
+                                                                        <constraint firstAttribute="width" secondItem="39o-Jw-Tve" secondAttribute="height" multiplier="1:1" id="afp-ta-B8S"/>
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstItem="39o-Jw-Tve" firstAttribute="centerY" secondItem="dEO-Y6-0RM" secondAttribute="centerY" id="Ax3-3O-iGV"/>
+                                                                <constraint firstItem="39o-Jw-Tve" firstAttribute="top" secondItem="dEO-Y6-0RM" secondAttribute="top" constant="10" id="opr-gy-k0A"/>
+                                                                <constraint firstAttribute="bottom" secondItem="39o-Jw-Tve" secondAttribute="bottom" constant="10" id="qnZ-Gd-Ziq"/>
                                                                 <constraint firstItem="39o-Jw-Tve" firstAttribute="centerX" secondItem="dEO-Y6-0RM" secondAttribute="centerX" id="vlu-H2-Xpv"/>
                                                             </constraints>
                                                         </view>
@@ -73,54 +75,58 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="OQC-sm-xVi">
                                                                     <rect key="frame" x="0.0" y="10" width="120" height="120"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-5t-STe">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="16.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-5t-STe">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="20"/>
                                                                             <attributedString key="attributedText">
                                                                                 <fragment content="DISCOVER THE">
                                                                                     <attributes>
                                                                                         <color key="NSColor" red="0.0" green="0.6705882352941176" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                        <font key="NSFont" size="16" name="Avenir-Black"/>
-                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                        <font key="NSFont" size="22" name="Avenir-Black"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                     </attributes>
                                                                                 </fragment>
                                                                             </attributedString>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-Oz-Hfm">
-                                                                            <rect key="frame" x="0.0" y="16.5" width="120" height="50.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-Oz-Hfm">
+                                                                            <rect key="frame" x="0.0" y="20" width="120" height="50"/>
                                                                             <attributedString key="attributedText">
                                                                                 <fragment content="OMS">
                                                                                     <attributes>
                                                                                         <color key="NSColor" red="0.0" green="0.6705882352941176" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                        <font key="NSFont" size="50" name="Avenir-Black"/>
-                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                        <font key="NSFont" size="60" name="Avenir-Black"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                     </attributes>
                                                                                 </fragment>
                                                                             </attributedString>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-kA-aZ0">
-                                                                            <rect key="frame" x="0.0" y="67" width="120" height="53"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-kA-aZ0">
+                                                                            <rect key="frame" x="0.0" y="70" width="120" height="50"/>
                                                                             <attributedString key="attributedText">
                                                                                 <fragment content="DIET">
                                                                                     <attributes>
                                                                                         <color key="NSColor" red="0.0" green="0.6705882352941176" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                        <font key="NSFont" size="52" name="Avenir-Black"/>
-                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                        <font key="NSFont" size="60" name="Avenir-Black"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                     </attributes>
                                                                                 </fragment>
                                                                             </attributedString>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="C1L-kA-aZ0" firstAttribute="height" secondItem="KpQ-Oz-Hfm" secondAttribute="height" id="BVx-C8-jmU"/>
+                                                                        <constraint firstItem="KpQ-Oz-Hfm" firstAttribute="height" secondItem="Dzl-5t-STe" secondAttribute="height" multiplier="5:2" id="gaF-Ht-tug"/>
+                                                                    </constraints>
                                                                 </stackView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstItem="OQC-sm-xVi" firstAttribute="top" secondItem="6Y4-Og-L5J" secondAttribute="top" constant="10" id="CeQ-0n-jok"/>
+                                                                <constraint firstAttribute="bottom" secondItem="OQC-sm-xVi" secondAttribute="bottom" constant="10" id="FjH-Ca-PYk"/>
                                                                 <constraint firstItem="OQC-sm-xVi" firstAttribute="leading" secondItem="6Y4-Og-L5J" secondAttribute="leading" id="MZX-n6-Emz"/>
+                                                                <constraint firstItem="OQC-sm-xVi" firstAttribute="top" secondItem="6Y4-Og-L5J" secondAttribute="top" constant="10" id="RJl-MF-cno"/>
                                                                 <constraint firstAttribute="trailing" secondItem="OQC-sm-xVi" secondAttribute="trailing" id="ZXc-qN-yns"/>
-                                                                <constraint firstAttribute="bottom" secondItem="OQC-sm-xVi" secondAttribute="bottom" constant="10" id="jnW-Fs-XlQ"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -137,10 +143,12 @@
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="1Gp-6h-Kw1"/>
                                         <constraint firstAttribute="bottom" secondItem="4yZ-kX-Vbd" secondAttribute="bottom" id="25R-nf-hQb"/>
                                         <constraint firstItem="4yZ-kX-Vbd" firstAttribute="leading" secondItem="Zlc-wl-uUU" secondAttribute="leading" id="71g-JX-70K"/>
+                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="Nkp-ui-elZ"/>
                                         <constraint firstAttribute="trailing" secondItem="4yZ-kX-Vbd" secondAttribute="trailing" id="Pe6-wn-OsS"/>
-                                        <constraint firstAttribute="height" constant="160" id="VC6-ci-1dv"/>
+                                        <constraint firstAttribute="height" priority="998" constant="160" id="VC6-ci-1dv"/>
                                         <constraint firstItem="4yZ-kX-Vbd" firstAttribute="top" secondItem="Zlc-wl-uUU" secondAttribute="top" id="ZeK-F5-VFp"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
@@ -159,16 +167,13 @@
                                     <rect key="frame" x="0.0" y="220" width="260" height="137"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zyd-id-BhM">
-                                            <rect key="frame" x="0.0" y="-16.5" width="260" height="170"/>
+                                            <rect key="frame" x="0.0" y="-7.5" width="260" height="152"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvF-5W-FZ2" userLabel="LabelView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="70"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="66"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZb-RY-0lO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="70"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="70" id="U7b-Nk-gmV"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="66"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="How well have you followed the OMS diet today?">
                                                                     <attributes>
@@ -185,23 +190,33 @@
                                                         <constraint firstAttribute="trailing" secondItem="HZb-RY-0lO" secondAttribute="trailing" id="4tQ-fV-pqs"/>
                                                         <constraint firstItem="HZb-RY-0lO" firstAttribute="leading" secondItem="BvF-5W-FZ2" secondAttribute="leading" id="Lm9-AB-Fi8"/>
                                                         <constraint firstItem="HZb-RY-0lO" firstAttribute="top" secondItem="BvF-5W-FZ2" secondAttribute="top" id="UIw-uB-ru4"/>
+                                                        <constraint firstAttribute="height" priority="997" constant="66" id="alJ-lP-34m"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="cKF-1p-dHq"/>
                                                         <constraint firstAttribute="bottom" secondItem="HZb-RY-0lO" secondAttribute="bottom" id="eXO-FV-nm4"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="jmd-uY-F5g"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BT-HF-2X5" customClass="FiveScaleRatingButtonsSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="90" width="260" height="80"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="0.0" y="86" width="260" height="66"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="3VJ-Pe-3ey"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="0pA-nC-Kyw"/>
+                                                        <constraint firstAttribute="height" priority="997" constant="66" id="3VJ-Pe-3ey"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="YzH-1B-a6Z"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8BT-HF-2X5" firstAttribute="height" secondItem="BvF-5W-FZ2" secondAttribute="height" id="RkZ-h3-fEN"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="Zyd-id-BhM" firstAttribute="top" secondItem="qeb-Tq-JEi" secondAttribute="top" priority="999" id="33P-nJ-XmH"/>
+                                        <constraint firstAttribute="height" priority="999" constant="140" id="5MD-T6-KcG"/>
                                         <constraint firstItem="Zyd-id-BhM" firstAttribute="leading" secondItem="qeb-Tq-JEi" secondAttribute="leading" id="AYA-Da-tmC"/>
                                         <constraint firstAttribute="trailing" secondItem="Zyd-id-BhM" secondAttribute="trailing" id="HxU-he-ec4"/>
-                                        <constraint firstItem="Zyd-id-BhM" firstAttribute="centerY" secondItem="qeb-Tq-JEi" secondAttribute="centerY" id="peA-ZX-TEs"/>
+                                        <constraint firstItem="Zyd-id-BhM" firstAttribute="centerY" secondItem="qeb-Tq-JEi" secondAttribute="centerY" id="jCe-f5-4HH"/>
+                                        <constraint firstAttribute="bottom" secondItem="Zyd-id-BhM" secondAttribute="bottom" priority="999" id="qlf-nS-7fK"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3FJ-t3-Obg" userLabel="PaddingBottom">

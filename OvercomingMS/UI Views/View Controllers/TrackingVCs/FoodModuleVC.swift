@@ -11,6 +11,10 @@ import Cartography
 
 class FoodModuleVC: SlidingStackVC {
     
+    var foodContainer = FoodHeader()
+    var bigFontSize = 24
+    var smallFontSize = 16
+    
     override func addViewsBeforeMain() {
         let topView = UIView()
         contentStackView.addArrangedSubview(topView)
@@ -29,21 +33,13 @@ class FoodModuleVC: SlidingStackVC {
             view.height == CGFloat(height)
         }
         
-        let foodContainer = FoodHeader()
+        foodContainer = FoodHeader()
         
-//        var compBarThickness = height * 2 / 9
-//        if compBarThickness > 16 {
-//            compBarThickness = 16
-//        }
-//        else if compBarThickness < 10 {
-//            compBarThickness = 10
-//        }
-//        
-//        let bigFontSize = compBarThickness + 7
-//        let smallFontSize = compBarThickness + 3
-//        
-//        foodContainer.leftLabel.font = UIFont(name: foodContainer.leftLabel.font.fontName, size: CGFloat(bigFontSize))
-//        foodContainer.rightLabel.font = UIFont(name: foodContainer.rightLabel.font.fontName, size: CGFloat(smallFontSize))
+        var rate = 1 - ((65 - height)) / 20
+        rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+        
+        bigFontSize = 20 + (8) * rate
+        smallFontSize = 14  + (6) * rate
         
         topView.addSubview(foodContainer)
         
@@ -68,5 +64,11 @@ class FoodModuleVC: SlidingStackVC {
             view.top == aboveView.bottom + 10
         }
     }
-
+    
+    override func viewDidLayoutSubviews() {
+        DispatchQueue.main.async {
+            self.foodContainer.leftLabel.font = UIFont(name: self.foodContainer.leftLabel!.font.fontName, size: CGFloat(self.bigFontSize))
+            self.foodContainer.rightLabel.font = UIFont(name: self.foodContainer.rightLabel!.font.fontName, size: CGFloat(self.smallFontSize))
+        }
+    }
 }
