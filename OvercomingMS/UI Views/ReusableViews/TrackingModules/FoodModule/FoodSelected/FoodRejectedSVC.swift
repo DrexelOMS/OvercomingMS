@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TOWebViewController
 
 class FoodRejectedSVC: CustomView, UITableViewDelegate, UITableViewDataSource {
     
@@ -17,11 +18,18 @@ class FoodRejectedSVC: CustomView, UITableViewDelegate, UITableViewDataSource {
     }
     
     let cellName = "BadIngredientsCell"
+    var parentVC: SlidingStackVC!
+    var buttonAction: (() -> ())?
     
-    convenience init(_badLabels: [String]) {
+    convenience init(_badLabels: [String], seeMoreMethod: @escaping () -> ()) {
         self.init()
         
+        buttonAction = seeMoreMethod
         badLabels = _badLabels
+        if badLabels[0] == "" {
+            badLabels.remove(at: 0)
+        }
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
@@ -42,9 +50,17 @@ class FoodRejectedSVC: CustomView, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! BadIngredientsCell
         
+        print(badLabels[indexPath.row])
         cell.label.text = badLabels[indexPath.row]
         
         return cell
+    }
+    
+    @IBAction func seeMoreButton(_ sender: Any) {
+        guard let action = buttonAction else {
+            fatalError("no action set")
+        }
+        action()
     }
     
 }

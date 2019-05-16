@@ -72,7 +72,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffx-1V-pmR" userLabel="InfoView">
                                     <rect key="frame" x="0.0" y="40" width="260" height="113"/>
                                     <subviews>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dUM-GF-uou">
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dUM-GF-uou">
                                             <rect key="frame" x="0.0" y="0.0" width="260" height="113"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableView>
@@ -104,16 +104,20 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvN-0u-Izg" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvN-0u-Izg" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
                                                     <rect key="frame" x="220" y="0.0" width="40" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="7DF-Mx-FNu"/>
                                                         <constraint firstAttribute="height" constant="40" id="raJ-Kd-Pim"/>
                                                     </constraints>
-                                                    <state key="normal" title="B">
+                                                    <inset key="imageEdgeInsets" minX="12" minY="12" maxX="12" maxY="12"/>
+                                                    <state key="normal" image="Forward">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="seeMoreButton:" destination="-1" eventType="touchUpInside" id="zgH-vF-P52"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -152,5 +156,6 @@
     </objects>
     <resources>
         <image name="Caution" width="19" height="20"/>
+        <image name="Forward" width="45" height="45"/>
     </resources>
 </document>

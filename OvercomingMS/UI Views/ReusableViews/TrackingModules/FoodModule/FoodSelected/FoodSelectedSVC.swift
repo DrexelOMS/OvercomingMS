@@ -43,10 +43,19 @@ class FoodSelectedSVC : SlidingAbstractSVC {
         }
         else{
             let allBadStuff = ingredients + types
-            constrainView(view: FoodRejectedSVC(_badLabels: allBadStuff))
+            constrainView(view: FoodRejectedSVC(_badLabels: allBadStuff, seeMoreMethod: pushDietView))
             setLabel(name: food.Name, description: food.Brand)
         }
     }
+    
+    func pushDietView() {
+        let url = "https://overcomingms.org/recovery-program/diet"
+        let webViewController = TOWebViewController(urlString: url)
+        let navigation = UINavigationController.init(rootViewController: webViewController)
+        
+        parentVC.present(navigation, animated: true, completion: nil)
+    }
+    
     private func constrainView(view: UIView){
         
         approveDisaproveView.addSubview(view)
