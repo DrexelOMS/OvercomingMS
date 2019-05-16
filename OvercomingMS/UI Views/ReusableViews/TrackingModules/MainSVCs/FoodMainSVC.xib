@@ -55,14 +55,14 @@
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discover" translatesAutoresizingMaskIntoConstraints="NO" id="39o-Jw-Tve">
                                                                     <rect key="frame" x="0.0" y="10" width="120" height="120"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="120" id="1gf-lt-qg7"/>
-                                                                        <constraint firstAttribute="width" constant="120" id="8qo-Rf-XRc"/>
+                                                                        <constraint firstAttribute="width" secondItem="39o-Jw-Tve" secondAttribute="height" multiplier="1:1" id="afp-ta-B8S"/>
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstItem="39o-Jw-Tve" firstAttribute="centerY" secondItem="dEO-Y6-0RM" secondAttribute="centerY" id="Ax3-3O-iGV"/>
+                                                                <constraint firstItem="39o-Jw-Tve" firstAttribute="top" secondItem="dEO-Y6-0RM" secondAttribute="top" constant="10" id="opr-gy-k0A"/>
+                                                                <constraint firstAttribute="bottom" secondItem="39o-Jw-Tve" secondAttribute="bottom" constant="10" id="qnZ-Gd-Ziq"/>
                                                                 <constraint firstItem="39o-Jw-Tve" firstAttribute="centerX" secondItem="dEO-Y6-0RM" secondAttribute="centerX" id="vlu-H2-Xpv"/>
                                                             </constraints>
                                                         </view>
@@ -85,7 +85,7 @@
                                                                             </attributedString>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-Oz-Hfm">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-Oz-Hfm">
                                                                             <rect key="frame" x="0.0" y="16.5" width="120" height="50.5"/>
                                                                             <attributedString key="attributedText">
                                                                                 <fragment content="OMS">
@@ -98,7 +98,7 @@
                                                                             </attributedString>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-kA-aZ0">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-kA-aZ0">
                                                                             <rect key="frame" x="0.0" y="67" width="120" height="53"/>
                                                                             <attributedString key="attributedText">
                                                                                 <fragment content="DIET">
@@ -112,14 +112,16 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="120" id="hRu-yH-PcW"/>
+                                                                    </constraints>
                                                                 </stackView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstItem="OQC-sm-xVi" firstAttribute="top" secondItem="6Y4-Og-L5J" secondAttribute="top" constant="10" id="CeQ-0n-jok"/>
+                                                                <constraint firstItem="OQC-sm-xVi" firstAttribute="centerY" secondItem="6Y4-Og-L5J" secondAttribute="centerY" id="BHA-jd-kvS"/>
                                                                 <constraint firstItem="OQC-sm-xVi" firstAttribute="leading" secondItem="6Y4-Og-L5J" secondAttribute="leading" id="MZX-n6-Emz"/>
                                                                 <constraint firstAttribute="trailing" secondItem="OQC-sm-xVi" secondAttribute="trailing" id="ZXc-qN-yns"/>
-                                                                <constraint firstAttribute="bottom" secondItem="OQC-sm-xVi" secondAttribute="bottom" constant="10" id="jnW-Fs-XlQ"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -136,10 +138,12 @@
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="1Gp-6h-Kw1"/>
                                         <constraint firstAttribute="bottom" secondItem="4yZ-kX-Vbd" secondAttribute="bottom" id="25R-nf-hQb"/>
                                         <constraint firstItem="4yZ-kX-Vbd" firstAttribute="leading" secondItem="Zlc-wl-uUU" secondAttribute="leading" id="71g-JX-70K"/>
+                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="Nkp-ui-elZ"/>
                                         <constraint firstAttribute="trailing" secondItem="4yZ-kX-Vbd" secondAttribute="trailing" id="Pe6-wn-OsS"/>
-                                        <constraint firstAttribute="height" constant="160" id="VC6-ci-1dv"/>
+                                        <constraint firstAttribute="height" priority="998" constant="160" id="VC6-ci-1dv"/>
                                         <constraint firstItem="4yZ-kX-Vbd" firstAttribute="top" secondItem="Zlc-wl-uUU" secondAttribute="top" id="ZeK-F5-VFp"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
@@ -197,6 +201,7 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="height" priority="999" constant="140" id="5MD-T6-KcG"/>
                                         <constraint firstItem="Zyd-id-BhM" firstAttribute="leading" secondItem="qeb-Tq-JEi" secondAttribute="leading" id="AYA-Da-tmC"/>
                                         <constraint firstAttribute="trailing" secondItem="Zyd-id-BhM" secondAttribute="trailing" id="HxU-he-ec4"/>
                                         <constraint firstItem="Zyd-id-BhM" firstAttribute="centerY" secondItem="qeb-Tq-JEi" secondAttribute="centerY" id="peA-ZX-TEs"/>
