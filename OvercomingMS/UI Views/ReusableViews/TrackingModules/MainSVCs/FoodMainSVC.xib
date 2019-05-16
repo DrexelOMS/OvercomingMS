@@ -72,40 +72,40 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="OQC-sm-xVi">
                                                                     <rect key="frame" x="0.0" y="10" width="120" height="120"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-5t-STe">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="16.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-5t-STe">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="20"/>
                                                                             <attributedString key="attributedText">
                                                                                 <fragment content="DISCOVER THE">
                                                                                     <attributes>
                                                                                         <color key="NSColor" red="0.0" green="0.6705882352941176" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                        <font key="NSFont" size="16" name="Avenir-Black"/>
-                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                        <font key="NSFont" size="22" name="Avenir-Black"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                     </attributes>
                                                                                 </fragment>
                                                                             </attributedString>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-Oz-Hfm">
-                                                                            <rect key="frame" x="0.0" y="16.5" width="120" height="50.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-Oz-Hfm">
+                                                                            <rect key="frame" x="0.0" y="20" width="120" height="50"/>
                                                                             <attributedString key="attributedText">
                                                                                 <fragment content="OMS">
                                                                                     <attributes>
                                                                                         <color key="NSColor" red="0.0" green="0.6705882352941176" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                        <font key="NSFont" size="50" name="Avenir-Black"/>
-                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                        <font key="NSFont" size="60" name="Avenir-Black"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                     </attributes>
                                                                                 </fragment>
                                                                             </attributedString>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-kA-aZ0">
-                                                                            <rect key="frame" x="0.0" y="67" width="120" height="53"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-kA-aZ0">
+                                                                            <rect key="frame" x="0.0" y="70" width="120" height="50"/>
                                                                             <attributedString key="attributedText">
                                                                                 <fragment content="DIET">
                                                                                     <attributes>
                                                                                         <color key="NSColor" red="0.0" green="0.6705882352941176" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                        <font key="NSFont" size="52" name="Avenir-Black"/>
-                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                        <font key="NSFont" size="60" name="Avenir-Black"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                     </attributes>
                                                                                 </fragment>
                                                                             </attributedString>
@@ -113,14 +113,16 @@
                                                                         </label>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="120" id="hRu-yH-PcW"/>
+                                                                        <constraint firstItem="C1L-kA-aZ0" firstAttribute="height" secondItem="KpQ-Oz-Hfm" secondAttribute="height" id="BVx-C8-jmU"/>
+                                                                        <constraint firstItem="KpQ-Oz-Hfm" firstAttribute="height" secondItem="Dzl-5t-STe" secondAttribute="height" multiplier="5:2" id="gaF-Ht-tug"/>
                                                                     </constraints>
                                                                 </stackView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstItem="OQC-sm-xVi" firstAttribute="centerY" secondItem="6Y4-Og-L5J" secondAttribute="centerY" id="BHA-jd-kvS"/>
+                                                                <constraint firstAttribute="bottom" secondItem="OQC-sm-xVi" secondAttribute="bottom" constant="10" id="FjH-Ca-PYk"/>
                                                                 <constraint firstItem="OQC-sm-xVi" firstAttribute="leading" secondItem="6Y4-Og-L5J" secondAttribute="leading" id="MZX-n6-Emz"/>
+                                                                <constraint firstItem="OQC-sm-xVi" firstAttribute="top" secondItem="6Y4-Og-L5J" secondAttribute="top" constant="10" id="RJl-MF-cno"/>
                                                                 <constraint firstAttribute="trailing" secondItem="OQC-sm-xVi" secondAttribute="trailing" id="ZXc-qN-yns"/>
                                                             </constraints>
                                                         </view>
