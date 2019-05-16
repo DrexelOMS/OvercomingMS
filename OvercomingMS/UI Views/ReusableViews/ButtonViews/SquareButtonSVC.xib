@@ -15,6 +15,8 @@
                 <outlet property="backIcon" destination="JN1-Ew-3k5" id="jFA-Lk-3zJ"/>
                 <outlet property="borderTop" destination="HCH-LG-iEk" id="1KY-iy-nZK"/>
                 <outlet property="buttonView" destination="PdY-G2-lsZ" id="Yt7-Ti-CSu"/>
+                <outlet property="forwardIcon" destination="qST-8t-UkL" id="qfF-3c-eiK"/>
+                <outlet property="label" destination="J5e-p1-oXk" id="jNW-XU-18v"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -52,13 +54,22 @@
                                 <constraint firstAttribute="width" constant="16" id="zQM-ST-S6e"/>
                             </constraints>
                         </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Forward" translatesAutoresizingMaskIntoConstraints="NO" id="qST-8t-UkL" userLabel="Forward Icon">
+                            <rect key="frame" x="195.5" y="16.5" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="Db3-aJ-70r"/>
+                                <constraint firstAttribute="width" constant="16" id="qIl-Rg-D94"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="J5e-p1-oXk" firstAttribute="centerY" secondItem="PdY-G2-lsZ" secondAttribute="centerY" id="5AO-R0-gCy"/>
+                        <constraint firstItem="qST-8t-UkL" firstAttribute="leading" secondItem="J5e-p1-oXk" secondAttribute="trailing" constant="13" id="9dL-6L-gaS"/>
                         <constraint firstItem="JN1-Ew-3k5" firstAttribute="centerY" secondItem="PdY-G2-lsZ" secondAttribute="centerY" id="Bzy-Px-QDV"/>
                         <constraint firstItem="J5e-p1-oXk" firstAttribute="leading" secondItem="JN1-Ew-3k5" secondAttribute="trailing" constant="13" id="cBF-SM-O2z"/>
                         <constraint firstItem="J5e-p1-oXk" firstAttribute="centerX" secondItem="PdY-G2-lsZ" secondAttribute="centerX" id="hOd-W2-MHd"/>
+                        <constraint firstItem="qST-8t-UkL" firstAttribute="centerY" secondItem="PdY-G2-lsZ" secondAttribute="centerY" id="wmp-Gx-GBN"/>
                     </constraints>
                 </view>
             </subviews>
@@ -78,5 +89,6 @@
     </objects>
     <resources>
         <image name="Back" width="45" height="45"/>
+        <image name="Forward" width="45" height="45"/>
     </resources>
 </document>

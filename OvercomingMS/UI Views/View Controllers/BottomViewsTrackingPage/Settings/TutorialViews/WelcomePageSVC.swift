@@ -18,22 +18,30 @@ class WelcomePageSVC : SlidingAbstractSVC {
         }
     }
     
-    @IBOutlet weak var continueButton: SquareButtonSVC!
-
+    @IBOutlet weak var continueButton: UIView!
+    @IBOutlet weak var arrow: UIImageView!
+    
     override func customSetup() {
-        continueButton.backButtonAction = backPressed
+        let origImage = UIImage(named: "Forward")
+        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        arrow.image = tintedImage
+        arrow.tintColor = UIColor(red: 2, green: 162, blue: 182)
         
+        continueButton.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonPressed(tapGestureRecognizer: )))
+        continueButton.addGestureRecognizer(tapGesture)
     }
     
-    func backPressed() {
-        let tutorial = WelcomeTutorialSVC()
+    @objc private func buttonPressed(tapGestureRecognizer: UITapGestureRecognizer){
+        let tutorial = SettingsTutorialsSVC(isOnboarding: true)
         tutorial.parentVC = self.parentVC
         
         parentVC.pushSubView(newSubView: tutorial)
         let deadlineTime = DispatchTime.now() + 0.5 //wait for slide to complete
         DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
             tutorial.play()
-        }    }
+        }
+    }
     
     
 }

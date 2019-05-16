@@ -162,6 +162,7 @@
 		0AEC555C226154A800B7B75E /* SettingsBoxSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC555B226154A800B7B75E /* SettingsBoxSVC.xib */; };
 		0AEC93E42272487C009FCDC5 /* TrackingToggleSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC93E32272487C009FCDC5 /* TrackingToggleSVC.xib */; };
 		0AEC93E622724898009FCDC5 /* TrackingToggleSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC93E522724898009FCDC5 /* TrackingToggleSVC.swift */; };
+		0AEDC23F228CF9580044D920 /* Tutorial720.mov in Resources */ = {isa = PBXBuildFile; fileRef = 0AEDC23E228CF9580044D920 /* Tutorial720.mov */; };
 		0AEF7A29222AFA88009A0292 /* BadIngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */; };
 		0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */; };
 		0AEF7A3A222CD774009A0292 /* GoalsMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A39222CD774009A0292 /* GoalsMainSVC.swift */; };
@@ -218,10 +219,7 @@
 		D069C2712280F39D009BB49D /* WelcomePageSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2702280F39D009BB49D /* WelcomePageSVC.swift */; };
 		D069C2732280F892009BB49D /* ContinueButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2722280F892009BB49D /* ContinueButtonSVC.swift */; };
 		D069C2752280F8A4009BB49D /* ContinueButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */; };
-		D069C2772280FD93009BB49D /* WelcomeTutorialSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D069C2762280FD93009BB49D /* WelcomeTutorialSVC.xib */; };
-		D069C2792280FDAA009BB49D /* WelcomeTutorialSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2782280FDAA009BB49D /* WelcomeTutorialSVC.swift */; };
 		D071C390227F71B1009C7428 /* SettingsTutorialsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071C38F227F71B1009C7428 /* SettingsTutorialsSVC.swift */; };
-		D071C392227F72FE009C7428 /* Demo_Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D071C391227F72FE009C7428 /* Demo_Video.mp4 */; };
 		D0ED4F672280F346006153B0 /* WelcomePageSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0ED4F662280F346006153B0 /* WelcomePageSVC.xib */; };
 		DD500F23445D0A98AC159E98 /* Pods_OvercomingMSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613999C2BAE695AFE369D7B7 /* Pods_OvercomingMSUITests.framework */; };
 		E52344C266EF89DAB14C6AA3 /* Pods_OvercomingMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFED95C83375718D7DCA1211 /* Pods_OvercomingMS.framework */; };
@@ -410,6 +408,7 @@
 		0AEC555B226154A800B7B75E /* SettingsBoxSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsBoxSVC.xib; sourceTree = "<group>"; };
 		0AEC93E32272487C009FCDC5 /* TrackingToggleSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingToggleSVC.xib; sourceTree = "<group>"; };
 		0AEC93E522724898009FCDC5 /* TrackingToggleSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingToggleSVC.swift; sourceTree = "<group>"; };
+		0AEDC23E228CF9580044D920 /* Tutorial720.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Tutorial720.mov; sourceTree = "<group>"; };
 		0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadIngredientsCell.swift; sourceTree = "<group>"; };
 		0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadIngredientsCell.xib; sourceTree = "<group>"; };
 		0AEF7A39222CD774009A0292 /* GoalsMainSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsMainSVC.swift; sourceTree = "<group>"; };
@@ -477,10 +476,7 @@
 		D069C2702280F39D009BB49D /* WelcomePageSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageSVC.swift; sourceTree = "<group>"; };
 		D069C2722280F892009BB49D /* ContinueButtonSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueButtonSVC.swift; sourceTree = "<group>"; };
 		D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContinueButtonSVC.xib; sourceTree = "<group>"; };
-		D069C2762280FD93009BB49D /* WelcomeTutorialSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeTutorialSVC.xib; sourceTree = "<group>"; };
-		D069C2782280FDAA009BB49D /* WelcomeTutorialSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeTutorialSVC.swift; sourceTree = "<group>"; };
 		D071C38F227F71B1009C7428 /* SettingsTutorialsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTutorialsSVC.swift; sourceTree = "<group>"; };
-		D071C391227F72FE009C7428 /* Demo_Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Demo_Video.mp4; sourceTree = "<group>"; };
 		D0C278635D38E9B87EB94008 /* Pods-OvercomingMSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D0ED4F662280F346006153B0 /* WelcomePageSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomePageSVC.xib; sourceTree = "<group>"; };
 		DFED95C83375718D7DCA1211 /* Pods_OvercomingMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -984,8 +980,6 @@
 				0C19F07B2263654100D080AE /* SettingsTutorialsSVC.xib */,
 				D071C38F227F71B1009C7428 /* SettingsTutorialsSVC.swift */,
 				0C19F07D22636BA000D080AE /* TutorialButtonSVC.xib */,
-				D069C2762280FD93009BB49D /* WelcomeTutorialSVC.xib */,
-				D069C2782280FDAA009BB49D /* WelcomeTutorialSVC.swift */,
 				D0ED4F662280F346006153B0 /* WelcomePageSVC.xib */,
 				D069C2702280F39D009BB49D /* WelcomePageSVC.swift */,
 			);
@@ -1013,7 +1007,7 @@
 		6129744221DF017E00B9846C = {
 			isa = PBXGroup;
 			children = (
-				D071C391227F72FE009C7428 /* Demo_Video.mp4 */,
+				0AEDC23E228CF9580044D920 /* Tutorial720.mov */,
 				6129744D21DF017E00B9846C /* OvercomingMS */,
 				6129746221DF017F00B9846C /* OvercomingMSTests */,
 				6129746D21DF017F00B9846C /* OvercomingMSUITests */,
@@ -1235,7 +1229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D071C392227F72FE009C7428 /* Demo_Video.mp4 in Resources */,
 				0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */,
 				0C19F07C2263654100D080AE /* SettingsTutorialsSVC.xib in Resources */,
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,
@@ -1264,6 +1257,7 @@
 				0A0818982214E6310021BDF6 /* FoodSearchSVC.xib in Resources */,
 				0CBE98AD2223835300D3C090 /* TitleTimeOverTextCell.xib in Resources */,
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
+				0AEDC23F228CF9580044D920 /* Tutorial720.mov in Resources */,
 				0A19B3BD2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib in Resources */,
 				0C19F0702262885A00D080AE /* SettingsTrackingSVC.xib in Resources */,
 				D069C2752280F8A4009BB49D /* ContinueButtonSVC.xib in Resources */,
@@ -1308,7 +1302,6 @@
 				0AEC93E42272487C009FCDC5 /* TrackingToggleSVC.xib in Resources */,
 				0A341D81225922670066EC1D /* NoteSVC.xib in Resources */,
 				0A19B3C52253F97100F4B02B /* MedicationItemSVC.xib in Resources */,
-				D069C2772280FD93009BB49D /* WelcomeTutorialSVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1581,7 +1574,6 @@
 				0A93EA5D22132C560063A892 /* TopRoundCornersUIView.swift in Sources */,
 				0A59C99522710ECA00FC66B5 /* CustomButton.swift in Sources */,
 				0AEC93E622724898009FCDC5 /* TrackingToggleSVC.swift in Sources */,
-				D069C2792280FDAA009BB49D /* WelcomeTutorialSVC.swift in Sources */,
 				0A081893221473380021BDF6 /* ExerciseModifySVC.swift in Sources */,
 				0AD7EB1E2220B2D9006F71C0 /* FoodRejectedSVC.swift in Sources */,
 				0A1FEC5B2204F265006CED70 /* DismissableVC.swift in Sources */,

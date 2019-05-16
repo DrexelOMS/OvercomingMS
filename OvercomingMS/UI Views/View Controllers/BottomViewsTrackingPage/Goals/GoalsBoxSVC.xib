@@ -83,6 +83,7 @@
                         <constraint firstItem="OP5-8x-Ocm" firstAttribute="leading" secondItem="g8J-J9-6Db" secondAttribute="trailing" constant="10" id="Kzm-qa-365"/>
                         <constraint firstItem="g8J-J9-6Db" firstAttribute="top" secondItem="ICt-4O-xxd" secondAttribute="top" id="UNr-34-yhM"/>
                         <constraint firstItem="g8J-J9-6Db" firstAttribute="leading" secondItem="46Y-4c-Nqd" secondAttribute="trailing" constant="10" id="hyR-RI-iQj"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="jvw-FE-rot"/>
                         <constraint firstItem="46Y-4c-Nqd" firstAttribute="top" secondItem="ICt-4O-xxd" secondAttribute="top" id="qXr-mj-uKJ"/>
                         <constraint firstAttribute="bottom" secondItem="g8J-J9-6Db" secondAttribute="bottom" id="w9P-pq-vWK"/>
                     </constraints>
@@ -90,15 +91,15 @@
             </subviews>
             <constraints>
                 <constraint firstItem="ICt-4O-xxd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5iB-ZZ-VEd"/>
-                <constraint firstAttribute="bottom" secondItem="ICt-4O-xxd" secondAttribute="bottom" id="7wJ-yQ-Nrx"/>
+                <constraint firstAttribute="bottom" secondItem="ICt-4O-xxd" secondAttribute="bottom" priority="999" id="7wJ-yQ-Nrx"/>
                 <constraint firstAttribute="trailing" secondItem="ICt-4O-xxd" secondAttribute="trailing" id="GHc-zF-bI9"/>
-                <constraint firstItem="ICt-4O-xxd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yBh-g0-XbD"/>
+                <constraint firstItem="ICt-4O-xxd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="999" id="yBh-g0-XbD"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="202.89855072463769" y="304.01785714285711"/>
         </view>
     </objects>
     <resources>
-        <image name="Forward" width="689" height="689"/>
+        <image name="Forward" width="45" height="45"/>
     </resources>
 </document>

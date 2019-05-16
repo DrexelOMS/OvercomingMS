@@ -25,11 +25,21 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     let button4 = CircleButtonFactory.SavedButton()
     
     @IBOutlet weak var buttonStackView: UIStackView!
+    @IBOutlet weak var imageContainer: RoundedBoxShadowsTemplate!
     
     @IBOutlet weak var ratingView: FiveScaleRatingButtonsSVC!
     
     override func customSetup() {
+        imageContainer.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imagePressed(tapGestureRecognizer: )))
+        imageContainer.addGestureRecognizer(tapGesture)
+    }
+
+    @objc private func imagePressed(tapGestureRecognizer: UITapGestureRecognizer){
+        let webViewController = TOWebViewController(urlString: "https://overcomingms.org/recovery-program/diet")
+        let navigation = UINavigationController.init(rootViewController: webViewController)
         
+        parentVC.present(navigation, animated: true, completion: nil)
     }
     
     //must be called by 

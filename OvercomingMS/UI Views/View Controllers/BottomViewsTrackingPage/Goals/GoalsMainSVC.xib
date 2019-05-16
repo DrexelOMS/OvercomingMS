@@ -34,129 +34,74 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZcU-gC-23K">
-                    <rect key="frame" x="20" y="90" width="335" height="467"/>
+                    <rect key="frame" x="20" y="90" width="335" height="497"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OpW-Bl-FFh">
-                            <rect key="frame" x="0.0" y="0.0" width="335" height="77.5"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJG-0R-dhv" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="0.0" width="295" height="77.5"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Food"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="pretty good (3/5)"/>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
-                                            <color key="value" red="0.42352941176470588" green="0.29803921568627451" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="pJG-0R-dhv" secondAttribute="bottom" id="FjT-c0-HEm"/>
-                                <constraint firstItem="pJG-0R-dhv" firstAttribute="leading" secondItem="OpW-Bl-FFh" secondAttribute="leading" constant="20" id="P65-AW-AJl"/>
-                                <constraint firstAttribute="trailing" secondItem="pJG-0R-dhv" secondAttribute="trailing" constant="20" id="bom-y7-r1c"/>
-                                <constraint firstItem="pJG-0R-dhv" firstAttribute="top" secondItem="OpW-Bl-FFh" secondAttribute="top" id="guO-wh-IaP"/>
-                            </constraints>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJG-0R-dhv" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="83.5"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Food"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="pretty good (3/5)"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
+                                    <color key="value" red="0.42352941176470588" green="0.29803921568627451" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qnb-El-4Dn">
-                            <rect key="frame" x="0.0" y="97.5" width="335" height="77.5"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3c-sV-Tl5" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="0.0" width="295" height="77.5"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Omega 3"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="18 grams"/>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
-                                            <color key="value" red="0.0078431372550000003" green="0.63529411759999999" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="O3c-sV-Tl5" firstAttribute="leading" secondItem="Qnb-El-4Dn" secondAttribute="leading" constant="20" id="3dE-2N-zxz"/>
-                                <constraint firstItem="O3c-sV-Tl5" firstAttribute="top" secondItem="Qnb-El-4Dn" secondAttribute="top" id="Jt0-gX-ckK"/>
-                                <constraint firstAttribute="trailing" secondItem="O3c-sV-Tl5" secondAttribute="trailing" constant="20" id="LUX-7L-6nd"/>
-                                <constraint firstAttribute="bottom" secondItem="O3c-sV-Tl5" secondAttribute="bottom" id="P6s-NI-k2w"/>
-                            </constraints>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3c-sV-Tl5" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="103.5" width="335" height="83.5"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Omega 3"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="18 grams"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
+                                    <color key="value" red="0.0078431372550000003" green="0.63529411759999999" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="on1-2R-5r5">
-                            <rect key="frame" x="0.0" y="195" width="335" height="77"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUg-Bc-hzF" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="0.0" width="295" height="77"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Vitamin D"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="10 klUs"/>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
-                                            <color key="value" red="1" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="JUg-Bc-hzF" secondAttribute="bottom" id="Nor-Wk-kaf"/>
-                                <constraint firstItem="JUg-Bc-hzF" firstAttribute="leading" secondItem="on1-2R-5r5" secondAttribute="leading" constant="20" id="cqn-kY-Kqj"/>
-                                <constraint firstAttribute="trailing" secondItem="JUg-Bc-hzF" secondAttribute="trailing" constant="20" id="dRY-Fb-AHd"/>
-                                <constraint firstItem="JUg-Bc-hzF" firstAttribute="top" secondItem="on1-2R-5r5" secondAttribute="top" id="mrP-la-CAY"/>
-                            </constraints>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUg-Bc-hzF" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="207" width="335" height="83"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Vitamin D"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="10 klUs"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
+                                    <color key="value" red="1" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2X9-9U-jFO">
-                            <rect key="frame" x="0.0" y="292" width="335" height="77.5"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HN-R7-Nt4" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="0.0" width="295" height="77.5"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Exercise"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="30 min."/>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
-                                            <color key="value" red="0.34901960780000002" green="0.53725490200000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="1HN-R7-Nt4" firstAttribute="top" secondItem="2X9-9U-jFO" secondAttribute="top" id="9fj-Gv-Wa5"/>
-                                <constraint firstItem="1HN-R7-Nt4" firstAttribute="leading" secondItem="2X9-9U-jFO" secondAttribute="leading" constant="20" id="HBd-Op-CGQ"/>
-                                <constraint firstAttribute="bottom" secondItem="1HN-R7-Nt4" secondAttribute="bottom" id="Xuc-gZ-812"/>
-                                <constraint firstAttribute="trailing" secondItem="1HN-R7-Nt4" secondAttribute="trailing" constant="20" id="deP-Ik-7LO"/>
-                            </constraints>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HN-R7-Nt4" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="310" width="335" height="83.5"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Exercise"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="30 min."/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
+                                    <color key="value" red="0.34901960780000002" green="0.53725490200000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0u5-W2-HTP">
-                            <rect key="frame" x="0.0" y="389.5" width="335" height="77.5"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oz-2G-jYI" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="0.0" width="295" height="77.5"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Meditation"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="30 min."/>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
-                                            <color key="value" red="0.40000000000000002" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="8oz-2G-jYI" firstAttribute="top" secondItem="0u5-W2-HTP" secondAttribute="top" id="3PQ-oa-O59"/>
-                                <constraint firstItem="8oz-2G-jYI" firstAttribute="leading" secondItem="0u5-W2-HTP" secondAttribute="leading" constant="20" id="D1M-tP-Z6p"/>
-                                <constraint firstAttribute="trailing" secondItem="8oz-2G-jYI" secondAttribute="trailing" constant="20" id="JCz-l5-0Hx"/>
-                                <constraint firstAttribute="bottom" secondItem="8oz-2G-jYI" secondAttribute="bottom" id="rDN-ig-HuG"/>
-                            </constraints>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oz-2G-jYI" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="413.5" width="335" height="83.5"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Meditation"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="30 min."/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="colorTheme">
+                                    <color key="value" red="0.40000000000000002" green="0.59607843140000005" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Evz-Qb-dX3" userLabel="ResetContainer">
-                    <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                    <rect key="frame" x="0.0" y="607" width="375" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset all goals to OMS recommended" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzi-AF-khN">
-                            <rect key="frame" x="40" y="0.0" width="215" height="100"/>
+                            <rect key="frame" x="40" y="0.0" width="215" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RT5-3f-oDR">
-                            <rect key="frame" x="265" y="0.0" width="100" height="100"/>
+                            <rect key="frame" x="265" y="0.0" width="100" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eme-zC-AV3" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
-                                    <rect key="frame" x="25" y="25" width="50" height="50"/>
+                                    <rect key="frame" x="25" y="0.0" width="50" height="50"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="AdT-a8-xiG"/>
@@ -183,7 +128,7 @@
                         <constraint firstAttribute="bottom" secondItem="Mzi-AF-khN" secondAttribute="bottom" id="CEx-kS-gAD"/>
                         <constraint firstAttribute="bottom" secondItem="RT5-3f-oDR" secondAttribute="bottom" id="GgV-vI-YRJ"/>
                         <constraint firstAttribute="trailing" secondItem="RT5-3f-oDR" secondAttribute="trailing" constant="10" id="THl-m5-DWs"/>
-                        <constraint firstAttribute="height" constant="100" id="VUo-vy-rca"/>
+                        <constraint firstAttribute="height" constant="50" id="VUo-vy-rca"/>
                         <constraint firstItem="RT5-3f-oDR" firstAttribute="top" secondItem="Evz-Qb-dX3" secondAttribute="top" id="cYL-eB-VjA"/>
                         <constraint firstItem="Mzi-AF-khN" firstAttribute="leading" secondItem="Evz-Qb-dX3" secondAttribute="leading" constant="40" id="g2W-97-iHP"/>
                         <constraint firstItem="RT5-3f-oDR" firstAttribute="leading" secondItem="Mzi-AF-khN" secondAttribute="trailing" constant="10" id="khP-PN-k08"/>
@@ -191,13 +136,13 @@
                 </view>
             </subviews>
             <constraints>
-                <constraint firstItem="Evz-Qb-dX3" firstAttribute="top" secondItem="ZcU-gC-23K" secondAttribute="bottom" constant="10" id="3Zz-jc-ERX"/>
+                <constraint firstItem="Evz-Qb-dX3" firstAttribute="top" secondItem="ZcU-gC-23K" secondAttribute="bottom" constant="20" id="3Zz-jc-ERX"/>
                 <constraint firstItem="Evz-Qb-dX3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IEN-UI-d3t"/>
                 <constraint firstAttribute="trailing" secondItem="Evz-Qb-dX3" secondAttribute="trailing" id="JQI-yb-bj4"/>
                 <constraint firstItem="hw1-2L-vHN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KKA-1A-b0Q"/>
                 <constraint firstItem="ZcU-gC-23K" firstAttribute="top" secondItem="hw1-2L-vHN" secondAttribute="bottom" constant="10" id="OlC-Ec-SV3"/>
                 <constraint firstAttribute="trailing" secondItem="hw1-2L-vHN" secondAttribute="trailing" id="PmC-2K-8uF"/>
-                <constraint firstAttribute="bottom" secondItem="Evz-Qb-dX3" secondAttribute="bottom" id="ZIf-xZ-SbQ"/>
+                <constraint firstAttribute="bottom" secondItem="Evz-Qb-dX3" secondAttribute="bottom" constant="10" id="ZIf-xZ-SbQ"/>
                 <constraint firstAttribute="trailing" secondItem="ZcU-gC-23K" secondAttribute="trailing" constant="20" id="f8N-23-OT7"/>
                 <constraint firstItem="hw1-2L-vHN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iPw-kF-Y14"/>
                 <constraint firstItem="ZcU-gC-23K" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="juP-bh-iwZ"/>

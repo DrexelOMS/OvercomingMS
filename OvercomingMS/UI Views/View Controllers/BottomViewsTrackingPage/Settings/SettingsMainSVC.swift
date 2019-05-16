@@ -18,17 +18,17 @@ class SettingsMainSVC : SlidingAbstractSVC {
         }
     }
     
-    @IBOutlet weak var profileView: RoundedBoxShadowsTemplate!
+    @IBOutlet weak var profileView: SettingsBoxSVC!
     @IBOutlet weak var trackingView: SettingsBoxSVC!
-    @IBOutlet weak var remindersView: RoundedBoxShadowsTemplate!
+    @IBOutlet weak var remindersView: SettingsBoxSVC!
     @IBOutlet weak var tutorialsView: SettingsBoxSVC!
     
     override func customSetup() {
-        profileView.backgroundColor = UIColor.lightGray
-        remindersView.backgroundColor = UIColor.lightGray
+        profileView.removeFromSuperview()
+        remindersView.removeFromSuperview()
         tutorialsView.title = "Tutorials"
         tutorialsView.buttonAction = tutorialsPressed
-        tutorialsView.roundedView.backgroundColor = UIColor.lightGray
+        tutorialsView.roundedView.backgroundColor = UIColor.white
         
         if globalCurrentDate != OMSDateAccessor().todaysDate {
             trackingView.buttonAction = presentSwitchDate
@@ -37,7 +37,6 @@ class SettingsMainSVC : SlidingAbstractSVC {
         else {
             trackingView.buttonAction = trackingPressed
             trackingView.roundedView.backgroundColor = UIColor.white
-      
         }
     }
     
@@ -46,14 +45,14 @@ class SettingsMainSVC : SlidingAbstractSVC {
     }
     func tutorialsPressed() {
 
-//        let tutorial = SettingsTutorialsSVC()
-//        tutorial.parentVC = self.parentVC
-//
-//        parentVC.pushSubView(newSubView: tutorial)
-//        let deadlineTime = DispatchTime.now() + 0.5 //wait for slide to complete
-//        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
-//            tutorial.play()
-//        }
+        let tutorial = SettingsTutorialsSVC()
+        tutorial.parentVC = self.parentVC
+
+        parentVC.pushSubView(newSubView: tutorial)
+        let deadlineTime = DispatchTime.now() + 0.5 //wait for slide to complete
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            tutorial.play()
+        }
     }
     
     func presentSwitchDate() {
