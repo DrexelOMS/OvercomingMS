@@ -30,7 +30,7 @@
                     <rect key="frame" x="0.0" y="36" width="414" height="23.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" lineBreakMode="tailTruncation" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="f2h-VI-UXQ">
-                            <rect key="frame" x="0.0" y="0.0" width="138" height="23.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="103.5" height="23.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -42,7 +42,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How well have you eaten today?" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="AbC-fK-qP6">
-                            <rect key="frame" x="138" y="0.0" width="276" height="23.5"/>
+                            <rect key="frame" x="103.5" y="0.0" width="310.5" height="23.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                             <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                         <constraint firstItem="f2h-VI-UXQ" firstAttribute="top" secondItem="u5z-fO-EeA" secondAttribute="top" id="Ftd-u3-SHM"/>
                         <constraint firstAttribute="bottom" secondItem="f2h-VI-UXQ" secondAttribute="bottom" id="JHY-2a-lC7"/>
                         <constraint firstItem="f2h-VI-UXQ" firstAttribute="leading" secondItem="u5z-fO-EeA" secondAttribute="leading" id="K5T-D5-6Ye"/>
-                        <constraint firstItem="AbC-fK-qP6" firstAttribute="width" secondItem="f2h-VI-UXQ" secondAttribute="width" multiplier="2:1" id="iGZ-Eu-sNX"/>
+                        <constraint firstItem="AbC-fK-qP6" firstAttribute="width" secondItem="f2h-VI-UXQ" secondAttribute="width" multiplier="3:1" id="iGZ-Eu-sNX"/>
                         <constraint firstAttribute="trailing" secondItem="AbC-fK-qP6" secondAttribute="trailing" id="kUf-ky-8vM"/>
                     </constraints>
                 </stackView>
