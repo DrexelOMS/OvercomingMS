@@ -162,7 +162,7 @@
 		0AEC555C226154A800B7B75E /* SettingsBoxSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC555B226154A800B7B75E /* SettingsBoxSVC.xib */; };
 		0AEC93E42272487C009FCDC5 /* TrackingToggleSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC93E32272487C009FCDC5 /* TrackingToggleSVC.xib */; };
 		0AEC93E622724898009FCDC5 /* TrackingToggleSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC93E522724898009FCDC5 /* TrackingToggleSVC.swift */; };
-		0AEDC23D228CC4E90044D920 /* TutorialSmall.mov in Resources */ = {isa = PBXBuildFile; fileRef = 0AEDC23C228CC4E90044D920 /* TutorialSmall.mov */; };
+		0AEDC23F228CF9580044D920 /* Tutorial720.mov in Resources */ = {isa = PBXBuildFile; fileRef = 0AEDC23E228CF9580044D920 /* Tutorial720.mov */; };
 		0AEF7A29222AFA88009A0292 /* BadIngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */; };
 		0AEF7A2B222AFB1D009A0292 /* BadIngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */; };
 		0AEF7A3A222CD774009A0292 /* GoalsMainSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7A39222CD774009A0292 /* GoalsMainSVC.swift */; };
@@ -408,7 +408,7 @@
 		0AEC555B226154A800B7B75E /* SettingsBoxSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsBoxSVC.xib; sourceTree = "<group>"; };
 		0AEC93E32272487C009FCDC5 /* TrackingToggleSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingToggleSVC.xib; sourceTree = "<group>"; };
 		0AEC93E522724898009FCDC5 /* TrackingToggleSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingToggleSVC.swift; sourceTree = "<group>"; };
-		0AEDC23C228CC4E90044D920 /* TutorialSmall.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = TutorialSmall.mov; sourceTree = "<group>"; };
+		0AEDC23E228CF9580044D920 /* Tutorial720.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Tutorial720.mov; sourceTree = "<group>"; };
 		0AEF7A28222AFA88009A0292 /* BadIngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadIngredientsCell.swift; sourceTree = "<group>"; };
 		0AEF7A2A222AFB1D009A0292 /* BadIngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadIngredientsCell.xib; sourceTree = "<group>"; };
 		0AEF7A39222CD774009A0292 /* GoalsMainSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsMainSVC.swift; sourceTree = "<group>"; };
@@ -1007,7 +1007,7 @@
 		6129744221DF017E00B9846C = {
 			isa = PBXGroup;
 			children = (
-				0AEDC23C228CC4E90044D920 /* TutorialSmall.mov */,
+				0AEDC23E228CF9580044D920 /* Tutorial720.mov */,
 				6129744D21DF017E00B9846C /* OvercomingMS */,
 				6129746221DF017F00B9846C /* OvercomingMSTests */,
 				6129746D21DF017F00B9846C /* OvercomingMSUITests */,
@@ -1257,6 +1257,7 @@
 				0A0818982214E6310021BDF6 /* FoodSearchSVC.xib in Resources */,
 				0CBE98AD2223835300D3C090 /* TitleTimeOverTextCell.xib in Resources */,
 				6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */,
+				0AEDC23F228CF9580044D920 /* Tutorial720.mov in Resources */,
 				0A19B3BD2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib in Resources */,
 				0C19F0702262885A00D080AE /* SettingsTrackingSVC.xib in Resources */,
 				D069C2752280F8A4009BB49D /* ContinueButtonSVC.xib in Resources */,
@@ -1289,7 +1290,6 @@
 				6129745421DF017E00B9846C /* Main.storyboard in Resources */,
 				0AACE78622694403001803DA /* OutsideSVC.xib in Resources */,
 				0AD7EB4622234524006F71C0 /* MedRateButtonsSVC.xib in Resources */,
-				0AEDC23D228CC4E90044D920 /* TutorialSmall.mov in Resources */,
 				0AA528542202314600CCFEE7 /* MainAbstractSVC.xib in Resources */,
 				0A93EA5922132BCF0063A892 /* PullBarSVC.xib in Resources */,
 				0AEF7A4E223024D5009A0292 /* HeaderSVC.xib in Resources */,

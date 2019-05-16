@@ -82,18 +82,6 @@ class SettingsTutorialsSVC : SlidingAbstractSVC, PlayerDelegate, PlayerPlaybackD
     
     override func initialize(parentVC: SlidingStackVC) {
         super.initialize(parentVC: parentVC)
-        
-        player = Player()
-        player.playerDelegate = self
-        player.playbackDelegate = self
-        player.view.frame = playerView.bounds
-        
-        parentVC.addChild(player)
-        playerView.addSubview(self.player.view)
-        player.didMove(toParent: parentVC)
-        
-        let videoUrl: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "TutorialSmall", ofType:"mov")!)// file or http url
-        self.player.url = videoUrl
     }
     
     func play(){
@@ -109,6 +97,17 @@ class SettingsTutorialsSVC : SlidingAbstractSVC, PlayerDelegate, PlayerPlaybackD
 //        playerLayer.frame = self.parentVC.view.bounds
 //        parentVC.view.layer.addSublayer(playerLayer)
 //        player.play()
+        player = Player()
+        player.playerDelegate = self
+        player.playbackDelegate = self
+        player.view.frame = playerView.bounds
+        
+        parentVC.addChild(player)
+        playerView.addSubview(self.player.view)
+        player.didMove(toParent: parentVC)
+        
+        let videoUrl: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "Tutorial720", ofType:"mov")!)// file or http url
+        self.player.url = videoUrl
         
         self.player.playFromBeginning()
     }
