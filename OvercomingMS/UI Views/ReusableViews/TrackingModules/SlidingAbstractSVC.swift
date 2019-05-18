@@ -21,8 +21,8 @@ class SlidingAbstractSVC : CustomView {
         }
     }
     
-    func onDismiss(){
-        parentVC.onDismiss()
+    func onDismiss(function:@escaping ()->Void){
+        parentVC.onDismiss = function
     }
     
     

@@ -29,10 +29,6 @@ class MeditationTimerSVC : TimerStopWatchAbstractSVC {
             return "Currently Playing"
         }
     }
-
-    override func onDismiss(){
-        
-    }
     
     override func startPauseButtonPressed() {
         if firstStart
@@ -60,7 +56,7 @@ class MeditationTimerSVC : TimerStopWatchAbstractSVC {
     //allow instantiation with start length in seconds
     convenience init(startingSeconds: Int, meditationType: String) {
         self.init()
-        
+        super.onDismiss(function: {self.player?.stop()})
         seconds = startingSeconds
         totalTime = startingSeconds
         timerLabel.text = timeString(time: Double(seconds))
