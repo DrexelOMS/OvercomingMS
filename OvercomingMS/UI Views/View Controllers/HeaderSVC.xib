@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
+                <outlet property="circleImage" destination="gIn-eN-gKW" id="9OZ-tj-hGd"/>
                 <outlet property="circlesLabel" destination="G2b-ms-EXl" id="jJU-Tn-iio"/>
                 <outlet property="daysInARow" destination="XGT-XR-GJa" id="zbk-tN-q1W"/>
                 <outlet property="goalMessageStackView" destination="jPd-Wf-4q2" id="6au-lg-xuy"/>
@@ -38,18 +39,18 @@
                             <rect key="frame" x="0.0" y="0.0" width="379" height="99"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G67-31-Pug" userLabel="Navigation">
-                                    <rect key="frame" x="0.0" y="0.0" width="379" height="51.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="379" height="59"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="pk0-cZ-Rur">
-                                            <rect key="frame" x="20" y="8" width="339" height="43.5"/>
+                                            <rect key="frame" x="20" y="8" width="339" height="51"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLc-MV-ro5" userLabel="Circles">
-                                                    <rect key="frame" x="0.0" y="0.0" width="115.5" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="115.5" height="51"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2b-ms-EXl">
-                                                            <rect key="frame" x="58" y="0.0" width="0.0" height="0.0"/>
-                                                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="14"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Circles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2b-ms-EXl">
+                                                            <rect key="frame" x="30.5" y="0.0" width="55" height="21"/>
+                                                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="18"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -59,28 +60,35 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agl-mY-bAX" userLabel="Tracking">
-                                                    <rect key="frame" x="111.5" y="0.0" width="116" height="43.5"/>
+                                                    <rect key="frame" x="111.5" y="0.0" width="116" height="51"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracking" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DK8-wN-Om8">
-                                                            <rect key="frame" x="15.5" y="0.0" width="85.5" height="36.5"/>
+                                                            <rect key="frame" x="19.5" y="0.0" width="77.5" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="gIn-eN-gKW">
+                                                            <rect key="frame" x="53" y="27.5" width="10.5" height="5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="5" id="J2M-XJ-ZRn"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="DK8-wN-Om8" firstAttribute="top" secondItem="agl-mY-bAX" secondAttribute="top" id="1r9-F5-RoJ"/>
-                                                        <constraint firstItem="DK8-wN-Om8" firstAttribute="height" secondItem="agl-mY-bAX" secondAttribute="height" multiplier="1:1.2" id="A42-yt-KA6"/>
+                                                        <constraint firstItem="gIn-eN-gKW" firstAttribute="top" secondItem="DK8-wN-Om8" secondAttribute="bottom" constant="4" id="8bO-Zp-9xe"/>
+                                                        <constraint firstItem="gIn-eN-gKW" firstAttribute="centerX" secondItem="agl-mY-bAX" secondAttribute="centerX" id="8ed-BV-qvP"/>
                                                         <constraint firstItem="DK8-wN-Om8" firstAttribute="centerX" secondItem="agl-mY-bAX" secondAttribute="centerX" id="S9f-As-Gt4"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3o-fx-0cd" userLabel="Analysis">
-                                                    <rect key="frame" x="223.5" y="0.0" width="115.5" height="43.5"/>
+                                                    <rect key="frame" x="223.5" y="0.0" width="115.5" height="51"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiq-oz-Wd1">
-                                                            <rect key="frame" x="57.5" y="0.0" width="0.0" height="0.0"/>
-                                                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="14"/>
-                                                            <color key="textColor" red="0.58431372549019611" green="0.58431372549019611" blue="0.58431372549019611" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiq-oz-Wd1">
+                                                            <rect key="frame" x="29.5" y="0.0" width="56.5" height="21"/>
+                                                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="18"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -100,20 +108,20 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-LM-M8R" userLabel="BorderBottom">
-                                    <rect key="frame" x="0.0" y="51.5" width="379" height="0.5"/>
+                                    <rect key="frame" x="0.0" y="59" width="379" height="0.5"/>
                                     <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="0.5" id="uE8-tK-H3W"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-Nr-BpB" userLabel="GoalMessageView">
-                                    <rect key="frame" x="0.0" y="52" width="379" height="47"/>
+                                    <rect key="frame" x="0.0" y="59.5" width="379" height="39.5"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jPd-Wf-4q2">
-                                            <rect key="frame" x="20" y="5.5" width="339" height="36"/>
+                                            <rect key="frame" x="20" y="4.5" width="339" height="30.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-XR-GJa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="36"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="30.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="## days in a row!">
                                                             <attributes>
@@ -126,7 +134,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx3-aO-bU4">
-                                                    <rect key="frame" x="177" y="0.0" width="162" height="36"/>
+                                                    <rect key="frame" x="177" y="0.0" width="162" height="30.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="## perfect days!">
                                                             <attributes>
@@ -150,7 +158,7 @@
                                 </view>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="bo6-Nr-BpB" firstAttribute="height" secondItem="G67-31-Pug" secondAttribute="height" multiplier="1:1.1" id="2Wc-U8-Pp2"/>
+                                <constraint firstItem="bo6-Nr-BpB" firstAttribute="height" secondItem="G67-31-Pug" secondAttribute="height" multiplier="1:1.5" id="2Wc-U8-Pp2"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -173,4 +181,7 @@
             <point key="canvasLocation" x="48.799999999999997" y="340.47976011994007"/>
         </view>
     </objects>
+    <resources>
+        <image name="circle" width="10.5" height="10.5"/>
+    </resources>
 </document>

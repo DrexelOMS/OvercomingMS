@@ -44,6 +44,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
 
     private let omsDateFormatter = OMSDateAccessor()
     
+    @IBOutlet weak var datePickerContainer: UIView!
     //MARK: View Transition Initializers
     
     override func viewWillAppear(_ animated: Bool) {
@@ -202,7 +203,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         let streak = TrackingModulesDBS().getTotalPerfectDays()
         var plural = ""
-        if streak > 1 {
+        if streak != 1 {
             plural = "s"
         }
         
@@ -360,6 +361,19 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         vc.dismissalDelegate = self
         
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        DispatchQueue.main.async{
+            var rate = 1 - ((80 -  self.datePickerContainer.frame.height)) / 35
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let fontSize = 16 + (6) * rate
+            
+            self.dateLog.font = UIFont(name: self.dateLog.font.fontName, size: fontSize)
+        }
     }
     
 }

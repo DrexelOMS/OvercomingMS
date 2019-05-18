@@ -34,8 +34,8 @@ class BottomRoundCornersUIView: UIView {
         shadowLayer.shadowColor = UIColor.black.cgColor
         shadowLayer.shadowPath = shadowLayer.path
         shadowLayer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-        shadowLayer.shadowRadius = 1.0
-        shadowLayer.shadowOpacity = 0.3
+        shadowLayer.shadowRadius = 2
+        shadowLayer.shadowOpacity = 0.2
         
         layer.insertSublayer(shadowLayer, at: 0)
     }

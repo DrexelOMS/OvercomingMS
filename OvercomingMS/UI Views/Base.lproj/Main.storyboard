@@ -57,16 +57,16 @@
                                                                 <rect key="frame" x="40" y="0.0" width="294" height="81"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysy-9U-xKt">
-                                                                        <rect key="frame" x="17.333333333333343" y="0.0" width="259.33333333333326" height="81"/>
+                                                                        <rect key="frame" x="62.666666666666671" y="0.0" width="168.66666666666663" height="81"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, Month ##, ####" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="g1y-Q8-aCF">
-                                                                                <rect key="frame" x="0.0" y="20.333333333333339" width="232" height="40.666666666666657"/>
-                                                                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
+                                                                                <rect key="frame" x="0.0" y="20.333333333333339" width="141.33333333333334" height="40.666666666666657"/>
+                                                                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="14"/>
                                                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H33-LW-Fg1" userLabel="DropdownView">
-                                                                                <rect key="frame" x="237" y="0.0" width="17.333333333333343" height="81"/>
+                                                                                <rect key="frame" x="146.33333333333331" y="0.0" width="17.333333333333343" height="81"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5k8-Aq-5FZ">
                                                                                         <rect key="frame" x="0.66666666666668561" y="32.333333333333343" width="16" height="16.333333333333329"/>
@@ -285,6 +285,7 @@
                         <outlet property="SymptomsButton" destination="vqb-Vo-Ctx" id="iLw-Re-wbX"/>
                         <outlet property="centerDateView" destination="yzs-21-drx" id="QJu-BN-mog"/>
                         <outlet property="dateLog" destination="g1y-Q8-aCF" id="DEv-sP-kT2"/>
+                        <outlet property="datePickerContainer" destination="H4m-or-7q3" id="EHr-pZ-v80"/>
                         <outlet property="exerciseBar" destination="zYS-8V-zpv" id="SJW-KD-zNK"/>
                         <outlet property="foodBar" destination="CHY-EL-iHN" id="oxd-TP-LXh"/>
                         <outlet property="header" destination="pcW-NB-qsi" id="kmX-7a-hV3"/>
