@@ -156,7 +156,8 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
             
             DispatchQueue.main.async {
                 
-                let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: WelcomePageSVC())
+                let vc = SlidingStackVC(initialView: WelcomePageSVC())
+                vc.disableSwipe()
                 vc.modalPresentationStyle = .overCurrentContext
                 vc.theme = UIColor(red: 2, green: 162, blue: 182)
                 vc.dismissalDelegate = self

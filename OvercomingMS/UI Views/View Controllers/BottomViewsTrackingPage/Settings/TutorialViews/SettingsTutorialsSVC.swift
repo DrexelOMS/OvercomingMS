@@ -22,7 +22,7 @@ class SettingsTutorialsSVC : SlidingAbstractSVC, PlayerDelegate, PlayerPlaybackD
     }
     
     func playerPlaybackDidEnd(_ player: Player) {
-        
+        backPressed()
     }
     
     func playerPlaybackWillLoop(_ player: Player) {
@@ -61,7 +61,7 @@ class SettingsTutorialsSVC : SlidingAbstractSVC, PlayerDelegate, PlayerPlaybackD
         
         self.isOnboarding = isOnboarding
         if isOnboarding {
-            backButton.isContinueButton = true
+//            backButton.isContinueButton = true
         }
     }
     
@@ -73,7 +73,7 @@ class SettingsTutorialsSVC : SlidingAbstractSVC, PlayerDelegate, PlayerPlaybackD
     private var isOnboarding = false
 
     override func customSetup() {
-        backButton.backButtonAction = backPressed
+//        backButton.backButtonAction = backPressed
     }
     
     override func initialize(parentVC: SlidingStackVC) {
@@ -84,16 +84,55 @@ class SettingsTutorialsSVC : SlidingAbstractSVC, PlayerDelegate, PlayerPlaybackD
         player = Player()
         player.playerDelegate = self
         player.playbackDelegate = self
-        player.view.frame = playerView.bounds
         
+        player.view.frame = playerView.bounds
         parentVC.addChild(player)
         playerView.addSubview(self.player.view)
         player.didMove(toParent: parentVC)
+//        player.view.frame = parentVC.view.bounds
+//        parentVC.addChild(player)
+//        parentVC.view.addSubview(self.player.view)
+//        player.didMove(toParent: parentVC)
+        
+        player.view.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backPressed(tapGestureRecognizer: )))
+        player.view.addGestureRecognizer(tapGesture)
         
         let videoUrl: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "Tutorial720", ofType:"mov")!)// file or http url
         self.player.url = videoUrl
         
         self.player.playFromBeginning()
+    }
+
+    @objc func backPressed(tapGestureRecognizer: UITapGestureRecognizer) {
+        player.pause()
+//        player.removeFromParent()
+//        player.view.removeFromSuperview()
+        
+        if isOnboarding {
+            
+            let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to skip the tutorial", preferredStyle: .alert)
+            
+            let ok = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
+                self.parentVC.dismiss()
+            })
+            
+            // Create Cancel button with action handlder
+            let cancel = UIAlertAction(title: "No", style: .cancel) { (action) -> Void in
+                self.player.playFromCurrentTime()
+            }
+            
+            //Add OK and Cancel button to dialog message
+            dialogMessage.addAction(ok)
+            dialogMessage.addAction(cancel)
+            
+            // Present dialog message to user
+            parentVC.present(dialogMessage, animated: true, completion: nil)
+        }
+        else {
+            parentVC.popSubView()
+        }
+    
     }
     
     func backPressed() {

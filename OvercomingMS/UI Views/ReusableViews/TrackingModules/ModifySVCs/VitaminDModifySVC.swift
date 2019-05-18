@@ -58,7 +58,7 @@ class VitaminDModifySVC : ModifyAbstractSVC {
     
     var vitaminDTypeTFI = TypeTFIFactory.VitaminDTypeTFI()
     var dateTimeTFI = DateTimeTFI()
-    var amountTFI = AmountTFI(uom: ProgressBarConfig.vitaminDUOM)
+    var amountTFI = AmountTFI(uom: "IUs", isTenK: true)
     
     var editingVitamindDItem: VitaminDHistoryDBT! {
         didSet {

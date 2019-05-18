@@ -27,7 +27,7 @@ class VitaminDSelectedItemSVC : SelectedItemSVC {
     }
  
     override func reload() {
-        bottomMainLabel.text = "\(vitaminDItem.Amount) \(ProgressBarConfig.vitaminDUOM)"
+        bottomMainLabel.text = "\(vitaminDItem.Amount)k IUs"
         topMainLabel.text = vitaminDItem.VitaminDType
         middleMainLabel.text = OMSDateAccessor.getDateTime(date: vitaminDItem.StartTime)
     }

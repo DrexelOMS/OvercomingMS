@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsTutorialsSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
-                <outlet property="backButton" destination="lSY-Lf-QGH" id="SEk-T8-ITc"/>
                 <outlet property="playerView" destination="mcL-nU-8bN" id="8f8-aE-bN0"/>
             </connections>
         </placeholder>
@@ -21,23 +20,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcL-nU-8bN">
-                    <rect key="frame" x="10" y="10" width="300" height="399"/>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lSY-Lf-QGH" customClass="SquareButtonSVC" customModule="OvercomingMS" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="419" width="320" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="xWF-c8-W6M"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="469"/>
                 </view>
             </subviews>
             <constraints>
-                <constraint firstItem="mcL-nU-8bN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="UZy-qU-k5y"/>
-                <constraint firstItem="lSY-Lf-QGH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="diB-KG-g7C"/>
-                <constraint firstAttribute="trailing" secondItem="lSY-Lf-QGH" secondAttribute="trailing" id="fQx-I6-5Zv"/>
-                <constraint firstItem="lSY-Lf-QGH" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="mAI-R2-ngo"/>
-                <constraint firstAttribute="trailing" secondItem="mcL-nU-8bN" secondAttribute="trailing" constant="10" id="uOV-KX-1Bq"/>
-                <constraint firstItem="mcL-nU-8bN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="uVB-gq-oHF"/>
-                <constraint firstItem="lSY-Lf-QGH" firstAttribute="top" secondItem="mcL-nU-8bN" secondAttribute="bottom" constant="10" id="yRw-fu-Q0R"/>
+                <constraint firstAttribute="bottom" secondItem="mcL-nU-8bN" secondAttribute="bottom" id="25E-8T-0LG"/>
+                <constraint firstItem="mcL-nU-8bN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UZy-qU-k5y"/>
+                <constraint firstAttribute="trailing" secondItem="mcL-nU-8bN" secondAttribute="trailing" id="uOV-KX-1Bq"/>
+                <constraint firstItem="mcL-nU-8bN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uVB-gq-oHF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="63.75" y="56.514084507042256"/>

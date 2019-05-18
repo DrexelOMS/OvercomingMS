@@ -72,12 +72,11 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
     override func getTrackingDescription() -> String {
         var description = ""
         let amountRemaining = ProgressBarConfig.vitaminDGoal - getTotalAmount()
-        let uom = ProgressBarConfig.vitaminDUOM
         if(amountRemaining <= 0 || getPercentageComplete() >= 100){
             description = "Goal reached!"
         }
         else {
-            description = "\(amountRemaining) \(uom) left"
+            description = "\(amountRemaining)k IUs left"
         }
         return description
     }

@@ -47,10 +47,10 @@ class GoalsModifyFactory {
         svc.header.titleText = "Vitamin D"
         svc.header.descriptionText = "What is your daily goal for Vitamin D"
         svc.currentGoalLabel.text = String(ProgressBarConfig.vitaminDGoal)
-        svc.goalUnitLabel.text = ProgressBarConfig.vitaminDUOM
+        svc.goalUnitLabel.text = "k IUs"
         svc.Module = .VitaminD
         svc.goal = ProgressBarConfig.vitaminDGoal
-        svc.omsRecommendedGoal.text = "OMS recommended goal = " + String(GoalsDBT().VitaminDGoal) + " \(ProgressBarConfig.vitaminDUOM)"
+        svc.omsRecommendedGoal.text = "OMS recommended goal = " + String(GoalsDBT().VitaminDGoal) + "k IUs"
         
         return svc
     }
