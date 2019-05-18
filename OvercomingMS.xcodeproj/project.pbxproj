@@ -216,6 +216,10 @@
 		6129746421DF017F00B9846C /* OvercomingMSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746321DF017F00B9846C /* OvercomingMSTests.swift */; };
 		6129746F21DF017F00B9846C /* OvercomingMSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746E21DF017F00B9846C /* OvercomingMSUITests.swift */; };
 		83985923222D758E00782A10 /* MeditationModifySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985922222D758E00782A10 /* MeditationModifySVC.swift */; };
+		D03BBBCB2290908C0012CF60 /* 5_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC72290907E0012CF60 /* 5_Minute.mp3 */; };
+		D03BBBCC2290908C0012CF60 /* 35_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC8229090840012CF60 /* 35_Minute.mp3 */; };
+		D03BBBCD2290908C0012CF60 /* 45_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC92290908A0012CF60 /* 45_Minute.mp3 */; };
+		D03BBBCE2290908C0012CF60 /* 15_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBCA2290908C0012CF60 /* 15_Minute.mp3 */; };
 		D069C2712280F39D009BB49D /* WelcomePageSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2702280F39D009BB49D /* WelcomePageSVC.swift */; };
 		D069C2732280F892009BB49D /* ContinueButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2722280F892009BB49D /* ContinueButtonSVC.swift */; };
 		D069C2752280F8A4009BB49D /* ContinueButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */; };
@@ -473,6 +477,10 @@
 		89CF61DE31F50EFE76BD85FE /* Pods-OvercomingMSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0433A9C40E2CDD4C4FE48DD /* Pods-OvercomingMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.release.xcconfig"; sourceTree = "<group>"; };
 		A16E3BBC1D5B0C0744651350 /* Pods-OvercomingMSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D03BBBC72290907E0012CF60 /* 5_Minute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5_Minute.mp3; sourceTree = "<group>"; };
+		D03BBBC8229090840012CF60 /* 35_Minute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 35_Minute.mp3; sourceTree = "<group>"; };
+		D03BBBC92290908A0012CF60 /* 45_Minute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 45_Minute.mp3; sourceTree = "<group>"; };
+		D03BBBCA2290908C0012CF60 /* 15_Minute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 15_Minute.mp3; sourceTree = "<group>"; };
 		D069C2702280F39D009BB49D /* WelcomePageSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageSVC.swift; sourceTree = "<group>"; };
 		D069C2722280F892009BB49D /* ContinueButtonSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueButtonSVC.swift; sourceTree = "<group>"; };
 		D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContinueButtonSVC.xib; sourceTree = "<group>"; };
@@ -1007,6 +1015,10 @@
 		6129744221DF017E00B9846C = {
 			isa = PBXGroup;
 			children = (
+				D03BBBC72290907E0012CF60 /* 5_Minute.mp3 */,
+				D03BBBCA2290908C0012CF60 /* 15_Minute.mp3 */,
+				D03BBBC8229090840012CF60 /* 35_Minute.mp3 */,
+				D03BBBC92290908A0012CF60 /* 45_Minute.mp3 */,
 				0AEDC23E228CF9580044D920 /* Tutorial720.mov */,
 				6129744D21DF017E00B9846C /* OvercomingMS */,
 				6129746221DF017F00B9846C /* OvercomingMSTests */,
@@ -1229,6 +1241,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03BBBCB2290908C0012CF60 /* 5_Minute.mp3 in Resources */,
+				D03BBBCC2290908C0012CF60 /* 35_Minute.mp3 in Resources */,
+				D03BBBCD2290908C0012CF60 /* 45_Minute.mp3 in Resources */,
+				D03BBBCE2290908C0012CF60 /* 15_Minute.mp3 in Resources */,
 				0C5C2A3922157AE30066F669 /* BackConfirmButtonsSVC.xib in Resources */,
 				0C19F07C2263654100D080AE /* SettingsTutorialsSVC.xib in Resources */,
 				0A2BAA7B2204AFC3004074F3 /* Quicksand_Dash.otf in Resources */,

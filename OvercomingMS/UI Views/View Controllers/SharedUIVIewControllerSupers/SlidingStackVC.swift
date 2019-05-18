@@ -43,6 +43,15 @@ class SlidingStackVC: SwipeDownVC, UIGestureRecognizerDelegate {
         
     }
     
+    override func dismiss() {
+        super.dismiss()
+        onDismiss()
+        //your codehere
+    }
+
+    var onDismiss:()->Void = {}
+    
+    
     func addViewsAfterMain() {
         
     }

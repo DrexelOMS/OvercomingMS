@@ -21,6 +21,11 @@ class SlidingAbstractSVC : CustomView {
         }
     }
     
+    func onDismiss(){
+        parentVC.onDismiss()
+    }
+    
+    
     //MUST BE CALLED BY THE VC THAT USES THIS OBJECT
     func initialize(parentVC: SlidingStackVC){
         self.parentVC = parentVC
@@ -39,4 +44,5 @@ class SlidingAbstractSVC : CustomView {
     func didLayoutSubviews() {
     }
 
+    
 }
