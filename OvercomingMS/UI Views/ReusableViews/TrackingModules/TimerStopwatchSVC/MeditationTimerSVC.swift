@@ -56,7 +56,6 @@ class MeditationTimerSVC : TimerStopWatchAbstractSVC {
     //allow instantiation with start length in seconds
     convenience init(startingSeconds: Int, meditationType: String) {
         self.init()
-        super.onDismiss(function: {self.player?.stop()})
         seconds = startingSeconds
         totalTime = startingSeconds
         timerLabel.text = timeString(time: Double(seconds))
@@ -102,7 +101,7 @@ class MeditationTimerSVC : TimerStopWatchAbstractSVC {
              player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
             
             guard let player = player else { return }
-            
+            onDismiss(function: {self.player?.stop()})
             player.play()
             
         } catch let error {
