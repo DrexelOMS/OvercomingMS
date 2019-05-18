@@ -71,7 +71,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
                 name = "Food"
                 color = foodBar.colorTheme
             case .Omega3:
-                name = "Omega 3"
+                name = "Omega-3"
                 color = omega3Bar.colorTheme
             case .VitaminD:
                 name = "Vitamin D"

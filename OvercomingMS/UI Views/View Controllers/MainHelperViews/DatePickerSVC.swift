@@ -32,6 +32,7 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
         datePicker.scrollDirection = .horizontal
         
         datePicker.scrollToDate(Date(), animateScroll: false)
+
         
     }
     
@@ -44,7 +45,7 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
     }
     
     func handleCellTextColor(cell: DateCell, cellState: CellState) {
-        cell.completeLabel.text = ""
+        cell.completeImageView.image = UIImage(named: "incomplete-day")
         if  OMSDateAccessor().lessThanComparison(left: cellState.date, right: startDate) ||
             OMSDateAccessor().greaterThanComparison(left: cellState.date, right: OMSDateAccessor().todaysFullDate) {
             cell.numberLabel.textColor = UIColor.gray
@@ -53,7 +54,7 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
         }
         
         if TrackingModulesDBS(editingDate: OMSDateAccessor.getFormatedDate(date: cellState.date)).getTrackingDay().IsDayComplete {
-            cell.completeLabel.text = "*"
+            cell.completeImageView.image = UIImage(named: "complete-day")
         }
         
         cell.numberLabel.textColor = UIColor.black
@@ -80,7 +81,7 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
     }
     
     func calendarSizeForMonths(_ calendar: JTAppleCalendarView?) -> MonthSize? {
-        return MonthSize(defaultSize: 30)
+        return MonthSize(defaultSize: 50)
     }
     
     //MARK: Header setup
@@ -104,6 +105,14 @@ class DatePickerSVC : SlidingAbstractSVC, JTAppleCalendarViewDelegate, JTAppleCa
         globalCurrentFullDate = OMSDateAccessor().todaysFullDate
         
         parentVC.dismiss()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        DispatchQueue.main.async {
+            self.datePicker.flashScrollIndicators()
+        }
     }
     
 }

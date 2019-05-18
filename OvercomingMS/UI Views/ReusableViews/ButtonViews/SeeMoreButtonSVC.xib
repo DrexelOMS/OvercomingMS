@@ -31,12 +31,12 @@
                             <rect key="frame" x="15" y="0.0" width="250" height="60"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ube-G7-rU8">
-                                    <rect key="frame" x="0.0" y="0.0" width="190" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="210" height="60"/>
                                     <attributedString key="attributedText">
                                         <fragment content="(Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed)">
                                             <attributes>
                                                 <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="12" name="Avenir-Heavy"/>
+                                                <font key="NSFont" size="12" name="Avenir-Medium"/>
                                                 <real key="NSKern" value="0.0"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             </attributes>
@@ -45,10 +45,10 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSa-EX-k74" userLabel="buttonContainer">
-                                    <rect key="frame" x="205" y="0.0" width="45" height="60"/>
+                                    <rect key="frame" x="225" y="0.0" width="25" height="60"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSv-mJ-4nG">
-                                            <rect key="frame" x="0.0" y="7.5" width="45" height="45"/>
+                                            <rect key="frame" x="0.0" y="17.5" width="25" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="KSv-mJ-4nG" secondAttribute="height" multiplier="1:1" id="PfH-R5-9qr"/>
                                             </constraints>
@@ -59,7 +59,7 @@
                                         <constraint firstItem="KSv-mJ-4nG" firstAttribute="leading" secondItem="dSa-EX-k74" secondAttribute="leading" id="HdN-cd-2ko"/>
                                         <constraint firstItem="KSv-mJ-4nG" firstAttribute="centerY" secondItem="dSa-EX-k74" secondAttribute="centerY" id="d0s-eR-Ed5"/>
                                         <constraint firstAttribute="trailing" secondItem="KSv-mJ-4nG" secondAttribute="trailing" id="doS-pJ-T2E"/>
-                                        <constraint firstItem="KSv-mJ-4nG" firstAttribute="height" secondItem="dSa-EX-k74" secondAttribute="height" multiplier="3:4" id="s8j-pI-HbD"/>
+                                        <constraint firstItem="KSv-mJ-4nG" firstAttribute="height" secondItem="dSa-EX-k74" secondAttribute="height" multiplier="1:2.4" id="s8j-pI-HbD"/>
                                     </constraints>
                                 </view>
                             </subviews>

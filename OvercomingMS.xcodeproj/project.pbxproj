@@ -829,11 +829,11 @@
 			isa = PBXGroup;
 			children = (
 				0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */,
+				0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */,
 				0AEF7A47222ED4A4009A0292 /* BottomRoundCornersUIView.swift */,
 				0A59C99422710ECA00FC66B5 /* CustomButton.swift */,
 				0AA5285A2202623B00CCFEE7 /* RoundButton.swift */,
 				0AD7EB322223040F006F71C0 /* DoneCheckButton.swift */,
-				0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */,
 				0AEF7A51223025F9009A0292 /* OMSRoundedBox.swift */,
 			);
 			path = SharedUIViewSupers;

@@ -47,6 +47,7 @@ class HeaderSVC: CustomView {
         perfectDaysLabel.text = "0 great days!"
         
         messageLabel.adjustsFontSizeToFitWidth = true
+        messageLabel.font = UIFont(name:"Avenir-Medium", size: messageLabel.font.pointSize)
         startMotivationStartThread()
     }
     
@@ -59,9 +60,13 @@ class HeaderSVC: CustomView {
             mainColor = contrastSelectedTextColor
             offColor = contrastOffTextColor
             circleImage.image = UIImage(named: "circle-white")
+            messageLabel.textColor = UIColor.white
+            messageLabel.textAlignment = .center
+            messageLabel.font = UIFont(name:"Avenir-Heavy", size: messageLabel.font.pointSize)
         }
         else {
             circleImage.image = UIImage(named: "circle")
+            messageLabel.font = UIFont(name:"Avenir-Medium", size: messageLabel.font.pointSize)
         }
         
         switch currentMenuItem {
@@ -88,27 +93,19 @@ class HeaderSVC: CustomView {
         stopRestoreThread()
         
         messageLabel.text = message
-        messageLabel.textColor = UIColor.white
-        circlesLabel.textColor = UIColor.white
-        historyLabel.textColor = UIColor.white
-        messageLabel.textAlignment = .center
         
-        mainView.fillColor = colorTheme
-        
-        setLabelColors(colored: true)
+        self.mainView.fillColor = colorTheme
+        self.setLabelColors(colored: true)
         
         showMessageLabel()
     }
     
     func displayPreviousDateMessage() {
         messageLabel.text = "You are editing a past day!"
-        messageLabel.textColor = UIColor.white
-        circlesLabel.textColor = UIColor.white
-        historyLabel.textColor = UIColor.white
-        messageLabel.textAlignment = .center
         
-        mainView.fillColor = UIColor.gray
-        setLabelColors(colored: true)
+        self.mainView.fillColor = UIColor.gray
+        self.setLabelColors(colored: true)
+            
         showMessageLabel()
     }
     
@@ -192,10 +189,11 @@ class HeaderSVC: CustomView {
         let smallSize = 14 + (6) * rate
         
 
-        trackingLabel.font = UIFont(name:trackingLabel.font.fontName, size: bigFontSize)
-        circlesLabel.font = UIFont(name:circlesLabel.font.fontName, size: fontSize)
-        historyLabel.font = UIFont(name:historyLabel.font.fontName, size: fontSize)
+        trackingLabel.font = UIFont(name: trackingLabel.font.fontName, size: bigFontSize)
+        circlesLabel.font = UIFont(name: circlesLabel.font.fontName, size: fontSize)
+        historyLabel.font = UIFont(name: historyLabel.font.fontName, size: fontSize)
         
+        messageLabel.font = UIFont(name: daysInARow.font.fontName, size: smallSize)
         daysInARow.font = UIFont(name:daysInARow.font.fontName, size: smallSize)
         perfectDaysLabel.font = UIFont(name:perfectDaysLabel.font.fontName, size: smallSize)
     }

@@ -49,7 +49,7 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         
         let count = vitaminDHistory.getTodaysVitaminDItems()?.count ?? 0
         if count <= 0 {
-            tableView.setEmptyView(title: "No entries yet!", message: "")
+            tableView.setEmptyView(message: "No entries yet!")
         }
         else {
             tableView.restore()
