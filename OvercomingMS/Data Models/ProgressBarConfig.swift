@@ -56,7 +56,6 @@ class ProgressBarConfig {
             goalsDBS.writeGoals()
         }
     }
-    static let vitaminDUOM = "klUs"
     
     static var exerciseGoal : Int {
         get {

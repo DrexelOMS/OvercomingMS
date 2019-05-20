@@ -60,9 +60,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
     }
     
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        _ = OMSDateAccessor().todaysDate
-    }
-    
 }
 

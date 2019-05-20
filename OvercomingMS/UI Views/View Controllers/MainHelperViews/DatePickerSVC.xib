@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Regular.otf">
+            <string>Quicksand-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
@@ -22,12 +27,11 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7j6-4k-r8f" userLabel="CenteredVIew">
                     <rect key="frame" x="0.0" y="378" width="414" height="480"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mh-2v-4az">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mh-2v-4az">
                             <rect key="frame" x="150" y="0.0" width="114" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="lz0-Fw-OcB"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <state key="normal" title="Back to Today">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -101,23 +105,81 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEA-td-zv6" userLabel="legendContainer">
                             <rect key="frame" x="0.0" y="400" width="414" height="80"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="si9-wX-ges">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
-                                    <string key="text">*
-Great
-Day</string>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="RiB-66-aPe">
+                                    <rect key="frame" x="92" y="10" width="230" height="60"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wgt-6i-Ot1">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="60"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVS-cZ-nOU">
+                                                    <rect key="frame" x="18" y="0.0" width="54" height="27"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="incomplete-day" translatesAutoresizingMaskIntoConstraints="NO" id="2FO-1q-XgC">
+                                                            <rect key="frame" x="22.5" y="9" width="9" height="9"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="9" id="O5I-xz-fRY"/>
+                                                                <constraint firstAttribute="width" constant="9" id="fss-Qm-b5U"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="2FO-1q-XgC" firstAttribute="centerY" secondItem="uVS-cZ-nOU" secondAttribute="centerY" id="0WE-r1-WPr"/>
+                                                        <constraint firstItem="2FO-1q-XgC" firstAttribute="centerX" secondItem="uVS-cZ-nOU" secondAttribute="centerX" id="Lys-AI-8Fm"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="si9-wX-ges">
+                                                    <rect key="frame" x="0.0" y="27" width="90" height="33"/>
+                                                    <string key="text">INCOMPLETE
+DAY</string>
+                                                    <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7yF-lZ-8Wk">
+                                            <rect key="frame" x="140" y="0.0" width="90" height="60"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAz-Gs-4IS">
+                                                    <rect key="frame" x="18" y="0.0" width="54" height="27"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="complete-day" translatesAutoresizingMaskIntoConstraints="NO" id="9rO-GF-O3e">
+                                                            <rect key="frame" x="22.5" y="9" width="9" height="9"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="9" id="gch-ua-Sf5"/>
+                                                                <constraint firstAttribute="height" constant="9" id="pZw-R6-68T"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="9rO-GF-O3e" firstAttribute="centerY" secondItem="PAz-Gs-4IS" secondAttribute="centerY" id="9Uf-Hi-T8m"/>
+                                                        <constraint firstItem="9rO-GF-O3e" firstAttribute="centerX" secondItem="PAz-Gs-4IS" secondAttribute="centerX" id="GM1-NE-xHH"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCx-bg-oru">
+                                                    <rect key="frame" x="22.5" y="27" width="45.5" height="33"/>
+                                                    <string key="text">GREAT
+DAY</string>
+                                                    <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7yF-lZ-8Wk" firstAttribute="width" secondItem="Wgt-6i-Ot1" secondAttribute="width" id="OcI-0g-GW4"/>
+                                    </constraints>
+                                </stackView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="si9-wX-ges" firstAttribute="top" secondItem="rEA-td-zv6" secondAttribute="top" id="NoI-Te-DqG"/>
-                                <constraint firstAttribute="trailing" secondItem="si9-wX-ges" secondAttribute="trailing" id="RrH-eT-oj1"/>
+                                <constraint firstAttribute="bottom" secondItem="RiB-66-aPe" secondAttribute="bottom" constant="10" id="E3L-SF-5gM"/>
+                                <constraint firstItem="RiB-66-aPe" firstAttribute="top" secondItem="rEA-td-zv6" secondAttribute="top" constant="10" id="SHg-2q-LLe"/>
+                                <constraint firstItem="RiB-66-aPe" firstAttribute="centerX" secondItem="rEA-td-zv6" secondAttribute="centerX" id="cD5-yg-KeU"/>
                                 <constraint firstAttribute="height" constant="80" id="hdL-Nj-usv"/>
-                                <constraint firstItem="si9-wX-ges" firstAttribute="leading" secondItem="rEA-td-zv6" secondAttribute="leading" id="hh9-XI-VUq"/>
-                                <constraint firstAttribute="bottom" secondItem="si9-wX-ges" secondAttribute="bottom" id="oLg-B0-3hw"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -143,4 +205,8 @@ Day</string>
             <point key="canvasLocation" x="47.826086956521742" y="48.214285714285715"/>
         </view>
     </objects>
+    <resources>
+        <image name="complete-day" width="11" height="10"/>
+        <image name="incomplete-day" width="10" height="10"/>
+    </resources>
 </document>

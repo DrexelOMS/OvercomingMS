@@ -49,14 +49,14 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         
         let count = vitaminDHistory.getTodaysVitaminDItems()?.count ?? 0
         if count <= 0 {
-            tableView.setEmptyView(title: "No entries yet!", message: "")
+            tableView.setEmptyView(message: "No entries yet!")
         }
         else {
             tableView.restore()
         }
         
-        totalsCountLabel.text = String(vitaminDHistory.getTotalAmount())
-        totalsTextLabel.text = "\(ProgressBarConfig.vitaminDUOM)\nToday"
+        totalsCountLabel.text = String(vitaminDHistory.getTotalAmount()) + "k"
+        totalsTextLabel.text = "IUs\nToday"
     }
     
     func addButtonPressed() {
@@ -91,7 +91,7 @@ class VitaminDMainSVC: MainAbstractSVC, UITableViewDelegate, UITableViewDataSour
         cell.labelLeft.text = items[indexPath.row].VitaminDType
         let startTime = items[indexPath.row].StartTime
         cell.labelCenter.text = OMSDateAccessor.getDateTime(date: startTime)
-        cell.labelRight.text =  "\(items[indexPath.row].Amount) \(ProgressBarConfig.vitaminDUOM)"
+        cell.labelRight.text =  "\(items[indexPath.row].Amount)k IUs"
         
         return cell
     }

@@ -73,6 +73,7 @@
 		0A4CC882226021F8004C97BC /* TrackingModuleVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */; };
 		0A59C991226FF6B900FC66B5 /* SymptomsTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A59C990226FF6B800FC66B5 /* SymptomsTableHeader.swift */; };
 		0A59C99522710ECA00FC66B5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A59C99422710ECA00FC66B5 /* CustomButton.swift */; };
+		0A6464E122906B3600BB0534 /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6464E022906B3600BB0534 /* LabelExtension.swift */; };
 		0A67C888227C7284001D2E0C /* FoodModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C887227C7284001D2E0C /* FoodModuleVC.swift */; };
 		0A67C88A227C7518001D2E0C /* FoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C889227C7518001D2E0C /* FoodHeader.swift */; };
 		0A67C88C227C7529001D2E0C /* FoodHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67C88B227C7529001D2E0C /* FoodHeader.xib */; };
@@ -313,6 +314,7 @@
 		0A4CC881226021F8004C97BC /* TrackingModuleVCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleVCFactory.swift; sourceTree = "<group>"; };
 		0A59C990226FF6B800FC66B5 /* SymptomsTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsTableHeader.swift; sourceTree = "<group>"; };
 		0A59C99422710ECA00FC66B5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		0A6464E022906B3600BB0534 /* LabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
 		0A67C887227C7284001D2E0C /* FoodModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModuleVC.swift; sourceTree = "<group>"; };
 		0A67C889227C7518001D2E0C /* FoodHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHeader.swift; sourceTree = "<group>"; };
 		0A67C88B227C7529001D2E0C /* FoodHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodHeader.xib; sourceTree = "<group>"; };
@@ -693,6 +695,7 @@
 			isa = PBXGroup;
 			children = (
 				0A3EB6F322594FF800D25AF5 /* TableViewExtensions.swift */,
+				0A6464E022906B3600BB0534 /* LabelExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -834,11 +837,11 @@
 			isa = PBXGroup;
 			children = (
 				0A93EA5C22132C560063A892 /* TopRoundCornersUIView.swift */,
+				0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */,
 				0AEF7A47222ED4A4009A0292 /* BottomRoundCornersUIView.swift */,
 				0A59C99422710ECA00FC66B5 /* CustomButton.swift */,
 				0AA5285A2202623B00CCFEE7 /* RoundButton.swift */,
 				0AD7EB322223040F006F71C0 /* DoneCheckButton.swift */,
-				0AD7EB47222345A9006F71C0 /* ToggleLabeledCircleButton.swift */,
 				0AEF7A51223025F9009A0292 /* OMSRoundedBox.swift */,
 			);
 			path = SharedUIViewSupers;
@@ -1532,6 +1535,7 @@
 				0A030F7B22555C9400857BC8 /* MedicationNotTakenItemSVC.swift in Sources */,
 				0AE34192226D0D9D00F34293 /* DateHeader.swift in Sources */,
 				0AD94DE1220E178E00B5C2BA /* MeditationMainSVC.swift in Sources */,
+				0A6464E122906B3600BB0534 /* LabelExtension.swift in Sources */,
 				0AA5285022022F1700CCFEE7 /* MainAbstractSVC.swift in Sources */,
 				0AACE78722694403001803DA /* OutsideSVC.swift in Sources */,
 				0AEF7A3A222CD774009A0292 /* GoalsMainSVC.swift in Sources */,

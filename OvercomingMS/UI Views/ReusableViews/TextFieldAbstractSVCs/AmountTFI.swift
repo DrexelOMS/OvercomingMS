@@ -13,15 +13,22 @@ class AmountTFI : TFIAbstract {
     var savedText : String = ""
     var selectedAmount : Int? {
         didSet {
-            textField.text = "\(selectedAmount!) \(uom)"
+            if isTenK {
+                textField.text = "\(selectedAmount!)k \(uom)"
+            }
+            else {
+                textField.text = "\(selectedAmount!) \(uom)"
+            }
         }
     }
-    var uom : String = ""
+    var uom: String = ""
+    var isTenK: Bool = false
     
-    convenience init(uom: String) {
+    convenience init(uom: String, isTenK: Bool = false) {
         self.init()
         
         self.uom = uom
+        self.isTenK = isTenK
     }
     
     override func customSetup() {

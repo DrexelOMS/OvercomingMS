@@ -16,6 +16,8 @@ class SwipeDownVC : DismissableVC {
     
     var theme : UIColor = UIColor.gray
     
+    private var lockSwipe = false
+    
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //
@@ -24,6 +26,11 @@ class SwipeDownVC : DismissableVC {
 //        view.backgroundColor = theme.withAlphaComponent(0.6)
 //        setupGestures()
 //    }
+    
+    func disableSwipe() {
+        pullBarSVC.isHidden = true
+        lockSwipe = true
+    }
     
     private func setupContentStackView() {
         let contentView = UIView()
@@ -138,6 +145,8 @@ class SwipeDownVC : DismissableVC {
     //TODO: repair to take the changing safe area
     @objc func draggedView(_ sender: UIPanGestureRecognizer) {
 
+        if lockSwipe { return }
+        
         let touchPoint = sender.location(in: self.view?.window)
         if sender.state == UIGestureRecognizer.State.began {
             initialTouchPoint = touchPoint

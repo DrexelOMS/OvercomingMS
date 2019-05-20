@@ -39,6 +39,7 @@ class SeeMoreButtonSVC : CustomView {
     override func layoutSubviews() {
         super.layoutSubviews()
         DispatchQueue.main.async {
+            
             var rate = 1 - ((60 - self.frame.height)) / 22
             rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
             

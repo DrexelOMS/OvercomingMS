@@ -29,8 +29,8 @@ class GoalsModifyFactory {
         let svc = GoalsModifySVC()
         
         //Initialize Variables
-        svc.header.titleText = "Omega 3"
-        svc.header.descriptionText = "What is your daily goal for Omega 3"
+        svc.header.titleText = "Omega-3"
+        svc.header.descriptionText = "What is your daily goal for Omega-3"
         svc.currentGoalLabel.text = String(ProgressBarConfig.omega3Goal)
         svc.goalUnitLabel.text = "grams"
         svc.Module = .Omega3
@@ -47,10 +47,10 @@ class GoalsModifyFactory {
         svc.header.titleText = "Vitamin D"
         svc.header.descriptionText = "What is your daily goal for Vitamin D"
         svc.currentGoalLabel.text = String(ProgressBarConfig.vitaminDGoal)
-        svc.goalUnitLabel.text = ProgressBarConfig.vitaminDUOM
+        svc.goalUnitLabel.text = "k IUs"
         svc.Module = .VitaminD
         svc.goal = ProgressBarConfig.vitaminDGoal
-        svc.omsRecommendedGoal.text = "OMS recommended goal = " + String(GoalsDBT().VitaminDGoal) + " \(ProgressBarConfig.vitaminDUOM)"
+        svc.omsRecommendedGoal.text = "OMS recommended goal = " + String(GoalsDBT().VitaminDGoal) + "k IUs"
         
         return svc
     }

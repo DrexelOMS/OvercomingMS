@@ -33,7 +33,7 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
     override func reload() {
         foodButton.goalDescription = "\(ProgressBarConfig.getfoodDescription(rating: ProgressBarConfig.foodRatingGoal)) (\(ProgressBarConfig.foodRatingGoal)/5)"
         omega3Button.goalDescription = "\(ProgressBarConfig.omega3Goal) \(ProgressBarConfig.omega3UOM)"
-        vitaminDButton.goalDescription = "\(ProgressBarConfig.vitaminDGoal) \(ProgressBarConfig.vitaminDUOM)"
+        vitaminDButton.goalDescription = "\(ProgressBarConfig.vitaminDGoal)k IUs"
         exerciseButton.goalDescription = "\(ProgressBarConfig.exerciseGoal) \(ProgressBarConfig.lengthUOM)"
         meditationButton.goalDescription = "\(ProgressBarConfig.meditationGoal) \(ProgressBarConfig.lengthUOM)"
     }
