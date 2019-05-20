@@ -29,10 +29,10 @@
             </userGuides>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-zo-gfa">
-                    <rect key="frame" x="0.0" y="50" width="320" height="408"/>
+                    <rect key="frame" x="0.0" y="50" width="320" height="418"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-Ju-4Vj">
-                            <rect key="frame" x="20" y="0.0" width="280" height="388"/>
+                            <rect key="frame" x="20" y="0.0" width="280" height="398"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjQ-4D-czE" userLabel="LabelView">
                                     <rect key="frame" x="0.0" y="0.0" width="280" height="90"/>
@@ -69,17 +69,17 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDu-S9-dhl">
-                                    <rect key="frame" x="0.0" y="105" width="280" height="202"/>
+                                    <rect key="frame" x="0.0" y="105" width="280" height="212"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJJ-Bb-hFM" userLabel="Border">
-                                    <rect key="frame" x="0.0" y="322" width="280" height="1"/>
+                                    <rect key="frame" x="0.0" y="332" width="280" height="1"/>
                                     <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="wee-62-KrA"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifI-jM-CKr" userLabel="ReferenceView">
-                                    <rect key="frame" x="0.0" y="338" width="280" height="50"/>
+                                    <rect key="frame" x="0.0" y="348" width="280" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0g-ob-rF2" userLabel="FoodView">
                                             <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -172,7 +172,7 @@
                 <constraint firstItem="cbz-sv-NAZ" firstAttribute="trailing" secondItem="2xq-M4-vqp" secondAttribute="trailing" id="GPV-do-OGj"/>
                 <constraint firstItem="cbz-sv-NAZ" firstAttribute="leading" secondItem="2xq-M4-vqp" secondAttribute="leading" id="L4T-MV-zef"/>
                 <constraint firstItem="VOy-zo-gfa" firstAttribute="leading" secondItem="2xq-M4-vqp" secondAttribute="leading" id="Lxf-2q-a7A"/>
-                <constraint firstItem="cbz-sv-NAZ" firstAttribute="top" secondItem="VOy-zo-gfa" secondAttribute="bottom" constant="10" id="MHV-gp-dAJ"/>
+                <constraint firstItem="cbz-sv-NAZ" firstAttribute="top" secondItem="VOy-zo-gfa" secondAttribute="bottom" id="MHV-gp-dAJ"/>
                 <constraint firstItem="cbz-sv-NAZ" firstAttribute="bottom" secondItem="2xq-M4-vqp" secondAttribute="bottom" id="glq-DV-QVH"/>
                 <constraint firstItem="VOy-zo-gfa" firstAttribute="trailing" secondItem="2xq-M4-vqp" secondAttribute="trailing" id="h34-59-eG3"/>
             </constraints>

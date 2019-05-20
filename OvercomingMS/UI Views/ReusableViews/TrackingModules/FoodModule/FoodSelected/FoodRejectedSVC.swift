@@ -21,6 +21,9 @@ class FoodRejectedSVC: CustomView, UITableViewDelegate, UITableViewDataSource {
     var parentVC: SlidingStackVC!
     var buttonAction: (() -> ())?
     
+    @IBOutlet weak var cautionLabel: UILabel!
+    @IBOutlet weak var suprisedLabel: UILabel!
+    
     convenience init(_badLabels: [String], seeMoreMethod: @escaping () -> ()) {
         self.init()
         
@@ -63,4 +66,17 @@ class FoodRejectedSVC: CustomView, UITableViewDelegate, UITableViewDataSource {
         action()
     }
     
+    override func layoutSubviews() {
+        DispatchQueue.main.async {
+            var rate = 1 - ((896 -  UIScreen.main.bounds.height)) / 328
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let bigFontSize = 18 + (6) * rate
+            let fontSize = 12 + (4) * rate
+            
+            self.cautionLabel.font = UIFont(name: self.cautionLabel.font.fontName, size: bigFontSize)
+            self.suprisedLabel.font = UIFont(name: self.suprisedLabel.font.fontName, size: fontSize)
+            
+        }
+    }
 }
