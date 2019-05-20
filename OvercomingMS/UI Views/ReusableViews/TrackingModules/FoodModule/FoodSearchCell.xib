@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.otf">
+            <string>Quicksand-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,30 +26,32 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojc-GV-gz1" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
                         <rect key="frame" x="10" y="10" width="355" height="79.5"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hhy-n1-3D6">
-                                <rect key="frame" x="20" y="0.0" width="315" height="79.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Hhy-n1-3D6">
+                                <rect key="frame" x="20" y="15.5" width="315" height="48.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBE-sF-qoa">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBE-sF-qoa">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="21"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qi-4K-ehn">
-                                        <rect key="frame" x="0.0" y="40" width="315" height="39.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="25" width="315" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="h2q-ga-XrM"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Hhy-n1-3D6" firstAttribute="top" secondItem="ojc-GV-gz1" secondAttribute="top" id="3bR-UO-riX"/>
-                            <constraint firstAttribute="bottom" secondItem="Hhy-n1-3D6" secondAttribute="bottom" id="3ct-ut-ycw"/>
                             <constraint firstItem="Hhy-n1-3D6" firstAttribute="leading" secondItem="ojc-GV-gz1" secondAttribute="leading" constant="20" id="9kp-On-9co"/>
                             <constraint firstAttribute="trailing" secondItem="Hhy-n1-3D6" secondAttribute="trailing" constant="20" id="CCz-qa-pie"/>
+                            <constraint firstItem="Hhy-n1-3D6" firstAttribute="centerY" secondItem="ojc-GV-gz1" secondAttribute="centerY" id="UTH-an-F4R"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -60,7 +67,7 @@
                 <outlet property="descriptionLabel" destination="5qi-4K-ehn" id="aBg-5W-9ck"/>
                 <outlet property="nameLabel" destination="KBE-sF-qoa" id="Ka5-GP-zYL"/>
             </connections>
-            <point key="canvasLocation" x="128.80000000000001" y="28.335832083958024"/>
+            <point key="canvasLocation" x="128.80000000000001" y="27.886056971514247"/>
         </tableViewCell>
     </objects>
 </document>
