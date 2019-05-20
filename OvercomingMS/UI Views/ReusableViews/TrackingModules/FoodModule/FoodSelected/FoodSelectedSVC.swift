@@ -120,7 +120,6 @@ class FoodSelectedSVC : SlidingAbstractSVC {
             self.foodNameLabel.font = UIFont(name: self.foodNameLabel.font.fontName, size: bigFontSize)
             self.foodDescriptionLabel.font = UIFont(name: self.foodDescriptionLabel.font.fontName, size: fontSize)
             self.learnMoreLabel.font = UIFont(name: self.learnMoreLabel.font.fontName, size: smallSize)
-            
             self.topLabelsHeightConstraint.constant = topHeight
         }
     }

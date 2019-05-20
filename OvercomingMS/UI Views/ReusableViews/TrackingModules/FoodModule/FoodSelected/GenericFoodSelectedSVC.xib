@@ -28,42 +28,23 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="340"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oj-9m-R8A" userLabel="BorderTop">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
-                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="akr-eK-0uf"/>
-                    </constraints>
-                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FP2-Hv-hMN">
-                    <rect key="frame" x="10" y="21" width="300" height="319"/>
+                    <rect key="frame" x="10" y="0.0" width="300" height="340"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYN-WV-P5I">
-                            <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check the nutrition label to make sure the food isn’t in one of these categories:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYN-WV-P5I">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
                             <constraints>
-                                <constraint firstAttribute="height" priority="999" constant="40" id="Qde-aJ-KJj"/>
+                                <constraint firstAttribute="height" priority="999" constant="60" id="Qde-aJ-KJj"/>
                             </constraints>
-                            <attributedString key="attributedText">
-                                <fragment content="Check the nutrition label to make sure the food isn’t in one of these categories:">
-                                    <attributes>
-                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" metaFont="system" size="14.666666984558105"/>
-                                        <real key="NSKern" value="0.0"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                            <tabStops/>
-                                        </paragraphStyle>
-                                        <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <real key="NSStrokeWidth" value="0.0"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSo-q0-b6g" userLabel="CategoryView">
-                            <rect key="frame" x="0.0" y="50" width="300" height="269"/>
+                            <rect key="frame" x="0.0" y="70" width="300" height="270"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HOV-vR-cKL">
-                                    <rect key="frame" x="0.0" y="34.5" width="300" height="200"/>
+                                    <rect key="frame" x="0.0" y="35" width="300" height="200"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lag-Ls-vQU" userLabel="LeftView">
                                             <rect key="frame" x="0.0" y="0.0" width="145" height="200"/>
@@ -219,13 +200,10 @@
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstItem="9oj-9m-R8A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6tG-9u-eOv"/>
                 <constraint firstItem="FP2-Hv-hMN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="E58-i9-AUS"/>
+                <constraint firstItem="FP2-Hv-hMN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="EAa-zc-Mj2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FP2-Hv-hMN" secondAttribute="trailing" constant="10" id="G6G-gI-PwZ"/>
                 <constraint firstAttribute="bottom" secondItem="FP2-Hv-hMN" secondAttribute="bottom" id="N87-PI-ufw"/>
-                <constraint firstItem="9oj-9m-R8A" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cVm-eI-xuW"/>
-                <constraint firstAttribute="trailing" secondItem="9oj-9m-R8A" secondAttribute="trailing" id="dl0-Pz-0AJ"/>
-                <constraint firstItem="FP2-Hv-hMN" firstAttribute="top" secondItem="9oj-9m-R8A" secondAttribute="bottom" constant="20" id="kYw-B4-pCC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
