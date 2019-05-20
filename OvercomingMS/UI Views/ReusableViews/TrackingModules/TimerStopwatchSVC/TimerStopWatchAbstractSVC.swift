@@ -42,9 +42,9 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     
     var seconds = 0
     var startTime = Date() //This is when you STARTED THE TIMER, not to be used as the countown length
-    private var firstStart = true
+    public var firstStart = true
     private var timer = Timer()
-    private var isTimerRunning = false
+    public var isTimerRunning = false
     
     override func customSetup() {
         timerLabel.text = "00:00:00"
@@ -75,7 +75,7 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     
     func cancel() {}
     
-    private func stopTimer() {
+    public func stopTimer() {
         startPauseButton.setResumeMode()
         descriptionLabel.text = pauseMessage
         
@@ -83,7 +83,7 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
         isTimerRunning = false
     }
     
-    private func resumeTimer() {
+    public func resumeTimer() {
         startPauseButton.setPauseMode()
         descriptionLabel.text = resumeMessage
         
