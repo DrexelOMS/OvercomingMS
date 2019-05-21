@@ -62,7 +62,7 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
         
         let count = sections.count
         if count <= 0 {
-            tableView.setEmptyView(title: "No notes yet!", message: "")
+            tableView.setEmptyView(message: "No notes yet!")
         }
         else {
             tableView.restore()

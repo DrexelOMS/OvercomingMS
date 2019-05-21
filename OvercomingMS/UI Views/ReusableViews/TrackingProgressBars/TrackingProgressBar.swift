@@ -180,47 +180,47 @@ class TrackingProgressBar: CustomView {
             }
         }
         else {
-            setRightLabel(description: "")
+            // TODO: fix issue where right label description cannot be ""
+            self.setRightLabel(description: " ")
             setColorMode(completed: true)
-            
+
             if !hasProgressBar {
                 progressBarContainer.isHidden = true
                 paddingView.isHidden = true
             }
         }
-        
     }
     
     override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        var compBarThickness = frame.height * 2 / 9
-        if compBarThickness > 16 {
-            compBarThickness = 16
+        DispatchQueue.main.async {
+            var compBarThickness = self.frame.height * 2 / 9
+            if compBarThickness > 16 {
+                compBarThickness = 16
+            }
+            else if compBarThickness < 10 {
+                compBarThickness = 10
+            }
+            
+            self.progressBarContainer.cornerRadius = compBarThickness / 2
+            self.linearProgressBar.barThickness = compBarThickness
+            
+            var viewHeight = self.frame.height
+            if viewHeight > 65 {
+                viewHeight = 65
+            }
+            else if viewHeight < 45 {
+                viewHeight = 45
+            }
+            
+            self.shadowedRoundedView.cornerRadius = viewHeight / 4
+            self.roundedView.cornerRadius = viewHeight / 4
+            
+            let bigFontSize = compBarThickness + 7
+            let smallFontSize = compBarThickness + 3
+            
+            self.leftLabel.font = UIFont(name: self.leftLabel.font.fontName, size: bigFontSize)
+            self.rightLabel.font = UIFont(name: self.rightLabel.font.fontName, size: smallFontSize)
         }
-        else if compBarThickness < 10 {
-            compBarThickness = 10
-        }
-        
-        progressBarContainer.cornerRadius = compBarThickness / 2
-        linearProgressBar.barThickness = compBarThickness
-        
-        var viewHeight = frame.height
-        if viewHeight > 65 {
-            viewHeight = 65
-        }
-        else if viewHeight < 45 {
-            viewHeight = 45
-        }
-        shadowedRoundedView.cornerRadius = viewHeight / 4
-        roundedView.cornerRadius = viewHeight / 4
-        
-        let bigFontSize = compBarThickness + 7
-        let smallFontSize = compBarThickness + 3
-        
-        leftLabel.font = UIFont(name: leftLabel.font.fontName, size: bigFontSize)
-        rightLabel.font = UIFont(name: rightLabel.font.fontName, size: smallFontSize)
-        
     }
 }
 
