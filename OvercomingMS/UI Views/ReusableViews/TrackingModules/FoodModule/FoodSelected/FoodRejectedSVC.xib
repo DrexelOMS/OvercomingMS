@@ -17,6 +17,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodRejectedSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
+                <outlet property="cautionLabel" destination="skg-zk-yXv" id="LDn-Ky-JY5"/>
+                <outlet property="suprisedLabel" destination="uMX-RW-1aT" id="Yk3-B8-Qow"/>
                 <outlet property="tableView" destination="dUM-GF-uou" id="LJ0-MC-3Uf"/>
             </connections>
         </placeholder>
@@ -35,7 +37,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="POH-dO-FAJ">
-                                            <rect key="frame" x="1" y="0.0" width="258" height="30"/>
+                                            <rect key="frame" x="14" y="0.0" width="232" height="30"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RiQ-Ek-SAn">
                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -54,7 +56,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caution! This food has ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skg-zk-yXv">
-                                                    <rect key="frame" x="40" y="0.0" width="218" height="30"/>
+                                                    <rect key="frame" x="40" y="0.0" width="192" height="30"/>
                                                     <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="18"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -155,7 +157,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Caution" width="19" height="20"/>
+        <image name="Caution" width="45" height="45"/>
         <image name="Forward" width="45" height="45"/>
     </resources>
 </document>
