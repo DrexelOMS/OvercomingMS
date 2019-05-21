@@ -40,6 +40,7 @@ class FoodSearchSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewDataSo
         tableView.register(UINib(nibName: foodCellName, bundle: nil), forCellReuseIdentifier: foodCellName)
         
         searchBarButton.SearchButton.addTarget(self, action: #selector(getJsonFromUrl), for: .touchUpInside)
+        searchBarButton.tableView = tableView
     }
     
     override func updateColors() {

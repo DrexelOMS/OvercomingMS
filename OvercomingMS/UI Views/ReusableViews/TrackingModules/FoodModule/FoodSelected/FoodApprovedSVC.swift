@@ -19,4 +19,17 @@ class FoodApprovedSVC: CustomView {
         
     }
     
+    @IBOutlet weak var label: UILabel!
+    
+    override func layoutSubviews() {
+        DispatchQueue.main.async {
+            var rate = 1 - ((896 -  UIScreen.main.bounds.height)) / 328
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let fontSize = 20 + (8) * rate
+            
+            self.label.font = UIFont(name: self.label.font.fontName, size: fontSize)
+        }
+    }
+    
 }

@@ -20,6 +20,7 @@ class SearchBarButton: CustomView, UITextFieldDelegate{
         }
     }
     let test = UIView()
+    var tableView: UITableView!
 
     override func customSetup() {
         SearchTextField.delegate = self
@@ -28,8 +29,9 @@ class SearchBarButton: CustomView, UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
 //        self.frame.size.height += 250;
 //        self.frame.size.width = 1000;
+        tableView.isHidden = true
         test.backgroundColor = DesignConstants.DEFAULT_BACKGROUND_COLOR
-        test.frame = CGRect(x: -100, y: 0, width: 500, height: 250)
+        test.frame = CGRect(x: -100, y: -75, width: 1000, height: 1000)
         self.contentView?.addSubview(test)
         self.contentView?.sendSubviewToBack(test)
 
@@ -39,7 +41,8 @@ class SearchBarButton: CustomView, UITextFieldDelegate{
     
     // Finish Editing The Text Field
     func textFieldDidEndEditing(_ textField: UITextField) {
-        //self.frame.size.height -= 250;
+//        self.frame.size.height -= 250;
+        tableView.isHidden = false
         test.removeFromSuperview()
         moveTextField(textField, moveDistance: -250, up: false)
     }

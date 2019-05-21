@@ -11,15 +11,23 @@ import UIKit
 extension UITableView {
     
     func setEmptyView(title: String, message: String) {
+        
+        var rate = 1 - ((414 -  UIScreen.main.bounds.width)) / 94
+        rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+        
+        let bigFontSize = 20 + (8) * rate
+        let smallFontSize = 14 + (6) * rate
+        
+        print("Screen size \(UIScreen.main.bounds)")
         let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
         let titleLabel = UILabel()
         let messageLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textColor = UIColor.black
-        titleLabel.font = UIFont(name: "Quicksand-Bold", size: 18)
+        titleLabel.font = UIFont(name: "Quicksand-Bold", size: bigFontSize)
         messageLabel.textColor = UIColor.lightGray
-        messageLabel.font = UIFont(name: "Avenir-Medium", size: 12)
+        messageLabel.font = UIFont(name: "Avenir-Medium", size: smallFontSize)
         emptyView.addSubview(titleLabel)
         emptyView.addSubview(messageLabel)
         titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
@@ -40,11 +48,17 @@ extension UITableView {
     }
     
     func setEmptyView(message: String) {
+        
+        var rate = 1 - ((414 -  UIScreen.main.bounds.width)) / 94
+        rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+        
+        let fontSize = 18 + (6) * rate
+        
         let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
         let messageLabel = UILabel()
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.textColor = UIColor.lightGray
-        messageLabel.font = UIFont(name: "Avenir-Medium", size: 16)
+        messageLabel.font = UIFont(name: "Avenir-Medium", size: fontSize)
         emptyView.addSubview(messageLabel)
         messageLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
         messageLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
