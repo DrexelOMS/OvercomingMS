@@ -75,6 +75,7 @@
 		0A59C99522710ECA00FC66B5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A59C99422710ECA00FC66B5 /* CustomButton.swift */; };
 		0A6464E122906B3600BB0534 /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6464E022906B3600BB0534 /* LabelExtension.swift */; };
 		0A655F222293871B00CD9ACB /* Tutorial720.mov in Resources */ = {isa = PBXBuildFile; fileRef = 0A655F212293871B00CD9ACB /* Tutorial720.mov */; };
+		0A655F2D2294D3A300CD9ACB /* OvercomingMSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F2C2294D3A300CD9ACB /* OvercomingMSTests.swift */; };
 		0A67C888227C7284001D2E0C /* FoodModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C887227C7284001D2E0C /* FoodModuleVC.swift */; };
 		0A67C88A227C7518001D2E0C /* FoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C889227C7518001D2E0C /* FoodHeader.swift */; };
 		0A67C88C227C7529001D2E0C /* FoodHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67C88B227C7529001D2E0C /* FoodHeader.xib */; };
@@ -209,13 +210,10 @@
 		0CAD6319221DD50500E50E72 /* SeeMoreButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */; };
 		0CB44DEA2223280F004D0580 /* MeditationSetupSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB44DE92223280F004D0580 /* MeditationSetupSVC.xib */; };
 		0CBE98AD2223835300D3C090 /* TitleTimeOverTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE98AC2223835300D3C090 /* TitleTimeOverTextCell.xib */; };
-		2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DB15DE7BD4F81C71B1DD55 /* Pods_OvercomingMSTests.framework */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
 		6129745421DF017E00B9846C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745221DF017E00B9846C /* Main.storyboard */; };
 		6129745621DF017F00B9846C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6129745521DF017F00B9846C /* Assets.xcassets */; };
 		6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745721DF017F00B9846C /* LaunchScreen.storyboard */; };
-		6129746421DF017F00B9846C /* OvercomingMSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746321DF017F00B9846C /* OvercomingMSTests.swift */; };
-		6129746F21DF017F00B9846C /* OvercomingMSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129746E21DF017F00B9846C /* OvercomingMSUITests.swift */; };
 		83985923222D758E00782A10 /* MeditationModifySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985922222D758E00782A10 /* MeditationModifySVC.swift */; };
 		D03BBBCB2290908C0012CF60 /* 5_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC72290907E0012CF60 /* 5_Minute.mp3 */; };
 		D03BBBCC2290908C0012CF60 /* 35_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC8229090840012CF60 /* 35_Minute.mp3 */; };
@@ -226,19 +224,11 @@
 		D069C2752280F8A4009BB49D /* ContinueButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */; };
 		D071C390227F71B1009C7428 /* SettingsTutorialsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071C38F227F71B1009C7428 /* SettingsTutorialsSVC.swift */; };
 		D0ED4F672280F346006153B0 /* WelcomePageSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0ED4F662280F346006153B0 /* WelcomePageSVC.xib */; };
-		DD500F23445D0A98AC159E98 /* Pods_OvercomingMSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613999C2BAE695AFE369D7B7 /* Pods_OvercomingMSUITests.framework */; };
 		E52344C266EF89DAB14C6AA3 /* Pods_OvercomingMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFED95C83375718D7DCA1211 /* Pods_OvercomingMS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6129746021DF017F00B9846C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6129744321DF017E00B9846C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6129744A21DF017E00B9846C;
-			remoteInfo = OvercomingMS;
-		};
-		6129746B21DF017F00B9846C /* PBXContainerItemProxy */ = {
+		0A655F2F2294D3A300CD9ACB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6129744321DF017E00B9846C /* Project object */;
 			proxyType = 1;
@@ -316,6 +306,9 @@
 		0A59C99422710ECA00FC66B5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0A6464E022906B3600BB0534 /* LabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
 		0A655F212293871B00CD9ACB /* Tutorial720.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Tutorial720.mov; sourceTree = "<group>"; };
+		0A655F2A2294D3A300CD9ACB /* OvercomingMSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OvercomingMSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A655F2C2294D3A300CD9ACB /* OvercomingMSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvercomingMSTests.swift; sourceTree = "<group>"; };
+		0A655F2E2294D3A300CD9ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A67C887227C7284001D2E0C /* FoodModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModuleVC.swift; sourceTree = "<group>"; };
 		0A67C889227C7518001D2E0C /* FoodHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHeader.swift; sourceTree = "<group>"; };
 		0A67C88B227C7529001D2E0C /* FoodHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodHeader.xib; sourceTree = "<group>"; };
@@ -466,12 +459,6 @@
 		6129745521DF017F00B9846C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6129745821DF017F00B9846C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6129745A21DF017F00B9846C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6129745F21DF017F00B9846C /* OvercomingMSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OvercomingMSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6129746321DF017F00B9846C /* OvercomingMSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvercomingMSTests.swift; sourceTree = "<group>"; };
-		6129746521DF017F00B9846C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6129746A21DF017F00B9846C /* OvercomingMSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OvercomingMSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6129746E21DF017F00B9846C /* OvercomingMSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvercomingMSUITests.swift; sourceTree = "<group>"; };
-		6129747021DF017F00B9846C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		613999C2BAE695AFE369D7B7 /* Pods_OvercomingMSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvercomingMSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64624BC75971C455C566E626 /* Pods-OvercomingMSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.release.xcconfig"; sourceTree = "<group>"; };
 		724CCA850B24CDC7CCFAF25E /* Pods-OvercomingMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -493,27 +480,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0A655F272294D3A300CD9ACB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6129744821DF017E00B9846C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E52344C266EF89DAB14C6AA3 /* Pods_OvercomingMS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6129745C21DF017F00B9846C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2310EA814DED1C3B3CCAF6FC /* Pods_OvercomingMSTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6129746721DF017F00B9846C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD500F23445D0A98AC159E98 /* Pods_OvercomingMSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +676,15 @@
 				0A6464E022906B3600BB0534 /* LabelExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0A655F2B2294D3A300CD9ACB /* OvercomingMSTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A655F2C2294D3A300CD9ACB /* OvercomingMSTests.swift */,
+				0A655F2E2294D3A300CD9ACB /* Info.plist */,
+			);
+			path = OvercomingMSTests;
 			sourceTree = "<group>";
 		};
 		0A7FC87721F0FAB600492E93 /* Supporting Files */ = {
@@ -1024,8 +1011,7 @@
 				D03BBBC92290908A0012CF60 /* 45_Minute.mp3 */,
 				0A655F212293871B00CD9ACB /* Tutorial720.mov */,
 				6129744D21DF017E00B9846C /* OvercomingMS */,
-				6129746221DF017F00B9846C /* OvercomingMSTests */,
-				6129746D21DF017F00B9846C /* OvercomingMSUITests */,
+				0A655F2B2294D3A300CD9ACB /* OvercomingMSTests */,
 				6129744C21DF017E00B9846C /* Products */,
 				EC6D3BCE5A42A73194AA1E3C /* Pods */,
 				DD7121317404FDF12D44D4AB /* Frameworks */,
@@ -1037,8 +1023,7 @@
 			isa = PBXGroup;
 			children = (
 				6129744B21DF017E00B9846C /* OvercomingMS.app */,
-				6129745F21DF017F00B9846C /* OvercomingMSTests.xctest */,
-				6129746A21DF017F00B9846C /* OvercomingMSUITests.xctest */,
+				0A655F2A2294D3A300CD9ACB /* OvercomingMSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1053,24 +1038,6 @@
 				6129745A21DF017F00B9846C /* Info.plist */,
 			);
 			path = OvercomingMS;
-			sourceTree = "<group>";
-		};
-		6129746221DF017F00B9846C /* OvercomingMSTests */ = {
-			isa = PBXGroup;
-			children = (
-				6129746321DF017F00B9846C /* OvercomingMSTests.swift */,
-				6129746521DF017F00B9846C /* Info.plist */,
-			);
-			path = OvercomingMSTests;
-			sourceTree = "<group>";
-		};
-		6129746D21DF017F00B9846C /* OvercomingMSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6129746E21DF017F00B9846C /* OvercomingMSUITests.swift */,
-				6129747021DF017F00B9846C /* Info.plist */,
-			);
-			path = OvercomingMSUITests;
 			sourceTree = "<group>";
 		};
 		6129747D21DF020E00B9846C /* UI Views */ = {
@@ -1139,6 +1106,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0A655F292294D3A300CD9ACB /* OvercomingMSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A655F312294D3A300CD9ACB /* Build configuration list for PBXNativeTarget "OvercomingMSTests" */;
+			buildPhases = (
+				0A655F262294D3A300CD9ACB /* Sources */,
+				0A655F272294D3A300CD9ACB /* Frameworks */,
+				0A655F282294D3A300CD9ACB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A655F302294D3A300CD9ACB /* PBXTargetDependency */,
+			);
+			name = OvercomingMSTests;
+			productName = OvercomingMSTests;
+			productReference = 0A655F2A2294D3A300CD9ACB /* OvercomingMSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6129744A21DF017E00B9846C /* OvercomingMS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6129747321DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMS" */;
@@ -1158,64 +1143,22 @@
 			productReference = 6129744B21DF017E00B9846C /* OvercomingMS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6129745E21DF017F00B9846C /* OvercomingMSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6129747621DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMSTests" */;
-			buildPhases = (
-				3828C39FE47362F72BE48835 /* [CP] Check Pods Manifest.lock */,
-				6129745B21DF017F00B9846C /* Sources */,
-				6129745C21DF017F00B9846C /* Frameworks */,
-				6129745D21DF017F00B9846C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6129746121DF017F00B9846C /* PBXTargetDependency */,
-			);
-			name = OvercomingMSTests;
-			productName = OvercomingMSTests;
-			productReference = 6129745F21DF017F00B9846C /* OvercomingMSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		6129746921DF017F00B9846C /* OvercomingMSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6129747921DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMSUITests" */;
-			buildPhases = (
-				827DAE719E2D0D8B2DD6D8E5 /* [CP] Check Pods Manifest.lock */,
-				6129746621DF017F00B9846C /* Sources */,
-				6129746721DF017F00B9846C /* Frameworks */,
-				6129746821DF017F00B9846C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6129746C21DF017F00B9846C /* PBXTargetDependency */,
-			);
-			name = OvercomingMSUITests;
-			productName = OvercomingMSUITests;
-			productReference = 6129746A21DF017F00B9846C /* OvercomingMSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		6129744321DF017E00B9846C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = DrexelOMS;
 				TargetAttributes = {
+					0A655F292294D3A300CD9ACB = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 6129744A21DF017E00B9846C;
+					};
 					6129744A21DF017E00B9846C = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					6129745E21DF017F00B9846C = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 6129744A21DF017E00B9846C;
-					};
-					6129746921DF017F00B9846C = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 6129744A21DF017E00B9846C;
 					};
 				};
 			};
@@ -1233,13 +1176,19 @@
 			projectRoot = "";
 			targets = (
 				6129744A21DF017E00B9846C /* OvercomingMS */,
-				6129745E21DF017F00B9846C /* OvercomingMSTests */,
-				6129746921DF017F00B9846C /* OvercomingMSUITests */,
+				0A655F292294D3A300CD9ACB /* OvercomingMSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0A655F282294D3A300CD9ACB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6129744921DF017E00B9846C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1324,45 +1273,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6129745D21DF017F00B9846C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6129746821DF017F00B9846C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3828C39FE47362F72BE48835 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OvercomingMSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		468EDA10B756AEAE4E0A2967 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1407,28 +1320,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		827DAE719E2D0D8B2DD6D8E5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OvercomingMSUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C8705E6E132C356866B5B997 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1454,6 +1345,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0A655F262294D3A300CD9ACB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A655F2D2294D3A300CD9ACB /* OvercomingMSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6129744721DF017E00B9846C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1600,34 +1499,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6129745B21DF017F00B9846C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6129746421DF017F00B9846C /* OvercomingMSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6129746621DF017F00B9846C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6129746F21DF017F00B9846C /* OvercomingMSUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6129746121DF017F00B9846C /* PBXTargetDependency */ = {
+		0A655F302294D3A300CD9ACB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6129744A21DF017E00B9846C /* OvercomingMS */;
-			targetProxy = 6129746021DF017F00B9846C /* PBXContainerItemProxy */;
-		};
-		6129746C21DF017F00B9846C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6129744A21DF017E00B9846C /* OvercomingMS */;
-			targetProxy = 6129746B21DF017F00B9846C /* PBXContainerItemProxy */;
+			targetProxy = 0A655F2F2294D3A300CD9ACB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1651,6 +1529,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0A655F322294D3A300CD9ACB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = OvercomingMSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.overcomingMS.test.OvercomingMSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OvercomingMS.app/OvercomingMS";
+			};
+			name = Debug;
+		};
+		0A655F332294D3A300CD9ACB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = OvercomingMSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.overcomingMS.test.OvercomingMSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OvercomingMS.app/OvercomingMS";
+			};
+			name = Release;
+		};
 		6129747121DF017F00B9846C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1815,91 +1735,18 @@
 			};
 			name = Release;
 		};
-		6129747721DF017F00B9846C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A16E3BBC1D5B0C0744651350 /* Pods-OvercomingMSTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = OvercomingMSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OvercomingMS.app/OvercomingMS";
-			};
-			name = Debug;
-		};
-		6129747821DF017F00B9846C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64624BC75971C455C566E626 /* Pods-OvercomingMSTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = OvercomingMSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OvercomingMS.app/OvercomingMS";
-			};
-			name = Release;
-		};
-		6129747A21DF017F00B9846C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89CF61DE31F50EFE76BD85FE /* Pods-OvercomingMSUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = OvercomingMSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = OvercomingMS;
-			};
-			name = Debug;
-		};
-		6129747B21DF017F00B9846C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0C278635D38E9B87EB94008 /* Pods-OvercomingMSUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = OvercomingMSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = DrexelOMS.OvercomingMSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = OvercomingMS;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0A655F312294D3A300CD9ACB /* Build configuration list for PBXNativeTarget "OvercomingMSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A655F322294D3A300CD9ACB /* Debug */,
+				0A655F332294D3A300CD9ACB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6129744621DF017E00B9846C /* Build configuration list for PBXProject "OvercomingMS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1914,24 +1761,6 @@
 			buildConfigurations = (
 				6129747421DF017F00B9846C /* Debug */,
 				6129747521DF017F00B9846C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6129747621DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6129747721DF017F00B9846C /* Debug */,
-				6129747821DF017F00B9846C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6129747921DF017F00B9846C /* Build configuration list for PBXNativeTarget "OvercomingMSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6129747A21DF017F00B9846C /* Debug */,
-				6129747B21DF017F00B9846C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

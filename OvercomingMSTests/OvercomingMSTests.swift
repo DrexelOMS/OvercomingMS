@@ -2,12 +2,11 @@
 //  OvercomingMSTests.swift
 //  OvercomingMSTests
 //
-//  Created by Vince on 1/3/19.
+//  Created by Vincent Finn on 5/21/19.
 //  Copyright © 2019 DrexelOMS. All rights reserved.
 //
 
 import XCTest
-@testable import OvercomingMS
 
 class OvercomingMSTests: XCTestCase {
 
@@ -22,6 +21,7 @@ class OvercomingMSTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(95, 95, "Score computed from guess is wrong")
     }
 
     func testPerformanceExample() {
