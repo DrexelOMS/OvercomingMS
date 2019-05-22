@@ -10,7 +10,7 @@ import UIKit
 
 class MedicationRateModel {
     
-    static let options = ["EveryDay", "Custom"]
+    static let options = ["Everyday", "Custom"]
     
     var dictionary : Dictionary = ["M": false, "T": false, "W": false, "R": false, "F": false, "S": false, "U": false]
     
