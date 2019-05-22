@@ -34,7 +34,7 @@ class TrackingModulesDBS{
     
     var module : Modules {
         get {
-            fatalError("forgot to Override Module")
+            fatalError("Forgot to override module")
         }
     }
 

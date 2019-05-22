@@ -1,0 +1,136 @@
+./Data Models/OMSDateAccessor.swift
+./Data Models/DesignConstants.swift
+./Data Models/ProgressBarConfig.swift
+./Data Models/SimpleModels/MedicationRateModel.swift
+./Data Models/SimpleModels/SymptomsList.swift
+./Data Models/SimpleModels/DisplayedMedicationItems.swift
+./Data Models/Delegates/Dismissable.swift
+./Data Models/DatabaseServices/ExerciseHistoryDBS.swift
+./Data Models/DatabaseServices/GoalsDBS.swift
+./Data Models/DatabaseServices/ActiveTrackingDBS.swift
+./Data Models/DatabaseServices/VitaminDHistoryDBS.swift
+./Data Models/DatabaseServices/TrackingModulesDBS.swift
+./Data Models/DatabaseServices/SymptomsNoteDBS.swift
+./Data Models/DatabaseServices/FoodRatingDBS.swift
+./Data Models/DatabaseServices/Omega3HistoryDBS.swift
+./Data Models/DatabaseServices/SavedMedicationDBS.swift
+./Data Models/DatabaseServices/MeditationHistoryDBS.swift
+./Data Models/DatabaseServices/FoodLogDBS.swift
+./Data Models/DatabaseTables/VitaminDHistoryDBT.swift
+./Data Models/DatabaseTables/ExerciseHistoryDBT.swift
+./Data Models/DatabaseTables/TrackingDayDBT.swift
+./Data Models/DatabaseTables/GoalsDBT.swift
+./Data Models/DatabaseTables/ActiveTrackingDBT.swift
+./Data Models/DatabaseTables/FoodLogDBT.swift
+./Data Models/DatabaseTables/MeditationHistoryDBT.swift
+./Data Models/DatabaseTables/SavedMedicationDBT.swift
+./Data Models/DatabaseTables/SymptomsNoteDBT.swift
+./Data Models/DatabaseTables/Omega3HistoryDBT.swift
+./UI Views/ReusableCells/Routine3PartCell.swift
+./UI Views/ReusableCells/ExpandingCell.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Settings/SettingsBoxSVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Settings/SettingsMainSVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Settings/TrackingViews/SettingsTrackingSVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Settings/TrackingViews/TrackingToggleSVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Settings/TutorialViews/SettingsTutorialsSVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Settings/TutorialViews/WelcomePageSVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/TitleDescriptionHeaderSVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Goals/GoalsMainSVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Goals/GoalsPickerCell.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Goals/GoalsBoxSVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Goals/GoalsModifyFactory.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Goals/GoalsModifySVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/TopImageSlidingStackVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Symptoms/SymptomsMainSVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Symptoms/NoteCell.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Symptoms/NoteReviewSVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Symptoms/SymptomsTableHeader.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Symptoms/SymptomsListSVC.swift
+./UI Views/View Controllers/BottomViewsTrackingPage/Symptoms/NoteSVC.swift
+./UI Views/View Controllers/TrackingVCs/FoodModuleVC.swift
+./UI Views/View Controllers/TrackingVCs/TrackingModuleVCFactory.swift
+./UI Views/View Controllers/TrackingVCs/TrackingModuleVC.swift
+./UI Views/View Controllers/MainHelperViews/DateCell.swift
+./UI Views/View Controllers/MainHelperViews/DateHeader.swift
+./UI Views/View Controllers/MainHelperViews/DatePickerSVC.swift
+./UI Views/View Controllers/HeaderSVC.swift
+./UI Views/View Controllers/SharedUIVIewControllerSupers/SwipeDownVC.swift
+./UI Views/View Controllers/SharedUIVIewControllerSupers/DismissableVC.swift
+./UI Views/View Controllers/SharedUIVIewControllerSupers/SlidingStackVC.swift
+./UI Views/View Controllers/SharedUIVIewControllerSupers/PullBarSVC/PullBarSVC.swift
+./UI Views/View Controllers/MainTrackingVC.swift
+./UI Views/SharedUIViewSupers/ToggleLabeledCircleButton.swift
+./UI Views/SharedUIViewSupers/CustomButton.swift
+./UI Views/SharedUIViewSupers/DoneCheckButton.swift
+./UI Views/SharedUIViewSupers/BottomRoundCornersUIView.swift
+./UI Views/SharedUIViewSupers/RoundButton.swift
+./UI Views/SharedUIViewSupers/TopRoundCornersUIView.swift
+./UI Views/SharedUIViewSupers/OMSRoundedBox.swift
+./UI Views/Extensions/TableViewExtensions.swift
+./UI Views/Extensions/LabelExtension.swift
+./UI Views/ReusableViews/CustomView.swift
+./UI Views/ReusableViews/TrackingModules/SelectedItemSVC/MeditationSelectedItemSVC.swift
+./UI Views/ReusableViews/TrackingModules/SelectedItemSVC/ExerciseSelectedItem.swift
+./UI Views/ReusableViews/TrackingModules/SelectedItemSVC/MedicationSelectedItem.swift
+./UI Views/ReusableViews/TrackingModules/SelectedItemSVC/SelectedLabelsSVC.swift
+./UI Views/ReusableViews/TrackingModules/SelectedItemSVC/VitaminDSelectedItem.swift
+./UI Views/ReusableViews/TrackingModules/SelectedItemSVC/Omega3SelectedItem.swift
+./UI Views/ReusableViews/TrackingModules/SelectedItemSVC/SelectedItemSVC.swift
+./UI Views/ReusableViews/TrackingModules/TimerStopwatchSVC/MeditationTimerSVC.swift
+./UI Views/ReusableViews/TrackingModules/TimerStopwatchSVC/ExerciseStopwatchSVC.swift
+./UI Views/ReusableViews/TrackingModules/TimerStopwatchSVC/TimerStopWatchAbstractSVC.swift
+./UI Views/ReusableViews/TrackingModules/TimerStopwatchSVC/MeditationSetup/MeditationLevelButtonSVC.swift
+./UI Views/ReusableViews/TrackingModules/TimerStopwatchSVC/MeditationSetup/GuidedMeditationTimerSetupSVC.swift
+./UI Views/ReusableViews/TrackingModules/TimerStopwatchSVC/MeditationSetup/TitleTimeOverTextCell.swift
+./UI Views/ReusableViews/TrackingModules/TimerStopwatchSVC/MeditationSetup/GuidedMeditationCategories.swift
+./UI Views/ReusableViews/TrackingModules/MainSVCs/Omega3MainSVC.swift
+./UI Views/ReusableViews/TrackingModules/MainSVCs/ExerciseMainSVC.swift
+./UI Views/ReusableViews/TrackingModules/MainSVCs/MeditationMainSVC.swift
+./UI Views/ReusableViews/TrackingModules/MainSVCs/MainAbstractSVC.swift
+./UI Views/ReusableViews/TrackingModules/MainSVCs/VitaminDMainSVC.swift
+./UI Views/ReusableViews/TrackingModules/MainSVCs/Medication/MedicationItemSVC.swift
+./UI Views/ReusableViews/TrackingModules/MainSVCs/Medication/MedicationNotTakenItemSVC.swift
+./UI Views/ReusableViews/TrackingModules/MainSVCs/Medication/MedicationMainSVC.swift
+./UI Views/ReusableViews/TrackingModules/MainSVCs/FoodMainSVC.swift
+./UI Views/ReusableViews/TrackingModules/ConfirmationSVCs/ConfirmationSVC.swift
+./UI Views/ReusableViews/TrackingModules/ConfirmationSVCs/ConfirmationFactory.swift
+./UI Views/ReusableViews/TrackingModules/SlidingAbstractSVC.swift
+./UI Views/ReusableViews/TrackingModules/VitaminD/OutsideSVC.swift
+./UI Views/ReusableViews/TrackingModules/VitaminD/OutsideCell.swift
+./UI Views/ReusableViews/TrackingModules/ModifySVCs/ModifyAbstractSVC.swift
+./UI Views/ReusableViews/TrackingModules/ModifySVCs/Omega3ModifySVC.swift
+./UI Views/ReusableViews/TrackingModules/ModifySVCs/ExerciseModifySVC.swift
+./UI Views/ReusableViews/TrackingModules/ModifySVCs/MedicationModifySVC.swift
+./UI Views/ReusableViews/TrackingModules/ModifySVCs/VitaminDModifySVC.swift
+./UI Views/ReusableViews/TrackingModules/ModifySVCs/MeditationTimerModify.swift
+./UI Views/ReusableViews/TrackingModules/ModifySVCs/MeditationModifySVC.swift
+./UI Views/ReusableViews/TrackingModules/FoodModule/SearchBarButton.swift
+./UI Views/ReusableViews/TrackingModules/FoodModule/FoodSearchCell.swift
+./UI Views/ReusableViews/TrackingModules/FoodModule/FoodSearchSVC.swift
+./UI Views/ReusableViews/TrackingModules/FoodModule/Food.swift
+./UI Views/ReusableViews/TrackingModules/FoodModule/FoodHeader.swift
+./UI Views/ReusableViews/TrackingModules/FoodModule/FoodSelected/FoodRejectedSVC.swift
+./UI Views/ReusableViews/TrackingModules/FoodModule/FoodSelected/BadIngredientsCell.swift
+./UI Views/ReusableViews/TrackingModules/FoodModule/FoodSelected/FoodApprovedSVC.swift
+./UI Views/ReusableViews/TrackingModules/FoodModule/FoodSelected/FoodSelectedSVC.swift
+./UI Views/ReusableViews/TrackingModules/FoodModule/FoodSelected/GenericFoodSelectedSVC.swift
+./UI Views/ReusableViews/TextFieldAbstractSVCs/ToolBar.swift
+./UI Views/ReusableViews/TextFieldAbstractSVCs/TypeTFIFactory.swift
+./UI Views/ReusableViews/TextFieldAbstractSVCs/CustomEntryTFI.swift
+./UI Views/ReusableViews/TextFieldAbstractSVCs/AmountTFI.swift
+./UI Views/ReusableViews/TextFieldAbstractSVCs/MedicationRateTFI.swift
+./UI Views/ReusableViews/TextFieldAbstractSVCs/TypeTFI.swift
+./UI Views/ReusableViews/TextFieldAbstractSVCs/LengthTFI.swift
+./UI Views/ReusableViews/TextFieldAbstractSVCs/TFIAbstract.swift
+./UI Views/ReusableViews/TextFieldAbstractSVCs/DateTimeTFI.swift
+./UI Views/ReusableViews/TrackingProgressBars/TrackingProgressBar.swift
+./UI Views/ReusableViews/ButtonViews/CircleButtonFactory.swift
+./UI Views/ReusableViews/ButtonViews/SquareButtonSVC.swift
+./UI Views/ReusableViews/ButtonViews/SeeMoreButtonSVC.swift
+./UI Views/ReusableViews/ButtonViews/MedRateButtonsSVC.swift
+./UI Views/ReusableViews/ButtonViews/ContinueButtonSVC.swift
+./UI Views/ReusableViews/ButtonViews/StartPauseCircleButton.swift
+./UI Views/ReusableViews/ButtonViews/BackConfirmButtonSVC.swift
+./UI Views/ReusableViews/ButtonViews/FiveScaleRatingButtonsSVC.swift
+./UI Views/ReusableViews/ButtonViews/CircleButtonSVC.swift
+./AppDelegate.swift
