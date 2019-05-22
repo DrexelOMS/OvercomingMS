@@ -15,8 +15,10 @@ class TrackingModulesDBSTests: XCTestCase {
     var date = "01/01/1996"
     
     override func setUp() {
+        //Only use these lines if you need to reset the database between tests
         cleanAllData()
         AppDelegate().firstTimeInitializers()
+        
         service = TrackingModulesDBS(editingDate: date)
     }
 
