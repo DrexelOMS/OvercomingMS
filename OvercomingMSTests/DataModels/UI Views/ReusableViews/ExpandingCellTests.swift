@@ -11,9 +11,12 @@ import XCTest
 @testable import OvercomingMS
 
 class ExpandingCellTests: XCTestCase {
+    
+    
     func testHideBottomView(){
         let eC = ExpandingCell()
-        
+        eC.bottomView = UIView()
+        eC.bottomHeight = NSLayoutConstraint()
         eC.hideBottomView()
         XCTAssertTrue(eC.bottomView.isHidden)
         XCTAssertEqual(0, eC.bottomHeight.constant)
@@ -21,6 +24,8 @@ class ExpandingCellTests: XCTestCase {
     
     func testClearMethod(){
         let eC = ExpandingCell()
+        eC.bottomView = UIView()
+        eC.middleView = UIView()
         eC.clear()
         XCTAssertFalse(eC.bottomView.isHidden)
         
