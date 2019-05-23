@@ -80,6 +80,7 @@
 		0A655F392295F45800CD9ACB /* FatalErrorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F382295F45800CD9ACB /* FatalErrorUtil.swift */; };
 		0A655F3C2296310100CD9ACB /* NotifcationCenterWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F3B2296310100CD9ACB /* NotifcationCenterWrapper.swift */; };
 		0A655F3E2296355700CD9ACB /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F3D2296355700CD9ACB /* Mocks.swift */; };
+		0A655F402296471300CD9ACB /* ProgressBarConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F3F2296471300CD9ACB /* ProgressBarConfigTests.swift */; };
 		0A67C888227C7284001D2E0C /* FoodModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C887227C7284001D2E0C /* FoodModuleVC.swift */; };
 		0A67C88A227C7518001D2E0C /* FoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C889227C7518001D2E0C /* FoodHeader.swift */; };
 		0A67C88C227C7529001D2E0C /* FoodHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67C88B227C7529001D2E0C /* FoodHeader.xib */; };
@@ -317,6 +318,7 @@
 		0A655F382295F45800CD9ACB /* FatalErrorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatalErrorUtil.swift; sourceTree = "<group>"; };
 		0A655F3B2296310100CD9ACB /* NotifcationCenterWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifcationCenterWrapper.swift; sourceTree = "<group>"; };
 		0A655F3D2296355700CD9ACB /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		0A655F3F2296471300CD9ACB /* ProgressBarConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarConfigTests.swift; sourceTree = "<group>"; };
 		0A67C887227C7284001D2E0C /* FoodModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModuleVC.swift; sourceTree = "<group>"; };
 		0A67C889227C7518001D2E0C /* FoodHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHeader.swift; sourceTree = "<group>"; };
 		0A67C88B227C7529001D2E0C /* FoodHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodHeader.xib; sourceTree = "<group>"; };
@@ -701,6 +703,7 @@
 			isa = PBXGroup;
 			children = (
 				0A655F352295F04D00CD9ACB /* DatabaseServices */,
+				0A655F3F2296471300CD9ACB /* ProgressBarConfigTests.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -1387,6 +1390,7 @@
 			files = (
 				0A655F2D2294D3A300CD9ACB /* TrackingModulesDBSTests.swift in Sources */,
 				0A655F372295F2C400CD9ACB /* Extensions.swift in Sources */,
+				0A655F402296471300CD9ACB /* ProgressBarConfigTests.swift in Sources */,
 				0A655F3E2296355700CD9ACB /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
