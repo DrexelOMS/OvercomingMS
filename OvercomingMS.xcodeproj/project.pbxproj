@@ -636,6 +636,13 @@
 			path = SelectedItemSVCs;
 			sourceTree = "<group>";
 		};
+		0A09957022974EB00067DEA7 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
 		0A1FEC502204E6F1006CED70 /* TrackingVCs */ = {
 			isa = PBXGroup;
 			children = (
@@ -833,6 +840,7 @@
 		0A8328DA229703350079C723 /* BottomViewsTrackingPage */ = {
 			isa = PBXGroup;
 			children = (
+				0A09957022974EB00067DEA7 /* Goals */,
 				0A8328DB229703470079C723 /* Symptoms */,
 			);
 			path = BottomViewsTrackingPage;
