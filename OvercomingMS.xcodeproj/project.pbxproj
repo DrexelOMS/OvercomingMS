@@ -92,6 +92,7 @@
 		0A6937F7227E69F5006DE6BF /* FoodApprovedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6937F6227E69F5006DE6BF /* FoodApprovedSVC.swift */; };
 		0A7FC91021F51CE300492E93 /* MainTrackingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */; };
 		0A8328DD229703CF0079C723 /* SymtpomsMainSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8328DC229703CF0079C723 /* SymtpomsMainSVCTests.swift */; };
+		0A8328E022970C760079C723 /* HeaderSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8328DF22970C760079C723 /* HeaderSVCTests.swift */; };
 		0A93EA4122122D840063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0A93EA45221316490063A892 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0A93EA472213165D0063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -335,6 +336,7 @@
 		0A6937F6227E69F5006DE6BF /* FoodApprovedSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApprovedSVC.swift; sourceTree = "<group>"; };
 		0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingVC.swift; sourceTree = "<group>"; };
 		0A8328DC229703CF0079C723 /* SymtpomsMainSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymtpomsMainSVCTests.swift; sourceTree = "<group>"; };
+		0A8328DF22970C760079C723 /* HeaderSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSVCTests.swift; sourceTree = "<group>"; };
 		0A93EA4A22132AC50063A892 /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
 		0A93EA4B22132AC50063A892 /* Avenir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Light.ttf"; sourceTree = "<group>"; };
 		0A93EA4C22132AC60063A892 /* Avenir-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Medium.ttf"; sourceTree = "<group>"; };
@@ -757,6 +759,7 @@
 		0A655F492296DCD800CD9ACB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A8328DE22970C590079C723 /* MainHelperView */,
 				0A8328DA229703350079C723 /* BottomViewsTrackingPage */,
 				0A655F4A2296DCF400CD9ACB /* MainTrackingVCTests.swift */,
 			);
@@ -786,6 +789,14 @@
 				0A8328DC229703CF0079C723 /* SymtpomsMainSVCTests.swift */,
 			);
 			path = Symptoms;
+			sourceTree = "<group>";
+		};
+		0A8328DE22970C590079C723 /* MainHelperView */ = {
+			isa = PBXGroup;
+			children = (
+				0A8328DF22970C760079C723 /* HeaderSVCTests.swift */,
+			);
+			path = MainHelperView;
 			sourceTree = "<group>";
 		};
 		0A93EA43221316350063A892 /* PullBarSVC */ = {
@@ -1448,6 +1459,7 @@
 				0A655F4522964D0800CD9ACB /* DisplayedMedicationItemsTests.swift in Sources */,
 				0A655F372295F2C400CD9ACB /* Extensions.swift in Sources */,
 				0A655F4322964A1700CD9ACB /* MedicationRateModelTests.swift in Sources */,
+				0A8328E022970C760079C723 /* HeaderSVCTests.swift in Sources */,
 				0A655F402296471300CD9ACB /* ProgressBarConfigTests.swift in Sources */,
 				0A655F472296503800CD9ACB /* SymptomsListTests.swift in Sources */,
 				0A655F3E2296355700CD9ACB /* Mocks.swift in Sources */,

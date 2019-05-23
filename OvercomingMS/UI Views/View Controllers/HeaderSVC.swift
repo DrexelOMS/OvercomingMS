@@ -27,13 +27,13 @@ class HeaderSVC: CustomView {
     @IBOutlet weak var mainView: BottomRoundCornersUIView!
     
     @IBOutlet weak var circleImage: UIImageView!
-    private var orignalSelectedTextColor = UIColor(rgb: 0x333333)
-    private var orignalOffTextColor = UIColor(rgb: 0x959595)
-    private var contrastSelectedTextColor = UIColor.white
-    private var contrastOffTextColor = UIColor.white
+    var originalSelectedTextColor = UIColor(rgb: 0x333333)
+    var originalOffTextColor = UIColor(rgb: 0x959595)
+    var contrastSelectedTextColor = UIColor.white
+    var contrastOffTextColor = UIColor.white
     
     enum SelectedMenuItem {case Tracking, Circles, History}
-    private var currentMenuItem: SelectedMenuItem = .Tracking
+    var currentMenuItem: SelectedMenuItem = .Tracking
     var coloredMode: Bool = false
     
     let messageLabel = UILabel()
@@ -54,8 +54,8 @@ class HeaderSVC: CustomView {
     func setLabelColors(colored: Bool = false) {
         coloredMode = colored
         
-        var mainColor = orignalSelectedTextColor
-        var offColor = orignalOffTextColor
+        var mainColor = originalSelectedTextColor
+        var offColor = originalOffTextColor
         if colored {
             mainColor = contrastSelectedTextColor
             offColor = contrastOffTextColor
