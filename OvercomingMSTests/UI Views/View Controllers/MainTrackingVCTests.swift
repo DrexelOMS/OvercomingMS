@@ -64,7 +64,8 @@ class MainTrackingVCTests: XCTestCase {
     
     func testOnboardingCheck() {
         main.onboardingCheck()
-//        XCTAssertTrue(slidingVCMock.wasPresented)
+        
+        XCTAssertTrue(main.onboardingVC.initialView is WelcomePageSVC)
     }
     
     func testDidPressCheckMark_Food() {
@@ -73,6 +74,136 @@ class MainTrackingVCTests: XCTestCase {
         main.didPressCheckButton(trackingBar)
         
         XCTAssertEqual(main.foodBar.colorTheme, main.foodBar.shadowedRoundedView!.backgroundColor)
+    }
+    
+    func testDidPressCheckMark_Omega3() {
+        trackingBar.tag = 0
+        
+        main.didPressCheckButton(trackingBar)
+        
+        XCTAssertEqual(main.omega3Bar.colorTheme, main.omega3Bar.shadowedRoundedView!.backgroundColor)
+    }
+    
+    func testDidPressCheckMark_VitaminD() {
+        trackingBar.tag = 1
+        
+        main.didPressCheckButton(trackingBar)
+        
+        XCTAssertEqual(main.vitaminDBar.colorTheme, main.vitaminDBar.shadowedRoundedView!.backgroundColor)
+    }
+    
+    func testDidPressCheckMark_Exercise() {
+        trackingBar.tag = 2
+        
+        main.didPressCheckButton(trackingBar)
+        
+        XCTAssertEqual(main.exerciseBar.colorTheme, main.exerciseBar.shadowedRoundedView!.backgroundColor)
+    }
+    
+    func testDidPressCheckMark_Meditation() {
+        trackingBar.tag = 3
+        
+        main.didPressCheckButton(trackingBar)
+        
+        XCTAssertEqual(main.meditationBar.colorTheme, main.meditationBar.shadowedRoundedView!.backgroundColor)
+    }
+    
+    func testDidPressCheckMark_Medications() {
+        trackingBar.tag = 4
+        
+        main.didPressCheckButton(trackingBar)
+        
+        XCTAssertEqual(main.medicationBar.colorTheme, main.medicationBar.shadowedRoundedView!.backgroundColor)
+    }
+    
+    func testDidPressLeft_Food() {
+        trackingBar.tag = 5
+        
+        main.didPressLeftContainer(trackingBar)
+        
+        XCTAssertTrue(main.moduleVC is FoodModuleVC)
+    }
+    
+    func testDidPressLeft_Omega3() {
+        trackingBar.tag = 0
+        
+        main.didPressLeftContainer(trackingBar)
+        
+        XCTAssertTrue(main.moduleVC is TrackingModuleVC)
+        let tracking = main.moduleVC as! TrackingModuleVC
+        XCTAssertTrue(tracking.trackingDBS is Omega3HistoryDBS)
+    }
+    
+    func testDidPressLeft_VitaminD() {
+        trackingBar.tag = 1
+        
+        main.didPressLeftContainer(trackingBar)
+        
+        XCTAssertTrue(main.moduleVC is TrackingModuleVC)
+        let tracking = main.moduleVC as! TrackingModuleVC
+        XCTAssertTrue(tracking.trackingDBS is VitaminDHistoryDBS)
+    }
+    
+    func testDidPressLeft_Exercise() {
+        trackingBar.tag = 2
+        
+        main.didPressLeftContainer(trackingBar)
+        
+        XCTAssertTrue(main.moduleVC is TrackingModuleVC)
+        let tracking = main.moduleVC as! TrackingModuleVC
+        XCTAssertTrue(tracking.trackingDBS is ExerciseHistoryDBS)
+    }
+    
+    func testDidPressLeft_Meditation() {
+        trackingBar.tag = 3
+        
+        main.didPressLeftContainer(trackingBar)
+        
+        XCTAssertTrue(main.moduleVC is TrackingModuleVC)
+        let tracking = main.moduleVC as! TrackingModuleVC
+        XCTAssertTrue(tracking.trackingDBS is MeditationHistoryDBS)
+    }
+    
+    func testDidPressLeft_Medications() {
+        trackingBar.tag = 4
+        
+        main.didPressLeftContainer(trackingBar)
+        
+        XCTAssertTrue(main.moduleVC is TrackingModuleVC)
+        let tracking = main.moduleVC as! TrackingModuleVC
+        XCTAssertTrue(tracking.trackingDBS is SavedMedicationDBS)
+    }
+    
+    func testProgressDayPressed() {
+        main.ProgressDayPressed(gesture: UIGestureRecognizer())
+        
+        XCTAssertTrue(main.dataPicker.initialView is DatePickerSVC)
+    }
+    
+    func testGoalsPressed() {
+        globalCurrentFullDate = OMSDateAccessor().todaysFullDate
+        main.goalPressed()
+        
+        XCTAssertTrue(main.goalSVC.initialView is GoalsMainSVC)
+    }
+    
+    func testGoalsPressed_while_not_today() {
+        globalCurrentFullDate = OMSDateAccessor().todaysFullDate.addingTimeInterval(-24*60*60)
+        main.goalPressed()
+        
+        XCTAssertNil(main.goalSVC)
+    }
+    
+    func testSymptomsPressed() {
+        main.symptomsPressed()
+        
+        XCTAssertTrue(main.symptomsSVC.initialView is SymptomsMainSVC)
+    }
+    
+    func testSettingsPressed() {
+        main.settingsPressed()
+        
+        XCTAssertTrue(main.settingsSVC.initialView is SettingsMainSVC)
     }
 
 }

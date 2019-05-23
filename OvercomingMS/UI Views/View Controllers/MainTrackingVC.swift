@@ -130,6 +130,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         if defaults.object(forKey: "PlayedTutorialVideo") as? Bool != true {
             defaults.set(true, forKey: "PlayedTutorialVideo")
             
+            onboardingVC = SlidingStackVC(initialView: WelcomePageSVC())
             onboardingVC.disableSwipe()
             onboardingVC.modalPresentationStyle = .overCurrentContext
             onboardingVC.theme = UIColor(red: 2, green: 162, blue: 182)
@@ -148,8 +149,6 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         exerciseBar.delegate = self
         meditationBar.delegate = self
         medicationBar.delegate = self
-        
-        onboardingVC = SlidingStackVC(initialView: WelcomePageSVC())
         
         previousButton.isUserInteractionEnabled = true
         let previusGesture = UITapGestureRecognizer(target: self, action: #selector(previousDate(gesture: )))
@@ -274,40 +273,41 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
     }
     
+    var moduleVC: SlidingStackVC!
+    
     func didPressLeftContainer(_ sender: TrackingProgressBar) {
         
-        var vc: SlidingStackVC
         
         switch(sender.tag){
         case 0:
-            vc = TrackingModuleFactory.Omega3VC()
+            moduleVC = TrackingModuleFactory.Omega3VC()
             break
         case 1:
-            vc = TrackingModuleFactory.VitaminDVC()
+            moduleVC = TrackingModuleFactory.VitaminDVC()
             break
         case 2:
-            vc = TrackingModuleFactory.ExerciseVC()
+            moduleVC = TrackingModuleFactory.ExerciseVC()
             break
         case 3:
-            vc = TrackingModuleFactory.MeditationVC()
+            moduleVC = TrackingModuleFactory.MeditationVC()
             break
         case 4:
-            vc = TrackingModuleFactory.MedicationVC()
+            moduleVC = TrackingModuleFactory.MedicationVC()
             break
         case 5:
-            vc = FoodModuleVC(initialView: FoodMainSVC())
+            moduleVC = FoodModuleVC(initialView: FoodMainSVC())
             break
         default:
             fatalError("Case Not Handled")
             break;
         }
         
-        vc.theme = sender.colorTheme
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.dismissalDelegate = self
+        moduleVC.theme = sender.colorTheme
+        moduleVC.modalPresentationStyle = .overCurrentContext
+        moduleVC.dismissalDelegate = self
         moduleProgressButtonHeight = Int(foodBar.frame.height)
         
-        self.present(vc, animated: true, completion: nil)
+        self.present(moduleVC, animated: true, completion: nil)
         
         //loadCurrentDayUI()
         
@@ -332,43 +332,46 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         loadCurrentDayUI()
     }
     
-    //TODO: this is a test button, normally the day would progress, and the ui is not automatically updated unless we check in the loadCurrentDayUI to check if todays date has changed
-    //basically nothing can ever write using current day, they write using todays date
+    var dataPicker: SlidingStackVC!
+    var goalSVC: SlidingStackVC!
+    var symptomsSVC: SlidingStackVC!
+    var settingsSVC: SlidingStackVC!
+    
     @objc func ProgressDayPressed(gesture: UIGestureRecognizer) {
 //        omsDateFormatter.progressDay()
-        let vc = SlidingStackVC(initialView: DatePickerSVC())
         
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.dismissalDelegate = self
+        dataPicker = SlidingStackVC(initialView: DatePickerSVC())
+        dataPicker.modalPresentationStyle = .overCurrentContext
+        dataPicker.dismissalDelegate = self
         
-        self.present(vc, animated: true, completion: nil)
+        self.present(dataPicker, animated: true, completion: nil)
     }
     
     func goalPressed() {
         if globalCurrentDate == todaysDate {
-            let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Goals")!, initialView: GoalsMainSVC())
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
+            goalSVC = TopImageSlidingStackVC(topImage: UIImage(named: "Goals")!, initialView: GoalsMainSVC())
+            goalSVC.modalPresentationStyle = .overCurrentContext
+            goalSVC.dismissalDelegate = self
             
-            self.present(vc, animated: true, completion: nil)
+            self.present(goalSVC, animated: true, completion: nil)
         }
     }
     
     func symptomsPressed() {
-        let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Symptoms")!, initialView: SymptomsMainSVC())
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.dismissalDelegate = self
-        vc.theme = UIColor(red: 166 / 255.0, green: 69 / 255.0, blue: 210 / 255.0, alpha: 1.0)
+        symptomsSVC = TopImageSlidingStackVC(topImage: UIImage(named: "Symptoms")!, initialView: SymptomsMainSVC())
+        symptomsSVC.modalPresentationStyle = .overCurrentContext
+        symptomsSVC.dismissalDelegate = self
+        symptomsSVC.theme = UIColor(red: 166 / 255.0, green: 69 / 255.0, blue: 210 / 255.0, alpha: 1.0)
         
-        self.present(vc, animated: true, completion: nil)
+        self.present(symptomsSVC, animated: true, completion: nil)
     }
     
     func settingsPressed() {
-        let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: SettingsMainSVC())
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.dismissalDelegate = self
+        settingsSVC = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: SettingsMainSVC())
+        settingsSVC.modalPresentationStyle = .overCurrentContext
+        settingsSVC.dismissalDelegate = self
         
-        self.present(vc, animated: true, completion: nil)
+        self.present(settingsSVC, animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {

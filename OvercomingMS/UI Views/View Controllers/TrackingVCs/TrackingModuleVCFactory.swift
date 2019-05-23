@@ -10,7 +10,7 @@ import UIKit
 
 class TrackingModuleFactory {
     static func Omega3VC() -> TrackingModuleVC {
-        return TrackingModuleVC(title: "Omega3", trackingDBS: Omega3HistoryDBS(), mainViewToSet: Omega3MainSVC())
+        return TrackingModuleVC(title: "Omega 3", trackingDBS: Omega3HistoryDBS(), mainViewToSet: Omega3MainSVC())
     }
     
     static func VitaminDVC() -> TrackingModuleVC {
