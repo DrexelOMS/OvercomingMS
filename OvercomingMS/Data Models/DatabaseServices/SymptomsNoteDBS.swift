@@ -20,7 +20,7 @@ class SymptomsNoteDBS {
     
     func addNote(note: String, symptomsRating: Int, timeOfDay: Date, dateCreated: String) {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 let item = SymptomsNoteDBT()
                 item.Note = note
                 item.TimeOfDay = timeOfDay
@@ -53,7 +53,7 @@ class SymptomsNoteDBS {
     
     func deleteNote(item: SymptomsNoteDBT) {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 realm.delete(item)
             }
         } catch {
@@ -63,7 +63,7 @@ class SymptomsNoteDBS {
     
     func editNote(oldItem: SymptomsNoteDBT, newItem: SymptomsNoteDBT) {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 oldItem.Note = newItem.Note
                 oldItem.TimeOfDay = newItem.TimeOfDay
                 oldItem.SymptomsRating = newItem.SymptomsRating

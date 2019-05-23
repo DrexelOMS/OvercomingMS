@@ -19,7 +19,7 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
     
     override func updateCompleteStatus() {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 getTrackingDay().IsVitaminDComplete = getPercentageComplete() >= 100
             }
         } catch {
@@ -46,7 +46,7 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
     override func addItem(item: Object) {
         let percent = getPercentageComplete()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 getTrackingDay().vitaminDHistoryDT.append(VitaminDHistoryDBT(value: item))
             }
         } catch {
@@ -84,7 +84,7 @@ class VitaminDHistoryDBS: TrackingModulesDBS {
     func updateVitaminDItem(oldItem: VitaminDHistoryDBT, newItem: VitaminDHistoryDBT) {
         let percent = getPercentageComplete()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 oldItem.VitaminDType = newItem.VitaminDType
                 oldItem.StartTime = newItem.StartTime
                 oldItem.Amount = newItem.Amount

@@ -42,7 +42,7 @@ class FoodRatingDBS : TrackingModulesDBS {
    func setRating(amount: Int) {
         let percent = getPercentageComplete()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 if amount < 1 {
                     getTrackingDay().FoodEatenRating = 1
                 }

@@ -20,7 +20,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
     override func updateCompleteStatus() {
         let day = getTrackingDay()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 day.IsMedicationComplete = getPercentageComplete() >= 100
                 
             }
@@ -42,7 +42,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
     override func addItem(item: Object) {
         let percent = getPercentageComplete()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 realm.add(SavedMedicationDBT(value: item))
             }
         } catch {
@@ -81,7 +81,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
     func updateSavedMedicationItem(oldItem: SavedMedicationDBT, newItem: SavedMedicationDBT) {
         let percent = getPercentageComplete()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 oldItem.MedicationName = newItem.MedicationName
                 oldItem.TimeOfDay = newItem.TimeOfDay
                 oldItem.MedicationNote = newItem.MedicationNote
@@ -100,7 +100,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
     // ALERT - YOU SHOULD USE THIS INSTEAD OF DELETEITEM FOR MEDS, IT CREATES A DELETED DATE
     func deleteSavedMedication(item: SavedMedicationDBT) {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 item.DateDeleted = OMSDateAccessor.getFullDate(date: getTrackingDay().DateCreated)
             }
         } catch {
@@ -112,7 +112,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
     func addTakenMedication(item: SavedMedicationDBT) {
         let percent = getPercentageComplete()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                getTrackingDay().savedMedicationDT.append(item)
             }
         } catch {
@@ -123,7 +123,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
     
     func removeTakenMedication(item: SavedMedicationDBT) {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 if let index = getTrackingDay().savedMedicationDT.index(of: item) {
                     getTrackingDay().savedMedicationDT.remove(at: index)
                 }

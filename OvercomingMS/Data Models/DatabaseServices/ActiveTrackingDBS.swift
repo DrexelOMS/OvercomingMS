@@ -52,7 +52,7 @@ class ActiveTrackingDBS {
     func writeActiveItems() {
         let mostRecent = mostRecentActiveTracking
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 
                 if globalCurrentDate != mostRecent.DateModified {
                     let item = ActiveTrackingDBT()
@@ -90,7 +90,7 @@ class ActiveTrackingDBS {
     //set the first goal to the previous day
     func writeFirstDay() {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 let item = ActiveTrackingDBT()
                 let date = globalCurrentFullDate.addingTimeInterval(-1 * 60 * 60 * 24) //set to yesterday
                 item.DateModified = OMSDateAccessor.getFormatedDate(date: date)

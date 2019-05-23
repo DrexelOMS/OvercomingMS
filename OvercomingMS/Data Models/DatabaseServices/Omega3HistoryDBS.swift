@@ -19,7 +19,7 @@ class Omega3HistoryDBS: TrackingModulesDBS {
     
     override func updateCompleteStatus() {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 getTrackingDay().IsOmega3Complete = getPercentageComplete() >= 100
             }
         } catch {
@@ -46,7 +46,7 @@ class Omega3HistoryDBS: TrackingModulesDBS {
     override func addItem(item: Object) {
         let percent = getPercentageComplete()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 getTrackingDay().omega3HistoryDT.append(Omega3HistoryDBT(value: item))
             }
         } catch {
@@ -85,7 +85,7 @@ class Omega3HistoryDBS: TrackingModulesDBS {
     func updateOmega3Item(oldItem: Omega3HistoryDBT, newItem: Omega3HistoryDBT) {
         let percent = getPercentageComplete()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 oldItem.supplementName = newItem.supplementName
                 oldItem.StartTime = newItem.StartTime
                 oldItem.Amount = newItem.Amount

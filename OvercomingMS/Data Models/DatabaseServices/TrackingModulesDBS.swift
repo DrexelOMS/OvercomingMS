@@ -53,7 +53,7 @@ class TrackingModulesDBS{
     // only to be used by getTrackingDay
     private func initializeTodaysData() {
         do {
-            try realm.write(){
+            try realm.safeWrite(){
                 let todaysTrackingData = TrackingDayDBT()
                 todaysTrackingData.DateCreated = editingDate
                 realm.add(todaysTrackingData)
@@ -90,7 +90,7 @@ class TrackingModulesDBS{
         let day = getTrackingDay()
         let savedIsDayComplete = day.IsDayComplete
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 day.IsDayComplete = day.IsFoodComplete && day.IsOmega3Complete && day.IsVitaminDComplete && day.IsExerciseComplete && day.IsMeditationComplete && day.IsMedicationComplete
             }
         } catch {
@@ -115,7 +115,7 @@ class TrackingModulesDBS{
     
     func deleteItem(item: Object) {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 realm.delete(item)
             }
         } catch {
@@ -140,5 +140,16 @@ class TrackingModulesDBS{
     
     func getTrackingDescription() -> String {
         fatalError("getTrackingDescription not overriden")
+    }
+}
+
+
+extension Realm {
+    public func safeWrite(_ block: (() throws -> Void)) throws {
+        if isInWriteTransaction {
+            try block()
+        } else {
+            try write(block)
+        }
     }
 }

@@ -17,7 +17,8 @@ func cleanAllData() {
     dictionary.keys.forEach { key in
         defaults.removeObject(forKey: key)
     }
-    try! realm.write {
+
+    try! realm.safeWrite {
         realm.deleteAll()
     }
 }

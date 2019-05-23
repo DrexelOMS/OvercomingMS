@@ -19,7 +19,7 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
     
     override func updateCompleteStatus() {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 getTrackingDay().IsExerciseComplete = getPercentageComplete() >= 100
             }
         } catch {
@@ -46,7 +46,7 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
     override func addItem(item: Object) {
         let percent = getPercentageComplete()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 getTrackingDay().exerciseHistoryDT.append(ExerciseHistoryDBT(value: item))
             }
         } catch {
@@ -85,7 +85,7 @@ class ExerciseHistoryDBS: TrackingModulesDBS {
     func updateExerciseItem(oldItem: ExerciseHistoryDBT, newItem: ExerciseHistoryDBT) {
         let percent = getPercentageComplete()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 oldItem.RoutineType = newItem.RoutineType
                 oldItem.StartTime = newItem.StartTime
                 oldItem.EndTime = newItem.EndTime

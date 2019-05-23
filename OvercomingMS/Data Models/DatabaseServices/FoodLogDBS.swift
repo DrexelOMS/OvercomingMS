@@ -28,7 +28,7 @@ class FoodLogDBS {
     
     func addFoodItem(foodName: String, foodDescription: String, foodRecommendedLevel: Int, foodURL: String, dateCreated: Date, apiNumber: String) {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 let item = FoodLogDBT()
                 item.FoodName = foodName
                 item.FoodDescription = foodDescription
@@ -57,7 +57,7 @@ class FoodLogDBS {
     
     func deleteFoodItem(item: FoodLogDBT) {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 realm.delete(item)
             }
         } catch {

@@ -48,4 +48,29 @@ class ProgressBarConfigTests: XCTestCase {
         XCTAssertEqual(15, ProgressBarConfig.meditationGoal)
     }
     
+    func testFoodSetGoal() {
+        ProgressBarConfig.foodRatingGoal = 3
+        XCTAssertEqual(3, ProgressBarConfig.foodRatingGoal)
+    }
+    
+    func testOmega3SetGoal() {
+        ProgressBarConfig.omega3Goal = 10
+        XCTAssertEqual(10, ProgressBarConfig.omega3Goal)
+    }
+    
+    func testVitaminDSetGoal() {
+        ProgressBarConfig.vitaminDGoal = 100
+        XCTAssertEqual(100, ProgressBarConfig.vitaminDGoal)
+    }
+    
+    func testExerciseSetGoal() {
+        ProgressBarConfig.exerciseGoal = 1
+        XCTAssertEqual(1, ProgressBarConfig.exerciseGoal)
+    }
+    
+    func testMeditationSetGoal() {
+        ProgressBarConfig.meditationGoal = 5
+        XCTAssertEqual(5, ProgressBarConfig.meditationGoal)
+    }
+    
 }

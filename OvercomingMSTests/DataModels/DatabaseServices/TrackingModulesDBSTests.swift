@@ -16,7 +16,7 @@ class TrackingModulesDBSTests: XCTestCase {
     var mockNC: MockNotificationCenter!
     
     override func setUp() {
-        //Only use these lines if you need to reset the database between tests
+        //Make sure this runs first
         cleanAllData()
         AppDelegate().firstTimeInitializers()
         

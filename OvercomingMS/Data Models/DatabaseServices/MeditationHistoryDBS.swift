@@ -19,7 +19,7 @@ class MeditationHistoryDBS: TrackingModulesDBS {
 
     override func updateCompleteStatus() {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 getTrackingDay().IsMeditationComplete = getPercentageComplete() >= 100
             }
         } catch {
@@ -46,7 +46,7 @@ class MeditationHistoryDBS: TrackingModulesDBS {
     override func addItem(item: Object) {
         let percent = getPercentageComplete()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 getTrackingDay().meditationHistoryDT.append(MeditationHistoryDBT(value: item))
             }
         } catch {
@@ -85,7 +85,7 @@ class MeditationHistoryDBS: TrackingModulesDBS {
     func updateExerciseItem(oldItem: MeditationHistoryDBT, newItem: MeditationHistoryDBT) {
         let percent = getPercentageComplete()
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 oldItem.MeditationType = newItem.MeditationType
                 oldItem.StartTime = newItem.StartTime
                 oldItem.EndTime = newItem.EndTime

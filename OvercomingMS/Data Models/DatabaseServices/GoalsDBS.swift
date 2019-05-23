@@ -62,7 +62,7 @@ class GoalsDBS {
     func writeGoals() {
         let date = globalCurrentDate
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 
                 // on a date that has not had its goals set
                 if mostRecentGoals.DateModified != date {
@@ -101,7 +101,7 @@ class GoalsDBS {
     //set the first goal to the previous day
     func writeFirstDay() {
         do {
-            try realm.write() {
+            try realm.safeWrite() {
                 let item = GoalsDBT()
                 if let foodG = foodRatingGoalToSet {
                     item.FoodRatingGoal = foodG
