@@ -37,6 +37,7 @@
 		0A08189C2214E8CC0021BDF6 /* FoodSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */; };
 		0A08189E2214F82F0021BDF6 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A08189D2214F82F0021BDF6 /* Food.swift */; };
 		0A099562229734AE0067DEA7 /* NoteReviewSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A099561229734AE0067DEA7 /* NoteReviewSVCTests.swift */; };
+		0A09956422973C150067DEA7 /* SymptomsListSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09956322973C150067DEA7 /* SymptomsListSVCTests.swift */; };
 		0A19B3BB2253BBF100F4B02B /* FoodSelectedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */; };
 		0A19B3BD2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */; };
 		0A19B3BF2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */; };
@@ -282,6 +283,7 @@
 		0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchCell.swift; sourceTree = "<group>"; };
 		0A08189D2214F82F0021BDF6 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		0A099561229734AE0067DEA7 /* NoteReviewSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteReviewSVCTests.swift; sourceTree = "<group>"; };
+		0A09956322973C150067DEA7 /* SymptomsListSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsListSVCTests.swift; sourceTree = "<group>"; };
 		0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiveScaleRatingButtonsSVC.xib; sourceTree = "<group>"; };
 		0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveScaleRatingButtonsSVC.swift; sourceTree = "<group>"; };
 		0A19B3C02253E94800F4B02B /* ExpandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandingCell.xib; sourceTree = "<group>"; };
@@ -791,6 +793,7 @@
 			isa = PBXGroup;
 			children = (
 				0A8328DC229703CF0079C723 /* SymtpomsMainSVCTests.swift */,
+				0A09956322973C150067DEA7 /* SymptomsListSVCTests.swift */,
 				0A099561229734AE0067DEA7 /* NoteReviewSVCTests.swift */,
 			);
 			path = Symptoms;
@@ -1460,6 +1463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A09956422973C150067DEA7 /* SymptomsListSVCTests.swift in Sources */,
 				0A655F4B2296DCF400CD9ACB /* MainTrackingVCTests.swift in Sources */,
 				0A655F2D2294D3A300CD9ACB /* TrackingModulesDBSTests.swift in Sources */,
 				0A655F4522964D0800CD9ACB /* DisplayedMedicationItemsTests.swift in Sources */,
