@@ -36,6 +36,11 @@
 		0A08189A2214E7E80021BDF6 /* FoodSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */; };
 		0A08189C2214E8CC0021BDF6 /* FoodSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */; };
 		0A08189E2214F82F0021BDF6 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A08189D2214F82F0021BDF6 /* Food.swift */; };
+		0A099562229734AE0067DEA7 /* NoteReviewSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A099561229734AE0067DEA7 /* NoteReviewSVCTests.swift */; };
+		0A09956422973C150067DEA7 /* SymptomsListSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09956322973C150067DEA7 /* SymptomsListSVCTests.swift */; };
+		0A099569229740990067DEA7 /* Omega3MainSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A099568229740990067DEA7 /* Omega3MainSVCTests.swift */; };
+		0A09956C2297437F0067DEA7 /* Omega3ModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09956B2297437F0067DEA7 /* Omega3ModifySVCTests.swift */; };
+		0A09956F229748750067DEA7 /* Omega3SelectedSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09956E229748750067DEA7 /* Omega3SelectedSVCTests.swift */; };
 		0A19B3BB2253BBF100F4B02B /* FoodSelectedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */; };
 		0A19B3BD2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */; };
 		0A19B3BF2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */; };
@@ -93,6 +98,7 @@
 		0A7FC91021F51CE300492E93 /* MainTrackingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */; };
 		0A8328DD229703CF0079C723 /* SymtpomsMainSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8328DC229703CF0079C723 /* SymtpomsMainSVCTests.swift */; };
 		0A8328E022970C760079C723 /* HeaderSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8328DF22970C760079C723 /* HeaderSVCTests.swift */; };
+		0A8328E522972A110079C723 /* DatePickerSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8328E422972A110079C723 /* DatePickerSVCTests.swift */; };
 		0A93EA4122122D840063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0A93EA45221316490063A892 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0A93EA472213165D0063A892 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -280,6 +286,11 @@
 		0A0818992214E7E80021BDF6 /* FoodSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchCell.xib; sourceTree = "<group>"; };
 		0A08189B2214E8CC0021BDF6 /* FoodSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchCell.swift; sourceTree = "<group>"; };
 		0A08189D2214F82F0021BDF6 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		0A099561229734AE0067DEA7 /* NoteReviewSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteReviewSVCTests.swift; sourceTree = "<group>"; };
+		0A09956322973C150067DEA7 /* SymptomsListSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsListSVCTests.swift; sourceTree = "<group>"; };
+		0A099568229740990067DEA7 /* Omega3MainSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3MainSVCTests.swift; sourceTree = "<group>"; };
+		0A09956B2297437F0067DEA7 /* Omega3ModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3ModifySVCTests.swift; sourceTree = "<group>"; };
+		0A09956E229748750067DEA7 /* Omega3SelectedSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3SelectedSVCTests.swift; sourceTree = "<group>"; };
 		0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiveScaleRatingButtonsSVC.xib; sourceTree = "<group>"; };
 		0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveScaleRatingButtonsSVC.swift; sourceTree = "<group>"; };
 		0A19B3C02253E94800F4B02B /* ExpandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandingCell.xib; sourceTree = "<group>"; };
@@ -338,6 +349,7 @@
 		0A7FC90F21F51CE300492E93 /* MainTrackingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingVC.swift; sourceTree = "<group>"; };
 		0A8328DC229703CF0079C723 /* SymtpomsMainSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymtpomsMainSVCTests.swift; sourceTree = "<group>"; };
 		0A8328DF22970C760079C723 /* HeaderSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSVCTests.swift; sourceTree = "<group>"; };
+		0A8328E422972A110079C723 /* DatePickerSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSVCTests.swift; sourceTree = "<group>"; };
 		0A93EA4A22132AC50063A892 /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
 		0A93EA4B22132AC50063A892 /* Avenir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Light.ttf"; sourceTree = "<group>"; };
 		0A93EA4C22132AC60063A892 /* Avenir-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Medium.ttf"; sourceTree = "<group>"; };
@@ -584,6 +596,55 @@
 			path = FoodModule;
 			sourceTree = "<group>";
 		};
+		0A099565229740420067DEA7 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				0A099566229740570067DEA7 /* TrackingModules */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		0A099566229740570067DEA7 /* TrackingModules */ = {
+			isa = PBXGroup;
+			children = (
+				0A09956D2297485F0067DEA7 /* SelectedItemSVCs */,
+				0A09956A2297435A0067DEA7 /* ModifySVCs */,
+				0A099567229740800067DEA7 /* MainSVCs */,
+			);
+			path = TrackingModules;
+			sourceTree = "<group>";
+		};
+		0A099567229740800067DEA7 /* MainSVCs */ = {
+			isa = PBXGroup;
+			children = (
+				0A099568229740990067DEA7 /* Omega3MainSVCTests.swift */,
+			);
+			path = MainSVCs;
+			sourceTree = "<group>";
+		};
+		0A09956A2297435A0067DEA7 /* ModifySVCs */ = {
+			isa = PBXGroup;
+			children = (
+				0A09956B2297437F0067DEA7 /* Omega3ModifySVCTests.swift */,
+			);
+			path = ModifySVCs;
+			sourceTree = "<group>";
+		};
+		0A09956D2297485F0067DEA7 /* SelectedItemSVCs */ = {
+			isa = PBXGroup;
+			children = (
+				0A09956E229748750067DEA7 /* Omega3SelectedSVCTests.swift */,
+			);
+			path = SelectedItemSVCs;
+			sourceTree = "<group>";
+		};
+		0A09957022974EB00067DEA7 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
 		0A1FEC502204E6F1006CED70 /* TrackingVCs */ = {
 			isa = PBXGroup;
 			children = (
@@ -753,6 +814,7 @@
 		0A655F482296DCA900CD9ACB /* UI Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A099565229740420067DEA7 /* ReusableViews */,
 				0A655F492296DCD800CD9ACB /* View Controllers */,
 			);
 			path = "UI Views";
@@ -781,6 +843,7 @@
 		0A8328DA229703350079C723 /* BottomViewsTrackingPage */ = {
 			isa = PBXGroup;
 			children = (
+				0A09957022974EB00067DEA7 /* Goals */,
 				0A8328DB229703470079C723 /* Symptoms */,
 			);
 			path = BottomViewsTrackingPage;
@@ -790,6 +853,8 @@
 			isa = PBXGroup;
 			children = (
 				0A8328DC229703CF0079C723 /* SymtpomsMainSVCTests.swift */,
+				0A09956322973C150067DEA7 /* SymptomsListSVCTests.swift */,
+				0A099561229734AE0067DEA7 /* NoteReviewSVCTests.swift */,
 			);
 			path = Symptoms;
 			sourceTree = "<group>";
@@ -798,6 +863,7 @@
 			isa = PBXGroup;
 			children = (
 				0A8328DF22970C760079C723 /* HeaderSVCTests.swift */,
+				0A8328E422972A110079C723 /* DatePickerSVCTests.swift */,
 			);
 			path = MainHelperView;
 			sourceTree = "<group>";
@@ -1457,16 +1523,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A09956422973C150067DEA7 /* SymptomsListSVCTests.swift in Sources */,
 				0A655F4B2296DCF400CD9ACB /* MainTrackingVCTests.swift in Sources */,
 				D05350F222973A0200281BBA /* FoodSearchSVCTests.swift in Sources */,
 				0A655F2D2294D3A300CD9ACB /* TrackingModulesDBSTests.swift in Sources */,
 				0A655F4522964D0800CD9ACB /* DisplayedMedicationItemsTests.swift in Sources */,
+				0A09956C2297437F0067DEA7 /* Omega3ModifySVCTests.swift in Sources */,
 				0A655F372295F2C400CD9ACB /* Extensions.swift in Sources */,
 				0A655F4322964A1700CD9ACB /* MedicationRateModelTests.swift in Sources */,
 				0A8328E022970C760079C723 /* HeaderSVCTests.swift in Sources */,
+				0A8328E522972A110079C723 /* DatePickerSVCTests.swift in Sources */,
 				0A655F402296471300CD9ACB /* ProgressBarConfigTests.swift in Sources */,
+				0A099569229740990067DEA7 /* Omega3MainSVCTests.swift in Sources */,
+				0A09956F229748750067DEA7 /* Omega3SelectedSVCTests.swift in Sources */,
 				0A655F472296503800CD9ACB /* SymptomsListTests.swift in Sources */,
 				0A655F3E2296355700CD9ACB /* Mocks.swift in Sources */,
+				0A099562229734AE0067DEA7 /* NoteReviewSVCTests.swift in Sources */,
 				0A8328DD229703CF0079C723 /* SymtpomsMainSVCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
