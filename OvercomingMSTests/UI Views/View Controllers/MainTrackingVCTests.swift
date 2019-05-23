@@ -184,26 +184,26 @@ class MainTrackingVCTests: XCTestCase {
         globalCurrentFullDate = OMSDateAccessor().todaysFullDate
         main.goalPressed()
         
-        XCTAssertTrue(main.goalSVC.initialView is GoalsMainSVC)
+        XCTAssertTrue(main.goalVC.initialView is GoalsMainSVC)
     }
     
     func testGoalsPressed_while_not_today() {
         globalCurrentFullDate = OMSDateAccessor().todaysFullDate.addingTimeInterval(-24*60*60)
         main.goalPressed()
         
-        XCTAssertNil(main.goalSVC)
+        XCTAssertNil(main.goalVC)
     }
     
     func testSymptomsPressed() {
         main.symptomsPressed()
         
-        XCTAssertTrue(main.symptomsSVC.initialView is SymptomsMainSVC)
+        XCTAssertTrue(main.symptomsVC.initialView is SymptomsMainSVC)
     }
     
     func testSettingsPressed() {
         main.settingsPressed()
         
-        XCTAssertTrue(main.settingsSVC.initialView is SettingsMainSVC)
+        XCTAssertTrue(main.settingsVC.initialView is SettingsMainSVC)
     }
 
 }

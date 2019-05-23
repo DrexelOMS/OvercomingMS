@@ -333,9 +333,9 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     }
     
     var dataPicker: SlidingStackVC!
-    var goalSVC: SlidingStackVC!
-    var symptomsSVC: SlidingStackVC!
-    var settingsSVC: SlidingStackVC!
+    var goalVC: SlidingStackVC!
+    var symptomsVC: SlidingStackVC!
+    var settingsVC: SlidingStackVC!
     
     @objc func ProgressDayPressed(gesture: UIGestureRecognizer) {
 //        omsDateFormatter.progressDay()
@@ -349,29 +349,29 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     
     func goalPressed() {
         if globalCurrentDate == todaysDate {
-            goalSVC = TopImageSlidingStackVC(topImage: UIImage(named: "Goals")!, initialView: GoalsMainSVC())
-            goalSVC.modalPresentationStyle = .overCurrentContext
-            goalSVC.dismissalDelegate = self
+            goalVC = TopImageSlidingStackVC(topImage: UIImage(named: "Goals")!, initialView: GoalsMainSVC())
+            goalVC.modalPresentationStyle = .overCurrentContext
+            goalVC.dismissalDelegate = self
             
-            self.present(goalSVC, animated: true, completion: nil)
+            self.present(goalVC, animated: true, completion: nil)
         }
     }
     
     func symptomsPressed() {
-        symptomsSVC = TopImageSlidingStackVC(topImage: UIImage(named: "Symptoms")!, initialView: SymptomsMainSVC())
-        symptomsSVC.modalPresentationStyle = .overCurrentContext
-        symptomsSVC.dismissalDelegate = self
-        symptomsSVC.theme = UIColor(red: 166 / 255.0, green: 69 / 255.0, blue: 210 / 255.0, alpha: 1.0)
+        symptomsVC = TopImageSlidingStackVC(topImage: UIImage(named: "Symptoms")!, initialView: SymptomsMainSVC())
+        symptomsVC.modalPresentationStyle = .overCurrentContext
+        symptomsVC.dismissalDelegate = self
+        symptomsVC.theme = UIColor(red: 166 / 255.0, green: 69 / 255.0, blue: 210 / 255.0, alpha: 1.0)
         
-        self.present(symptomsSVC, animated: true, completion: nil)
+        self.present(symptomsVC, animated: true, completion: nil)
     }
     
     func settingsPressed() {
-        settingsSVC = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: SettingsMainSVC())
-        settingsSVC.modalPresentationStyle = .overCurrentContext
-        settingsSVC.dismissalDelegate = self
+        settingsVC = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: SettingsMainSVC())
+        settingsVC.modalPresentationStyle = .overCurrentContext
+        settingsVC.dismissalDelegate = self
         
-        self.present(settingsSVC, animated: true, completion: nil)
+        self.present(settingsVC, animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {

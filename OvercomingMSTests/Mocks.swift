@@ -28,9 +28,10 @@ class MockNotificationCenter : NotificationCenterWrapper {
 }
 
 class MockSlidingStackVC: SlidingStackVC {
-    var wasPresented = false
-    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
-        wasPresented = true
+    var pushWasCalled = false
+    override func pushSubView(newSubView: SlidingAbstractSVC) {
+        super.pushSubView(newSubView: newSubView)
+        pushWasCalled = true
     }
 }
 
