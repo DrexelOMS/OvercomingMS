@@ -64,7 +64,7 @@ class Omega3SelectedSVCTests: XCTestCase {
     }
     
     func testDeleteItemPressed() {
-        main.repeatButtonPressed()
+        main.deleteButtonPressed()
         
         XCTAssertTrue(parent.pushWasCalled)
         XCTAssertTrue(parent.topView is ConfirmationSVC)
