@@ -17,7 +17,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     
     //MARK: Class properties
     
-    private var todaysDate : String {
+    var todaysDate : String {
         get {
             return omsDateFormatter.todaysDate
         }
@@ -45,18 +45,22 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     private let omsDateFormatter = OMSDateAccessor()
     
     @IBOutlet weak var datePickerContainer: UIView!
+    
+    var notificationCenter = NotificationCenterWrapper()
+    
+    var onboardingVC: SlidingStackVC!
     //MARK: View Transition Initializers
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteModule(_:)), name: .didCompleteModule, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(onTodaysDateChanged(_:)), name: .didTodaysDateChange, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(onDidCompleteModule(_:)), name: .didCompleteModule, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(onTodaysDateChanged(_:)), name: .didTodaysDateChange, object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self, name: .didCompleteModule, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .didTodaysDateChange, object: nil)
+        notificationCenter.removeObserver(self, name: .didCompleteModule, object: nil)
+        notificationCenter.removeObserver(self, name: .didTodaysDateChange, object: nil)
     }
     
     @objc func onDidCompleteModule(_ notification:Notification) {
@@ -95,7 +99,6 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     }
     
     @objc func onTodaysDateChanged(_ notification:Notification) {
-        print("todays date changed")
         //this will currently change the current date if you open the app and left off somewhere else, consider setting a bool and doing it on finished showing if currently hidden, or simply soft restart the app
         globalCurrentFullDate = omsDateFormatter.todaysFullDate
         loadCurrentDayUI()
@@ -121,6 +124,21 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     }
     
     //TODO: Consider changing to view will appear, and initialize TodaysData should be handled everytime the app enters the foreground
+    func onboardingCheck() {
+        let defaults = UserDefaults.standard
+        
+        if defaults.object(forKey: "PlayedTutorialVideo") as? Bool != true {
+            defaults.set(true, forKey: "PlayedTutorialVideo")
+            
+            onboardingVC.disableSwipe()
+            onboardingVC.modalPresentationStyle = .overCurrentContext
+            onboardingVC.theme = UIColor(red: 2, green: 162, blue: 182)
+            onboardingVC.dismissalDelegate = self
+                
+            present(onboardingVC, animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -130,6 +148,8 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         exerciseBar.delegate = self
         meditationBar.delegate = self
         medicationBar.delegate = self
+        
+        onboardingVC = SlidingStackVC(initialView: WelcomePageSVC())
         
         previousButton.isUserInteractionEnabled = true
         let previusGesture = UITapGestureRecognizer(target: self, action: #selector(previousDate(gesture: )))
@@ -149,21 +169,8 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         loadCurrentDayUI()
         
-        let defaults = UserDefaults.standard
-
-        if defaults.object(forKey: "PlayedTutorialVideo") as? Bool != true {
-            defaults.set(true, forKey: "PlayedTutorialVideo")
-            
-            DispatchQueue.main.async {
-                
-                let vc = SlidingStackVC(initialView: WelcomePageSVC())
-                vc.disableSwipe()
-                vc.modalPresentationStyle = .overCurrentContext
-                vc.theme = UIColor(red: 2, green: 162, blue: 182)
-                vc.dismissalDelegate = self
-                
-                self.present(vc, animated: true, completion: nil)
-            }
+        DispatchQueue.main.async {
+            self.onboardingCheck()
         }
         
     }
@@ -308,7 +315,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     
     //MARK: IBActions
 
-    @objc private func previousDate(gesture: UIGestureRecognizer) {
+    @objc func previousDate(gesture: UIGestureRecognizer) {
         let date = UserDefaults.standard.object(forKey: "FirstOpenDate") as! Date
         if OMSDateAccessor().lessThanEqualComparison(left: globalCurrentFullDate, right: date) {
             return
@@ -317,7 +324,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         loadCurrentDayUI()
     }
     
-    @objc private func nextDate(gesture: UIGestureRecognizer) {
+    @objc func nextDate(gesture: UIGestureRecognizer) {
         if globalCurrentDate == todaysDate {
             return
         }
@@ -327,7 +334,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     
     //TODO: this is a test button, normally the day would progress, and the ui is not automatically updated unless we check in the loadCurrentDayUI to check if todays date has changed
     //basically nothing can ever write using current day, they write using todays date
-    @objc private func ProgressDayPressed(gesture: UIGestureRecognizer) {
+    @objc func ProgressDayPressed(gesture: UIGestureRecognizer) {
 //        omsDateFormatter.progressDay()
         let vc = SlidingStackVC(initialView: DatePickerSVC())
         

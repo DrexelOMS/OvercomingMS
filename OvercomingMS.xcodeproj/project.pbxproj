@@ -84,6 +84,7 @@
 		0A655F4322964A1700CD9ACB /* MedicationRateModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F4222964A1700CD9ACB /* MedicationRateModelTests.swift */; };
 		0A655F4522964D0800CD9ACB /* DisplayedMedicationItemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F4422964D0800CD9ACB /* DisplayedMedicationItemsTests.swift */; };
 		0A655F472296503800CD9ACB /* SymptomsListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F462296503800CD9ACB /* SymptomsListTests.swift */; };
+		0A655F4B2296DCF400CD9ACB /* MainTrackingVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F4A2296DCF400CD9ACB /* MainTrackingVCTests.swift */; };
 		0A67C888227C7284001D2E0C /* FoodModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C887227C7284001D2E0C /* FoodModuleVC.swift */; };
 		0A67C88A227C7518001D2E0C /* FoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C889227C7518001D2E0C /* FoodHeader.swift */; };
 		0A67C88C227C7529001D2E0C /* FoodHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67C88B227C7529001D2E0C /* FoodHeader.xib */; };
@@ -325,6 +326,7 @@
 		0A655F4222964A1700CD9ACB /* MedicationRateModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationRateModelTests.swift; sourceTree = "<group>"; };
 		0A655F4422964D0800CD9ACB /* DisplayedMedicationItemsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayedMedicationItemsTests.swift; sourceTree = "<group>"; };
 		0A655F462296503800CD9ACB /* SymptomsListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsListTests.swift; sourceTree = "<group>"; };
+		0A655F4A2296DCF400CD9ACB /* MainTrackingVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrackingVCTests.swift; sourceTree = "<group>"; };
 		0A67C887227C7284001D2E0C /* FoodModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModuleVC.swift; sourceTree = "<group>"; };
 		0A67C889227C7518001D2E0C /* FoodHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHeader.swift; sourceTree = "<group>"; };
 		0A67C88B227C7529001D2E0C /* FoodHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodHeader.xib; sourceTree = "<group>"; };
@@ -700,6 +702,7 @@
 				0A655F362295F2C400CD9ACB /* Extensions.swift */,
 				0A655F3D2296355700CD9ACB /* Mocks.swift */,
 				0A655F342295F04300CD9ACB /* DataModels */,
+				0A655F482296DCA900CD9ACB /* UI Views */,
 				0A655F2E2294D3A300CD9ACB /* Info.plist */,
 			);
 			path = OvercomingMSTests;
@@ -739,6 +742,22 @@
 				0A655F4422964D0800CD9ACB /* DisplayedMedicationItemsTests.swift */,
 			);
 			path = SimpleModels;
+			sourceTree = "<group>";
+		};
+		0A655F482296DCA900CD9ACB /* UI Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A655F492296DCD800CD9ACB /* View Controllers */,
+			);
+			path = "UI Views";
+			sourceTree = "<group>";
+		};
+		0A655F492296DCD800CD9ACB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A655F4A2296DCF400CD9ACB /* MainTrackingVCTests.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		0A7FC87721F0FAB600492E93 /* Supporting Files */ = {
@@ -1405,6 +1424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A655F4B2296DCF400CD9ACB /* MainTrackingVCTests.swift in Sources */,
 				0A655F2D2294D3A300CD9ACB /* TrackingModulesDBSTests.swift in Sources */,
 				0A655F4522964D0800CD9ACB /* DisplayedMedicationItemsTests.swift in Sources */,
 				0A655F372295F2C400CD9ACB /* Extensions.swift in Sources */,
