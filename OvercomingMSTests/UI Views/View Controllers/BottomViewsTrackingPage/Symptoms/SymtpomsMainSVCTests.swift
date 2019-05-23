@@ -19,10 +19,6 @@ class SymptomsMainSVCTests: XCTestCase {
         cleanAllData()
         AppDelegate().firstTimeInitializers()
         
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        main = storyboard.instantiateViewController(withIdentifier: "MainTrackingVC") as? MainTrackingVC
-//        main.loadView() // This line is the key
-        
         main = SymptomsMainSVC()
         parent = MockSlidingStackVC(initialView: main)
         parent.viewDidLoad()
