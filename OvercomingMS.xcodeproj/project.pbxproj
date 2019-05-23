@@ -78,6 +78,8 @@
 		0A655F2D2294D3A300CD9ACB /* TrackingModulesDBSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F2C2294D3A300CD9ACB /* TrackingModulesDBSTests.swift */; };
 		0A655F372295F2C400CD9ACB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F362295F2C400CD9ACB /* Extensions.swift */; };
 		0A655F392295F45800CD9ACB /* FatalErrorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F382295F45800CD9ACB /* FatalErrorUtil.swift */; };
+		0A655F3C2296310100CD9ACB /* NotifcationCenterWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F3B2296310100CD9ACB /* NotifcationCenterWrapper.swift */; };
+		0A655F3E2296355700CD9ACB /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A655F3D2296355700CD9ACB /* Mocks.swift */; };
 		0A67C888227C7284001D2E0C /* FoodModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C887227C7284001D2E0C /* FoodModuleVC.swift */; };
 		0A67C88A227C7518001D2E0C /* FoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67C889227C7518001D2E0C /* FoodHeader.swift */; };
 		0A67C88C227C7529001D2E0C /* FoodHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67C88B227C7529001D2E0C /* FoodHeader.xib */; };
@@ -313,6 +315,8 @@
 		0A655F2E2294D3A300CD9ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A655F362295F2C400CD9ACB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0A655F382295F45800CD9ACB /* FatalErrorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatalErrorUtil.swift; sourceTree = "<group>"; };
+		0A655F3B2296310100CD9ACB /* NotifcationCenterWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifcationCenterWrapper.swift; sourceTree = "<group>"; };
+		0A655F3D2296355700CD9ACB /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		0A67C887227C7284001D2E0C /* FoodModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModuleVC.swift; sourceTree = "<group>"; };
 		0A67C889227C7518001D2E0C /* FoodHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHeader.swift; sourceTree = "<group>"; };
 		0A67C88B227C7529001D2E0C /* FoodHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodHeader.xib; sourceTree = "<group>"; };
@@ -686,6 +690,7 @@
 			isa = PBXGroup;
 			children = (
 				0A655F362295F2C400CD9ACB /* Extensions.swift */,
+				0A655F3D2296355700CD9ACB /* Mocks.swift */,
 				0A655F342295F04300CD9ACB /* DataModels */,
 				0A655F2E2294D3A300CD9ACB /* Info.plist */,
 			);
@@ -706,6 +711,14 @@
 				0A655F2C2294D3A300CD9ACB /* TrackingModulesDBSTests.swift */,
 			);
 			path = DatabaseServices;
+			sourceTree = "<group>";
+		};
+		0A655F3A229630CC00CD9ACB /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				0A655F3B2296310100CD9ACB /* NotifcationCenterWrapper.swift */,
+			);
+			path = Wrappers;
 			sourceTree = "<group>";
 		};
 		0A7FC87721F0FAB600492E93 /* Supporting Files */ = {
@@ -1054,6 +1067,7 @@
 			children = (
 				6129744E21DF017E00B9846C /* AppDelegate.swift */,
 				0A655F382295F45800CD9ACB /* FatalErrorUtil.swift */,
+				0A655F3A229630CC00CD9ACB /* Wrappers */,
 				618235EB21E4446B001ED4DB /* Data Models */,
 				6129747D21DF020E00B9846C /* UI Views */,
 				0A7FC87721F0FAB600492E93 /* Supporting Files */,
@@ -1373,6 +1387,7 @@
 			files = (
 				0A655F2D2294D3A300CD9ACB /* TrackingModulesDBSTests.swift in Sources */,
 				0A655F372295F2C400CD9ACB /* Extensions.swift in Sources */,
+				0A655F3E2296355700CD9ACB /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1465,6 +1480,7 @@
 				0A93EA5822132BCF0063A892 /* PullBarSVC.swift in Sources */,
 				0AD7EB00221B1E7F006F71C0 /* Omega3SelectedItem.swift in Sources */,
 				0AEF7A7122342A0D009A0292 /* GuidedMeditationTimerSetupSVC.swift in Sources */,
+				0A655F3C2296310100CD9ACB /* NotifcationCenterWrapper.swift in Sources */,
 				0A3EB6F422594FF800D25AF5 /* TableViewExtensions.swift in Sources */,
 				0AC4B8E4226D067F00D8361F /* DatePickerSVC.swift in Sources */,
 				0AD7EB332223040F006F71C0 /* DoneCheckButton.swift in Sources */,

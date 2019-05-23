@@ -24,6 +24,8 @@ class TrackingModulesDBS{
     let QUICK_COMPLETE = "Quick Complete"
     let defaults = UserDefaults.standard
     
+    var notificationCenter = NotificationCenterWrapper()
+    
     private var editingDate = globalCurrentDate
     
     convenience init(editingDate: String) {
@@ -70,7 +72,7 @@ class TrackingModulesDBS{
     }
     
     private func notify(module: Modules) {
-        NotificationCenter.default.post(name: .didCompleteModule, object: module)
+        notificationCenter.post(name: .didCompleteModule, object: module)
     }
     
     func updateAllStatus() {
