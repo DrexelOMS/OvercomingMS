@@ -14,7 +14,6 @@ class GoalsMainSVCTests: XCTestCase {
     var parent: MockSlidingStackVC!
     var main: GoalsMainSVC!
     var dbs: GoalsDBS!
-    var item: Omega3HistoryDBT!
     
     override func setUp() {
         //Only use these lines if you need to reset the database between tests

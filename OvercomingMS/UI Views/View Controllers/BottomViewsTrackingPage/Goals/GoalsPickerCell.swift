@@ -12,13 +12,14 @@ import Cartography
 class GoalsPickerCell : UICollectionViewCell {
     
     @IBOutlet weak var label: UILabel!
+    var imageView: UIImageView!
     
     func setImage(_ image: UIImage) {
         for subUIView in self.subviews as [UIView] {
             subUIView.removeFromSuperview()
         }
         
-        let imageView = UIImageView(image: image)
+        imageView = UIImageView(image: image)
         self.addSubview(imageView)
         
         constrain(imageView, self) { (view, superView) in

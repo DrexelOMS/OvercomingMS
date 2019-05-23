@@ -43,6 +43,7 @@
 		0A09956F229748750067DEA7 /* Omega3SelectedSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09956E229748750067DEA7 /* Omega3SelectedSVCTests.swift */; };
 		0A09957222974FA90067DEA7 /* ExerciseHistoryDBSTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09957122974FA90067DEA7 /* ExerciseHistoryDBSTest.swift */; };
 		0A09957422974FF50067DEA7 /* GoalsMainSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09957322974FF50067DEA7 /* GoalsMainSVCTests.swift */; };
+		0A099577229757920067DEA7 /* GoalsModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A099576229757910067DEA7 /* GoalsModifySVCTests.swift */; };
 		0A19B3BB2253BBF100F4B02B /* FoodSelectedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */; };
 		0A19B3BD2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */; };
 		0A19B3BF2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */; };
@@ -294,6 +295,7 @@
 		0A09956E229748750067DEA7 /* Omega3SelectedSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3SelectedSVCTests.swift; sourceTree = "<group>"; };
 		0A09957122974FA90067DEA7 /* ExerciseHistoryDBSTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryDBSTest.swift; sourceTree = "<group>"; };
 		0A09957322974FF50067DEA7 /* GoalsMainSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsMainSVCTests.swift; sourceTree = "<group>"; };
+		0A099576229757910067DEA7 /* GoalsModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsModifySVCTests.swift; sourceTree = "<group>"; };
 		0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiveScaleRatingButtonsSVC.xib; sourceTree = "<group>"; };
 		0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveScaleRatingButtonsSVC.swift; sourceTree = "<group>"; };
 		0A19B3C02253E94800F4B02B /* ExpandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandingCell.xib; sourceTree = "<group>"; };
@@ -644,6 +646,7 @@
 			isa = PBXGroup;
 			children = (
 				0A09957322974FF50067DEA7 /* GoalsMainSVCTests.swift */,
+				0A099576229757910067DEA7 /* GoalsModifySVCTests.swift */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
@@ -1542,6 +1545,7 @@
 				0A09956F229748750067DEA7 /* Omega3SelectedSVCTests.swift in Sources */,
 				0A655F472296503800CD9ACB /* SymptomsListTests.swift in Sources */,
 				0A655F3E2296355700CD9ACB /* Mocks.swift in Sources */,
+				0A099577229757920067DEA7 /* GoalsModifySVCTests.swift in Sources */,
 				0A099562229734AE0067DEA7 /* NoteReviewSVCTests.swift in Sources */,
 				0A8328DD229703CF0079C723 /* SymtpomsMainSVCTests.swift in Sources */,
 			);
