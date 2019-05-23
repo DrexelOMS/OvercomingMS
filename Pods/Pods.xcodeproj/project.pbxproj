@@ -292,7 +292,6 @@
 		CEA797BC1D8A25371315A11575C42C97 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2093ED4D5D1721A26BA87831A808D70D /* fr.lproj */; };
 		CF4904E2EC23249E6396C9CDE5CF5858 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875AB546A2CBEB85231737B85B39E3B5 /* Player.swift */; };
 		CFDE80C521CD8313AA440E0FC7B82FBB /* JTAppleCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E75E064B830F9C6D19380C01C69AF7 /* JTAppleCalendarLayout.swift */; };
-		D071C393227F7E8A009C7428 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583EFDC006D393A58F84F621F3AC7752 /* SwiftyJSON.swift */; };
 		D1B55151AE05392B4A05522DED127897 /* UserInteractionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30B8B40E8E1CF606FA296D12DFD8D21 /* UserInteractionFunctions.swift */; };
 		D20FEA1C4077819D7D764AF1B758A72F /* RLMAccessor.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = E75210980F1956B3C2E5C05B55B14A53 /* RLMAccessor.h */; };
 		D2D64801E5EC703DC7416B4CE40E138D /* RLMConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = B59CE90F4997EA9A93E0790766591BA6 /* RLMConstants.h */; };
@@ -2856,7 +2855,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DD8938FC8DA9861ACE6B8B8E12E881 /* SwiftyJSON-dummy.m in Sources */,
-				D071C393227F7E8A009C7428 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
