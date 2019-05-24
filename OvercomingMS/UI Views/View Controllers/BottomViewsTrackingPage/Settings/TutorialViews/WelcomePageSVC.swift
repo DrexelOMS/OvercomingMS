@@ -32,7 +32,7 @@ class WelcomePageSVC : SlidingAbstractSVC {
         continueButton.addGestureRecognizer(tapGesture)
     }
     
-    @objc private func buttonPressed(tapGestureRecognizer: UITapGestureRecognizer){
+    @objc func buttonPressed(tapGestureRecognizer: UITapGestureRecognizer){
         let tutorial = SettingsTutorialsSVC(isOnboarding: true)
         tutorial.parentVC = self.parentVC
         
