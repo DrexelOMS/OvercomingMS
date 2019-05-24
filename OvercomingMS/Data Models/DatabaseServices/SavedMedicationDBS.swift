@@ -97,7 +97,7 @@ class SavedMedicationDBS: TrackingModulesDBS {
         fatalError("Use deleteSavedMedication(item: SavedMedicationDBT) instead")
     }
     
-    // ALERT - YOU SHOULD USE THIS INSTEAD OF DELETEITEM FOR MEDS, IT CREATES A DELETED DATE
+    // ALERT - YOU SHOULD USE THIS INSTEAD OF DELETE ITEM FOR MEDS, IT CREATES A DELETED DATE
     func deleteSavedMedication(item: SavedMedicationDBT) {
         do {
             try realm.safeWrite() {
