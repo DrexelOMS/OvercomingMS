@@ -250,6 +250,8 @@
 		D03BBBCC2290908C0012CF60 /* 35_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC8229090840012CF60 /* 35_Minute.mp3 */; };
 		D03BBBCD2290908C0012CF60 /* 45_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC92290908A0012CF60 /* 45_Minute.mp3 */; };
 		D03BBBCE2290908C0012CF60 /* 15_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBCA2290908C0012CF60 /* 15_Minute.mp3 */; };
+		D05350F222973A0200281BBA /* FoodSearchSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05350F122973A0200281BBA /* FoodSearchSVCTests.swift */; };
+		D05350F42297735800281BBA /* FoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05350F32297735800281BBA /* FoodTests.swift */; };
 		D069C2712280F39D009BB49D /* WelcomePageSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2702280F39D009BB49D /* WelcomePageSVC.swift */; };
 		D069C2732280F892009BB49D /* ContinueButtonSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069C2722280F892009BB49D /* ContinueButtonSVC.swift */; };
 		D069C2752280F8A4009BB49D /* ContinueButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */; };
@@ -532,6 +534,8 @@
 		D03BBBC8229090840012CF60 /* 35_Minute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 35_Minute.mp3; sourceTree = "<group>"; };
 		D03BBBC92290908A0012CF60 /* 45_Minute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 45_Minute.mp3; sourceTree = "<group>"; };
 		D03BBBCA2290908C0012CF60 /* 15_Minute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 15_Minute.mp3; sourceTree = "<group>"; };
+		D05350F122973A0200281BBA /* FoodSearchSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodSearchSVCTests.swift; path = "OvercomingMSTests/UI Views/ReusableViews/TrackingModules/FoodModule/FoodSearchSVCTests.swift"; sourceTree = SOURCE_ROOT; };
+		D05350F32297735800281BBA /* FoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodTests.swift; path = "OvercomingMSTests/UI Views/ReusableViews/TrackingModules/FoodModule/FoodTests.swift"; sourceTree = SOURCE_ROOT; };
 		D069C2702280F39D009BB49D /* WelcomePageSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageSVC.swift; sourceTree = "<group>"; };
 		D069C2722280F892009BB49D /* ContinueButtonSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueButtonSVC.swift; sourceTree = "<group>"; };
 		D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContinueButtonSVC.xib; sourceTree = "<group>"; };
@@ -863,6 +867,7 @@
 		0A655F492296DCD800CD9ACB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D05350F122973A0200281BBA /* FoodSearchSVCTests.swift */,
 				0A8328DE22970C590079C723 /* MainHelperView */,
 				0A8328DA229703350079C723 /* BottomViewsTrackingPage */,
 				0A655F4A2296DCF400CD9ACB /* MainTrackingVCTests.swift */,
@@ -901,6 +906,7 @@
 		0A8328DE22970C590079C723 /* MainHelperView */ = {
 			isa = PBXGroup;
 			children = (
+				D05350F32297735800281BBA /* FoodTests.swift */,
 				0A8328DF22970C760079C723 /* HeaderSVCTests.swift */,
 				0A8328E422972A110079C723 /* DatePickerSVCTests.swift */,
 			);
@@ -1566,12 +1572,14 @@
 				0A09957422974FF50067DEA7 /* GoalsMainSVCTests.swift in Sources */,
 				0A09956422973C150067DEA7 /* SymptomsListSVCTests.swift in Sources */,
 				0A655F4B2296DCF400CD9ACB /* MainTrackingVCTests.swift in Sources */,
+				D05350F222973A0200281BBA /* FoodSearchSVCTests.swift in Sources */,
 				846565C522984B2C00A27BEB /* MeditationModifySVCTests.swift in Sources */,
 				0A09957B229774640067DEA7 /* MedicationNotTakenItemSVCTests.swift in Sources */,
 				0A655F2D2294D3A300CD9ACB /* TrackingModulesDBSTests.swift in Sources */,
 				0A09957922976E070067DEA7 /* MedicationMainSVCTests.swift in Sources */,
 				0A09957222974FA90067DEA7 /* ExerciseHistoryDBSTest.swift in Sources */,
 				0A655F4522964D0800CD9ACB /* DisplayedMedicationItemsTests.swift in Sources */,
+				D05350F42297735800281BBA /* FoodTests.swift in Sources */,
 				0A09956C2297437F0067DEA7 /* Omega3ModifySVCTests.swift in Sources */,
 				0A09957D22977AC90067DEA7 /* MedicationItemTests.swift in Sources */,
 				846565BF22982BEA00A27BEB /* VitaminDModifySVCTests.swift in Sources */,
