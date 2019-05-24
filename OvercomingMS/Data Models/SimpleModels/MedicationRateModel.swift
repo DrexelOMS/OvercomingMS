@@ -28,7 +28,7 @@ class MedicationRateModel {
         }
         set {
             for key in dictionary.keys {
-                dictionary[key] = newValue.contains(key) || newValue == "EveryDay"
+                dictionary[key] = newValue.contains(key) || newValue == "Everyday"
             }
         }
     }
