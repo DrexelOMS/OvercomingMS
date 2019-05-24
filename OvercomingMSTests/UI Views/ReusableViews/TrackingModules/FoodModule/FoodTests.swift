@@ -1,5 +1,5 @@
 //
-//  FoodSearchSVCTests.swift
+//  FoodTests.swift
 //  OvercomingMSTests
 //
 //  Created by Justin Ickler on 5/23/19.
@@ -9,12 +9,13 @@
 import XCTest
 @testable import OvercomingMS
 
-class FoodSearchSVCTests: XCTestCase {
+class FoodTests: XCTestCase {
 
-    var main: FoodSearchSVC!
+    var main: Food!
 
+    
     override func setUp() {
-        main = FoodSearchSVC()
+        main = Food()
     }
 
     override func tearDown() {
@@ -32,4 +33,5 @@ class FoodSearchSVCTests: XCTestCase {
         XCTAssertTrue(main.checkType(type: "Eggs") == RecommendedLevel.Caution)
         XCTAssertTrue(main.checkType(type: "test") == RecommendedLevel.Good)
     }
+
 }
