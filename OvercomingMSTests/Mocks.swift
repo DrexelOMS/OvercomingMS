@@ -39,6 +39,11 @@ class MockSlidingStackVC: SlidingStackVC {
 //        super.popSubView()
         popWasCalled = true
     }
+    
+    var dismissWasCalled = false
+    override func dismiss() {
+        dismissWasCalled = true
+    }
 }
 
 class MockTrackingModulesDBS: TrackingModulesDBS {

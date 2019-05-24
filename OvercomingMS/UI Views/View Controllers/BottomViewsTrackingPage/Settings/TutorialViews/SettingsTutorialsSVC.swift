@@ -70,7 +70,7 @@ class SettingsTutorialsSVC : SlidingAbstractSVC, PlayerDelegate, PlayerPlaybackD
     
     var player : Player!
     
-    private var isOnboarding = false
+    var isOnboarding = false
 
     override func customSetup() {
 //        backButton.backButtonAction = backPressed
@@ -114,7 +114,7 @@ class SettingsTutorialsSVC : SlidingAbstractSVC, PlayerDelegate, PlayerPlaybackD
             let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to skip the tutorial", preferredStyle: .alert)
             
             let ok = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
-                self.parentVC.dismiss()
+                self.backPressed()
             })
             
             // Create Cancel button with action handlder
@@ -130,9 +130,13 @@ class SettingsTutorialsSVC : SlidingAbstractSVC, PlayerDelegate, PlayerPlaybackD
             parentVC.present(dialogMessage, animated: true, completion: nil)
         }
         else {
-            parentVC.popSubView()
+            backPressed()
         }
     
+    }
+    
+    func pause(){
+        player.pause()
     }
     
     func backPressed() {
