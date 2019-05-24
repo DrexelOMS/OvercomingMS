@@ -48,7 +48,7 @@ class MeditationSelectedSVCTests: XCTestCase {
         
         XCTAssertTrue(parent.pushWasCalled)
         let page = parent.topView as! MeditationModifySVC
-        XCTAssertEqual("Run", page.editingMeditationItem.MeditationType)
+        XCTAssertEqual("Silent", page.editingMeditationItem.MeditationType)
     }
     
     func testRepeatItemPressed() {

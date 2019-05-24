@@ -26,32 +26,32 @@ class MedicationSelectedSVCTests: XCTestCase {
         main = MedicationSelectedItemSVC()
         
         item = SavedMedicationDBT()
-        item.MedicationName = "VitaminD"
+        item.MedicationName = "Red"
         item.TimeOfDay = Date()
         item.DateCreated = Date()
         item.MedicationNote="Smooth capsule"
         item.Frequency = "MTWRFSU"
         dbs.addItem(item: item)
         
-        main.savedMedicationItem = dbs.getSavedMedicationItems()[0]
-        //main.savedMedicationItem = dbs.getTodaysTotalMedGoal()
+        main.savedMedicationItem = dbs.getSavedMedicationItems().medicationsTracked[0]
         
         parent = MockSlidingStackVC(initialView: main)
         parent.viewDidLoad()
     }
     
     func testDisplaysValues() {
-        XCTAssertEqual("VitaminD", main.topMainLabel.text)
-        XCTAssertEqual(OMSDateAccessor.getDateTime(date: item.StartTime), main.middleMainLabel.text)
-        XCTAssertEqual("5k IUs", main.bottomMainLabel.text)
+        XCTAssertEqual("Red", main.topMainLabel.text)
+        XCTAssertEqual(OMSDateAccessor.getDateTime(date: item.TimeOfDay), main.middleMainLabel.text)
+        XCTAssertEqual("Everyday", main.middleFrequencyLabel.text)
+        XCTAssertEqual("Smooth capsule", main.bottomMainLabel.text)
     }
     
     func testEditButtonPressed() {
         main.editButtonPressed()
         
         XCTAssertTrue(parent.pushWasCalled)
-        let page = parent.topView as! VitaminDModifySVC
-        XCTAssertEqual(5, page.editingVitamindDItem.Amount)
+        let page = parent.topView as! MedicationModifySVC
+        XCTAssertEqual("Red", page.editingMedicationItem.MedicationName)
     }
     
     func testRepeatItemPressed() {
