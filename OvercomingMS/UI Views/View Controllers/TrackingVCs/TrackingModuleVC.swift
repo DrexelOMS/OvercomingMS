@@ -15,7 +15,7 @@ class TrackingModuleVC: SlidingStackVC {
     
     let progressBar = TrackingProgressBar()
     
-    private var trackingDBS: TrackingModulesDBS!
+    var trackingDBS: TrackingModulesDBS!
     
     convenience init(title: String, trackingDBS: TrackingModulesDBS, mainViewToSet: SlidingAbstractSVC) {
         self.init(initialView: mainViewToSet)

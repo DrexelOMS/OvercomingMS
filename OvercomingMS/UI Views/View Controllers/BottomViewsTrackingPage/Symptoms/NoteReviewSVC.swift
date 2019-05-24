@@ -178,11 +178,14 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     }
     
     func donePressed() {
-        parentVC.view.endEditing(true)
-        symptomsVC.toggleTopImage(isHidden: false)
+        dismissKeyboard()
     }
     
     func cancelPressed() {
+        dismissKeyboard()
+    }
+    
+    func dismissKeyboard() {
         parentVC.view.endEditing(true)
         symptomsVC.toggleTopImage(isHidden: false)
     }

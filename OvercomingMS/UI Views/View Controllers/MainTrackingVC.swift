@@ -17,7 +17,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     
     //MARK: Class properties
     
-    private var todaysDate : String {
+    var todaysDate : String {
         get {
             return omsDateFormatter.todaysDate
         }
@@ -45,18 +45,22 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     private let omsDateFormatter = OMSDateAccessor()
     
     @IBOutlet weak var datePickerContainer: UIView!
+    
+    var notificationCenter = NotificationCenterWrapper()
+    
+    var onboardingVC: SlidingStackVC!
     //MARK: View Transition Initializers
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteModule(_:)), name: .didCompleteModule, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(onTodaysDateChanged(_:)), name: .didTodaysDateChange, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(onDidCompleteModule(_:)), name: .didCompleteModule, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(onTodaysDateChanged(_:)), name: .didTodaysDateChange, object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self, name: .didCompleteModule, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .didTodaysDateChange, object: nil)
+        notificationCenter.removeObserver(self, name: .didCompleteModule, object: nil)
+        notificationCenter.removeObserver(self, name: .didTodaysDateChange, object: nil)
     }
     
     @objc func onDidCompleteModule(_ notification:Notification) {
@@ -95,7 +99,6 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     }
     
     @objc func onTodaysDateChanged(_ notification:Notification) {
-        print("todays date changed")
         //this will currently change the current date if you open the app and left off somewhere else, consider setting a bool and doing it on finished showing if currently hidden, or simply soft restart the app
         globalCurrentFullDate = omsDateFormatter.todaysFullDate
         loadCurrentDayUI()
@@ -121,6 +124,22 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     }
     
     //TODO: Consider changing to view will appear, and initialize TodaysData should be handled everytime the app enters the foreground
+    func onboardingCheck() {
+        let defaults = UserDefaults.standard
+        
+        if defaults.object(forKey: "PlayedTutorialVideo") as? Bool != true {
+            defaults.set(true, forKey: "PlayedTutorialVideo")
+            
+            onboardingVC = SlidingStackVC(initialView: WelcomePageSVC())
+            onboardingVC.disableSwipe()
+            onboardingVC.modalPresentationStyle = .overCurrentContext
+            onboardingVC.theme = UIColor(red: 2, green: 162, blue: 182)
+            onboardingVC.dismissalDelegate = self
+                
+            present(onboardingVC, animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -149,21 +168,8 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
         loadCurrentDayUI()
         
-        let defaults = UserDefaults.standard
-
-        if defaults.object(forKey: "PlayedTutorialVideo") as? Bool != true {
-            defaults.set(true, forKey: "PlayedTutorialVideo")
-            
-            DispatchQueue.main.async {
-                
-                let vc = SlidingStackVC(initialView: WelcomePageSVC())
-                vc.disableSwipe()
-                vc.modalPresentationStyle = .overCurrentContext
-                vc.theme = UIColor(red: 2, green: 162, blue: 182)
-                vc.dismissalDelegate = self
-                
-                self.present(vc, animated: true, completion: nil)
-            }
+        DispatchQueue.main.async {
+            self.onboardingCheck()
         }
         
     }
@@ -267,40 +273,41 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         
     }
     
+    var moduleVC: SlidingStackVC!
+    
     func didPressLeftContainer(_ sender: TrackingProgressBar) {
         
-        var vc: SlidingStackVC
         
         switch(sender.tag){
         case 0:
-            vc = TrackingModuleFactory.Omega3VC()
+            moduleVC = TrackingModuleFactory.Omega3VC()
             break
         case 1:
-            vc = TrackingModuleFactory.VitaminDVC()
+            moduleVC = TrackingModuleFactory.VitaminDVC()
             break
         case 2:
-            vc = TrackingModuleFactory.ExerciseVC()
+            moduleVC = TrackingModuleFactory.ExerciseVC()
             break
         case 3:
-            vc = TrackingModuleFactory.MeditationVC()
+            moduleVC = TrackingModuleFactory.MeditationVC()
             break
         case 4:
-            vc = TrackingModuleFactory.MedicationVC()
+            moduleVC = TrackingModuleFactory.MedicationVC()
             break
         case 5:
-            vc = FoodModuleVC(initialView: FoodMainSVC())
+            moduleVC = FoodModuleVC(initialView: FoodMainSVC())
             break
         default:
             fatalError("Case Not Handled")
             break;
         }
         
-        vc.theme = sender.colorTheme
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.dismissalDelegate = self
+        moduleVC.theme = sender.colorTheme
+        moduleVC.modalPresentationStyle = .overCurrentContext
+        moduleVC.dismissalDelegate = self
         moduleProgressButtonHeight = Int(foodBar.frame.height)
         
-        self.present(vc, animated: true, completion: nil)
+        self.present(moduleVC, animated: true, completion: nil)
         
         //loadCurrentDayUI()
         
@@ -308,7 +315,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
     
     //MARK: IBActions
 
-    @objc private func previousDate(gesture: UIGestureRecognizer) {
+    @objc func previousDate(gesture: UIGestureRecognizer) {
         let date = UserDefaults.standard.object(forKey: "FirstOpenDate") as! Date
         if OMSDateAccessor().lessThanEqualComparison(left: globalCurrentFullDate, right: date) {
             return
@@ -317,7 +324,7 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         loadCurrentDayUI()
     }
     
-    @objc private func nextDate(gesture: UIGestureRecognizer) {
+    @objc func nextDate(gesture: UIGestureRecognizer) {
         if globalCurrentDate == todaysDate {
             return
         }
@@ -325,43 +332,46 @@ class MainTrackingVC: UIViewController, DismissalDelegate, TrackingProgressBarDe
         loadCurrentDayUI()
     }
     
-    //TODO: this is a test button, normally the day would progress, and the ui is not automatically updated unless we check in the loadCurrentDayUI to check if todays date has changed
-    //basically nothing can ever write using current day, they write using todays date
-    @objc private func ProgressDayPressed(gesture: UIGestureRecognizer) {
+    var dataPicker: SlidingStackVC!
+    var goalVC: SlidingStackVC!
+    var symptomsVC: SlidingStackVC!
+    var settingsVC: SlidingStackVC!
+    
+    @objc func ProgressDayPressed(gesture: UIGestureRecognizer) {
 //        omsDateFormatter.progressDay()
-        let vc = SlidingStackVC(initialView: DatePickerSVC())
         
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.dismissalDelegate = self
+        dataPicker = SlidingStackVC(initialView: DatePickerSVC())
+        dataPicker.modalPresentationStyle = .overCurrentContext
+        dataPicker.dismissalDelegate = self
         
-        self.present(vc, animated: true, completion: nil)
+        self.present(dataPicker, animated: true, completion: nil)
     }
     
     func goalPressed() {
         if globalCurrentDate == todaysDate {
-            let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Goals")!, initialView: GoalsMainSVC())
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.dismissalDelegate = self
+            goalVC = TopImageSlidingStackVC(topImage: UIImage(named: "Goals")!, initialView: GoalsMainSVC())
+            goalVC.modalPresentationStyle = .overCurrentContext
+            goalVC.dismissalDelegate = self
             
-            self.present(vc, animated: true, completion: nil)
+            self.present(goalVC, animated: true, completion: nil)
         }
     }
     
     func symptomsPressed() {
-        let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Symptoms")!, initialView: SymptomsMainSVC())
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.dismissalDelegate = self
-        vc.theme = UIColor(red: 166 / 255.0, green: 69 / 255.0, blue: 210 / 255.0, alpha: 1.0)
+        symptomsVC = TopImageSlidingStackVC(topImage: UIImage(named: "Symptoms")!, initialView: SymptomsMainSVC())
+        symptomsVC.modalPresentationStyle = .overCurrentContext
+        symptomsVC.dismissalDelegate = self
+        symptomsVC.theme = UIColor(red: 166 / 255.0, green: 69 / 255.0, blue: 210 / 255.0, alpha: 1.0)
         
-        self.present(vc, animated: true, completion: nil)
+        self.present(symptomsVC, animated: true, completion: nil)
     }
     
     func settingsPressed() {
-        let vc = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: SettingsMainSVC())
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.dismissalDelegate = self
+        settingsVC = TopImageSlidingStackVC(topImage: UIImage(named: "Settings")!, initialView: SettingsMainSVC())
+        settingsVC.modalPresentationStyle = .overCurrentContext
+        settingsVC.dismissalDelegate = self
         
-        self.present(vc, animated: true, completion: nil)
+        self.present(settingsVC, animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
