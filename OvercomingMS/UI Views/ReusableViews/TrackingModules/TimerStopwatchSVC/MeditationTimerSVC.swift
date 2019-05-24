@@ -15,7 +15,7 @@ class MeditationTimerSVC : TimerStopWatchAbstractSVC {
     
     private var totalTime = 0
     private var type = ""
-    private var guidedSound = ""
+    var guidedSound = ""
     var player: AVAudioPlayer?
 
     override var pauseMessage: String {
@@ -144,7 +144,6 @@ class MeditationTimerSVC : TimerStopWatchAbstractSVC {
         super.cancelButtonPressed()
         stopTimer()
         pauseSound()
-        
     }
 
     
