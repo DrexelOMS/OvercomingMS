@@ -44,7 +44,27 @@ class ExerciseStopwatchSVCTests: XCTestCase {
         
         main.startPauseButtonPressed()
         XCTAssertEqual("Keep going!", main.descriptionLabel.text)
-        XCTAssertTrue(main.isTimerRunning)       
+        XCTAssertTrue(main.isTimerRunning)
+    }
+    
+    func testUpdateTimer() {
+        main.updateTimer()
+        
+        XCTAssertEqual(1, main.seconds)
+    }
+    
+    func testFinishPressed_0_seconds() {
+        main.finishButtonPressed()
+        
+        XCTAssertFalse(parent.pushWasCalled)
+    }
+    
+    func testFinishPressed_1_seconds() {
+        main.updateTimer()
+        main.finishButtonPressed()
+        
+        XCTAssertTrue(parent.pushWasCalled)
+        XCTAssertTrue(parent.topView is ExerciseModifySVC)
     }
     
 }
