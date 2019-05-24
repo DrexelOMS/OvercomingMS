@@ -51,6 +51,7 @@
 		0A0995812298797E0067DEA7 /* ExerciseMainSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0995802298797E0067DEA7 /* ExerciseMainSVCTests.swift */; };
 		0A09958322987ABA0067DEA7 /* MeditationMainSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09958222987ABA0067DEA7 /* MeditationMainSVCTests.swift */; };
 		0A099586229881320067DEA7 /* MeditationTimerModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A099585229881320067DEA7 /* MeditationTimerModifySVCTests.swift */; };
+		0A099588229882E00067DEA7 /* ExerciseStopwatchSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A099587229882E00067DEA7 /* ExerciseStopwatchSVCTests.swift */; };
 		0A19B3BB2253BBF100F4B02B /* FoodSelectedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */; };
 		0A19B3BD2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */; };
 		0A19B3BF2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */; };
@@ -320,6 +321,7 @@
 		0A0995802298797E0067DEA7 /* ExerciseMainSVCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseMainSVCTests.swift; sourceTree = "<group>"; };
 		0A09958222987ABA0067DEA7 /* MeditationMainSVCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationMainSVCTests.swift; sourceTree = "<group>"; };
 		0A099585229881320067DEA7 /* MeditationTimerModifySVCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationTimerModifySVCTests.swift; sourceTree = "<group>"; };
+		0A099587229882E00067DEA7 /* ExerciseStopwatchSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStopwatchSVCTests.swift; sourceTree = "<group>"; };
 		0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiveScaleRatingButtonsSVC.xib; sourceTree = "<group>"; };
 		0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveScaleRatingButtonsSVC.swift; sourceTree = "<group>"; };
 		0A19B3C02253E94800F4B02B /* ExpandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandingCell.xib; sourceTree = "<group>"; };
@@ -704,6 +706,7 @@
 		0A099584229880190067DEA7 /* TimerStopwatchSVC */ = {
 			isa = PBXGroup;
 			children = (
+				0A099587229882E00067DEA7 /* ExerciseStopwatchSVCTests.swift */,
 			);
 			path = TimerStopwatchSVC;
 			sourceTree = "<group>";
@@ -1600,6 +1603,7 @@
 				0A09957922976E070067DEA7 /* MedicationMainSVCTests.swift in Sources */,
 				0A0995812298797E0067DEA7 /* ExerciseMainSVCTests.swift in Sources */,
 				0A09957222974FA90067DEA7 /* ExerciseHistoryDBSTest.swift in Sources */,
+				0A099588229882E00067DEA7 /* ExerciseStopwatchSVCTests.swift in Sources */,
 				0A655F4522964D0800CD9ACB /* DisplayedMedicationItemsTests.swift in Sources */,
 				D05350F42297735800281BBA /* FoodTests.swift in Sources */,
 				0A09956C2297437F0067DEA7 /* Omega3ModifySVCTests.swift in Sources */,

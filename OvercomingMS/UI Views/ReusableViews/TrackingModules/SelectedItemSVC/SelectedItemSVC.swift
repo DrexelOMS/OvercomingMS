@@ -74,7 +74,7 @@ class SelectedItemSVC : SlidingAbstractSVC {
         fatalError("Override Delete Button Pressed")
     }
     
-    override func didLayoutSubviews(){
+    override func layoutSubviews(){
         // minimum font size 80, max font size 120
         // minimum height = 72, max height = 150
         var rate = 1 - ((90 - middleStackView.frame.height)) / 20

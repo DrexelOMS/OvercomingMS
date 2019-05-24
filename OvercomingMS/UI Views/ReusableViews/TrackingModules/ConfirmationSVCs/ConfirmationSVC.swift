@@ -56,7 +56,7 @@ class ConfirmationSVC: SlidingAbstractSVC {
         }
     }
     
-    override func didLayoutSubviews() {
+    override func layoutSubviews() {
         DispatchQueue.main.async {
             var rate = 1 - ((712 - self.frame.height)) / (712 - 462)
             rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)

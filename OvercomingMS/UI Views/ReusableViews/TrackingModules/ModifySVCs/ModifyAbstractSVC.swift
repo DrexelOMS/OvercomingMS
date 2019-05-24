@@ -113,7 +113,7 @@ class ModifyAbstractSVC : SlidingAbstractSVC, TFIDelegate  {
         }
     }
     
-    override func didLayoutSubviews() {
+    override func layoutSubviews() {
         if !keyboardOpen {
             DispatchQueue.main.async {
                 var rate = 1 - (712 - self.frame.height) / 250

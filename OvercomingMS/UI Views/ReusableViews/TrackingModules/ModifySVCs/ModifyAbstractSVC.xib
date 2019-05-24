@@ -34,10 +34,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nG2-DQ-L2R" userLabel="TopLabel">
-                    <rect key="frame" x="45" y="40" width="230" height="60"/>
+                    <rect key="frame" x="30" y="40" width="260" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Add" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="HoM-YW-o2v">
-                            <rect key="frame" x="0.0" y="0.0" width="230" height="60"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Add" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="HoM-YW-o2v">
+                            <rect key="frame" x="0.0" y="0.0" width="260" height="60"/>
                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -68,11 +68,11 @@
                 <constraint firstItem="nG2-DQ-L2R" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="IHC-Hp-nMD"/>
                 <constraint firstItem="W8i-7f-xAc" firstAttribute="top" secondItem="pwm-Jx-CmD" secondAttribute="bottom" constant="75" id="Kcu-Cw-fPX"/>
                 <constraint firstItem="pwm-Jx-CmD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="O0s-9P-FPl"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nG2-DQ-L2R" secondAttribute="trailing" constant="45" id="UUd-WH-ffR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nG2-DQ-L2R" secondAttribute="trailing" constant="30" id="UUd-WH-ffR"/>
                 <constraint firstItem="pwm-Jx-CmD" firstAttribute="top" secondItem="nG2-DQ-L2R" secondAttribute="bottom" constant="25" id="WnY-hk-cH6"/>
                 <constraint firstItem="W8i-7f-xAc" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="l05-d8-pQg"/>
                 <constraint firstItem="W8i-7f-xAc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mDl-UY-8O6"/>
-                <constraint firstItem="nG2-DQ-L2R" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="45" id="pF3-ev-XAf"/>
+                <constraint firstItem="nG2-DQ-L2R" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="pF3-ev-XAf"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

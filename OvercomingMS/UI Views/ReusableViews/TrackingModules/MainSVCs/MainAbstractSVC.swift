@@ -32,7 +32,7 @@ class MainAbstractSVC: SlidingAbstractSVC {
         internetPopupButton.parentVC = parentVC
     }
 
-    override func didLayoutSubviews(){
+    override func layoutSubviews(){
         // minimum font size 80, max font size 120
         // minimum height = 72, max height = 150
         var rate = 1 - ((150 - totalsCountLabel.frame.height)) / 78

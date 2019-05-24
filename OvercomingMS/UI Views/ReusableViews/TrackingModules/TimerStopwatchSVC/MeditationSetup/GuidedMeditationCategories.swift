@@ -53,7 +53,7 @@ class GuidedMeditationCategories : SlidingAbstractSVC {
         parentVC.pushSubView(newSubView: MeditationTimerSVC(startingSeconds: length * 60, meditationType: type))
     }
     
-    override func didLayoutSubviews() {
+    override func layoutSubviews() {
         DispatchQueue.main.async {
             var rate = 1 - (712 - self.frame.height) / 250
             rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)

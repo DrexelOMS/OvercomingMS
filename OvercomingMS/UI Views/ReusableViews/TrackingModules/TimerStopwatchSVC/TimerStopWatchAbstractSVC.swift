@@ -68,12 +68,10 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
     
     func cancelButtonPressed() {
         let cancelPage = ConfirmationFactory.CancelConfirmation()
-        cancelPage.methodToRunOnConfirm = cancel
+        cancelPage.methodToRunOnConfirm = {}
         cancelPage.resetToDefault = true
         parentVC.pushSubView(newSubView: cancelPage)
     }
-    
-    func cancel() {}
     
     public func stopTimer() {
         startPauseButton.setResumeMode()
@@ -138,13 +136,13 @@ class TimerStopWatchAbstractSVC : SlidingAbstractSVC {
         
     }
     
-    override func didLayoutSubviews(){
+    override func layoutSubviews(){
         // minimum font size 80, max font size 120
         // minimum height = 72, max height = 150
         var rate = 1 - ((712 - frame.height)) / 250
         rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
         
-        let bigFontSize = 60  + (26) * rate
+        let bigFontSize = 60  + (20) * rate
         let smallFontSize = 24  + (8) * rate
         let miniFontSize = 16 + (6) * rate
         let constraintConstant = 0 + (60) * rate

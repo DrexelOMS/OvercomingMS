@@ -40,9 +40,6 @@ class SlidingAbstractSVC : CustomView {
     func updateColors() {
 
     }
-    
-    func didLayoutSubviews() {
-    }
 
     
 }
