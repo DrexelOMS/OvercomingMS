@@ -41,6 +41,12 @@
 		0A099569229740990067DEA7 /* Omega3MainSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A099568229740990067DEA7 /* Omega3MainSVCTests.swift */; };
 		0A09956C2297437F0067DEA7 /* Omega3ModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09956B2297437F0067DEA7 /* Omega3ModifySVCTests.swift */; };
 		0A09956F229748750067DEA7 /* Omega3SelectedSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09956E229748750067DEA7 /* Omega3SelectedSVCTests.swift */; };
+		0A09957222974FA90067DEA7 /* ExerciseHistoryDBSTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09957122974FA90067DEA7 /* ExerciseHistoryDBSTest.swift */; };
+		0A09957422974FF50067DEA7 /* GoalsMainSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09957322974FF50067DEA7 /* GoalsMainSVCTests.swift */; };
+		0A099577229757920067DEA7 /* GoalsModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A099576229757910067DEA7 /* GoalsModifySVCTests.swift */; };
+		0A09957922976E070067DEA7 /* MedicationMainSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09957822976E070067DEA7 /* MedicationMainSVCTests.swift */; };
+		0A09957B229774640067DEA7 /* MedicationNotTakenItemSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09957A229774640067DEA7 /* MedicationNotTakenItemSVCTests.swift */; };
+		0A09957D22977AC90067DEA7 /* MedicationItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09957C22977AC90067DEA7 /* MedicationItemTests.swift */; };
 		0A19B3BB2253BBF100F4B02B /* FoodSelectedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */; };
 		0A19B3BD2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */; };
 		0A19B3BF2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */; };
@@ -227,11 +233,19 @@
 		0CAD6319221DD50500E50E72 /* SeeMoreButtonSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */; };
 		0CB44DEA2223280F004D0580 /* MeditationSetupSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB44DE92223280F004D0580 /* MeditationSetupSVC.xib */; };
 		0CBE98AD2223835300D3C090 /* TitleTimeOverTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE98AC2223835300D3C090 /* TitleTimeOverTextCell.xib */; };
+		50D6BB672297759600381EA3 /* ExerciseSelectedSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6BB662297759600381EA3 /* ExerciseSelectedSVCTests.swift */; };
+		50D6BB69229778A400381EA3 /* VitaminDSelectedSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6BB68229778A400381EA3 /* VitaminDSelectedSVCTests.swift */; };
+		50D6BB6B229782D300381EA3 /* MeditationSelectedSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6BB6A229782D300381EA3 /* MeditationSelectedSVCTests.swift */; };
+		50D6BB6D229783C600381EA3 /* MedicationSelectedSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6BB6C229783C600381EA3 /* MedicationSelectedSVCTests.swift */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
 		6129745421DF017E00B9846C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745221DF017E00B9846C /* Main.storyboard */; };
 		6129745621DF017F00B9846C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6129745521DF017F00B9846C /* Assets.xcassets */; };
 		6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745721DF017F00B9846C /* LaunchScreen.storyboard */; };
 		83985923222D758E00782A10 /* MeditationModifySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985922222D758E00782A10 /* MeditationModifySVC.swift */; };
+		846565BF22982BEA00A27BEB /* VitaminDModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846565BE22982BEA00A27BEB /* VitaminDModifySVCTests.swift */; };
+		846565C1229831F200A27BEB /* ExerciseModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846565C0229831F200A27BEB /* ExerciseModifySVCTests.swift */; };
+		846565C32298364A00A27BEB /* MedicationModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846565C22298364A00A27BEB /* MedicationModifySVCTests.swift */; };
+		846565C522984B2C00A27BEB /* MeditationModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846565C422984B2B00A27BEB /* MeditationModifySVCTests.swift */; };
 		D03BBBCB2290908C0012CF60 /* 5_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC72290907E0012CF60 /* 5_Minute.mp3 */; };
 		D03BBBCC2290908C0012CF60 /* 35_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC8229090840012CF60 /* 35_Minute.mp3 */; };
 		D03BBBCD2290908C0012CF60 /* 45_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC92290908A0012CF60 /* 45_Minute.mp3 */; };
@@ -292,6 +306,12 @@
 		0A099568229740990067DEA7 /* Omega3MainSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3MainSVCTests.swift; sourceTree = "<group>"; };
 		0A09956B2297437F0067DEA7 /* Omega3ModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3ModifySVCTests.swift; sourceTree = "<group>"; };
 		0A09956E229748750067DEA7 /* Omega3SelectedSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omega3SelectedSVCTests.swift; sourceTree = "<group>"; };
+		0A09957122974FA90067DEA7 /* ExerciseHistoryDBSTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryDBSTest.swift; sourceTree = "<group>"; };
+		0A09957322974FF50067DEA7 /* GoalsMainSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsMainSVCTests.swift; sourceTree = "<group>"; };
+		0A099576229757910067DEA7 /* GoalsModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsModifySVCTests.swift; sourceTree = "<group>"; };
+		0A09957822976E070067DEA7 /* MedicationMainSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationMainSVCTests.swift; sourceTree = "<group>"; };
+		0A09957A229774640067DEA7 /* MedicationNotTakenItemSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationNotTakenItemSVCTests.swift; sourceTree = "<group>"; };
+		0A09957C22977AC90067DEA7 /* MedicationItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationItemTests.swift; sourceTree = "<group>"; };
 		0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiveScaleRatingButtonsSVC.xib; sourceTree = "<group>"; };
 		0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveScaleRatingButtonsSVC.swift; sourceTree = "<group>"; };
 		0A19B3C02253E94800F4B02B /* ExpandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandingCell.xib; sourceTree = "<group>"; };
@@ -489,6 +509,10 @@
 		0CAD6318221DD50500E50E72 /* SeeMoreButtonSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeMoreButtonSVC.xib; sourceTree = "<group>"; };
 		0CB44DE92223280F004D0580 /* MeditationSetupSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationSetupSVC.xib; sourceTree = "<group>"; };
 		0CBE98AC2223835300D3C090 /* TitleTimeOverTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTimeOverTextCell.xib; sourceTree = "<group>"; };
+		50D6BB662297759600381EA3 /* ExerciseSelectedSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSelectedSVCTests.swift; sourceTree = "<group>"; };
+		50D6BB68229778A400381EA3 /* VitaminDSelectedSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminDSelectedSVCTests.swift; sourceTree = "<group>"; };
+		50D6BB6A229782D300381EA3 /* MeditationSelectedSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSelectedSVCTests.swift; sourceTree = "<group>"; };
+		50D6BB6C229783C600381EA3 /* MedicationSelectedSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationSelectedSVCTests.swift; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6129744E21DF017E00B9846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6129745321DF017E00B9846C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -499,6 +523,10 @@
 		64624BC75971C455C566E626 /* Pods-OvercomingMSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.release.xcconfig"; sourceTree = "<group>"; };
 		724CCA850B24CDC7CCFAF25E /* Pods-OvercomingMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.debug.xcconfig"; sourceTree = "<group>"; };
 		83985922222D758E00782A10 /* MeditationModifySVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationModifySVC.swift; sourceTree = "<group>"; };
+		846565BE22982BEA00A27BEB /* VitaminDModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminDModifySVCTests.swift; sourceTree = "<group>"; };
+		846565C0229831F200A27BEB /* ExerciseModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModifySVCTests.swift; sourceTree = "<group>"; };
+		846565C22298364A00A27BEB /* MedicationModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationModifySVCTests.swift; sourceTree = "<group>"; };
+		846565C422984B2B00A27BEB /* MeditationModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationModifySVCTests.swift; sourceTree = "<group>"; };
 		89CF61DE31F50EFE76BD85FE /* Pods-OvercomingMSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0433A9C40E2CDD4C4FE48DD /* Pods-OvercomingMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.release.xcconfig"; sourceTree = "<group>"; };
 		A16E3BBC1D5B0C0744651350 /* Pods-OvercomingMSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -620,6 +648,9 @@
 			isa = PBXGroup;
 			children = (
 				0A099568229740990067DEA7 /* Omega3MainSVCTests.swift */,
+				0A09957822976E070067DEA7 /* MedicationMainSVCTests.swift */,
+				0A09957A229774640067DEA7 /* MedicationNotTakenItemSVCTests.swift */,
+				0A09957C22977AC90067DEA7 /* MedicationItemTests.swift */,
 			);
 			path = MainSVCs;
 			sourceTree = "<group>";
@@ -628,6 +659,10 @@
 			isa = PBXGroup;
 			children = (
 				0A09956B2297437F0067DEA7 /* Omega3ModifySVCTests.swift */,
+				846565BE22982BEA00A27BEB /* VitaminDModifySVCTests.swift */,
+				846565C0229831F200A27BEB /* ExerciseModifySVCTests.swift */,
+				846565C22298364A00A27BEB /* MedicationModifySVCTests.swift */,
+				846565C422984B2B00A27BEB /* MeditationModifySVCTests.swift */,
 			);
 			path = ModifySVCs;
 			sourceTree = "<group>";
@@ -636,6 +671,10 @@
 			isa = PBXGroup;
 			children = (
 				0A09956E229748750067DEA7 /* Omega3SelectedSVCTests.swift */,
+				50D6BB662297759600381EA3 /* ExerciseSelectedSVCTests.swift */,
+				50D6BB68229778A400381EA3 /* VitaminDSelectedSVCTests.swift */,
+				50D6BB6A229782D300381EA3 /* MeditationSelectedSVCTests.swift */,
+				50D6BB6C229783C600381EA3 /* MedicationSelectedSVCTests.swift */,
 			);
 			path = SelectedItemSVCs;
 			sourceTree = "<group>";
@@ -643,6 +682,8 @@
 		0A09957022974EB00067DEA7 /* Goals */ = {
 			isa = PBXGroup;
 			children = (
+				0A09957322974FF50067DEA7 /* GoalsMainSVCTests.swift */,
+				0A099576229757910067DEA7 /* GoalsModifySVCTests.swift */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
@@ -781,7 +822,6 @@
 			isa = PBXGroup;
 			children = (
 				0A655F352295F04D00CD9ACB /* DatabaseServices */,
-				0A655F41229649FA00CD9ACB /* SimpleModels */,
 				0A655F3F2296471300CD9ACB /* ProgressBarConfigTests.swift */,
 			);
 			path = DataModels;
@@ -790,7 +830,9 @@
 		0A655F352295F04D00CD9ACB /* DatabaseServices */ = {
 			isa = PBXGroup;
 			children = (
+				0A655F41229649FA00CD9ACB /* SimpleModels */,
 				0A655F2C2294D3A300CD9ACB /* TrackingModulesDBSTests.swift */,
+				0A09957122974FA90067DEA7 /* ExerciseHistoryDBSTest.swift */,
 			);
 			path = DatabaseServices;
 			sourceTree = "<group>";
@@ -1526,22 +1568,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D6BB6D229783C600381EA3 /* MedicationSelectedSVCTests.swift in Sources */,
+				0A09957422974FF50067DEA7 /* GoalsMainSVCTests.swift in Sources */,
 				0A09956422973C150067DEA7 /* SymptomsListSVCTests.swift in Sources */,
 				0A655F4B2296DCF400CD9ACB /* MainTrackingVCTests.swift in Sources */,
 				D05350F222973A0200281BBA /* FoodSearchSVCTests.swift in Sources */,
+				846565C522984B2C00A27BEB /* MeditationModifySVCTests.swift in Sources */,
+				0A09957B229774640067DEA7 /* MedicationNotTakenItemSVCTests.swift in Sources */,
 				0A655F2D2294D3A300CD9ACB /* TrackingModulesDBSTests.swift in Sources */,
+				0A09957922976E070067DEA7 /* MedicationMainSVCTests.swift in Sources */,
+				0A09957222974FA90067DEA7 /* ExerciseHistoryDBSTest.swift in Sources */,
 				0A655F4522964D0800CD9ACB /* DisplayedMedicationItemsTests.swift in Sources */,
 				D05350F42297735800281BBA /* FoodTests.swift in Sources */,
 				0A09956C2297437F0067DEA7 /* Omega3ModifySVCTests.swift in Sources */,
+				0A09957D22977AC90067DEA7 /* MedicationItemTests.swift in Sources */,
+				846565BF22982BEA00A27BEB /* VitaminDModifySVCTests.swift in Sources */,
+				846565C1229831F200A27BEB /* ExerciseModifySVCTests.swift in Sources */,
 				0A655F372295F2C400CD9ACB /* Extensions.swift in Sources */,
+				846565C32298364A00A27BEB /* MedicationModifySVCTests.swift in Sources */,
 				0A655F4322964A1700CD9ACB /* MedicationRateModelTests.swift in Sources */,
 				0A8328E022970C760079C723 /* HeaderSVCTests.swift in Sources */,
 				0A8328E522972A110079C723 /* DatePickerSVCTests.swift in Sources */,
 				0A655F402296471300CD9ACB /* ProgressBarConfigTests.swift in Sources */,
 				0A099569229740990067DEA7 /* Omega3MainSVCTests.swift in Sources */,
 				0A09956F229748750067DEA7 /* Omega3SelectedSVCTests.swift in Sources */,
+				50D6BB69229778A400381EA3 /* VitaminDSelectedSVCTests.swift in Sources */,
+				50D6BB6B229782D300381EA3 /* MeditationSelectedSVCTests.swift in Sources */,
 				0A655F472296503800CD9ACB /* SymptomsListTests.swift in Sources */,
+				50D6BB672297759600381EA3 /* ExerciseSelectedSVCTests.swift in Sources */,
 				0A655F3E2296355700CD9ACB /* Mocks.swift in Sources */,
+				0A099577229757920067DEA7 /* GoalsModifySVCTests.swift in Sources */,
 				0A099562229734AE0067DEA7 /* NoteReviewSVCTests.swift in Sources */,
 				0A8328DD229703CF0079C723 /* SymtpomsMainSVCTests.swift in Sources */,
 			);

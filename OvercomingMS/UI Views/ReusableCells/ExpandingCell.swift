@@ -14,8 +14,8 @@ class ExpandingCell : UITableViewCell {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var middleView: UIView!
-    @IBOutlet private weak var bottomView: UIView!
-    @IBOutlet private weak var bottomHeight: NSLayoutConstraint!
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var bottomHeight: NSLayoutConstraint!
     
     var middleStackView: UIStackView!
     

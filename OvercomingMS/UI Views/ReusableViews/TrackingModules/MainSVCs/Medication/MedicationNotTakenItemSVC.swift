@@ -43,7 +43,7 @@ class MedicationNotTakenItemSVC : CustomView {
         WeekdaysLabel.attributedText = MedicationRateModel(rateString: item.Frequency).attributedString()
     }
     
-    @objc private func viewPressed(tapGestureRecognizer: UITapGestureRecognizer) {
+    @objc func viewPressed(tapGestureRecognizer: UITapGestureRecognizer) {
         let medicationItemSVC = MedicationSelectedItemSVC()
         medicationItemSVC.savedMedicationItem = item
         medicationItemSVC.parentVC = parentVC

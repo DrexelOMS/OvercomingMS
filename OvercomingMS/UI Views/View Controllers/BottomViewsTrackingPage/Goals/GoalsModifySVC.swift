@@ -35,7 +35,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     var Module: Modules = .Exercise
     
     private var items = [Int]()
-    private var currentPage: Int = 0
+    var currentPage: Int = 0
     
     var pageSize: CGSize {
         let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
