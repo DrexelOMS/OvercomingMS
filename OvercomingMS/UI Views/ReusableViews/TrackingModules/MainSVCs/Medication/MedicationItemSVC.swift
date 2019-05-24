@@ -80,7 +80,7 @@ class MedicationItemSVC : CustomView {
         }
     }
     
-    @objc private func viewPressed(tapGestureRecognizer: UITapGestureRecognizer) {
+    @objc func viewPressed(tapGestureRecognizer: UITapGestureRecognizer) {
         let medicationItemSVC = MedicationSelectedItemSVC()
         medicationItemSVC.savedMedicationItem = item
         medicationItemSVC.parentVC = parentVC
