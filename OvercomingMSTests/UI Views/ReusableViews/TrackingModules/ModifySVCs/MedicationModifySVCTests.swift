@@ -12,14 +12,14 @@ import XCTest
 class MedicationModifySVCTests: XCTestCase {
     var parent: MockSlidingStackVC!
     var main: MedicationModifySVC!
-    var dbs: SavedMedicationHistoryDBS!
+    var dbs: SavedMedicationDBS!
     
     override func setUp() {
         //Only use these lines if you need to reset the database between tests
         cleanAllData()
         AppDelegate().firstTimeInitializers()
         
-        dbs = SavedMedicationHistoryDBS()
+        dbs = SavedMedicationDBS()
     }
     
     func testAddItem(){
@@ -42,7 +42,7 @@ class MedicationModifySVCTests: XCTestCase {
     }
     
     func testEditItem() {
-        let item = SavedMedicationHistoryDBT()
+        let item = SavedMedicationDBT()
         item.Frequency = "MTWRFSU"
         item.MedicationName = "Medication"
         item.TimeOfDay = Date()
@@ -50,7 +50,7 @@ class MedicationModifySVCTests: XCTestCase {
         dbs.addItem(item: item)
         
         main = MedicationModifySVC()
-        main.editingMedicationItem = dbs.getSavedMedicationItems()![0]
+        main.editingMedicationItem = dbs.getSavedMedicationItems().medicationsTracked[0]
         
         parent = MockSlidingStackVC(initialView: main)
         parent.viewDidLoad()

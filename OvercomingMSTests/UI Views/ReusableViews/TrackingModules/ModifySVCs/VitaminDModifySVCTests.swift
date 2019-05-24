@@ -60,12 +60,12 @@ class VitaminDModifySVCTests: XCTestCase {
     func testEditItem() {
         let item = VitaminDHistoryDBT()
         item.Amount = 5
-        item.supplementName = "VitaminD"
+        item.VitaminDType = "VitaminD"
         item.StartTime = Date()
         dbs.addItem(item: item)
         
         main = VitaminDModifySVC()
-        main.editingVitaminDItem = dbs.getTodaysVitaminDItems()![0]
+        main.editingVitamindDItem = dbs.getTodaysVitaminDItems()![0]
         
         parent = MockSlidingStackVC(initialView: main)
         parent.viewDidLoad()
