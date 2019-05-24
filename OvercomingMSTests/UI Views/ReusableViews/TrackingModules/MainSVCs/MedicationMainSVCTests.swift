@@ -22,6 +22,8 @@ class MedicationMainSVCTests: XCTestCase {
         cleanAllData()
         AppDelegate().firstTimeInitializers()
         
+        globalCurrentFullDate = OMSDateAccessor().todaysFullDate
+        
         dbs = SavedMedicationDBS()
         
         trackedItem = SavedMedicationDBT()
