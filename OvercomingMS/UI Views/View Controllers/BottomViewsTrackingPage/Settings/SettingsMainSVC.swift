@@ -31,7 +31,7 @@ class SettingsMainSVC : SlidingAbstractSVC {
         tutorialsView.roundedView.backgroundColor = UIColor.white
         
         if globalCurrentDate != OMSDateAccessor().todaysDate {
-            trackingView.buttonAction = presentSwitchDate
+            trackingView.buttonAction = {}
             trackingView.roundedView.backgroundColor = UIColor.lightGray
         }
         else {
@@ -43,6 +43,7 @@ class SettingsMainSVC : SlidingAbstractSVC {
     func trackingPressed() {
         parentVC.pushSubView(newSubView: SettingsTrackingSVC())
     }
+    
     func tutorialsPressed() {
 
         let tutorial = SettingsTutorialsSVC()
@@ -55,7 +56,4 @@ class SettingsMainSVC : SlidingAbstractSVC {
         }
     }
     
-    func presentSwitchDate() {
-        print("Switch to todays date")
-    }
 }
