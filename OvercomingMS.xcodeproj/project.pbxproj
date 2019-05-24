@@ -242,6 +242,11 @@
 		6129745621DF017F00B9846C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6129745521DF017F00B9846C /* Assets.xcassets */; };
 		6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745721DF017F00B9846C /* LaunchScreen.storyboard */; };
 		83985923222D758E00782A10 /* MeditationModifySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985922222D758E00782A10 /* MeditationModifySVC.swift */; };
+		845B45652296DFEE0006DCA1 /* ExpandingCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B45642296DFEE0006DCA1 /* ExpandingCellTests.swift */; };
+		846565BF22982BEA00A27BEB /* VitaminDModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846565BE22982BEA00A27BEB /* VitaminDModifySVCTests.swift */; };
+		846565C1229831F200A27BEB /* ExerciseModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846565C0229831F200A27BEB /* ExerciseModifySVCTests.swift */; };
+		846565C32298364A00A27BEB /* MedicationModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846565C22298364A00A27BEB /* MedicationModifySVCTests.swift */; };
+		846565C522984B2C00A27BEB /* MeditationModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846565C422984B2B00A27BEB /* MeditationModifySVCTests.swift */; };
 		D03BBBCB2290908C0012CF60 /* 5_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC72290907E0012CF60 /* 5_Minute.mp3 */; };
 		D03BBBCC2290908C0012CF60 /* 35_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC8229090840012CF60 /* 35_Minute.mp3 */; };
 		D03BBBCD2290908C0012CF60 /* 45_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC92290908A0012CF60 /* 45_Minute.mp3 */; };
@@ -517,6 +522,11 @@
 		64624BC75971C455C566E626 /* Pods-OvercomingMSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.release.xcconfig"; sourceTree = "<group>"; };
 		724CCA850B24CDC7CCFAF25E /* Pods-OvercomingMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.debug.xcconfig"; sourceTree = "<group>"; };
 		83985922222D758E00782A10 /* MeditationModifySVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationModifySVC.swift; sourceTree = "<group>"; };
+		845B45642296DFEE0006DCA1 /* ExpandingCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingCellTests.swift; sourceTree = "<group>"; };
+		846565BE22982BEA00A27BEB /* VitaminDModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminDModifySVCTests.swift; sourceTree = "<group>"; };
+		846565C0229831F200A27BEB /* ExerciseModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModifySVCTests.swift; sourceTree = "<group>"; };
+		846565C22298364A00A27BEB /* MedicationModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationModifySVCTests.swift; sourceTree = "<group>"; };
+		846565C422984B2B00A27BEB /* MeditationModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationModifySVCTests.swift; sourceTree = "<group>"; };
 		89CF61DE31F50EFE76BD85FE /* Pods-OvercomingMSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0433A9C40E2CDD4C4FE48DD /* Pods-OvercomingMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.release.xcconfig"; sourceTree = "<group>"; };
 		A16E3BBC1D5B0C0744651350 /* Pods-OvercomingMSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -647,6 +657,10 @@
 			isa = PBXGroup;
 			children = (
 				0A09956B2297437F0067DEA7 /* Omega3ModifySVCTests.swift */,
+				846565BE22982BEA00A27BEB /* VitaminDModifySVCTests.swift */,
+				846565C0229831F200A27BEB /* ExerciseModifySVCTests.swift */,
+				846565C22298364A00A27BEB /* MedicationModifySVCTests.swift */,
+				846565C422984B2B00A27BEB /* MeditationModifySVCTests.swift */,
 			);
 			path = ModifySVCs;
 			sourceTree = "<group>";
@@ -805,8 +819,8 @@
 		0A655F342295F04300CD9ACB /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
+				8466A6292296D75F0087467C /* UI Views */,
 				0A655F352295F04D00CD9ACB /* DatabaseServices */,
-				0A655F41229649FA00CD9ACB /* SimpleModels */,
 				0A655F3F2296471300CD9ACB /* ProgressBarConfigTests.swift */,
 			);
 			path = DataModels;
@@ -815,6 +829,7 @@
 		0A655F352295F04D00CD9ACB /* DatabaseServices */ = {
 			isa = PBXGroup;
 			children = (
+				0A655F41229649FA00CD9ACB /* SimpleModels */,
 				0A655F2C2294D3A300CD9ACB /* TrackingModulesDBSTests.swift */,
 				0A09957122974FA90067DEA7 /* ExerciseHistoryDBSTest.swift */,
 			);
@@ -1281,6 +1296,46 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		8466A6292296D75F0087467C /* UI Views */ = {
+			isa = PBXGroup;
+			children = (
+				8466A62D2296D8880087467C /* ViewControllers */,
+				8466A62A2296D7690087467C /* ReusableViews */,
+			);
+			path = "UI Views";
+			sourceTree = "<group>";
+		};
+		8466A62A2296D7690087467C /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				845B45642296DFEE0006DCA1 /* ExpandingCellTests.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		8466A62D2296D8880087467C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8466A62E2296D8BB0087467C /* BottomViewsTrackingPage */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8466A62E2296D8BB0087467C /* BottomViewsTrackingPage */ = {
+			isa = PBXGroup;
+			children = (
+				8466A62F2296D8D60087467C /* Settings */,
+			);
+			path = BottomViewsTrackingPage;
+			sourceTree = "<group>";
+		};
+		8466A62F2296D8D60087467C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		DD7121317404FDF12D44D4AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1554,6 +1609,7 @@
 				0A09957422974FF50067DEA7 /* GoalsMainSVCTests.swift in Sources */,
 				0A09956422973C150067DEA7 /* SymptomsListSVCTests.swift in Sources */,
 				0A655F4B2296DCF400CD9ACB /* MainTrackingVCTests.swift in Sources */,
+				846565C522984B2C00A27BEB /* MeditationModifySVCTests.swift in Sources */,
 				0A09957B229774640067DEA7 /* MedicationNotTakenItemSVCTests.swift in Sources */,
 				0A655F2D2294D3A300CD9ACB /* TrackingModulesDBSTests.swift in Sources */,
 				0A09957922976E070067DEA7 /* MedicationMainSVCTests.swift in Sources */,
@@ -1561,8 +1617,12 @@
 				0A655F4522964D0800CD9ACB /* DisplayedMedicationItemsTests.swift in Sources */,
 				0A09956C2297437F0067DEA7 /* Omega3ModifySVCTests.swift in Sources */,
 				0A09957D22977AC90067DEA7 /* MedicationItemTests.swift in Sources */,
+				846565BF22982BEA00A27BEB /* VitaminDModifySVCTests.swift in Sources */,
+				846565C1229831F200A27BEB /* ExerciseModifySVCTests.swift in Sources */,
 				0A655F372295F2C400CD9ACB /* Extensions.swift in Sources */,
+				846565C32298364A00A27BEB /* MedicationModifySVCTests.swift in Sources */,
 				0A655F4322964A1700CD9ACB /* MedicationRateModelTests.swift in Sources */,
+				845B45652296DFEE0006DCA1 /* ExpandingCellTests.swift in Sources */,
 				0A8328E022970C760079C723 /* HeaderSVCTests.swift in Sources */,
 				0A8328E522972A110079C723 /* DatePickerSVCTests.swift in Sources */,
 				0A655F402296471300CD9ACB /* ProgressBarConfigTests.swift in Sources */,
