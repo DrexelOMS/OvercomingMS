@@ -234,6 +234,7 @@
 		50D6BB672297759600381EA3 /* ExerciseSelectedSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6BB662297759600381EA3 /* ExerciseSelectedSVCTests.swift */; };
 		50D6BB69229778A400381EA3 /* VitaminDSelectedSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6BB68229778A400381EA3 /* VitaminDSelectedSVCTests.swift */; };
 		50D6BB6B229782D300381EA3 /* MeditationSelectedSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6BB6A229782D300381EA3 /* MeditationSelectedSVCTests.swift */; };
+		50D6BB6D229783C600381EA3 /* MedicationSelectedSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6BB6C229783C600381EA3 /* MedicationSelectedSVCTests.swift */; };
 		6129744F21DF017E00B9846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129744E21DF017E00B9846C /* AppDelegate.swift */; };
 		6129745421DF017E00B9846C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745221DF017E00B9846C /* Main.storyboard */; };
 		6129745621DF017F00B9846C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6129745521DF017F00B9846C /* Assets.xcassets */; };
@@ -501,6 +502,7 @@
 		50D6BB662297759600381EA3 /* ExerciseSelectedSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSelectedSVCTests.swift; sourceTree = "<group>"; };
 		50D6BB68229778A400381EA3 /* VitaminDSelectedSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminDSelectedSVCTests.swift; sourceTree = "<group>"; };
 		50D6BB6A229782D300381EA3 /* MeditationSelectedSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSelectedSVCTests.swift; sourceTree = "<group>"; };
+		50D6BB6C229783C600381EA3 /* MedicationSelectedSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationSelectedSVCTests.swift; sourceTree = "<group>"; };
 		6129744B21DF017E00B9846C /* OvercomingMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvercomingMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6129744E21DF017E00B9846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6129745321DF017E00B9846C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -650,6 +652,7 @@
 				50D6BB662297759600381EA3 /* ExerciseSelectedSVCTests.swift */,
 				50D6BB68229778A400381EA3 /* VitaminDSelectedSVCTests.swift */,
 				50D6BB6A229782D300381EA3 /* MeditationSelectedSVCTests.swift */,
+				50D6BB6C229783C600381EA3 /* MedicationSelectedSVCTests.swift */,
 			);
 			path = SelectedItemSVCs;
 			sourceTree = "<group>";
@@ -1541,6 +1544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D6BB6D229783C600381EA3 /* MedicationSelectedSVCTests.swift in Sources */,
 				0A09957422974FF50067DEA7 /* GoalsMainSVCTests.swift in Sources */,
 				0A09956422973C150067DEA7 /* SymptomsListSVCTests.swift in Sources */,
 				0A655F4B2296DCF400CD9ACB /* MainTrackingVCTests.swift in Sources */,
