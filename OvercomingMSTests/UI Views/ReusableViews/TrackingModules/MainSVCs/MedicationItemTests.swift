@@ -65,8 +65,5 @@ class MedicationItemsSVCTests: XCTestCase {
         XCTAssertTrue(parent.pushWasCalled)
         XCTAssertTrue(parent.topView is MedicationSelectedItemSVC)
     }
-    
-    
-    
-    
+ 
 }
