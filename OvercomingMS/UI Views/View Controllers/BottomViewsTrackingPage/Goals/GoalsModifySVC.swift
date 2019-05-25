@@ -25,6 +25,7 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
     @IBOutlet weak var goalUnitLabel: UILabel!
     @IBOutlet weak var goalContainer: UIView!
     @IBOutlet weak var omsRecommendedGoal: UILabel!
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
     let imageNames = ["Sad", "Meh", "Happy", "Excited"]
     
@@ -162,4 +163,14 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         }
     }
     
+    override func layoutSubviews() {
+        DispatchQueue.main.async {
+            var rate = 1 - ((896 -  UIScreen.main.bounds.height)) / 328
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let height = 80 + (20) * rate
+            
+            self.headerHeightConstraint.constant = height
+        }
+    }
 }

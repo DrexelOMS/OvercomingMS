@@ -25,6 +25,7 @@
                 <outlet property="goalContainer" destination="cHs-DT-sNR" id="wCS-OI-z9j"/>
                 <outlet property="goalUnitLabel" destination="Wgr-Hm-V3e" id="wO3-co-7n5"/>
                 <outlet property="header" destination="5wt-yW-Qei" id="sAY-tT-J7P"/>
+                <outlet property="headerHeightConstraint" destination="yV4-HA-HaA" id="tuJ-9y-tGq"/>
                 <outlet property="omsRecommendedGoal" destination="oxI-7C-gfd" id="XpD-aY-q35"/>
             </connections>
         </placeholder>

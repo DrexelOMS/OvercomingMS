@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SymptomsMainSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
                 <outlet property="addButton" destination="w2C-3X-ZMM" id="Fc5-n2-dey"/>
+                <outlet property="headerHeightConstraint" destination="FhU-S2-QQK" id="efX-rD-Auo"/>
                 <outlet property="listButton" destination="WLF-CW-Vco" id="f37-3i-8CM"/>
                 <outlet property="tableView" destination="GYa-6d-7me" id="2Qu-1Y-qXN"/>
             </connections>

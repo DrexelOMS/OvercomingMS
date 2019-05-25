@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="exerciseButton" destination="1HN-R7-Nt4" id="end-bB-FtA"/>
                 <outlet property="foodButton" destination="pJG-0R-dhv" id="Xmi-wE-nqK"/>
+                <outlet property="headerHeightConstraint" destination="NRr-sR-2zs" id="rYV-bC-HBD"/>
                 <outlet property="meditationButton" destination="8oz-2G-jYI" id="BmB-0n-mnX"/>
                 <outlet property="omega3Button" destination="O3c-sV-Tl5" id="5im-R6-oka"/>
                 <outlet property="vitaminDButton" destination="JUg-Bc-hzF" id="bBF-Oh-fcE"/>
