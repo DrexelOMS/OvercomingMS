@@ -17,7 +17,7 @@ class SymptomsTableHeader: UITableViewHeaderFooterView {
         
         contentView.backgroundColor = DesignConstants.DEFAULT_BACKGROUND_COLOR
         
-        customLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 30)
+        customLabel.font = UIFont(name: "Avenir-roman", size: 14)
         customLabel.textAlignment = .center
         
         customLabel.translatesAutoresizingMaskIntoConstraints = false

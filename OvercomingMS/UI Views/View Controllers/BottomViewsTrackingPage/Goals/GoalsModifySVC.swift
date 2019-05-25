@@ -83,6 +83,8 @@ class GoalsModifySVC: SlidingAbstractSVC, UICollectionViewDelegate, UICollection
         for i in stride(from: low, to: high + 1, by: inc) {
             items.append(i)
         }
+        
+        backButton.colorTheme = colorTheme
     }
     
     override func reload() {

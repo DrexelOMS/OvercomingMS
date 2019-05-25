@@ -23,16 +23,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZE-Gl-7KY" customClass="RoundedBoxShadowsTemplate" customModule="OvercomingMS" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="260" height="70"/>
+                    <rect key="frame" x="10" y="0.0" width="240" height="70"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NGo-zh-Pw9">
-                            <rect key="frame" x="10" y="0.0" width="240" height="70"/>
+                            <rect key="frame" x="10" y="0.0" width="220" height="70"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDK-P2-IaL">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="34.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="220" height="34.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXY-qR-L5z">
-                                            <rect key="frame" x="5" y="0.0" width="230" height="34.5"/>
+                                            <rect key="frame" x="5" y="0.0" width="210" height="34.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -46,20 +46,20 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYi-yp-Mw8" userLabel="Line">
-                                    <rect key="frame" x="0.0" y="34.5" width="240" height="1"/>
+                                    <rect key="frame" x="0.0" y="34.5" width="220" height="1"/>
                                     <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="d0z-3a-f03"/>
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VwP-Ry-CJJ">
-                                    <rect key="frame" x="0.0" y="35.5" width="240" height="34.5"/>
+                                    <rect key="frame" x="0.0" y="35.5" width="220" height="34.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jl2-jo-ur1">
-                                            <rect key="frame" x="0.0" y="0.0" width="115" height="34.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="105" height="34.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00 AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sm-n8-T0M">
-                                                    <rect key="frame" x="5" y="0.0" width="110" height="34.5"/>
+                                                    <rect key="frame" x="5" y="0.0" width="100" height="34.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -73,10 +73,10 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXa-H0-5dk">
-                                            <rect key="frame" x="125" y="0.0" width="115" height="34.5"/>
+                                            <rect key="frame" x="115" y="0.0" width="105" height="34.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bll-OP-5wN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="34.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="34.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -116,8 +116,8 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="lZE-Gl-7KY" secondAttribute="bottom" id="O1o-2U-0fc"/>
                 <constraint firstItem="lZE-Gl-7KY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bUO-PT-08z"/>
-                <constraint firstItem="lZE-Gl-7KY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="l4c-fF-FH6"/>
-                <constraint firstAttribute="trailing" secondItem="lZE-Gl-7KY" secondAttribute="trailing" id="q3L-ip-mOG"/>
+                <constraint firstItem="lZE-Gl-7KY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="l4c-fF-FH6"/>
+                <constraint firstAttribute="trailing" secondItem="lZE-Gl-7KY" secondAttribute="trailing" constant="10" id="q3L-ip-mOG"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="26.086956521739133" y="91.071428571428569"/>
