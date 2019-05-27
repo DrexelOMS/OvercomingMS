@@ -16,7 +16,7 @@ class SymptomsList {
         let sortedList = SymptomsNoteDBS().getAllNotesSortedByDate()
         var date = ""
         for note in sortedList {
-            let noteDate = note.DateCreated
+            var noteDate = note.DateCreated
             
             if noteDate != date {
                 symptomsDays.append(SymptomsSection(Date: noteDate, notes: [note]))

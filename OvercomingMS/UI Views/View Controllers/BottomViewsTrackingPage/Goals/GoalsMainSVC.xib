@@ -13,8 +13,13 @@
             <connections>
                 <outlet property="exerciseButton" destination="1HN-R7-Nt4" id="end-bB-FtA"/>
                 <outlet property="foodButton" destination="pJG-0R-dhv" id="Xmi-wE-nqK"/>
+                <outlet property="headerHeightConstraint" destination="NRr-sR-2zs" id="rYV-bC-HBD"/>
                 <outlet property="meditationButton" destination="8oz-2G-jYI" id="BmB-0n-mnX"/>
                 <outlet property="omega3Button" destination="O3c-sV-Tl5" id="5im-R6-oka"/>
+                <outlet property="resetLabel" destination="Mzi-AF-khN" id="ePL-tN-2s8"/>
+                <outlet property="resetLabelHeight" destination="VUo-vy-rca" id="7xj-gS-hdd"/>
+                <outlet property="stackViewLeft" destination="juP-bh-iwZ" id="DuJ-9z-hcp"/>
+                <outlet property="stackViewRight" destination="f8N-23-OT7" id="a9J-3d-FSz"/>
                 <outlet property="vitaminDButton" destination="JUg-Bc-hzF" id="bBF-Oh-fcE"/>
             </connections>
         </placeholder>
@@ -33,11 +38,11 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Set goals for each step of the program and strive to complete them every day"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZcU-gC-23K">
-                    <rect key="frame" x="20" y="90" width="335" height="497"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZcU-gC-23K">
+                    <rect key="frame" x="30" y="100" width="315" height="477"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJG-0R-dhv" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="335" height="83.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="83.5"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Food"/>
                                 <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="pretty good (3/5)"/>
@@ -47,7 +52,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3c-sV-Tl5" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="103.5" width="335" height="83.5"/>
+                            <rect key="frame" x="0.0" y="98.5" width="315" height="83.5"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Omega 3"/>
                                 <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="18 grams"/>
@@ -57,7 +62,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUg-Bc-hzF" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="207" width="335" height="83"/>
+                            <rect key="frame" x="0.0" y="197" width="315" height="83"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Vitamin D"/>
                                 <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="10 klUs"/>
@@ -67,7 +72,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HN-R7-Nt4" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="310" width="335" height="83.5"/>
+                            <rect key="frame" x="0.0" y="295" width="315" height="83.5"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Exercise"/>
                                 <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="30 min."/>
@@ -77,7 +82,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oz-2G-jYI" customClass="GoalsBoxSVC" customModule="OvercomingMS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="413.5" width="335" height="83.5"/>
+                            <rect key="frame" x="0.0" y="393.5" width="315" height="83.5"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Meditation"/>
                                 <userDefinedRuntimeAttribute type="string" keyPath="goalDescription" value="30 min."/>
@@ -89,19 +94,19 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Evz-Qb-dX3" userLabel="ResetContainer">
-                    <rect key="frame" x="0.0" y="607" width="375" height="50"/>
+                    <rect key="frame" x="40" y="597" width="295" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset all goals to OMS recommended" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzi-AF-khN">
-                            <rect key="frame" x="40" y="0.0" width="215" height="50"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="0.0" y="0.0" width="235" height="50"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RT5-3f-oDR">
-                            <rect key="frame" x="265" y="0.0" width="100" height="50"/>
+                            <rect key="frame" x="245" y="0.0" width="50" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eme-zC-AV3" customClass="RoundButton" customModule="OvercomingMS" customModuleProvider="target">
-                                    <rect key="frame" x="25" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="AdT-a8-xiG"/>
@@ -118,7 +123,7 @@
                             </subviews>
                             <constraints>
                                 <constraint firstItem="eme-zC-AV3" firstAttribute="centerX" secondItem="RT5-3f-oDR" secondAttribute="centerX" id="DN7-YZ-zMK"/>
-                                <constraint firstAttribute="width" constant="100" id="dvs-ct-T1S"/>
+                                <constraint firstAttribute="width" constant="50" id="dvs-ct-T1S"/>
                                 <constraint firstItem="eme-zC-AV3" firstAttribute="centerY" secondItem="RT5-3f-oDR" secondAttribute="centerY" id="fgA-q3-dXc"/>
                             </constraints>
                         </view>
@@ -127,25 +132,25 @@
                         <constraint firstItem="Mzi-AF-khN" firstAttribute="top" secondItem="Evz-Qb-dX3" secondAttribute="top" id="1lb-92-9NZ"/>
                         <constraint firstAttribute="bottom" secondItem="Mzi-AF-khN" secondAttribute="bottom" id="CEx-kS-gAD"/>
                         <constraint firstAttribute="bottom" secondItem="RT5-3f-oDR" secondAttribute="bottom" id="GgV-vI-YRJ"/>
-                        <constraint firstAttribute="trailing" secondItem="RT5-3f-oDR" secondAttribute="trailing" constant="10" id="THl-m5-DWs"/>
+                        <constraint firstAttribute="trailing" secondItem="RT5-3f-oDR" secondAttribute="trailing" id="THl-m5-DWs"/>
                         <constraint firstAttribute="height" constant="50" id="VUo-vy-rca"/>
                         <constraint firstItem="RT5-3f-oDR" firstAttribute="top" secondItem="Evz-Qb-dX3" secondAttribute="top" id="cYL-eB-VjA"/>
-                        <constraint firstItem="Mzi-AF-khN" firstAttribute="leading" secondItem="Evz-Qb-dX3" secondAttribute="leading" constant="40" id="g2W-97-iHP"/>
+                        <constraint firstItem="Mzi-AF-khN" firstAttribute="leading" secondItem="Evz-Qb-dX3" secondAttribute="leading" id="g2W-97-iHP"/>
                         <constraint firstItem="RT5-3f-oDR" firstAttribute="leading" secondItem="Mzi-AF-khN" secondAttribute="trailing" constant="10" id="khP-PN-k08"/>
                     </constraints>
                 </view>
             </subviews>
             <constraints>
                 <constraint firstItem="Evz-Qb-dX3" firstAttribute="top" secondItem="ZcU-gC-23K" secondAttribute="bottom" constant="20" id="3Zz-jc-ERX"/>
-                <constraint firstItem="Evz-Qb-dX3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IEN-UI-d3t"/>
-                <constraint firstAttribute="trailing" secondItem="Evz-Qb-dX3" secondAttribute="trailing" id="JQI-yb-bj4"/>
+                <constraint firstItem="Evz-Qb-dX3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="IEN-UI-d3t"/>
+                <constraint firstAttribute="trailing" secondItem="Evz-Qb-dX3" secondAttribute="trailing" constant="40" id="JQI-yb-bj4"/>
                 <constraint firstItem="hw1-2L-vHN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KKA-1A-b0Q"/>
-                <constraint firstItem="ZcU-gC-23K" firstAttribute="top" secondItem="hw1-2L-vHN" secondAttribute="bottom" constant="10" id="OlC-Ec-SV3"/>
+                <constraint firstItem="ZcU-gC-23K" firstAttribute="top" secondItem="hw1-2L-vHN" secondAttribute="bottom" constant="20" id="OlC-Ec-SV3"/>
                 <constraint firstAttribute="trailing" secondItem="hw1-2L-vHN" secondAttribute="trailing" id="PmC-2K-8uF"/>
-                <constraint firstAttribute="bottom" secondItem="Evz-Qb-dX3" secondAttribute="bottom" constant="10" id="ZIf-xZ-SbQ"/>
-                <constraint firstAttribute="trailing" secondItem="ZcU-gC-23K" secondAttribute="trailing" constant="20" id="f8N-23-OT7"/>
+                <constraint firstAttribute="bottom" secondItem="Evz-Qb-dX3" secondAttribute="bottom" constant="20" id="ZIf-xZ-SbQ"/>
+                <constraint firstAttribute="trailing" secondItem="ZcU-gC-23K" secondAttribute="trailing" constant="30" id="f8N-23-OT7"/>
                 <constraint firstItem="hw1-2L-vHN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iPw-kF-Y14"/>
-                <constraint firstItem="ZcU-gC-23K" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="juP-bh-iwZ"/>
+                <constraint firstItem="ZcU-gC-23K" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="juP-bh-iwZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="138.40000000000001" y="141.67916041979012"/>

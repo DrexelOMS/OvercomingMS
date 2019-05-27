@@ -28,6 +28,7 @@ class SettingsTrackingSVC : SlidingAbstractSVC {
     @IBOutlet weak var meditationToggle: TrackingToggleSVC!
     @IBOutlet weak var medicationToggle: TrackingToggleSVC!
     
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     override func customSetup() {
         backButton.backButtonAction = backPressed
         
@@ -78,5 +79,16 @@ class SettingsTrackingSVC : SlidingAbstractSVC {
     func medicationToggled(isOn: Bool) {
         activeTracking.medicationIsActive = isOn
         activeTracking.writeActiveItems()
+    }
+    
+    override func layoutSubviews() {
+        DispatchQueue.main.async {
+            var rate = 1 - ((896 -  UIScreen.main.bounds.height)) / 328
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let height = 80 + (20) * rate
+            
+            self.headerHeightConstraint.constant = height
+        }
     }
 }

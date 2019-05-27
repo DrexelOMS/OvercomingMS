@@ -15,6 +15,8 @@
                 <outlet property="backConfirmButtons" destination="Gcs-iO-kUb" id="YCb-tZ-b2a"/>
                 <outlet property="bottomConstraint" destination="JFf-zz-rwW" id="Nuz-Nf-UtX"/>
                 <outlet property="deleteCircleButton" destination="RFQ-dY-D44" id="51M-P6-u2H"/>
+                <outlet property="noteHeightConstraint" destination="LXc-8i-hZQ" id="XYG-bm-sha"/>
+                <outlet property="noteLabel" destination="ZFc-sv-0oy" id="DlM-43-cUW"/>
                 <outlet property="noteTextField" destination="WVP-PO-pUN" id="CnP-fU-t1w"/>
                 <outlet property="noteView" destination="kOs-aA-YfP" id="WLV-Gf-lV1"/>
                 <outlet property="stackView" destination="unY-YL-yye" id="dug-V5-PIp"/>
@@ -45,8 +47,8 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="LXc-8i-hZQ"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                                                            <color key="textColor" white="0.0" alpha="0.35461258561643838" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acE-XR-yB3">
@@ -59,7 +61,7 @@
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WVP-PO-pUN">
                                                             <rect key="frame" x="10" y="41" width="220" height="99"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                     </subviews>
@@ -148,6 +150,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Delete" width="689" height="689"/>
+        <image name="Delete" width="45" height="45"/>
     </resources>
 </document>

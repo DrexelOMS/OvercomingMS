@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FsJ-Yl-6lH" customClass="NoteSVC" customModule="OvercomingMS" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="10.5" width="372" height="81"/>
+                        <rect key="frame" x="0.0" y="10.5" width="375" height="81"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="81" id="HJn-nR-dtK"/>
                         </constraints>
@@ -28,7 +28,7 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="FsJ-Yl-6lH" firstAttribute="top" secondItem="O3M-Yx-yGo" secondAttribute="top" constant="10" id="HYd-pf-A2f"/>
-                    <constraint firstAttribute="trailing" secondItem="FsJ-Yl-6lH" secondAttribute="trailing" constant="3" id="dJ2-sZ-6KP"/>
+                    <constraint firstAttribute="trailing" secondItem="FsJ-Yl-6lH" secondAttribute="trailing" id="dJ2-sZ-6KP"/>
                     <constraint firstAttribute="bottom" secondItem="FsJ-Yl-6lH" secondAttribute="bottom" constant="10" id="ecX-6m-I9E"/>
                     <constraint firstItem="FsJ-Yl-6lH" firstAttribute="leading" secondItem="O3M-Yx-yGo" secondAttribute="leading" id="yk9-gI-f1V"/>
                 </constraints>

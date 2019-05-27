@@ -25,6 +25,8 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
     @IBOutlet weak var backConfirmButtons: BackConfirmButtonsSVC!
     //160 + 0 is the default 
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var noteHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var noteLabel: UILabel!
     
     let toolbar = ToolBar()
     var symptomsVC: TopImageSlidingStackVC!
@@ -213,6 +215,19 @@ class NoteReviewSVC: SlidingAbstractSVC, ToolBarDelegate, UITextViewDelegate, TF
         
         bottomConstraint.constant = 0
 //        symptomsVC.toggleTopImage(isHidden: false)
+    }
+    
+    override func layoutSubviews(){
+        DispatchQueue.main.async {
+            var rate = 1 - ((896 - UIScreen.main.bounds.height)) / 328
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let bigFontSize = 24  + (4) * rate
+            let fontSize = 16 + (4) * rate
+            
+            self.noteLabel.font = UIFont(name: self.noteLabel!.font.fontName, size: bigFontSize)
+            self.noteTextField.font = UIFont(name: self.noteTextField!.font!.fontName, size: fontSize)
+        }
     }
     
 }
