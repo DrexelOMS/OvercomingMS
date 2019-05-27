@@ -1,5 +1,5 @@
 //
-//  TrackingModuleVCTests.swift
+//  FoodModuleVCTests.swift
 //  OvercomingMSTests
 //
 //  Created by Vincent Finn on 5/27/19.
@@ -9,27 +9,23 @@
 import XCTest
 @testable import OvercomingMS
 
-class TrackingModuleVCTests: XCTestCase {
+class FoodModuleVCTests: XCTestCase {
     
-    var main: TrackingModuleVC!
-    var initialMain = ExerciseMainSVC()
+    var main: FoodModuleVC!
     
     override func setUp() {
         //Only use these lines if you need to reset the database between tests
         cleanAllData()
         AppDelegate().firstTimeInitializers()
         
-        main = TrackingModuleVC(title: "Title", trackingDBS: TrackingModulesDBS(), mainViewToSet: initialMain)
+        main = FoodModuleVC(initialView: FoodMainSVC())
         main.loadView()
-    }
-    
-    func testTitleSet() {
-        XCTAssertEqual("Title", main.progressBar.getTitle())
     }
     
     func testAddViews() {
         main.addViewsBeforeMain()
         
-        XCTAssertEqual(main.theme, main.progressBar.colorTheme)
+        XCTAssertNotNil(main.foodContainer)
     }
+    
 }

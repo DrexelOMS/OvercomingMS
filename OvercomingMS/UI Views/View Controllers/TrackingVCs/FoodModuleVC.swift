@@ -11,7 +11,7 @@ import Cartography
 
 class FoodModuleVC: SlidingStackVC {
     
-    var foodContainer = FoodHeader()
+    var foodContainer: FoodHeader!
     var bigFontSize = 24
     var smallFontSize = 16
     
