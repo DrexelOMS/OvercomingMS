@@ -558,7 +558,7 @@
 		D03BBBC8229090840012CF60 /* 35_Minute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 35_Minute.mp3; sourceTree = "<group>"; };
 		D03BBBC92290908A0012CF60 /* 45_Minute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 45_Minute.mp3; sourceTree = "<group>"; };
 		D03BBBCA2290908C0012CF60 /* 15_Minute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 15_Minute.mp3; sourceTree = "<group>"; };
-		D05350F122973A0200281BBA /* FoodSearchSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodSearchSVCTests.swift; path = "OvercomingMSTests/UI Views/ReusableViews/TrackingModules/FoodModule/FoodSearchSVCTests.swift"; sourceTree = SOURCE_ROOT; };
+		D05350F122973A0200281BBA /* FoodSearchSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodSearchSVCTests.swift; path = "OvercomingMSTests/UI Views/ReusableViews/TrackingModules/FoodSearchSVCTests.swift"; sourceTree = SOURCE_ROOT; };
 		D05350F32297735800281BBA /* FoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodTests.swift; path = "OvercomingMSTests/UI Views/ReusableViews/TrackingModules/FoodModule/FoodTests.swift"; sourceTree = SOURCE_ROOT; };
 		D069C2702280F39D009BB49D /* WelcomePageSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageSVC.swift; sourceTree = "<group>"; };
 		D069C2722280F892009BB49D /* ContinueButtonSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueButtonSVC.swift; sourceTree = "<group>"; };
@@ -663,6 +663,7 @@
 		0A099566229740570067DEA7 /* TrackingModules */ = {
 			isa = PBXGroup;
 			children = (
+				D05350F122973A0200281BBA /* FoodSearchSVCTests.swift */,
 				0A09956D2297485F0067DEA7 /* SelectedItemSVCs */,
 				0A09956A2297435A0067DEA7 /* ModifySVCs */,
 				0A099567229740800067DEA7 /* MainSVCs */,
@@ -926,7 +927,6 @@
 		0A655F492296DCD800CD9ACB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D05350F122973A0200281BBA /* FoodSearchSVCTests.swift */,
 				0A8328DE22970C590079C723 /* MainHelperView */,
 				0A8328DA229703350079C723 /* BottomViewsTrackingPage */,
 				0A655F4A2296DCF400CD9ACB /* MainTrackingVCTests.swift */,
