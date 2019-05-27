@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsMainSVC" customModule="OvercomingMS" customModuleProvider="target">
             <connections>
+                <outlet property="headerHeightConstraint" destination="e8Z-mB-MS8" id="4yV-pY-xyN"/>
                 <outlet property="profileView" destination="EqY-bK-qxw" id="gdz-oE-kb8"/>
                 <outlet property="remindersView" destination="wXd-LV-NRX" id="uy7-Nj-GsK"/>
                 <outlet property="trackingView" destination="69h-ax-5nd" id="uzb-D7-Lh2"/>

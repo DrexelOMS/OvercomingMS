@@ -19,6 +19,7 @@
             <connections>
                 <outlet property="backButton" destination="NJZ-hd-QRL" id="htj-Wu-ETs"/>
                 <outlet property="tableView" destination="sCQ-cE-XAB" id="J7J-xu-zLA"/>
+                <outlet property="topLabel" destination="uGA-qp-Edg" id="6cA-dF-24j"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -27,13 +28,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXD-Bh-KRM">
-                    <rect key="frame" x="0.0" y="44" width="414" height="20"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="23.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symtpoms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGA-qp-Edg">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="20" id="yiY-NA-XWc"/>
-                            </constraints>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="23.5"/>
                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -52,7 +50,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="sCQ-cE-XAB">
-                    <rect key="frame" x="20" y="72" width="374" height="617"/>
+                    <rect key="frame" x="20" y="75.5" width="374" height="613.5"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

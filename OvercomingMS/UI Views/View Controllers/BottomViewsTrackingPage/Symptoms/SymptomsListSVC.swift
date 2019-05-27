@@ -36,6 +36,7 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var backButton: SquareButtonSVC!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var topLabel: UILabel!
     
     override func customSetup() {
         backButton.backButtonAction = backButtonPressed
@@ -79,7 +80,18 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: SymptomsTableHeader.reuseIdentifer) as! SymptomsTableHeader
         
-        header.customLabel.text = OMSDateAccessor.getStyledDate(date: sections[section].Date)
+        var date = ""
+        if sections[section].Date == OMSDateAccessor().todaysDate {
+           date = "Today"
+        }
+        else if sections[section].Date == OMSDateAccessor.getFormatedDate(date: OMSDateAccessor().todaysFullDate.addingTimeInterval(-24*60*60)){
+            date = "Yesterday"
+        }
+        else {
+            date = OMSDateAccessor.getStyledDate(date: sections[section].Date)
+        }
+        
+        header.customLabel.text = date
 
         return header
     }
@@ -112,6 +124,17 @@ class SymptomsListSVC : SlidingAbstractSVC, UITableViewDelegate, UITableViewData
 
     func backButtonPressed(){
         parentVC.popSubView()
+    }
+    
+    override func layoutSubviews(){
+        DispatchQueue.main.async {
+            var rate = 1 - ((896 - UIScreen.main.bounds.height)) / 328
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let bigFontSize = 20  + (8) * rate
+            
+            self.topLabel.font = UIFont(name: self.topLabel!.font.fontName, size: bigFontSize)
+        }
     }
 
 }

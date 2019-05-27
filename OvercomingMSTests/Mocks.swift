@@ -40,6 +40,11 @@ class MockSlidingStackVC: SlidingStackVC {
         popWasCalled = true
     }
     
+    var presentWasCalled = false
+    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+        presentWasCalled = true
+    }
+    
     var dismissWasCalled = false
     override func dismiss() {
         dismissWasCalled = true

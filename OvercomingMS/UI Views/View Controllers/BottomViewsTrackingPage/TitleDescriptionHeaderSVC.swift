@@ -47,4 +47,17 @@ class TitleDescriptionHeaderSVC : SlidingAbstractSVC {
     override func customSetup() {
         
     }
+    
+    override func layoutSubviews() {
+        DispatchQueue.main.async {
+            var rate = 1 - ((100 -  self.frame.height)) / 20
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let bigFontSize = 20 + (8) * rate
+            let fontSize = 12 + (4) * rate
+            
+            self.titleLabel.font = UIFont(name: self.titleLabel!.font.fontName, size: bigFontSize)
+            self.descriptionLabel.font = UIFont(name: self.descriptionLabel!.font.fontName, size: fontSize)
+        }
+    }
 }

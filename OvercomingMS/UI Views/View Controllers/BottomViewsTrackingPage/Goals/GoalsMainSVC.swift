@@ -21,6 +21,7 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
     @IBOutlet weak var vitaminDButton: GoalsBoxSVC!
     @IBOutlet weak var exerciseButton: GoalsBoxSVC!
     @IBOutlet weak var meditationButton: GoalsBoxSVC!
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
     override func customSetup() {
         foodButton.buttonAction = foodPressed
@@ -40,30 +41,35 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
     
     func foodPressed() {
         let svc = GoalsModifyFactory.FoodGoalsModifySVC()
+        parentVC.theme = foodButton.colorTheme
         parentVC.pushSubView(newSubView: svc)
         svc.reload()
     }
     
     func omega3Pressed() {
         let svc = GoalsModifyFactory.Omega3GoalsModifySVC()
+        parentVC.theme = omega3Button.colorTheme
         parentVC.pushSubView(newSubView: svc)
         svc.reload()
     }
     
     func vitaminDPressed() {
         let svc = GoalsModifyFactory.VitaminDGoalsModifySVC()
+        parentVC.theme = vitaminDButton.colorTheme
         parentVC.pushSubView(newSubView: svc)
         svc.reload()
     }
     
     func exercisePressed() {
         let svc = GoalsModifyFactory.ExerciseGoalsModifySVC()
+        parentVC.theme = exerciseButton.colorTheme
         parentVC.pushSubView(newSubView: svc)
         svc.reload()
     }
     
     func meditationPressed() {
         let svc = GoalsModifyFactory.MeditationGoalsModifySVC()
+        parentVC.theme = meditationButton.colorTheme
         parentVC.pushSubView(newSubView: svc)
         svc.reload()
     }
@@ -87,5 +93,28 @@ class GoalsMainSVC : SlidingAbstractSVC, UITextFieldDelegate {
         
         reload()
     }
+
+    @IBOutlet weak var stackViewLeft: NSLayoutConstraint!
+    @IBOutlet weak var stackViewRight: NSLayoutConstraint!
+    @IBOutlet weak var resetLabel: UILabel!
+    @IBOutlet weak var resetLabelHeight: NSLayoutConstraint!
     
+    override func layoutSubviews() {
+        DispatchQueue.main.async {
+            var rate = 1 - ((896 -  UIScreen.main.bounds.height)) / 328
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let fontSize = 16 + (4) * rate
+            let padding = 30 + (10) * rate
+            let height = 80 + (20) * rate
+            
+            self.headerHeightConstraint.constant = height
+            self.resetLabelHeight.constant = 50 + (20) * rate
+            self.stackViewLeft.constant = padding
+            self.stackViewRight.constant = padding
+            
+            self.resetLabel.font = UIFont(name: self.resetLabel!.font.fontName, size: fontSize)
+            
+        }
+    }
 }

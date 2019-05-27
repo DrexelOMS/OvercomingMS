@@ -20,15 +20,22 @@ class TopImageSlidingStackVC : SlidingStackVC {
     }
     
     override func addViewsBeforeMain() {
+        
+        var rate = 1 - ((896 -  UIScreen.main.bounds.height)) / 328
+        rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+        
+        let imageHeight = 20 + (10) * rate
+        let viewHeight = 40 + (15) * rate
+        
         let imageView = UIImageView(image: topImage)
         imageView.contentMode = .scaleAspectFit
         constrain(imageView) { (view) in
-            view.height == 20
+            view.height == imageHeight
         }
         
         imageContainer.addSubview(imageView)
         constrain(imageContainer) { (view) in
-            view.height == 40
+            view.height == viewHeight
         }
         
         constrain(imageView, imageContainer) { (view, superView) in

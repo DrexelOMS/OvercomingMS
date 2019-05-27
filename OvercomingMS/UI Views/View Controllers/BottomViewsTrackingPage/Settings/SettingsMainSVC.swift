@@ -22,6 +22,7 @@ class SettingsMainSVC : SlidingAbstractSVC {
     @IBOutlet weak var trackingView: SettingsBoxSVC!
     @IBOutlet weak var remindersView: SettingsBoxSVC!
     @IBOutlet weak var tutorialsView: SettingsBoxSVC!
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
     override func customSetup() {
         profileView.removeFromSuperview()
@@ -56,4 +57,14 @@ class SettingsMainSVC : SlidingAbstractSVC {
         }
     }
     
+    override func layoutSubviews() {
+        DispatchQueue.main.async {
+            var rate = 1 - ((896 -  UIScreen.main.bounds.height)) / 328
+            rate = rate > 1 ? 1 : (rate < 0 ? 0 : rate)
+            
+            let height = 80 + (20) * rate
+            
+            self.headerHeightConstraint.constant = height
+        }
+    }
 }
