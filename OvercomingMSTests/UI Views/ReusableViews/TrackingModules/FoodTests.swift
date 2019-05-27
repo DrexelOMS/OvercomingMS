@@ -33,5 +33,17 @@ class FoodTests: XCTestCase {
         XCTAssertTrue(main.checkType(type: "Eggs") == RecommendedLevel.Caution)
         XCTAssertTrue(main.checkType(type: "test") == RecommendedLevel.Good)
     }
+    
+    func testIsFoodGood_Good() {
+        let food = Food(id: "Id", name: "Name", categories: "Category", satfats: 0, ingredients: "", brand: "")
+        
+        XCTAssertEqual(RecommendedLevel.Good, main.isFoodGood(food: food))
+    }
+    
+    func testIsFoodGood_Bad() {
+        let food = Food(id: "Id", name: "Name", categories: "Category", satfats: 0, ingredients: "chicken", brand: "")
+        
+        XCTAssertEqual(RecommendedLevel.Bad, main.isFoodGood(food: food))
+    }
 
 }

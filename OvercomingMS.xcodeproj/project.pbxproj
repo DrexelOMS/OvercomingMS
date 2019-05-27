@@ -559,7 +559,7 @@
 		D03BBBC92290908A0012CF60 /* 45_Minute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 45_Minute.mp3; sourceTree = "<group>"; };
 		D03BBBCA2290908C0012CF60 /* 15_Minute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 15_Minute.mp3; sourceTree = "<group>"; };
 		D05350F122973A0200281BBA /* FoodSearchSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodSearchSVCTests.swift; path = "OvercomingMSTests/UI Views/ReusableViews/TrackingModules/FoodSearchSVCTests.swift"; sourceTree = SOURCE_ROOT; };
-		D05350F32297735800281BBA /* FoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodTests.swift; path = "OvercomingMSTests/UI Views/ReusableViews/TrackingModules/FoodModule/FoodTests.swift"; sourceTree = SOURCE_ROOT; };
+		D05350F32297735800281BBA /* FoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodTests.swift; path = "OvercomingMSTests/UI Views/ReusableViews/TrackingModules/FoodTests.swift"; sourceTree = SOURCE_ROOT; };
 		D069C2702280F39D009BB49D /* WelcomePageSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageSVC.swift; sourceTree = "<group>"; };
 		D069C2722280F892009BB49D /* ContinueButtonSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueButtonSVC.swift; sourceTree = "<group>"; };
 		D069C2742280F8A4009BB49D /* ContinueButtonSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContinueButtonSVC.xib; sourceTree = "<group>"; };
@@ -663,6 +663,7 @@
 		0A099566229740570067DEA7 /* TrackingModules */ = {
 			isa = PBXGroup;
 			children = (
+				D05350F32297735800281BBA /* FoodTests.swift */,
 				D05350F122973A0200281BBA /* FoodSearchSVCTests.swift */,
 				0A09956D2297485F0067DEA7 /* SelectedItemSVCs */,
 				0A09956A2297435A0067DEA7 /* ModifySVCs */,
@@ -966,7 +967,6 @@
 		0A8328DE22970C590079C723 /* MainHelperView */ = {
 			isa = PBXGroup;
 			children = (
-				D05350F32297735800281BBA /* FoodTests.swift */,
 				0A8328DF22970C760079C723 /* HeaderSVCTests.swift */,
 				0A8328E422972A110079C723 /* DatePickerSVCTests.swift */,
 			);
