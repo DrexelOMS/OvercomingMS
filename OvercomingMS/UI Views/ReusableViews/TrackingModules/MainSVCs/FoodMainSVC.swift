@@ -24,6 +24,11 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     let button3 = CircleButtonFactory.ScanButton()
     let button4 = CircleButtonFactory.SavedButton()
     
+    let barcodeScannerVC = BarcodeScannerViewController()
+    let foodinfo: Food = Food()
+    var capturedCode: String!
+    
+    
     @IBOutlet weak var buttonStackView: UIStackView!
     @IBOutlet weak var imageContainer: RoundedBoxShadowsTemplate!
     
@@ -38,7 +43,7 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
         imageContainer.addGestureRecognizer(tapGesture)
     }
 
-    @objc private func imagePressed(tapGestureRecognizer: UITapGestureRecognizer){
+    @objc func imagePressed(tapGestureRecognizer: UITapGestureRecognizer){
         let webViewController = TOWebViewController(urlString: "https://overcomingms.org/recovery-program/diet")
         let navigation = UINavigationController.init(rootViewController: webViewController)
         
@@ -75,7 +80,6 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     }
     
     func scanButtonPressed() {
-        let barcodeScannerVC = BarcodeScannerViewController()
         barcodeScannerVC.codeDelegate = self
         barcodeScannerVC.errorDelegate = self
         barcodeScannerVC.dismissalDelegate = self
@@ -83,9 +87,7 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
         parentVC.present(barcodeScannerVC, animated: true, completion: nil)
     }
     
-    func savedButtonPressed() {
-        
-    }
+    func savedButtonPressed() {}
     
     override func updateColors() {
         button1.colorTheme = parentVC.theme
@@ -103,18 +105,14 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
         controller.dismiss(animated: true, completion: nil)
         //actually initialize the food object. swift is dumb
-        let foodinfo: Food = Food()
 //        foodinfo.getFoodFromID(id: "3181232127608", parentVC: self.parentVC)
         foodinfo.getFoodFromID(id: "bark", parentVC: self.parentVC)
     }
     
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         print(code)
-        controller.dismiss(animated: true) {
-            //actually initialize the food object. swift is dumb
-//            let foodinfo: Food = Food()
-//            foodinfo.getFoodFromID(id: code, parentVC: self.parentVC)
-        }
+        capturedCode = code
+        controller.dismiss(animated: true, completion: nil)
     }
     
     override func layoutSubviews() {

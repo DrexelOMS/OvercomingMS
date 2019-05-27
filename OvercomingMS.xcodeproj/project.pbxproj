@@ -57,6 +57,7 @@
 		0A09958F2298A2EA0067DEA7 /* SettingsTrackingOnOfSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09958E2298A2EA0067DEA7 /* SettingsTrackingOnOfSVCTests.swift */; };
 		0A0995912298A9620067DEA7 /* WelcomeSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0995902298A9620067DEA7 /* WelcomeSVCTests.swift */; };
 		0A0995932298AAF40067DEA7 /* SettingsTutorialSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0995922298AAF40067DEA7 /* SettingsTutorialSVCTests.swift */; };
+		0A099595229C4D6F0067DEA7 /* FoodMainSVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A099594229C4D6F0067DEA7 /* FoodMainSVCTests.swift */; };
 		0A19B3BB2253BBF100F4B02B /* FoodSelectedSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7EB192220A546006F71C0 /* FoodSelectedSVC.swift */; };
 		0A19B3BD2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */; };
 		0A19B3BF2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */; };
@@ -332,6 +333,7 @@
 		0A09958E2298A2EA0067DEA7 /* SettingsTrackingOnOfSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTrackingOnOfSVCTests.swift; sourceTree = "<group>"; };
 		0A0995902298A9620067DEA7 /* WelcomeSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSVCTests.swift; sourceTree = "<group>"; };
 		0A0995922298AAF40067DEA7 /* SettingsTutorialSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTutorialSVCTests.swift; sourceTree = "<group>"; };
+		0A099594229C4D6F0067DEA7 /* FoodMainSVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMainSVCTests.swift; sourceTree = "<group>"; };
 		0A19B3BC2253BCF200F4B02B /* FiveScaleRatingButtonsSVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiveScaleRatingButtonsSVC.xib; sourceTree = "<group>"; };
 		0A19B3BE2253BDB400F4B02B /* FiveScaleRatingButtonsSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveScaleRatingButtonsSVC.swift; sourceTree = "<group>"; };
 		0A19B3C02253E94800F4B02B /* ExpandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandingCell.xib; sourceTree = "<group>"; };
@@ -675,6 +677,7 @@
 				0A09957A229774640067DEA7 /* MedicationNotTakenItemSVCTests.swift */,
 				0A09957C22977AC90067DEA7 /* MedicationItemTests.swift */,
 				0A09957E2298739C0067DEA7 /* VitaminDMainSVCTests.swift */,
+				0A099594229C4D6F0067DEA7 /* FoodMainSVCTests.swift */,
 			);
 			path = MainSVCs;
 			sourceTree = "<group>";
@@ -1630,6 +1633,7 @@
 				0A0995812298797E0067DEA7 /* ExerciseMainSVCTests.swift in Sources */,
 				0A09957222974FA90067DEA7 /* ExerciseHistoryDBSTest.swift in Sources */,
 				0A099588229882E00067DEA7 /* ExerciseStopwatchSVCTests.swift in Sources */,
+				0A099595229C4D6F0067DEA7 /* FoodMainSVCTests.swift in Sources */,
 				0A655F4522964D0800CD9ACB /* DisplayedMedicationItemsTests.swift in Sources */,
 				0A0995932298AAF40067DEA7 /* SettingsTutorialSVCTests.swift in Sources */,
 				D05350F42297735800281BBA /* FoodTests.swift in Sources */,
