@@ -761,8 +761,6 @@
 		0A099599229C67630067DEA7 /* Food */ = {
 			isa = PBXGroup;
 			children = (
-				D05350F32297735800281BBA /* FoodTests.swift */,
-				D05350F122973A0200281BBA /* FoodSearchSVCTests.swift */,
 				0A09959A229C67930067DEA7 /* FoodRejectedSVCTests.swift */,
 			);
 			path = Food;
