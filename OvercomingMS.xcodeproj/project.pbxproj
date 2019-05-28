@@ -254,10 +254,12 @@
 		6129745621DF017F00B9846C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6129745521DF017F00B9846C /* Assets.xcassets */; };
 		6129745921DF017F00B9846C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6129745721DF017F00B9846C /* LaunchScreen.storyboard */; };
 		83985923222D758E00782A10 /* MeditationModifySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83985922222D758E00782A10 /* MeditationModifySVC.swift */; };
+		84032A2B229CA98C0067A519 /* SelectedLabelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84032A2A229CA98C0067A519 /* SelectedLabelsTests.swift */; };
 		846565BF22982BEA00A27BEB /* VitaminDModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846565BE22982BEA00A27BEB /* VitaminDModifySVCTests.swift */; };
 		846565C1229831F200A27BEB /* ExerciseModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846565C0229831F200A27BEB /* ExerciseModifySVCTests.swift */; };
 		846565C32298364A00A27BEB /* MedicationModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846565C22298364A00A27BEB /* MedicationModifySVCTests.swift */; };
 		846565C522984B2C00A27BEB /* MeditationModifySVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846565C422984B2B00A27BEB /* MeditationModifySVCTests.swift */; };
+		84E813B9229CA219006F5E9F /* VitaminDOutsideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E813B8229CA219006F5E9F /* VitaminDOutsideTests.swift */; };
 		D03BBBCB2290908C0012CF60 /* 5_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC72290907E0012CF60 /* 5_Minute.mp3 */; };
 		D03BBBCC2290908C0012CF60 /* 35_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC8229090840012CF60 /* 35_Minute.mp3 */; };
 		D03BBBCD2290908C0012CF60 /* 45_Minute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D03BBBC92290908A0012CF60 /* 45_Minute.mp3 */; };
@@ -547,10 +549,12 @@
 		64624BC75971C455C566E626 /* Pods-OvercomingMSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.release.xcconfig"; sourceTree = "<group>"; };
 		724CCA850B24CDC7CCFAF25E /* Pods-OvercomingMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.debug.xcconfig"; sourceTree = "<group>"; };
 		83985922222D758E00782A10 /* MeditationModifySVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationModifySVC.swift; sourceTree = "<group>"; };
+		84032A2A229CA98C0067A519 /* SelectedLabelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLabelsTests.swift; sourceTree = "<group>"; };
 		846565BE22982BEA00A27BEB /* VitaminDModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminDModifySVCTests.swift; sourceTree = "<group>"; };
 		846565C0229831F200A27BEB /* ExerciseModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModifySVCTests.swift; sourceTree = "<group>"; };
 		846565C22298364A00A27BEB /* MedicationModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationModifySVCTests.swift; sourceTree = "<group>"; };
 		846565C422984B2B00A27BEB /* MeditationModifySVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationModifySVCTests.swift; sourceTree = "<group>"; };
+		84E813B8229CA219006F5E9F /* VitaminDOutsideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminDOutsideTests.swift; sourceTree = "<group>"; };
 		89CF61DE31F50EFE76BD85FE /* Pods-OvercomingMSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSUITests/Pods-OvercomingMSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0433A9C40E2CDD4C4FE48DD /* Pods-OvercomingMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMS/Pods-OvercomingMS.release.xcconfig"; sourceTree = "<group>"; };
 		A16E3BBC1D5B0C0744651350 /* Pods-OvercomingMSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercomingMSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercomingMSTests/Pods-OvercomingMSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -665,6 +669,7 @@
 			children = (
 				D05350F32297735800281BBA /* FoodTests.swift */,
 				D05350F122973A0200281BBA /* FoodSearchSVCTests.swift */,
+				84E813B8229CA219006F5E9F /* VitaminDOutsideTests.swift */,
 				0A09956D2297485F0067DEA7 /* SelectedItemSVCs */,
 				0A09956A2297435A0067DEA7 /* ModifySVCs */,
 				0A099567229740800067DEA7 /* MainSVCs */,
@@ -708,6 +713,7 @@
 				50D6BB68229778A400381EA3 /* VitaminDSelectedSVCTests.swift */,
 				50D6BB6A229782D300381EA3 /* MeditationSelectedSVCTests.swift */,
 				50D6BB6C229783C600381EA3 /* MedicationSelectedSVCTests.swift */,
+				84032A2A229CA98C0067A519 /* SelectedLabelsTests.swift */,
 			);
 			path = SelectedItemSVCs;
 			sourceTree = "<group>";
@@ -1631,6 +1637,7 @@
 				50D6BB6D229783C600381EA3 /* MedicationSelectedSVCTests.swift in Sources */,
 				0A09957422974FF50067DEA7 /* GoalsMainSVCTests.swift in Sources */,
 				0A09956422973C150067DEA7 /* SymptomsListSVCTests.swift in Sources */,
+				84032A2B229CA98C0067A519 /* SelectedLabelsTests.swift in Sources */,
 				0A09958D229898C20067DEA7 /* SettingsMainSVCTests.swift in Sources */,
 				0A09958322987ABA0067DEA7 /* MeditationMainSVCTests.swift in Sources */,
 				0A655F4B2296DCF400CD9ACB /* MainTrackingVCTests.swift in Sources */,
@@ -1642,6 +1649,7 @@
 				0A099598229C57820067DEA7 /* FiveScaleRatingButtonsTests.swift in Sources */,
 				0A0995912298A9620067DEA7 /* WelcomeSVCTests.swift in Sources */,
 				0A09957922976E070067DEA7 /* MedicationMainSVCTests.swift in Sources */,
+				84E813B9229CA219006F5E9F /* VitaminDOutsideTests.swift in Sources */,
 				0A0995812298797E0067DEA7 /* ExerciseMainSVCTests.swift in Sources */,
 				0A09957222974FA90067DEA7 /* ExerciseHistoryDBSTest.swift in Sources */,
 				0A099588229882E00067DEA7 /* ExerciseStopwatchSVCTests.swift in Sources */,
