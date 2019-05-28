@@ -194,9 +194,8 @@ class Food {
                     if foodinfo.Ingredients.count<1 && foodinfo.Categories.count<1{
                         parentVC.pushSubView(newSubView: FoodSelectedSVC(food: foodinfo, unknown: true))
                     }
-                        
                     else if(foodinfo.isFoodGood(food: foodinfo)==RecommendedLevel.Good){
-                        parentVC.pushSubView(newSubView: FoodSelectedSVC(food: foodinfo, unknown: false))
+                        parentVC.pushSubView(newSubView: FoodSelectedSVC(food: foodinfo, ingredients: [""], types: [""]))
                     }
                     else if(foodinfo.isFoodGood(food: foodinfo)==RecommendedLevel.Bad){
                         var badingredients = [""]

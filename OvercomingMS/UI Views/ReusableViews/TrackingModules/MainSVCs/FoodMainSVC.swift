@@ -24,7 +24,7 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     let button3 = CircleButtonFactory.ScanButton()
     let button4 = CircleButtonFactory.SavedButton()
     
-    let barcodeScannerVC = BarcodeScannerViewController()
+    var barcodeScannerVC = BarcodeScannerViewController()
     let foodinfo: Food = Food()
     var capturedCode: String!
     
@@ -64,7 +64,7 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
         //buttonStackView.addArrangedSubview(button4)
         buttonStackView.addArrangedSubview(button3)
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
-        
+        print("tesT")
     }
     
     func searchButtonPressed() {
@@ -80,6 +80,7 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     }
     
     func scanButtonPressed() {
+        barcodeScannerVC = BarcodeScannerViewController()
         barcodeScannerVC.codeDelegate = self
         barcodeScannerVC.errorDelegate = self
         barcodeScannerVC.dismissalDelegate = self
@@ -112,7 +113,9 @@ class FoodMainSVC: SlidingAbstractSVC, BarcodeScannerCodeDelegate, BarcodeScanne
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         print(code)
         capturedCode = code
+
         controller.dismiss(animated: true, completion: nil)
+        foodinfo.getFoodFromID(id: code, parentVC: self.parentVC)
     }
     
     override func layoutSubviews() {
